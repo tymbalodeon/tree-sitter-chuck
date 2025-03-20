@@ -8,7 +8,19 @@
       "required": false,
       "types": [
         {
-          "type": "value",
+          "type": "dur",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -54,6 +66,14 @@
         {
           "type": "debug_print",
           "named": true
+        },
+        {
+          "type": "variable_assignment",
+          "named": true
+        },
+        {
+          "type": "variable_declaration",
+          "named": true
         }
       ]
     }
@@ -64,7 +84,7 @@
     "fields": {}
   },
   {
-    "type": "value",
+    "type": "variable_assignment",
     "named": true,
     "fields": {},
     "children": {
@@ -91,6 +111,11 @@
     }
   },
   {
+    "type": "variable_declaration",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "\"",
     "named": false
   },
@@ -115,6 +140,10 @@
     "named": false
   },
   {
+    "type": "=>",
+    "named": false
+  },
+  {
     "type": ">>>",
     "named": false
   },
@@ -123,11 +152,47 @@
     "named": true
   },
   {
+    "type": "complex",
+    "named": false
+  },
+  {
+    "type": "dur",
+    "named": false
+  },
+  {
     "type": "float",
     "named": true
   },
   {
+    "type": "float",
+    "named": false
+  },
+  {
+    "type": "int",
+    "named": false
+  },
+  {
+    "type": "polar",
+    "named": false
+  },
+  {
     "type": "second",
+    "named": false
+  },
+  {
+    "type": "time",
+    "named": false
+  },
+  {
+    "type": "vec3",
+    "named": false
+  },
+  {
+    "type": "vec4",
+    "named": false
+  },
+  {
+    "type": "void",
     "named": false
   }
 ]

@@ -11,7 +11,17 @@ module.exports = grammar({
   name: "chuck",
 
   rules: {
-    source_file: ($) => repeat(choice($.comment, $.debug_print)),
+    source_file: ($) =>
+      repeat(
+        choice(
+          $.comment,
+          $.debug_print,
+          $.variable_assignment,
+          $.variable_declaration,
+        ),
+      ),
+
+    _chuck_operator: (_) => "=>",
 
     // http://stackoverflow.com/questions/13014947/regex-to-match-a-c-style-multiline-comment/36328890#36328890
     comment: (_) =>
@@ -22,17 +32,20 @@ module.exports = grammar({
         ),
       ),
 
-    _statement_end: (_) => ";",
-    debug_print: ($) => seq("<<<", optional($.value), ">>>", $._statement_end),
+    debug_print: ($) => seq("<<<", optional($._value), ">>>", $._statement_end),
 
     dur: ($) => seq($._number, "::", "second"),
 
     float: (_) => /\d?\.\d+/,
 
+    _identifier: (_) => /[a-zA-z]+/,
+
     int: (_) =>
       choice(/\d+/, seq(choice("0x", "0X"), /[\da-fA-F](_?[\da-fA-F])*/)),
 
     _number: ($) => choice($.float, $.int),
+
+    _statement_end: (_) => ";",
 
     string: (_) => {
       const delimeter = '"';
@@ -40,7 +53,7 @@ module.exports = grammar({
       return seq(delimeter, optional(/[a-zA-Z\s]*/), delimeter);
     },
 
-    _type_identifier: (_) =>
+    _type: (_) =>
       choice(
         "complex",
         "dur",
@@ -53,6 +66,17 @@ module.exports = grammar({
         "void",
       ),
 
-    value: ($) => choice($.dur, $._number, $.string),
+    _value: ($) => choice($.dur, $._number, $.string),
+
+    variable_assignment: ($) =>
+      seq(
+        $._value,
+        $._chuck_operator,
+        optional($._type),
+        $._identifier,
+        $._statement_end,
+      ),
+
+    variable_declaration: ($) => seq($._type, $._identifier, $._statement_end),
   },
 });

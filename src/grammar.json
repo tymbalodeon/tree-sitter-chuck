@@ -14,9 +14,21 @@
           {
             "type": "SYMBOL",
             "name": "debug_print"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "variable_assignment"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "variable_declaration"
           }
         ]
       }
+    },
+    "_chuck_operator": {
+      "type": "STRING",
+      "value": "=>"
     },
     "comment": {
       "type": "TOKEN",
@@ -56,10 +68,6 @@
         ]
       }
     },
-    "_statement_end": {
-      "type": "STRING",
-      "value": ";"
-    },
     "debug_print": {
       "type": "SEQ",
       "members": [
@@ -72,7 +80,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "value"
+              "name": "_value"
             },
             {
               "type": "BLANK"
@@ -109,6 +117,10 @@
     "float": {
       "type": "PATTERN",
       "value": "\\d?\\.\\d+"
+    },
+    "_identifier": {
+      "type": "PATTERN",
+      "value": "[a-zA-z]+"
     },
     "int": {
       "type": "CHOICE",
@@ -154,6 +166,10 @@
         }
       ]
     },
+    "_statement_end": {
+      "type": "STRING",
+      "value": ";"
+    },
     "string": {
       "type": "SEQ",
       "members": [
@@ -179,7 +195,7 @@
         }
       ]
     },
-    "_type_identifier": {
+    "_type": {
       "type": "CHOICE",
       "members": [
         {
@@ -220,7 +236,7 @@
         }
       ]
     },
-    "value": {
+    "_value": {
       "type": "CHOICE",
       "members": [
         {
@@ -234,6 +250,56 @@
         {
           "type": "SYMBOL",
           "name": "string"
+        }
+      ]
+    },
+    "variable_assignment": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_value"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_chuck_operator"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_type"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_statement_end"
+        }
+      ]
+    },
+    "variable_declaration": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_statement_end"
         }
       ]
     }

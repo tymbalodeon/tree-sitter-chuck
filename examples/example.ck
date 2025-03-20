@@ -31,3 +31,9 @@ and ending on the same line */
 <<< 5.5::second >>>;
 <<< 5::second >>>;
 <<< 7 :: second >>>;
+
+int foo;
+
+2 => foo;
+
+42 => int foo;
