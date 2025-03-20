@@ -9,5 +9,6 @@
     bun install
 
 [no-cd]
-@parse file:
-    tree-sitter parse {{ file }}
+@parse *file:
+    tree-sitter parse {{ if file == "" { "example.ck" } else { file } }}
+

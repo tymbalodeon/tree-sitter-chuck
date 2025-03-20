@@ -63,3 +63,18 @@ alias find := find-recipe
 alias src := view-source
 
 mod chuck "just/chuck.just"
+
+# alias for `chuck generate`
+[group("aliases")]
+@generate:
+    just chuck generate
+
+# alias for `chuck install`
+[group("aliases")]
+@install:
+    just chuck install
+
+# alias for `chuck parse`
+[group("aliases")]
+@parse *file:
+    just chuck parse {{ file }}
