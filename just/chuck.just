@@ -25,3 +25,13 @@ parse *file:
     tree-sitter parse $file
 
 # TODO handle `tree-sitter init-config`
+
+[no-cd]
+test *name:
+    #!/usr/bin/env nu
+    
+    if ("{{ name }}" | is-empty) {
+        tree-sitter test
+    } else {
+        tree-sitter test --include {{ name }}
+    }
