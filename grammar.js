@@ -11,38 +11,48 @@ module.exports = grammar({
   name: "chuck",
 
   rules: {
-    source_file: ($) => repeat($._definition),
+    source_file: ($) => repeat(choice($.comment, $.debug_print)),
 
-    _definition: ($) => choice($.function_definition),
-
-    function_definition: ($) =>
-      seq("fun", $._type, $.identifier, $.parameter_list, $.block),
-
-    parameter_list: (_) => seq("(", ")"),
-
-    _type: (_) =>
-      choice(
-        "int",
-        "float",
-        "time",
-        "dur",
-        "void",
-        "vec3",
-        "vec4",
-        "complex",
-        "polar",
+    // http://stackoverflow.com/questions/13014947/regex-to-match-a-c-style-multiline-comment/36328890#36328890
+    comment: (_) =>
+      token(
+        choice(
+          seq("//", /[^\r\n\u2028\u2029]*/),
+          seq("/*", /[^*]*\*+([^/*][^*]*\*+)*/, "/"),
+        ),
       ),
 
-    block: ($) => seq("{", repeat($._statement), "}"),
+    _statement_end: (_) => ";",
+    debug_print: ($) => seq("<<<", optional($.value), ">>>", $._statement_end),
 
-    _statement: ($) => choice($.return_statement),
+    dur: ($) => seq($._number, "::", "second"),
 
-    return_statement: ($) => seq("return", $._expression, ";"),
+    float: (_) => /\d?\.\d+/,
 
-    _expression: ($) => choice($.identifier, $.number),
+    int: (_) =>
+      choice(/\d+/, seq(choice("0x", "0X"), /[\da-fA-F](_?[\da-fA-F])*/)),
 
-    identifier: (_) => /[a-z]+/,
+    _number: ($) => choice($.float, $.int),
 
-    number: (_) => /\d+/,
+    string: (_) => {
+      const delimeter = '"';
+
+      return seq(delimeter, optional(/[a-zA-Z\s]*/), delimeter);
+    },
+
+    _type_identifier: (_) =>
+      choice(
+        "complex",
+        "dur",
+        "float",
+        "int",
+        "polar",
+        "time",
+        "vec3",
+        "vec4",
+        "void",
+      ),
+
+    value: ($) => choice($.dur, $._number, $.string),
   },
 });

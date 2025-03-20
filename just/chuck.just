@@ -1,5 +1,5 @@
 # View help text
-@help *args :
+@help *args:
     ../scripts/chuck/help.nu {{ args }}
 
 # Generate parser
@@ -13,7 +13,15 @@
 
 # Parse file
 [no-cd]
-@parse *file:
-    tree-sitter parse {{ if file == "" { "example.ck" } else { file } }}
+parse *file:
+    #!/usr/bin/env nu
+
+    let file = if ("{{ file }}" | is-empty) {
+         "examples/example.ck"
+    } else {
+        "{{ file }}"
+    }
+
+    tree-sitter parse $file
 
 # TODO handle `tree-sitter init-config`

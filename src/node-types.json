@@ -1,49 +1,21 @@
 [
   {
-    "type": "block",
+    "type": "debug_print",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "types": [
         {
-          "type": "return_statement",
+          "type": "value",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "function_definition",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "block",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "parameter_list",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "parameter_list",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "return_statement",
+    "type": "dur",
     "named": true,
     "fields": {},
     "children": {
@@ -51,15 +23,20 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "float",
           "named": true
         },
         {
-          "type": "number",
+          "type": "int",
           "named": true
         }
       ]
     }
+  },
+  {
+    "type": "int",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "source_file",
@@ -71,18 +48,62 @@
       "required": false,
       "types": [
         {
-          "type": "function_definition",
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "debug_print",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "(",
+    "type": "string",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dur",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "\"",
     "named": false
   },
   {
-    "type": ")",
+    "type": "0X",
+    "named": false
+  },
+  {
+    "type": "0x",
+    "named": false
+  },
+  {
+    "type": "::",
     "named": false
   },
   {
@@ -90,63 +111,23 @@
     "named": false
   },
   {
-    "type": "complex",
+    "type": "<<<",
     "named": false
   },
   {
-    "type": "dur",
+    "type": ">>>",
     "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
   },
   {
     "type": "float",
-    "named": false
-  },
-  {
-    "type": "fun",
-    "named": false
-  },
-  {
-    "type": "identifier",
     "named": true
   },
   {
-    "type": "int",
-    "named": false
-  },
-  {
-    "type": "number",
-    "named": true
-  },
-  {
-    "type": "polar",
-    "named": false
-  },
-  {
-    "type": "return",
-    "named": false
-  },
-  {
-    "type": "time",
-    "named": false
-  },
-  {
-    "type": "vec3",
-    "named": false
-  },
-  {
-    "type": "vec4",
-    "named": false
-  },
-  {
-    "type": "void",
-    "named": false
-  },
-  {
-    "type": "{",
-    "named": false
-  },
-  {
-    "type": "}",
+    "type": "second",
     "named": false
   }
 ]
