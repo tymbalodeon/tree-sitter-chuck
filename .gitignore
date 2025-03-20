@@ -6,4 +6,5 @@
 .venv
 
 # chuck
+build
 node_modules
