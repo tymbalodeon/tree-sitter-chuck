@@ -13,7 +13,11 @@ module.exports = grammar({
   rules: {
     source_file: ($) => repeat($._statement),
 
+    binary_expression: ($) => seq($._value, $.operator, $._value),
+
     _chuck_operator: (_) => "=>",
+
+    class: (_) => /[A-Z][a-zA-Z0-9]*/,
 
     // http://stackoverflow.com/questions/13014947/regex-to-match-a-c-style-multiline-comment/36328890#36328890
     comment: (_) =>
@@ -24,24 +28,26 @@ module.exports = grammar({
         ),
       ),
 
-    debug_print: ($) =>
-      seq(
-        "<<<",
-        optional(seq($._expression, optional(seq(",", $._expression)))),
-        ">>>",
-      ),
+    debug_print: ($) => seq("<<<", optional($._expressions), ">>>"),
 
     dur: ($) => seq($._number, "::", "second"),
 
     _expression: ($) =>
-      choice($.debug_print, $._value, seq($._value, $.operator, $._value)),
+      choice($.binary_expression, $.debug_print, $.function_call, $._value),
+
+    _expressions: ($) =>
+      seq($._expression, optional(repeat(seq(",", $._expression)))),
+
+    function_call: ($) => seq($.method, "(", optional($._expressions), ")"),
 
     float: (_) => /\d?\.\d+/,
 
-    _identifier: (_) => /[a-zA-z]+/,
+    _identifier: (_) => /[a-z][a-zA-Z0-9]*/,
 
     int: (_) =>
       choice(/\d+/, seq(choice("0x", "0X"), /[\da-fA-F](_?[\da-fA-F])*/)),
+
+    method: ($) => seq($.class, ".", $._identifier),
 
     _number: ($) => choice($.float, $.int),
 
@@ -51,7 +57,14 @@ module.exports = grammar({
       choice(
         $.comment,
         seq(
-          choice($.debug_print, $.variable_assignment, $.variable_declaration),
+          choice(
+            $.class,
+            $.debug_print,
+            $.function_call,
+            $.method,
+            $.variable_assignment,
+            $.variable_declaration,
+          ),
           ";",
         ),
       ),

@@ -21,10 +21,41 @@ Debug print
 ---
 
 (source_file
-  (variable_assignment (int))
+  (variable_assignment
+    (int)
+	(variable_declaration))
   (debug_print)
-  (debug_print)
-  (variable_assignment)
-  (debug_print)
-  (debug_print)
-  (debug_print))
+  (debug_print
+    (string))
+  (variable_assignment
+    (debug_print
+	  (binary_expression
+	    (float)
+		(operator)
+		(float)))
+	  (variable_declaration))
+  (debug_print
+    (string))
+  (debug_print
+    (string)
+	(binary_expression
+	  (int)
+	  (operator)
+	  (int)))
+  (debug_print
+    (string)
+	(function_call
+	  (method
+	    (class))
+	  (int)
+	  (int))
+	(function_call
+	  (method
+	    (class))
+	  (int)
+	  (int))
+	(function_call
+	  (method
+	    (class))
+	  (int)
+	  (int))))

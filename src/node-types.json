@@ -1,16 +1,12 @@
 [
   {
-    "type": "debug_print",
+    "type": "binary_expression",
     "named": true,
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
-        {
-          "type": "debug_print",
-          "named": true
-        },
         {
           "type": "dur",
           "named": true
@@ -25,6 +21,45 @@
         },
         {
           "type": "operator",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "debug_print",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "debug_print",
+          "named": true
+        },
+        {
+          "type": "dur",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "int",
           "named": true
         },
         {
@@ -54,9 +89,67 @@
     }
   },
   {
+    "type": "function_call",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "debug_print",
+          "named": true
+        },
+        {
+          "type": "dur",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "method",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "int",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "method",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "class",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "operator",
@@ -73,11 +166,23 @@
       "required": false,
       "types": [
         {
+          "type": "class",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
         {
           "type": "debug_print",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "method",
           "named": true
         },
         {
@@ -105,6 +210,10 @@
       "required": false,
       "types": [
         {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
           "type": "debug_print",
           "named": true
         },
@@ -117,11 +226,11 @@
           "named": true
         },
         {
-          "type": "int",
+          "type": "function_call",
           "named": true
         },
         {
-          "type": "operator",
+          "type": "int",
           "named": true
         },
         {
@@ -145,6 +254,14 @@
     "named": false
   },
   {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
     "type": "+",
     "named": false
   },
@@ -154,6 +271,10 @@
   },
   {
     "type": "-",
+    "named": false
+  },
+  {
+    "type": ".",
     "named": false
   },
   {
@@ -183,6 +304,10 @@
   {
     "type": ">>>",
     "named": false
+  },
+  {
+    "type": "class",
+    "named": true
   },
   {
     "type": "comment",

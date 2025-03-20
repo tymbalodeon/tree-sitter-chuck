@@ -9,9 +9,30 @@
         "name": "_statement"
       }
     },
+    "binary_expression": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_value"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operator"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_value"
+        }
+      ]
+    },
     "_chuck_operator": {
       "type": "STRING",
       "value": "=>"
+    },
+    "class": {
+      "type": "PATTERN",
+      "value": "[A-Z][a-zA-Z0-9]*"
     },
     "comment": {
       "type": "TOKEN",
@@ -62,34 +83,8 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "_expression"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SEQ",
-                      "members": [
-                        {
-                          "type": "STRING",
-                          "value": ","
-                        },
-                        {
-                          "type": "SYMBOL",
-                          "name": "_expression"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "_expressions"
             },
             {
               "type": "BLANK"
@@ -124,28 +119,81 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "binary_expression"
+        },
+        {
+          "type": "SYMBOL",
           "name": "debug_print"
         },
         {
           "type": "SYMBOL",
-          "name": "_value"
+          "name": "function_call"
         },
         {
-          "type": "SEQ",
+          "type": "SYMBOL",
+          "name": "_value"
+        }
+      ]
+    },
+    "_expressions": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_expression"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": ","
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "_expression"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "function_call": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "method"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "CHOICE",
           "members": [
             {
               "type": "SYMBOL",
-              "name": "_value"
+              "name": "_expressions"
             },
             {
-              "type": "SYMBOL",
-              "name": "operator"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "_value"
+              "type": "BLANK"
             }
           ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
         }
       ]
     },
@@ -155,7 +203,7 @@
     },
     "_identifier": {
       "type": "PATTERN",
-      "value": "[a-zA-z]+"
+      "value": "[a-z][a-zA-Z0-9]*"
     },
     "int": {
       "type": "CHOICE",
@@ -185,6 +233,23 @@
               "value": "[\\da-fA-F](_?[\\da-fA-F])*"
             }
           ]
+        }
+      ]
+    },
+    "method": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "class"
+        },
+        {
+          "type": "STRING",
+          "value": "."
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_identifier"
         }
       ]
     },
@@ -229,7 +294,19 @@
               "members": [
                 {
                   "type": "SYMBOL",
+                  "name": "class"
+                },
+                {
+                  "type": "SYMBOL",
                   "name": "debug_print"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "function_call"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "method"
                 },
                 {
                   "type": "SYMBOL",
