@@ -1,1 +1,0 @@
-cmd_Release/tree_sitter_chuck_binding.node := clang++ -bundle -undefined dynamic_lookup -Wl,-search_paths_first -mmacosx-version-min=10.7 -arch x86_64 -L./Release -stdlib=libc++  -o Release/tree_sitter_chuck_binding.node Release/obj.target/tree_sitter_chuck_binding/bindings/node/binding.o Release/obj.target/tree_sitter_chuck_binding/src/parser.o 
