@@ -1,0 +1,9 @@
+.config
+.direnv
+.env
+.envrc
+.pdm-python
+.venv
+
+# chuck
+node_modules
