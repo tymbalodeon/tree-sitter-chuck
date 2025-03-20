@@ -29,7 +29,7 @@ parse *file:
 [no-cd]
 test *name:
     #!/usr/bin/env nu
-    
+
     if ("{{ name }}" | is-empty) {
         tree-sitter test
     } else {

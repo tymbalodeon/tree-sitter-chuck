@@ -6,9 +6,7 @@
       "camelcase": "Chuck",
       "title": "Chuck",
       "scope": "source.chuck",
-      "file-types": [
-        "ck"
-      ],
+      "file-types": ["ck"],
       "injection-regex": "^chuck$",
       "class-name": "TreeSitterChuck"
     }
@@ -24,7 +22,7 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/tree-sitter/tree-sitter-chuck"
+      "repository": "https://github.com/tymbalodeon/tree-sitter-chuck"
     }
   },
   "bindings": {
