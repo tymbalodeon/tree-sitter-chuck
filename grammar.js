@@ -11,15 +11,7 @@ module.exports = grammar({
   name: "chuck",
 
   rules: {
-    source_file: ($) =>
-      repeat(
-        choice(
-          $.comment,
-          $.debug_print,
-          $.variable_assignment,
-          $.variable_declaration,
-        ),
-      ),
+    source_file: ($) => repeat($._statement),
 
     _chuck_operator: (_) => "=>",
 
@@ -32,9 +24,17 @@ module.exports = grammar({
         ),
       ),
 
-    debug_print: ($) => seq("<<<", optional($._value), ">>>", $._statement_end),
+    debug_print: ($) =>
+      seq(
+        "<<<",
+        optional(seq($._expression, optional(seq(",", $._expression)))),
+        ">>>",
+      ),
 
     dur: ($) => seq($._number, "::", "second"),
+
+    _expression: ($) =>
+      choice($.debug_print, $._value, seq($._value, $.operator, $._value)),
 
     float: (_) => /\d?\.\d+/,
 
@@ -45,12 +45,21 @@ module.exports = grammar({
 
     _number: ($) => choice($.float, $.int),
 
-    _statement_end: (_) => ";",
+    operator: (_) => choice("+", "-"),
+
+    _statement: ($) =>
+      choice(
+        $.comment,
+        seq(
+          choice($.debug_print, $.variable_assignment, $.variable_declaration),
+          ";",
+        ),
+      ),
 
     string: (_) => {
       const delimeter = '"';
 
-      return seq(delimeter, optional(/[a-zA-Z\s]*/), delimeter);
+      return seq(delimeter, optional(/[^"]*/), delimeter);
     },
 
     _type: (_) =>
@@ -66,17 +75,15 @@ module.exports = grammar({
         "void",
       ),
 
-    _value: ($) => choice($.dur, $._number, $.string),
+    _value: ($) => choice($.dur, $._identifier, $._number, $.string),
 
     variable_assignment: ($) =>
       seq(
-        $._value,
+        $._expression,
         $._chuck_operator,
-        optional($._type),
-        $._identifier,
-        $._statement_end,
+        choice($.variable_declaration, $._identifier),
       ),
 
-    variable_declaration: ($) => seq($._type, $._identifier, $._statement_end),
+    variable_declaration: ($) => seq($._type, $._identifier),
   },
 });

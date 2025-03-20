@@ -21,7 +21,7 @@ Debug print
 ---
 
 (source_file
-  (variable_assignment)
+  (variable_assignment (int))
   (debug_print)
   (debug_print)
   (variable_assignment)
