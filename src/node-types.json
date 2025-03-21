@@ -16,6 +16,10 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "int",
           "named": true
         },
@@ -25,6 +29,61 @@
         },
         {
           "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "chuck_operation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "debug_print",
+          "named": true
+        },
+        {
+          "type": "dur",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "member_identifier",
+          "named": true
+        },
+        {
+          "type": "object_assignment",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "variable_declaration",
           "named": true
         }
       ]
@@ -59,6 +118,10 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "int",
           "named": true
         },
@@ -74,9 +137,13 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "duration_identifier",
+          "named": true
+        },
         {
           "type": "float",
           "named": true
@@ -89,43 +156,91 @@
     }
   },
   {
+    "type": "duration_identifier",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "function_call",
     "named": true,
-    "fields": {},
+    "fields": {
+      "arguments": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "debug_print",
+            "named": true
+          },
+          {
+            "type": "dur",
+            "named": true
+          },
+          {
+            "type": "float",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
-          "type": "binary_expression",
+          "type": "member_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "global_unit_generator",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "identifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "duration_identifier",
           "named": true
         },
         {
-          "type": "debug_print",
+          "type": "global_unit_generator",
           "named": true
         },
         {
-          "type": "dur",
-          "named": true
-        },
-        {
-          "type": "float",
-          "named": true
-        },
-        {
-          "type": "function_call",
-          "named": true
-        },
-        {
-          "type": "int",
-          "named": true
-        },
-        {
-          "type": "method",
-          "named": true
-        },
-        {
-          "type": "string",
+          "type": "now_keyword",
           "named": true
         }
       ]
@@ -137,15 +252,49 @@
     "fields": {}
   },
   {
-    "type": "method",
+    "type": "member_identifier",
+    "named": true,
+    "fields": {
+      "member_identifier": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "object_identifier": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "class_identifier",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "object_assignment",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "class",
+          "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "identifier",
           "named": true
         }
       ]
@@ -166,7 +315,11 @@
       "required": false,
       "types": [
         {
-          "type": "class",
+          "type": "chuck_operation",
+          "named": true
+        },
+        {
+          "type": "class_identifier",
           "named": true
         },
         {
@@ -182,11 +335,11 @@
           "named": true
         },
         {
-          "type": "method",
+          "type": "member_identifier",
           "named": true
         },
         {
-          "type": "variable_assignment",
+          "type": "object_assignment",
           "named": true
         },
         {
@@ -202,52 +355,28 @@
     "fields": {}
   },
   {
-    "type": "variable_assignment",
+    "type": "type",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "debug_print",
-          "named": true
-        },
-        {
-          "type": "dur",
-          "named": true
-        },
-        {
-          "type": "float",
-          "named": true
-        },
-        {
-          "type": "function_call",
-          "named": true
-        },
-        {
-          "type": "int",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "variable_declaration",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "variable_declaration",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "\"",
@@ -306,7 +435,15 @@
     "named": false
   },
   {
-    "type": "class",
+    "type": "adc",
+    "named": false
+  },
+  {
+    "type": "blackhole",
+    "named": false
+  },
+  {
+    "type": "class_identifier",
     "named": true
   },
   {
@@ -318,7 +455,19 @@
     "named": false
   },
   {
+    "type": "dac",
+    "named": false
+  },
+  {
+    "type": "day",
+    "named": false
+  },
+  {
     "type": "dur",
+    "named": false
+  },
+  {
+    "type": "float",
     "named": false
   },
   {
@@ -326,7 +475,7 @@
     "named": true
   },
   {
-    "type": "float",
+    "type": "hour",
     "named": false
   },
   {
@@ -334,7 +483,23 @@
     "named": false
   },
   {
+    "type": "minute",
+    "named": false
+  },
+  {
+    "type": "ms",
+    "named": false
+  },
+  {
+    "type": "now_keyword",
+    "named": true
+  },
+  {
     "type": "polar",
+    "named": false
+  },
+  {
+    "type": "samp",
     "named": false
   },
   {
@@ -355,6 +520,10 @@
   },
   {
     "type": "void",
+    "named": false
+  },
+  {
+    "type": "week",
     "named": false
   }
 ]

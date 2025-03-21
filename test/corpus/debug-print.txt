@@ -21,41 +21,50 @@ Debug print
 ---
 
 (source_file
-  (variable_assignment
+  (chuck_operation
     (int)
-	(variable_declaration))
-  (debug_print)
+    (variable_declaration
+      (type)
+      (identifier)))
+  (debug_print
+    (identifier))
   (debug_print
     (string))
-  (variable_assignment
+  (chuck_operation
     (debug_print
-	  (binary_expression
-	    (float)
-		(operator)
-		(float)))
-	  (variable_declaration))
-  (debug_print
-    (string))
-  (debug_print
-    (string)
-	(binary_expression
-	  (int)
-	  (operator)
-	  (int)))
+      (binary_expression
+        (float)
+      (operator)
+      (float)))
+    (variable_declaration
+      (type)
+      (identifier)))
   (debug_print
     (string)
-	(function_call
-	  (method
-	    (class))
-	  (int)
-	  (int))
-	(function_call
-	  (method
-	    (class))
-	  (int)
-	  (int))
-	(function_call
-	  (method
-	    (class))
-	  (int)
-	  (int))))
+    (identifier))
+  (debug_print
+    (string)
+    (binary_expression
+      (int)
+      (operator)
+      (int)))
+  (debug_print
+    (string)
+    (function_call
+      (member_identifier
+        (class_identifier)
+        (identifier))
+      (int)
+      (int))
+    (function_call
+      (member_identifier
+        (class_identifier)
+        (identifier))
+      (int)
+      (int))
+    (function_call
+      (member_identifier
+        (class_identifier)
+        (identifier))
+      (int)
+      (int))))

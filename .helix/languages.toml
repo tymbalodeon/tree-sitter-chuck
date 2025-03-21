@@ -2,3 +2,9 @@
 name = "javascript"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
+
+[[language]]
+name = "txt"
+file-types = ["txt"]
+indent = { tab-width = 2, unit = " " }
+scope = "text.txt"

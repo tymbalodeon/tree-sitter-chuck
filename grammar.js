@@ -12,15 +12,25 @@ module.exports = grammar({
 
   rules: {
     source_file: ($) => repeat($._statement),
-
     binary_expression: ($) => seq($._value, $.operator, $._value),
 
-    _chuck_operator: (_) => "=>",
+    chuck_operation: ($) =>
+      seq(
+        choice($.object_assignment, $._expression, $.member_identifier),
+        $._chuck_operator,
+        choice(
+          $.object_assignment,
+          $.identifier,
+          $.member_identifier,
+          $.variable_declaration,
+        ),
+      ),
 
-    class: (_) => /[A-Z][a-zA-Z0-9]*/,
+    _chuck_operator: () => "=>",
+    class_identifier: () => /[A-Z][a-zA-Z0-9]*/,
 
     // http://stackoverflow.com/questions/13014947/regex-to-match-a-c-style-multiline-comment/36328890#36328890
-    comment: (_) =>
+    comment: () =>
       token(
         choice(
           seq("//", /[^\r\n\u2028\u2029]*/),
@@ -30,7 +40,10 @@ module.exports = grammar({
 
     debug_print: ($) => seq("<<<", optional($._expressions), ">>>"),
 
-    dur: ($) => seq($._number, "::", "second"),
+    duration_identifier: () =>
+      choice("samp", "ms", "second", "minute", "hour", "day", "week"),
+
+    dur: ($) => seq($._number, "::", $.duration_identifier),
 
     _expression: ($) =>
       choice($.binary_expression, $.debug_print, $.function_call, $._value),
@@ -38,44 +51,63 @@ module.exports = grammar({
     _expressions: ($) =>
       seq($._expression, optional(repeat(seq(",", $._expression)))),
 
-    function_call: ($) => seq($.method, "(", optional($._expressions), ")"),
+    function_call: ($) =>
+      seq(
+        $.member_identifier,
+        "(",
+        field("arguments", optional($._expressions)),
+        ")",
+      ),
 
-    float: (_) => /\d?\.\d+/,
+    float: () => /(\d+)?\.\d+/,
+    global_unit_generator: () => choice("adc", "blackhole", "dac"),
 
-    _identifier: (_) => /[a-z][a-zA-Z0-9]*/,
+    identifier: ($) =>
+      choice(
+        /[a-z][a-zA-Z0-9]*/,
+        $.duration_identifier,
+        $.global_unit_generator,
+        $.now_keyword,
+      ),
 
-    int: (_) =>
+    int: () =>
       choice(/\d+/, seq(choice("0x", "0X"), /[\da-fA-F](_?[\da-fA-F])*/)),
 
-    method: ($) => seq($.class, ".", $._identifier),
+    member_identifier: ($) =>
+      seq(
+        field("object_identifier", choice($.class_identifier, $.identifier)),
+        ".",
+        field("member_identifier", $.identifier),
+      ),
 
+    now_keyword: () => "now",
     _number: ($) => choice($.float, $.int),
-
-    operator: (_) => choice("+", "-"),
+    object_assignment: ($) => seq($.class_identifier, $.identifier),
+    operator: () => choice("+", "-"),
 
     _statement: ($) =>
       choice(
         $.comment,
         seq(
           choice(
-            $.class,
+            $.class_identifier,
+            $.object_assignment,
             $.debug_print,
             $.function_call,
-            $.method,
-            $.variable_assignment,
+            $.member_identifier,
+            $.chuck_operation,
             $.variable_declaration,
           ),
           ";",
         ),
       ),
 
-    string: (_) => {
+    string: () => {
       const delimeter = '"';
-
       return seq(delimeter, optional(/[^"]*/), delimeter);
     },
 
-    _type: (_) =>
+    type: () =>
       choice(
         "complex",
         "dur",
@@ -88,15 +120,7 @@ module.exports = grammar({
         "void",
       ),
 
-    _value: ($) => choice($.dur, $._identifier, $._number, $.string),
-
-    variable_assignment: ($) =>
-      seq(
-        $._expression,
-        $._chuck_operator,
-        choice($.variable_declaration, $._identifier),
-      ),
-
-    variable_declaration: ($) => seq($._type, $._identifier),
+    _value: ($) => choice($.dur, $.identifier, $._number, $.string),
+    variable_declaration: ($) => seq($.type, $.identifier),
   },
 });
