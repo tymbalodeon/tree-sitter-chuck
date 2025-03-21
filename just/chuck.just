@@ -26,6 +26,7 @@ parse *file:
 
 # TODO handle `tree-sitter init-config`
 
+# Test parser
 [no-cd]
 test *name:
     #!/usr/bin/env nu
