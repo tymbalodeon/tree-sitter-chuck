@@ -1,3 +1,14 @@
+use-grammars = { only = ["chuck"] }
+
+[[language]]
+name = "chuck"
+file-types = ["ck"]
+scope = "source.chuck"
+
+[[grammar]]
+name = "chuck"
+source = { git = "https://github.com/tymbalodeon/tree-sitter-chuck.git", rev = "7ef9c1e1cccc2e7c4002d5d5b5f69fe034099905" }
+
 [[language]]
 name = "javascript"
 auto-format = true
