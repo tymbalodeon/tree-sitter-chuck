@@ -16,7 +16,12 @@ module.exports = grammar({
 
     chuck_operation: ($) =>
       seq(
-        choice($.object_assignment, $._expression, $.member_identifier),
+        choice(
+          $.chuck_operation,
+          $._expression,
+          $.member_identifier,
+          $.object_assignment,
+        ),
         $._chuck_operator,
         choice(
           $.object_assignment,

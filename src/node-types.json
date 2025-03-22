@@ -47,6 +47,10 @@
           "named": true
         },
         {
+          "type": "chuck_operation",
+          "named": true
+        },
+        {
           "type": "debug_print",
           "named": true
         },

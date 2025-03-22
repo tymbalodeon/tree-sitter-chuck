@@ -34,7 +34,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "object_assignment"
+              "name": "chuck_operation"
             },
             {
               "type": "SYMBOL",
@@ -43,6 +43,10 @@
             {
               "type": "SYMBOL",
               "name": "member_identifier"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "object_assignment"
             }
           ]
         },

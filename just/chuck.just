@@ -5,7 +5,7 @@
 # Generate parser
 [no-cd]
 @generate:
-    tree-sitter generate --js-runtime bun
+    bun run tree-sitter generate --js-runtime bun
 
 # Install dependencies
 @install:
@@ -22,7 +22,7 @@ parse *file:
         "{{ file }}"
     }
 
-    tree-sitter parse $file
+    bun run tree-sitter parse $file
 
 # Test parser
 [no-cd]
@@ -30,11 +30,11 @@ test *name:
     #!/usr/bin/env nu
 
     if ("{{ name }}" | is-empty) {
-        tree-sitter test
+        bun run tree-sitter test
     } else {
-        tree-sitter test --include {{ name }}
+        bun run tree-sitter test --include {{ name }}
     }
 
 # Highlight file
 @highlight +file:
-    tree-sitter highlight {{ file }} --config-path config.json
+    bun run tree-sitter highlight {{ file }} --config-path config.json
