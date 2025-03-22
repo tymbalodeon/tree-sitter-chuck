@@ -7,6 +7,7 @@
       "title": "Chuck",
       "scope": "source.chuck",
       "file-types": ["ck"],
+      "highlights": "queries/highlights.scm",
       "injection-regex": "^chuck$",
       "class-name": "TreeSitterChuck"
     }
