@@ -40,3 +40,7 @@ test *name:
     } else {
         tree-sitter test --include {{ name }}
     }
+
+# Highlight file
+@highlight +file:
+    tree-sitter highlight {{ file }} --config-path config.json

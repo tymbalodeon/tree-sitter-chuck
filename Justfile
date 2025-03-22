@@ -65,5 +65,6 @@ alias src := view-source
 mod chuck "just/chuck.just"
 
 alias generate := chuck::generate
+alias highlight := chuck::highlight
 alias install := chuck::install
 alias parse := chuck::parse
