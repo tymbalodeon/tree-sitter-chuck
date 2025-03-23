@@ -13,14 +13,14 @@ cmp.im => float y; //y is 3.5
 
 %(2, .5*pi) => polar pol; // pol is 2∠.5π
 
-// %(2, .5*pi) => polar pol;
-// pol.mag => float m; // m is 2
-// pol.phase => float p; //p is .5π
+%(2, .5*pi) => polar pol;
+pol.mag => float m; // m is 2
+pol.phase => float p; //p is .5π
 
-// %(2, .5*pi) => polar pol;
-// #(3, 4) => complex cmp;
-// pol $ complex + #(10, 3) + cmp => complex cmp2;
-// cmp $ polar + %(10, .25*pi) - pol => polar pol2;
+%(2, .5*pi) => polar pol;
+#(3, 4) => complex cmp;
+pol $ complex + #(10, 3) + cmp => complex cmp2;
+cmp $ polar + %(10, .25*pi) - pol => polar pol2;
 
 ---
 
@@ -85,16 +85,83 @@ cmp.im => float y; //y is 3.5
       (operation
         (number)
         (operator)
-        (constant)))
+        (keyword)))
     (variable_declaration
       (type)
       (variable)))
   (comment)
+  (chuck_operation
+    (polar
+      (number)
+      (operation
+        (number)
+        (operator)
+        (keyword)))
+    (variable_declaration
+      (type)
+      (variable)))
+  (chuck_operation
+    (member_identifier
+      (variable)
+      (variable))
+    (variable_declaration
+      (type)
+      (variable)))
   (comment)
+  (chuck_operation
+    (member_identifier
+      (variable)
+      (variable))
+    (variable_declaration
+      (type)
+      (variable)))
   (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment))
+  (chuck_operation
+    (polar
+      (number)
+      (operation
+        (number)
+        (operator)
+        (keyword)))
+    (variable_declaration
+      (type)
+      (variable)))
+  (chuck_operation
+    (complex
+      (number)
+      (number))
+    (variable_declaration
+      (type)
+      (variable)))
+  (chuck_operation
+    (operation
+      (cast
+        (variable)
+        (type))
+      (operator)
+      (complex
+        (number)
+        (number))
+      (operator)
+      (variable))
+    (variable_declaration
+      (type)
+      (variable)))
+  (chuck_operation
+    (operation
+      (cast
+        (variable)
+        (type))
+      (operator)
+      (polar
+        (number)
+        (operation
+          (number)
+          (operator)
+          (keyword)))
+      (operator)
+      (variable))
+    (variable_declaration
+      (type)
+      (variable))))
 

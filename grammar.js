@@ -13,6 +13,8 @@ module.exports = grammar({
   rules: {
     source_file: ($) => repeat($._statement),
 
+    cast: ($) => seq($._value, "$", $.type),
+
     _chuck_keyword: () =>
       choice("const", "fun", "function", "global", "new", "spork"),
 
@@ -60,7 +62,7 @@ module.exports = grammar({
         ),
       ),
 
-    complex: ($) => seq("#(", $.number, ",", $.number, ")"),
+    complex: ($) => seq("#(", $._expression, ",", $._expression, ")"),
 
     _control_structure: () =>
       choice(
@@ -84,7 +86,7 @@ module.exports = grammar({
     dur: ($) => seq($.number, "::", choice($.duration_identifier, $.variable)),
 
     _expression: ($) =>
-      choice($.operation, $.debug_print, $.function_call, $._value),
+      choice($.debug_print, $.function_call, $.operation, $._value),
 
     _expressions: ($) =>
       seq($._expression, optional(repeat(seq(",", $._expression)))),
@@ -130,7 +132,7 @@ module.exports = grammar({
       seq($._value, $.operator, $._value, optional(seq($.operator, $._value))),
 
     operator: () => choice("*", "+", "-", "/"),
-    polar: ($) => seq("%(", $.number, ",", $.number, ")"),
+    polar: ($) => seq("%(", $._expression, ",", $._expression, ")"),
 
     type: ($) =>
       choice(
@@ -173,7 +175,16 @@ module.exports = grammar({
     },
 
     _value: ($) =>
-      choice($.complex, $.dur, $._identifier, $.number, $.polar, $.string),
+      choice(
+        $.cast,
+        $.complex,
+        $.dur,
+        $._identifier,
+        $.number,
+        $.polar,
+        $.string,
+      ),
+
     variable: () => /[a-z][a-zA-Z0-9]*/,
     variable_declaration: ($) => seq($.type, $._identifier),
   },

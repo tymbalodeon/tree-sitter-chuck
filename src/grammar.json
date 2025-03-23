@@ -9,6 +9,23 @@
         "name": "_statement"
       }
     },
+    "cast": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_value"
+        },
+        {
+          "type": "STRING",
+          "value": "$"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type"
+        }
+      ]
+    },
     "_chuck_keyword": {
       "type": "CHOICE",
       "members": [
@@ -214,7 +231,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "number"
+          "name": "_expression"
         },
         {
           "type": "STRING",
@@ -222,7 +239,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "number"
+          "name": "_expression"
         },
         {
           "type": "STRING",
@@ -364,15 +381,15 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "operation"
-        },
-        {
-          "type": "SYMBOL",
           "name": "debug_print"
         },
         {
           "type": "SYMBOL",
           "name": "function_call"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operation"
         },
         {
           "type": "SYMBOL",
@@ -689,7 +706,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "number"
+          "name": "_expression"
         },
         {
           "type": "STRING",
@@ -697,7 +714,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "number"
+          "name": "_expression"
         },
         {
           "type": "STRING",
@@ -870,6 +887,10 @@
     "_value": {
       "type": "CHOICE",
       "members": [
+        {
+          "type": "SYMBOL",
+          "name": "cast"
+        },
         {
           "type": "SYMBOL",
           "name": "complex"

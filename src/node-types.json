@@ -1,5 +1,52 @@
 [
   {
+    "type": "cast",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "cast",
+          "named": true
+        },
+        {
+          "type": "complex",
+          "named": true
+        },
+        {
+          "type": "dur",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "polar",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "chuck_operation",
     "named": true,
     "fields": {},
@@ -7,6 +54,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "cast",
+          "named": true
+        },
         {
           "type": "chuck_operation",
           "named": true
@@ -75,7 +126,47 @@
       "required": true,
       "types": [
         {
+          "type": "cast",
+          "named": true
+        },
+        {
+          "type": "complex",
+          "named": true
+        },
+        {
+          "type": "debug_print",
+          "named": true
+        },
+        {
+          "type": "dur",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
           "type": "number",
+          "named": true
+        },
+        {
+          "type": "operation",
+          "named": true
+        },
+        {
+          "type": "polar",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "variable",
           "named": true
         }
       ]
@@ -89,6 +180,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "cast",
+          "named": true
+        },
         {
           "type": "complex",
           "named": true
@@ -171,6 +266,10 @@
           {
             "type": ",",
             "named": false
+          },
+          {
+            "type": "cast",
+            "named": true
           },
           {
             "type": "complex",
@@ -329,6 +428,10 @@
       "required": true,
       "types": [
         {
+          "type": "cast",
+          "named": true
+        },
+        {
           "type": "complex",
           "named": true
         },
@@ -377,7 +480,47 @@
       "required": true,
       "types": [
         {
+          "type": "cast",
+          "named": true
+        },
+        {
+          "type": "complex",
+          "named": true
+        },
+        {
+          "type": "debug_print",
+          "named": true
+        },
+        {
+          "type": "dur",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
           "type": "number",
+          "named": true
+        },
+        {
+          "type": "operation",
+          "named": true
+        },
+        {
+          "type": "polar",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "variable",
           "named": true
         }
       ]
@@ -392,6 +535,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "cast",
+          "named": true
+        },
         {
           "type": "chuck_operation",
           "named": true
@@ -494,6 +641,10 @@
   },
   {
     "type": "#(",
+    "named": false
+  },
+  {
+    "type": "$",
     "named": false
   },
   {
