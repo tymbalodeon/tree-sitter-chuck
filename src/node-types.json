@@ -12,15 +12,11 @@
           "named": true
         },
         {
-          "type": "float",
-          "named": true
-        },
-        {
           "type": "identifier",
           "named": true
         },
         {
-          "type": "int",
+          "type": "number",
           "named": true
         },
         {
@@ -59,10 +55,6 @@
           "named": true
         },
         {
-          "type": "float",
-          "named": true
-        },
-        {
           "type": "function_call",
           "named": true
         },
@@ -71,11 +63,11 @@
           "named": true
         },
         {
-          "type": "int",
+          "type": "member_identifier",
           "named": true
         },
         {
-          "type": "member_identifier",
+          "type": "number",
           "named": true
         },
         {
@@ -114,10 +106,6 @@
           "named": true
         },
         {
-          "type": "float",
-          "named": true
-        },
-        {
           "type": "function_call",
           "named": true
         },
@@ -126,7 +114,7 @@
           "named": true
         },
         {
-          "type": "int",
+          "type": "number",
           "named": true
         },
         {
@@ -149,11 +137,7 @@
           "named": true
         },
         {
-          "type": "float",
-          "named": true
-        },
-        {
-          "type": "int",
+          "type": "number",
           "named": true
         }
       ]
@@ -189,10 +173,6 @@
             "named": true
           },
           {
-            "type": "float",
-            "named": true
-          },
-          {
             "type": "function_call",
             "named": true
           },
@@ -201,7 +181,7 @@
             "named": true
           },
           {
-            "type": "int",
+            "type": "number",
             "named": true
           },
           {
@@ -251,11 +231,6 @@
     }
   },
   {
-    "type": "int",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "member_identifier",
     "named": true,
     "fields": {
@@ -284,6 +259,11 @@
         ]
       }
     }
+  },
+  {
+    "type": "number",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "object_assignment",
@@ -473,10 +453,6 @@
   {
     "type": "float",
     "named": false
-  },
-  {
-    "type": "float",
-    "named": true
   },
   {
     "type": "hour",

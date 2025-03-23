@@ -1,61 +1,18 @@
 {
   "parser-directories": [".."],
   "theme": {
-    "constant": 94,
-    "embedded": null,
-    "string.special": 30,
-    "punctuation.special": 239,
-    "type.builtin": {
-      "color": 23,
-      "bold": true
-    },
-    "variable": 252,
-    "attribute": {
-      "italic": true,
-      "color": 124
-    },
-    "property": 124,
-    "string": 28,
-    "constant.builtin": {
-      "color": 94,
-      "bold": true
-    },
-    "function.builtin": {
-      "color": 26,
-      "bold": true
-    },
-    "keyword": 56,
-    "number": {
-      "color": 94,
-      "bold": true
-    },
-    "punctuation": 239,
+    "class": "#f38ba8",
     "comment": {
-      "color": 245,
+      "color": "#585b70",
       "italic": true
     },
-    "tag": 18,
-    "variable.builtin": {
-      "bold": true,
-      "color": 252
+    "keyword": "#f38ba8",
+    "number": {
+      "color": "#fab387",
+      "bold": true
     },
-    "function": 26,
-    "constructor": 136,
-    "operator": {
-      "bold": true,
-      "color": 239
-    },
-    "module": 136,
-    "type": 23,
-    "property.builtin": {
-      "bold": true,
-      "color": 124
-    },
-    "punctuation.bracket": 239,
-    "punctuation.delimiter": 239,
-    "variable.parameter": {
-      "color": 252,
-      "underline": true
-    }
+    "string": "#a6e3a1",
+    "type": "#89b4fa",
+    "unit-generator": "#cba6f7"
   }
 }

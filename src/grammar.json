@@ -186,7 +186,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_number"
+          "name": "number"
         },
         {
           "type": "STRING",
@@ -285,7 +285,7 @@
         }
       ]
     },
-    "float": {
+    "_float": {
       "type": "PATTERN",
       "value": "(\\d+)?\\.\\d+"
     },
@@ -327,7 +327,7 @@
         }
       ]
     },
-    "int": {
+    "_int": {
       "type": "CHOICE",
       "members": [
         {
@@ -396,16 +396,16 @@
       "type": "STRING",
       "value": "now"
     },
-    "_number": {
+    "number": {
       "type": "CHOICE",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "float"
+          "name": "_float"
         },
         {
           "type": "SYMBOL",
-          "name": "int"
+          "name": "_int"
         }
       ]
     },
@@ -565,7 +565,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_number"
+          "name": "number"
         },
         {
           "type": "SYMBOL",

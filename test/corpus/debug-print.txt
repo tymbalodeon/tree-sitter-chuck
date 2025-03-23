@@ -22,7 +22,7 @@ Debug print
 
 (source_file
   (chuck_operation
-    (int)
+    (number)
     (variable_declaration
       (type)
       (identifier)))
@@ -33,9 +33,9 @@ Debug print
   (chuck_operation
     (debug_print
       (binary_expression
-        (float)
+        (number)
       (operator)
-      (float)))
+      (number)))
     (variable_declaration
       (type)
       (identifier)))
@@ -45,26 +45,26 @@ Debug print
   (debug_print
     (string)
     (binary_expression
-      (int)
+      (number)
       (operator)
-      (int)))
+      (number)))
   (debug_print
     (string)
     (function_call
       (member_identifier
         (class_identifier)
         (identifier))
-      (int)
-      (int))
+      (number)
+      (number))
     (function_call
       (member_identifier
         (class_identifier)
         (identifier))
-      (int)
-      (int))
+      (number)
+      (number))
     (function_call
       (member_identifier
         (class_identifier)
         (identifier))
-      (int)
-      (int))))
+      (number)
+      (number))))

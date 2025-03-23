@@ -48,7 +48,7 @@ module.exports = grammar({
     duration_identifier: () =>
       choice("samp", "ms", "second", "minute", "hour", "day", "week"),
 
-    dur: ($) => seq($._number, "::", $.duration_identifier),
+    dur: ($) => seq($.number, "::", $.duration_identifier),
 
     _expression: ($) =>
       choice($.binary_expression, $.debug_print, $.function_call, $._value),
@@ -64,7 +64,7 @@ module.exports = grammar({
         ")",
       ),
 
-    float: () => /(\d+)?\.\d+/,
+    _float: () => /(\d+)?\.\d+/,
     global_unit_generator: () => choice("adc", "blackhole", "dac"),
 
     identifier: ($) =>
@@ -75,7 +75,7 @@ module.exports = grammar({
         $.now_keyword,
       ),
 
-    int: () =>
+    _int: () =>
       choice(/\d+/, seq(choice("0x", "0X"), /[\da-fA-F](_?[\da-fA-F])*/)),
 
     member_identifier: ($) =>
@@ -86,7 +86,7 @@ module.exports = grammar({
       ),
 
     now_keyword: () => "now",
-    _number: ($) => choice($.float, $.int),
+    number: ($) => choice($._float, $._int),
     object_assignment: ($) => seq($.class_identifier, $.identifier),
     operator: () => choice("+", "-"),
 
@@ -125,7 +125,7 @@ module.exports = grammar({
         "void",
       ),
 
-    _value: ($) => choice($.dur, $.identifier, $._number, $.string),
+    _value: ($) => choice($.dur, $.identifier, $.number, $.string),
     variable_declaration: ($) => seq($.type, $.identifier),
   },
 });

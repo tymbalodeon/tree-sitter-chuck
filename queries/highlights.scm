@@ -1,11 +1,8 @@
-(class_identifier) @constructor
+(class_identifier) @unit-generator
 (comment) @comment
-(duration_identifier) @variable.builtin
-(float) @number
+(duration_identifier) @type
 (global_unit_generator) @keyword
-(identifier) @variable
-(int) @number
-(member_identifier member_identifier: (identifier) @variable)
 (now_keyword) @keyword
+(number) @number
 (string) @string
 (type) @type
