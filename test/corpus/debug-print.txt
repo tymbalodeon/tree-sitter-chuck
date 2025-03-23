@@ -25,26 +25,26 @@ Debug print
     (number)
     (variable_declaration
       (type)
-      (identifier)))
+      (variable)))
   (debug_print
-    (identifier))
+    (variable))
   (debug_print
     (string))
   (chuck_operation
     (debug_print
-      (binary_expression
+      (operation
         (number)
       (operator)
       (number)))
     (variable_declaration
       (type)
-      (identifier)))
+      (variable)))
   (debug_print
     (string)
-    (identifier))
+    (variable))
   (debug_print
     (string)
-    (binary_expression
+    (operation
       (number)
       (operator)
       (number)))
@@ -53,18 +53,18 @@ Debug print
     (function_call
       (member_identifier
         (class_identifier)
-        (identifier))
+        (variable))
       (number)
       (number))
     (function_call
       (member_identifier
         (class_identifier)
-        (identifier))
+        (variable))
       (number)
       (number))
     (function_call
       (member_identifier
         (class_identifier)
-        (identifier))
+        (variable))
       (number)
       (number))))

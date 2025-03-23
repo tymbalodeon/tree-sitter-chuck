@@ -1,0 +1,68 @@
+==========
+Variables
+==========
+
+// assign value of 2 to 'foo'
+2 => foo;
+
+// assign 2 to a new variable 'foo' of type 'int'
+2 => int foo;
+
+// debug-print the value of foo
+<<< foo >>>;
+
+// multiply 'foo' by 10, assign back to 'foo'
+foo * 10 => foo;
+
+// multiply 'foo' by 10, and then assign to 'foo'
+10 *=> foo;
+
+// assign value of '5 seconds' to new variable bar
+5::second => dur bar;
+
+// 4 bar, a measure?
+4::bar => dur measure;
+
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (number)
+    (variable))
+  (comment)
+  (chuck_operation
+    (number)
+    (variable_declaration
+      (type)
+      (variable)))
+  (comment)
+  (debug_print
+    (variable))
+  (comment)
+  (chuck_operation
+    (operation
+      (variable)
+      (operator)
+      (number))
+    (variable))
+  (comment)
+  (chuck_operation
+    (number)
+    (variable))
+  (comment)
+  (chuck_operation
+    (dur
+      (number)
+      (duration_identifier))
+    (variable_declaration
+      (type)
+      (variable)))
+  (comment)
+  (chuck_operation
+    (dur
+      (number)
+      (variable))
+    (variable_declaration
+      (type)
+      (variable))))

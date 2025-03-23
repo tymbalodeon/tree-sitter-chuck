@@ -9,23 +9,6 @@
         "name": "_statement"
       }
     },
-    "binary_expression": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "_value"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "operator"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_value"
-        }
-      ]
-    },
     "_chuck_keyword": {
       "type": "CHOICE",
       "members": [
@@ -92,7 +75,7 @@
             },
             {
               "type": "SYMBOL",
-              "name": "identifier"
+              "name": "_identifier"
             },
             {
               "type": "SYMBOL",
@@ -107,8 +90,29 @@
       ]
     },
     "_chuck_operator": {
-      "type": "STRING",
-      "value": "=>"
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "=>"
+        },
+        {
+          "type": "STRING",
+          "value": "*=>"
+        },
+        {
+          "type": "STRING",
+          "value": "+=>"
+        },
+        {
+          "type": "STRING",
+          "value": "-=>"
+        },
+        {
+          "type": "STRING",
+          "value": "/=>"
+        }
+      ]
     },
     "class_identifier": {
       "type": "PATTERN",
@@ -200,6 +204,31 @@
           }
         ]
       }
+    },
+    "complex": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "#("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
     },
     "_control_structure": {
       "type": "CHOICE",
@@ -316,8 +345,17 @@
           "value": "::"
         },
         {
-          "type": "SYMBOL",
-          "name": "duration_identifier"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "duration_identifier"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "variable"
+            }
+          ]
         }
       ]
     },
@@ -326,7 +364,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "binary_expression"
+          "name": "operation"
         },
         {
           "type": "SYMBOL",
@@ -429,12 +467,12 @@
         }
       ]
     },
-    "identifier": {
+    "_identifier": {
       "type": "CHOICE",
       "members": [
         {
-          "type": "PATTERN",
-          "value": "[a-z][a-zA-Z0-9]*"
+          "type": "SYMBOL",
+          "name": "variable"
         },
         {
           "type": "SYMBOL",
@@ -521,7 +559,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "identifier"
+                "name": "_identifier"
               }
             ]
           }
@@ -535,21 +573,38 @@
           "name": "member_identifier",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "_identifier"
           }
         }
       ]
     },
     "number": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "_float"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "-"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
-          "type": "SYMBOL",
-          "name": "_int"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_float"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_int"
+            }
+          ]
         }
       ]
     },
@@ -562,7 +617,45 @@
         },
         {
           "type": "SYMBOL",
-          "name": "identifier"
+          "name": "_identifier"
+        }
+      ]
+    },
+    "operation": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_value"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operator"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_value"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "operator"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_value"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },
@@ -571,11 +664,44 @@
       "members": [
         {
           "type": "STRING",
+          "value": "*"
+        },
+        {
+          "type": "STRING",
           "value": "+"
         },
         {
           "type": "STRING",
           "value": "-"
+        },
+        {
+          "type": "STRING",
+          "value": "/"
+        }
+      ]
+    },
+    "polar": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "%("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
         }
       ]
     },
@@ -655,15 +781,15 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "keyword"
-                },
-                {
-                  "type": "SYMBOL",
                   "name": "member_identifier"
                 },
                 {
                   "type": "SYMBOL",
                   "name": "chuck_operation"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_value"
                 },
                 {
                   "type": "SYMBOL",
@@ -746,11 +872,15 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "complex"
+        },
+        {
+          "type": "SYMBOL",
           "name": "dur"
         },
         {
           "type": "SYMBOL",
-          "name": "identifier"
+          "name": "_identifier"
         },
         {
           "type": "SYMBOL",
@@ -758,9 +888,17 @@
         },
         {
           "type": "SYMBOL",
+          "name": "polar"
+        },
+        {
+          "type": "SYMBOL",
           "name": "string"
         }
       ]
+    },
+    "variable": {
+      "type": "PATTERN",
+      "value": "[a-z][a-zA-Z0-9]*"
     },
     "variable_declaration": {
       "type": "SEQ",
@@ -771,7 +909,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "identifier"
+          "name": "_identifier"
         }
       ]
     }

@@ -16,6 +16,6 @@ int foo; // another comment
   (comment)
   (variable_declaration
     (type)
-    (identifier))
+    (variable))
   (comment)
   (comment))

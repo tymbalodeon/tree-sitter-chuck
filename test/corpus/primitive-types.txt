@@ -1,0 +1,32 @@
+================
+Primitive types
+================
+
+int;
+float;
+dur;
+void;
+vec3;
+vec4;
+complex;
+polar;
+
+---
+
+(source_file
+  (keyword
+    (type))
+  (keyword
+    (type))
+  (keyword
+    (type))
+  (keyword
+    (type))
+  (keyword
+    (type))
+  (keyword
+    (type))
+  (keyword
+    (type))
+  (keyword
+    (type)))

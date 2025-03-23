@@ -12,7 +12,6 @@ module.exports = grammar({
 
   rules: {
     source_file: ($) => repeat($._statement),
-    binary_expression: ($) => seq($._value, $.operator, $._value),
 
     _chuck_keyword: () =>
       choice("const", "fun", "function", "global", "new", "spork"),
@@ -28,13 +27,13 @@ module.exports = grammar({
         $._chuck_operator,
         choice(
           $.object_assignment,
-          $.identifier,
+          $._identifier,
           $.member_identifier,
           $.variable_declaration,
         ),
       ),
 
-    _chuck_operator: () => "=>",
+    _chuck_operator: () => choice("=>", "*=>", "+=>", "-=>", "/=>"),
     class_identifier: () => /[A-Z][a-zA-Z0-9]*/,
 
     _class_keyword: () =>
@@ -61,6 +60,8 @@ module.exports = grammar({
         ),
       ),
 
+    complex: ($) => seq("#(", $.number, ",", $.number, ")"),
+
     _control_structure: () =>
       choice(
         "break",
@@ -80,10 +81,10 @@ module.exports = grammar({
     duration_identifier: () =>
       choice("day", "hour", "minute", "ms", "samp", "second", "week"),
 
-    dur: ($) => seq($.number, "::", $.duration_identifier),
+    dur: ($) => seq($.number, "::", choice($.duration_identifier, $.variable)),
 
     _expression: ($) =>
-      choice($.binary_expression, $.debug_print, $.function_call, $._value),
+      choice($.operation, $.debug_print, $.function_call, $._value),
 
     _expressions: ($) =>
       seq($._expression, optional(repeat(seq(",", $._expression)))),
@@ -99,7 +100,7 @@ module.exports = grammar({
     _float: () => /(\d+)?\.\d+/,
     global_unit_generator: () => choice("adc", "blackhole", "dac"),
 
-    identifier: ($) => choice(/[a-z][a-zA-Z0-9]*/, $.keyword),
+    _identifier: ($) => choice($.variable, $.keyword),
 
     _int: () =>
       choice(/\d+/, seq(choice("0x", "0X"), /[\da-fA-F](_?[\da-fA-F])*/)),
@@ -117,14 +118,19 @@ module.exports = grammar({
 
     member_identifier: ($) =>
       seq(
-        field("object_identifier", choice($.class_identifier, $.identifier)),
+        field("object_identifier", choice($.class_identifier, $._identifier)),
         ".",
-        field("member_identifier", $.identifier),
+        field("member_identifier", $._identifier),
       ),
 
-    number: ($) => choice($._float, $._int),
-    object_assignment: ($) => seq($.class_identifier, $.identifier),
-    operator: () => choice("+", "-"),
+    number: ($) => seq(optional("-"), choice($._float, $._int)),
+    object_assignment: ($) => seq($.class_identifier, $._identifier),
+
+    operation: ($) =>
+      seq($._value, $.operator, $._value, optional(seq($.operator, $._value))),
+
+    operator: () => choice("*", "+", "-", "/"),
+    polar: ($) => seq("%(", $.number, ",", $.number, ")"),
 
     type: ($) =>
       choice(
@@ -149,9 +155,9 @@ module.exports = grammar({
             $.object_assignment,
             $.debug_print,
             $.function_call,
-            $.keyword,
             $.member_identifier,
             $.chuck_operation,
+            $._value,
             $.variable_declaration,
           ),
           ";",
@@ -166,7 +172,9 @@ module.exports = grammar({
       return seq(delimeter, optional(/[^"]*/), delimeter);
     },
 
-    _value: ($) => choice($.dur, $.identifier, $.number, $.string),
-    variable_declaration: ($) => seq($.type, $.identifier),
+    _value: ($) =>
+      choice($.complex, $.dur, $._identifier, $.number, $.polar, $.string),
+    variable: () => /[a-z][a-zA-Z0-9]*/,
+    variable_declaration: ($) => seq($.type, $._identifier),
   },
 });
