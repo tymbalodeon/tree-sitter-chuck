@@ -11,32 +11,31 @@ module.exports = grammar({
   name: "chuck",
 
   rules: {
-    source_file: ($) => repeat($._statement),
+    source_file: ($) => repeat(choice($.block, $.comment, $._statement)),
+    array: ($) => seq("[", optional($._expression_list), "]"),
 
-    cast: ($) => seq($._value, "$", $.type),
+    array_declaration: ($) =>
+      seq($.variable_identifier, "[", optional($._expression), "]"),
+
+    binary_expression: ($) =>
+      prec.left(seq($._expression, $.operator, $._expression)),
+
+    block: ($) => seq("{", repeat($._statement), "}"),
+    cast: ($) => seq($._expression, "$", $.primitive_type),
 
     _chuck_keyword: () =>
       choice("const", "fun", "function", "global", "new", "spork"),
 
     chuck_operation: ($) =>
       seq(
-        choice(
-          $.chuck_operation,
-          $._expression,
-          $.member_identifier,
-          $.object_assignment,
-        ),
+        choice($.chuck_operation, $._expression),
         $._chuck_operator,
-        choice(
-          $.object_assignment,
-          $._identifier,
-          $.member_identifier,
-          $.variable_declaration,
-        ),
+        choice($._declaration, $._identifier, $.member_identifier),
       ),
 
-    _chuck_operator: () => choice("=>", "*=>", "+=>", "-=>", "/=>"),
-    class_identifier: () => /[A-Z][a-zA-Z0-9]*/,
+    _chuck_operator: () => choice("=>", "*=>", "+=>", "-=>", "/=>", "@=>"),
+    class_declaration: ($) => seq($.class_identifier, $.variable_identifier),
+    class_identifier: ($) => choice(/[A-Z][a-zA-Z0-9]*/, $.reference_type),
 
     _class_keyword: () =>
       choice(
@@ -78,34 +77,56 @@ module.exports = grammar({
         "while",
       ),
 
-    debug_print: ($) => seq("<<<", optional($._expressions), ">>>"),
+    concatentation_operator: () => "+",
+    debug_print: ($) => seq("<<<", $._expression_list, ">>>"),
+
+    _declaration: ($) =>
+      choice($.array_declaration, $.class_declaration, $.variable_declaration),
 
     duration_identifier: () =>
       choice("day", "hour", "minute", "ms", "samp", "second", "week"),
 
-    dur: ($) => seq($.number, "::", choice($.duration_identifier, $.variable)),
+    dur: ($) =>
+      seq(
+        $._expression,
+        "::",
+        choice($.duration_identifier, $.variable_identifier),
+      ),
 
     _expression: ($) =>
-      choice($.debug_print, $.function_call, $.operation, $._value),
+      choice(
+        $.array,
+        $.binary_expression,
+        $.cast,
+        $.debug_print,
+        $._declaration,
+        $.function_call,
+        $._identifier,
+        $.member_identifier,
+        $._number,
+        $.string,
+        seq("(", $._expression, ")"),
+      ),
 
-    _expressions: ($) =>
-      seq($._expression, optional(repeat(seq(",", $._expression)))),
+    _expression_list: ($) =>
+      seq($._expression, repeat(seq(",", $._expression))),
 
     function_call: ($) =>
       seq(
-        $.member_identifier,
+        choice($._identifier, $.member_identifier),
         "(",
-        field("arguments", optional($._expressions)),
+        field("arguments", optional($._expression_list)),
         ")",
       ),
 
-    _float: () => /(\d+)?\.\d+/,
+    float: () => token(seq(optional("-"), /(\d+)?\.\d+/)),
     global_unit_generator: () => choice("adc", "blackhole", "dac"),
+    hexidecimal: () => token(seq("0", /x/i, /[\da-fA-F](_?[\da-fA-F])*/)),
 
-    _identifier: ($) => choice($.variable, $.keyword),
+    _identifier: ($) =>
+      choice($.class_identifier, $.keyword, $.variable_identifier),
 
-    _int: () =>
-      choice(/\d+/, seq(choice("0x", "0X"), /[\da-fA-F](_?[\da-fA-F])*/)),
+    int: () => token(seq(optional("-"), /\d+/)),
 
     keyword: ($) =>
       choice(
@@ -114,27 +135,19 @@ module.exports = grammar({
         $._control_structure,
         $.duration_identifier,
         $.global_unit_generator,
-        $.type,
-        $._special_value,
+        $.primitive_type,
+        $._special_literal_value,
       ),
 
-    member_identifier: ($) =>
-      seq(
-        field("object_identifier", choice($.class_identifier, $._identifier)),
-        ".",
-        field("member_identifier", $._identifier),
-      ),
+    member_identifier: ($) => seq($._identifier, ".", $.variable_identifier),
 
-    number: ($) => seq(optional("-"), choice($._float, $._int)),
-    object_assignment: ($) => seq($.class_identifier, $._identifier),
-
-    operation: ($) =>
-      seq($._value, $.operator, $._value, optional(seq($.operator, $._value))),
+    _number: ($) =>
+      choice($.complex, $.dur, $.float, $.hexidecimal, $.int, $.polar),
 
     operator: () => choice("*", "+", "-", "/"),
     polar: ($) => seq("%(", $._expression, ",", $._expression, ")"),
 
-    type: ($) =>
+    primitive_type: () =>
       choice(
         "complex",
         "dur",
@@ -148,44 +161,25 @@ module.exports = grammar({
         "void",
       ),
 
-    _statement: ($) =>
-      choice(
-        $.comment,
-        seq(
-          choice(
-            $.class_identifier,
-            $.object_assignment,
-            $.debug_print,
-            $.function_call,
-            $.member_identifier,
-            $.chuck_operation,
-            $._value,
-            $.variable_declaration,
-          ),
-          ";",
-        ),
-      ),
+    reference_assignment: ($) => seq($.primitive_type),
+    reference_type: () => choice("Event", "Object", "UGen", "array", "string"),
 
-    _special_value: ($) =>
+    _special_literal_value: () =>
       choice("NULL", "false", "maybe", "me", "now", "null", "pi", "true"),
+
+    _statement: ($) => seq(choice($.chuck_operation, $._expression), ";"),
 
     string: () => {
       const delimeter = '"';
       return seq(delimeter, optional(/[^"]*/), delimeter);
     },
 
-    _value: ($) =>
-      choice(
-        $.cast,
-        $.complex,
-        $.dur,
-        $._identifier,
-        $.number,
-        $.polar,
-        $.string,
-      ),
+    _type: ($) =>
+      choice($.class_identifier, $.variable_identifier, $.primitive_type),
 
-    variable: () => /[a-z][a-zA-Z0-9]*/,
-    variable_declaration: ($) => seq($.type, $._identifier),
+    variable_identifier: () => /[a-z][a-zA-Z0-9]*/,
+    variable_declaration: ($) => seq($.primitive_type, $.variable_identifier),
   },
+
+  word: ($) => $.variable_identifier,
 });

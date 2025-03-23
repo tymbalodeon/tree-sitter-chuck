@@ -64,17 +64,17 @@ blackhole;
 
 (source_file
   (keyword
-    (type))
+    (primitive_type))
   (keyword
-    (type))
+    (primitive_type))
   (keyword
-    (type))
+    (primitive_type))
   (keyword
-    (type))
+    (primitive_type))
   (keyword
-    (type))
+    (primitive_type))
   (keyword
-    (type))
+    (primitive_type))
   (keyword)
   (keyword)
   (keyword)

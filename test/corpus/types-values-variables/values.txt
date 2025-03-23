@@ -10,9 +10,9 @@ Values
 ---
 
 (source_file
-  (number)
-  (number)
-  (number)
+  (int)
+  (hexidecimal)
+  (float)
   (dur
-    (number)
+    (float)
     (duration_identifier)))

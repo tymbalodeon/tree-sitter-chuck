@@ -1,0 +1,23 @@
+================
+Reference types
+================
+
+Object;
+array;
+Event;
+UGen;
+string;
+
+---
+
+(source_file
+  (class_identifier
+    (reference_type))
+  (class_identifier
+    (reference_type))
+  (class_identifier
+    (reference_type))
+  (class_identifier
+    (reference_type))
+  (class_identifier
+    (reference_type)))

@@ -2,6 +2,7 @@ use-grammars = { only = ["chuck"] }
 
 [[language]]
 name = "chuck"
+comment-tokens = "//"
 file-types = ["ck"]
 scope = "source.chuck"
 

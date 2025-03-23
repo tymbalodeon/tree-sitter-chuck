@@ -28,41 +28,41 @@ foo * 10 => foo;
 (source_file
   (comment)
   (chuck_operation
-    (number)
-    (variable))
+    (int)
+    (variable_identifier))
   (comment)
   (chuck_operation
-    (number)
+    (int)
     (variable_declaration
-      (type)
-      (variable)))
+      (primitive_type)
+      (variable_identifier)))
   (comment)
   (debug_print
-    (variable))
+    (variable_identifier))
   (comment)
   (chuck_operation
-    (operation
-      (variable)
+    (binary_expression
+      (variable_identifier)
       (operator)
-      (number))
-    (variable))
+      (int))
+    (variable_identifier))
   (comment)
   (chuck_operation
-    (number)
-    (variable))
+    (int)
+    (variable_identifier))
   (comment)
   (chuck_operation
     (dur
-      (number)
+      (int)
       (duration_identifier))
     (variable_declaration
-      (type)
-      (variable)))
+      (primitive_type)
+      (variable_identifier)))
   (comment)
   (chuck_operation
     (dur
-      (number)
-      (variable))
+      (int)
+      (variable_identifier))
     (variable_declaration
-      (type)
-      (variable))))
+      (primitive_type)
+      (variable_identifier))))

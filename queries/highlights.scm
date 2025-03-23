@@ -1,8 +1,10 @@
 (class_identifier) @unit-generator
 (comment) @comment
 (duration_identifier) @type
+(float) @number
 (global_unit_generator) @keyword
+(hexidecimal) @number
+(int) @number
 (keyword) @keyword
-(number) @number
+(primitive_type) @type
 (string) @string
-(type) @type

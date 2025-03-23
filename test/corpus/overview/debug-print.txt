@@ -22,49 +22,49 @@ Debug print
 
 (source_file
   (chuck_operation
-    (number)
+    (int)
     (variable_declaration
-      (type)
-      (variable)))
+      (primitive_type)
+      (variable_identifier)))
   (debug_print
-    (variable))
+    (variable_identifier))
   (debug_print
     (string))
   (chuck_operation
     (debug_print
-      (operation
-        (number)
-      (operator)
-      (number)))
+      (binary_expression
+        (float)
+        (operator)
+        (float)))
     (variable_declaration
-      (type)
-      (variable)))
+      (primitive_type)
+      (variable_identifier)))
   (debug_print
     (string)
-    (variable))
+    (variable_identifier))
   (debug_print
     (string)
-    (operation
-      (number)
+    (binary_expression
+      (int)
       (operator)
-      (number)))
+      (int)))
   (debug_print
     (string)
     (function_call
       (member_identifier
         (class_identifier)
-        (variable))
-      (number)
-      (number))
+        (variable_identifier))
+      (int)
+      (int))
     (function_call
       (member_identifier
         (class_identifier)
-        (variable))
-      (number)
-      (number))
+        (variable_identifier))
+      (int)
+      (int))
     (function_call
       (member_identifier
         (class_identifier)
-        (variable))
-      (number)
-      (number))))
+        (variable_identifier))
+      (int)
+      (int))))

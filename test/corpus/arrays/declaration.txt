@@ -1,0 +1,53 @@
+============
+Declaration
+============
+
+// declare 10 element array of int, called foo
+int foo[10];
+
+// since array of int (primitive type), the contents
+// are automatically initialized to 0
+
+// chuck intializer to array reference
+[ 1, 1, 2, 3, 5, 8 ] @=> int foo[];
+
+// objects in arrays are automatically instantiated
+Object group[10];
+
+// array of null object references
+Object @ group[10];
+
+---
+
+(source_file
+  (comment)
+  (array_declaration
+    (type)
+    (variable)
+    (number))
+  (comment)
+  (comment)
+  (comment)
+  (chuck_operation
+    (array
+      (number)
+      (number)
+      (number)
+      (number)
+      (number)
+      (number))
+    (array_declaration
+      (type)
+      (variable)))
+  (comment)
+  (array_declaration
+    (class_identifier
+      (reference_type))
+    (variable)
+    (number))
+  (comment)
+  (array_declaration
+    (class_identifier
+      (reference_type))
+    (variable)
+    (number)))

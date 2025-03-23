@@ -1,0 +1,169 @@
+==============
+Complex types
+==============
+
+#(2,3) => complex cmp; //cmp is now 2 + 3i 
+
+#(5, -1.5) => complex cmp; // cmp is 5 - 1.5i
+#(2,3) + #(5,6) + cmp => complex sum; // sum is now 12 + 7.5i
+
+#(2.0,3.5) => complex cmp;
+cmp.re => float x; // x is 2.0
+cmp.im => float y; //y is 3.5
+
+%(2, .5*pi) => polar pol; // pol is 2∠.5π
+
+%(2, .5*pi) => polar pol;
+pol.mag => float m; // m is 2
+pol.phase => float p; //p is .5π
+
+%(2, .5*pi) => polar pol;
+#(3, 4) => complex cmp;
+pol $ complex + #(10, 3) + cmp => complex cmp2;
+cmp $ polar + %(10, .25*pi) - pol => polar pol2;
+
+---
+
+(source_file
+  (chuck_operation
+    (complex
+      (int)
+      (int))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (complex
+      (int)
+      (float))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (binary_expression
+      (binary_expression
+        (complex
+          (int)
+          (int))
+        (operator)
+        (complex
+          (int)
+          (int)))
+      (operator)
+      (variable_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (complex
+      (float)
+      (float))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (chuck_operation
+    (member_identifier
+      (variable_identifier)
+      (variable_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (member_identifier
+      (variable_identifier)
+      (variable_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (polar
+      (int)
+      (binary_expression
+        (float)
+        (operator)
+        (keyword)))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (polar
+      (int)
+      (binary_expression
+        (float)
+        (operator)
+        (keyword)))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (chuck_operation
+    (member_identifier
+      (variable_identifier)
+      (variable_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (member_identifier
+      (variable_identifier)
+      (variable_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (polar
+      (int)
+      (binary_expression
+        (float)
+        (operator)
+        (keyword)))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (chuck_operation
+    (complex
+      (int)
+      (int))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (chuck_operation
+    (binary_expression
+      (binary_expression
+        (cast
+          (variable_identifier)
+          (primitive_type))
+        (operator)
+        (complex
+          (int)
+          (int)))
+      (operator)
+      (variable_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (chuck_operation
+    (binary_expression
+      (binary_expression
+        (cast
+          (variable_identifier)
+          (primitive_type))
+        (operator)
+        (polar
+          (int)
+          (binary_expression
+            (float)
+            (operator)
+            (keyword))))
+      (operator)
+      (variable_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))))

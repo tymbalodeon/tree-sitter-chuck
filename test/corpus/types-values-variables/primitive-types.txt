@@ -15,18 +15,18 @@ polar;
 
 (source_file
   (keyword
-    (type))
+    (primitive_type))
   (keyword
-    (type))
+    (primitive_type))
   (keyword
-    (type))
+    (primitive_type))
   (keyword
-    (type))
+    (primitive_type))
   (keyword
-    (type))
+    (primitive_type))
   (keyword
-    (type))
+    (primitive_type))
   (keyword
-    (type))
+    (primitive_type))
   (keyword
-    (type)))
+    (primitive_type)))
