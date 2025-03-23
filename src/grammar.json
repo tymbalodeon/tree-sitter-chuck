@@ -26,6 +26,35 @@
         }
       ]
     },
+    "_chuck_keyword": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "const"
+        },
+        {
+          "type": "STRING",
+          "value": "fun"
+        },
+        {
+          "type": "STRING",
+          "value": "function"
+        },
+        {
+          "type": "STRING",
+          "value": "global"
+        },
+        {
+          "type": "STRING",
+          "value": "new"
+        },
+        {
+          "type": "STRING",
+          "value": "spork"
+        }
+      ]
+    },
     "chuck_operation": {
       "type": "SEQ",
       "members": [
@@ -85,6 +114,55 @@
       "type": "PATTERN",
       "value": "[A-Z][a-zA-Z0-9]*"
     },
+    "_class_keyword": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "class"
+        },
+        {
+          "type": "STRING",
+          "value": "extends"
+        },
+        {
+          "type": "STRING",
+          "value": "implements"
+        },
+        {
+          "type": "STRING",
+          "value": "interface"
+        },
+        {
+          "type": "STRING",
+          "value": "private"
+        },
+        {
+          "type": "STRING",
+          "value": "protected"
+        },
+        {
+          "type": "STRING",
+          "value": "public"
+        },
+        {
+          "type": "STRING",
+          "value": "pure"
+        },
+        {
+          "type": "STRING",
+          "value": "static"
+        },
+        {
+          "type": "STRING",
+          "value": "super"
+        },
+        {
+          "type": "STRING",
+          "value": "this"
+        }
+      ]
+    },
     "comment": {
       "type": "TOKEN",
       "content": {
@@ -123,6 +201,51 @@
         ]
       }
     },
+    "_control_structure": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "break"
+        },
+        {
+          "type": "STRING",
+          "value": "continue"
+        },
+        {
+          "type": "STRING",
+          "value": "else"
+        },
+        {
+          "type": "STRING",
+          "value": "for"
+        },
+        {
+          "type": "STRING",
+          "value": "if"
+        },
+        {
+          "type": "STRING",
+          "value": "repeat"
+        },
+        {
+          "type": "STRING",
+          "value": "return"
+        },
+        {
+          "type": "STRING",
+          "value": "switch"
+        },
+        {
+          "type": "STRING",
+          "value": "until"
+        },
+        {
+          "type": "STRING",
+          "value": "while"
+        }
+      ]
+    },
     "debug_print": {
       "type": "SEQ",
       "members": [
@@ -153,19 +276,7 @@
       "members": [
         {
           "type": "STRING",
-          "value": "samp"
-        },
-        {
-          "type": "STRING",
-          "value": "ms"
-        },
-        {
-          "type": "STRING",
-          "value": "second"
-        },
-        {
-          "type": "STRING",
-          "value": "minute"
+          "value": "day"
         },
         {
           "type": "STRING",
@@ -173,7 +284,19 @@
         },
         {
           "type": "STRING",
-          "value": "day"
+          "value": "minute"
+        },
+        {
+          "type": "STRING",
+          "value": "ms"
+        },
+        {
+          "type": "STRING",
+          "value": "samp"
+        },
+        {
+          "type": "STRING",
+          "value": "second"
         },
         {
           "type": "STRING",
@@ -315,15 +438,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "duration_identifier"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "global_unit_generator"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "now_keyword"
+          "name": "keyword"
         }
       ]
     },
@@ -355,6 +470,39 @@
               "value": "[\\da-fA-F](_?[\\da-fA-F])*"
             }
           ]
+        }
+      ]
+    },
+    "keyword": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_chuck_keyword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_class_keyword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_control_structure"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "duration_identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "global_unit_generator"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_special_value"
         }
       ]
     },
@@ -391,10 +539,6 @@
           }
         }
       ]
-    },
-    "now_keyword": {
-      "type": "STRING",
-      "value": "now"
     },
     "number": {
       "type": "CHOICE",
@@ -435,6 +579,51 @@
         }
       ]
     },
+    "type": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "complex"
+        },
+        {
+          "type": "STRING",
+          "value": "dur"
+        },
+        {
+          "type": "STRING",
+          "value": "float"
+        },
+        {
+          "type": "STRING",
+          "value": "int"
+        },
+        {
+          "type": "STRING",
+          "value": "polar"
+        },
+        {
+          "type": "STRING",
+          "value": "same"
+        },
+        {
+          "type": "STRING",
+          "value": "time"
+        },
+        {
+          "type": "STRING",
+          "value": "vec3"
+        },
+        {
+          "type": "STRING",
+          "value": "vec4"
+        },
+        {
+          "type": "STRING",
+          "value": "void"
+        }
+      ]
+    },
     "_statement": {
       "type": "CHOICE",
       "members": [
@@ -466,6 +655,10 @@
                 },
                 {
                   "type": "SYMBOL",
+                  "name": "keyword"
+                },
+                {
+                  "type": "SYMBOL",
                   "name": "member_identifier"
                 },
                 {
@@ -483,6 +676,43 @@
               "value": ";"
             }
           ]
+        }
+      ]
+    },
+    "_special_value": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "NULL"
+        },
+        {
+          "type": "STRING",
+          "value": "false"
+        },
+        {
+          "type": "STRING",
+          "value": "maybe"
+        },
+        {
+          "type": "STRING",
+          "value": "me"
+        },
+        {
+          "type": "STRING",
+          "value": "now"
+        },
+        {
+          "type": "STRING",
+          "value": "null"
+        },
+        {
+          "type": "STRING",
+          "value": "pi"
+        },
+        {
+          "type": "STRING",
+          "value": "true"
         }
       ]
     },
@@ -508,47 +738,6 @@
         {
           "type": "STRING",
           "value": "\""
-        }
-      ]
-    },
-    "type": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "complex"
-        },
-        {
-          "type": "STRING",
-          "value": "dur"
-        },
-        {
-          "type": "STRING",
-          "value": "float"
-        },
-        {
-          "type": "STRING",
-          "value": "int"
-        },
-        {
-          "type": "STRING",
-          "value": "polar"
-        },
-        {
-          "type": "STRING",
-          "value": "time"
-        },
-        {
-          "type": "STRING",
-          "value": "vec3"
-        },
-        {
-          "type": "STRING",
-          "value": "vec4"
-        },
-        {
-          "type": "STRING",
-          "value": "void"
         }
       ]
     },

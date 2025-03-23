@@ -2,7 +2,7 @@
 (comment) @comment
 (duration_identifier) @type
 (global_unit_generator) @keyword
-(now_keyword) @keyword
+(keyword) @keyword
 (number) @number
 (string) @string
 (type) @type

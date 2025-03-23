@@ -1,0 +1,132 @@
+===============
+Reserved words
+===============
+
+int;
+float;
+time;
+dur;
+void;
+same;
+
+if;
+else;
+while;
+until;
+for;
+repeat;
+break;
+continue;
+return;
+switch;
+
+class;
+extends;
+public;
+static;
+pure;
+this;
+super;
+interface;
+implements;
+protected;
+private;
+
+function;
+fun;
+spork;
+new;
+const;
+global;
+
+now;
+true;
+false;
+maybe;
+null;
+NULL;
+me;
+pi;
+
+samp;
+ms;
+second;
+minute;
+hour;
+day;
+week;
+
+dac;
+adc;
+blackhole;
+
+---
+
+(source_file
+  (keyword
+    (type))
+  (keyword
+    (type))
+  (keyword
+    (type))
+  (keyword
+    (type))
+  (keyword
+    (type))
+  (keyword
+    (type))
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword
+    (duration_identifier))
+  (keyword
+    (duration_identifier))
+  (keyword
+    (duration_identifier))
+  (keyword
+    (duration_identifier))
+  (keyword
+    (duration_identifier))
+  (keyword
+    (duration_identifier))
+  (keyword
+    (duration_identifier))
+  (keyword
+    (global_unit_generator))
+  (keyword
+    (global_unit_generator))
+  (keyword
+    (global_unit_generator)))

@@ -216,6 +216,21 @@
       "required": false,
       "types": [
         {
+          "type": "keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "keyword",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
           "type": "duration_identifier",
           "named": true
         },
@@ -224,7 +239,7 @@
           "named": true
         },
         {
-          "type": "now_keyword",
+          "type": "type",
           "named": true
         }
       ]
@@ -316,6 +331,10 @@
         },
         {
           "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "keyword",
           "named": true
         },
         {
@@ -419,11 +438,23 @@
     "named": false
   },
   {
+    "type": "NULL",
+    "named": false
+  },
+  {
     "type": "adc",
     "named": false
   },
   {
     "type": "blackhole",
+    "named": false
+  },
+  {
+    "type": "break",
+    "named": false
+  },
+  {
+    "type": "class",
     "named": false
   },
   {
@@ -439,6 +470,14 @@
     "named": false
   },
   {
+    "type": "const",
+    "named": false
+  },
+  {
+    "type": "continue",
+    "named": false
+  },
+  {
     "type": "dac",
     "named": false
   },
@@ -451,7 +490,35 @@
     "named": false
   },
   {
+    "type": "else",
+    "named": false
+  },
+  {
+    "type": "extends",
+    "named": false
+  },
+  {
+    "type": "false",
+    "named": false
+  },
+  {
     "type": "float",
+    "named": false
+  },
+  {
+    "type": "for",
+    "named": false
+  },
+  {
+    "type": "fun",
+    "named": false
+  },
+  {
+    "type": "function",
+    "named": false
+  },
+  {
+    "type": "global",
     "named": false
   },
   {
@@ -459,7 +526,27 @@
     "named": false
   },
   {
+    "type": "if",
+    "named": false
+  },
+  {
+    "type": "implements",
+    "named": false
+  },
+  {
     "type": "int",
+    "named": false
+  },
+  {
+    "type": "interface",
+    "named": false
+  },
+  {
+    "type": "maybe",
+    "named": false
+  },
+  {
+    "type": "me",
     "named": false
   },
   {
@@ -471,11 +558,51 @@
     "named": false
   },
   {
-    "type": "now_keyword",
-    "named": true
+    "type": "new",
+    "named": false
+  },
+  {
+    "type": "now",
+    "named": false
+  },
+  {
+    "type": "null",
+    "named": false
+  },
+  {
+    "type": "pi",
+    "named": false
   },
   {
     "type": "polar",
+    "named": false
+  },
+  {
+    "type": "private",
+    "named": false
+  },
+  {
+    "type": "protected",
+    "named": false
+  },
+  {
+    "type": "public",
+    "named": false
+  },
+  {
+    "type": "pure",
+    "named": false
+  },
+  {
+    "type": "repeat",
+    "named": false
+  },
+  {
+    "type": "return",
+    "named": false
+  },
+  {
+    "type": "same",
     "named": false
   },
   {
@@ -487,7 +614,35 @@
     "named": false
   },
   {
+    "type": "spork",
+    "named": false
+  },
+  {
+    "type": "static",
+    "named": false
+  },
+  {
+    "type": "super",
+    "named": false
+  },
+  {
+    "type": "switch",
+    "named": false
+  },
+  {
+    "type": "this",
+    "named": false
+  },
+  {
     "type": "time",
+    "named": false
+  },
+  {
+    "type": "true",
+    "named": false
+  },
+  {
+    "type": "until",
     "named": false
   },
   {
@@ -504,6 +659,10 @@
   },
   {
     "type": "week",
+    "named": false
+  },
+  {
+    "type": "while",
     "named": false
   }
 ]
