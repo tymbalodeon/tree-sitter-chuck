@@ -16,6 +16,10 @@
           "named": true
         },
         {
+          "type": "array_identifier",
+          "named": true
+        },
+        {
           "type": "binary_expression",
           "named": true
         },
@@ -45,6 +49,10 @@
         },
         {
           "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
           "named": true
         },
         {
@@ -85,6 +93,10 @@
         },
         {
           "type": "variable_identifier",
+          "named": true
+        },
+        {
+          "type": "while_loop",
           "named": true
         }
       ]
@@ -130,6 +142,10 @@
           "named": true
         },
         {
+          "type": "array_identifier",
+          "named": true
+        },
+        {
           "type": "binary_expression",
           "named": true
         },
@@ -159,6 +175,10 @@
         },
         {
           "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
           "named": true
         },
         {
@@ -200,6 +220,10 @@
         {
           "type": "variable_identifier",
           "named": true
+        },
+        {
+          "type": "while_loop",
+          "named": true
         }
       ]
     }
@@ -218,6 +242,10 @@
         },
         {
           "type": "array_declaration",
+          "named": true
+        },
+        {
+          "type": "array_identifier",
           "named": true
         },
         {
@@ -250,6 +278,10 @@
         },
         {
           "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
           "named": true
         },
         {
@@ -295,6 +327,10 @@
         {
           "type": "variable_identifier",
           "named": true
+        },
+        {
+          "type": "while_loop",
+          "named": true
         }
       ]
     }
@@ -313,6 +349,10 @@
         },
         {
           "type": "array_declaration",
+          "named": true
+        },
+        {
+          "type": "array_identifier",
           "named": true
         },
         {
@@ -336,6 +376,10 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "complex",
           "named": true
         },
@@ -349,6 +393,10 @@
         },
         {
           "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
           "named": true
         },
         {
@@ -390,6 +438,10 @@
         {
           "type": "variable_identifier",
           "named": true
+        },
+        {
+          "type": "while_loop",
+          "named": true
         }
       ]
     }
@@ -408,6 +460,10 @@
         },
         {
           "type": "array_declaration",
+          "named": true
+        },
+        {
+          "type": "array_identifier",
           "named": true
         },
         {
@@ -440,6 +496,10 @@
         },
         {
           "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
           "named": true
         },
         {
@@ -485,6 +545,10 @@
         {
           "type": "variable_identifier",
           "named": true
+        },
+        {
+          "type": "while_loop",
+          "named": true
         }
       ]
     }
@@ -503,6 +567,10 @@
         },
         {
           "type": "array_declaration",
+          "named": true
+        },
+        {
+          "type": "array_identifier",
           "named": true
         },
         {
@@ -539,6 +607,10 @@
         },
         {
           "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
           "named": true
         },
         {
@@ -579,6 +651,10 @@
         },
         {
           "type": "variable_identifier",
+          "named": true
+        },
+        {
+          "type": "while_loop",
           "named": true
         }
       ]
@@ -635,6 +711,10 @@
           "named": true
         },
         {
+          "type": "array_identifier",
+          "named": true
+        },
+        {
           "type": "binary_expression",
           "named": true
         },
@@ -664,6 +744,10 @@
         },
         {
           "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
           "named": true
         },
         {
@@ -704,6 +788,10 @@
         },
         {
           "type": "variable_identifier",
+          "named": true
+        },
+        {
+          "type": "while_loop",
           "named": true
         }
       ]
@@ -726,6 +814,10 @@
           "named": true
         },
         {
+          "type": "array_identifier",
+          "named": true
+        },
+        {
           "type": "binary_expression",
           "named": true
         },
@@ -755,6 +847,10 @@
         },
         {
           "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
           "named": true
         },
         {
@@ -796,6 +892,10 @@
         {
           "type": "variable_identifier",
           "named": true
+        },
+        {
+          "type": "while_loop",
+          "named": true
         }
       ]
     }
@@ -814,6 +914,10 @@
         },
         {
           "type": "array_declaration",
+          "named": true
+        },
+        {
+          "type": "array_identifier",
           "named": true
         },
         {
@@ -853,6 +957,10 @@
           "named": true
         },
         {
+          "type": "for_each_loop",
+          "named": true
+        },
+        {
           "type": "function_call",
           "named": true
         },
@@ -891,6 +999,10 @@
         {
           "type": "variable_identifier",
           "named": true
+        },
+        {
+          "type": "while_loop",
+          "named": true
         }
       ]
     }
@@ -899,6 +1011,37 @@
     "type": "duration_identifier",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "for_each_loop",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "array_identifier",
+          "named": true
+        },
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "variable_declaration",
+          "named": true
+        },
+        {
+          "type": "variable_identifier",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "function_call",
@@ -926,6 +1069,10 @@
           },
           {
             "type": "array_declaration",
+            "named": true
+          },
+          {
+            "type": "array_identifier",
             "named": true
           },
           {
@@ -958,6 +1105,10 @@
           },
           {
             "type": "float",
+            "named": true
+          },
+          {
+            "type": "for_each_loop",
             "named": true
           },
           {
@@ -999,6 +1150,10 @@
           {
             "type": "variable_identifier",
             "named": true
+          },
+          {
+            "type": "while_loop",
+            "named": true
           }
         ]
       }
@@ -1007,6 +1162,10 @@
       "multiple": false,
       "required": true,
       "types": [
+        {
+          "type": "array_identifier",
+          "named": true
+        },
         {
           "type": "class_identifier",
           "named": true
@@ -1063,6 +1222,10 @@
       "required": true,
       "types": [
         {
+          "type": "array_identifier",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -1099,6 +1262,10 @@
           "named": true
         },
         {
+          "type": "array_identifier",
+          "named": true
+        },
+        {
           "type": "binary_expression",
           "named": true
         },
@@ -1128,6 +1295,10 @@
         },
         {
           "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
           "named": true
         },
         {
@@ -1168,6 +1339,10 @@
         },
         {
           "type": "variable_identifier",
+          "named": true
+        },
+        {
+          "type": "while_loop",
           "named": true
         }
       ]
@@ -1224,6 +1399,10 @@
           "named": true
         },
         {
+          "type": "array_identifier",
+          "named": true
+        },
+        {
           "type": "binary_expression",
           "named": true
         },
@@ -1268,6 +1447,10 @@
           "named": true
         },
         {
+          "type": "for_each_loop",
+          "named": true
+        },
+        {
           "type": "function_call",
           "named": true
         },
@@ -1306,6 +1489,10 @@
         {
           "type": "variable_identifier",
           "named": true
+        },
+        {
+          "type": "while_loop",
+          "named": true
         }
       ]
     }
@@ -1324,11 +1511,122 @@
       "required": true,
       "types": [
         {
+          "type": "class_identifier",
+          "named": true
+        },
+        {
           "type": "primitive_type",
           "named": true
         },
         {
           "type": "variable_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "while_loop",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "array_declaration",
+          "named": true
+        },
+        {
+          "type": "array_identifier",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "cast",
+          "named": true
+        },
+        {
+          "type": "class_declaration",
+          "named": true
+        },
+        {
+          "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "complex",
+          "named": true
+        },
+        {
+          "type": "debug_print",
+          "named": true
+        },
+        {
+          "type": "dur",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "hexidecimal",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "member_identifier",
+          "named": true
+        },
+        {
+          "type": "polar",
+          "named": true
+        },
+        {
+          "type": "reference_declaration",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "variable_declaration",
+          "named": true
+        },
+        {
+          "type": "variable_identifier",
+          "named": true
+        },
+        {
+          "type": "while_loop",
           "named": true
         }
       ]
@@ -1344,6 +1642,10 @@
   },
   {
     "type": "$",
+    "named": false
+  },
+  {
+    "type": "%",
     "named": false
   },
   {
@@ -1396,6 +1698,10 @@
   },
   {
     "type": "/=>",
+    "named": false
+  },
+  {
+    "type": ":",
     "named": false
   },
   {
@@ -1456,6 +1762,10 @@
   },
   {
     "type": "array",
+    "named": false
+  },
+  {
+    "type": "auto",
     "named": false
   },
   {

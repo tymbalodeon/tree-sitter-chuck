@@ -18,6 +18,10 @@
           },
           {
             "type": "SYMBOL",
+            "name": "_loop"
+          },
+          {
+            "type": "SYMBOL",
             "name": "_statement"
           }
         ]
@@ -70,24 +74,32 @@
           "name": "variable_identifier"
         },
         {
-          "type": "STRING",
-          "value": "["
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_expression"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "STRING",
-          "value": "]"
+          "type": "REPEAT1",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "["
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "_expression"
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "STRING",
+                "value": "]"
+              }
+            ]
+          }
         }
       ]
     },
@@ -122,8 +134,17 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "SYMBOL",
-            "name": "_statement"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "comment"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_statement"
+              }
+            ]
           }
         },
         {
@@ -401,10 +422,6 @@
         },
         {
           "type": "STRING",
-          "value": "for"
-        },
-        {
-          "type": "STRING",
           "value": "if"
         },
         {
@@ -422,10 +439,6 @@
         {
           "type": "STRING",
           "value": "until"
-        },
-        {
-          "type": "STRING",
-          "value": "while"
         }
       ]
     },
@@ -563,6 +576,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "_loop"
+        },
+        {
+          "type": "SYMBOL",
           "name": "member_identifier"
         },
         {
@@ -617,6 +634,81 @@
         }
       ]
     },
+    "float": {
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "-"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "PATTERN",
+            "value": "(\\d+)?\\.\\d+"
+          }
+        ]
+      }
+    },
+    "for_each_loop": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "for"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "variable_declaration"
+            },
+            {
+              "type": "STRING",
+              "value": ":"
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "array"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "array_identifier"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "variable_identifier"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "block"
+        }
+      ]
+    },
     "function_call": {
       "type": "SEQ",
       "members": [
@@ -659,30 +751,6 @@
         }
       ]
     },
-    "float": {
-      "type": "TOKEN",
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "-"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "PATTERN",
-            "value": "(\\d+)?\\.\\d+"
-          }
-        ]
-      }
-    },
     "global_unit_generator": {
       "type": "CHOICE",
       "members": [
@@ -724,6 +792,10 @@
     "_identifier": {
       "type": "CHOICE",
       "members": [
+        {
+          "type": "SYMBOL",
+          "name": "array_identifier"
+        },
         {
           "type": "SYMBOL",
           "name": "class_identifier"
@@ -795,6 +867,19 @@
         }
       ]
     },
+    "_loop": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "for_each_loop"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "while_loop"
+        }
+      ]
+    },
     "member_identifier": {
       "type": "SEQ",
       "members": [
@@ -846,6 +931,10 @@
       "members": [
         {
           "type": "STRING",
+          "value": "%"
+        },
+        {
+          "type": "STRING",
           "value": "*"
         },
         {
@@ -890,6 +979,10 @@
     "primitive_type": {
       "type": "CHOICE",
       "members": [
+        {
+          "type": "STRING",
+          "value": "auto"
+        },
         {
           "type": "STRING",
           "value": "complex"
@@ -1105,8 +1198,42 @@
           "name": "primitive_type"
         },
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "class_identifier"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "variable_identifier"
+            }
+          ]
+        }
+      ]
+    },
+    "while_loop": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "while"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
           "type": "SYMBOL",
-          "name": "variable_identifier"
+          "name": "_expression"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "block"
         }
       ]
     }

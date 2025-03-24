@@ -12,4 +12,23 @@ float foo3D[4][6][8];
 
 (source_file
   (comment)
-  (comment))
+  (array_declaration
+    (primitive_type)
+    (array_identifier
+      (variable_identifier)
+      (int)
+      (int)
+      (int)))
+  (comment)
+  (chuck_operation
+    (array
+      (array
+        (int)
+        (int))
+      (array
+        (int)
+        (int)))
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)))))

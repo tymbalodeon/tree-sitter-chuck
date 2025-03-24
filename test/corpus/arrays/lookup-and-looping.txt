@@ -1,21 +1,248 @@
-========
-Comments
-========
+===================
+Lookup and looping
+===================
 
-// this is a comment
-int foo; // another comment
+// declare an array of floats
+[ 3.2, 5.0, 7 ] @=> float foo[];
 
-/*
-   this is a block comment
-   still going...
-*/
+// access the 0th element (debug print)
+<<< foo[0] >>>; // hopefully 3.2
+
+// set the 2nd element
+8.5 => foo[2];
+
+// array of floats again
+[ 1, 2, 3, 4, 5, 6 ] @=> float foo[];
+
+// for each element 'e' in array 'foo'
+for( int e : foo )
+{
+    // do something (debug print)
+    <<< e >>>;
+}
+
+// array of floats again
+[ 1, 2, 3, 4, 5, 6 ] @=> float foo[];
+
+// for each element 'e' in array 'foo'
+for( int e : foo )
+{
+    // do something (debug print)
+    <<< e >>>;
+}
+
+// for each element 'x' in array 'foo'
+// FYI by context, x will be inferred here to have type 'int'
+for( auto x : [1,2,3] )
+{
+    // do something (debug print)
+    <<< x >>>;
+}
+
+// 2D array
+int foo[4][4];
+
+// set an element
+10 => foo[2][2];
+
+// array capacity is 5
+int foo[5];
+
+// this should cause ArrayOutOfBoundsException
+// access element 6 (index 5)
+<<< foo[5] >>>;
+
+// the period
+.5::second => dur T;
+// synchronize to period (for on-the-fly synchronization)
+T - (now % T) => now;
+
+// our patch
+SinOsc s => JCRev r => dac;
+// initialize
+.05 => s.gain;
+.25 => r.mix;
+
+// scale (pentatonic; in semitones)
+[ 0, 2, 4, 7, 9 ] @=> int scale[];
+
+// infinite time loop
+while( true )
+{
+    // pick something from the scale
+    scale[ Math.rand2(0,4) ] => float freq;
+    // get the final freq
+    Std.mtof( 69 + (Std.rand2(0,3)*12 + freq) ) => s.freq;
+    // reset phase for extra bandwidth
+    0 => s.phase;
+
+    // advance time
+    if( Std.randf() > -.5 ) .25::T => now;
+    else .5::T => now;
+}
 
 ---
 
 (source_file
   (comment)
-  (variable_declaration
-    (type)
-    (variable))
+  (chuck_operation
+    (array
+      (float)
+      (float)
+      (int))
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier))))
   (comment)
-  (comment))
+  (debug_print
+    (array_identifier
+      (variable_identifier)
+      (int)))
+  (comment)
+  (comment)
+  (chuck_operation
+    (float)
+    (array_identifier
+      (variable_identifier)
+      (int)))
+  (comment)
+  (chuck_operation
+    (array
+      (int)
+      (int)
+      (int)
+      (int)
+      (int)
+      (int))
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier))))
+  (comment)
+  (loop
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (variable_identifier)
+    (block
+      (comment)
+      (debug_print
+        (variable_identifier))))
+  (comment)
+  (chuck_operation
+    (array
+      (int)
+      (int)
+      (int)
+      (int)
+      (int)
+      (int))
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier))))
+  (comment)
+  (loop
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (variable_identifier)
+    (block
+      (comment)
+      (debug_print
+        (variable_identifier))))
+  (comment)
+  (comment)
+  (loop
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (array
+      (int)
+      (int)
+      (int))
+    (block
+      (comment)
+      (debug_print
+        (variable_identifier))))
+  (comment)
+  (array_declaration
+    (primitive_type)
+    (array_identifier
+      (variable_identifier)
+      (int)
+      (int)))
+  (comment)
+  (chuck_operation
+    (int)
+    (array_identifier
+      (variable_identifier)
+      (int)
+      (int)))
+  (comment)
+  (array_declaration
+    (primitive_type)
+    (array_identifier
+      (variable_identifier)
+      (int)))
+  (comment)
+  (comment)
+  (debug_print
+    (array_identifier
+      (variable_identifier)
+      (int)))
+  (comment)
+  (chuck_operation
+    (dur
+      (float)
+      (duration_identifier))
+    (variable_declaration
+      (primitive_type)
+      (class_identifier)))
+  (comment)
+  (chuck_operation
+    (binary_expression
+      (class_identifier)
+      (operator)
+      (binary_expression
+        (keyword)
+        (operator)
+        (class_identifier)))
+    (keyword))
+  (comment)
+  (chuck_operation
+    (chuck_operation
+      (class_declaration
+        (class_identifier)
+        (variable_identifier))
+      (class_declaration
+        (class_identifier)
+        (variable_identifier)))
+    (keyword
+      (global_unit_generator)))
+  (comment)
+  (chuck_operation
+    (float)
+    (member_identifier
+      (variable_identifier)
+      (variable_identifier)))
+  (chuck_operation
+    (float)
+    (member_identifier
+      (variable_identifier)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (array
+      (int)
+      (int)
+      (int)
+      (int)
+      (int))
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier))))
+  (comment)
+  (loop))

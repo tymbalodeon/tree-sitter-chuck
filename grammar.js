@@ -11,19 +11,24 @@ module.exports = grammar({
   name: "chuck",
 
   rules: {
-    source_file: ($) => repeat(choice($.block, $.comment, $._statement)),
+    source_file: ($) =>
+      repeat(choice($.block, $.comment, $._loop, $._statement)),
+
     array: ($) => seq("[", $._expression_list, "]"),
 
     array_declaration: ($) =>
       seq(choice($.class_identifier, $.primitive_type), $.array_identifier),
 
     array_identifier: ($) =>
-      seq($.variable_identifier, "[", optional($._expression), "]"),
+      seq(
+        $.variable_identifier,
+        repeat1(seq("[", optional($._expression), "]")),
+      ),
 
     binary_expression: ($) =>
       prec.left(seq($._expression, $.operator, $._expression)),
 
-    block: ($) => seq("{", repeat($._statement), "}"),
+    block: ($) => seq("{", repeat(choice($.comment, $._statement)), "}"),
     cast: ($) => seq($._expression, "$", $.primitive_type),
 
     _chuck_keyword: () =>
@@ -71,13 +76,11 @@ module.exports = grammar({
         "break",
         "continue",
         "else",
-        "for",
         "if",
         "repeat",
         "return",
         "switch",
         "until",
-        "while",
       ),
 
     concatentation_operator: () => "+",
@@ -110,6 +113,7 @@ module.exports = grammar({
         $._declaration,
         $.function_call,
         $._identifier,
+        $._loop,
         $.member_identifier,
         $._number,
         $.string,
@@ -119,6 +123,21 @@ module.exports = grammar({
     _expression_list: ($) =>
       seq($._expression, repeat(seq(",", $._expression))),
 
+    float: () => token(seq(optional("-"), /(\d+)?\.\d+/)),
+
+    for_each_loop: ($) =>
+      seq(
+        "for",
+        "(",
+        seq(
+          $.variable_declaration,
+          ":",
+          choice($.array, $.array_identifier, $.variable_identifier),
+        ),
+        ")",
+        $.block,
+      ),
+
     function_call: ($) =>
       seq(
         choice($._identifier, $.member_identifier),
@@ -127,12 +146,16 @@ module.exports = grammar({
         ")",
       ),
 
-    float: () => token(seq(optional("-"), /(\d+)?\.\d+/)),
     global_unit_generator: () => choice("adc", "blackhole", "dac"),
     hexidecimal: () => token(seq("0", /x/i, /[\da-fA-F](_?[\da-fA-F])*/)),
 
     _identifier: ($) =>
-      choice($.class_identifier, $.keyword, $.variable_identifier),
+      choice(
+        $.array_identifier,
+        $.class_identifier,
+        $.keyword,
+        $.variable_identifier,
+      ),
 
     int: () => token(seq(optional("-"), /\d+/)),
 
@@ -147,16 +170,18 @@ module.exports = grammar({
         $._special_literal_value,
       ),
 
+    _loop: ($) => choice($.for_each_loop, $.while_loop),
     member_identifier: ($) => seq($._identifier, ".", $.variable_identifier),
 
     _number: ($) =>
       choice($.complex, $.dur, $.float, $.hexidecimal, $.int, $.polar),
 
-    operator: () => choice("*", "+", "-", "/"),
+    operator: () => choice("%", "*", "+", "-", "/"),
     polar: ($) => seq("%(", $._expression, ",", $._expression, ")"),
 
     primitive_type: () =>
       choice(
+        "auto",
         "complex",
         "dur",
         "float",
@@ -194,7 +219,11 @@ module.exports = grammar({
       choice($.class_identifier, $.variable_identifier, $.primitive_type),
 
     variable_identifier: () => /[a-z][a-zA-Z0-9]*/,
-    variable_declaration: ($) => seq($.primitive_type, $.variable_identifier),
+
+    variable_declaration: ($) =>
+      seq($.primitive_type, choice($.class_identifier, $.variable_identifier)),
+
+    while_loop: ($) => seq("while", "(", $._expression, ")", $.block),
   },
 
   word: ($) => $.variable_identifier,
