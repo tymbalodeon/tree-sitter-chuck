@@ -40,6 +40,10 @@
           "named": true
         },
         {
+          "type": "conditional",
+          "named": true
+        },
+        {
           "type": "debug_print",
           "named": true
         },
@@ -166,6 +170,10 @@
           "named": true
         },
         {
+          "type": "conditional",
+          "named": true
+        },
+        {
           "type": "debug_print",
           "named": true
         },
@@ -266,6 +274,10 @@
         },
         {
           "type": "complex",
+          "named": true
+        },
+        {
+          "type": "conditional",
           "named": true
         },
         {
@@ -384,6 +396,10 @@
           "named": true
         },
         {
+          "type": "conditional",
+          "named": true
+        },
+        {
           "type": "debug_print",
           "named": true
         },
@@ -484,6 +500,10 @@
         },
         {
           "type": "complex",
+          "named": true
+        },
+        {
+          "type": "conditional",
           "named": true
         },
         {
@@ -595,6 +615,10 @@
         },
         {
           "type": "complex",
+          "named": true
+        },
+        {
+          "type": "conditional",
           "named": true
         },
         {
@@ -735,6 +759,125 @@
           "named": true
         },
         {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "debug_print",
+          "named": true
+        },
+        {
+          "type": "dur",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "hexidecimal",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "member_identifier",
+          "named": true
+        },
+        {
+          "type": "polar",
+          "named": true
+        },
+        {
+          "type": "reference_declaration",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "variable_declaration",
+          "named": true
+        },
+        {
+          "type": "variable_identifier",
+          "named": true
+        },
+        {
+          "type": "while_loop",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "conditional",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "array_declaration",
+          "named": true
+        },
+        {
+          "type": "array_identifier",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "cast",
+          "named": true
+        },
+        {
+          "type": "chuck_operation",
+          "named": true
+        },
+        {
+          "type": "class_declaration",
+          "named": true
+        },
+        {
+          "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "complex",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
           "type": "debug_print",
           "named": true
         },
@@ -838,6 +981,10 @@
           "named": true
         },
         {
+          "type": "conditional",
+          "named": true
+        },
+        {
           "type": "debug_print",
           "named": true
         },
@@ -938,6 +1085,10 @@
         },
         {
           "type": "complex",
+          "named": true
+        },
+        {
+          "type": "conditional",
           "named": true
         },
         {
@@ -1093,6 +1244,10 @@
           },
           {
             "type": "complex",
+            "named": true
+          },
+          {
+            "type": "conditional",
             "named": true
           },
           {
@@ -1286,6 +1441,10 @@
           "named": true
         },
         {
+          "type": "conditional",
+          "named": true
+        },
+        {
           "type": "debug_print",
           "named": true
         },
@@ -1435,6 +1594,10 @@
           "named": true
         },
         {
+          "type": "conditional",
+          "named": true
+        },
+        {
           "type": "debug_print",
           "named": true
         },
@@ -1570,6 +1733,10 @@
           "named": true
         },
         {
+          "type": "conditional",
+          "named": true
+        },
+        {
           "type": "debug_print",
           "named": true
         },
@@ -1633,6 +1800,10 @@
     }
   },
   {
+    "type": "!=",
+    "named": false
+  },
+  {
     "type": "\"",
     "named": false
   },
@@ -1650,6 +1821,14 @@
   },
   {
     "type": "%(",
+    "named": false
+  },
+  {
+    "type": "&",
+    "named": false
+  },
+  {
+    "type": "&&",
     "named": false
   },
   {
@@ -1713,11 +1892,39 @@
     "named": false
   },
   {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "<<",
+    "named": false
+  },
+  {
     "type": "<<<",
     "named": false
   },
   {
+    "type": "<=",
+    "named": false
+  },
+  {
+    "type": "==",
+    "named": false
+  },
+  {
     "type": "=>",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
+    "named": false
+  },
+  {
+    "type": ">>",
     "named": false
   },
   {
@@ -1754,6 +1961,10 @@
   },
   {
     "type": "]",
+    "named": false
+  },
+  {
+    "type": "^",
     "named": false
   },
   {
@@ -1822,11 +2033,11 @@
   },
   {
     "type": "float",
-    "named": false
+    "named": true
   },
   {
     "type": "float",
-    "named": true
+    "named": false
   },
   {
     "type": "for",
@@ -1862,11 +2073,11 @@
   },
   {
     "type": "int",
-    "named": true
+    "named": false
   },
   {
     "type": "int",
-    "named": false
+    "named": true
   },
   {
     "type": "interface",
@@ -2006,6 +2217,14 @@
   },
   {
     "type": "{",
+    "named": false
+  },
+  {
+    "type": "|",
+    "named": false
+  },
+  {
+    "type": "||",
     "named": false
   },
   {

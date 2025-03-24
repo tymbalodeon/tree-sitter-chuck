@@ -18,6 +18,10 @@
           },
           {
             "type": "SYMBOL",
+            "name": "conditional"
+          },
+          {
+            "type": "SYMBOL",
             "name": "_loop"
           },
           {
@@ -139,6 +143,14 @@
               {
                 "type": "SYMBOL",
                 "name": "comment"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "conditional"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_loop"
               },
               {
                 "type": "SYMBOL",
@@ -405,6 +417,70 @@
         }
       ]
     },
+    "conditional": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "if"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_expression"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "block"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_statement"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "else"
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "block"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "_statement"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
     "_control_structure": {
       "type": "CHOICE",
       "members": [
@@ -415,14 +491,6 @@
         {
           "type": "STRING",
           "value": "continue"
-        },
-        {
-          "type": "STRING",
-          "value": "else"
-        },
-        {
-          "type": "STRING",
-          "value": "if"
         },
         {
           "type": "STRING",
@@ -533,6 +601,10 @@
           "members": [
             {
               "type": "SYMBOL",
+              "name": "class_identifier"
+            },
+            {
+              "type": "SYMBOL",
               "name": "duration_identifier"
             },
             {
@@ -557,6 +629,10 @@
         {
           "type": "SYMBOL",
           "name": "cast"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "conditional"
         },
         {
           "type": "SYMBOL",
@@ -931,7 +1007,19 @@
       "members": [
         {
           "type": "STRING",
+          "value": "!="
+        },
+        {
+          "type": "STRING",
           "value": "%"
+        },
+        {
+          "type": "STRING",
+          "value": "&"
+        },
+        {
+          "type": "STRING",
+          "value": "&&"
         },
         {
           "type": "STRING",
@@ -948,6 +1036,46 @@
         {
           "type": "STRING",
           "value": "/"
+        },
+        {
+          "type": "STRING",
+          "value": "<"
+        },
+        {
+          "type": "STRING",
+          "value": "<<"
+        },
+        {
+          "type": "STRING",
+          "value": "<="
+        },
+        {
+          "type": "STRING",
+          "value": "=="
+        },
+        {
+          "type": "STRING",
+          "value": ">"
+        },
+        {
+          "type": "STRING",
+          "value": ">="
+        },
+        {
+          "type": "STRING",
+          "value": ">>"
+        },
+        {
+          "type": "STRING",
+          "value": "^"
+        },
+        {
+          "type": "STRING",
+          "value": "|"
+        },
+        {
+          "type": "STRING",
+          "value": "||"
         }
       ]
     },

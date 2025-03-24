@@ -120,7 +120,7 @@ while( true )
       (array_identifier
         (variable_identifier))))
   (comment)
-  (loop
+  (for_each_loop
     (variable_declaration
       (primitive_type)
       (variable_identifier))
@@ -143,7 +143,7 @@ while( true )
       (array_identifier
         (variable_identifier))))
   (comment)
-  (loop
+  (for_each_loop
     (variable_declaration
       (primitive_type)
       (variable_identifier))
@@ -154,7 +154,7 @@ while( true )
         (variable_identifier))))
   (comment)
   (comment)
-  (loop
+  (for_each_loop
     (variable_declaration
       (primitive_type)
       (variable_identifier))
@@ -245,4 +245,68 @@ while( true )
       (array_identifier
         (variable_identifier))))
   (comment)
-  (loop))
+  (while_loop
+    (keyword)
+    (block
+      (comment)
+      (chuck_operation
+        (array_identifier
+          (variable_identifier)
+          (function_call
+            (member_identifier
+              (class_identifier)
+              (variable_identifier))
+            (int)
+            (int)))
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier)))
+      (comment)
+      (chuck_operation
+        (function_call
+          (member_identifier
+            (class_identifier)
+            (variable_identifier))
+          (binary_expression
+            (int)
+            (operator)
+            (binary_expression
+              (binary_expression
+                (function_call
+                  (member_identifier
+                    (class_identifier)
+                    (variable_identifier))
+                  (int)
+                  (int))
+                (operator)
+                (int))
+              (operator)
+              (variable_identifier))))
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))
+      (comment)
+      (chuck_operation
+        (int)
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))
+      (comment)
+      (conditional
+        (binary_expression
+          (function_call
+            (member_identifier
+              (class_identifier)
+              (variable_identifier)))
+          (operator)
+          (float))
+        (chuck_operation
+          (dur
+            (float)
+            (class_identifier))
+          (keyword))
+        (chuck_operation
+          (dur
+            (float)
+            (class_identifier))
+          (keyword))))))

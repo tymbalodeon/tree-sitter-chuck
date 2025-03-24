@@ -12,7 +12,7 @@ module.exports = grammar({
 
   rules: {
     source_file: ($) =>
-      repeat(choice($.block, $.comment, $._loop, $._statement)),
+      repeat(choice($.block, $.comment, $.conditional, $._loop, $._statement)),
 
     array: ($) => seq("[", $._expression_list, "]"),
 
@@ -28,7 +28,13 @@ module.exports = grammar({
     binary_expression: ($) =>
       prec.left(seq($._expression, $.operator, $._expression)),
 
-    block: ($) => seq("{", repeat(choice($.comment, $._statement)), "}"),
+    block: ($) =>
+      seq(
+        "{",
+        repeat(choice($.comment, $.conditional, $._loop, $._statement)),
+        "}",
+      ),
+
     cast: ($) => seq($._expression, "$", $.primitive_type),
 
     _chuck_keyword: () =>
@@ -71,17 +77,18 @@ module.exports = grammar({
 
     complex: ($) => seq("#(", $._expression, ",", $._expression, ")"),
 
-    _control_structure: () =>
-      choice(
-        "break",
-        "continue",
-        "else",
+    conditional: ($) =>
+      seq(
         "if",
-        "repeat",
-        "return",
-        "switch",
-        "until",
+        "(",
+        $._expression,
+        ")",
+        choice($.block, $._statement),
+        optional(seq("else", choice($.block, $._statement))),
       ),
+
+    _control_structure: () =>
+      choice("break", "continue", "repeat", "return", "switch", "until"),
 
     concatentation_operator: () => "+",
     debug_print: ($) => seq("<<<", $._expression_list, ">>>"),
@@ -101,7 +108,11 @@ module.exports = grammar({
       seq(
         $._expression,
         "::",
-        choice($.duration_identifier, $.variable_identifier),
+        choice(
+          $.class_identifier,
+          $.duration_identifier,
+          $.variable_identifier,
+        ),
       ),
 
     _expression: ($) =>
@@ -109,6 +120,7 @@ module.exports = grammar({
         $.array,
         $.binary_expression,
         $.cast,
+        $.conditional,
         $.debug_print,
         $._declaration,
         $.function_call,
@@ -176,7 +188,27 @@ module.exports = grammar({
     _number: ($) =>
       choice($.complex, $.dur, $.float, $.hexidecimal, $.int, $.polar),
 
-    operator: () => choice("%", "*", "+", "-", "/"),
+    operator: () =>
+      choice(
+        "!=",
+        "%",
+        "&",
+        "&&",
+        "*",
+        "+",
+        "-",
+        "/",
+        "<",
+        "<<",
+        "<=",
+        "==",
+        ">",
+        ">=",
+        ">>",
+        "^",
+        "|",
+        "||",
+      ),
     polar: ($) => seq("%(", $._expression, ",", $._expression, ")"),
 
     primitive_type: () =>
