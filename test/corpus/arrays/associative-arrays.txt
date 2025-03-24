@@ -27,7 +27,25 @@ float foo[4];
       (variable_identifier)
       (int)))
   (comment)
+  (chuck_operation
+    (float)
+    (array_identifier
+      (variable_identifier)
+      (int)))
   (comment)
+  (chuck_operation
+    (float)
+    (array_identifier
+      (variable_identifier)
+      (string)))
   (comment)
+  (debug_print
+    (array_identifier
+      (variable_identifier)
+      (string)))
   (comment)
+  (debug_print
+    (array_identifier
+      (variable_identifier)
+      (string)))
   (comment))
