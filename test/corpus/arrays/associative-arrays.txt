@@ -1,21 +1,33 @@
-========
-Comments
-========
+===================
+Associative arrays
+===================
 
-// this is a comment
-int foo; // another comment
+// declare regular array (capacity doesn't matter so much)
+float foo[4];
 
-/*
-   this is a block comment
-   still going...
-*/
+// use as int-based array
+2.5 => foo[0];
+
+// use as associative array
+4.0 => foo["yoyo"];
+
+// access as associative (print)
+<<< foo["yoyo"] >>>;
+
+// access empty element
+<<< foo["gaga"] >>>;  // -> should print 0.0
 
 ---
 
 (source_file
   (comment)
-  (variable_declaration
-    (type)
-    (variable))
+  (array_declaration
+    (primitive_type)
+    (array_identifier
+      (variable_identifier)
+      (int)))
+  (comment)
+  (comment)
+  (comment)
   (comment)
   (comment))
