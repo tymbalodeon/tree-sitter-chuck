@@ -12,9 +12,12 @@ module.exports = grammar({
 
   rules: {
     source_file: ($) => repeat(choice($.block, $.comment, $._statement)),
-    array: ($) => seq("[", optional($._expression_list), "]"),
+    array: ($) => seq("[", $._expression_list, "]"),
 
     array_declaration: ($) =>
+      seq(choice($.class_identifier, $.primitive_type), $.array_identifier),
+
+    array_identifier: ($) =>
       seq($.variable_identifier, "[", optional($._expression), "]"),
 
     binary_expression: ($) =>
@@ -81,7 +84,12 @@ module.exports = grammar({
     debug_print: ($) => seq("<<<", $._expression_list, ">>>"),
 
     _declaration: ($) =>
-      choice($.array_declaration, $.class_declaration, $.variable_declaration),
+      choice(
+        $.array_declaration,
+        $.class_declaration,
+        $.reference_declaration,
+        $.variable_declaration,
+      ),
 
     duration_identifier: () =>
       choice("day", "hour", "minute", "ms", "samp", "second", "week"),
@@ -162,6 +170,14 @@ module.exports = grammar({
       ),
 
     reference_assignment: ($) => seq($.primitive_type),
+
+    reference_declaration: ($) =>
+      seq(
+        $.class_identifier,
+        "@",
+        choice($.array_identifier, $.variable_identifier),
+      ),
+
     reference_type: () => choice("Event", "Object", "UGen", "array", "string"),
 
     _special_literal_value: () =>

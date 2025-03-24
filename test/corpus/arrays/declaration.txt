@@ -22,32 +22,36 @@ Object @ group[10];
 (source_file
   (comment)
   (array_declaration
-    (type)
-    (variable)
-    (number))
+    (primitive_type)
+    (array_identifier
+      (variable_identifier)
+      (int)))
   (comment)
   (comment)
   (comment)
   (chuck_operation
     (array
-      (number)
-      (number)
-      (number)
-      (number)
-      (number)
-      (number))
+      (int)
+      (int)
+      (int)
+      (int)
+      (int)
+      (int))
     (array_declaration
-      (type)
-      (variable)))
+      (primitive_type)
+      (array_identifier
+        (variable_identifier))))
   (comment)
   (array_declaration
     (class_identifier
       (reference_type))
-    (variable)
-    (number))
+    (array_identifier
+      (variable_identifier)
+      (int)))
   (comment)
-  (array_declaration
+  (reference_declaration
     (class_identifier
       (reference_type))
-    (variable)
-    (number)))
+    (array_identifier
+      (variable_identifier)
+      (int))))

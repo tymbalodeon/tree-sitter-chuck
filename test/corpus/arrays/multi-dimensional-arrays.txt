@@ -1,21 +1,15 @@
-========
-Comments
-========
+=========================
+Multi-dimensional arrays
+=========================
 
-// this is a comment
-int foo; // another comment
+// declare 4 by 6 by 8 array of float
+float foo3D[4][6][8];
 
-/*
-   this is a block comment
-   still going...
-*/
+// declare 2 by 2 array of int
+[ [1,3], [2,4] ] @=> int bar[][];
 
 ---
 
 (source_file
-  (comment)
-  (variable_declaration
-    (type)
-    (variable))
   (comment)
   (comment))
