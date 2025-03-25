@@ -26,6 +26,10 @@
           },
           {
             "type": "SYMBOL",
+            "name": "function_definition"
+          },
+          {
+            "type": "SYMBOL",
             "name": "_loop"
           },
           {
@@ -487,17 +491,8 @@
           "value": ")"
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "block"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "_statement"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "_control_structure_body"
         },
         {
           "type": "CHOICE",
@@ -510,17 +505,8 @@
                   "value": "else"
                 },
                 {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "block"
-                    },
-                    {
-                      "type": "SYMBOL",
-                      "name": "_statement"
-                    }
-                  ]
+                  "type": "SYMBOL",
+                  "name": "_control_structure_body"
                 }
               ]
             },
@@ -557,6 +543,19 @@
         {
           "type": "STRING",
           "value": "until"
+        }
+      ]
+    },
+    "_control_structure_body": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_statement"
         }
       ]
     },
@@ -833,7 +832,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block"
+          "name": "_control_structure_body"
         }
       ]
     },
@@ -884,7 +883,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block"
+          "name": "_control_structure_body"
         }
       ]
     },
@@ -927,6 +926,90 @@
         {
           "type": "STRING",
           "value": ")"
+        }
+      ]
+    },
+    "function_definition": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "fun"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "primitive_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "variable_identifier"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "parameters",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "array_declaration"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "variable_declaration"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "REPEAT",
+                    "content": {
+                      "type": "SEQ",
+                      "members": [
+                        {
+                          "type": "STRING",
+                          "value": ","
+                        },
+                        {
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "SYMBOL",
+                              "name": "array_declaration"
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "variable_declaration"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "block"
         }
       ]
     },
@@ -1507,7 +1590,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block"
+          "name": "_control_structure_body"
         }
       ]
     }

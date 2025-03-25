@@ -18,6 +18,7 @@ module.exports = grammar({
           $.class_definition,
           $.comment,
           $.conditional,
+          $.function_definition,
           $._loop,
           $._statement,
         ),
@@ -105,13 +106,14 @@ module.exports = grammar({
         "(",
         $._expression,
         ")",
-        choice($.block, $._statement),
-        optional(seq("else", choice($.block, $._statement))),
+        $._control_structure_body,
+        optional(seq("else", $._control_structure_body)),
       ),
 
     _control_structure: () =>
       choice("break", "continue", "repeat", "return", "switch", "until"),
 
+    _control_structure_body: ($) => choice($.block, $._statement),
     concatentation_operator: () => "+",
     debug_print: ($) => seq("<<<", $._expression_list, ">>>"),
 
@@ -172,7 +174,7 @@ module.exports = grammar({
         ";",
         $._expression,
         ")",
-        $.block,
+        $._control_structure_body,
       ),
 
     for_each_loop: ($) =>
@@ -185,7 +187,7 @@ module.exports = grammar({
           choice($.array, $.array_identifier, $.variable_identifier),
         ),
         ")",
-        $.block,
+        $._control_structure_body,
       ),
 
     function_call: ($) =>
@@ -194,6 +196,27 @@ module.exports = grammar({
         "(",
         field("arguments", optional($._expression_list)),
         ")",
+      ),
+
+    function_definition: ($) =>
+      seq(
+        "fun",
+        $.primitive_type,
+        $.variable_identifier,
+        "(",
+        field(
+          "parameters",
+          optional(
+            seq(
+              choice($.array_declaration, $.variable_declaration),
+              repeat(
+                seq(",", choice($.array_declaration, $.variable_declaration)),
+              ),
+            ),
+          ),
+        ),
+        ")",
+        $.block,
       ),
 
     global_unit_generator: () => choice("adc", "blackhole", "dac"),
@@ -295,7 +318,15 @@ module.exports = grammar({
     variable_declaration: ($) =>
       seq($.primitive_type, choice($.class_identifier, $.variable_identifier)),
 
-    while_loop: ($) => seq("while", "(", $._expression, ")", $.block),
+    while_loop: ($) =>
+      seq(
+        "while",
+        "(",
+        $._expression,
+        ")",
+
+        $._control_structure_body,
+      ),
   },
 
   word: ($) => $.variable_identifier,
