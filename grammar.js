@@ -12,7 +12,16 @@ module.exports = grammar({
 
   rules: {
     source_file: ($) =>
-      repeat(choice($.block, $.comment, $.conditional, $._loop, $._statement)),
+      repeat(
+        choice(
+          $.block,
+          $.class_definition,
+          $.comment,
+          $.conditional,
+          $._loop,
+          $._statement,
+        ),
+      ),
 
     array: ($) => seq("[", $._expression_list, "]"),
 
@@ -31,7 +40,15 @@ module.exports = grammar({
     block: ($) =>
       seq(
         "{",
-        repeat(choice($.comment, $.conditional, $._loop, $._statement)),
+        repeat(
+          choice(
+            $.class_definition,
+            $.comment,
+            $.conditional,
+            $._loop,
+            $._statement,
+          ),
+        ),
         "}",
       ),
 
@@ -49,7 +66,12 @@ module.exports = grammar({
 
     _chuck_operator: () => choice("=>", "*=>", "+=>", "-=>", "/=>", "@=>"),
     class_declaration: ($) => seq($.class_identifier, $.variable_identifier),
+
+    class_definition: ($) =>
+      seq(optional("public"), "class", $.class_identifier, $.block),
+
     class_identifier: ($) => choice(/[A-Z][a-zA-Z0-9]*/, $.reference_type),
+    class_instantiation: ($) => seq("new", $.class_identifier),
 
     _class_keyword: () =>
       choice(
@@ -121,6 +143,7 @@ module.exports = grammar({
         $.binary_expression,
         $.cast,
         $.conditional,
+        $.class_instantiation,
         $.debug_print,
         $._declaration,
         $.function_call,

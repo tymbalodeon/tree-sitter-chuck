@@ -17,6 +17,48 @@ float foo[4];
 // access empty element
 <<< foo["gaga"] >>>;  // -> should print 0.0
 
+// declare array
+int foo[2];
+
+// put something in element 0
+10 => foo[0];
+
+// put something in element "0"
+20 => foo["0"];
+
+// this should print out 10 20
+<<< foo[0], foo["0"] >>>;
+
+// declare array of 0 capacity
+int foo[0];
+
+// put something in element "here"
+20 => foo["here"];
+
+// this should print out 20
+<<< foo["here"] >>>;
+
+// this should cause an exception
+<<< foo[0] >>>;
+
+class Item { 
+   float weight; 
+}
+
+Item box[10]; 
+
+// integer indices ( up to capacity ) are pre-instantiated.
+1.2 => box[1].weight; 
+
+// instantiate element "lamp";
+new Item @=> box["lamp"]; 
+
+// access allowed to "lamp"
+2.0 => box["lamp"].weight; 
+
+// access causes a NullPointerException    
+2.0 => box["sweater"].weight; 
+
 ---
 
 (source_file
@@ -48,4 +90,94 @@ float foo[4];
     (array_identifier
       (variable_identifier)
       (string)))
-  (comment))
+  (comment)
+  (comment)
+  (array_declaration
+    (primitive_type)
+    (array_identifier
+      (variable_identifier)
+      (int)))
+  (comment)
+  (chuck_operation
+    (int)
+    (array_identifier
+      (variable_identifier)
+      (int)))
+  (comment)
+  (chuck_operation
+    (int)
+    (array_identifier
+      (variable_identifier)
+      (string)))
+  (comment)
+  (debug_print
+    (array_identifier
+      (variable_identifier)
+      (int))
+    (array_identifier
+      (variable_identifier)
+      (string)))
+  (comment)
+  (array_declaration
+    (primitive_type)
+    (array_identifier
+      (variable_identifier)
+      (int)))
+  (comment)
+  (chuck_operation
+    (int)
+    (array_identifier
+      (variable_identifier)
+      (string)))
+  (comment)
+  (debug_print
+    (array_identifier
+      (variable_identifier)
+      (string)))
+  (comment)
+  (debug_print
+    (array_identifier
+      (variable_identifier)
+      (int)))
+  (class_definition
+    (class_identifier)
+    (block
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (array_declaration
+    (class_identifier)
+    (array_identifier
+      (variable_identifier)
+      (int)))
+  (comment)
+  (chuck_operation
+    (float)
+    (member_identifier
+      (array_identifier
+        (variable_identifier)
+        (int))
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (class_instantiation
+      (class_identifier))
+    (array_identifier
+      (variable_identifier)
+      (string)))
+  (comment)
+  (chuck_operation
+    (float)
+    (member_identifier
+      (array_identifier
+        (variable_identifier)
+        (string))
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (float)
+    (member_identifier
+      (array_identifier
+        (variable_identifier)
+        (string))
+      (variable_identifier))))

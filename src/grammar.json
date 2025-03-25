@@ -14,6 +14,10 @@
           },
           {
             "type": "SYMBOL",
+            "name": "class_definition"
+          },
+          {
+            "type": "SYMBOL",
             "name": "comment"
           },
           {
@@ -140,6 +144,10 @@
           "content": {
             "type": "CHOICE",
             "members": [
+              {
+                "type": "SYMBOL",
+                "name": "class_definition"
+              },
               {
                 "type": "SYMBOL",
                 "name": "comment"
@@ -292,6 +300,35 @@
         }
       ]
     },
+    "class_definition": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "public"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": "class"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "class_identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "block"
+        }
+      ]
+    },
     "class_identifier": {
       "type": "CHOICE",
       "members": [
@@ -302,6 +339,19 @@
         {
           "type": "SYMBOL",
           "name": "reference_type"
+        }
+      ]
+    },
+    "class_instantiation": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "new"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "class_identifier"
         }
       ]
     },
@@ -633,6 +683,10 @@
         {
           "type": "SYMBOL",
           "name": "conditional"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "class_instantiation"
         },
         {
           "type": "SYMBOL",

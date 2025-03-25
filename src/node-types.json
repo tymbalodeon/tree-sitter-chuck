@@ -36,6 +36,10 @@
           "named": true
         },
         {
+          "type": "class_instantiation",
+          "named": true
+        },
+        {
           "type": "complex",
           "named": true
         },
@@ -166,6 +170,10 @@
           "named": true
         },
         {
+          "type": "class_instantiation",
+          "named": true
+        },
+        {
           "type": "complex",
           "named": true
         },
@@ -270,6 +278,10 @@
         },
         {
           "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "class_instantiation",
           "named": true
         },
         {
@@ -384,7 +396,15 @@
           "named": true
         },
         {
+          "type": "class_definition",
+          "named": true
+        },
+        {
           "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "class_instantiation",
           "named": true
         },
         {
@@ -496,6 +516,10 @@
         },
         {
           "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "class_instantiation",
           "named": true
         },
         {
@@ -614,6 +638,10 @@
           "named": true
         },
         {
+          "type": "class_instantiation",
+          "named": true
+        },
+        {
           "type": "complex",
           "named": true
         },
@@ -704,6 +732,25 @@
     }
   },
   {
+    "type": "class_definition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "class_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "class_identifier",
     "named": true,
     "fields": {},
@@ -713,6 +760,21 @@
       "types": [
         {
           "type": "reference_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "class_instantiation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "class_identifier",
           "named": true
         }
       ]
@@ -752,6 +814,10 @@
         },
         {
           "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "class_instantiation",
           "named": true
         },
         {
@@ -870,6 +936,10 @@
           "named": true
         },
         {
+          "type": "class_instantiation",
+          "named": true
+        },
+        {
           "type": "complex",
           "named": true
         },
@@ -977,6 +1047,10 @@
           "named": true
         },
         {
+          "type": "class_instantiation",
+          "named": true
+        },
+        {
           "type": "complex",
           "named": true
         },
@@ -1081,6 +1155,10 @@
         },
         {
           "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "class_instantiation",
           "named": true
         },
         {
@@ -1240,6 +1318,10 @@
           },
           {
             "type": "class_identifier",
+            "named": true
+          },
+          {
+            "type": "class_instantiation",
             "named": true
           },
           {
@@ -1437,6 +1519,10 @@
           "named": true
         },
         {
+          "type": "class_instantiation",
+          "named": true
+        },
+        {
           "type": "complex",
           "named": true
         },
@@ -1582,7 +1668,15 @@
           "named": true
         },
         {
+          "type": "class_definition",
+          "named": true
+        },
+        {
           "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "class_instantiation",
           "named": true
         },
         {
@@ -1726,6 +1820,10 @@
         },
         {
           "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "class_instantiation",
           "named": true
         },
         {

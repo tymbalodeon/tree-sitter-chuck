@@ -9,11 +9,7 @@ dur;
 void;
 same;
 
-if;
-else;
-while;
 until;
-for;
 repeat;
 break;
 continue;
@@ -75,10 +71,6 @@ blackhole;
     (primitive_type))
   (keyword
     (primitive_type))
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
   (keyword)
   (keyword)
   (keyword)
