@@ -118,7 +118,7 @@ module.exports = grammar({
       ),
 
     _control_structure: () =>
-      choice("break", "continue", "repeat", "return", "switch", "until"),
+      choice("break", "continue", "repeat", "return", "switch"),
 
     _control_structure_body: ($) => choice($.block, $._statement),
     concatentation_operator: () => "+",
@@ -130,6 +130,13 @@ module.exports = grammar({
         $.class_declaration,
         $.reference_declaration,
         $.variable_declaration,
+      ),
+
+    do_loop: ($) =>
+      seq(
+        "do",
+        $._control_structure_body,
+        choice($._until_expression, $._while_expression),
       ),
 
     duration_identifier: () =>
@@ -251,7 +258,15 @@ module.exports = grammar({
         $._special_literal_value,
       ),
 
-    _loop: ($) => choice($.for_loop, $.for_each_loop, $.while_loop),
+    _loop: ($) =>
+      choice(
+        $.do_loop,
+        $.for_loop,
+        $.for_each_loop,
+        $.until_loop,
+        $.while_loop,
+      ),
+
     member_identifier: ($) => seq($._identifier, ".", $.variable_identifier),
     negation_expression: ($) => prec.left(seq("!", $._expression)),
 
@@ -320,20 +335,15 @@ module.exports = grammar({
     _type: ($) =>
       choice($.class_identifier, $.variable_identifier, $.primitive_type),
 
+    _until_expression: ($) => seq("until", "(", $._expression, ")"),
+    until_loop: ($) => seq($._until_expression, $._control_structure_body),
     variable_identifier: () => /[a-z_][a-zA-Z0-9_]*/,
 
     variable_declaration: ($) =>
       seq($.primitive_type, choice($.class_identifier, $.variable_identifier)),
 
-    while_loop: ($) =>
-      seq(
-        "while",
-        "(",
-        $._expression,
-        ")",
-
-        $._control_structure_body,
-      ),
+    _while_expression: ($) => seq("while", "(", $._expression, ")"),
+    while_loop: ($) => seq($._while_expression, $._control_structure_body),
   },
 
   word: ($) => $.variable_identifier,

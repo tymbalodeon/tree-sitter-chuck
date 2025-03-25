@@ -1,0 +1,41 @@
+=====
+While
+=====
+
+// here is an infinite loop
+while( true )
+{
+    // your code loops forever!
+
+    // (sometimes this is desirable because we can create
+    // infinite time loops this way, and because we have
+    // concurrency)
+} 
+
+---
+
+(source_file
+  (comment)
+  (while_loop
+    (keyword)
+    (block
+      (comment)
+      (comment)
+      (comment)
+      (comment))))
+
+========
+Do/while
+========
+
+do {
+    // your code executes here at least once
+} while( condition );
+
+---
+
+(source_file
+  (do_loop
+    (block
+      (comment))
+    (variable_identifier)))

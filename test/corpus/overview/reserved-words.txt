@@ -30,7 +30,6 @@ same;
 Control structures
 ==================
 
-until;
 repeat;
 break;
 continue;
@@ -40,7 +39,6 @@ switch;
 ---
 
 (source_file
-  (keyword)
   (keyword)
   (keyword)
   (keyword)

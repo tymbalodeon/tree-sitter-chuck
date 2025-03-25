@@ -1,0 +1,30 @@
+========
+For each
+========
+
+// an array
+[1,2,3] @=> int array[];
+// for each element 'a' in array 'array'
+for( int a : array )
+{
+    // debug-print value of 'a'
+    <<< a >>>;
+}
+
+// OR over a literal array of value
+for( int a : [4,5,6] )
+{
+    // debug-print value of 'a'
+    <<< a >>>;
+}
+
+// ALSO can make use the 'auto' type
+for( auto a : array )
+{
+    // 'a' is automatically inferred from context to be of type 'int'
+    <<< a >>>;
+}
+
+---
+
+(source_file)

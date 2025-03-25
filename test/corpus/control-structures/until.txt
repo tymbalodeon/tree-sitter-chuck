@@ -1,0 +1,34 @@
+=====
+Until
+=====
+
+// an infinite loop
+until( false )
+{
+    // your great code loops forever!
+}
+
+---
+
+(source_file
+  (comment)
+  (until_loop
+    (keyword)
+    (block
+      (comment))))
+
+=====
+Do/until
+=====
+
+do {
+    // your code executes here at least once
+} until( condition );
+
+---
+
+(source_file
+  (do_loop
+    (block
+      (comment))
+    (variable_identifier)))
