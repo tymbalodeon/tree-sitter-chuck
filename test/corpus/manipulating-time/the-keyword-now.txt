@@ -1,0 +1,47 @@
+=================
+The keyword "now"
+=================
+
+// compute value that represents "5 seconds from now"
+now + 5::second => time later;
+
+// while we are not at later yet...
+while( now < later )
+{
+    // print out value of now
+    <<< now >>>;
+
+    // advance time by 1 second
+    1::second => now;
+}
+
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (dur
+      (binary_expression
+        (keyword)
+        (operator)
+        (int))
+      (duration_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (loop
+    (binary_expression
+      (keyword)
+      (operator)
+      (variable_identifier))
+    (block
+      (comment)
+      (debug_print
+        (keyword))
+      (comment)
+      (chuck_operation
+        (dur
+          (int)
+          (duration_identifier))
+        (keyword)))))

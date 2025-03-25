@@ -5,7 +5,7 @@ Break
 // infinite loop
 while( 1 )
 {
-    if( condition ) 
+    if( condition )
         break;
 }
 

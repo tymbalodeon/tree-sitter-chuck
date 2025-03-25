@@ -1,0 +1,136 @@
+===========================
+Advancing time  by duration
+===========================
+
+// advance time by 1 second
+1::second => now;
+
+// advance time by 100 millisecond
+100::ms => now;
+
+// advance time by 1 samp (every sample)
+1::samp => now;
+
+// advance time by less than 1 samp
+.024::samp => now;
+
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (dur
+      (int)
+      (duration_identifier))
+    (keyword))
+  (comment)
+  (chuck_operation
+    (dur
+      (int)
+      (duration_identifier))
+    (keyword))
+  (comment)
+  (chuck_operation
+    (dur
+      (int)
+      (duration_identifier))
+    (keyword))
+  (comment)
+  (chuck_operation
+    (dur
+      (float)
+      (duration_identifier))
+    (keyword)))
+
+===============================
+Advancing time by absolute time
+===============================
+
+// figure out when
+now + 4::hour => time later;
+
+// advance time to later
+later => now;
+
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (dur
+      (binary_expression
+        (keyword)
+        (operator)
+        (int))
+      (duration_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (variable_identifier)
+    (keyword)))
+
+=======================
+Advancing time by event
+=======================
+
+// wait on event
+e => now;
+
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (variable_identifier)
+    (keyword)))
+
+=======================================
+Advancing time at any point in the code
+=======================================
+
+// our patch: sine oscillator -> dac
+SinOsc s => dac;
+
+// infinite time loop
+while( true )
+{
+    // randomly choose frequency from 30 to 1000
+    Std.rand2f( 30, 1000 ) => s.freq;
+
+    // advance time by 100 millisecond
+    100::ms => now;
+}
+
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier))
+    (keyword
+      (global_unit_generator)))
+  (comment)
+  (loop
+    (keyword)
+    (block
+      (comment)
+      (chuck_operation
+        (function_call
+          (member_identifier
+            (class_identifier)
+            (variable_identifier))
+          (int)
+          (int))
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))
+      (comment)
+      (chuck_operation
+        (dur
+          (int)
+          (duration_identifier))
+        (keyword)))))
