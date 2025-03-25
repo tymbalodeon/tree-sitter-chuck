@@ -4,16 +4,16 @@
     "": {
       "name": "tree-sitter-chuck",
       "dependencies": {
-        "node-addon-api": "^8.3.1",
-        "node-gyp-build": "^4.8.4",
+        "node-addon-api": "latest",
+        "node-gyp-build": "latest",
       },
       "devDependencies": {
-        "prebuildify": "^6.0.1",
-        "prettier": "^3.5.3",
-        "tree-sitter-cli": "^0.25.3",
+        "prebuildify": "latest",
+        "prettier": "latest",
+        "tree-sitter-cli": "latest",
       },
       "peerDependencies": {
-        "tree-sitter": "^0.21.1",
+        "tree-sitter": "latest",
       },
       "optionalPeers": [
         "tree-sitter",

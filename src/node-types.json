@@ -1113,6 +1113,11 @@
     }
   },
   {
+    "type": "control_structure_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "debug_print",
     "named": true,
     "fields": {},
@@ -2132,6 +2137,10 @@
       "multiple": false,
       "required": false,
       "types": [
+        {
+          "type": "control_structure_keyword",
+          "named": true
+        },
         {
           "type": "duration_identifier",
           "named": true

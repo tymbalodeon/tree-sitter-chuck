@@ -25,7 +25,6 @@ same;
   (keyword
     (primitive_type)))
 
-
 ==================
 Control structures
 ==================
@@ -38,11 +37,14 @@ switch;
 ---
 
 (source_file
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword))
-
+  (keyword
+    (control_structure_keyword))
+  (keyword
+    (control_structure_keyword))
+  (keyword
+    (control_structure_keyword))
+  (keyword
+    (control_structure_keyword)))
 
 ==============
 Class keywords
@@ -71,7 +73,6 @@ private;
   (keyword)
   (keyword))
 
-
 ====================
 Other chuck keywords
 ====================
@@ -88,7 +89,6 @@ global;
   (keyword)
   (keyword)
   (keyword))
-
 
 ==============
 Special values
@@ -114,7 +114,6 @@ pi;
   (keyword)
   (keyword)
   (keyword))
-
 
 ===========================
 Special: Default durations
@@ -145,7 +144,6 @@ week;
     (duration_identifier))
   (keyword
     (duration_identifier)))
-
 
 ======================
 Sepcial: Global ugens

@@ -1,0 +1,50 @@
+=====
+Break
+=====
+
+// infinite loop
+while( 1 )
+{
+    if( condition ) 
+        break;
+}
+
+---
+
+(source_file
+  (comment)
+  (loop
+    (int)
+    (block
+      (conditional
+        (variable_identifier)
+        (keyword
+          (control_structure_keyword))))))
+
+========
+Continue
+========
+
+// another infinite loop
+while( 1 )
+{
+    // check condition
+    if( condition )
+        continue;
+
+    // some great code that may get skipped (if continue is taken)
+}
+
+---
+
+(source_file
+  (comment)
+  (loop
+    (int)
+    (block
+      (comment)
+      (conditional
+        (variable_identifier)
+        (keyword
+          (control_structure_keyword)))
+      (comment))))

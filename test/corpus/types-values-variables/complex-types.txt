@@ -2,7 +2,7 @@
 Complex
 =======
 
-#(2,3) => complex cmp; //cmp is now 2 + 3i 
+#(2,3) => complex cmp; //cmp is now 2 + 3i
 
 ---
 

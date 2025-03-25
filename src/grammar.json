@@ -541,7 +541,7 @@
         }
       ]
     },
-    "_control_structure_keyword": {
+    "control_structure_keyword": {
       "type": "CHOICE",
       "members": [
         {
@@ -1150,7 +1150,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_control_structure_keyword"
+          "name": "control_structure_keyword"
         },
         {
           "type": "SYMBOL",

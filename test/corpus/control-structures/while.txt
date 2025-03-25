@@ -10,7 +10,7 @@ while( true )
     // (sometimes this is desirable because we can create
     // infinite time loops this way, and because we have
     // concurrency)
-} 
+}
 
 ---
 

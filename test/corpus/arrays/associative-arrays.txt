@@ -142,23 +142,23 @@ int foo[0];
 Objects
 =======
 
-class Item { 
-   float weight; 
+class Item {
+   float weight;
 }
 
-Item box[10]; 
+Item box[10];
 
 // integer indices ( up to capacity ) are pre-instantiated.
-1.2 => box[1].weight; 
+1.2 => box[1].weight;
 
 // instantiate element "lamp";
-new Item @=> box["lamp"]; 
+new Item @=> box["lamp"];
 
 // access allowed to "lamp"
-2.0 => box["lamp"].weight; 
+2.0 => box["lamp"].weight;
 
-// access causes a NullPointerException    
-2.0 => box["sweater"].weight; 
+// access causes a NullPointerException
+2.0 => box["sweater"].weight;
 
 ---
 

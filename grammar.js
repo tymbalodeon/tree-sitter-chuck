@@ -113,7 +113,7 @@ module.exports = grammar({
     _control_structure: ($) =>
       choice($.do_loop, $.for_loop, $.for_each_loop, $.loop),
 
-    _control_structure_keyword: () =>
+    control_structure_keyword: () =>
       choice("break", "continue", "return", "switch"),
 
     _control_structure_body: ($) => choice($.block, $._statement),
@@ -236,7 +236,7 @@ module.exports = grammar({
       choice(
         $._chuck_keyword,
         $._class_keyword,
-        $._control_structure_keyword,
+        $.control_structure_keyword,
         $.duration_identifier,
         $.global_unit_generator,
         $.primitive_type,
