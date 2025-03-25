@@ -1,21 +1,12 @@
-============
+===========
 Declaration
-============
+===========
 
 // declare 10 element array of int, called foo
 int foo[10];
 
 // since array of int (primitive type), the contents
 // are automatically initialized to 0
-
-// chuck intializer to array reference
-[ 1, 1, 2, 3, 5, 8 ] @=> int foo[];
-
-// objects in arrays are automatically instantiated
-Object group[10];
-
-// array of null object references
-Object @ group[10];
 
 ---
 
@@ -27,20 +18,21 @@ Object @ group[10];
       (variable_identifier)
       (int)))
   (comment)
-  (comment)
-  (comment)
-  (chuck_operation
-    (array
-      (int)
-      (int)
-      (int)
-      (int)
-      (int)
-      (int))
-    (array_declaration
-      (primitive_type)
-      (array_identifier
-        (variable_identifier))))
+  (comment))
+
+=================
+Object references
+=================
+
+// objects in arrays are automatically instantiated
+Object group[10];
+
+// array of null object references
+Object @ group[10];
+
+---
+
+(source_file
   (comment)
   (array_declaration
     (class_identifier

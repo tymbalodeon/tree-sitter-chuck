@@ -1,6 +1,6 @@
-===================
-Associative arrays
-===================
+==================
+Associative array
+==================
 
 // declare regular array (capacity doesn't matter so much)
 float foo[4];
@@ -16,48 +16,6 @@ float foo[4];
 
 // access empty element
 <<< foo["gaga"] >>>;  // -> should print 0.0
-
-// declare array
-int foo[2];
-
-// put something in element 0
-10 => foo[0];
-
-// put something in element "0"
-20 => foo["0"];
-
-// this should print out 10 20
-<<< foo[0], foo["0"] >>>;
-
-// declare array of 0 capacity
-int foo[0];
-
-// put something in element "here"
-20 => foo["here"];
-
-// this should print out 20
-<<< foo["here"] >>>;
-
-// this should cause an exception
-<<< foo[0] >>>;
-
-class Item { 
-   float weight; 
-}
-
-Item box[10]; 
-
-// integer indices ( up to capacity ) are pre-instantiated.
-1.2 => box[1].weight; 
-
-// instantiate element "lamp";
-new Item @=> box["lamp"]; 
-
-// access allowed to "lamp"
-2.0 => box["lamp"].weight; 
-
-// access causes a NullPointerException    
-2.0 => box["sweater"].weight; 
 
 ---
 
@@ -90,7 +48,27 @@ new Item @=> box["lamp"];
     (array_identifier
       (variable_identifier)
       (string)))
-  (comment)
+  (comment))
+
+=============
+Index vs. key
+=============
+
+// declare array
+int foo[2];
+
+// put something in element 0
+10 => foo[0];
+
+// put something in element "0"
+20 => foo["0"];
+
+// this should print out 10 20
+<<< foo[0], foo["0"] >>>;
+
+---
+
+(source_file
   (comment)
   (array_declaration
     (primitive_type)
@@ -116,7 +94,27 @@ new Item @=> box["lamp"];
       (int))
     (array_identifier
       (variable_identifier)
-      (string)))
+      (string))))
+
+========
+Capacity
+========
+
+// declare array of 0 capacity
+int foo[0];
+
+// put something in element "here"
+20 => foo["here"];
+
+// this should print out 20
+<<< foo["here"] >>>;
+
+// this should cause an exception
+<<< foo[0] >>>;
+
+---
+
+(source_file
   (comment)
   (array_declaration
     (primitive_type)
@@ -138,7 +136,33 @@ new Item @=> box["lamp"];
   (debug_print
     (array_identifier
       (variable_identifier)
-      (int)))
+      (int))))
+
+=======
+Objects
+=======
+
+class Item { 
+   float weight; 
+}
+
+Item box[10]; 
+
+// integer indices ( up to capacity ) are pre-instantiated.
+1.2 => box[1].weight; 
+
+// instantiate element "lamp";
+new Item @=> box["lamp"]; 
+
+// access allowed to "lamp"
+2.0 => box["lamp"].weight; 
+
+// access causes a NullPointerException    
+2.0 => box["sweater"].weight; 
+
+---
+
+(source_file
   (class_definition
     (class_identifier)
     (block

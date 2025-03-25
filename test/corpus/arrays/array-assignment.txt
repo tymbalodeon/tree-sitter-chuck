@@ -11,42 +11,6 @@ int foo[];
 // print out 0th element
 <<< foo[0] >>>;
 
-// our function
-fun void print( int bar[] )
-{
-    // print it
-    for( 0 => int i; i < bar.size(); i++ )
-        <<< bar[0] >>>;
-}
-
-// we can call the function with a literal
-print( [ 1, 2, 3, 4, 5 ] );
-
-// or can we can pass a reference variable
-int foo[10];
-print( foo );
-
-// our single array
-int the_array[10];
-
-// assign reference to foo and bar
-the_array => int foo[] => int bar[];
-
-// (the_array, foo, and bar now all reference the same array)
-
-// we change the_array and print foo...
-// they reference the same array, changing one is like changing the other
-5 => the_array[0];
-<<< foo[0] >>>; // should be 5
-
-// a 3D array
-int foo3D[4][4][4];
-
-// we can make a reference to a sub-section
-foo3D[2] => int bar[][];
-
-// (note that the dimensions must add up!)
-
 ---
 
 (source_file
@@ -66,7 +30,30 @@ foo3D[2] => int bar[][];
   (debug_print
     (array_identifier
       (variable_identifier)
-      (int)))
+      (int))))
+
+================================
+Functions with array parameters
+================================
+
+// our function
+fun void print( int bar[] )
+{
+    // print it
+    for( 0 => int i; i < bar.size(); i++ )
+        <<< bar[0] >>>;
+}
+
+// we can call the function with a literal
+print( [ 1, 2, 3, 4, 5 ] );
+
+// or can we can pass a reference variable
+int foo[10];
+print( foo );
+
+---
+
+(source_file
   (comment)
   (function_definition
     (primitive_type)
@@ -113,7 +100,28 @@ foo3D[2] => int bar[][];
       (int)))
   (function_call
     (variable_identifier)
-    (variable_identifier))
+    (variable_identifier)))
+
+==========
+References
+==========
+
+// our single array
+int the_array[10];
+
+// assign reference to foo and bar
+the_array => int foo[] => int bar[];
+
+// (the_array, foo, and bar now all reference the same array)
+
+// we change the_array and print foo...
+// they reference the same array, changing one is like changing the other
+5 => the_array[0];
+<<< foo[0] >>>; // should be 5
+
+---
+
+(source_file
   (comment)
   (array_declaration
     (primitive_type)
@@ -144,7 +152,23 @@ foo3D[2] => int bar[][];
     (array_identifier
       (variable_identifier)
       (int)))
-  (comment)
+  (comment))
+
+============
+Sub-sections
+============
+
+// a 3D array
+int foo3D[4][4][4];
+
+// we can make a reference to a sub-section
+foo3D[2] => int bar[][];
+
+// (note that the dimensions must add up!)
+
+---
+
+(source_file
   (comment)
   (array_declaration
     (primitive_type)
