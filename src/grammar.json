@@ -706,11 +706,19 @@
         },
         {
           "type": "SYMBOL",
+          "name": "increment_expression"
+        },
+        {
+          "type": "SYMBOL",
           "name": "_loop"
         },
         {
           "type": "SYMBOL",
           "name": "member_identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "negation_expression"
         },
         {
           "type": "SYMBOL",
@@ -787,6 +795,47 @@
           }
         ]
       }
+    },
+    "for_loop": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "for"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "chuck_operation"
+        },
+        {
+          "type": "STRING",
+          "value": ";"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "binary_expression"
+        },
+        {
+          "type": "STRING",
+          "value": ";"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_expression"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "block"
+        }
+      ]
     },
     "for_each_loop": {
       "type": "SEQ",
@@ -919,6 +968,28 @@
         ]
       }
     },
+    "increment_expression": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_expression"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "++"
+            },
+            {
+              "type": "STRING",
+              "value": "--"
+            }
+          ]
+        }
+      ]
+    },
     "_identifier": {
       "type": "CHOICE",
       "members": [
@@ -1002,6 +1073,10 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "for_loop"
+        },
+        {
+          "type": "SYMBOL",
           "name": "for_each_loop"
         },
         {
@@ -1026,6 +1101,23 @@
           "name": "variable_identifier"
         }
       ]
+    },
+    "negation_expression": {
+      "type": "PREC_LEFT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "!"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_expression"
+          }
+        ]
+      }
     },
     "_number": {
       "type": "CHOICE",

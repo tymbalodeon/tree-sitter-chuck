@@ -1,21 +1,48 @@
-========
-Comments
-========
+================
+Array assignment
+================
 
-// this is a comment
-int foo; // another comment
+// declare array reference (by not specifying a capacity)
+int foo[];
 
-/*
-   this is a block comment
-   still going...
-*/
+// we can now assign any int[] to foo
+[ 1, 2, 3 ] @=> foo;
+
+// print out 0th element
+<<< foo[0] >>>;
+
+// our function
+fun void print( int bar[] )
+{
+    // print it
+    for( 0 => int i; i < bar.size(); i++ )
+        <<< bar[0] >>>;
+}
+
+// we can call the function with a literal
+print( [ 1, 2, 3, 4, 5 ] );
+
+// or can we can pass a reference variable
+int foo[10];
+print( foo );
 
 ---
 
 (source_file
   (comment)
-  (variable_declaration
-    (type)
-    (variable))
+  (array_declaration
+    (primitive_type)
+    (array_identifier
+      (variable_identifier)))
   (comment)
-  (comment))
+  (chuck_operation
+    (array
+      (int)
+      (int)
+      (int))
+    (variable_identifier))
+  (comment)
+  (debug_print
+    (array_identifier
+      (variable_identifier)
+      (int))))

@@ -148,8 +148,10 @@ module.exports = grammar({
         $._declaration,
         $.function_call,
         $._identifier,
+        $.increment_expression,
         $._loop,
         $.member_identifier,
+        $.negation_expression,
         $._number,
         $.string,
         seq("(", $._expression, ")"),
@@ -159,6 +161,19 @@ module.exports = grammar({
       seq($._expression, repeat(seq(",", $._expression))),
 
     float: () => token(seq(optional("-"), /(\d+)?\.\d+/)),
+
+    for_loop: ($) =>
+      seq(
+        "for",
+        "(",
+        $.chuck_operation,
+        ";",
+        $.binary_expression,
+        ";",
+        $._expression,
+        ")",
+        $.block,
+      ),
 
     for_each_loop: ($) =>
       seq(
@@ -183,6 +198,7 @@ module.exports = grammar({
 
     global_unit_generator: () => choice("adc", "blackhole", "dac"),
     hexidecimal: () => token(seq("0", /x/i, /[\da-fA-F](_?[\da-fA-F])*/)),
+    increment_expression: ($) => seq($._expression, choice("++", "--")),
 
     _identifier: ($) =>
       choice(
@@ -205,8 +221,9 @@ module.exports = grammar({
         $._special_literal_value,
       ),
 
-    _loop: ($) => choice($.for_each_loop, $.while_loop),
+    _loop: ($) => choice($.for_loop, $.for_each_loop, $.while_loop),
     member_identifier: ($) => seq($._identifier, ".", $.variable_identifier),
+    negation_expression: ($) => prec.left(seq("!", $._expression)),
 
     _number: ($) =>
       choice($.complex, $.dur, $.float, $.hexidecimal, $.int, $.polar),
