@@ -1,18 +1,80 @@
-===========================
-Arithmetic ChucK operators
-===========================
+========
+Division
+========
 
 // divide (and assign)
 16 / 4 => int four;
 
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (binary_expression
+      (int)
+      (operator)
+      (int))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))))
+
+==============
+Multiplication
+==============
+
 // multiply
 2 * 2 => four;
+
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (binary_expression
+      (int)
+      (operator)
+      (int))
+    (variable_identifier)))
+
+========
+Addition
+========
 
 // add
 3 + 1 => four;
 
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (binary_expression
+      (int)
+      (operator)
+      (int))
+    (variable_identifier)))
+
+===========
+Subtraction
+===========
+
 // subtract
 93 - 89 => four;
+
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (binary_expression
+      (int)
+      (operator)
+      (int))
+    (variable_identifier)))
+
+===========
+Casting
+===========
 
 // adding float and int produces a float
 9.1 + 2 => float result;
@@ -29,36 +91,6 @@ Math.rand2f( 30, 1000 );
 ---
 
 (source_file
-  (comment)
-  (chuck_operation
-    (binary_expression
-      (int)
-      (operator)
-      (int))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
-  (comment)
-  (chuck_operation
-    (binary_expression
-      (int)
-      (operator)
-      (int))
-    (variable_identifier))
-  (comment)
-  (chuck_operation
-    (binary_expression
-      (int)
-      (operator)
-      (int))
-    (variable_identifier))
-  (comment)
-  (chuck_operation
-    (binary_expression
-      (int)
-      (operator)
-      (int))
-    (variable_identifier))
   (comment)
   (chuck_operation
     (binary_expression

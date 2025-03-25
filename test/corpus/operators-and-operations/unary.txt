@@ -1,16 +1,10 @@
-=====
-Unary
-=====
+==============
+Logical invert
+==============
 
 // logical invert
 if( !true == false )
   <<<"yes">>>;
-
-// negative
--1 => int foo;
-
-// instantiate object
-new object @=> object @ bar;
 
 ---
 
@@ -23,13 +17,35 @@ new object @=> object @ bar;
       (operator)
       (keyword))
     (debug_print
-      (string)))
+      (string))))
+
+========
+Negative
+========
+
+// negative
+-1 => int foo;
+
+---
+
+(source_file
   (comment)
   (chuck_operation
     (int)
     (variable_declaration
       (primitive_type)
-      (variable_identifier)))
+      (variable_identifier))))
+
+=====================
+Object instantiation
+=====================
+
+// instantiate object
+new object @=> object @ bar;
+
+---
+
+(source_file
   (comment)
   (chuck_operation
     (class_instantiation

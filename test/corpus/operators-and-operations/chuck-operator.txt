@@ -1,6 +1,6 @@
-===============
+==============
 ChucK operator
-===============
+==============
 
 // a unit generator patch - the signal flow is apparent
 // (in this case, => connects two unit generators)
@@ -13,62 +13,6 @@ SinOsc b => Gain g => BiQuad f => dac;
 // chuck values to a function == function call
 // (same as Math.rand2f( 30, 1000))
 ( 30, 1000 ) => Math.rand2f;
-
-// assign 4 to variable foo
-4 => int foo;
-
-// assign 1.5 to variable bar
-1.5 => float bar;
-
-// assign duration of 100 millisecond to duh
-100::ms => dur duh;
-
-// assign the time "5 second from now" to later
-5::second + now => time later;
-
-// using @=> is same as => for primitive types
-4 @=> int foo;
-
-// assign 1.5 to variable bar
-1.5 @=> float bar;
-
-// (only @=> can perform reference assignment on objects)
-
-// reference assign moe to larry
-// (such that both moe and larry reference the same object)
-Object moe @=> Object @ larry;
-
-// array initialization
-[ 1, 2 ] @=> int ar[];
-
-// using new
-new Object @=> moe;
-
-// add 4 to foo and assign result to foo
-foo + 4 => foo;
-
-// add 4 to foo and assign result to foo
-4 +=> foo;
-
-// subtract 10 from foo and assign result to foo
-// remember this is (foo-10), not (10-foo)
-10 -=> foo;
-
-// 2 times foo assign result to foo
-2 *=> foo;
-
-// divide 4 into foo and assign result to foo
-// again remember this is (foo/4), not (4/foo)
-4 /=> foo;
-
-// mod foo by T and assign result to foo
-T %=> foo;
-
-// bitwise AND 0xff and bar and assign result to bar
-0xff &=> bar;
-
-// bitwise OR 0xff and bar and assign result to bar
-0xff |=> bar;
 
 ---
 
@@ -106,7 +50,27 @@ T %=> foo;
     (int)
     (member_identifier
       (class_identifier)
-      (variable_identifier)))
+      (variable_identifier))))
+
+==========
+Assignment
+==========
+
+// assign 4 to variable foo
+4 => int foo;
+
+// assign 1.5 to variable bar
+1.5 => float bar;
+
+// assign duration of 100 millisecond to duh
+100::ms => dur duh;
+
+// assign the time "5 second from now" to later
+5::second + now => time later;
+
+---
+
+(source_file
   (comment)
   (chuck_operation
     (int)
@@ -137,7 +101,33 @@ T %=> foo;
       (keyword))
     (variable_declaration
       (primitive_type)
-      (variable_identifier)))
+      (variable_identifier))))
+
+===========================================
+Explicit assignment (reference assignment)
+===========================================
+
+// using @=> is same as => for primitive types
+4 @=> int foo;
+
+// assign 1.5 to variable bar
+1.5 @=> float bar;
+
+// (only @=> can perform reference assignment on objects)
+
+// reference assign moe to larry
+// (such that both moe and larry reference the same object)
+Object moe @=> Object @ larry;
+
+// array initialization
+[ 1, 2 ] @=> int ar[];
+
+// using new
+new Object @=> moe;
+
+---
+
+(source_file
   (comment)
   (chuck_operation
     (int)
@@ -176,7 +166,41 @@ T %=> foo;
     (class_instantiation
       (class_identifier
         (reference_type)))
-    (variable_identifier))
+    (variable_identifier)))
+
+===========================
+Arithmetic ChucK operators
+===========================
+
+// add 4 to foo and assign result to foo
+foo + 4 => foo;
+
+// add 4 to foo and assign result to foo
+4 +=> foo;
+
+// subtract 10 from foo and assign result to foo
+// remember this is (foo-10), not (10-foo)
+10 -=> foo;
+
+// 2 times foo assign result to foo
+2 *=> foo;
+
+// divide 4 into foo and assign result to foo
+// again remember this is (foo/4), not (4/foo)
+4 /=> foo;
+
+// mod foo by T and assign result to foo
+T %=> foo;
+
+// bitwise AND 0xff and bar and assign result to bar
+0xff &=> bar;
+
+// bitwise OR 0xff and bar and assign result to bar
+0xff |=> bar;
+
+---
+
+(source_file
   (comment)
   (chuck_operation
     (binary_expression

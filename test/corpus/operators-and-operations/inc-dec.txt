@@ -1,10 +1,9 @@
-=======
-Inc/Dec
-=======
+=========
+Increment
+=========
 
 4 => int foo;
 foo++;
-foo--;
 
 ---
 
@@ -15,6 +14,16 @@ foo--;
       (primitive_type)
       (variable_identifier)))
   (increment_expression
-    (variable_identifier))
+    (variable_identifier)))
+
+=========
+Decrement
+=========
+
+foo--;
+
+---
+
+(source_file
   (increment_expression
     (variable_identifier)))

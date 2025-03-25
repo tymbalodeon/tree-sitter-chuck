@@ -1,12 +1,8 @@
-=======
-Bitwise
-=======
+===========
+Right shift
+===========
 
 8 >> 1;
-8 << 1;
-8 & 1;
-8 | 1;
-8 ^ 1;
 
 ---
 
@@ -14,19 +10,59 @@ Bitwise
   (binary_expression
     (int)
     (operator)
-    (int))
+    (int)))
+
+==========
+Left shift
+==========
+
+8 << 1;
+
+---
+
+(source_file
   (binary_expression
     (int)
     (operator)
-    (int))
+    (int)))
+
+===========
+Bitwise AND
+===========
+
+8 & 1;
+
+---
+
+(source_file
   (binary_expression
     (int)
     (operator)
-    (int))
+    (int)))
+
+==========
+Bitwise OR
+==========
+
+8 | 1;
+
+---
+
+(source_file
   (binary_expression
     (int)
     (operator)
-    (int))
+    (int)))
+
+===========
+Bitwise XOR
+===========
+
+8 ^ 1;
+
+---
+
+(source_file
   (binary_expression
     (int)
     (operator)

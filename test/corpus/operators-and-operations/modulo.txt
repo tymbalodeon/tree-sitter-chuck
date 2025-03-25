@@ -1,6 +1,6 @@
-=======
+======
 Modulo
-=======
+======
 
 // 7 mod 4 (should yield 3)
 7 % 4 => int result;
@@ -13,18 +13,6 @@ Modulo
 
 // time/duration mod
 now % 5::second => dur bar;
-
-// define period (agreed upon by several shreds)
-.5::second => dur T;
-
-// compute the remainder of the current period ...
-// and advance time by that amount
-T - (now % T) => now;
-
-// when we reach this point, we are synchronized to T period boundary
-
-// the rest of the code
-// ...
 
 ---
 
@@ -70,7 +58,27 @@ T - (now % T) => now;
       (duration_identifier))
     (variable_declaration
       (primitive_type)
-      (variable_identifier)))
+      (variable_identifier))))
+
+=====================
+Time synchronization
+=====================
+
+// define period (agreed upon by several shreds)
+.5::second => dur T;
+
+// compute the remainder of the current period ...
+// and advance time by that amount
+T - (now % T) => now;
+
+// when we reach this point, we are synchronized to T period boundary
+
+// the rest of the code
+// ...
+
+---
+
+(source_file
   (comment)
   (chuck_operation
     (dur
