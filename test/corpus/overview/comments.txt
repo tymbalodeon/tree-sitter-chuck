@@ -15,9 +15,9 @@ int foo; // another comment
   (comment))
 
 
-===============
+==============
 Block comments
-===============
+==============
 
 /*
    this is a block comment

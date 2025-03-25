@@ -1,26 +1,8 @@
-==============
-Complex types
-==============
+=======
+Complex
+=======
 
 #(2,3) => complex cmp; //cmp is now 2 + 3i 
-
-#(5, -1.5) => complex cmp; // cmp is 5 - 1.5i
-#(2,3) + #(5,6) + cmp => complex sum; // sum is now 12 + 7.5i
-
-#(2.0,3.5) => complex cmp;
-cmp.re => float x; // x is 2.0
-cmp.im => float y; //y is 3.5
-
-%(2, .5*pi) => polar pol; // pol is 2∠.5π
-
-%(2, .5*pi) => polar pol;
-pol.mag => float m; // m is 2
-pol.phase => float p; //p is .5π
-
-%(2, .5*pi) => polar pol;
-#(3, 4) => complex cmp;
-pol $ complex + #(10, 3) + cmp => complex cmp2;
-cmp $ polar + %(10, .25*pi) - pol => polar pol2;
 
 ---
 
@@ -32,7 +14,18 @@ cmp $ polar + %(10, .25*pi) - pol => polar pol2;
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (comment))
+
+=========
+Complex operation
+=========
+
+#(5, -1.5) => complex cmp; // cmp is 5 - 1.5i
+#(2,3) + #(5,6) + cmp => complex sum; // sum is now 12 + 7.5i
+
+---
+
+(source_file
   (chuck_operation
     (complex
       (int)
@@ -56,7 +49,19 @@ cmp $ polar + %(10, .25*pi) - pol => polar pol2;
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (comment))
+
+=====
+Complex parts
+=====
+
+#(2.0,3.5) => complex cmp;
+cmp.re => float x; // x is 2.0
+cmp.im => float y; //y is 3.5
+
+---
+
+(source_file
   (chuck_operation
     (complex
       (float)
@@ -79,7 +84,17 @@ cmp $ polar + %(10, .25*pi) - pol => polar pol2;
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (comment))
+
+=====
+Polar
+=====
+
+%(2, .5*pi) => polar pol; // pol is 2∠.5π
+
+---
+
+(source_file
   (chuck_operation
     (polar
       (int)
@@ -90,7 +105,19 @@ cmp $ polar + %(10, .25*pi) - pol => polar pol2;
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (comment))
+
+===========
+Polar parts
+===========
+
+%(2, .5*pi) => polar pol;
+pol.mag => float m; // m is 2
+pol.phase => float p; //p is .5π
+
+---
+
+(source_file
   (chuck_operation
     (polar
       (int)
@@ -116,7 +143,20 @@ cmp $ polar + %(10, .25*pi) - pol => polar pol2;
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (comment))
+
+====
+Cast
+====
+
+%(2, .5*pi) => polar pol;
+#(3, 4) => complex cmp;
+pol $ complex + #(10, 3) + cmp => complex cmp2;
+cmp $ polar + %(10, .25*pi) - pol => polar pol2;
+
+---
+
+(source_file
   (chuck_operation
     (polar
       (int)

@@ -1,21 +1,100 @@
+===========
+Declaration
+===========
+
+// declare an 'int' called 'foo'
+int foo;
+
+---
+
+(source_file
+  (comment)
+  (variable_declaration
+    (primitive_type)
+    (variable_identifier)))
+
 ==========
-Variables
+Assignment
 ==========
 
 // assign value of 2 to 'foo'
 2 => foo;
 
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (int)
+    (variable_identifier)))
+
+==============
+Initialization
+==============
+
 // assign 2 to a new variable 'foo' of type 'int'
 2 => int foo;
+
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (int)
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))))
+
+===========
+Debug print
+===========
 
 // debug-print the value of foo
 <<< foo >>>;
 
+---
+
+(source_file
+  (comment)
+  (debug_print
+    (variable_identifier)))
+
+======
+Update
+======
+
 // multiply 'foo' by 10, assign back to 'foo'
 foo * 10 => foo;
 
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (variable_identifier)))
+
+==========
+Mult-chuck
+==========
+
 // multiply 'foo' by 10, and then assign to 'foo'
 10 *=> foo;
+
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (int)
+    (variable_identifier)))
+
+=========
+Operation
+=========
 
 // assign value of '5 seconds' to new variable bar
 5::second => dur bar;
@@ -26,30 +105,6 @@ foo * 10 => foo;
 ---
 
 (source_file
-  (comment)
-  (chuck_operation
-    (int)
-    (variable_identifier))
-  (comment)
-  (chuck_operation
-    (int)
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
-  (comment)
-  (debug_print
-    (variable_identifier))
-  (comment)
-  (chuck_operation
-    (binary_expression
-      (variable_identifier)
-      (operator)
-      (int))
-    (variable_identifier))
-  (comment)
-  (chuck_operation
-    (int)
-    (variable_identifier))
   (comment)
   (chuck_operation
     (dur

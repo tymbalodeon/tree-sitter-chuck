@@ -1,18 +1,45 @@
-=======
-Values
-=======
+===
+Int
+===
 
 42;
+
+---
+
+(source_file
+  (int))
+
+===========
+Hexidecimal
+===========
+
 0xaf30;
+
+---
+
+(source_file
+  (hexidecimal))
+
+=====
+Float
+=====
+
 1.323;
+
+---
+
+(source_file
+  (float))
+
+===
+Dur
+===
+
 5.5::second;
 
 ---
 
 (source_file
-  (int)
-  (hexidecimal)
-  (float)
   (dur
     (float)
     (duration_identifier)))
