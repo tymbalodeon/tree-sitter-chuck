@@ -9,15 +9,6 @@ Debug print
 
 <<<1.0 + 2.5 >>>=> float x;
 
-<<<"the value of x is" , x >>>;
-
-<<<"4 + 5 is", 4 + 5>>>;
-
-<<<"here are 3 random numbers",
-    Std.rand2(0,9),
-    Std.rand2(0,9),
-    Std.rand2(0,9) >>>;
-
 ---
 
 (source_file
@@ -38,7 +29,25 @@ Debug print
         (float)))
     (variable_declaration
       (primitive_type)
-      (variable_identifier)))
+      (variable_identifier))))
+
+
+============================
+Comma-separated expressions
+============================
+
+<<<"the value of x is" , x >>>;
+
+<<<"4 + 5 is", 4 + 5>>>;
+
+<<<"here are 3 random numbers",
+    Std.rand2(0,9),
+    Std.rand2(0,9),
+    Std.rand2(0,9) >>>;
+
+---
+
+(source_file
   (debug_print
     (string)
     (variable_identifier))

@@ -5,6 +5,20 @@ Comments
 // this is a comment
 int foo; // another comment
 
+---
+
+(source_file
+  (comment)
+  (variable_declaration
+    (primitive_type)
+    (variable_identifier))
+  (comment))
+
+
+===============
+Block comments
+===============
+
 /*
    this is a block comment
    still going...
@@ -13,9 +27,4 @@ int foo; // another comment
 ---
 
 (source_file
-  (comment)
-  (variable_declaration
-    (primitive_type)
-    (variable_identifier))
-  (comment)
   (comment))

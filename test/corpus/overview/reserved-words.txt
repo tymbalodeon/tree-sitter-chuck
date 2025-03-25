@@ -1,6 +1,6 @@
-===============
-Reserved words
-===============
+================
+Primitive types
+================
 
 int;
 float;
@@ -8,53 +8,6 @@ time;
 dur;
 void;
 same;
-
-until;
-repeat;
-break;
-continue;
-return;
-switch;
-
-class;
-extends;
-public;
-static;
-pure;
-this;
-super;
-interface;
-implements;
-protected;
-private;
-
-function;
-fun;
-spork;
-new;
-const;
-global;
-
-now;
-true;
-false;
-maybe;
-null;
-NULL;
-me;
-pi;
-
-samp;
-ms;
-second;
-minute;
-hour;
-day;
-week;
-
-dac;
-adc;
-blackhole;
 
 ---
 
@@ -70,7 +23,50 @@ blackhole;
   (keyword
     (primitive_type))
   (keyword
-    (primitive_type))
+    (primitive_type)))
+
+
+===================
+Control structures
+===================
+
+until;
+repeat;
+break;
+continue;
+return;
+switch;
+
+---
+
+(source_file
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword))
+
+
+===============
+Class keywords
+===============
+
+class;
+extends;
+public;
+static;
+pure;
+this;
+super;
+interface;
+implements;
+protected;
+private;
+
+---
+
+(source_file
   (keyword)
   (keyword)
   (keyword)
@@ -81,6 +77,47 @@ blackhole;
   (keyword)
   (keyword)
   (keyword)
+  (keyword))
+
+
+=====================
+Other chuck keywords
+=====================
+
+function;
+fun;
+spork;
+new;
+const;
+global;
+
+---
+
+(source_file
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword)
+  (keyword))
+
+
+===============
+Special values
+===============
+
+now;
+true;
+false;
+maybe;
+null;
+NULL;
+me;
+pi;
+
+---
+
+(source_file
   (keyword)
   (keyword)
   (keyword)
@@ -88,20 +125,24 @@ blackhole;
   (keyword)
   (keyword)
   (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
+  (keyword))
+
+
+===========================
+Special: Default durations
+===========================
+
+samp;
+ms;
+second;
+minute;
+hour;
+day;
+week;
+
+---
+
+(source_file
   (keyword
     (duration_identifier))
   (keyword
@@ -115,7 +156,20 @@ blackhole;
   (keyword
     (duration_identifier))
   (keyword
-    (duration_identifier))
+    (duration_identifier)))
+
+
+======================
+Sepcial: Global ugens
+======================
+
+dac;
+adc;
+blackhole;
+
+---
+
+(source_file
   (keyword
     (global_unit_generator))
   (keyword
