@@ -1,21 +1,22 @@
-========
-Comments
-========
+=====
+Logic
+=====
 
-// this is a comment
-int foo; // another comment
-
-/*
-   this is a block comment
-   still going...
-*/
+// test some universal truths
+if( 1 <= 4 && true )
+  <<<"horray">>>;
 
 ---
 
 (source_file
   (comment)
-  (variable_declaration
-    (primitive_type)
-    (variable_identifier))
-  (comment)
-  (comment))
+  (conditional
+    (binary_expression
+      (binary_expression
+        (int)
+        (operator)
+        (int))
+      (operator)
+      (keyword))
+    (debug_print
+      (string))))

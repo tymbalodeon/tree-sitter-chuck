@@ -1,21 +1,93 @@
-========
-Comments
-========
+===========================
+Arithmetic ChucK operators
+===========================
 
-// this is a comment
-int foo; // another comment
+// divide (and assign)
+16 / 4 => int four;
 
-/*
-   this is a block comment
-   still going...
-*/
+// multiply
+2 * 2 => four;
+
+// add
+3 + 1 => four;
+
+// subtract
+93 - 89 => four;
+
+// adding float and int produces a float
+9.1 + 2 => float result;
+
+// however, going from float to int requires cast
+4.8 $ int => int foo;  // foo == 4
+
+// this function expects two floats
+Math.rand2f( 30.0, 1000.0 );
+
+// this is ok because of implicit cast
+Math.rand2f( 30, 1000 );
 
 ---
 
 (source_file
   (comment)
-  (variable_declaration
-    (primitive_type)
+  (chuck_operation
+    (binary_expression
+      (int)
+      (operator)
+      (int))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (binary_expression
+      (int)
+      (operator)
+      (int))
     (variable_identifier))
   (comment)
-  (comment))
+  (chuck_operation
+    (binary_expression
+      (int)
+      (operator)
+      (int))
+    (variable_identifier))
+  (comment)
+  (chuck_operation
+    (binary_expression
+      (int)
+      (operator)
+      (int))
+    (variable_identifier))
+  (comment)
+  (chuck_operation
+    (binary_expression
+      (float)
+      (operator)
+      (int))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (cast
+      (float)
+      (primitive_type))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (comment)
+  (function_call
+    (member_identifier
+      (class_identifier)
+      (variable_identifier))
+    (float)
+    (float))
+  (comment)
+  (function_call
+    (member_identifier
+      (class_identifier)
+      (variable_identifier))
+    (int)
+    (int)))

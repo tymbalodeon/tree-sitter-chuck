@@ -848,6 +848,10 @@
         {
           "type": "class_identifier",
           "named": true
+        },
+        {
+          "type": "variable_identifier",
+          "named": true
         }
       ]
     }
@@ -2621,11 +2625,19 @@
     "named": false
   },
   {
+    "type": "%=>",
+    "named": false
+  },
+  {
     "type": "&",
     "named": false
   },
   {
     "type": "&&",
+    "named": false
+  },
+  {
+    "type": "&=>",
     "named": false
   },
   {
@@ -2838,11 +2850,11 @@
   },
   {
     "type": "float",
-    "named": true
+    "named": false
   },
   {
     "type": "float",
-    "named": false
+    "named": true
   },
   {
     "type": "for",
@@ -3026,6 +3038,10 @@
   },
   {
     "type": "|",
+    "named": false
+  },
+  {
+    "type": "|=>",
     "named": false
   },
   {

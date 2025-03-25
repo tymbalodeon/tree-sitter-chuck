@@ -1,21 +1,20 @@
-========
-Comments
-========
+=======
+Inc/Dec
+=======
 
-// this is a comment
-int foo; // another comment
-
-/*
-   this is a block comment
-   still going...
-*/
+4 => int foo;
+foo++;
+foo--;
 
 ---
 
 (source_file
-  (comment)
-  (variable_declaration
-    (primitive_type)
+  (chuck_operation
+    (int)
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (increment_expression
     (variable_identifier))
-  (comment)
-  (comment))
+  (increment_expression
+    (variable_identifier)))

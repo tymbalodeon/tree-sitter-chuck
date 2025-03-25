@@ -60,19 +60,26 @@ module.exports = grammar({
 
     chuck_operation: ($) =>
       seq(
-        choice($.chuck_operation, $._expression),
+        choice(
+          $.chuck_operation,
+          $._expression,
+          seq("(", optional($._expression_list), ")"),
+        ),
         $._chuck_operator,
         choice($._declaration, $._identifier, $.member_identifier),
       ),
 
-    _chuck_operator: () => choice("=>", "*=>", "+=>", "-=>", "/=>", "@=>"),
+    _chuck_operator: () =>
+      choice("%=>", "&=>", "*=>", "+=>", "-=>", "/=>", "=>", "@=>", "|=>"),
     class_declaration: ($) => seq($.class_identifier, $.variable_identifier),
 
     class_definition: ($) =>
       seq(optional("public"), "class", $.class_identifier, $.block),
 
     class_identifier: ($) => choice(/[A-Z][a-zA-Z0-9]*/, $.reference_type),
-    class_instantiation: ($) => seq("new", $.class_identifier),
+
+    class_instantiation: ($) =>
+      seq("new", choice($.class_identifier, $.variable_identifier)),
 
     _class_keyword: () =>
       choice(
@@ -160,7 +167,7 @@ module.exports = grammar({
       ),
 
     _expression_list: ($) =>
-      seq($._expression, repeat(seq(",", $._expression))),
+      prec(1, seq($._expression, repeat(seq(",", $._expression)))),
 
     float: () => token(seq(optional("-"), /(\d+)?\.\d+/)),
 
@@ -293,7 +300,7 @@ module.exports = grammar({
 
     reference_declaration: ($) =>
       seq(
-        $.class_identifier,
+        choice($.class_identifier, $.variable_identifier),
         "@",
         choice($.array_identifier, $.variable_identifier),
       ),

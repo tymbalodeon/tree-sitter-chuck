@@ -1,21 +1,39 @@
-========
-Comments
-========
+=====
+Unary
+=====
 
-// this is a comment
-int foo; // another comment
+// logical invert
+if( !true == false )
+  <<<"yes">>>;
 
-/*
-   this is a block comment
-   still going...
-*/
+// negative
+-1 => int foo;
+
+// instantiate object
+new object @=> object @ bar;
 
 ---
 
 (source_file
   (comment)
-  (variable_declaration
-    (primitive_type)
-    (variable_identifier))
+  (conditional
+    (binary_expression
+      (negation_expression
+        (keyword))
+      (operator)
+      (keyword))
+    (debug_print
+      (string)))
   (comment)
-  (comment))
+  (chuck_operation
+    (int)
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (class_instantiation
+      (variable_identifier))
+    (reference_declaration
+      (variable_identifier)
+      (variable_identifier))))

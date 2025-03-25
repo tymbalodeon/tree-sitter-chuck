@@ -1,21 +1,33 @@
-========
-Comments
-========
+=======
+Bitwise
+=======
 
-// this is a comment
-int foo; // another comment
-
-/*
-   this is a block comment
-   still going...
-*/
+8 >> 1;
+8 << 1;
+8 & 1;
+8 | 1;
+8 ^ 1;
 
 ---
 
 (source_file
-  (comment)
-  (variable_declaration
-    (primitive_type)
-    (variable_identifier))
-  (comment)
-  (comment))
+  (binary_expression
+    (int)
+    (operator)
+    (int))
+  (binary_expression
+    (int)
+    (operator)
+    (int))
+  (binary_expression
+    (int)
+    (operator)
+    (int))
+  (binary_expression
+    (int)
+    (operator)
+    (int))
+  (binary_expression
+    (int)
+    (operator)
+    (int)))
