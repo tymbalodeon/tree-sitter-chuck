@@ -1,0 +1,21 @@
+========
+Comments
+========
+
+// this is a comment
+int foo; // another comment
+
+/*
+   this is a block comment
+   still going...
+*/
+
+---
+
+(source_file
+  (comment)
+  (variable_declaration
+    (primitive_type)
+    (variable_identifier))
+  (comment)
+  (comment))
