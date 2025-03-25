@@ -30,7 +30,6 @@ same;
 Control structures
 ==================
 
-repeat;
 break;
 continue;
 return;
@@ -42,7 +41,6 @@ switch;
   (keyword)
   (keyword)
   (keyword)
-  (keyword)
   (keyword))
 
 
@@ -50,9 +48,7 @@ switch;
 Class keywords
 ==============
 
-class;
 extends;
-public;
 static;
 pure;
 this;
@@ -73,8 +69,6 @@ private;
   (keyword)
   (keyword)
   (keyword)
-  (keyword)
-  (keyword)
   (keyword))
 
 
@@ -83,17 +77,13 @@ Other chuck keywords
 ====================
 
 function;
-fun;
 spork;
-new;
 const;
 global;
 
 ---
 
 (source_file
-  (keyword)
-  (keyword)
   (keyword)
   (keyword)
   (keyword)

@@ -35,15 +35,13 @@ Object @ group[10];
 (source_file
   (comment)
   (array_declaration
-    (class_identifier
-      (reference_type))
+    (reference_type)
     (array_identifier
       (variable_identifier)
       (int)))
   (comment)
   (reference_declaration
-    (class_identifier
-      (reference_type))
+    (reference_type)
     (array_identifier
       (variable_identifier)
       (int))))

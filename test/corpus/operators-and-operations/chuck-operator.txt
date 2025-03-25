@@ -22,13 +22,13 @@ SinOsc b => Gain g => BiQuad f => dac;
   (chuck_operation
     (chuck_operation
       (chuck_operation
-        (class_declaration
+        (variable_declaration
           (class_identifier)
           (variable_identifier))
-        (class_declaration
+        (variable_declaration
           (class_identifier)
           (variable_identifier)))
-      (class_declaration
+      (variable_declaration
         (class_identifier)
         (variable_identifier)))
     (keyword
@@ -144,13 +144,11 @@ new Object @=> moe;
   (comment)
   (comment)
   (chuck_operation
-    (class_declaration
-      (class_identifier
-        (reference_type))
+    (variable_declaration
+      (reference_type)
       (variable_identifier))
     (reference_declaration
-      (class_identifier
-        (reference_type))
+      (reference_type)
       (variable_identifier)))
   (comment)
   (chuck_operation
@@ -164,8 +162,7 @@ new Object @=> moe;
   (comment)
   (chuck_operation
     (class_instantiation
-      (class_identifier
-        (reference_type)))
+      (class_identifier))
     (variable_identifier)))
 
 ===========================

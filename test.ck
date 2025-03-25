@@ -1,3 +1,3 @@
-"test" => string string;
-
-<<< string >>>;
+if( condition ) {
+    // insert code here
+}

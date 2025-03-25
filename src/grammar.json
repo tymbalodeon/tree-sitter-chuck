@@ -26,11 +26,11 @@
           },
           {
             "type": "SYMBOL",
-            "name": "function_definition"
+            "name": "_control_structure"
           },
           {
             "type": "SYMBOL",
-            "name": "_loop"
+            "name": "function_definition"
           },
           {
             "type": "SYMBOL",
@@ -60,17 +60,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "class_identifier"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "primitive_type"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "_type"
         },
         {
           "type": "SYMBOL",
@@ -162,7 +153,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "_loop"
+                "name": "_control_structure"
               },
               {
                 "type": "SYMBOL",
@@ -203,19 +194,11 @@
         },
         {
           "type": "STRING",
-          "value": "fun"
-        },
-        {
-          "type": "STRING",
           "value": "function"
         },
         {
           "type": "STRING",
           "value": "global"
-        },
-        {
-          "type": "STRING",
-          "value": "new"
         },
         {
           "type": "STRING",
@@ -281,6 +264,10 @@
             },
             {
               "type": "SYMBOL",
+              "name": "keyword"
+            },
+            {
+              "type": "SYMBOL",
               "name": "member_identifier"
             }
           ]
@@ -328,19 +315,6 @@
         }
       ]
     },
-    "class_declaration": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "class_identifier"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "variable_identifier"
-        }
-      ]
-    },
     "class_definition": {
       "type": "SEQ",
       "members": [
@@ -371,17 +345,8 @@
       ]
     },
     "class_identifier": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "PATTERN",
-          "value": "[A-Z][a-zA-Z0-9]*"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "reference_type"
-        }
-      ]
+      "type": "PATTERN",
+      "value": "[A-Z][a-zA-Z0-9]*"
     },
     "class_instantiation": {
       "type": "SEQ",
@@ -410,10 +375,6 @@
       "members": [
         {
           "type": "STRING",
-          "value": "class"
-        },
-        {
-          "type": "STRING",
           "value": "extends"
         },
         {
@@ -431,10 +392,6 @@
         {
           "type": "STRING",
           "value": "protected"
-        },
-        {
-          "type": "STRING",
-          "value": "public"
         },
         {
           "type": "STRING",
@@ -567,16 +524,33 @@
       "type": "CHOICE",
       "members": [
         {
+          "type": "SYMBOL",
+          "name": "do_loop"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "for_loop"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "for_each_loop"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "loop"
+        }
+      ]
+    },
+    "_control_structure_keyword": {
+      "type": "CHOICE",
+      "members": [
+        {
           "type": "STRING",
           "value": "break"
         },
         {
           "type": "STRING",
           "value": "continue"
-        },
-        {
-          "type": "STRING",
-          "value": "repeat"
         },
         {
           "type": "STRING",
@@ -631,10 +605,6 @@
         },
         {
           "type": "SYMBOL",
-          "name": "class_declaration"
-        },
-        {
-          "type": "SYMBOL",
           "name": "reference_declaration"
         },
         {
@@ -655,17 +625,8 @@
           "name": "_control_structure_body"
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_until_expression"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "_while_expression"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "_until_while_expression"
         }
       ]
     },
@@ -749,11 +710,15 @@
         },
         {
           "type": "SYMBOL",
+          "name": "class_instantiation"
+        },
+        {
+          "type": "SYMBOL",
           "name": "conditional"
         },
         {
           "type": "SYMBOL",
-          "name": "class_instantiation"
+          "name": "_control_structure"
         },
         {
           "type": "SYMBOL",
@@ -777,7 +742,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_loop"
+          "name": "keyword"
         },
         {
           "type": "SYMBOL",
@@ -1030,17 +995,8 @@
                 "type": "SEQ",
                 "members": [
                   {
-                    "type": "CHOICE",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "array_declaration"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "variable_declaration"
-                      }
-                    ]
+                    "type": "SYMBOL",
+                    "name": "_declaration"
                   },
                   {
                     "type": "REPEAT",
@@ -1052,17 +1008,8 @@
                           "value": ","
                         },
                         {
-                          "type": "CHOICE",
-                          "members": [
-                            {
-                              "type": "SYMBOL",
-                              "name": "array_declaration"
-                            },
-                            {
-                              "type": "SYMBOL",
-                              "name": "variable_declaration"
-                            }
-                          ]
+                          "type": "SYMBOL",
+                          "name": "_declaration"
                         }
                       ]
                     }
@@ -1158,7 +1105,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "keyword"
+          "name": "reference_type"
         },
         {
           "type": "SYMBOL",
@@ -1203,7 +1150,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_control_structure"
+          "name": "_control_structure_keyword"
         },
         {
           "type": "SYMBOL",
@@ -1223,28 +1170,42 @@
         }
       ]
     },
-    "_loop": {
-      "type": "CHOICE",
+    "loop": {
+      "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "do_loop"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "repeat"
+                },
+                {
+                  "type": "STRING",
+                  "value": "("
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_expression"
+                },
+                {
+                  "type": "STRING",
+                  "value": ")"
+                }
+              ]
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_until_while_expression"
+            }
+          ]
         },
         {
           "type": "SYMBOL",
-          "name": "for_loop"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "for_each_loop"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "until_loop"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "while_loop"
+          "name": "_control_structure_body"
         }
       ]
     },
@@ -1479,7 +1440,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "class_identifier"
+              "name": "_type"
             },
             {
               "type": "SYMBOL",
@@ -1492,17 +1453,8 @@
           "value": "@"
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "array_identifier"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "variable_identifier"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "_identifier"
         }
       ]
     },
@@ -1624,20 +1576,29 @@
         },
         {
           "type": "SYMBOL",
-          "name": "variable_identifier"
+          "name": "primitive_type"
         },
         {
           "type": "SYMBOL",
-          "name": "primitive_type"
+          "name": "reference_type"
         }
       ]
     },
-    "_until_expression": {
+    "_until_while_expression": {
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "until"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "until"
+            },
+            {
+              "type": "STRING",
+              "value": "while"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -1653,19 +1614,6 @@
         }
       ]
     },
-    "until_loop": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "_until_expression"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_control_structure_body"
-        }
-      ]
-    },
     "variable_identifier": {
       "type": "PATTERN",
       "value": "[a-z_][a-zA-Z0-9_]*"
@@ -1675,7 +1623,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "primitive_type"
+          "name": "_type"
         },
         {
           "type": "CHOICE",
@@ -1689,40 +1637,6 @@
               "name": "variable_identifier"
             }
           ]
-        }
-      ]
-    },
-    "_while_expression": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "while"
-        },
-        {
-          "type": "STRING",
-          "value": "("
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_expression"
-        },
-        {
-          "type": "STRING",
-          "value": ")"
-        }
-      ]
-    },
-    "while_loop": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "_while_expression"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_control_structure_body"
         }
       ]
     }

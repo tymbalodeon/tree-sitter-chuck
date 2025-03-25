@@ -220,10 +220,10 @@ while( true )
   (comment)
   (chuck_operation
     (chuck_operation
-      (class_declaration
+      (variable_declaration
         (class_identifier)
         (variable_identifier))
-      (class_declaration
+      (variable_declaration
         (class_identifier)
         (variable_identifier)))
     (keyword
@@ -252,7 +252,7 @@ while( true )
       (array_identifier
         (variable_identifier))))
   (comment)
-  (while_loop
+  (loop
     (keyword)
     (block
       (comment)

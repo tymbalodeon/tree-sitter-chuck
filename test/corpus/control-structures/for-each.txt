@@ -27,4 +27,47 @@ for( auto a : array )
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (chuck_operation
+    (array
+      (int)
+      (int)
+      (int))
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier))))
+  (comment)
+  (for_each_loop
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (variable_identifier)
+    (block
+      (comment)
+      (debug_print
+        (variable_identifier))))
+  (comment)
+  (for_each_loop
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (array
+      (int)
+      (int)
+      (int))
+    (block
+      (comment)
+      (debug_print
+        (variable_identifier))))
+  (comment)
+  (for_each_loop
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (variable_identifier)
+    (block
+      (comment)
+      (debug_print
+        (variable_identifier)))))

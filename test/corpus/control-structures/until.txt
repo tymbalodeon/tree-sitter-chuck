@@ -12,7 +12,7 @@ until( false )
 
 (source_file
   (comment)
-  (until_loop
+  (loop
     (keyword)
     (block
       (comment))))

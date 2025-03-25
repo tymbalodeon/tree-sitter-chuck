@@ -16,7 +16,7 @@ while( true )
 
 (source_file
   (comment)
-  (while_loop
+  (loop
     (keyword)
     (block
       (comment)

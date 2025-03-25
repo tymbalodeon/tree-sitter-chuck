@@ -18,16 +18,14 @@ module.exports = grammar({
           $.class_definition,
           $.comment,
           $.conditional,
+          $._control_structure,
           $.function_definition,
-          $._loop,
           $._statement,
         ),
       ),
 
     array: ($) => seq("[", $._expression_list, "]"),
-
-    array_declaration: ($) =>
-      seq(choice($.class_identifier, $.primitive_type), $.array_identifier),
+    array_declaration: ($) => seq($._type, $.array_identifier),
 
     array_identifier: ($) =>
       seq(
@@ -46,7 +44,7 @@ module.exports = grammar({
             $.class_definition,
             $.comment,
             $.conditional,
-            $._loop,
+            $._control_structure,
             $._statement,
           ),
         ),
@@ -54,9 +52,7 @@ module.exports = grammar({
       ),
 
     cast: ($) => seq($._expression, "$", $.primitive_type),
-
-    _chuck_keyword: () =>
-      choice("const", "fun", "function", "global", "new", "spork"),
+    _chuck_keyword: () => choice("const", "function", "global", "spork"),
 
     chuck_operation: ($) =>
       seq(
@@ -66,30 +62,27 @@ module.exports = grammar({
           seq("(", optional($._expression_list), ")"),
         ),
         $._chuck_operator,
-        choice($._declaration, $._identifier, $.member_identifier),
+        choice($._declaration, $._identifier, $.keyword, $.member_identifier),
       ),
 
     _chuck_operator: () =>
       choice("%=>", "&=>", "*=>", "+=>", "-=>", "/=>", "=>", "@=>", "|=>"),
-    class_declaration: ($) => seq($.class_identifier, $.variable_identifier),
 
     class_definition: ($) =>
       seq(optional("public"), "class", $.class_identifier, $.block),
 
-    class_identifier: ($) => choice(/[A-Z][a-zA-Z0-9]*/, $.reference_type),
+    class_identifier: () => /[A-Z][a-zA-Z0-9]*/,
 
     class_instantiation: ($) =>
       seq("new", choice($.class_identifier, $.variable_identifier)),
 
     _class_keyword: () =>
       choice(
-        "class",
         "extends",
         "implements",
         "interface",
         "private",
         "protected",
-        "public",
         "pure",
         "static",
         "super",
@@ -117,8 +110,11 @@ module.exports = grammar({
         optional(seq("else", $._control_structure_body)),
       ),
 
-    _control_structure: () =>
-      choice("break", "continue", "repeat", "return", "switch"),
+    _control_structure: ($) =>
+      choice($.do_loop, $.for_loop, $.for_each_loop, $.loop),
+
+    _control_structure_keyword: () =>
+      choice("break", "continue", "return", "switch"),
 
     _control_structure_body: ($) => choice($.block, $._statement),
     concatentation_operator: () => "+",
@@ -127,17 +123,12 @@ module.exports = grammar({
     _declaration: ($) =>
       choice(
         $.array_declaration,
-        $.class_declaration,
         $.reference_declaration,
         $.variable_declaration,
       ),
 
     do_loop: ($) =>
-      seq(
-        "do",
-        $._control_structure_body,
-        choice($._until_expression, $._while_expression),
-      ),
+      seq("do", $._control_structure_body, $._until_while_expression),
 
     duration_identifier: () =>
       choice("day", "hour", "minute", "ms", "samp", "second", "week"),
@@ -158,14 +149,15 @@ module.exports = grammar({
         $.array,
         $.binary_expression,
         $.cast,
-        $.conditional,
         $.class_instantiation,
+        $.conditional,
+        $._control_structure,
         $.debug_print,
         $._declaration,
         $.function_call,
         $._identifier,
         $.increment_expression,
-        $._loop,
+        $.keyword,
         $.member_identifier,
         $.negation_expression,
         $._number,
@@ -220,14 +212,7 @@ module.exports = grammar({
         "(",
         field(
           "parameters",
-          optional(
-            seq(
-              choice($.array_declaration, $.variable_declaration),
-              repeat(
-                seq(",", choice($.array_declaration, $.variable_declaration)),
-              ),
-            ),
-          ),
+          optional(seq($._declaration, repeat(seq(",", $._declaration)))),
         ),
         ")",
         $.block,
@@ -241,7 +226,7 @@ module.exports = grammar({
       choice(
         $.array_identifier,
         $.class_identifier,
-        $.keyword,
+        $.reference_type,
         $.variable_identifier,
       ),
 
@@ -251,20 +236,20 @@ module.exports = grammar({
       choice(
         $._chuck_keyword,
         $._class_keyword,
-        $._control_structure,
+        $._control_structure_keyword,
         $.duration_identifier,
         $.global_unit_generator,
         $.primitive_type,
         $._special_literal_value,
       ),
 
-    _loop: ($) =>
-      choice(
-        $.do_loop,
-        $.for_loop,
-        $.for_each_loop,
-        $.until_loop,
-        $.while_loop,
+    loop: ($) =>
+      seq(
+        choice(
+          seq("repeat", "(", $._expression, ")"),
+          $._until_while_expression,
+        ),
+        $._control_structure_body,
       ),
 
     member_identifier: ($) => seq($._identifier, ".", $.variable_identifier),
@@ -314,11 +299,7 @@ module.exports = grammar({
     reference_assignment: ($) => seq($.primitive_type),
 
     reference_declaration: ($) =>
-      seq(
-        choice($.class_identifier, $.variable_identifier),
-        "@",
-        choice($.array_identifier, $.variable_identifier),
-      ),
+      seq(choice($._type, $.variable_identifier), "@", $._identifier),
 
     reference_type: () => choice("Event", "Object", "UGen", "array", "string"),
 
@@ -333,17 +314,15 @@ module.exports = grammar({
     },
 
     _type: ($) =>
-      choice($.class_identifier, $.variable_identifier, $.primitive_type),
+      choice($.class_identifier, $.primitive_type, $.reference_type),
 
-    _until_expression: ($) => seq("until", "(", $._expression, ")"),
-    until_loop: ($) => seq($._until_expression, $._control_structure_body),
+    _until_while_expression: ($) =>
+      seq(choice("until", "while"), "(", $._expression, ")"),
+
     variable_identifier: () => /[a-z_][a-zA-Z0-9_]*/,
 
     variable_declaration: ($) =>
-      seq($.primitive_type, choice($.class_identifier, $.variable_identifier)),
-
-    _while_expression: ($) => seq("while", "(", $._expression, ")"),
-    while_loop: ($) => seq($._while_expression, $._control_structure_body),
+      seq($._type, choice($.class_identifier, $.variable_identifier)),
   },
 
   word: ($) => $.variable_identifier,

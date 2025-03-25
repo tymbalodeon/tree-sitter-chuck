@@ -11,13 +11,8 @@ string;
 ---
 
 (source_file
-  (class_identifier
-    (reference_type))
-  (class_identifier
-    (reference_type))
-  (class_identifier
-    (reference_type))
-  (class_identifier
-    (reference_type))
-  (class_identifier
-    (reference_type)))
+  (reference_type)
+  (reference_type)
+  (reference_type)
+  (reference_type)
+  (reference_type))
