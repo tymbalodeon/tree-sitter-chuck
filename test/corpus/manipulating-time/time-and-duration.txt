@@ -1,0 +1,117 @@
+=================
+Time and duration
+=================
+
+// a duration of one second
+1::second => dur foo;
+
+// a point in time (duration of foo from now)
+now + foo => time later;
+
+----
+
+(source_file
+  (comment)
+  (chuck_operation
+    (dur
+      (int)
+      (duration_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (binary_expression
+      (keyword)
+      (operator)
+      (variable_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))))
+
+========================
+Durations from durations
+========================
+
+// .5 second is a quarter
+.5::second => dur quarter;
+
+// 4 quarters is whole
+4::quarter => dur whole;
+
+----
+
+(source_file
+  (comment)
+  (chuck_operation
+    (dur
+      (float)
+      (duration_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (dur
+      (int)
+      (variable_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))))
+
+=======================
+Default duration values
+=======================
+
+// the duration of half a sample
+.5::samp => dur foo;
+
+// 20 weeks
+20::week => dur waithere;
+
+// use in combination
+2::minute + 30::second => dur bar;
+
+// same value as above
+2.5::minute => dur bar;
+
+---
+
+(source_file
+  (comment)
+  (chuck_operation
+    (dur
+      (float)
+      (duration_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (dur
+      (int)
+      (duration_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (dur
+      (binary_expression
+        (dur
+          (int)
+          (duration_identifier))
+        (operator)
+        (int))
+      (duration_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (chuck_operation
+    (dur
+      (float)
+      (duration_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))))
