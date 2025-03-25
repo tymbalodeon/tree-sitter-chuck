@@ -313,7 +313,7 @@ module.exports = grammar({
     _type: ($) =>
       choice($.class_identifier, $.variable_identifier, $.primitive_type),
 
-    variable_identifier: () => /[a-z][a-zA-Z0-9]*/,
+    variable_identifier: () => /[a-z_][a-zA-Z0-9_]*/,
 
     variable_declaration: ($) =>
       seq($.primitive_type, choice($.class_identifier, $.variable_identifier)),

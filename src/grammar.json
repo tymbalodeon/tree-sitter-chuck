@@ -1545,7 +1545,7 @@
     },
     "variable_identifier": {
       "type": "PATTERN",
-      "value": "[a-z][a-zA-Z0-9]*"
+      "value": "[a-z_][a-zA-Z0-9_]*"
     },
     "variable_declaration": {
       "type": "SEQ",
