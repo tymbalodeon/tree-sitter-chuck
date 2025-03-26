@@ -20,7 +20,7 @@ module.exports = grammar({
           $.conditional,
           $._control_structure,
           $.function_definition,
-          $._statement,
+          $.statement,
         ),
       ),
 
@@ -45,7 +45,7 @@ module.exports = grammar({
             $.comment,
             $.conditional,
             $._control_structure,
-            $._statement,
+            $.statement,
           ),
         ),
         "}",
@@ -116,7 +116,7 @@ module.exports = grammar({
     control_structure_keyword: () =>
       choice("break", "continue", "return", "switch"),
 
-    _control_structure_body: ($) => choice($.block, $._statement),
+    _control_structure_body: ($) => choice($.block, $.statement),
     concatentation_operator: () => "+",
     debug_print: ($) => seq("<<<", $._expression_list, ">>>"),
 
@@ -306,7 +306,7 @@ module.exports = grammar({
     _special_literal_value: () =>
       choice("NULL", "false", "maybe", "me", "now", "null", "pi", "true"),
 
-    _statement: ($) => seq(choice($.chuck_operation, $._expression), ";"),
+    statement: ($) => seq(choice($.chuck_operation, $._expression), ";"),
 
     string: () => {
       const delimeter = '"';

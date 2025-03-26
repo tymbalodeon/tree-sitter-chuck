@@ -34,7 +34,7 @@
           },
           {
             "type": "SYMBOL",
-            "name": "_statement"
+            "name": "statement"
           }
         ]
       }
@@ -157,7 +157,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "_statement"
+                "name": "statement"
               }
             ]
           }
@@ -571,7 +571,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_statement"
+          "name": "statement"
         }
       ]
     },
@@ -1520,7 +1520,7 @@
         }
       ]
     },
-    "_statement": {
+    "statement": {
       "type": "SEQ",
       "members": [
         {

@@ -420,39 +420,7 @@
       "required": false,
       "types": [
         {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "array_declaration",
-          "named": true
-        },
-        {
-          "type": "array_identifier",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "cast",
-          "named": true
-        },
-        {
-          "type": "chuck_operation",
-          "named": true
-        },
-        {
           "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "class_identifier",
-          "named": true
-        },
-        {
-          "type": "class_instantiation",
           "named": true
         },
         {
@@ -460,27 +428,11 @@
           "named": true
         },
         {
-          "type": "complex",
-          "named": true
-        },
-        {
           "type": "conditional",
           "named": true
         },
         {
-          "type": "debug_print",
-          "named": true
-        },
-        {
           "type": "do_loop",
-          "named": true
-        },
-        {
-          "type": "dur",
-          "named": true
-        },
-        {
-          "type": "float",
           "named": true
         },
         {
@@ -492,59 +444,11 @@
           "named": true
         },
         {
-          "type": "function_call",
-          "named": true
-        },
-        {
-          "type": "hexidecimal",
-          "named": true
-        },
-        {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
-          "type": "int",
-          "named": true
-        },
-        {
-          "type": "keyword",
-          "named": true
-        },
-        {
           "type": "loop",
           "named": true
         },
         {
-          "type": "member_identifier",
-          "named": true
-        },
-        {
-          "type": "negation_expression",
-          "named": true
-        },
-        {
-          "type": "polar",
-          "named": true
-        },
-        {
-          "type": "reference_declaration",
-          "named": true
-        },
-        {
-          "type": "reference_type",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "variable_declaration",
-          "named": true
-        },
-        {
-          "type": "variable_identifier",
+          "type": "statement",
           "named": true
         }
       ]
@@ -1010,10 +914,6 @@
           "named": true
         },
         {
-          "type": "chuck_operation",
-          "named": true
-        },
-        {
           "type": "class_identifier",
           "named": true
         },
@@ -1095,6 +995,10 @@
         },
         {
           "type": "reference_type",
+          "named": true
+        },
+        {
+          "type": "statement",
           "named": true
         },
         {
@@ -1277,10 +1181,6 @@
           "named": true
         },
         {
-          "type": "chuck_operation",
-          "named": true
-        },
-        {
           "type": "class_identifier",
           "named": true
         },
@@ -1362,6 +1262,10 @@
         },
         {
           "type": "reference_type",
+          "named": true
+        },
+        {
+          "type": "statement",
           "named": true
         },
         {
@@ -1528,15 +1432,7 @@
           "named": true
         },
         {
-          "type": "array_declaration",
-          "named": true
-        },
-        {
           "type": "array_identifier",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
           "named": true
         },
         {
@@ -1544,99 +1440,7 @@
           "named": true
         },
         {
-          "type": "cast",
-          "named": true
-        },
-        {
-          "type": "chuck_operation",
-          "named": true
-        },
-        {
-          "type": "class_identifier",
-          "named": true
-        },
-        {
-          "type": "class_instantiation",
-          "named": true
-        },
-        {
-          "type": "complex",
-          "named": true
-        },
-        {
-          "type": "conditional",
-          "named": true
-        },
-        {
-          "type": "debug_print",
-          "named": true
-        },
-        {
-          "type": "do_loop",
-          "named": true
-        },
-        {
-          "type": "dur",
-          "named": true
-        },
-        {
-          "type": "float",
-          "named": true
-        },
-        {
-          "type": "for_each_loop",
-          "named": true
-        },
-        {
-          "type": "for_loop",
-          "named": true
-        },
-        {
-          "type": "function_call",
-          "named": true
-        },
-        {
-          "type": "hexidecimal",
-          "named": true
-        },
-        {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
-          "type": "int",
-          "named": true
-        },
-        {
-          "type": "keyword",
-          "named": true
-        },
-        {
-          "type": "loop",
-          "named": true
-        },
-        {
-          "type": "member_identifier",
-          "named": true
-        },
-        {
-          "type": "negation_expression",
-          "named": true
-        },
-        {
-          "type": "polar",
-          "named": true
-        },
-        {
-          "type": "reference_declaration",
-          "named": true
-        },
-        {
-          "type": "reference_type",
-          "named": true
-        },
-        {
-          "type": "string",
+          "type": "statement",
           "named": true
         },
         {
@@ -1768,6 +1572,10 @@
         },
         {
           "type": "reference_type",
+          "named": true
+        },
+        {
+          "type": "statement",
           "named": true
         },
         {
@@ -2189,10 +1997,6 @@
           "named": true
         },
         {
-          "type": "chuck_operation",
-          "named": true
-        },
-        {
           "type": "class_identifier",
           "named": true
         },
@@ -2274,6 +2078,10 @@
         },
         {
           "type": "reference_type",
+          "named": true
+        },
+        {
+          "type": "statement",
           "named": true
         },
         {
@@ -2628,6 +2436,57 @@
       "required": false,
       "types": [
         {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "class_definition",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "do_loop",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
+          "named": true
+        },
+        {
+          "type": "for_loop",
+          "named": true
+        },
+        {
+          "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "loop",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
           "type": "array",
           "named": true
         },
@@ -2644,10 +2503,6 @@
           "named": true
         },
         {
-          "type": "block",
-          "named": true
-        },
-        {
           "type": "cast",
           "named": true
         },
@@ -2656,19 +2511,11 @@
           "named": true
         },
         {
-          "type": "class_definition",
-          "named": true
-        },
-        {
           "type": "class_identifier",
           "named": true
         },
         {
           "type": "class_instantiation",
-          "named": true
-        },
-        {
-          "type": "comment",
           "named": true
         },
         {
@@ -2705,10 +2552,6 @@
         },
         {
           "type": "function_call",
-          "named": true
-        },
-        {
-          "type": "function_definition",
           "named": true
         },
         {
