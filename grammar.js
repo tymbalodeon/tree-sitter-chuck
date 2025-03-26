@@ -61,11 +61,11 @@ module.exports = grammar({
           $._expression,
           seq("(", optional($._expression_list), ")"),
         ),
-        $._chuck_operator,
+        $.chuck_operator,
         choice($._declaration, $._identifier, $.keyword, $.member_identifier),
       ),
 
-    _chuck_operator: () =>
+    chuck_operator: () =>
       choice("%=>", "&=>", "*=>", "+=>", "-=>", "/=>", "=>", "@=>", "|=>"),
 
     class_definition: ($) =>
@@ -279,6 +279,7 @@ module.exports = grammar({
         "|",
         "||",
       ),
+
     polar: ($) => seq("%(", $._expression, ",", $._expression, ")"),
 
     primitive_type: () =>

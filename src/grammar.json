@@ -249,7 +249,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_chuck_operator"
+          "name": "chuck_operator"
         },
         {
           "type": "CHOICE",
@@ -274,7 +274,7 @@
         }
       ]
     },
-    "_chuck_operator": {
+    "chuck_operator": {
       "type": "CHOICE",
       "members": [
         {

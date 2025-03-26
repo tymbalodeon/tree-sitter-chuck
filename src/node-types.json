@@ -618,6 +618,10 @@
           "named": true
         },
         {
+          "type": "chuck_operator",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -715,6 +719,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "chuck_operator",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "class_definition",
