@@ -37,15 +37,11 @@ Control structures
 
 break;
 continue;
-return;
 switch;
 
 ---
 
 (source_file
-  (statement
-    (keyword
-      (control_structure_keyword)))
   (statement
     (keyword
       (control_structure_keyword)))

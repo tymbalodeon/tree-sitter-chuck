@@ -113,9 +113,7 @@ module.exports = grammar({
     _control_structure: ($) =>
       choice($.do_loop, $.for_loop, $.for_each_loop, $.loop),
 
-    control_structure_keyword: () =>
-      choice("break", "continue", "return", "switch"),
-
+    control_structure_keyword: () => choice("break", "continue", "switch"),
     _control_structure_body: ($) => choice($.block, $.statement),
     debug_print: ($) => seq("<<<", $._expression_list, ">>>"),
 
@@ -306,7 +304,8 @@ module.exports = grammar({
     _special_literal_value: () =>
       choice("NULL", "false", "maybe", "me", "now", "null", "pi", "true"),
 
-    statement: ($) => seq(choice($.chuck_operation, $._expression), ";"),
+    statement: ($) =>
+      seq(optional("return"), choice($.chuck_operation, $._expression), ";"),
 
     string: () => {
       const delimeter = '"';

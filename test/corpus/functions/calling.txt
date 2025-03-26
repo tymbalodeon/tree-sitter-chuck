@@ -1,0 +1,124 @@
+=======
+Calling
+=======
+
+// define 'hey'
+fun int hey( int a, int b )
+{
+    // do something
+    return a + b;
+}
+
+// call the function; store result
+hey( 1, 2 ) => int result;
+
+---
+
+(source_file
+  (comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (block
+      (comment)
+      (statement
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (variable_identifier)))))
+  (comment)
+  (statement
+    (chuck_operation
+      (function_call
+        (variable_identifier)
+        (int)
+        (int))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
+
+======================
+ChucK operator calling
+======================
+
+// call hey
+( 1, 2 ) => hey => int result;
+
+// same
+hey( 1, 2 ) => int result;
+
+// several in a row
+( 10, 100 ) => Std.rand2 => Std.mtof => float foo;
+
+// same
+Std.mtof( Std.rand2( 10, 100 ) ) => float foo;
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (int)
+        (int)
+        (chuck_operator)
+        (variable_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (function_call
+        (variable_identifier)
+        (int)
+        (int))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (chuck_operation
+          (int)
+          (int)
+          (chuck_operator)
+          (member_identifier
+            (class_identifier)
+            (variable_identifier)))
+        (chuck_operator)
+        (member_identifier
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (function_call
+          (member_identifier
+            (class_identifier)
+            (variable_identifier))
+          (int)
+          (int)))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))

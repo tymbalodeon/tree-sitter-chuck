@@ -554,10 +554,6 @@
         },
         {
           "type": "STRING",
-          "value": "return"
-        },
-        {
-          "type": "STRING",
           "value": "switch"
         }
       ]
@@ -574,10 +570,6 @@
           "name": "statement"
         }
       ]
-    },
-    "concatentation_operator": {
-      "type": "STRING",
-      "value": "+"
     },
     "debug_print": {
       "type": "SEQ",
@@ -1523,6 +1515,18 @@
     "statement": {
       "type": "SEQ",
       "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "return"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
         {
           "type": "CHOICE",
           "members": [
