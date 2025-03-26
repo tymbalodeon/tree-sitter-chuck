@@ -58,17 +58,24 @@ module.exports = grammar({
 
     chuck_operation: ($) =>
       seq(
-        choice(
-          $.chuck_operation,
-          $._expression,
-          seq("(", optional($._expression_list), ")"),
-        ),
+        choice($.chuck_operation, $._expression),
         $.chuck_operator,
         choice($._declaration, $._identifier, $.keyword, $.member_identifier),
       ),
 
     chuck_operator: () =>
-      choice("%=>", "&=>", "*=>", "+=>", "-=>", "/=>", "=>", "@=>", "|=>"),
+      choice(
+        "%=>",
+        "&=>",
+        "*=>",
+        "+=>",
+        "-=>",
+        "/=>",
+        "=<",
+        "=>",
+        "@=>",
+        "|=>",
+      ),
 
     class_definition: ($) =>
       seq(
@@ -168,7 +175,7 @@ module.exports = grammar({
         $._number,
         $.spork_expression,
         $.string,
-        seq("(", $._expression, ")"),
+        seq("(", optional($._expression_list), ")"),
       ),
 
     _expression_list: ($) =>
@@ -265,7 +272,11 @@ module.exports = grammar({
       ),
 
     member_identifier: ($) =>
-      seq(choice("me", $._identifier), ".", $.variable_identifier),
+      seq(
+        choice("me", $.global_unit_generator, $._identifier),
+        ".",
+        $.variable_identifier,
+      ),
 
     negation_expression: ($) => prec.left(seq("!", $._expression)),
 

@@ -1,0 +1,259 @@
+===========
+Controlling
+===========
+
+// connect SinOsc to dac
+SinOsc s => dac;
+// set initial frequency to 440 hz
+440 => s.freq;
+
+// let time pass for 1 second
+1::second => now;
+
+// change the frequency to 880 hz
+880 => s.freq;
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword)))
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier)))))
+
+==============
+Function calls
+==============
+
+// connect SinOsc to dac
+SinOsc s => dac;
+
+// set frequency to 440
+s.freq( 440 );
+
+// let time pass
+1::second => now;
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (int)))
+  (comment)
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword))))
+
+==============
+Reading values
+==============
+
+// connect SinOsc to dac
+SinOsc s => dac;
+
+// store the current value of the freq
+s.freq() => float the_freq;
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
+
+================
+Multiple targets
+================
+
+// SinOsc to dac
+SinOsc foo => dac;
+// triosc to dac
+TriOsc bar => dac;
+
+// set frequency of foo and then bar
+500 => foo.freq => bar.freq;
+
+// set one freq to the other
+foo.freq() => bar.freq;
+
+// the above is same as:
+bar.freq( foo.freq() );
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (int)
+        (chuck_operator)
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier))))))
+
+=================
+Varying over time
+=================
+
+// SinOsc to dac
+SinOsc s => dac;
+
+// infinite time loop
+while( true )
+{
+    // set the frequency
+( s.freq() + 200 ) % 5000 => s.freq;
+
+    // advance time
+    100::ms => now;
+}
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (loop
+    (keyword)
+    (block
+      (comment)
+      (statement
+        (chuck_operation
+          (binary_expression
+            (binary_expression
+              (function_call
+                (member_identifier
+                  (variable_identifier)
+                  (variable_identifier)))
+              (operator)
+              (int))
+            (operator)
+            (int))
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (comment)
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword))))))

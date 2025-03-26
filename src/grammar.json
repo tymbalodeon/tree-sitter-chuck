@@ -227,31 +227,6 @@
             {
               "type": "SYMBOL",
               "name": "_expression"
-            },
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "("
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_expression_list"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ")"
-                }
-              ]
             }
           ]
         },
@@ -308,6 +283,10 @@
         {
           "type": "STRING",
           "value": "/=>"
+        },
+        {
+          "type": "STRING",
+          "value": "=<"
         },
         {
           "type": "STRING",
@@ -793,8 +772,16 @@
               "value": "("
             },
             {
-              "type": "SYMBOL",
-              "name": "_expression"
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "_expression_list"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
             },
             {
               "type": "STRING",
@@ -1303,6 +1290,10 @@
             {
               "type": "STRING",
               "value": "me"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "global_unit_generator"
             },
             {
               "type": "SYMBOL",

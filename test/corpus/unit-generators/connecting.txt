@@ -1,0 +1,222 @@
+==========
+Connection
+==========
+
+// instantiate a SinOsc, connect its output to dac's input
+SinOsc s => dac;
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator)))))
+
+========
+Chaining
+========
+
+// connect SinOsc to Gain to reverb to dac
+SinOsc s => Gain g => JCRev r => dac;
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (chuck_operation
+          (variable_declaration
+            (class_identifier)
+            (variable_identifier))
+          (chuck_operator)
+          (variable_declaration
+            (class_identifier)
+            (variable_identifier)))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator)))))
+
+========
+Feedback
+========
+
+// connect adc to Gain to delayline to dac; (feedforward)
+adc => Gain g1 => DelayL d => dac;
+
+// adc to Gain to dac (feedforward)
+adc => Gain g2 => dac;
+
+// our delayline to Gain back to itself (feedback)
+d => Gain g3 => d;
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (chuck_operation
+          (keyword
+            (global_unit_generator))
+          (chuck_operator)
+          (variable_declaration
+            (class_identifier)
+            (variable_identifier)))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (keyword
+          (global_unit_generator))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (variable_identifier)
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (variable_identifier))))
+
+==============
+Generate audio
+==============
+
+// connect SinOsc to dac
+SinOsc s => dac;
+// set initial frequency (see next section)
+440 => s.freq;
+
+// advance time; allow audio to compute
+1::second => now;
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword))))
+
+==========
+UnChucKing
+==========
+
+// connect SinOsc to dac
+SinOsc s => dac;
+
+// let time pass for 1 second letting audio be computed for that amount of time
+1::second => now;
+
+// disconnect s from the dac
+s =< dac;
+
+// let time pass for another second - should hear silence
+1::second => now;
+
+// duh, connect them again
+s => dac;
+
+// let time pass...
+1::second => now;
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword)))
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_identifier)
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword)))
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_identifier)
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword))))

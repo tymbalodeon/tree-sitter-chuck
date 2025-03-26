@@ -1,4 +1,1 @@
-class Bar
-{
-	//
-}
+noise n => pan2 p => dac;
