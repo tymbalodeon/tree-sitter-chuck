@@ -117,7 +117,6 @@ module.exports = grammar({
       choice("break", "continue", "return", "switch"),
 
     _control_structure_body: ($) => choice($.block, $.statement),
-    concatentation_operator: () => "+",
     debug_print: ($) => seq("<<<", $._expression_list, ">>>"),
 
     _declaration: ($) =>
