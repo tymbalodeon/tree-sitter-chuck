@@ -24,7 +24,7 @@ fun void funk( int arg )
 ===========
 Return type
 ===========
-    
+
 // define function 'addOne'
 fun int addOne(int x)
 {

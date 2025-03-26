@@ -45,6 +45,7 @@ module.exports = grammar({
             $.comment,
             $.conditional,
             $._control_structure,
+            $.function_definition,
             $.statement,
           ),
         ),

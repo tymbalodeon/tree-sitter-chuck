@@ -1,0 +1,207 @@
+=======
+Members
+=======
+
+// define class X
+class X
+{
+    // declare instance variable 'm_foo'
+    int m_foo;
+    // another instance variable 'm_bar'
+    float m_bar;
+    // yet another, this time an object
+    Event m_event;
+
+    // function that returns value of m_foo
+    fun int getFoo() { return m_foo; }
+
+    // function to set the value of m_foo
+    fun void setFoo( int value ) { value => m_foo; }
+
+    // calculate something
+    fun float calculate( float x, float y )
+    {
+        // insert code
+    }
+
+    // print some stuff
+    fun void print()
+    {
+        <<< m_foo, m_bar, m_event >>>;
+    }
+}
+
+// instantiate an X
+X x;
+
+// set the Foo
+x.setFoo( 5 );
+// print the Foo
+<<< x.getFoo() >>>;
+
+// call print
+x.print();
+
+---
+
+(source_file
+  (comment)
+  (class_definition
+    (class_identifier)
+    (block
+      (comment)
+      (statement
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier)))
+      (comment)
+      (statement
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier)))
+      (comment)
+      (statement
+        (variable_declaration
+          (reference_type)
+          (variable_identifier)))
+      (comment)
+      (function_definition
+        (primitive_type)
+        (variable_identifier)
+        (block
+          (statement
+            (variable_identifier))))
+      (comment)
+      (function_definition
+        (primitive_type)
+        (variable_identifier)
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier))
+        (block
+          (statement
+            (chuck_operation
+              (variable_identifier)
+              (chuck_operator)
+              (variable_identifier)))))
+      (comment)
+      (function_definition
+        (primitive_type)
+        (variable_identifier)
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier))
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier))
+        (block
+          (comment)))
+      (comment)
+      (function_definition
+        (primitive_type)
+        (variable_identifier)
+        (block
+          (statement
+            (debug_print
+              (variable_identifier)
+              (variable_identifier)
+              (variable_identifier)))))))
+  (comment)
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (int)))
+  (comment)
+  (statement
+    (debug_print
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier)))))
+
+; TODO available in ChucK 1.5.2.0
+============
+Constructors
+:skip
+============
+
+// connecting UGens, with construtors
+SinOsc foo( 440 ) => Gain g( .5 ) => dac;
+// `new` and assignment
+new TriOsc( 440, 0.5 ) @=> Osc @ oscillator;
+// can combine constructors with arrays
+string arr( "foo" )[10];
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (reference_declaration
+      (class_identifier)
+      (variable_identifier))))
+
+; TODO available in ChucK 1.5.2.0
+=======================================
+Constructor definition and overloading
+:skip
+=======================================
+
+class Foo
+{
+    // a member variable
+    1 => int num;
+
+    // constructor "default"
+    fun Foo() { 2 => num; }
+
+    // another constructor
+    fun Foo( int x ) { x => num; }
+
+    // yet another constructor
+    fun Foo( int x, int y ) { x*y => num; }
+
+    // alternate way of defining a constructor, using the @construct keyword
+    fun @construct( int x, int y, int z ) { x*y*z => num; }
+
+    // destructor
+    fun @destruct() { <<< "bye:", this.num >>>; }
+}
+
+// constructor "default"
+Foo f1();
+// another constructor
+Foo f2( 15 );
+// yet another constructor
+new Foo( 8, 9 ) @=> Foo @ f3;
+// yet another constructor
+new Foo( 10, 11, 12 ) @=> Foo @ f4;
+// print
+<<< f1.num, f2.num, f3.num, f4.num >>>;
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (class_instantiation
+        (class_identifier))
+      (chuck_operator)
+      (reference_declaration
+        (class_identifier)
+        (variable_identifier))))
+  (comment))

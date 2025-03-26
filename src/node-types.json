@@ -444,6 +444,10 @@
           "named": true
         },
         {
+          "type": "function_definition",
+          "named": true
+        },
+        {
           "type": "loop",
           "named": true
         },

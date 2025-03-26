@@ -1,0 +1,53 @@
+==============
+Define a class
+==============
+
+// define class X
+class X
+{
+    // insert code here
+}
+
+---
+
+(source_file
+  (comment)
+  (class_definition
+    (class_identifier)
+    (block
+      (comment))))
+
+============
+Public class
+============
+
+// define public class MissPopular
+public class MissPopular
+{
+    // ...
+}
+
+// define non-public class Flarg
+class Flarg
+{
+    // ...
+}
+
+// Both MissPopular and Flarg can be used in this file.
+// Only MissPopular can be used from another file. Poor Flarg.
+
+---
+
+(source_file
+  (comment)
+  (class_definition
+    (class_identifier)
+    (block
+      (comment)))
+  (comment)
+  (class_definition
+    (class_identifier)
+    (block
+      (comment)))
+  (comment)
+  (comment))
