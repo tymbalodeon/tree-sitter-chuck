@@ -71,7 +71,13 @@ module.exports = grammar({
       choice("%=>", "&=>", "*=>", "+=>", "-=>", "/=>", "=>", "@=>", "|=>"),
 
     class_definition: ($) =>
-      seq(optional("public"), "class", $.class_identifier, $.block),
+      seq(
+        optional("public"),
+        "class",
+        $.class_identifier,
+        optional(seq("extends", $.class_identifier)),
+        $.block,
+      ),
 
     class_identifier: () => /[A-Z][a-zA-Z0-9]*/,
 
@@ -206,7 +212,7 @@ module.exports = grammar({
     function_definition: ($) =>
       seq(
         "fun",
-        $.primitive_type,
+        $._type,
         $.variable_identifier,
         "(",
         field(
@@ -323,7 +329,10 @@ module.exports = grammar({
     },
 
     _type: ($) =>
-      choice($.class_identifier, $.primitive_type, $.reference_type),
+      seq(
+        optional("static"),
+        choice($.class_identifier, $.primitive_type, $.reference_type),
+      ),
 
     _until_while_expression: ($) =>
       seq(choice("until", "while"), "(", $._expression, ")"),

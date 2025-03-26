@@ -1,0 +1,155 @@
+======
+Static
+======
+
+// define class X
+class X
+{
+    // static data
+    static int our_data;
+
+    // static function
+    fun static int doThatThing()
+    {
+        // return the data
+        return our_data;
+    }
+}
+
+// do not need an instance to access our_data
+2 => X.our_data;
+// print out
+<<< X.our_data >>>;
+// print
+<<< X.doThatThing() >>>;
+
+// create instances of X
+X x1;
+X x2;
+
+// print out their static data - should be same
+<<< x1.our_data, x2.our_data >>>;
+
+// change use one
+5 => x1.our_data;
+
+// the other should be changed as well
+<<< x1.our_data, x2.our_data >>>;
+
+---
+
+(source_file
+  (comment)
+  (class_definition
+    (class_identifier)
+    (block
+      (comment)
+      (statement
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier)))
+      (comment)
+      (function_definition
+        (primitive_type)
+        (variable_identifier)
+        (block
+          (comment)
+          (statement
+            (variable_identifier))))))
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (class_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (debug_print
+      (member_identifier
+        (class_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (debug_print
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier)))))
+  (comment)
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier)))
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (debug_print
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (debug_print
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier)))))
+
+; TODO available in ChucK 1.5.4.3
+=================================================================
+Full static variable instantiation for all primitive Object types
+:skip
+=================================================================
+
+// a class
+public class Foo
+{
+    // int
+    1 => static int S_INT;
+    // float
+    2 => static float S_FLOAT;
+    // dur
+    3::second => static dur S_DUR;
+    // time
+    now + 4::second => static time S_TIME;
+    // vec3
+    @(5,6,7) => static vec3 S_VEC3;
+    // array
+    [8,9,10,11] @=> static int S_INT_ARRAY[];
+    // string
+    static string S_STRING("12");
+    // ugen
+    static SinOsc S_SINOSC(440);
+}
+
+// access and print static variables
+<<< Foo.S_INT >>>;
+<<< Foo.S_FLOAT >>>;
+<<< Foo.S_DUR / second >>>;
+<<< (Foo.S_TIME-now) / second >>>;
+<<< Foo.S_VEC3 >>>;
+for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
+<<< Foo.S_STRING >>>;
+<<< Foo.S_SINOSC.freq() >>>;
+
+---
+
+(source_file)
