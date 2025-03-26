@@ -62,9 +62,9 @@ alias find := find-recipe
 
 alias src := view-source
 
-mod chuck "just/chuck.just"
+mod tree-sitter-chuck "just/tree-sitter-chuck.just"
 
-alias generate := chuck::generate
-alias highlight := chuck::highlight
-alias install := chuck::install
-alias parse := chuck::parse
+alias generate := tree-sitter-chuck::generate
+alias highlight := tree-sitter-chuck::highlight
+alias install := tree-sitter-chuck::install
+alias parse := tree-sitter-chuck::parse

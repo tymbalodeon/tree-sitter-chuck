@@ -22,7 +22,7 @@ parse *file:
         "{{ file }}"
     }
 
-    bun run tree-sitter parse $file
+    bun run tree-sitter parse --no-ranges $file
 
 # Test parser
 [no-cd]

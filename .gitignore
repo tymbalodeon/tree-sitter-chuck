@@ -5,6 +5,6 @@
 .pdm-python
 .venv
 
-# chuck
+# tree-sitter-chuck
 build
 node_modules
