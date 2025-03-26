@@ -9,16 +9,18 @@ now + 10::second => time later;
 
 (source_file
   (comment)
-  (chuck_operation
-    (dur
-      (binary_expression
-        (keyword)
-        (operator)
-        (int))
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
+  (statement
+    (chuck_operation
+      (dur
+        (binary_expression
+          (keyword)
+          (operator)
+          (int))
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
 
 ================
 Time subtraction
@@ -31,14 +33,16 @@ later - now => dur D;
 
 (source_file
   (comment)
-  (chuck_operation
-    (binary_expression
-      (variable_identifier)
-      (operator)
-      (keyword))
-    (variable_declaration
-      (primitive_type)
-      (class_identifier))))
+  (statement
+    (chuck_operation
+      (binary_expression
+        (variable_identifier)
+        (operator)
+        (keyword))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (class_identifier)))))
 
 ========
 Addition
@@ -51,18 +55,20 @@ Addition
 
 (source_file
   (comment)
-  (chuck_operation
-    (dur
-      (binary_expression
-        (dur
-          (int)
-          (duration_identifier))
-        (operator)
-        (int))
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
+  (statement
+    (chuck_operation
+      (dur
+        (binary_expression
+          (dur
+            (int)
+            (duration_identifier))
+          (operator)
+          (int))
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
 
 ===========
 Subtraction
@@ -75,18 +81,20 @@ Subtraction
 
 (source_file
   (comment)
-  (chuck_operation
-    (dur
-      (binary_expression
-        (dur
-          (int)
-          (duration_identifier))
-        (operator)
-        (int))
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
+  (statement
+    (chuck_operation
+      (dur
+        (binary_expression
+          (dur
+            (int)
+            (duration_identifier))
+          (operator)
+          (int))
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
 
 ========
 Division
@@ -99,18 +107,20 @@ Division
 
 (source_file
   (comment)
-  (chuck_operation
-    (dur
-      (binary_expression
-        (dur
-          (int)
-          (duration_identifier))
-        (operator)
-        (int))
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
+  (statement
+    (chuck_operation
+      (dur
+        (binary_expression
+          (dur
+            (int)
+            (duration_identifier))
+          (operator)
+          (int))
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
 
 ========
 Time mod
@@ -123,16 +133,18 @@ now % 1::second => dur remainder;
 
 (source_file
   (comment)
-  (chuck_operation
-    (dur
-      (binary_expression
-        (keyword)
-        (operator)
-        (int))
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
+  (statement
+    (chuck_operation
+      (dur
+        (binary_expression
+          (keyword)
+          (operator)
+          (int))
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
 
 =====================
 Synchronize to period
@@ -146,22 +158,26 @@ T - (now % T) => now;
 
 (source_file
   (comment)
-  (chuck_operation
-    (dur
-      (float)
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (class_identifier)))
-  (chuck_operation
-    (binary_expression
-      (class_identifier)
-      (operator)
+  (statement
+    (chuck_operation
+      (dur
+        (float)
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (class_identifier))))
+  (statement
+    (chuck_operation
       (binary_expression
-        (keyword)
+        (class_identifier)
         (operator)
-        (class_identifier)))
-    (keyword)))
+        (binary_expression
+          (keyword)
+          (operator)
+          (class_identifier)))
+      (chuck_operator)
+      (keyword))))
 
 ==================
 Comparison on time
@@ -206,5 +222,6 @@ if( 900::ms < 1::second )
         (operator)
         (int))
       (duration_identifier))
-    (debug_print
-      (string))))
+    (statement
+      (debug_print
+        (string)))))

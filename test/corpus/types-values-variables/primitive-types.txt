@@ -14,19 +14,27 @@ polar;
 ---
 
 (source_file
-  (keyword
-    (primitive_type))
-  (keyword
-    (primitive_type))
-  (keyword
-    (primitive_type))
-  (keyword
-    (primitive_type))
-  (keyword
-    (primitive_type))
-  (keyword
-    (primitive_type))
-  (keyword
-    (primitive_type))
-  (keyword
-    (primitive_type)))
+  (statement
+    (keyword
+      (primitive_type)))
+  (statement
+    (keyword
+      (primitive_type)))
+  (statement
+    (keyword
+      (primitive_type)))
+  (statement
+    (keyword
+      (primitive_type)))
+  (statement
+    (keyword
+      (primitive_type)))
+  (statement
+    (keyword
+      (primitive_type)))
+  (statement
+    (keyword
+      (primitive_type)))
+  (statement
+    (keyword
+      (primitive_type))))

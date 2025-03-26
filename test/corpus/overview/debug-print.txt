@@ -12,25 +12,30 @@ Debug print
 ---
 
 (source_file
-  (chuck_operation
-    (int)
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
-  (debug_print
-    (variable_identifier))
-  (debug_print
-    (string))
-  (chuck_operation
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (statement
     (debug_print
-      (binary_expression
-        (float)
-        (operator)
-        (float)))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
-
+      (variable_identifier)))
+  (statement
+    (debug_print
+      (string)))
+  (statement
+    (chuck_operation
+      (debug_print
+        (binary_expression
+          (float)
+          (operator)
+          (float)))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
 
 ============================
 Comma-separated expressions
@@ -48,32 +53,35 @@ Comma-separated expressions
 ---
 
 (source_file
-  (debug_print
-    (string)
-    (variable_identifier))
-  (debug_print
-    (string)
-    (binary_expression
-      (int)
-      (operator)
-      (int)))
-  (debug_print
-    (string)
-    (function_call
-      (member_identifier
-        (class_identifier)
-        (variable_identifier))
-      (int)
-      (int))
-    (function_call
-      (member_identifier
-        (class_identifier)
-        (variable_identifier))
-      (int)
-      (int))
-    (function_call
-      (member_identifier
-        (class_identifier)
-        (variable_identifier))
-      (int)
-      (int))))
+  (statement
+    (debug_print
+      (string)
+      (variable_identifier)))
+  (statement
+    (debug_print
+      (string)
+      (binary_expression
+        (int)
+        (operator)
+        (int))))
+  (statement
+    (debug_print
+      (string)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (int)
+        (int))
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (int)
+        (int))
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (int)
+        (int)))))

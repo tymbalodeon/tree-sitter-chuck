@@ -7,7 +7,8 @@ Int
 ---
 
 (source_file
-  (int))
+  (statement
+    (int)))
 
 ===========
 Hexidecimal
@@ -18,7 +19,8 @@ Hexidecimal
 ---
 
 (source_file
-  (hexidecimal))
+  (statement
+    (hexidecimal)))
 
 =====
 Float
@@ -29,7 +31,8 @@ Float
 ---
 
 (source_file
-  (float))
+  (statement
+    (float)))
 
 ===
 Dur
@@ -40,6 +43,7 @@ Dur
 ---
 
 (source_file
-  (dur
-    (float)
-    (duration_identifier)))
+  (statement
+    (dur
+      (float)
+      (duration_identifier))))

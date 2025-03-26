@@ -16,6 +16,7 @@ for( 0 => int foo; foo < 4 ; foo++ )
   (for_loop
     (chuck_operation
       (int)
+      (chuck_operator)
       (variable_declaration
         (primitive_type)
         (variable_identifier)))
@@ -27,5 +28,6 @@ for( 0 => int foo; foo < 4 ; foo++ )
       (variable_identifier))
     (block
       (comment)
-      (debug_print
-        (variable_identifier)))))
+      (statement
+        (debug_print
+          (variable_identifier))))))

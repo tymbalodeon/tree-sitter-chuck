@@ -19,38 +19,46 @@ SinOsc b => Gain g => BiQuad f => dac;
 (source_file
   (comment)
   (comment)
-  (chuck_operation
+  (statement
     (chuck_operation
       (chuck_operation
-        (variable_declaration
-          (class_identifier)
-          (variable_identifier))
+        (chuck_operation
+          (variable_declaration
+            (class_identifier)
+            (variable_identifier))
+          (chuck_operator)
+          (variable_declaration
+            (class_identifier)
+            (variable_identifier)))
+        (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (binary_expression
+        (int)
+        (operator)
+        (variable_identifier))
+      (chuck_operator)
       (variable_declaration
-        (class_identifier)
-        (variable_identifier)))
-    (keyword
-      (global_unit_generator)))
+        (primitive_type)
+        (variable_identifier))))
   (comment)
   (comment)
-  (chuck_operation
-    (binary_expression
+  (statement
+    (chuck_operation
       (int)
-      (operator)
-      (variable_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
-  (comment)
-  (comment)
-  (chuck_operation
-    (int)
-    (int)
-    (member_identifier
-      (class_identifier)
-      (variable_identifier))))
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (class_identifier)
+        (variable_identifier)))))
 
 ==========
 Assignment
@@ -72,36 +80,44 @@ Assignment
 
 (source_file
   (comment)
-  (chuck_operation
-    (int)
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
-  (comment)
-  (chuck_operation
-    (float)
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
-  (comment)
-  (chuck_operation
-    (dur
+  (statement
+    (chuck_operation
       (int)
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
   (comment)
-  (chuck_operation
-    (binary_expression
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
       (dur
         (int)
         (duration_identifier))
-      (operator)
-      (keyword))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (binary_expression
+        (dur
+          (int)
+          (duration_identifier))
+        (operator)
+        (keyword))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
 
 ===========================================
 Explicit assignment (reference assignment)
@@ -129,41 +145,51 @@ new Object @=> moe;
 
 (source_file
   (comment)
-  (chuck_operation
-    (int)
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
-  (comment)
-  (chuck_operation
-    (float)
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
-  (comment)
-  (comment)
-  (comment)
-  (chuck_operation
-    (variable_declaration
-      (reference_type)
-      (variable_identifier))
-    (reference_declaration
-      (reference_type)
-      (variable_identifier)))
-  (comment)
-  (chuck_operation
-    (array
+  (statement
+    (chuck_operation
       (int)
-      (int))
-    (array_declaration
-      (primitive_type)
-      (array_identifier
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
         (variable_identifier))))
   (comment)
-  (chuck_operation
-    (class_instantiation
-      (class_identifier))
-    (variable_identifier)))
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (reference_type)
+        (variable_identifier))
+      (chuck_operator)
+      (reference_declaration
+        (reference_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (array
+        (int)
+        (int))
+      (chuck_operator)
+      (array_declaration
+        (primitive_type)
+        (array_identifier
+          (variable_identifier)))))
+  (comment)
+  (statement
+    (chuck_operation
+      (class_instantiation
+        (class_identifier))
+      (chuck_operator)
+      (variable_identifier))))
 
 ===========================
 Arithmetic ChucK operators
@@ -199,39 +225,55 @@ T %=> foo;
 
 (source_file
   (comment)
-  (chuck_operation
-    (binary_expression
-      (variable_identifier)
-      (operator)
-      (int))
-    (variable_identifier))
+  (statement
+    (chuck_operation
+      (binary_expression
+        (variable_identifier)
+        (operator)
+        (int))
+      (chuck_operator)
+      (variable_identifier)))
   (comment)
-  (chuck_operation
-    (int)
-    (variable_identifier))
-  (comment)
-  (comment)
-  (chuck_operation
-    (int)
-    (variable_identifier))
-  (comment)
-  (chuck_operation
-    (int)
-    (variable_identifier))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
   (comment)
   (comment)
-  (chuck_operation
-    (int)
-    (variable_identifier))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
   (comment)
-  (chuck_operation
-    (class_identifier)
-    (variable_identifier))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
   (comment)
-  (chuck_operation
-    (hexidecimal)
-    (variable_identifier))
   (comment)
-  (chuck_operation
-    (hexidecimal)
-    (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (chuck_operation
+      (class_identifier)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (chuck_operation
+      (hexidecimal)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (chuck_operation
+      (hexidecimal)
+      (chuck_operator)
+      (variable_identifier))))

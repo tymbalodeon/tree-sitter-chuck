@@ -7,10 +7,11 @@ Right shift
 ---
 
 (source_file
-  (binary_expression
-    (int)
-    (operator)
-    (int)))
+  (statement
+    (binary_expression
+      (int)
+      (operator)
+      (int))))
 
 ==========
 Left shift
@@ -21,10 +22,11 @@ Left shift
 ---
 
 (source_file
-  (binary_expression
-    (int)
-    (operator)
-    (int)))
+  (statement
+    (binary_expression
+      (int)
+      (operator)
+      (int))))
 
 ===========
 Bitwise AND
@@ -35,10 +37,11 @@ Bitwise AND
 ---
 
 (source_file
-  (binary_expression
-    (int)
-    (operator)
-    (int)))
+  (statement
+    (binary_expression
+      (int)
+      (operator)
+      (int))))
 
 ==========
 Bitwise OR
@@ -49,10 +52,11 @@ Bitwise OR
 ---
 
 (source_file
-  (binary_expression
-    (int)
-    (operator)
-    (int)))
+  (statement
+    (binary_expression
+      (int)
+      (operator)
+      (int))))
 
 ===========
 Bitwise XOR
@@ -63,7 +67,8 @@ Bitwise XOR
 ---
 
 (source_file
-  (binary_expression
-    (int)
-    (operator)
-    (int)))
+  (statement
+    (binary_expression
+      (int)
+      (operator)
+      (int))))

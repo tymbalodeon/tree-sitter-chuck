@@ -18,8 +18,9 @@ while( 1 )
     (block
       (conditional
         (variable_identifier)
-        (keyword
-          (control_structure_keyword))))))
+        (statement
+          (keyword
+            (control_structure_keyword)))))))
 
 ========
 Continue
@@ -45,6 +46,7 @@ while( 1 )
       (comment)
       (conditional
         (variable_identifier)
-        (keyword
-          (control_structure_keyword)))
+        (statement
+          (keyword
+            (control_structure_keyword))))
       (comment))))

@@ -18,47 +18,55 @@ now % 5::second => dur bar;
 
 (source_file
   (comment)
-  (chuck_operation
-    (binary_expression
-      (int)
-      (operator)
-      (int))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
-  (comment)
-  (chuck_operation
-    (binary_expression
-      (float)
-      (operator)
-      (float))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
-  (comment)
-  (chuck_operation
-    (dur
+  (statement
+    (chuck_operation
       (binary_expression
-        (dur
-          (int)
-          (duration_identifier))
+        (int)
         (operator)
         (int))
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
   (comment)
-  (chuck_operation
-    (dur
+  (statement
+    (chuck_operation
       (binary_expression
-        (keyword)
+        (float)
         (operator)
-        (int))
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
+        (float))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (dur
+        (binary_expression
+          (dur
+            (int)
+            (duration_identifier))
+          (operator)
+          (int))
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (dur
+        (binary_expression
+          (keyword)
+          (operator)
+          (int))
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
 
 =====================
 Time synchronization
@@ -80,24 +88,28 @@ T - (now % T) => now;
 
 (source_file
   (comment)
-  (chuck_operation
-    (dur
-      (float)
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (class_identifier)))
+  (statement
+    (chuck_operation
+      (dur
+        (float)
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (class_identifier))))
   (comment)
   (comment)
-  (chuck_operation
-    (binary_expression
-      (class_identifier)
-      (operator)
+  (statement
+    (chuck_operation
       (binary_expression
-        (keyword)
+        (class_identifier)
         (operator)
-        (class_identifier)))
-    (keyword))
+        (binary_expression
+          (keyword)
+          (operator)
+          (class_identifier)))
+      (chuck_operator)
+      (keyword)))
   (comment)
   (comment)
   (comment))

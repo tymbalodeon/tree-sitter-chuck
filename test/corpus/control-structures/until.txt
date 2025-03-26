@@ -28,7 +28,8 @@ do {
 ---
 
 (source_file
-  (do_loop
-    (block
-      (comment))
-    (variable_identifier)))
+  (statement
+    (do_loop
+      (block
+        (comment))
+      (variable_identifier))))

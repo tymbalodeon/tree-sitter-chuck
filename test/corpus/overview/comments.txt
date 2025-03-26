@@ -9,11 +9,11 @@ int foo; // another comment
 
 (source_file
   (comment)
-  (variable_declaration
-    (primitive_type)
-    (variable_identifier))
+  (statement
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
   (comment))
-
 
 ==============
 Block comments

@@ -18,5 +18,6 @@ if( 1 <= 4 && true )
         (int))
       (operator)
       (keyword))
-    (debug_print
-      (string))))
+    (statement
+      (debug_print
+        (string)))))

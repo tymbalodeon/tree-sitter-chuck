@@ -9,13 +9,14 @@ float foo3D[4][6][8];
 
 (source_file
   (comment)
-  (array_declaration
-    (primitive_type)
-    (array_identifier
-      (variable_identifier)
-      (int)
-      (int)
-      (int))))
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)
+        (int)
+        (int)
+        (int)))))
 
 ==============
 Initialization
@@ -28,15 +29,17 @@ Initialization
 
 (source_file
   (comment)
-  (chuck_operation
-    (array
+  (statement
+    (chuck_operation
       (array
-        (int)
-        (int))
-      (array
-        (int)
-        (int)))
-    (array_declaration
-      (primitive_type)
-      (array_identifier
-        (variable_identifier)))))
+        (array
+          (int)
+          (int))
+        (array
+          (int)
+          (int)))
+      (chuck_operator)
+      (array_declaration
+        (primitive_type)
+        (array_identifier
+          (variable_identifier))))))

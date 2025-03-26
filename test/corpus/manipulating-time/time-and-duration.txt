@@ -12,22 +12,26 @@ now + foo => time later;
 
 (source_file
   (comment)
-  (chuck_operation
-    (dur
-      (int)
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
   (comment)
-  (chuck_operation
-    (binary_expression
-      (keyword)
-      (operator)
-      (variable_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
+  (statement
+    (chuck_operation
+      (binary_expression
+        (keyword)
+        (operator)
+        (variable_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
 
 ========================
 Durations from durations
@@ -43,21 +47,25 @@ Durations from durations
 
 (source_file
   (comment)
-  (chuck_operation
-    (dur
-      (float)
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (dur
+        (float)
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
   (comment)
-  (chuck_operation
-    (dur
-      (int)
-      (variable_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (variable_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
 
 =======================
 Default duration values
@@ -79,39 +87,47 @@ Default duration values
 
 (source_file
   (comment)
-  (chuck_operation
-    (dur
-      (float)
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (dur
+        (float)
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
   (comment)
-  (chuck_operation
-    (dur
-      (int)
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
   (comment)
-  (chuck_operation
-    (dur
-      (binary_expression
-        (dur
-          (int)
-          (duration_identifier))
-        (operator)
-        (int))
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (dur
+        (binary_expression
+          (dur
+            (int)
+            (duration_identifier))
+          (operator)
+          (int))
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
   (comment)
-  (chuck_operation
-    (dur
-      (float)
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
+  (statement
+    (chuck_operation
+      (dur
+        (float)
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))

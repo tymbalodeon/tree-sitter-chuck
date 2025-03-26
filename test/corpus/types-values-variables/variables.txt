@@ -9,9 +9,10 @@ int foo;
 
 (source_file
   (comment)
-  (variable_declaration
-    (primitive_type)
-    (variable_identifier)))
+  (statement
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))))
 
 ==========
 Assignment
@@ -24,9 +25,11 @@ Assignment
 
 (source_file
   (comment)
-  (chuck_operation
-    (int)
-    (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier))))
 
 ==============
 Initialization
@@ -39,11 +42,13 @@ Initialization
 
 (source_file
   (comment)
-  (chuck_operation
-    (int)
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
 
 ===========
 Debug print
@@ -56,8 +61,9 @@ Debug print
 
 (source_file
   (comment)
-  (debug_print
-    (variable_identifier)))
+  (statement
+    (debug_print
+      (variable_identifier))))
 
 ======
 Update
@@ -70,12 +76,14 @@ foo * 10 => foo;
 
 (source_file
   (comment)
-  (chuck_operation
-    (binary_expression
-      (variable_identifier)
-      (operator)
-      (int))
-    (variable_identifier)))
+  (statement
+    (chuck_operation
+      (binary_expression
+        (variable_identifier)
+        (operator)
+        (int))
+      (chuck_operator)
+      (variable_identifier))))
 
 ==========
 Mult-chuck
@@ -88,9 +96,11 @@ Mult-chuck
 
 (source_file
   (comment)
-  (chuck_operation
-    (int)
-    (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier))))
 
 =========
 Operation
@@ -106,18 +116,22 @@ Operation
 
 (source_file
   (comment)
-  (chuck_operation
-    (dur
-      (int)
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
   (comment)
-  (chuck_operation
-    (dur
-      (int)
-      (variable_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (variable_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))

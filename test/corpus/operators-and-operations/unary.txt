@@ -16,8 +16,9 @@ if( !true == false )
         (keyword))
       (operator)
       (keyword))
-    (debug_print
-      (string))))
+    (statement
+      (debug_print
+        (string)))))
 
 ========
 Negative
@@ -30,11 +31,13 @@ Negative
 
 (source_file
   (comment)
-  (chuck_operation
-    (int)
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
 
 =====================
 Object instantiation
@@ -47,9 +50,11 @@ new object @=> object @ bar;
 
 (source_file
   (comment)
-  (chuck_operation
-    (class_instantiation
-      (variable_identifier))
-    (reference_declaration
-      (variable_identifier)
-      (variable_identifier))))
+  (statement
+    (chuck_operation
+      (class_instantiation
+        (variable_identifier))
+      (chuck_operator)
+      (reference_declaration
+        (variable_identifier)
+        (variable_identifier)))))

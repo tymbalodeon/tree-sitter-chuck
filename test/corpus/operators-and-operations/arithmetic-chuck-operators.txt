@@ -9,14 +9,16 @@ Division
 
 (source_file
   (comment)
-  (chuck_operation
-    (binary_expression
-      (int)
-      (operator)
-      (int))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier))))
+  (statement
+    (chuck_operation
+      (binary_expression
+        (int)
+        (operator)
+        (int))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
 
 ==============
 Multiplication
@@ -29,12 +31,14 @@ Multiplication
 
 (source_file
   (comment)
-  (chuck_operation
-    (binary_expression
-      (int)
-      (operator)
-      (int))
-    (variable_identifier)))
+  (statement
+    (chuck_operation
+      (binary_expression
+        (int)
+        (operator)
+        (int))
+      (chuck_operator)
+      (variable_identifier))))
 
 ========
 Addition
@@ -47,12 +51,14 @@ Addition
 
 (source_file
   (comment)
-  (chuck_operation
-    (binary_expression
-      (int)
-      (operator)
-      (int))
-    (variable_identifier)))
+  (statement
+    (chuck_operation
+      (binary_expression
+        (int)
+        (operator)
+        (int))
+      (chuck_operator)
+      (variable_identifier))))
 
 ===========
 Subtraction
@@ -65,12 +71,14 @@ Subtraction
 
 (source_file
   (comment)
-  (chuck_operation
-    (binary_expression
-      (int)
-      (operator)
-      (int))
-    (variable_identifier)))
+  (statement
+    (chuck_operation
+      (binary_expression
+        (int)
+        (operator)
+        (int))
+      (chuck_operator)
+      (variable_identifier))))
 
 ===========
 Casting
@@ -92,34 +100,40 @@ Math.rand2f( 30, 1000 );
 
 (source_file
   (comment)
-  (chuck_operation
-    (binary_expression
+  (statement
+    (chuck_operation
+      (binary_expression
+        (float)
+        (operator)
+        (int))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (cast
+        (float)
+        (primitive_type))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (class_identifier)
+        (variable_identifier))
       (float)
-      (operator)
-      (int))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
+      (float)))
   (comment)
-  (chuck_operation
-    (cast
-      (float)
-      (primitive_type))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
-  (comment)
-  (comment)
-  (function_call
-    (member_identifier
-      (class_identifier)
-      (variable_identifier))
-    (float)
-    (float))
-  (comment)
-  (function_call
-    (member_identifier
-      (class_identifier)
-      (variable_identifier))
-    (int)
-    (int)))
+  (statement
+    (function_call
+      (member_identifier
+        (class_identifier)
+        (variable_identifier))
+      (int)
+      (int))))

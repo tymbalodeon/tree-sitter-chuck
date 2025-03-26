@@ -21,33 +21,40 @@ float foo[4];
 
 (source_file
   (comment)
-  (array_declaration
-    (primitive_type)
-    (array_identifier
-      (variable_identifier)
-      (int)))
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)
+        (int))))
   (comment)
-  (chuck_operation
-    (float)
-    (array_identifier
-      (variable_identifier)
-      (int)))
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (int))))
   (comment)
-  (chuck_operation
-    (float)
-    (array_identifier
-      (variable_identifier)
-      (string)))
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (string))))
   (comment)
-  (debug_print
-    (array_identifier
-      (variable_identifier)
-      (string)))
+  (statement
+    (debug_print
+      (array_identifier
+        (variable_identifier)
+        (string))))
   (comment)
-  (debug_print
-    (array_identifier
-      (variable_identifier)
-      (string)))
+  (statement
+    (debug_print
+      (array_identifier
+        (variable_identifier)
+        (string))))
   (comment))
 
 =============
@@ -70,31 +77,37 @@ int foo[2];
 
 (source_file
   (comment)
-  (array_declaration
-    (primitive_type)
-    (array_identifier
-      (variable_identifier)
-      (int)))
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)
+        (int))))
   (comment)
-  (chuck_operation
-    (int)
-    (array_identifier
-      (variable_identifier)
-      (int)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (int))))
   (comment)
-  (chuck_operation
-    (int)
-    (array_identifier
-      (variable_identifier)
-      (string)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (string))))
   (comment)
-  (debug_print
-    (array_identifier
-      (variable_identifier)
-      (int))
-    (array_identifier
-      (variable_identifier)
-      (string))))
+  (statement
+    (debug_print
+      (array_identifier
+        (variable_identifier)
+        (int))
+      (array_identifier
+        (variable_identifier)
+        (string)))))
 
 ========
 Capacity
@@ -116,27 +129,32 @@ int foo[0];
 
 (source_file
   (comment)
-  (array_declaration
-    (primitive_type)
-    (array_identifier
-      (variable_identifier)
-      (int)))
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)
+        (int))))
   (comment)
-  (chuck_operation
-    (int)
-    (array_identifier
-      (variable_identifier)
-      (string)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (string))))
   (comment)
-  (debug_print
-    (array_identifier
-      (variable_identifier)
-      (string)))
+  (statement
+    (debug_print
+      (array_identifier
+        (variable_identifier)
+        (string))))
   (comment)
-  (debug_print
-    (array_identifier
-      (variable_identifier)
-      (int))))
+  (statement
+    (debug_print
+      (array_identifier
+        (variable_identifier)
+        (int)))))
 
 =======
 Objects
@@ -166,42 +184,52 @@ new Item @=> box["lamp"];
   (class_definition
     (class_identifier)
     (block
-      (variable_declaration
-        (primitive_type)
+      (statement
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier)))))
+  (statement
+    (array_declaration
+      (class_identifier)
+      (array_identifier
+        (variable_identifier)
+        (int))))
+  (comment)
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (member_identifier
+        (array_identifier
+          (variable_identifier)
+          (int))
         (variable_identifier))))
-  (array_declaration
-    (class_identifier)
-    (array_identifier
-      (variable_identifier)
-      (int)))
   (comment)
-  (chuck_operation
-    (float)
-    (member_identifier
+  (statement
+    (chuck_operation
+      (class_instantiation
+        (class_identifier))
+      (chuck_operator)
       (array_identifier
         (variable_identifier)
-        (int))
-      (variable_identifier)))
+        (string))))
   (comment)
-  (chuck_operation
-    (class_instantiation
-      (class_identifier))
-    (array_identifier
-      (variable_identifier)
-      (string)))
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (member_identifier
+        (array_identifier
+          (variable_identifier)
+          (string))
+        (variable_identifier))))
   (comment)
-  (chuck_operation
-    (float)
-    (member_identifier
-      (array_identifier
-        (variable_identifier)
-        (string))
-      (variable_identifier)))
-  (comment)
-  (chuck_operation
-    (float)
-    (member_identifier
-      (array_identifier
-        (variable_identifier)
-        (string))
-      (variable_identifier))))
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (member_identifier
+        (array_identifier
+          (variable_identifier)
+          (string))
+        (variable_identifier)))))

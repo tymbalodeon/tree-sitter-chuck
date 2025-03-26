@@ -12,18 +12,24 @@ same;
 ---
 
 (source_file
-  (keyword
-    (primitive_type))
-  (keyword
-    (primitive_type))
-  (keyword
-    (primitive_type))
-  (keyword
-    (primitive_type))
-  (keyword
-    (primitive_type))
-  (keyword
-    (primitive_type)))
+  (statement
+    (keyword
+      (primitive_type)))
+  (statement
+    (keyword
+      (primitive_type)))
+  (statement
+    (keyword
+      (primitive_type)))
+  (statement
+    (keyword
+      (primitive_type)))
+  (statement
+    (keyword
+      (primitive_type)))
+  (statement
+    (keyword
+      (primitive_type))))
 
 ==================
 Control structures
@@ -37,14 +43,18 @@ switch;
 ---
 
 (source_file
-  (keyword
-    (control_structure_keyword))
-  (keyword
-    (control_structure_keyword))
-  (keyword
-    (control_structure_keyword))
-  (keyword
-    (control_structure_keyword)))
+  (statement
+    (keyword
+      (control_structure_keyword)))
+  (statement
+    (keyword
+      (control_structure_keyword)))
+  (statement
+    (keyword
+      (control_structure_keyword)))
+  (statement
+    (keyword
+      (control_structure_keyword))))
 
 ==============
 Class keywords
@@ -63,15 +73,24 @@ private;
 ---
 
 (source_file
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword)))
 
 ====================
 Other chuck keywords
@@ -85,10 +104,14 @@ global;
 ---
 
 (source_file
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword)))
 
 ==============
 Special values
@@ -106,14 +129,22 @@ pi;
 ---
 
 (source_file
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword)
-  (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword))
+  (statement
+    (keyword)))
 
 ===========================
 Special: Default durations
@@ -130,20 +161,27 @@ week;
 ---
 
 (source_file
-  (keyword
-    (duration_identifier))
-  (keyword
-    (duration_identifier))
-  (keyword
-    (duration_identifier))
-  (keyword
-    (duration_identifier))
-  (keyword
-    (duration_identifier))
-  (keyword
-    (duration_identifier))
-  (keyword
-    (duration_identifier)))
+  (statement
+    (keyword
+      (duration_identifier)))
+  (statement
+    (keyword
+      (duration_identifier)))
+  (statement
+    (keyword
+      (duration_identifier)))
+  (statement
+    (keyword
+      (duration_identifier)))
+  (statement
+    (keyword
+      (duration_identifier)))
+  (statement
+    (keyword
+      (duration_identifier)))
+  (statement
+    (keyword
+      (duration_identifier))))
 
 ======================
 Sepcial: Global ugens
@@ -156,9 +194,12 @@ blackhole;
 ---
 
 (source_file
-  (keyword
-    (global_unit_generator))
-  (keyword
-    (global_unit_generator))
-  (keyword
-    (global_unit_generator)))
+  (statement
+    (keyword
+      (global_unit_generator)))
+  (statement
+    (keyword
+      (global_unit_generator)))
+  (statement
+    (keyword
+      (global_unit_generator))))

@@ -8,13 +8,16 @@ foo++;
 ---
 
 (source_file
-  (chuck_operation
-    (int)
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
-  (increment_expression
-    (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (statement
+    (increment_expression
+      (variable_identifier))))
 
 =========
 Decrement
@@ -25,5 +28,6 @@ foo--;
 ---
 
 (source_file
-  (increment_expression
-    (variable_identifier)))
+  (statement
+    (increment_expression
+      (variable_identifier))))

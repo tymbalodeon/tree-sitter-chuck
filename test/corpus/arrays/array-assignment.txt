@@ -15,22 +15,26 @@ int foo[];
 
 (source_file
   (comment)
-  (array_declaration
-    (primitive_type)
-    (array_identifier
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (array
+        (int)
+        (int)
+        (int))
+      (chuck_operator)
       (variable_identifier)))
   (comment)
-  (chuck_operation
-    (array
-      (int)
-      (int)
-      (int))
-    (variable_identifier))
-  (comment)
-  (debug_print
-    (array_identifier
-      (variable_identifier)
-      (int))))
+  (statement
+    (debug_print
+      (array_identifier
+        (variable_identifier)
+        (int)))))
 
 ================================
 Functions with array parameters
@@ -67,6 +71,7 @@ print( foo );
       (for_loop
         (chuck_operation
           (int)
+          (chuck_operator)
           (variable_declaration
             (primitive_type)
             (variable_identifier)))
@@ -79,28 +84,32 @@ print( foo );
               (variable_identifier))))
         (increment_expression
           (variable_identifier))
-        (debug_print
-          (array_identifier
-            (variable_identifier)
-            (int))))))
+        (statement
+          (debug_print
+            (array_identifier
+              (variable_identifier)
+              (int)))))))
   (comment)
-  (function_call
-    (variable_identifier)
-    (array
-      (int)
-      (int)
-      (int)
-      (int)
-      (int)))
-  (comment)
-  (array_declaration
-    (primitive_type)
-    (array_identifier
+  (statement
+    (function_call
       (variable_identifier)
-      (int)))
-  (function_call
-    (variable_identifier)
-    (variable_identifier)))
+      (array
+        (int)
+        (int)
+        (int)
+        (int)
+        (int))))
+  (comment)
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)
+        (int))))
+  (statement
+    (function_call
+      (variable_identifier)
+      (variable_identifier))))
 
 ==========
 References
@@ -123,35 +132,42 @@ the_array => int foo[] => int bar[];
 
 (source_file
   (comment)
-  (array_declaration
-    (primitive_type)
-    (array_identifier
-      (variable_identifier)
-      (int)))
-  (comment)
-  (chuck_operation
-    (chuck_operation
-      (variable_identifier)
-      (array_declaration
-        (primitive_type)
-        (array_identifier
-          (variable_identifier))))
+  (statement
     (array_declaration
       (primitive_type)
       (array_identifier
-        (variable_identifier))))
+        (variable_identifier)
+        (int))))
+  (comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (variable_identifier)
+        (chuck_operator)
+        (array_declaration
+          (primitive_type)
+          (array_identifier
+            (variable_identifier))))
+      (chuck_operator)
+      (array_declaration
+        (primitive_type)
+        (array_identifier
+          (variable_identifier)))))
   (comment)
   (comment)
   (comment)
-  (chuck_operation
-    (int)
-    (array_identifier
-      (variable_identifier)
-      (int)))
-  (debug_print
-    (array_identifier
-      (variable_identifier)
-      (int)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (int))))
+  (statement
+    (debug_print
+      (array_identifier
+        (variable_identifier)
+        (int))))
   (comment))
 
 ============
@@ -170,20 +186,23 @@ foo3D[2] => int bar[][];
 
 (source_file
   (comment)
-  (array_declaration
-    (primitive_type)
-    (array_identifier
-      (variable_identifier)
-      (int)
-      (int)
-      (int)))
-  (comment)
-  (chuck_operation
-    (array_identifier
-      (variable_identifier)
-      (int))
+  (statement
     (array_declaration
       (primitive_type)
       (array_identifier
-        (variable_identifier))))
+        (variable_identifier)
+        (int)
+        (int)
+        (int))))
+  (comment)
+  (statement
+    (chuck_operation
+      (array_identifier
+        (variable_identifier)
+        (int))
+      (chuck_operator)
+      (array_declaration
+        (primitive_type)
+        (array_identifier
+          (variable_identifier)))))
   (comment))

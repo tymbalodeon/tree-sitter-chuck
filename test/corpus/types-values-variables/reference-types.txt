@@ -11,8 +11,13 @@ string;
 ---
 
 (source_file
-  (reference_type)
-  (reference_type)
-  (reference_type)
-  (reference_type)
-  (reference_type))
+  (statement
+    (reference_type))
+  (statement
+    (reference_type))
+  (statement
+    (reference_type))
+  (statement
+    (reference_type))
+  (statement
+    (reference_type)))

@@ -19,16 +19,18 @@ while( now < later )
 
 (source_file
   (comment)
-  (chuck_operation
-    (dur
-      (binary_expression
-        (keyword)
-        (operator)
-        (int))
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (dur
+        (binary_expression
+          (keyword)
+          (operator)
+          (int))
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
   (comment)
   (loop
     (binary_expression
@@ -37,11 +39,14 @@ while( now < later )
       (variable_identifier))
     (block
       (comment)
-      (debug_print
-        (keyword))
+      (statement
+        (debug_print
+          (keyword)))
       (comment)
-      (chuck_operation
-        (dur
-          (int)
-          (duration_identifier))
-        (keyword)))))
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword))))))

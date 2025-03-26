@@ -29,15 +29,17 @@ for( auto a : array )
 
 (source_file
   (comment)
-  (chuck_operation
-    (array
-      (int)
-      (int)
-      (int))
-    (array_declaration
-      (primitive_type)
-      (array_identifier
-        (variable_identifier))))
+  (statement
+    (chuck_operation
+      (array
+        (int)
+        (int)
+        (int))
+      (chuck_operator)
+      (array_declaration
+        (primitive_type)
+        (array_identifier
+          (variable_identifier)))))
   (comment)
   (for_each_loop
     (variable_declaration
@@ -46,8 +48,9 @@ for( auto a : array )
     (variable_identifier)
     (block
       (comment)
-      (debug_print
-        (variable_identifier))))
+      (statement
+        (debug_print
+          (variable_identifier)))))
   (comment)
   (for_each_loop
     (variable_declaration
@@ -59,8 +62,9 @@ for( auto a : array )
       (int))
     (block
       (comment)
-      (debug_print
-        (variable_identifier))))
+      (statement
+        (debug_print
+          (variable_identifier)))))
   (comment)
   (for_each_loop
     (variable_declaration
@@ -69,5 +73,6 @@ for( auto a : array )
     (variable_identifier)
     (block
       (comment)
-      (debug_print
-        (variable_identifier)))))
+      (statement
+        (debug_print
+          (variable_identifier))))))

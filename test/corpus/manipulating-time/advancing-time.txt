@@ -18,29 +18,37 @@ Advancing time  by duration
 
 (source_file
   (comment)
-  (chuck_operation
-    (dur
-      (int)
-      (duration_identifier))
-    (keyword))
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword)))
   (comment)
-  (chuck_operation
-    (dur
-      (int)
-      (duration_identifier))
-    (keyword))
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword)))
   (comment)
-  (chuck_operation
-    (dur
-      (int)
-      (duration_identifier))
-    (keyword))
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword)))
   (comment)
-  (chuck_operation
-    (dur
-      (float)
-      (duration_identifier))
-    (keyword)))
+  (statement
+    (chuck_operation
+      (dur
+        (float)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword))))
 
 ===============================
 Advancing time by absolute time
@@ -56,20 +64,24 @@ later => now;
 
 (source_file
   (comment)
-  (chuck_operation
-    (dur
-      (binary_expression
-        (keyword)
-        (operator)
-        (int))
-      (duration_identifier))
-    (variable_declaration
-      (primitive_type)
-      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (dur
+        (binary_expression
+          (keyword)
+          (operator)
+          (int))
+        (duration_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
   (comment)
-  (chuck_operation
-    (variable_identifier)
-    (keyword)))
+  (statement
+    (chuck_operation
+      (variable_identifier)
+      (chuck_operator)
+      (keyword))))
 
 =======================
 Advancing time by event
@@ -82,9 +94,11 @@ e => now;
 
 (source_file
   (comment)
-  (chuck_operation
-    (variable_identifier)
-    (keyword)))
+  (statement
+    (chuck_operation
+      (variable_identifier)
+      (chuck_operator)
+      (keyword))))
 
 =======================================
 Advancing time at any point in the code
@@ -107,30 +121,36 @@ while( true )
 
 (source_file
   (comment)
-  (chuck_operation
-    (variable_declaration
-      (class_identifier)
-      (variable_identifier))
-    (keyword
-      (global_unit_generator)))
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
   (comment)
   (loop
     (keyword)
     (block
       (comment)
-      (chuck_operation
-        (function_call
+      (statement
+        (chuck_operation
+          (function_call
+            (member_identifier
+              (class_identifier)
+              (variable_identifier))
+            (int)
+            (int))
+          (chuck_operator)
           (member_identifier
-            (class_identifier)
-            (variable_identifier))
-          (int)
-          (int))
-        (member_identifier
-          (variable_identifier)
-          (variable_identifier)))
+            (variable_identifier)
+            (variable_identifier))))
       (comment)
-      (chuck_operation
-        (dur
-          (int)
-          (duration_identifier))
-        (keyword)))))
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword))))))
