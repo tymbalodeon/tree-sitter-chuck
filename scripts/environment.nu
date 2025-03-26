@@ -617,7 +617,7 @@ def copy-justfile [
   let main_justfile_modified = (ls Justfile | first | get modified)
 
   for justfile in (ls just | select name modified) {
-    if $justfile.modified > $main_justfile_modified {
+    if $force or ($justfile.modified > $main_justfile_modified) {
       let environment = ($justfile.name | path parse | get stem)
 
       let merged_justfile = (
