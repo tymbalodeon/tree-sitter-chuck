@@ -706,6 +706,10 @@
           "named": true
         },
         {
+          "type": "spork_statement",
+          "named": true
+        },
+        {
           "type": "string",
           "named": true
         },
@@ -2488,6 +2492,21 @@
     }
   },
   {
+    "type": "spork_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "function_call",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "statement",
     "named": true,
     "fields": {},
@@ -2601,6 +2620,10 @@
         },
         {
           "type": "reference_type",
+          "named": true
+        },
+        {
+          "type": "spork_statement",
           "named": true
         },
         {
@@ -2912,11 +2935,11 @@
   },
   {
     "type": "float",
-    "named": false
+    "named": true
   },
   {
     "type": "float",
-    "named": true
+    "named": false
   },
   {
     "type": "for",
@@ -2952,11 +2975,11 @@
   },
   {
     "type": "int",
-    "named": true
+    "named": false
   },
   {
     "type": "int",
-    "named": false
+    "named": true
   },
   {
     "type": "interface",
@@ -3112,6 +3135,10 @@
   },
   {
     "type": "}",
+    "named": false
+  },
+  {
+    "type": "~",
     "named": false
   }
 ]

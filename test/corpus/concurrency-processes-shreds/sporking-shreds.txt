@@ -1,0 +1,126 @@
+===============
+Sporking shreds
+===============
+
+// define function go()
+fun void go()
+{
+    // insert code
+}
+
+// spork a new shred to start running from go()
+spork ~ go();
+
+// spork another, store reference to new shred in offspring
+spork ~ go() => Shred @ offspring;
+
+---
+
+(source_file
+  (comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (block
+      (comment)))
+  (comment)
+  (statement
+    (spork_statement
+      (function_call
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (spork_statement
+        (function_call
+          (variable_identifier)))
+      (chuck_operator)
+      (reference_declaration
+        (class_identifier)
+        (variable_identifier)))))
+
+===============
+Longer example
+===============
+
+// define function
+fun void foo( string s )
+{
+    // infinite time loop
+    while( true )
+    {
+        // print s
+        <<< s >>>;
+        // advance time
+        500::ms => now;
+    }
+}
+
+// spork shred, passing in "you" as argument to foo
+spork ~ foo( "you" );
+// advance time by 250 ms
+250::ms => now;
+// spork another shred
+spork ~ foo( "me" );
+
+// infinite time loop - to keep child shreds around
+while( true )
+     1::second => now;
+
+---
+
+(source_file
+  (comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (variable_declaration
+      (reference_type)
+      (variable_identifier))
+    (block
+      (comment)
+      (loop
+        (keyword)
+        (block
+          (comment)
+          (statement
+            (debug_print
+              (variable_identifier)))
+          (comment)
+          (statement
+            (chuck_operation
+              (dur
+                (int)
+                (duration_identifier))
+              (chuck_operator)
+              (keyword)))))))
+  (comment)
+  (statement
+    (spork_statement
+      (function_call
+        (variable_identifier)
+        (string))))
+  (comment)
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword)))
+  (comment)
+  (statement
+    (spork_statement
+      (function_call
+        (variable_identifier)
+        (string))))
+  (comment)
+  (loop
+    (keyword)
+    (statement
+      (chuck_operation
+        (dur
+          (int)
+          (duration_identifier))
+        (chuck_operator)
+        (keyword)))))

@@ -221,6 +221,10 @@
               "name": "_expression"
             },
             {
+              "type": "SYMBOL",
+              "name": "spork_statement"
+            },
+            {
               "type": "SEQ",
               "members": [
                 {
@@ -1512,6 +1516,23 @@
         }
       ]
     },
+    "spork_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "spork"
+        },
+        {
+          "type": "STRING",
+          "value": "~"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "function_call"
+        }
+      ]
+    },
     "statement": {
       "type": "SEQ",
       "members": [
@@ -1537,6 +1558,10 @@
             {
               "type": "SYMBOL",
               "name": "_expression"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "spork_statement"
             }
           ]
         },
