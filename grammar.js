@@ -250,7 +250,9 @@ module.exports = grammar({
         $._control_structure_body,
       ),
 
-    member_identifier: ($) => seq($._identifier, ".", $.variable_identifier),
+    member_identifier: ($) =>
+      seq(choice("me", $._identifier), ".", $.variable_identifier),
+
     negation_expression: ($) => prec.left(seq("!", $._expression)),
 
     _number: ($) =>

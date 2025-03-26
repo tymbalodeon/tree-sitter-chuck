@@ -1209,8 +1209,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "_identifier"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "me"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_identifier"
+            }
+          ]
         },
         {
           "type": "STRING",
