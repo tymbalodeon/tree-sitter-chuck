@@ -1,0 +1,26 @@
+================
+Built-in classes
+================
+
+Object;
+Event;
+Shred;
+UGen;
+UAna;
+GGen;
+
+---
+
+(source_file
+  (statement
+    (reference_type))
+  (statement
+    (reference_type))
+  (statement
+    (class_identifier))
+  (statement
+    (reference_type))
+  (statement
+    (class_identifier))
+  (statement
+    (class_identifier)))
