@@ -840,8 +840,17 @@
           "value": "("
         },
         {
-          "type": "SYMBOL",
-          "name": "chuck_operation"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "chuck_operation"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "variable_declaration"
+            }
+          ]
         },
         {
           "type": "STRING",

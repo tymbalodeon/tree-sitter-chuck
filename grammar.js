@@ -172,7 +172,7 @@ module.exports = grammar({
       seq(
         "for",
         "(",
-        $.chuck_operation,
+        choice($.chuck_operation, $.variable_declaration),
         ";",
         $.binary_expression,
         ";",
