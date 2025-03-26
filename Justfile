@@ -51,10 +51,6 @@ alias find := find-recipe
 @stats *help:
     ./scripts/stats.nu {{ help }}
 
-# Run tests
-@test *args:
-    ./scripts/test.nu {{ args }}
-
 # View the source code for a recipe
 [no-cd]
 @view-source *recipe:
