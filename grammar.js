@@ -20,6 +20,7 @@ module.exports = grammar({
           $.conditional,
           $._control_structure,
           $.function_definition,
+          $.import_expression,
           $.statement,
         ),
       ),
@@ -60,7 +61,6 @@ module.exports = grammar({
         choice(
           $.chuck_operation,
           $._expression,
-          $.spork_statement,
           seq("(", optional($._expression_list), ")"),
         ),
         $.chuck_operator,
@@ -166,6 +166,7 @@ module.exports = grammar({
         $.member_identifier,
         $.negation_expression,
         $._number,
+        $.spork_expression,
         $.string,
         seq("(", $._expression, ")"),
       ),
@@ -233,6 +234,12 @@ module.exports = grammar({
         $.class_identifier,
         $.reference_type,
         $.variable_identifier,
+      ),
+
+    import_expression: ($) =>
+      seq(
+        "@import",
+        choice($.string, seq("{", $.string, repeat(seq(",", $.string)), "}")),
       ),
 
     int: () => token(seq(optional("-"), /\d+/)),
@@ -314,14 +321,10 @@ module.exports = grammar({
     _special_literal_value: () =>
       choice("NULL", "false", "maybe", "me", "now", "null", "pi", "true"),
 
-    spork_statement: ($) => seq("spork", "~", $.function_call),
+    spork_expression: ($) => seq("spork", "~", $.function_call),
 
     statement: ($) =>
-      seq(
-        optional("return"),
-        choice($.chuck_operation, $._expression, $.spork_statement),
-        ";",
-      ),
+      seq(optional("return"), choice($.chuck_operation, $._expression), ";"),
 
     string: () => {
       const delimeter = '"';

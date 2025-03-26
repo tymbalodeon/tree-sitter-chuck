@@ -34,6 +34,10 @@
           },
           {
             "type": "SYMBOL",
+            "name": "import_expression"
+          },
+          {
+            "type": "SYMBOL",
             "name": "statement"
           }
         ]
@@ -223,10 +227,6 @@
             {
               "type": "SYMBOL",
               "name": "_expression"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "spork_statement"
             },
             {
               "type": "SEQ",
@@ -779,6 +779,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "spork_expression"
+        },
+        {
+          "type": "SYMBOL",
           "name": "string"
         },
         {
@@ -1140,6 +1144,57 @@
         {
           "type": "SYMBOL",
           "name": "variable_identifier"
+        }
+      ]
+    },
+    "import_expression": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "@import"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "string"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "{"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "string"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": ","
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "string"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "STRING",
+                  "value": "}"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1559,7 +1614,7 @@
         }
       ]
     },
-    "spork_statement": {
+    "spork_expression": {
       "type": "SEQ",
       "members": [
         {
@@ -1601,10 +1656,6 @@
             {
               "type": "SYMBOL",
               "name": "_expression"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "spork_statement"
             }
           ]
         },

@@ -25,13 +25,13 @@ spork ~ go() => Shred @ offspring;
       (comment)))
   (comment)
   (statement
-    (spork_statement
+    (spork_expression
       (function_call
         (variable_identifier))))
   (comment)
   (statement
     (chuck_operation
-      (spork_statement
+      (spork_expression
         (function_call
           (variable_identifier)))
       (chuck_operator)
@@ -96,7 +96,7 @@ while( true )
               (keyword)))))))
   (comment)
   (statement
-    (spork_statement
+    (spork_expression
       (function_call
         (variable_identifier)
         (string))))
@@ -110,7 +110,7 @@ while( true )
       (keyword)))
   (comment)
   (statement
-    (spork_statement
+    (spork_expression
       (function_call
         (variable_identifier)
         (string))))
