@@ -1,0 +1,81 @@
+; TODO available in ChucK 1.5.2.0
+==============
+Public classes
+:skip
+==============
+
+// non-public class used by Bar
+class Blarg
+{
+    // member
+    int num;
+    // constructor
+    fun Blarg( int n ) { n => num; }
+}
+
+// public class
+public class Bar
+{
+    // member
+    Blarg blarg(5);
+}
+
+---
+
+(source_file)
+
+===========================================
+Public classes can't access local variables
+===========================================
+
+// a local variable (to the file, defined outside of classes)
+int theVar;
+
+// non-public class used by Bar
+class Blarg
+{
+    // ERROR: if this file is imported, will result in compiler error
+    // (due to local variable `theVar` not being recognized)
+    theVar + 1 => int num;
+}
+
+// public class
+public class Bar
+{
+    // member
+    Blarg blarg;
+}
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (class_definition
+    (class_identifier)
+    (block
+      (comment)
+      (comment)
+      (statement
+        (chuck_operation
+          (binary_expression
+            (variable_identifier)
+            (operator)
+            (int))
+          (chuck_operator)
+          (variable_declaration
+            (primitive_type)
+            (variable_identifier))))))
+  (comment)
+  (class_definition
+    (class_identifier)
+    (block
+      (comment)
+      (statement
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier))))))

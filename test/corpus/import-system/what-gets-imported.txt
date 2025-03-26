@@ -1,0 +1,48 @@
+; TODO available in ChucK 1.5.2.0
+===========================
+Imports public classes only
+:skip
+===========================
+
+// define a public Foo class (picked up by @import)
+public class Foo
+{
+    // member variable
+    int num;
+
+    // constructor
+    fun Foo( int n ) { n => num; }
+}
+
+// a non-public class definition (ignored by @import)
+class Bar
+{
+    // ...
+}
+
+// public operator overloading + for Foo (picked up by @import)
+public Foo @operator +( Foo lhs, Foo rhs )
+{
+    // return a new Foo
+    return new Foo( lhs.num + rhs.num );
+}
+
+// non-public binary operator overload for '=>' (ignored by @import)
+fun void @operator =^( Foo lhs, Foo rhs )
+{ 
+    // for sake of example, just print contents
+    <<< lhs.num, "=^", rhs.num >>>;
+}
+
+// import Foo.ck
+@import "Foo.ck"
+
+// instantiate class defined in imported file
+Foo a(1), b(2);
+
+// use operator overload defined in imported file
+<<< (a + b).num >>>;
+
+---
+
+(source_file)
