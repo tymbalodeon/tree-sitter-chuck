@@ -1,5 +1,5 @@
 ===========================
-Advancing time  by duration
+Advancing time by duration
 ===========================
 
 // advance time by 1 second
