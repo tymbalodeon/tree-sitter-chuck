@@ -64,3 +64,4 @@ alias generate := tree-sitter-chuck::generate
 alias highlight := tree-sitter-chuck::highlight
 alias install := tree-sitter-chuck::install
 alias parse := tree-sitter-chuck::parse
+alias test := tree-sitter-chuck::test
