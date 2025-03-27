@@ -7,6 +7,13 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
+function getConstructableIdentifier($) {
+  return seq(
+    choice($.class_identifier, $.variable_identifier),
+    optional(seq("(", $._expression_list, ")")),
+  );
+}
+
 module.exports = grammar({
   name: "chuck",
 
@@ -36,9 +43,12 @@ module.exports = grammar({
       ),
 
     array_identifier: ($) =>
-      seq(
-        choice($.class_identifier, $.variable_identifier),
-        repeat1(seq("[", optional($._expression), "]")),
+      prec(
+        1,
+        seq(
+          getConstructableIdentifier($),
+          repeat1(seq("[", optional($._expression), "]")),
+        ),
       ),
 
     binary_expression: ($) =>
@@ -95,9 +105,7 @@ module.exports = grammar({
       ),
 
     class_identifier: () => /_?[A-Z][a-zA-Z0-9_]*/,
-
-    class_instantiation: ($) =>
-      seq("new", choice($.class_identifier, $.variable_identifier)),
+    class_instantiation: ($) => seq("new", getConstructableIdentifier($)),
 
     _class_keyword: () =>
       choice(
@@ -375,7 +383,7 @@ module.exports = grammar({
     variable_identifier: () => /_?[a-z][a-zA-Z0-9_]*/,
 
     variable_declaration: ($) => {
-      const identifier = choice($.class_identifier, $.variable_identifier);
+      const identifier = getConstructableIdentifier($);
 
       return prec.left(
         seq($._type, seq(identifier, repeat(seq(",", identifier)))),
