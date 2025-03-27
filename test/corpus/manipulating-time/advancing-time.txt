@@ -79,8 +79,7 @@ later => now;
   (comment)
   (statement
     (chuck_operation
-      (member_identifier
-        (variable_identifier))
+      (variable_identifier)
       (chuck_operator)
       (keyword))))
 
@@ -97,8 +96,7 @@ e => now;
   (comment)
   (statement
     (chuck_operation
-      (member_identifier
-        (variable_identifier))
+      (variable_identifier)
       (chuck_operator)
       (keyword))))
 
@@ -129,7 +127,7 @@ while( true )
         (class_identifier)
         (variable_identifier))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (comment)
   (loop

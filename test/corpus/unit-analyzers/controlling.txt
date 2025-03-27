@@ -19,14 +19,14 @@ while (true) {
   (statement
     (chuck_operation
       (chuck_operation
-        (member_identifier
+        (keyword
           (global_unit_generator))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (comment)
   (statement
@@ -87,14 +87,14 @@ fun void shred2() {
   (statement
     (chuck_operation
       (chuck_operation
-        (member_identifier
+        (keyword
           (global_unit_generator))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (statement
     (chuck_operation
@@ -107,13 +107,11 @@ fun void shred2() {
   (statement
     (spork_expression
       (function_call
-        (member_identifier
-          (variable_identifier)))))
+        (variable_identifier))))
   (statement
     (spork_expression
       (function_call
-        (member_identifier
-          (variable_identifier)))))
+        (variable_identifier))))
   (comment)
   (function_definition
     (primitive_type)
@@ -187,14 +185,14 @@ Windowing.hamming(512) => fft.window;
   (statement
     (chuck_operation
       (chuck_operation
-        (member_identifier
+        (keyword
           (global_unit_generator))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (comment)
   (statement
@@ -279,14 +277,14 @@ fft.size() => int fft_size;
   (statement
     (chuck_operation
       (chuck_operation
-        (member_identifier
+        (keyword
           (global_unit_generator))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (comment)
   (statement
@@ -340,14 +338,14 @@ fft.upchuck(); // proceeds normally on a full buffer
   (statement
     (chuck_operation
       (chuck_operation
-        (member_identifier
+        (keyword
           (global_unit_generator))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (comment)
   (statement

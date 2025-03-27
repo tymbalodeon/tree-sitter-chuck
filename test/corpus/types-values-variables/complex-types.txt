@@ -50,8 +50,7 @@ Complex operation
             (int)
             (int)))
         (operator)
-        (member_identifier
-          (variable_identifier)))
+        (variable_identifier))
       (chuck_operator)
       (variable_declaration
         (primitive_type)
@@ -204,16 +203,14 @@ cmp $ polar + %(10, .25*pi) - pol => polar pol2;
       (binary_expression
         (binary_expression
           (cast
-            (member_identifier
-              (variable_identifier))
+            (variable_identifier)
             (primitive_type))
           (operator)
           (complex
             (int)
             (int)))
         (operator)
-        (member_identifier
-          (variable_identifier)))
+        (variable_identifier))
       (chuck_operator)
       (variable_declaration
         (primitive_type)
@@ -223,8 +220,7 @@ cmp $ polar + %(10, .25*pi) - pol => polar pol2;
       (binary_expression
         (binary_expression
           (cast
-            (member_identifier
-              (variable_identifier))
+            (variable_identifier)
             (primitive_type))
           (operator)
           (polar
@@ -234,8 +230,7 @@ cmp $ polar + %(10, .25*pi) - pol => polar pol2;
               (operator)
               (keyword))))
         (operator)
-        (member_identifier
-          (variable_identifier)))
+        (variable_identifier))
       (chuck_operator)
       (variable_declaration
         (primitive_type)

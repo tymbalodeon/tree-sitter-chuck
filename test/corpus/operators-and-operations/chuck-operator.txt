@@ -35,7 +35,7 @@ SinOsc b => Gain g => BiQuad f => dac;
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (comment)
   (comment)
@@ -44,8 +44,7 @@ SinOsc b => Gain g => BiQuad f => dac;
       (binary_expression
         (int)
         (operator)
-        (member_identifier
-          (variable_identifier)))
+        (variable_identifier))
       (chuck_operator)
       (variable_declaration
         (primitive_type)
@@ -54,8 +53,9 @@ SinOsc b => Gain g => BiQuad f => dac;
   (comment)
   (statement
     (chuck_operation
-      (int)
-      (int)
+      (expression_group
+        (int)
+        (int))
       (chuck_operator)
       (member_identifier
         (class_identifier)
@@ -190,8 +190,7 @@ new Object @=> moe;
       (class_instantiation
         (reference_type))
       (chuck_operator)
-      (member_identifier
-        (variable_identifier)))))
+      (variable_identifier))))
 
 ===========================
 Arithmetic ChucK operators
@@ -230,62 +229,52 @@ T %=> foo;
   (statement
     (chuck_operation
       (binary_expression
-        (member_identifier
-          (variable_identifier))
+        (variable_identifier)
         (operator)
         (int))
       (chuck_operator)
-      (member_identifier
-        (variable_identifier))))
+      (variable_identifier)))
   (comment)
   (statement
     (chuck_operation
       (int)
       (chuck_operator)
-      (member_identifier
-        (variable_identifier))))
-  (comment)
-  (comment)
-  (statement
-    (chuck_operation
-      (int)
-      (chuck_operator)
-      (member_identifier
-        (variable_identifier))))
-  (comment)
-  (statement
-    (chuck_operation
-      (int)
-      (chuck_operator)
-      (member_identifier
-        (variable_identifier))))
+      (variable_identifier)))
   (comment)
   (comment)
   (statement
     (chuck_operation
       (int)
       (chuck_operator)
-      (member_identifier
-        (variable_identifier))))
+      (variable_identifier)))
   (comment)
   (statement
     (chuck_operation
-      (member_identifier
-        (class_identifier))
+      (int)
       (chuck_operator)
-      (member_identifier
-        (variable_identifier))))
+      (variable_identifier)))
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (chuck_operation
+      (class_identifier)
+      (chuck_operator)
+      (variable_identifier)))
   (comment)
   (statement
     (chuck_operation
       (hexidecimal)
       (chuck_operator)
-      (member_identifier
-        (variable_identifier))))
+      (variable_identifier)))
   (comment)
   (statement
     (chuck_operation
       (hexidecimal)
       (chuck_operator)
-      (member_identifier
-        (variable_identifier)))))
+      (variable_identifier))))

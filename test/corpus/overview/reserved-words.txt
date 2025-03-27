@@ -138,7 +138,7 @@ pi;
   (statement
     (keyword))
   (statement
-    (member_identifier))
+    (keyword))
   (statement
     (keyword)))
 
@@ -191,11 +191,11 @@ blackhole;
 
 (source_file
   (statement
-    (member_identifier
+    (keyword
       (global_unit_generator)))
   (statement
-    (member_identifier
+    (keyword
       (global_unit_generator)))
   (statement
-    (member_identifier
+    (keyword
       (global_unit_generator))))

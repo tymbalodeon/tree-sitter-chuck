@@ -29,17 +29,14 @@ hey( 1, 2 ) => int result;
       (comment)
       (statement
         (binary_expression
-          (member_identifier
-            (variable_identifier))
+          (variable_identifier)
           (operator)
-          (member_identifier
-            (variable_identifier))))))
+          (variable_identifier)))))
   (comment)
   (statement
     (chuck_operation
       (function_call
-        (member_identifier
-          (variable_identifier))
+        (variable_identifier)
         (int)
         (int))
       (chuck_operator)
@@ -70,11 +67,11 @@ Std.mtof( Std.rand2( 10, 100 ) ) => float foo;
   (statement
     (chuck_operation
       (chuck_operation
-        (int)
-        (int)
+        (expression_group
+          (int)
+          (int))
         (chuck_operator)
-        (member_identifier
-          (variable_identifier)))
+        (variable_identifier))
       (chuck_operator)
       (variable_declaration
         (primitive_type)
@@ -83,8 +80,7 @@ Std.mtof( Std.rand2( 10, 100 ) ) => float foo;
   (statement
     (chuck_operation
       (function_call
-        (member_identifier
-          (variable_identifier))
+        (variable_identifier)
         (int)
         (int))
       (chuck_operator)
@@ -96,8 +92,9 @@ Std.mtof( Std.rand2( 10, 100 ) ) => float foo;
     (chuck_operation
       (chuck_operation
         (chuck_operation
-          (int)
-          (int)
+          (expression_group
+            (int)
+            (int))
           (chuck_operator)
           (member_identifier
             (class_identifier)

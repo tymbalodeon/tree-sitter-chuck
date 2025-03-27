@@ -194,11 +194,9 @@ for( 0 => int i; i < operators.cap(); i++ )
         (block
           (statement
             (binary_expression
-              (member_identifier
-                (variable_identifier))
+              (variable_identifier)
               (operator)
-              (member_identifier
-                (variable_identifier))))))))
+              (variable_identifier)))))))
   (comment)
   (class_definition
     (class_identifier)
@@ -216,11 +214,9 @@ for( 0 => int i; i < operators.cap(); i++ )
         (block
           (statement
             (binary_expression
-              (member_identifier
-                (variable_identifier))
+              (variable_identifier)
               (operator)
-              (member_identifier
-                (variable_identifier))))))))
+              (variable_identifier)))))))
   (comment)
   (statement
     (reference_declaration
@@ -234,19 +230,17 @@ for( 0 => int i; i < operators.cap(); i++ )
       (class_instantiation
         (class_identifier))
       (chuck_operator)
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (int)))))
+      (array_identifier
+        (variable_identifier)
+        (int))))
   (statement
     (chuck_operation
       (class_instantiation
         (class_identifier))
       (chuck_operator)
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (int)))))
+      (array_identifier
+        (variable_identifier)
+        (int))))
   (comment)
   (for_loop
     (chuck_operation
@@ -256,16 +250,14 @@ for( 0 => int i; i < operators.cap(); i++ )
         (primitive_type)
         (variable_identifier)))
     (binary_expression
-      (member_identifier
-        (variable_identifier))
+      (variable_identifier)
       (operator)
       (function_call
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
     (increment_expression
-      (member_identifier
-        (variable_identifier)))
+      (variable_identifier))
     (block
       (comment)
       (statement
@@ -274,8 +266,7 @@ for( 0 => int i; i < operators.cap(); i++ )
             (member_identifier
               (array_identifier
                 (variable_identifier)
-                (member_identifier
-                  (variable_identifier)))
+                (variable_identifier))
               (variable_identifier))
             (int)
             (int)))))))

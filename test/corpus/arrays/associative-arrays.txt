@@ -32,33 +32,29 @@ float foo[4];
     (chuck_operation
       (float)
       (chuck_operator)
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (int)))))
+      (array_identifier
+        (variable_identifier)
+        (int))))
   (comment)
   (statement
     (chuck_operation
       (float)
       (chuck_operator)
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (string)))))
+      (array_identifier
+        (variable_identifier)
+        (string))))
   (comment)
   (statement
     (debug_print
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (string)))))
+      (array_identifier
+        (variable_identifier)
+        (string))))
   (comment)
   (statement
     (debug_print
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (string)))))
+      (array_identifier
+        (variable_identifier)
+        (string))))
   (comment))
 
 =============
@@ -92,30 +88,26 @@ int foo[2];
     (chuck_operation
       (int)
       (chuck_operator)
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (int)))))
+      (array_identifier
+        (variable_identifier)
+        (int))))
   (comment)
   (statement
     (chuck_operation
       (int)
       (chuck_operator)
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (string)))))
+      (array_identifier
+        (variable_identifier)
+        (string))))
   (comment)
   (statement
     (debug_print
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (int)))
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (string))))))
+      (array_identifier
+        (variable_identifier)
+        (int))
+      (array_identifier
+        (variable_identifier)
+        (string)))))
 
 ========
 Capacity
@@ -148,24 +140,21 @@ int foo[0];
     (chuck_operation
       (int)
       (chuck_operator)
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (string)))))
+      (array_identifier
+        (variable_identifier)
+        (string))))
   (comment)
   (statement
     (debug_print
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (string)))))
+      (array_identifier
+        (variable_identifier)
+        (string))))
   (comment)
   (statement
     (debug_print
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (int))))))
+      (array_identifier
+        (variable_identifier)
+        (int)))))
 
 =======
 Objects
@@ -221,10 +210,9 @@ new Item @=> box["lamp"];
       (class_instantiation
         (class_identifier))
       (chuck_operator)
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (string)))))
+      (array_identifier
+        (variable_identifier)
+        (string))))
   (comment)
   (statement
     (chuck_operation

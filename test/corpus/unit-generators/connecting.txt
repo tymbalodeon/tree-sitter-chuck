@@ -15,7 +15,7 @@ SinOsc s => dac;
         (class_identifier)
         (variable_identifier))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator)))))
 
 ========
@@ -45,7 +45,7 @@ SinOsc s => Gain g => JCRev r => dac;
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator)))))
 
 ========
@@ -69,7 +69,7 @@ d => Gain g3 => d;
     (chuck_operation
       (chuck_operation
         (chuck_operation
-          (member_identifier
+          (keyword
             (global_unit_generator))
           (chuck_operator)
           (variable_declaration
@@ -80,34 +80,32 @@ d => Gain g3 => d;
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (comment)
   (statement
     (chuck_operation
       (chuck_operation
-        (member_identifier
+        (keyword
           (global_unit_generator))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (comment)
   (statement
     (chuck_operation
       (chuck_operation
-        (member_identifier
-          (variable_identifier))
+        (variable_identifier)
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (member_identifier
-        (variable_identifier)))))
+      (variable_identifier))))
 
 ==============
 Generate audio
@@ -131,7 +129,7 @@ SinOsc s => dac;
         (class_identifier)
         (variable_identifier))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (comment)
   (statement
@@ -182,7 +180,7 @@ s => dac;
         (class_identifier)
         (variable_identifier))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (comment)
   (statement
@@ -195,10 +193,9 @@ s => dac;
   (comment)
   (statement
     (chuck_operation
-      (member_identifier
-        (variable_identifier))
+      (variable_identifier)
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (comment)
   (statement
@@ -211,10 +208,9 @@ s => dac;
   (comment)
   (statement
     (chuck_operation
-      (member_identifier
-        (variable_identifier))
+      (variable_identifier)
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (comment)
   (statement

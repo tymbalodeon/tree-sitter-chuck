@@ -2,171 +2,10 @@
   {
     "type": "array",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "array",
@@ -214,6 +53,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -298,168 +141,7 @@
   {
     "type": "array_declaration",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
@@ -510,6 +192,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -598,168 +284,7 @@
   {
     "type": "array_identifier",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
@@ -810,6 +335,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -894,168 +423,7 @@
   {
     "type": "binary_expression",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
@@ -1106,6 +474,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -1245,168 +617,7 @@
   {
     "type": "cast",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
@@ -1457,6 +668,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -1545,168 +760,7 @@
   {
     "type": "chuck_operation",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
@@ -1765,6 +819,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -1875,7 +933,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
@@ -1900,171 +958,10 @@
   {
     "type": "complex",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "array",
@@ -2112,6 +1009,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -2196,168 +1097,7 @@
   {
     "type": "conditional",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
@@ -2412,6 +1152,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -2505,171 +1249,10 @@
   {
     "type": "debug_print",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "array",
@@ -2717,6 +1300,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -2801,168 +1388,7 @@
   {
     "type": "do_loop",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
@@ -3017,6 +1443,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -3105,168 +1535,7 @@
   {
     "type": "dur",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
@@ -3321,6 +1590,10 @@
         },
         {
           "type": "duration_identifier",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -3408,6 +1681,145 @@
     "fields": {}
   },
   {
+    "type": "expression_group",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "array_declaration",
+          "named": true
+        },
+        {
+          "type": "array_identifier",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "cast",
+          "named": true
+        },
+        {
+          "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "class_instantiation",
+          "named": true
+        },
+        {
+          "type": "complex",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "debug_print",
+          "named": true
+        },
+        {
+          "type": "do_loop",
+          "named": true
+        },
+        {
+          "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
+          "named": true
+        },
+        {
+          "type": "for_loop",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "hexidecimal",
+          "named": true
+        },
+        {
+          "type": "increment_expression",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "loop",
+          "named": true
+        },
+        {
+          "type": "member_identifier",
+          "named": true
+        },
+        {
+          "type": "negation_expression",
+          "named": true
+        },
+        {
+          "type": "polar",
+          "named": true
+        },
+        {
+          "type": "reference_declaration",
+          "named": true
+        },
+        {
+          "type": "reference_type",
+          "named": true
+        },
+        {
+          "type": "reference_values",
+          "named": true
+        },
+        {
+          "type": "spork_expression",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "variable_declaration",
+          "named": true
+        },
+        {
+          "type": "variable_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "for_each_loop",
     "named": true,
     "fields": {},
@@ -3453,168 +1865,7 @@
   {
     "type": "for_loop",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
@@ -3673,6 +1924,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -3767,14 +2022,6 @@
         "required": false,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
             "type": ",",
             "named": false
           },
@@ -3828,6 +2075,10 @@
           },
           {
             "type": "dur",
+            "named": true
+          },
+          {
+            "type": "expression_group",
             "named": true
           },
           {
@@ -3900,166 +2151,6 @@
           },
           {
             "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
             "named": true
           },
           {
@@ -4070,7 +2161,7 @@
       }
     },
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -4173,171 +2264,10 @@
   {
     "type": "increment_expression",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
-      "multiple": false,
-      "required": false,
+      "multiple": true,
+      "required": true,
       "types": [
         {
           "type": "array",
@@ -4385,6 +2315,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -4496,168 +2430,7 @@
   {
     "type": "loop",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
@@ -4712,6 +2485,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -4803,7 +2580,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "array_identifier",
@@ -4811,6 +2588,10 @@
         },
         {
           "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -4831,171 +2612,10 @@
   {
     "type": "negation_expression",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
-      "multiple": false,
-      "required": false,
+      "multiple": true,
+      "required": true,
       "types": [
         {
           "type": "array",
@@ -5043,6 +2663,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -5190,171 +2814,10 @@
   {
     "type": "polar",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "array",
@@ -5402,6 +2865,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -5527,171 +2994,10 @@
   {
     "type": "reference_values",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "array",
@@ -5739,6 +3045,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -5885,7 +3195,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
@@ -5898,171 +3208,10 @@
   {
     "type": "statement",
     "named": true,
-    "fields": {
-      "expression": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "array_declaration",
-            "named": true
-          },
-          {
-            "type": "array_identifier",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "cast",
-            "named": true
-          },
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "class_instantiation",
-            "named": true
-          },
-          {
-            "type": "complex",
-            "named": true
-          },
-          {
-            "type": "conditional",
-            "named": true
-          },
-          {
-            "type": "debug_print",
-            "named": true
-          },
-          {
-            "type": "do_loop",
-            "named": true
-          },
-          {
-            "type": "dur",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": true
-          },
-          {
-            "type": "for_each_loop",
-            "named": true
-          },
-          {
-            "type": "for_loop",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexidecimal",
-            "named": true
-          },
-          {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "loop",
-            "named": true
-          },
-          {
-            "type": "member_identifier",
-            "named": true
-          },
-          {
-            "type": "negation_expression",
-            "named": true
-          },
-          {
-            "type": "polar",
-            "named": true
-          },
-          {
-            "type": "reference_declaration",
-            "named": true
-          },
-          {
-            "type": "reference_type",
-            "named": true
-          },
-          {
-            "type": "reference_values",
-            "named": true
-          },
-          {
-            "type": "spork_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable_declaration",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      },
-      "member_identifier": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "class_identifier",
-            "named": true
-          },
-          {
-            "type": "variable_identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
-      "multiple": false,
-      "required": false,
+      "multiple": true,
+      "required": true,
       "types": [
         {
           "type": "array",
@@ -6114,6 +3263,10 @@
         },
         {
           "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
           "named": true
         },
         {
@@ -6521,11 +3674,11 @@
   },
   {
     "type": "float",
-    "named": true
+    "named": false
   },
   {
     "type": "float",
-    "named": false
+    "named": true
   },
   {
     "type": "for",
@@ -6561,11 +3714,11 @@
   },
   {
     "type": "int",
-    "named": false
+    "named": true
   },
   {
     "type": "int",
-    "named": true
+    "named": false
   },
   {
     "type": "interface",

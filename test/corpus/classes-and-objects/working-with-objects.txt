@@ -76,8 +76,7 @@ bar @=> Foo @ duh;
   (comment)
   (statement
     (chuck_operation
-      (member_identifier
-        (variable_identifier))
+      (variable_identifier)
       (chuck_operator)
       (reference_declaration
         (class_identifier)

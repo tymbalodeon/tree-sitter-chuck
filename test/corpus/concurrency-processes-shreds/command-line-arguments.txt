@@ -33,8 +33,7 @@ Machine.replace( id, "bar.ck:foo:bar" );
       (member_identifier
         (class_identifier)
         (variable_identifier))
-      (member_identifier
-        (variable_identifier))
+      (variable_identifier)
       (string))))
 
 ===============
@@ -54,19 +53,16 @@ for( int i; i < me.args(); i++ )
       (primitive_type)
       (variable_identifier))
     (binary_expression
-      (member_identifier
-        (variable_identifier))
+      (variable_identifier)
       (operator)
       (function_call
         (member_identifier
           (variable_identifier))))
     (increment_expression
-      (member_identifier
-        (variable_identifier)))
+      (variable_identifier))
     (statement
       (debug_print
         (function_call
           (member_identifier
             (variable_identifier))
-          (member_identifier
-            (variable_identifier)))))))
+          (variable_identifier))))))

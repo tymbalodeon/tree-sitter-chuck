@@ -27,8 +27,7 @@ now + foo => time later;
       (binary_expression
         (keyword)
         (operator)
-        (member_identifier
-          (variable_identifier)))
+        (variable_identifier))
       (chuck_operator)
       (variable_declaration
         (primitive_type)

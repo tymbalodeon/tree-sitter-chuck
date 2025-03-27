@@ -50,8 +50,7 @@ for( auto a : array )
       (comment)
       (statement
         (debug_print
-          (member_identifier
-            (variable_identifier))))))
+          (variable_identifier)))))
   (comment)
   (for_each_loop
     (variable_declaration
@@ -65,8 +64,7 @@ for( auto a : array )
       (comment)
       (statement
         (debug_print
-          (member_identifier
-            (variable_identifier))))))
+          (variable_identifier)))))
   (comment)
   (for_each_loop
     (variable_declaration
@@ -77,5 +75,4 @@ for( auto a : array )
       (comment)
       (statement
         (debug_print
-          (member_identifier
-            (variable_identifier)))))))
+          (variable_identifier))))))

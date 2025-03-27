@@ -102,13 +102,12 @@ T - (now % T) => now;
   (statement
     (chuck_operation
       (binary_expression
-        (member_identifier
-          (class_identifier))
+        (class_identifier)
         (operator)
-        (binary_expression
-          (keyword)
-          (operator)
-          (member_identifier
+        (expression_group
+          (binary_expression
+            (keyword)
+            (operator)
             (class_identifier))))
       (chuck_operator)
       (keyword)))

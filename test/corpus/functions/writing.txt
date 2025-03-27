@@ -46,7 +46,6 @@ fun int addOne(int x)
       (comment)
       (statement
         (binary_expression
-          (member_identifier
-            (variable_identifier))
+          (variable_identifier)
           (operator)
           (int))))))

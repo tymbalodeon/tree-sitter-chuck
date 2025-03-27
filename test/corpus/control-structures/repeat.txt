@@ -68,8 +68,7 @@ repeat( x )
   (comment)
   (comment)
   (loop
-    (member_identifier
-      (variable_identifier))
+    (variable_identifier)
     (block
       (comment)
       (statement

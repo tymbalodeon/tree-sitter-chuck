@@ -70,8 +70,7 @@ x.print();
         (variable_identifier)
         (block
           (statement
-            (member_identifier
-              (variable_identifier)))))
+            (variable_identifier))))
       (comment)
       (function_definition
         (primitive_type)
@@ -82,11 +81,9 @@ x.print();
         (block
           (statement
             (chuck_operation
-              (member_identifier
-                (variable_identifier))
+              (variable_identifier)
               (chuck_operator)
-              (member_identifier
-                (variable_identifier))))))
+              (variable_identifier)))))
       (comment)
       (function_definition
         (primitive_type)
@@ -106,12 +103,9 @@ x.print();
         (block
           (statement
             (debug_print
-              (member_identifier
-                (variable_identifier))
-              (member_identifier
-                (variable_identifier))
-              (member_identifier
-                (variable_identifier))))))))
+              (variable_identifier)
+              (variable_identifier)
+              (variable_identifier)))))))
   (comment)
   (statement
     (variable_declaration
@@ -159,26 +153,23 @@ string arr( "foo" )[10];
         (variable_declaration
           (class_identifier)
           (function_call
-            (member_identifier
-              (variable_identifier))
+            (variable_identifier)
             (int)))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (function_call
-            (member_identifier
-              (variable_identifier))
+            (variable_identifier)
             (float))))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (comment)
   (statement
     (chuck_operation
       (class_instantiation
         (function_call
-          (member_identifier
-            (class_identifier))
+          (class_identifier)
           (int)
           (float)))
       (chuck_operator)
@@ -190,7 +181,6 @@ string arr( "foo" )[10];
     (array_declaration
       (reference_type)
       (function_call
-        (member_identifier
-          (variable_identifier))
+        (variable_identifier)
         (string))
       (int))))

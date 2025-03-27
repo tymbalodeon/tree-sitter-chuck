@@ -69,47 +69,37 @@ while ( true )
           (comment)
           (statement
             (chuck_operation
-              (member_identifier
-                (variable_identifier))
+              (variable_identifier)
               (chuck_operator)
               (keyword)))
           (comment)
           (statement
             (debug_print
-              (member_identifier
-                (variable_identifier))))))))
+              (variable_identifier)))))))
   (comment)
   (statement
     (spork_expression
       (function_call
-        (member_identifier
-          (variable_identifier))
-        (member_identifier
-          (variable_identifier))
+        (variable_identifier)
+        (variable_identifier)
         (string))))
   (statement
     (spork_expression
       (function_call
-        (member_identifier
-          (variable_identifier))
-        (member_identifier
-          (variable_identifier))
+        (variable_identifier)
+        (variable_identifier)
         (string))))
   (statement
     (spork_expression
       (function_call
-        (member_identifier
-          (variable_identifier))
-        (member_identifier
-          (variable_identifier))
+        (variable_identifier)
+        (variable_identifier)
         (string))))
   (statement
     (spork_expression
       (function_call
-        (member_identifier
-          (variable_identifier))
-        (member_identifier
-          (variable_identifier))
+        (variable_identifier)
+        (variable_identifier)
         (string))))
   (comment)
   (loop

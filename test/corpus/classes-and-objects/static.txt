@@ -55,8 +55,7 @@ X x2;
         (block
           (comment)
           (statement
-            (member_identifier
-              (variable_identifier)))))))
+            (variable_identifier))))))
   (comment)
   (statement
     (chuck_operation
@@ -224,16 +223,14 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
         (variable_declaration
           (reference_type)
           (function_call
-            (member_identifier
-              (class_identifier))
+            (class_identifier)
             (string))))
       (comment)
       (statement
         (variable_declaration
           (class_identifier)
           (function_call
-            (member_identifier
-              (class_identifier))
+            (class_identifier)
             (int))))))
   (comment)
   (statement
@@ -258,12 +255,13 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
   (statement
     (debug_print
       (binary_expression
-        (binary_expression
-          (member_identifier
-            (class_identifier)
-            (class_identifier))
-          (operator)
-          (keyword))
+        (expression_group
+          (binary_expression
+            (member_identifier
+              (class_identifier)
+              (class_identifier))
+            (operator)
+            (keyword)))
         (operator)
         (keyword
           (duration_identifier)))))
@@ -281,8 +279,7 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
       (class_identifier))
     (statement
       (debug_print
-        (member_identifier
-          (variable_identifier)))))
+        (variable_identifier))))
   (statement
     (debug_print
       (member_identifier

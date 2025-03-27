@@ -31,7 +31,12 @@ module.exports = grammar({
     array_declaration: ($) => {
       const identifier = choice(
         $.array_identifier,
-        seq($.function_call, "[", optional($._expression), "]"),
+        seq(
+          choice($.function_call, $._function_call_chain),
+          "[",
+          optional($._expression),
+          "]",
+        ),
       );
 
       return prec.left(
@@ -110,6 +115,7 @@ module.exports = grammar({
         choice(
           $.class_identifier,
           $.function_call,
+          $._function_call_chain,
           $.reference_type,
           $.variable_identifier,
         ),
@@ -190,7 +196,9 @@ module.exports = grammar({
         $._control_structure,
         $.debug_print,
         $._declaration,
+        $.expression_group,
         $.function_call,
+        $._function_call_chain,
         $._identifier,
         $.increment_expression,
         $.keyword,
@@ -200,19 +208,10 @@ module.exports = grammar({
         $.reference_values,
         $.spork_expression,
         $.string,
-        seq(
-          field("expression", seq("(", optional($._expression_list), ")")),
-          optional(
-            seq(
-              ".",
-              field(
-                "member_identifier",
-                choice($.class_identifier, $.variable_identifier),
-              ),
-            ),
-          ),
-        ),
       ),
+
+    expression_group: ($) =>
+      seq("(", optional(choice($._expression, $._expression_list)), ")"),
 
     _expression_list: ($) =>
       prec(1, seq($._expression, repeat(seq(",", $._expression)))),
@@ -254,19 +253,14 @@ module.exports = grammar({
         ),
       ),
 
-    function_call: ($) => {
-      const argument_list = seq(
-        "(",
-        field("arguments", optional($._expression_list)),
-        ")",
-      );
-
-      return seq(
+    function_call: ($) =>
+      seq(
         choice($._identifier, $.member_identifier),
-        argument_list,
-        repeat(seq(".", choice($._identifier), argument_list)),
-      );
-    },
+        seq("(", field("arguments", optional($._expression_list)), ")"),
+      ),
+
+    _function_call_chain: ($) =>
+      seq($.function_call, repeat1(seq(".", $.function_call))),
 
     function_definition: ($) =>
       seq(
@@ -287,11 +281,14 @@ module.exports = grammar({
     increment_expression: ($) => seq($._expression, choice("++", "--")),
 
     _identifier: ($) =>
-      choice(
-        $.array_identifier,
-        $.class_identifier,
-        $.reference_type,
-        $.variable_identifier,
+      prec(
+        1,
+        choice(
+          $.array_identifier,
+          $.class_identifier,
+          $.reference_type,
+          $.variable_identifier,
+        ),
       ),
 
     import_expression: ($) =>
@@ -323,12 +320,14 @@ module.exports = grammar({
       ),
 
     member_identifier: ($) =>
-      prec(
-        1,
-        seq(
-          choice("me", $.global_unit_generator, $._identifier),
-          repeat(seq(".", choice($.class_identifier, $.variable_identifier))),
+      seq(
+        choice(
+          "me",
+          $.expression_group,
+          $.global_unit_generator,
+          $._identifier,
         ),
+        repeat1(seq(".", choice($.class_identifier, $.variable_identifier))),
       ),
 
     negation_expression: ($) => prec.left(seq("!", $._expression)),
@@ -399,7 +398,8 @@ module.exports = grammar({
     _special_literal_value: () =>
       choice("NULL", "false", "maybe", "me", "now", "null", "pi", "true"),
 
-    spork_expression: ($) => seq("spork", "~", $.function_call),
+    spork_expression: ($) =>
+      seq("spork", "~", choice($.function_call, $._function_call_chain)),
 
     statement: ($) =>
       seq(
@@ -434,6 +434,7 @@ module.exports = grammar({
       const identifier = choice(
         $.class_identifier,
         $.function_call,
+        $._function_call_chain,
         $.variable_identifier,
       );
 

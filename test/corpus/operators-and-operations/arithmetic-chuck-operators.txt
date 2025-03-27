@@ -38,8 +38,7 @@ Multiplication
         (operator)
         (int))
       (chuck_operator)
-      (member_identifier
-        (variable_identifier)))))
+      (variable_identifier))))
 
 ========
 Addition
@@ -59,8 +58,7 @@ Addition
         (operator)
         (int))
       (chuck_operator)
-      (member_identifier
-        (variable_identifier)))))
+      (variable_identifier))))
 
 ===========
 Subtraction
@@ -80,8 +78,7 @@ Subtraction
         (operator)
         (int))
       (chuck_operator)
-      (member_identifier
-        (variable_identifier)))))
+      (variable_identifier))))
 
 ===========
 Casting

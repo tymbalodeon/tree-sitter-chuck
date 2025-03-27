@@ -17,8 +17,7 @@ while( 1 )
     (int)
     (block
       (conditional
-        (member_identifier
-          (variable_identifier))
+        (variable_identifier)
         (statement
           (keyword
             (control_structure_keyword)))))))
@@ -46,8 +45,7 @@ while( 1 )
     (block
       (comment)
       (conditional
-        (member_identifier
-          (variable_identifier))
+        (variable_identifier)
         (statement
           (keyword
             (control_structure_keyword))))

@@ -74,8 +74,7 @@ function void rate_control_shred()
         (block
           (statement
             (chuck_operation
-              (member_identifier
-                (variable_identifier))
+              (variable_identifier)
               (chuck_operator)
               (keyword)))
           (comment)

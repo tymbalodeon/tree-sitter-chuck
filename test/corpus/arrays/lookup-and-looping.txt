@@ -29,20 +29,18 @@ Access
   (comment)
   (statement
     (debug_print
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (int)))))
+      (array_identifier
+        (variable_identifier)
+        (int))))
   (comment)
   (comment)
   (statement
     (chuck_operation
       (float)
       (chuck_operator)
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (int))))))
+      (array_identifier
+        (variable_identifier)
+        (int)))))
 
 ========
 For-each
@@ -86,8 +84,7 @@ for( int e : foo )
       (comment)
       (statement
         (debug_print
-          (member_identifier
-            (variable_identifier)))))))
+          (variable_identifier))))))
 
 =====================================
 Loop over initialization with "auto"
@@ -118,8 +115,7 @@ for( auto x : [1,2,3] )
       (comment)
       (statement
         (debug_print
-          (member_identifier
-            (variable_identifier)))))))
+          (variable_identifier))))))
 
 =========================
 Multi-dimensional access
@@ -147,11 +143,10 @@ int foo[4][4];
     (chuck_operation
       (int)
       (chuck_operator)
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (int)
-          (int))))))
+      (array_identifier
+        (variable_identifier)
+        (int)
+        (int)))))
 
 =============
 Out of bounds
@@ -178,10 +173,9 @@ int foo[5];
   (comment)
   (statement
     (debug_print
-      (member_identifier
-        (array_identifier
-          (variable_identifier)
-          (int))))))
+      (array_identifier
+        (variable_identifier)
+        (int)))))
 
 =======================
 Longer program example
@@ -233,13 +227,12 @@ while( true )
   (statement
     (chuck_operation
       (binary_expression
-        (member_identifier
-          (class_identifier))
+        (class_identifier)
         (operator)
-        (binary_expression
-          (keyword)
-          (operator)
-          (member_identifier
+        (expression_group
+          (binary_expression
+            (keyword)
+            (operator)
             (class_identifier))))
       (chuck_operator)
       (keyword)))
@@ -255,7 +248,7 @@ while( true )
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (member_identifier
+      (keyword
         (global_unit_generator))))
   (comment)
   (statement
@@ -293,15 +286,14 @@ while( true )
       (comment)
       (statement
         (chuck_operation
-          (member_identifier
-            (array_identifier
-              (variable_identifier)
-              (function_call
-                (member_identifier
-                  (class_identifier)
-                  (variable_identifier))
-                (int)
-                (int))))
+          (array_identifier
+            (variable_identifier)
+            (function_call
+              (member_identifier
+                (class_identifier)
+                (variable_identifier))
+              (int)
+              (int)))
           (chuck_operator)
           (variable_declaration
             (primitive_type)
@@ -316,18 +308,18 @@ while( true )
             (binary_expression
               (int)
               (operator)
-              (binary_expression
+              (expression_group
                 (binary_expression
-                  (function_call
-                    (member_identifier
-                      (class_identifier)
-                      (variable_identifier))
-                    (int)
+                  (binary_expression
+                    (function_call
+                      (member_identifier
+                        (class_identifier)
+                        (variable_identifier))
+                      (int)
+                      (int))
+                    (operator)
                     (int))
                   (operator)
-                  (int))
-                (operator)
-                (member_identifier
                   (variable_identifier)))))
           (chuck_operator)
           (member_identifier
