@@ -132,10 +132,8 @@ x.print();
         (variable_identifier)
         (variable_identifier)))))
 
-; TODO FIXME
 ============
 Constructors
-:skip
 ============
 
 // connecting UGens, with construtors
@@ -154,13 +152,15 @@ string arr( "foo" )[10];
       (chuck_operation
         (variable_declaration
           (class_identifier)
-          (variable_identifier)
-          (int))
+          (function_call
+            (variable_identifier)
+            (int)))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
-          (variable_identifier)
-          (float)))
+          (function_call
+            (variable_identifier)
+            (float))))
       (chuck_operator)
       (keyword
         (global_unit_generator))))
@@ -168,9 +168,10 @@ string arr( "foo" )[10];
   (statement
     (chuck_operation
       (class_instantiation
-        (class_identifier)
-        (int)
-        (float))
+        (function_call
+          (class_identifier)
+          (int)
+          (float)))
       (chuck_operator)
       (reference_declaration
         (class_identifier)
@@ -179,7 +180,7 @@ string arr( "foo" )[10];
   (statement
     (array_declaration
       (reference_type)
-      (array_identifier
+      (function_call
         (variable_identifier)
-        (string)
-        (int)))))
+        (string))
+      (int))))

@@ -27,17 +27,20 @@ module.exports = grammar({
 
     array: ($) => seq("[", $._expression_list, "]"),
 
-    array_declaration: ($) =>
-      prec.left(
-        seq(
-          $._type,
-          seq($.array_identifier, repeat(seq(",", $.array_identifier))),
-        ),
-      ),
+    array_declaration: ($) => {
+      const identifier = choice(
+        $.array_identifier,
+        seq($.function_call, "[", optional($._expression), "]"),
+      );
+
+      return prec.left(
+        seq($._type, seq(identifier, repeat(seq(",", identifier)))),
+      );
+    },
 
     array_identifier: ($) =>
       seq(
-        choice($.class_identifier, $.variable_identifier),
+        choice($.class_identifier, $.reference_type, $.variable_identifier),
         repeat1(seq("[", optional($._expression), "]")),
       ),
 
@@ -97,7 +100,15 @@ module.exports = grammar({
     class_identifier: () => /_?[A-Z][a-zA-Z0-9_]*/,
 
     class_instantiation: ($) =>
-      seq("new", choice($.class_identifier, $.variable_identifier)),
+      seq(
+        "new",
+        choice(
+          $.class_identifier,
+          $.function_call,
+          $.reference_type,
+          $.variable_identifier,
+        ),
+      ),
 
     _class_keyword: () =>
       choice(
@@ -212,7 +223,12 @@ module.exports = grammar({
         seq(
           $.variable_declaration,
           ":",
-          choice($.array, $.array_identifier, $.variable_identifier),
+          choice(
+            $.array,
+            $.array_identifier,
+            $.reference_type,
+            $.variable_identifier,
+          ),
         ),
         ")",
         $._control_structure_body,
@@ -375,7 +391,11 @@ module.exports = grammar({
     variable_identifier: () => /_?[a-z][a-zA-Z0-9_]*/,
 
     variable_declaration: ($) => {
-      const identifier = choice($.class_identifier, $.variable_identifier);
+      const identifier = choice(
+        $.class_identifier,
+        $.function_call,
+        $.variable_identifier,
+      );
 
       return prec.left(
         seq($._type, seq(identifier, repeat(seq(",", identifier)))),

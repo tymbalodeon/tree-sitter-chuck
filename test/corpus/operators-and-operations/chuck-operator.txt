@@ -187,7 +187,7 @@ new Object @=> moe;
   (statement
     (chuck_operation
       (class_instantiation
-        (class_identifier))
+        (reference_type))
       (chuck_operator)
       (variable_identifier))))
 
