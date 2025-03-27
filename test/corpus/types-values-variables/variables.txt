@@ -29,7 +29,8 @@ Assignment
     (chuck_operation
       (int)
       (chuck_operator)
-      (variable_identifier))))
+      (member_identifier
+        (variable_identifier)))))
 
 ==============
 Initialization
@@ -63,7 +64,8 @@ Debug print
   (comment)
   (statement
     (debug_print
-      (variable_identifier))))
+      (member_identifier
+        (variable_identifier)))))
 
 ======
 Update
@@ -79,11 +81,13 @@ foo * 10 => foo;
   (statement
     (chuck_operation
       (binary_expression
-        (variable_identifier)
+        (member_identifier
+          (variable_identifier))
         (operator)
         (int))
       (chuck_operator)
-      (variable_identifier))))
+      (member_identifier
+        (variable_identifier)))))
 
 ==========
 Mult-chuck
@@ -100,7 +104,8 @@ Mult-chuck
     (chuck_operation
       (int)
       (chuck_operator)
-      (variable_identifier))))
+      (member_identifier
+        (variable_identifier)))))
 
 =========
 Operation

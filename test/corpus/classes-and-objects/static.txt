@@ -55,7 +55,8 @@ X x2;
         (block
           (comment)
           (statement
-            (variable_identifier))))))
+            (member_identifier
+              (variable_identifier)))))))
   (comment)
   (statement
     (chuck_operation
@@ -113,7 +114,6 @@ X x2;
         (variable_identifier)
         (variable_identifier)))))
 
-; TODO available in ChucK 1.5.4.3
 =================================================================
 Full static variable instantiation for all primitive Object types
 =================================================================
@@ -151,4 +151,147 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (class_definition
+    (class_identifier)
+    (block
+      (comment)
+      (statement
+        (chuck_operation
+          (int)
+          (chuck_operator)
+          (variable_declaration
+            (primitive_type)
+            (class_identifier))))
+      (comment)
+      (statement
+        (chuck_operation
+          (int)
+          (chuck_operator)
+          (variable_declaration
+            (primitive_type)
+            (class_identifier))))
+      (comment)
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (variable_declaration
+            (primitive_type)
+            (class_identifier))))
+      (comment)
+      (statement
+        (chuck_operation
+          (dur
+            (binary_expression
+              (keyword)
+              (operator)
+              (int))
+            (duration_identifier))
+          (chuck_operator)
+          (variable_declaration
+            (primitive_type)
+            (class_identifier))))
+      (comment)
+      (statement
+        (chuck_operation
+          (reference_values
+            (int)
+            (int)
+            (int))
+          (chuck_operator)
+          (variable_declaration
+            (primitive_type)
+            (class_identifier))))
+      (comment)
+      (statement
+        (chuck_operation
+          (array
+            (int)
+            (int)
+            (int)
+            (int))
+          (chuck_operator)
+          (array_declaration
+            (primitive_type)
+            (array_identifier
+              (class_identifier)))))
+      (comment)
+      (statement
+        (variable_declaration
+          (reference_type)
+          (function_call
+            (member_identifier
+              (class_identifier))
+            (string))))
+      (comment)
+      (statement
+        (variable_declaration
+          (class_identifier)
+          (function_call
+            (member_identifier
+              (class_identifier))
+            (int))))))
+  (comment)
+  (statement
+    (debug_print
+      (member_identifier
+        (class_identifier)
+        (class_identifier))))
+  (statement
+    (debug_print
+      (member_identifier
+        (class_identifier)
+        (class_identifier))))
+  (statement
+    (debug_print
+      (binary_expression
+        (member_identifier
+          (class_identifier)
+          (class_identifier))
+        (operator)
+        (keyword
+          (duration_identifier)))))
+  (statement
+    (debug_print
+      (binary_expression
+        (binary_expression
+          (member_identifier
+            (class_identifier)
+            (class_identifier))
+          (operator)
+          (keyword))
+        (operator)
+        (keyword
+          (duration_identifier)))))
+  (statement
+    (debug_print
+      (member_identifier
+        (class_identifier)
+        (class_identifier))))
+  (for_each_loop
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (member_identifier
+      (class_identifier)
+      (class_identifier))
+    (statement
+      (debug_print
+        (member_identifier
+          (variable_identifier)))))
+  (statement
+    (debug_print
+      (member_identifier
+        (class_identifier)
+        (class_identifier))))
+  (statement
+    (debug_print
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (class_identifier)
+          (variable_identifier))))))

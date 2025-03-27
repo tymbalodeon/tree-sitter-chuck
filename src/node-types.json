@@ -3428,6 +3428,10 @@
           "named": true
         },
         {
+          "type": "member_identifier",
+          "named": true
+        },
+        {
           "type": "reference_type",
           "named": true
         },
@@ -4799,7 +4803,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "array_identifier",

@@ -62,9 +62,11 @@ Foo a(1), b(2);
         (block
           (statement
             (chuck_operation
-              (variable_identifier)
+              (member_identifier
+                (variable_identifier))
               (chuck_operator)
-              (variable_identifier)))))))
+              (member_identifier
+                (variable_identifier))))))))
   (comment)
   (class_definition
     (class_identifier)
@@ -85,7 +87,8 @@ Foo a(1), b(2);
       (statement
         (class_instantiation
           (function_call
-            (class_identifier)
+            (member_identifier
+              (class_identifier))
             (binary_expression
               (member_identifier
                 (variable_identifier)
@@ -123,16 +126,20 @@ Foo a(1), b(2);
     (variable_declaration
       (class_identifier)
       (function_call
-        (variable_identifier)
+        (member_identifier
+          (variable_identifier))
         (int))
       (function_call
-        (variable_identifier)
+        (member_identifier
+          (variable_identifier))
         (int))))
   (comment)
   (statement
     (debug_print
       (binary_expression
-        (variable_identifier)
+        (member_identifier
+          (variable_identifier))
         (operator)
-        (variable_identifier))
+        (member_identifier
+          (variable_identifier)))
       (variable_identifier))))

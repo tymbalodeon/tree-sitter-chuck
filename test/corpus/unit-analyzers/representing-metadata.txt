@@ -27,14 +27,14 @@ while (true) {
   (statement
     (chuck_operation
       (chuck_operation
-        (keyword
+        (member_identifier
           (global_unit_generator))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator))))
   (comment)
   (statement
@@ -59,7 +59,8 @@ while (true) {
               (variable_identifier)
               (variable_identifier)))
           (chuck_operator)
-          (variable_identifier)))
+          (member_identifier
+            (variable_identifier))))
       (comment)
       (statement
         (chuck_operation
@@ -87,9 +88,10 @@ while (true) {
       (comment)
       (statement
         (chuck_operation
-          (array_identifier
-            (variable_identifier)
-            (int))
+          (member_identifier
+            (array_identifier
+              (variable_identifier)
+              (int)))
           (chuck_operator)
           (variable_declaration
             (primitive_type)
@@ -163,14 +165,14 @@ fft.upchuck() @=> blob2; // now both blob1 and blob2 refer to the same object: t
   (statement
     (chuck_operation
       (chuck_operation
-        (keyword
+        (member_identifier
           (global_unit_generator))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator))))
   (statement
     (variable_declaration
@@ -192,7 +194,8 @@ fft.upchuck() @=> blob2; // now both blob1 and blob2 refer to the same object: t
           (variable_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (variable_identifier)))
+      (member_identifier
+        (variable_identifier))))
   (comment)
   (statement
     (chuck_operation
@@ -209,7 +212,8 @@ fft.upchuck() @=> blob2; // now both blob1 and blob2 refer to the same object: t
           (variable_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (variable_identifier)))
+      (member_identifier
+        (variable_identifier))))
   (comment))
 
 ==============
@@ -232,14 +236,14 @@ fft.upchuck() @=> blob; // time hasn't advanced since the last computation, so n
   (statement
     (chuck_operation
       (chuck_operation
-        (keyword
+        (member_identifier
           (global_unit_generator))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator))))
   (statement
     (chuck_operation
@@ -267,7 +271,8 @@ fft.upchuck() @=> blob; // time hasn't advanced since the last computation, so n
           (variable_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (variable_identifier)))
+      (member_identifier
+        (variable_identifier))))
   (comment)
   (statement
     (chuck_operation
@@ -283,5 +288,6 @@ fft.upchuck() @=> blob; // time hasn't advanced since the last computation, so n
           (variable_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (variable_identifier)))
+      (member_identifier
+        (variable_identifier))))
   (comment))

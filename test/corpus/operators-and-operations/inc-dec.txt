@@ -17,7 +17,8 @@ foo++;
         (variable_identifier))))
   (statement
     (increment_expression
-      (variable_identifier))))
+      (member_identifier
+        (variable_identifier)))))
 
 =========
 Decrement
@@ -30,4 +31,5 @@ foo--;
 (source_file
   (statement
     (increment_expression
-      (variable_identifier))))
+      (member_identifier
+        (variable_identifier)))))

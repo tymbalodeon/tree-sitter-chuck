@@ -25,7 +25,8 @@ e => now;
   (comment)
   (statement
     (chuck_operation
-      (variable_identifier)
+      (member_identifier
+        (variable_identifier))
       (chuck_operator)
       (keyword)))
   (comment)

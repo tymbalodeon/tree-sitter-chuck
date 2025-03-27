@@ -28,6 +28,6 @@ Bar bar => dac;
         (class_identifier)
         (variable_identifier))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator))))
   (comment))

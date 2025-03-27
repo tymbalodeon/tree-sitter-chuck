@@ -11,7 +11,7 @@ adc => FFT fft =^ Flux flux => blackhole;
     (chuck_operation
       (chuck_operation
         (chuck_operation
-          (keyword
+          (member_identifier
             (global_unit_generator))
           (chuck_operator)
           (variable_declaration
@@ -22,7 +22,7 @@ adc => FFT fft =^ Flux flux => blackhole;
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator)))))
 
 ================
@@ -43,7 +43,7 @@ while (true) {
     (chuck_operation
       (chuck_operation
         (chuck_operation
-          (keyword
+          (member_identifier
             (global_unit_generator))
           (chuck_operator)
           (variable_declaration
@@ -54,7 +54,7 @@ while (true) {
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator))))
   (statement
     (variable_declaration
@@ -77,7 +77,8 @@ while (true) {
               (variable_identifier)
               (variable_identifier)))
           (chuck_operator)
-          (variable_identifier)))
+          (member_identifier
+            (variable_identifier))))
       (comment))))
 
 =======
@@ -101,7 +102,7 @@ while (true) {
     (chuck_operation
       (chuck_operation
         (chuck_operation
-          (keyword
+          (member_identifier
             (global_unit_generator))
           (chuck_operator)
           (variable_declaration
@@ -112,18 +113,19 @@ while (true) {
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator))))
   (statement
     (chuck_operation
       (chuck_operation
-        (variable_identifier)
+        (member_identifier
+          (variable_identifier))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator))))
   (statement
     (variable_declaration
@@ -147,7 +149,8 @@ while (true) {
               (variable_identifier)
               (variable_identifier)))
           (chuck_operator)
-          (variable_identifier)))
+          (member_identifier
+            (variable_identifier))))
       (comment)
       (statement
         (chuck_operation
@@ -156,7 +159,8 @@ while (true) {
               (variable_identifier)
               (variable_identifier)))
           (chuck_operator)
-          (variable_identifier)))
+          (member_identifier
+            (variable_identifier))))
       (comment))))
 
 ==============
@@ -177,7 +181,7 @@ while (true) {
     (chuck_operation
       (chuck_operation
         (chuck_operation
-          (keyword
+          (member_identifier
             (global_unit_generator))
           (chuck_operator)
           (variable_declaration
@@ -188,7 +192,7 @@ while (true) {
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator))))
   (statement
     (variable_declaration
@@ -211,7 +215,8 @@ while (true) {
               (variable_identifier)
               (variable_identifier)))
           (chuck_operator)
-          (variable_identifier)))
+          (member_identifier
+            (variable_identifier))))
       (comment))))
 
 ==========
@@ -259,7 +264,7 @@ fun void do_centroid() {
     (chuck_operation
       (chuck_operation
         (chuck_operation
-          (keyword
+          (member_identifier
             (global_unit_generator))
           (chuck_operator)
           (variable_declaration
@@ -270,18 +275,19 @@ fun void do_centroid() {
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator))))
   (statement
     (chuck_operation
       (chuck_operation
-        (variable_identifier)
+        (member_identifier
+          (variable_identifier))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator))))
   (statement
     (variable_declaration
@@ -292,15 +298,18 @@ fun void do_centroid() {
   (statement
     (spork_expression
       (function_call
-        (variable_identifier))))
+        (member_identifier
+          (variable_identifier)))))
   (statement
     (spork_expression
       (function_call
-        (variable_identifier))))
+        (member_identifier
+          (variable_identifier)))))
   (statement
     (spork_expression
       (function_call
-        (variable_identifier))))
+        (member_identifier
+          (variable_identifier)))))
   (loop
     (keyword)
     (block
@@ -333,7 +342,8 @@ fun void do_centroid() {
                   (variable_identifier)
                   (variable_identifier)))
               (chuck_operator)
-              (variable_identifier)))))))
+              (member_identifier
+                (variable_identifier))))))))
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -355,7 +365,8 @@ fun void do_centroid() {
                   (variable_identifier)
                   (variable_identifier)))
               (chuck_operator)
-              (variable_identifier)))))))
+              (member_identifier
+                (variable_identifier))))))))
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -377,7 +388,8 @@ fun void do_centroid() {
                   (variable_identifier)
                   (variable_identifier)))
               (chuck_operator)
-              (variable_identifier))))))))
+              (member_identifier
+                (variable_identifier)))))))))
 
 ============
 Agglomerator
@@ -400,7 +412,7 @@ while (true) {
       (chuck_operation
         (chuck_operation
           (chuck_operation
-            (keyword
+            (member_identifier
               (global_unit_generator))
             (chuck_operator)
             (variable_declaration
@@ -415,18 +427,20 @@ while (true) {
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator))))
   (statement
     (chuck_operation
       (chuck_operation
-        (variable_identifier)
+        (member_identifier
+          (variable_identifier))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (variable_identifier)))
+      (member_identifier
+        (variable_identifier))))
   (comment)
   (loop
     (keyword)
@@ -465,7 +479,7 @@ while (true) {
       (chuck_operation
         (chuck_operation
           (chuck_operation
-            (keyword
+            (member_identifier
               (global_unit_generator))
             (chuck_operator)
             (variable_declaration
@@ -480,13 +494,15 @@ while (true) {
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator))))
   (statement
     (chuck_operation
-      (variable_identifier)
+      (member_identifier
+        (variable_identifier))
       (chuck_operator)
-      (variable_identifier)))
+      (member_identifier
+        (variable_identifier))))
   (comment)
   (loop
     (keyword)
@@ -528,7 +544,7 @@ while (true) {
       (chuck_operation
         (chuck_operation
           (chuck_operation
-            (keyword
+            (member_identifier
               (global_unit_generator))
             (chuck_operator)
             (variable_declaration
@@ -543,18 +559,20 @@ while (true) {
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator))))
   (statement
     (chuck_operation
       (chuck_operation
-        (variable_identifier)
+        (member_identifier
+          (variable_identifier))
         (chuck_operator)
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (variable_identifier)))
+      (member_identifier
+        (variable_identifier))))
   (comment)
   (loop
     (keyword)

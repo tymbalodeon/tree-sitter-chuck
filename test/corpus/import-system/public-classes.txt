@@ -39,9 +39,11 @@ public class Bar
         (block
           (statement
             (chuck_operation
-              (variable_identifier)
+              (member_identifier
+                (variable_identifier))
               (chuck_operator)
-              (variable_identifier)))))))
+              (member_identifier
+                (variable_identifier))))))))
   (comment)
   (class_definition
     (class_identifier)
@@ -51,7 +53,8 @@ public class Bar
         (variable_declaration
           (class_identifier)
           (function_call
-            (variable_identifier)
+            (member_identifier
+              (variable_identifier))
             (int)))))))
 
 ===========================================
@@ -93,7 +96,8 @@ public class Bar
       (statement
         (chuck_operation
           (binary_expression
-            (variable_identifier)
+            (member_identifier
+              (variable_identifier))
             (operator)
             (int))
           (chuck_operator)

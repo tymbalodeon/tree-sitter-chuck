@@ -13,14 +13,20 @@ GGen;
 
 (source_file
   (statement
-    (reference_type))
+    (member_identifier
+      (reference_type)))
   (statement
-    (reference_type))
+    (member_identifier
+      (reference_type)))
   (statement
-    (class_identifier))
+    (member_identifier
+      (class_identifier)))
   (statement
-    (reference_type))
+    (member_identifier
+      (reference_type)))
   (statement
-    (class_identifier))
+    (member_identifier
+      (class_identifier)))
   (statement
-    (class_identifier)))
+    (member_identifier
+      (class_identifier))))

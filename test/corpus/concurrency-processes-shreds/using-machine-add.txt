@@ -53,7 +53,8 @@ Machine.replace( id, "bar.ck" );
       (member_identifier
         (class_identifier)
         (variable_identifier))
-      (variable_identifier)))
+      (member_identifier
+        (variable_identifier))))
   (comment)
   (statement
     (chuck_operation
@@ -63,12 +64,14 @@ Machine.replace( id, "bar.ck" );
           (variable_identifier))
         (string))
       (chuck_operator)
-      (variable_identifier)))
+      (member_identifier
+        (variable_identifier))))
   (comment)
   (statement
     (function_call
       (member_identifier
         (class_identifier)
         (variable_identifier))
-      (variable_identifier)
+      (member_identifier
+        (variable_identifier))
       (string))))

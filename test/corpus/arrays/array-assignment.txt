@@ -28,13 +28,15 @@ int foo[];
         (int)
         (int))
       (chuck_operator)
-      (variable_identifier)))
+      (member_identifier
+        (variable_identifier))))
   (comment)
   (statement
     (debug_print
-      (array_identifier
-        (variable_identifier)
-        (int)))))
+      (member_identifier
+        (array_identifier
+          (variable_identifier)
+          (int))))))
 
 ================================
 Functions with array parameters
@@ -76,23 +78,27 @@ print( foo );
             (primitive_type)
             (variable_identifier)))
         (binary_expression
-          (variable_identifier)
+          (member_identifier
+            (variable_identifier))
           (operator)
           (function_call
             (member_identifier
               (variable_identifier)
               (variable_identifier))))
         (increment_expression
-          (variable_identifier))
+          (member_identifier
+            (variable_identifier)))
         (statement
           (debug_print
-            (array_identifier
-              (variable_identifier)
-              (int)))))))
+            (member_identifier
+              (array_identifier
+                (variable_identifier)
+                (int))))))))
   (comment)
   (statement
     (function_call
-      (variable_identifier)
+      (member_identifier
+        (variable_identifier))
       (array
         (int)
         (int)
@@ -108,8 +114,10 @@ print( foo );
         (int))))
   (statement
     (function_call
-      (variable_identifier)
-      (variable_identifier))))
+      (member_identifier
+        (variable_identifier))
+      (member_identifier
+        (variable_identifier)))))
 
 ==========
 References
@@ -142,7 +150,8 @@ the_array => int foo[] => int bar[];
   (statement
     (chuck_operation
       (chuck_operation
-        (variable_identifier)
+        (member_identifier
+          (variable_identifier))
         (chuck_operator)
         (array_declaration
           (primitive_type)
@@ -160,14 +169,16 @@ the_array => int foo[] => int bar[];
     (chuck_operation
       (int)
       (chuck_operator)
-      (array_identifier
-        (variable_identifier)
-        (int))))
+      (member_identifier
+        (array_identifier
+          (variable_identifier)
+          (int)))))
   (statement
     (debug_print
-      (array_identifier
-        (variable_identifier)
-        (int))))
+      (member_identifier
+        (array_identifier
+          (variable_identifier)
+          (int)))))
   (comment))
 
 ============
@@ -197,9 +208,10 @@ foo3D[2] => int bar[][];
   (comment)
   (statement
     (chuck_operation
-      (array_identifier
-        (variable_identifier)
-        (int))
+      (member_identifier
+        (array_identifier
+          (variable_identifier)
+          (int)))
       (chuck_operator)
       (array_declaration
         (primitive_type)

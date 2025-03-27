@@ -12,12 +12,17 @@ string;
 
 (source_file
   (statement
-    (reference_type))
+    (member_identifier
+      (reference_type)))
   (statement
-    (reference_type))
+    (member_identifier
+      (reference_type)))
   (statement
-    (reference_type))
+    (member_identifier
+      (reference_type)))
   (statement
-    (reference_type))
+    (member_identifier
+      (reference_type)))
   (statement
-    (reference_type)))
+    (member_identifier
+      (reference_type))))

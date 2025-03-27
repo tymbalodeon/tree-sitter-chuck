@@ -15,7 +15,7 @@ adc => FFT fft =^ Flux flux => blackhole;
     (chuck_operation
       (chuck_operation
         (chuck_operation
-          (keyword
+          (member_identifier
             (global_unit_generator))
           (chuck_operator)
           (variable_declaration
@@ -26,7 +26,7 @@ adc => FFT fft =^ Flux flux => blackhole;
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator)))))
 
 ===============
@@ -47,7 +47,7 @@ adc => FFT f =^ Flux flux =^ FluxCapacitor flux_capacitor => blackhole;
       (chuck_operation
         (chuck_operation
           (chuck_operation
-            (keyword
+            (member_identifier
               (global_unit_generator))
             (chuck_operator)
             (variable_declaration
@@ -62,7 +62,7 @@ adc => FFT f =^ Flux flux =^ FluxCapacitor flux_capacitor => blackhole;
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator)))))
 
 ======================
@@ -106,7 +106,7 @@ SinOsc s3 => g;
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (keyword
+      (member_identifier
         (global_unit_generator))))
   (comment)
   (statement
@@ -115,7 +115,8 @@ SinOsc s3 => g;
         (class_identifier)
         (variable_identifier))
       (chuck_operator)
-      (variable_identifier)))
+      (member_identifier
+        (variable_identifier))))
   (comment)
   (statement
     (chuck_operation
@@ -123,4 +124,5 @@ SinOsc s3 => g;
         (class_identifier)
         (variable_identifier))
       (chuck_operator)
-      (variable_identifier))))
+      (member_identifier
+        (variable_identifier)))))

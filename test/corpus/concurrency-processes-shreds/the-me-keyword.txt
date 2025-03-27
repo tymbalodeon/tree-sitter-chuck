@@ -16,7 +16,8 @@ me.yield();
   (statement
     (spork_expression
       (function_call
-        (variable_identifier))))
+        (member_identifier
+          (variable_identifier)))))
   (comment)
   (comment)
   (statement

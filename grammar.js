@@ -230,21 +230,25 @@ module.exports = grammar({
       ),
 
     for_each_loop: ($) =>
-      seq(
-        "for",
-        "(",
+      prec(
+        1,
         seq(
-          $.variable_declaration,
-          ":",
-          choice(
-            $.array,
-            $.array_identifier,
-            $.reference_type,
-            $.variable_identifier,
+          "for",
+          "(",
+          seq(
+            $.variable_declaration,
+            ":",
+            choice(
+              $.array,
+              $.array_identifier,
+              $.member_identifier,
+              $.reference_type,
+              $.variable_identifier,
+            ),
           ),
+          ")",
+          $._control_structure_body,
         ),
-        ")",
-        $._control_structure_body,
       ),
 
     function_call: ($) => {
@@ -320,8 +324,7 @@ module.exports = grammar({
         1,
         seq(
           choice("me", $.global_unit_generator, $._identifier),
-          ".",
-          choice($.class_identifier, $.variable_identifier),
+          repeat(seq(".", choice($.class_identifier, $.variable_identifier))),
         ),
       ),
 

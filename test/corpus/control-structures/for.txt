@@ -21,13 +21,16 @@ for( 0 => int foo; foo < 4 ; foo++ )
         (primitive_type)
         (variable_identifier)))
     (binary_expression
-      (variable_identifier)
+      (member_identifier
+        (variable_identifier))
       (operator)
       (int))
     (increment_expression
-      (variable_identifier))
+      (member_identifier
+        (variable_identifier)))
     (block
       (comment)
       (statement
         (debug_print
-          (variable_identifier))))))
+          (member_identifier
+            (variable_identifier)))))))

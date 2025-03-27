@@ -36,7 +36,8 @@ later - now => dur D;
   (statement
     (chuck_operation
       (binary_expression
-        (variable_identifier)
+        (member_identifier
+          (variable_identifier))
         (operator)
         (keyword))
       (chuck_operator)
@@ -170,12 +171,14 @@ T - (now % T) => now;
   (statement
     (chuck_operation
       (binary_expression
-        (class_identifier)
+        (member_identifier
+          (class_identifier))
         (operator)
         (binary_expression
           (keyword)
           (operator)
-          (class_identifier)))
+          (member_identifier
+            (class_identifier))))
       (chuck_operator)
       (keyword))))
 
@@ -195,9 +198,11 @@ if( t1 < t2 )
   (comment)
   (conditional
     (binary_expression
-      (variable_identifier)
+      (member_identifier
+        (variable_identifier))
       (operator)
-      (variable_identifier))
+      (member_identifier
+        (variable_identifier)))
     (block
       (comment))))
 

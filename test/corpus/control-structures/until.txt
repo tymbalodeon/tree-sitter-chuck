@@ -32,4 +32,5 @@ do {
     (do_loop
       (block
         (comment))
-      (variable_identifier))))
+      (member_identifier
+        (variable_identifier)))))

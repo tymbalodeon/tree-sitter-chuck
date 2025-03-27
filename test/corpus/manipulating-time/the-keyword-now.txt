@@ -36,7 +36,8 @@ while( now < later )
     (binary_expression
       (keyword)
       (operator)
-      (variable_identifier))
+      (member_identifier
+        (variable_identifier)))
     (block
       (comment)
       (statement

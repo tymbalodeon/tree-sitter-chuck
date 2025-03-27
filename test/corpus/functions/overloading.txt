@@ -31,9 +31,11 @@ add( 1, 2 ) => int bar;
     (block
       (statement
         (binary_expression
-          (variable_identifier)
+          (member_identifier
+            (variable_identifier))
           (operator)
-          (variable_identifier)))))
+          (member_identifier
+            (variable_identifier))))))
   (comment)
   (function_definition
     (primitive_type)
@@ -47,14 +49,17 @@ add( 1, 2 ) => int bar;
     (block
       (statement
         (binary_expression
-          (variable_identifier)
+          (member_identifier
+            (variable_identifier))
           (operator)
-          (variable_identifier)))))
+          (member_identifier
+            (variable_identifier))))))
   (comment)
   (statement
     (chuck_operation
       (function_call
-        (variable_identifier)
+        (member_identifier
+          (variable_identifier))
         (int))
       (chuck_operator)
       (variable_declaration
@@ -63,7 +68,8 @@ add( 1, 2 ) => int bar;
   (statement
     (chuck_operation
       (function_call
-        (variable_identifier)
+        (member_identifier
+          (variable_identifier))
         (int)
         (int))
       (chuck_operator)

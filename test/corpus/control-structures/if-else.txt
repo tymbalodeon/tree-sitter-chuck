@@ -11,7 +11,8 @@ if( condition )
 
 (source_file
   (conditional
-    (variable_identifier)
+    (member_identifier
+      (variable_identifier))
     (block
       (comment))))
 
@@ -32,7 +33,8 @@ else
 
 (source_file
   (conditional
-    (variable_identifier)
+    (member_identifier
+      (variable_identifier))
     (block
       (comment))
     (block
