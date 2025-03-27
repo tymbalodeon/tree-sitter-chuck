@@ -1,0 +1,418 @@
+===========
+Controlling
+===========
+
+adc => FFT fft => dac;
+// set the FFT to be of of size 2048 samples
+2048 => fft.size;
+
+while (true) {
+    // let 1024 samples pass
+    1024::samp => now;
+    // trigger the FFT computation on the last 2048 samples (the FFT size)
+    fft.upchuck();
+}
+
+---
+
+(source_file
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (keyword
+          (global_unit_generator))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (loop
+    (keyword)
+    (block
+      (comment)
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword)))
+      (comment)
+      (statement
+        (function_call
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier)))))))
+
+========
+Hop size
+========
+
+adc => FFT fft => dac;
+2048 => fft.size;
+
+// spork two shreds: shred1 and shred2
+spork ~shred1();
+spork ~shred2(); 
+
+// shred1 computes FFT every 5 seconds
+fun void shred1() {
+    while (true) {
+        5::second => now;
+        fft.upchuck();
+    }
+}
+
+// shred2 computes FFT every n seconds, where n is a random number between 1 and 10
+fun void shred2() {
+    while (true) {
+        Std.rand2f(1, 10)::second => now;
+        fft.upchuck();
+    }
+}
+
+---
+
+(source_file
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (keyword
+          (global_unit_generator))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (spork_expression
+      (function_call
+        (variable_identifier))))
+  (statement
+    (spork_expression
+      (function_call
+        (variable_identifier))))
+  (comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (block
+      (loop
+        (keyword)
+        (block
+          (statement
+            (chuck_operation
+              (dur
+                (int)
+                (duration_identifier))
+              (chuck_operator)
+              (keyword)))
+          (statement
+            (function_call
+              (member_identifier
+                (variable_identifier)
+                (variable_identifier))))))))
+  (comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (block
+      (loop
+        (keyword)
+        (block
+          (statement
+            (chuck_operation
+              (dur
+                (function_call
+                  (member_identifier
+                    (class_identifier)
+                    (variable_identifier))
+                  (int)
+                  (int))
+                (duration_identifier))
+              (chuck_operator)
+              (keyword)))
+          (statement
+            (function_call
+              (member_identifier
+                (variable_identifier)
+                (variable_identifier)))))))))
+
+==============
+Setting values
+==============
+
+// connect the input to an FFT
+adc => FFT fft => blackhole;
+
+//start with a size of 1024 and a Blackman-Harris window
+1024 => fft.size;
+Windowing.blackmanHarris(512) => fft.window;
+
+//advance time and compute FFT
+1::minute => now;
+fft.upchuck();
+
+// change window to Hamming
+Windowing.hamming(512) => fft.window;
+
+// let time pass... and carry on.
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (keyword
+          (global_unit_generator))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (statement
+    (chuck_operation
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (int))
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword)))
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (int))
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment))
+
+==============
+Function calls
+==============
+
+fft.window(Windowing.hamming(512));
+
+---
+
+(source_file
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (int)))))
+
+==============
+Reading values
+==============
+
+// connect adc to FFT
+adc => FFT fft => blackhole;
+
+// store the current value of the FFT size
+fft.size() => int fft_size;
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (keyword
+          (global_unit_generator))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))
+
+==================
+Empty buffer slots
+==================
+
+// connect adc to FFT to blackhole
+adc => FFT fft => blackhole;
+// set the FFT size to 1024 samples
+1024 => fft.size;
+
+// allow 1000 samples to pass
+1000::samp => now;
+
+// compute the FFT: the last 24 spots in the FFT buffer haven't been filled, so they are zero-ed out
+// the computation is nevertheless valid and proceeds.
+fft.upchuck(); 
+
+1::minute => now; // let time pass for a while
+
+// increase the size of the FFT, and therefore the size of the sample buffer it uses
+2048 => fft.size;
+
+// let 1023 samples pass 
+1023::samp => now;
+
+// at this point, only 2047 of the 2048 buffer spots have been filled
+// the following computation therefore zeros out the last audio buffer spot
+fft.upchuck();
+
+1::minute => now; //let time pass for a while
+
+// now the buffer is happy and full
+fft.upchuck(); // proceeds normally on a full buffer
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (keyword
+          (global_unit_generator))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword)))
+  (comment)
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword)))
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword)))
+  (comment)
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword)))
+  (comment)
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment))
