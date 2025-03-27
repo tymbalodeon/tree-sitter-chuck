@@ -37,7 +37,7 @@ module.exports = grammar({
 
     array_identifier: ($) =>
       seq(
-        $.variable_identifier,
+        choice($.class_identifier, $.variable_identifier),
         repeat1(seq("[", optional($._expression), "]")),
       ),
 
@@ -94,7 +94,7 @@ module.exports = grammar({
         $.block,
       ),
 
-    class_identifier: () => /[A-Z][a-zA-Z0-9]*/,
+    class_identifier: () => /_?[A-Z][a-zA-Z0-9_]*/,
 
     class_instantiation: ($) =>
       seq("new", choice($.class_identifier, $.variable_identifier)),
@@ -181,6 +181,7 @@ module.exports = grammar({
         $.member_identifier,
         $.negation_expression,
         $._number,
+        $.reference_values,
         $.spork_expression,
         $.string,
         seq("(", optional($._expression_list), ")"),
@@ -291,7 +292,7 @@ module.exports = grammar({
         seq(
           choice("me", $.global_unit_generator, $._identifier),
           ".",
-          $.variable_identifier,
+          choice($.class_identifier, $.variable_identifier),
         ),
       ),
 
@@ -339,12 +340,11 @@ module.exports = grammar({
         "void",
       ),
 
-    reference_assignment: ($) => seq($.primitive_type),
-
     reference_declaration: ($) =>
       seq(choice($._type, $.variable_identifier), "@", $._identifier),
 
     reference_type: () => choice("Event", "Object", "UGen", "array", "string"),
+    reference_values: ($) => seq("@(", $._expression_list, ")"),
 
     _special_literal_value: () =>
       choice("NULL", "false", "maybe", "me", "now", "null", "pi", "true"),
@@ -372,10 +372,11 @@ module.exports = grammar({
     _until_while_expression: ($) =>
       seq(choice("until", "while"), "(", $._expression, ")"),
 
-    variable_identifier: () => /[a-z_][a-zA-Z0-9_]*/,
+    variable_identifier: () => /_?[a-z][a-zA-Z0-9_]*/,
 
     variable_declaration: ($) => {
       const identifier = choice($.class_identifier, $.variable_identifier);
+
       return prec.left(
         seq($._type, seq(identifier, repeat(seq(",", identifier)))),
       );

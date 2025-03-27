@@ -116,7 +116,6 @@ X x2;
 ; TODO available in ChucK 1.5.4.3
 =================================================================
 Full static variable instantiation for all primitive Object types
-:skip
 =================================================================
 
 // a class

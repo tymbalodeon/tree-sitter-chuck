@@ -102,8 +102,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "variable_identifier"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "class_identifier"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "variable_identifier"
+            }
+          ]
         },
         {
           "type": "REPEAT1",
@@ -383,7 +392,7 @@
     },
     "class_identifier": {
       "type": "PATTERN",
-      "value": "[A-Z][a-zA-Z0-9]*"
+      "value": "_?[A-Z][a-zA-Z0-9_]*"
     },
     "class_instantiation": {
       "type": "SEQ",
@@ -784,6 +793,10 @@
         {
           "type": "SYMBOL",
           "name": "_number"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "reference_values"
         },
         {
           "type": "SYMBOL",
@@ -1402,8 +1415,17 @@
             "value": "."
           },
           {
-            "type": "SYMBOL",
-            "name": "variable_identifier"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "class_identifier"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "variable_identifier"
+              }
+            ]
           }
         ]
       }
@@ -1605,15 +1627,6 @@
         }
       ]
     },
-    "reference_assignment": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "primitive_type"
-        }
-      ]
-    },
     "reference_declaration": {
       "type": "SEQ",
       "members": [
@@ -1662,6 +1675,23 @@
         {
           "type": "STRING",
           "value": "string"
+        }
+      ]
+    },
+    "reference_values": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "@("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_expression_list"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
         }
       ]
     },
