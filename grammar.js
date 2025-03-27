@@ -69,10 +69,13 @@ module.exports = grammar({
     _chuck_keyword: () => choice("const", "function", "global", "spork"),
 
     chuck_operation: ($) =>
-      seq(
-        choice($.chuck_operation, $._expression),
-        $.chuck_operator,
-        choice($._declaration, $._identifier, $.keyword, $.member_identifier),
+      choice(
+        seq(
+          choice($.chuck_operation, $._expression),
+          $.chuck_operator,
+          choice($._declaration, $._identifier, $.keyword, $.member_identifier),
+        ),
+        seq("(", $.chuck_operation, ")"),
       ),
 
     chuck_operator: () =>
@@ -404,6 +407,7 @@ module.exports = grammar({
         choice(
           $.chuck_operation,
           $._expression,
+          $._expression_list,
           $.function_definition,
           $.overload_definition,
         ),

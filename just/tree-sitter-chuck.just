@@ -25,7 +25,6 @@ parse *file:
     bun run tree-sitter parse --no-ranges $file
 
 # Test parser
-[no-cd]
 test *name:
     #!/usr/bin/env nu
 
