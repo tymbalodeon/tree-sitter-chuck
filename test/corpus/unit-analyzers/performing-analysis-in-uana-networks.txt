@@ -1,0 +1,580 @@
+==========
+Dependency
+==========
+
+adc => FFT fft =^ Flux flux => blackhole;
+
+---
+
+(source_file
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (chuck_operation
+          (keyword
+            (global_unit_generator))
+          (chuck_operator)
+          (variable_declaration
+            (class_identifier)
+            (variable_identifier)))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator)))))
+
+================
+Implicit upChucK
+================
+
+adc => FFT fft =^ Flux flux => blackhole;
+UAnaBlob blob;
+while (true) {
+    100::ms => now;
+    flux.upchuck() @=> blob; // causes fft to compute, then computes flux and stores result in blob
+}
+
+---
+
+(source_file
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (chuck_operation
+          (keyword
+            (global_unit_generator))
+          (chuck_operator)
+          (variable_declaration
+            (class_identifier)
+            (variable_identifier)))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier)))
+  (loop
+    (keyword)
+    (block
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword)))
+      (statement
+        (chuck_operation
+          (function_call
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier)))
+          (chuck_operator)
+          (variable_identifier)))
+      (comment))))
+
+=======
+Caching
+=======
+
+adc => FFT fft =^ Flux flux => blackhole;
+fft =^ Centroid c => blackhole;
+
+UAnaBlob blob, blob2;
+while (true) {
+    100::ms => now;
+    flux.upchuck() @=> blob; // causes fft to compute, then computes flux and stores result in blob
+    c.upchuck() @=> blob2; // uses cached fft results from previous line to compute centroid
+}
+
+---
+
+(source_file
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (chuck_operation
+          (keyword
+            (global_unit_generator))
+          (chuck_operator)
+          (variable_declaration
+            (class_identifier)
+            (variable_identifier)))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (variable_identifier)
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier)
+      (variable_identifier)))
+  (loop
+    (keyword)
+    (block
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword)))
+      (statement
+        (chuck_operation
+          (function_call
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier)))
+          (chuck_operator)
+          (variable_identifier)))
+      (comment)
+      (statement
+        (chuck_operation
+          (function_call
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier)))
+          (chuck_operator)
+          (variable_identifier)))
+      (comment))))
+
+==============
+Never computed
+==============
+
+adc => FFT fft =^ Flux flux => blackhole;
+UAnaBlob blob;
+while (true) {
+    100::ms => now;
+    fft.upchuck() @=> blob; // compute fft only
+}
+
+---
+
+(source_file
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (chuck_operation
+          (keyword
+            (global_unit_generator))
+          (chuck_operator)
+          (variable_declaration
+            (class_identifier)
+            (variable_identifier)))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier)))
+  (loop
+    (keyword)
+    (block
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword)))
+      (statement
+        (chuck_operation
+          (function_call
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier)))
+          (chuck_operator)
+          (variable_identifier)))
+      (comment))))
+
+==========
+Efficiency
+==========
+
+adc => FFT fft =^ Flux flux => blackhole;
+fft =^ Centroid c => blackhole;
+UAnaBlob blob1, blob2, blob3;
+
+spork ~do_fft();
+spork ~do_flux();
+spork ~do_centroid();
+
+while (true) {
+    //Keep parent shred going
+    1::minute => now;
+}
+
+fun void do_fft() {
+    while (true) {
+        50::ms => now;
+        fft.upchuck() @=> blob1;
+    }
+}
+
+fun void do_flux() {
+    while (true) {
+        110::ms => now;
+        flux.upchuck() @=> blob2;
+    }
+}
+
+fun void do_centroid() {
+    while (true) {
+        250::ms => now;
+        c.upchuck() @=> blob3;
+    }
+}
+
+---
+
+(source_file
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (chuck_operation
+          (keyword
+            (global_unit_generator))
+          (chuck_operator)
+          (variable_declaration
+            (class_identifier)
+            (variable_identifier)))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (variable_identifier)
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier)
+      (variable_identifier)
+      (variable_identifier)))
+  (statement
+    (spork_expression
+      (function_call
+        (variable_identifier))))
+  (statement
+    (spork_expression
+      (function_call
+        (variable_identifier))))
+  (statement
+    (spork_expression
+      (function_call
+        (variable_identifier))))
+  (loop
+    (keyword)
+    (block
+      (comment)
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword)))))
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (block
+      (loop
+        (keyword)
+        (block
+          (statement
+            (chuck_operation
+              (dur
+                (int)
+                (duration_identifier))
+              (chuck_operator)
+              (keyword)))
+          (statement
+            (chuck_operation
+              (function_call
+                (member_identifier
+                  (variable_identifier)
+                  (variable_identifier)))
+              (chuck_operator)
+              (variable_identifier)))))))
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (block
+      (loop
+        (keyword)
+        (block
+          (statement
+            (chuck_operation
+              (dur
+                (int)
+                (duration_identifier))
+              (chuck_operator)
+              (keyword)))
+          (statement
+            (chuck_operation
+              (function_call
+                (member_identifier
+                  (variable_identifier)
+                  (variable_identifier)))
+              (chuck_operator)
+              (variable_identifier)))))))
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (block
+      (loop
+        (keyword)
+        (block
+          (statement
+            (chuck_operation
+              (dur
+                (int)
+                (duration_identifier))
+              (chuck_operator)
+              (keyword)))
+          (statement
+            (chuck_operation
+              (function_call
+                (member_identifier
+                  (variable_identifier)
+                  (variable_identifier)))
+              (chuck_operator)
+              (variable_identifier))))))))
+
+============
+Agglomerator
+============
+
+adc => FFT fft =^ Flux flux =^ UAna agglom => blackhole;
+fft =^ Centroid centroid =^ agglom;
+// could add abitrarily many more UAnae that connect to agglom via =^
+
+while (true) {
+    100::ms => now;
+    agglom.upchuck(); // forces computation of both centroid and flux (and therefore fft, too)
+}
+
+---
+
+(source_file
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (chuck_operation
+          (chuck_operation
+            (keyword
+              (global_unit_generator))
+            (chuck_operator)
+            (variable_declaration
+              (class_identifier)
+              (variable_identifier)))
+          (chuck_operator)
+          (variable_declaration
+            (class_identifier)
+            (variable_identifier)))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (variable_identifier)
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (loop
+    (keyword)
+    (block
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword)))
+      (statement
+        (function_call
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (comment))))
+
+==============
+Feedback loops
+==============
+
+adc => UAna a =^ UAna b =^ Uana c => blackhole;
+b =^ a; // creates a feedback loop
+
+while (true) {
+    100::ms => now;
+    c.upchuck(); // involves a using b's analysis results from 100 ms ago
+}
+
+---
+
+(source_file
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (chuck_operation
+          (chuck_operation
+            (keyword
+              (global_unit_generator))
+            (chuck_operator)
+            (variable_declaration
+              (class_identifier)
+              (variable_identifier)))
+          (chuck_operator)
+          (variable_declaration
+            (class_identifier)
+            (variable_identifier)))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (statement
+    (chuck_operation
+      (variable_identifier)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (loop
+    (keyword)
+    (block
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword)))
+      (statement
+        (function_call
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (comment))))
+
+================
+FeatureCollector
+================
+
+adc => FFT fft =^ Flux flux =^ FeatureCollector fc => blackhole;
+fft =^ Centroid centroid =^ fc;
+// could add abitrarily many more UAnae that connect to fc via =^
+
+while (true) {
+    100::ms => now;
+    // forces computation of both centroid and flux (and therefore fft, too)
+    // an vectorBlob's fvals and cvals will be a concatenation of the feature values
+    fc.upchuck() @=> UAnaBlob vectorBlob; 
+}
+
+---
+
+(source_file
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (chuck_operation
+          (chuck_operation
+            (keyword
+              (global_unit_generator))
+            (chuck_operator)
+            (variable_declaration
+              (class_identifier)
+              (variable_identifier)))
+          (chuck_operator)
+          (variable_declaration
+            (class_identifier)
+            (variable_identifier)))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (variable_identifier)
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (loop
+    (keyword)
+    (block
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword)))
+      (comment)
+      (comment)
+      (statement
+        (chuck_operation
+          (function_call
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier)))
+          (chuck_operator)
+          (variable_declaration
+            (class_identifier)
+            (variable_identifier)))))))

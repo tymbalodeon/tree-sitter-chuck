@@ -26,7 +26,14 @@ module.exports = grammar({
       ),
 
     array: ($) => seq("[", $._expression_list, "]"),
-    array_declaration: ($) => seq($._type, $.array_identifier),
+
+    array_declaration: ($) =>
+      prec.left(
+        seq(
+          $._type,
+          seq($.array_identifier, repeat(seq(",", $.array_identifier))),
+        ),
+      ),
 
     array_identifier: ($) =>
       seq(
@@ -210,13 +217,19 @@ module.exports = grammar({
         $._control_structure_body,
       ),
 
-    function_call: ($) =>
-      seq(
-        choice($._identifier, $.member_identifier),
+    function_call: ($) => {
+      const argument_list = seq(
         "(",
         field("arguments", optional($._expression_list)),
         ")",
-      ),
+      );
+
+      return seq(
+        choice($._identifier, $.member_identifier),
+        argument_list,
+        repeat(seq(".", choice($._identifier), argument_list)),
+      );
+    },
 
     function_definition: ($) =>
       seq(
@@ -273,10 +286,13 @@ module.exports = grammar({
       ),
 
     member_identifier: ($) =>
-      seq(
-        choice("me", $.global_unit_generator, $._identifier),
-        ".",
-        $.variable_identifier,
+      prec(
+        1,
+        seq(
+          choice("me", $.global_unit_generator, $._identifier),
+          ".",
+          $.variable_identifier,
+        ),
       ),
 
     negation_expression: ($) => prec.left(seq("!", $._expression)),
@@ -336,7 +352,11 @@ module.exports = grammar({
     spork_expression: ($) => seq("spork", "~", $.function_call),
 
     statement: ($) =>
-      seq(optional("return"), choice($.chuck_operation, $._expression), ";"),
+      seq(
+        optional("return"),
+        choice($.chuck_operation, $._expression, $.function_definition),
+        ";",
+      ),
 
     string: () => {
       const delimeter = '"';
@@ -354,8 +374,12 @@ module.exports = grammar({
 
     variable_identifier: () => /[a-z_][a-zA-Z0-9_]*/,
 
-    variable_declaration: ($) =>
-      seq($._type, choice($.class_identifier, $.variable_identifier)),
+    variable_declaration: ($) => {
+      const identifier = choice($.class_identifier, $.variable_identifier);
+      return prec.left(
+        seq($._type, seq(identifier, repeat(seq(",", identifier)))),
+      );
+    },
   },
 
   word: ($) => $.variable_identifier,
