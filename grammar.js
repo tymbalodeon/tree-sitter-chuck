@@ -21,6 +21,7 @@ module.exports = grammar({
           $._control_structure,
           $.function_definition,
           $.import_expression,
+          $.overload_definition,
           $.statement,
         ),
       ),
@@ -57,6 +58,7 @@ module.exports = grammar({
             $.conditional,
             $._control_structure,
             $.function_definition,
+            $.overload_definition,
             $.statement,
           ),
         ),
@@ -195,7 +197,18 @@ module.exports = grammar({
         $.reference_values,
         $.spork_expression,
         $.string,
-        seq("(", optional($._expression_list), ")"),
+        seq(
+          field("expression", seq("(", optional($._expression_list), ")")),
+          optional(
+            seq(
+              ".",
+              field(
+                "member_identifier",
+                choice($.class_identifier, $.variable_identifier),
+              ),
+            ),
+          ),
+        ),
       ),
 
     _expression_list: ($) =>
@@ -251,8 +264,8 @@ module.exports = grammar({
     function_definition: ($) =>
       seq(
         choice("fun", "function"),
-        $._type,
-        $.variable_identifier,
+        optional($._type),
+        choice($.class_identifier, $.variable_identifier),
         "(",
         field(
           "parameters",
@@ -339,6 +352,21 @@ module.exports = grammar({
         "||",
       ),
 
+    overload_definition: ($) =>
+      seq(
+        choice("fun", "function", "private", "public"),
+        $._type,
+        "@operator",
+        choice($.chuck_operator, $.operator),
+        "(",
+        field(
+          "parameters",
+          optional(seq($._declaration, repeat(seq(",", $._declaration)))),
+        ),
+        ")",
+        $.block,
+      ),
+
     polar: ($) => seq("%(", $._expression, ",", $._expression, ")"),
 
     primitive_type: () =>
@@ -370,7 +398,12 @@ module.exports = grammar({
     statement: ($) =>
       seq(
         optional("return"),
-        choice($.chuck_operation, $._expression, $.function_definition),
+        choice(
+          $.chuck_operation,
+          $._expression,
+          $.function_definition,
+          $.overload_definition,
+        ),
         ";",
       ),
 
