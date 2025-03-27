@@ -233,7 +233,7 @@ module.exports = grammar({
 
     function_definition: ($) =>
       seq(
-        "fun",
+        choice("fun", "function"),
         $._type,
         $.variable_identifier,
         "(",
