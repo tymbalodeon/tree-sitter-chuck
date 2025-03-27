@@ -19,7 +19,7 @@ while (true) {
     fft.upchuck().cval(0) => complex first_spec; // similarly, get 1st spectrum bin
 
     blob.when() => time when_computed; // get the time it was computed
-} 
+}
 
 ---
 

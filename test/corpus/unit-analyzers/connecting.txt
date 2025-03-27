@@ -2,7 +2,7 @@
 upChucK operator
 ================
 
-// instantiate FFT and flux objects, 
+// instantiate FFT and flux objects,
 // connect to allow computation of spectrum and spectral flux on adc input
 adc => FFT fft =^ Flux flux => blackhole;
 

@@ -63,7 +63,7 @@ adc => FFT fft => dac;
 
 // spork two shreds: shred1 and shred2
 spork ~shred1();
-spork ~shred2(); 
+spork ~shred2();
 
 // shred1 computes FFT every 5 seconds
 fun void shred1() {
@@ -312,14 +312,14 @@ adc => FFT fft => blackhole;
 
 // compute the FFT: the last 24 spots in the FFT buffer haven't been filled, so they are zero-ed out
 // the computation is nevertheless valid and proceeds.
-fft.upchuck(); 
+fft.upchuck();
 
 1::minute => now; // let time pass for a while
 
 // increase the size of the FFT, and therefore the size of the sample buffer it uses
 2048 => fft.size;
 
-// let 1023 samples pass 
+// let 1023 samples pass
 1023::samp => now;
 
 // at this point, only 2047 of the 2048 buffer spots have been filled

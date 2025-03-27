@@ -112,38 +112,38 @@ y.hey();
 Overriding behavior
 ===================
 
-// parent class defines some basic data and methods 
+// parent class defines some basic data and methods
 class Xfunc
-{ 
-    int x; 
+{
+    int x;
 
-    fun int doSomething( int a, int b ) { 
-        return 0; 
+    fun int doSomething( int a, int b ) {
+        return 0;
     }
 }
 
 // child class, which overrides the doSomething function with an addition operation
 class Xadds extends Xfunc
-{ 
+{
     fun int doSomething ( int a, int b )
-    { 
-         return a + b ; 
+    {
+         return a + b ;
     }
 }
 
-// child class, which overrides the doSomething function with a multiply operation 
+// child class, which overrides the doSomething function with a multiply operation
 class Xmuls extends Xfunc
-{ 
+{
     fun int doSomething ( int a, int b )
-    { 
-         return a * b; 
+    {
+         return a * b;
     }
 }
 
 // array of references to Xfunc
 Xfunc @ operators[2];
 
-// instantiate two children and assign reference to the array 
+// instantiate two children and assign reference to the array
 new Xadds @=> operators[0];
 new Xmuls @=> operators[1];
 

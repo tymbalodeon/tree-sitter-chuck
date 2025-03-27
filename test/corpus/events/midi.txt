@@ -6,7 +6,7 @@ MidiIn min;
 MidiMsg msg;
 
 // open midi receiver, exit on fail
-if ( !min.open(0) ) me.exit(); 
+if ( !min.open(0) ) me.exit();
 
 while( true )
 {

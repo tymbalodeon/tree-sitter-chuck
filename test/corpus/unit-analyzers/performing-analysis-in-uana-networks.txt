@@ -517,7 +517,7 @@ while (true) {
     100::ms => now;
     // forces computation of both centroid and flux (and therefore fft, too)
     // an vectorBlob's fvals and cvals will be a concatenation of the feature values
-    fc.upchuck() @=> UAnaBlob vectorBlob; 
+    fc.upchuck() @=> UAnaBlob vectorBlob;
 }
 
 ---

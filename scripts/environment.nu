@@ -139,9 +139,9 @@ def get-project-name [] {
   | path basename
 }
 
-def get-file-status [filename: string contents?: string ] {
+def get-file-status [filename: string force: bool contents?: string] {
   if ($filename | path exists) {
-    if ($contents | is-empty) {
+    if not $force and ($contents | is-empty) {
       return "Skipped"
     }
 
@@ -154,7 +154,7 @@ def get-file-status [filename: string contents?: string ] {
 
     set-executable $temporary_file
 
-    let action = if (
+    let action = if not $force and (
       delta $filename $temporary_file
       | complete
       | get exit_code
@@ -295,11 +295,11 @@ def copy-files [
       }
   )
 
-  let $environment_files = if not $upgrade {
+  let $environment_files = if $force or $upgrade {
     $environment_files
-    | filter {|file| not ($file.path | path exists)}
   } else {
     $environment_files
+    | filter {|file| not ($file.path | path exists)}
   }
 
   if ($environment_files | is-empty) {
@@ -321,13 +321,13 @@ def copy-files [
           ($project_name | path join __init__.py)
         ]
       ) {
-        if not $force and ($path | path exists) {
+        if ($path | path exists) {
           return
         }
       }
 
       let contents = (http-get --raw $file.download_url)
-      let action = (get-file-status $path $contents)
+      let action = (get-file-status $path $force $contents)
 
       if $action != Skipped {
         $contents
@@ -567,7 +567,7 @@ export def save-file [
   display_message: bool
   contents?: string
 ] {
-  let action = (get-file-status $filename $contents)
+  let action = (get-file-status $filename false $contents)
 
   if $action != Skipped {
     $contents

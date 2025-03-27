@@ -29,7 +29,7 @@ public Foo @operator +( Foo lhs, Foo rhs )
 
 // non-public binary operator overload for '=>' (ignored by @import)
 fun void @operator =^( Foo lhs, Foo rhs )
-{ 
+{
     // for sake of example, just print contents
     <<< lhs.num, "=^", rhs.num >>>;
 }
