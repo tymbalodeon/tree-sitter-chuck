@@ -38,7 +38,7 @@ while (true) {
         (variable_identifier))))
   (loop
     (keyword
-      (special_literal_value))
+      (boolean_literal_value))
     (block
       (comment)
       (statement
@@ -121,7 +121,7 @@ fun void shred2() {
     (block
       (loop
         (keyword
-          (special_literal_value))
+          (boolean_literal_value))
         (block
           (statement
             (chuck_operation
@@ -143,7 +143,7 @@ fun void shred2() {
     (block
       (loop
         (keyword
-          (special_literal_value))
+          (boolean_literal_value))
         (block
           (statement
             (chuck_operation

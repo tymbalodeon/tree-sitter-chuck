@@ -70,6 +70,7 @@ module.exports = grammar({
         "}",
       ),
 
+    boolean_literal_value: () => choice("false", "true"),
     cast: ($) => seq($._expression, "$", $.primitive_type),
     _chuck_keyword: () => choice("const", "function", "global", "spork"),
 
@@ -310,8 +311,11 @@ module.exports = grammar({
         $.duration_identifier,
         $.global_unit_generator,
         $.primitive_type,
-        $.special_literal_value,
+        $._literal_value,
       ),
+
+    _literal_value: ($) =>
+      choice($.boolean_literal_value, $.special_literal_value),
 
     loop: ($) =>
       seq(
@@ -399,7 +403,7 @@ module.exports = grammar({
     reference_values: ($) => seq("@(", $._expression_list, ")"),
 
     special_literal_value: () =>
-      choice("NULL", "false", "maybe", "me", "now", "null", "pi", "true"),
+      choice("NULL", "maybe", "me", "now", "null", "pi"),
 
     spork_expression: ($) =>
       seq("spork", "~", choice($.function_call, $._function_call_chain)),

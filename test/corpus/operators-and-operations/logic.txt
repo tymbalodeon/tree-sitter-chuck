@@ -18,7 +18,7 @@ if( 1 <= 4 && true )
         (int))
       (operator)
       (keyword
-        (special_literal_value)))
+        (boolean_literal_value)))
     (statement
       (debug_print
         (string)))))

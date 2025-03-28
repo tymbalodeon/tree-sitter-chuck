@@ -14,10 +14,10 @@ if( !true == false )
     (binary_expression
       (negation_expression
         (keyword
-          (special_literal_value)))
+          (boolean_literal_value)))
       (operator)
       (keyword
-        (special_literal_value)))
+        (boolean_literal_value)))
     (statement
       (debug_print
         (string)))))

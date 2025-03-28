@@ -69,7 +69,7 @@ while( true )
     (block
       (loop
         (keyword
-          (special_literal_value))
+          (boolean_literal_value))
         (block
           (comment)
           (statement
@@ -108,7 +108,7 @@ while( true )
   (comment)
   (loop
     (keyword
-      (special_literal_value))
+      (boolean_literal_value))
     (block
       (comment)
       (statement

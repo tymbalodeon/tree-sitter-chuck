@@ -1,5 +1,4 @@
-"true" @constant.builtin.boolean
-"false" @constant.builtin.boolean
+(boolean_literal_value) @constant.builtin.boolean
 (chuck_operator) @operator
 (class_identifier) @type
 (comment) @comment

@@ -130,10 +130,10 @@ pi;
       (special_literal_value)))
   (statement
     (keyword
-      (special_literal_value)))
+      (boolean_literal_value)))
   (statement
     (keyword
-      (special_literal_value)))
+      (boolean_literal_value)))
   (statement
     (keyword
       (special_literal_value)))

@@ -615,6 +615,11 @@
     }
   },
   {
+    "type": "boolean_literal_value",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "cast",
     "named": true,
     "fields": {},
@@ -2409,6 +2414,10 @@
       "required": false,
       "types": [
         {
+          "type": "boolean_literal_value",
+          "named": true
+        },
+        {
           "type": "control_structure_keyword",
           "named": true
         },
@@ -3683,11 +3692,11 @@
   },
   {
     "type": "float",
-    "named": false
+    "named": true
   },
   {
     "type": "float",
-    "named": true
+    "named": false
   },
   {
     "type": "for",
@@ -3723,11 +3732,11 @@
   },
   {
     "type": "int",
-    "named": true
+    "named": false
   },
   {
     "type": "int",
-    "named": false
+    "named": true
   },
   {
     "type": "interface",
