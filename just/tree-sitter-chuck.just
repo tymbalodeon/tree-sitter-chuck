@@ -31,3 +31,14 @@ test *name:
 # Highlight file
 @highlight +file:
     bun run tree-sitter highlight {{ file }} --config-path config.json
+
+# Copy queries to helix directory
+[no-cd]
+install-queries:
+    #!/usr/bin/env nu
+    
+    let chuck_query_directory = "~/.config/helix/runtime/queries/chuck/"
+
+    mkdir $chuck_query_directory
+    
+    cp ./queries/highlights.scm $chuck_query_directory
