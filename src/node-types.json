@@ -2423,6 +2423,10 @@
         {
           "type": "primitive_type",
           "named": true
+        },
+        {
+          "type": "special_literal_value",
+          "named": true
         }
       ]
     }
@@ -3189,6 +3193,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "special_literal_value",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "spork_expression",

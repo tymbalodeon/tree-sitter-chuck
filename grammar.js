@@ -310,7 +310,7 @@ module.exports = grammar({
         $.duration_identifier,
         $.global_unit_generator,
         $.primitive_type,
-        $._special_literal_value,
+        $.special_literal_value,
       ),
 
     loop: ($) =>
@@ -398,7 +398,7 @@ module.exports = grammar({
     reference_type: () => choice("Event", "Object", "UGen", "array", "string"),
     reference_values: ($) => seq("@(", $._expression_list, ")"),
 
-    _special_literal_value: () =>
+    special_literal_value: () =>
       choice("NULL", "false", "maybe", "me", "now", "null", "pi", "true"),
 
     spork_expression: ($) =>
