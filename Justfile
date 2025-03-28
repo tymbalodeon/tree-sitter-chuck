@@ -63,6 +63,7 @@ mod tree-sitter-chuck "just/tree-sitter-chuck.just"
 alias generate := tree-sitter-chuck::generate
 alias highlight := tree-sitter-chuck::highlight
 alias install := tree-sitter-chuck::install
+alias install-grammar := tree-sitter-chuck::install-grammar
 alias install-queries := tree-sitter-chuck::install-queries
 alias parse := tree-sitter-chuck::parse
 alias test := tree-sitter-chuck::test

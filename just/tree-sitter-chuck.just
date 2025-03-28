@@ -44,3 +44,7 @@ install-queries:
     mkdir $chuck_query_directory
 
     cp ./queries/highlights.scm $chuck_query_directory
+
+@install-grammar: && install-queries
+    hx --grammar fetch
+    hx --grammar build
