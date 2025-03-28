@@ -211,10 +211,13 @@ module.exports = grammar({
       ),
 
     expression_group: ($) =>
-      seq("(", optional(choice($._expression, $._expression_list)), ")"),
+      prec(
+        1,
+        seq("(", optional(choice($._expression, $._expression_list)), ")"),
+      ),
 
     _expression_list: ($) =>
-      prec(1, seq($._expression, repeat(seq(",", $._expression)))),
+      prec.left(seq($._expression, repeat(seq(",", $._expression)))),
 
     float: () => token(seq(optional("-"), /(\d+)?\.\d+/)),
 
