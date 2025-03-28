@@ -8,7 +8,7 @@ scope = "source.chuck"
 
 [[grammar]]
 name = "chuck"
-source = { git = "https://github.com/tymbalodeon/tree-sitter-chuck.git", rev = "b93cc37c95cbe8222dd9e0c27c18ea87b1551e5d" }
+source = { git = "https://github.com/tymbalodeon/tree-sitter-chuck.git", rev = "52951773c84ec72fdb9671aa9d3729d407076a9b" }
 
 [[language]]
 name = "javascript"
