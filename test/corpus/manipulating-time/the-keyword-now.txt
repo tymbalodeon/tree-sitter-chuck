@@ -23,7 +23,8 @@ while( now < later )
     (chuck_operation
       (dur
         (binary_expression
-          (keyword)
+          (keyword
+            (special_literal_value))
           (operator)
           (int))
         (duration_identifier))
@@ -34,14 +35,16 @@ while( now < later )
   (comment)
   (loop
     (binary_expression
-      (keyword)
+      (keyword
+        (special_literal_value))
       (operator)
       (variable_identifier))
     (block
       (comment)
       (statement
         (debug_print
-          (keyword)))
+          (keyword
+            (special_literal_value))))
       (comment)
       (statement
         (chuck_operation
@@ -49,4 +52,5 @@ while( now < later )
             (int)
             (duration_identifier))
           (chuck_operator)
-          (keyword))))))
+          (keyword
+            (special_literal_value)))))))

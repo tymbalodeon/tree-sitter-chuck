@@ -59,7 +59,8 @@ now % 5::second => dur bar;
     (chuck_operation
       (dur
         (binary_expression
-          (keyword)
+          (keyword
+            (special_literal_value))
           (operator)
           (int))
         (duration_identifier))
@@ -106,11 +107,13 @@ T - (now % T) => now;
         (operator)
         (expression_group
           (binary_expression
-            (keyword)
+            (keyword
+              (special_literal_value))
             (operator)
             (class_identifier))))
       (chuck_operator)
-      (keyword)))
+      (keyword
+        (special_literal_value))))
   (comment)
   (comment)
   (comment))

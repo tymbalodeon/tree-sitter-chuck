@@ -17,7 +17,8 @@ while( true )
 (source_file
   (comment)
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (comment)
       (comment)

@@ -45,14 +45,16 @@ while( true )
         (member_identifier
           (variable_identifier)))))
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (comment)
       (statement
         (chuck_operation
           (variable_identifier)
           (chuck_operator)
-          (keyword)))
+          (keyword
+            (special_literal_value))))
       (comment)
       (loop
         (function_call

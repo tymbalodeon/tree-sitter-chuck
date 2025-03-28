@@ -74,7 +74,8 @@ while( true )
         (global_unit_generator))))
   (comment)
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (comment)
       (statement
@@ -87,14 +88,16 @@ while( true )
               (binary_expression
                 (dur
                   (binary_expression
-                    (keyword)
+                    (keyword
+                      (special_literal_value))
                     (operator)
                     (int))
                   (duration_identifier))
                 (operator)
                 (int))
               (operator)
-              (keyword)))
+              (keyword
+                (special_literal_value))))
           (chuck_operator)
           (member_identifier
             (variable_identifier)
@@ -106,4 +109,5 @@ while( true )
             (int)
             (duration_identifier))
           (chuck_operator)
-          (keyword))))))
+          (keyword
+            (special_literal_value)))))))

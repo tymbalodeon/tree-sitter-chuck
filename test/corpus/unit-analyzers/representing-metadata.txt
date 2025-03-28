@@ -42,7 +42,8 @@ while (true) {
       (class_identifier)
       (variable_identifier)))
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (statement
         (chuck_operation
@@ -50,7 +51,8 @@ while (true) {
             (int)
             (duration_identifier))
           (chuck_operator)
-          (keyword)))
+          (keyword
+            (special_literal_value))))
       (comment)
       (statement
         (chuck_operation
@@ -185,7 +187,8 @@ fft.upchuck() @=> blob2; // now both blob1 and blob2 refer to the same object: t
         (int)
         (duration_identifier))
       (chuck_operator)
-      (keyword)))
+      (keyword
+        (special_literal_value))))
   (comment)
   (statement
     (chuck_operation
@@ -202,7 +205,8 @@ fft.upchuck() @=> blob2; // now both blob1 and blob2 refer to the same object: t
         (int)
         (duration_identifier))
       (chuck_operator)
-      (keyword)))
+      (keyword
+        (special_literal_value))))
   (comment)
   (statement
     (chuck_operation
@@ -260,7 +264,8 @@ fft.upchuck() @=> blob; // time hasn't advanced since the last computation, so n
         (int)
         (duration_identifier))
       (chuck_operator)
-      (keyword)))
+      (keyword
+        (special_literal_value))))
   (comment)
   (statement
     (chuck_operation

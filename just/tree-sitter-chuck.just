@@ -33,11 +33,13 @@ test *name:
     bun run tree-sitter highlight {{ file }} --config-path config.json
 
 # Copy queries to helix directory
-[no-cd]
 install-queries:
     #!/usr/bin/env nu
 
-    let chuck_query_directory = "~/.config/helix/runtime/queries/chuck/"
+    let chuck_query_directory = (
+        $env.HOME
+        | path join ".config/helix/runtime/queries/chuck/"
+    )
 
     mkdir $chuck_query_directory
 

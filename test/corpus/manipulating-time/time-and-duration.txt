@@ -25,7 +25,8 @@ now + foo => time later;
   (statement
     (chuck_operation
       (binary_expression
-        (keyword)
+        (keyword
+          (special_literal_value))
         (operator)
         (variable_identifier))
       (chuck_operator)

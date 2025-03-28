@@ -22,7 +22,8 @@ repeat( 4 )
       (statement
         (debug_print
           (binary_expression
-            (keyword)
+            (keyword
+              (special_literal_value))
             (operator)
             (keyword
               (duration_identifier)))))
@@ -33,7 +34,8 @@ repeat( 4 )
             (int)
             (duration_identifier))
           (chuck_operator)
-          (keyword))))))
+          (keyword
+            (special_literal_value)))))))
 
 ================
 Repeat condition
@@ -74,7 +76,8 @@ repeat( x )
       (statement
         (debug_print
           (binary_expression
-            (keyword)
+            (keyword
+              (special_literal_value))
             (operator)
             (keyword
               (duration_identifier)))))
@@ -85,4 +88,5 @@ repeat( x )
             (int)
             (duration_identifier))
           (chuck_operator)
-          (keyword))))))
+          (keyword
+            (special_literal_value)))))))

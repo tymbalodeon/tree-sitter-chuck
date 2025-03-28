@@ -64,14 +64,16 @@ while ( true )
     (block
       (comment)
       (loop
-        (keyword)
+        (keyword
+          (special_literal_value))
         (block
           (comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
-              (keyword)))
+              (keyword
+                (special_literal_value))))
           (comment)
           (statement
             (debug_print
@@ -103,11 +105,13 @@ while ( true )
         (string))))
   (comment)
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (comment)
       (conditional
-        (keyword)
+        (keyword
+          (special_literal_value))
         (block
           (statement
             (debug_print
@@ -133,4 +137,5 @@ while ( true )
             (float)
             (duration_identifier))
           (chuck_operator)
-          (keyword))))))
+          (keyword
+            (special_literal_value)))))))

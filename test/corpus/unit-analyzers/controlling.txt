@@ -37,7 +37,8 @@ while (true) {
         (variable_identifier)
         (variable_identifier))))
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (comment)
       (statement
@@ -46,7 +47,8 @@ while (true) {
             (int)
             (duration_identifier))
           (chuck_operator)
-          (keyword)))
+          (keyword
+            (special_literal_value))))
       (comment)
       (statement
         (function_call
@@ -118,7 +120,8 @@ fun void shred2() {
     (variable_identifier)
     (block
       (loop
-        (keyword)
+        (keyword
+          (special_literal_value))
         (block
           (statement
             (chuck_operation
@@ -126,7 +129,8 @@ fun void shred2() {
                 (int)
                 (duration_identifier))
               (chuck_operator)
-              (keyword)))
+              (keyword
+                (special_literal_value))))
           (statement
             (function_call
               (member_identifier
@@ -138,7 +142,8 @@ fun void shred2() {
     (variable_identifier)
     (block
       (loop
-        (keyword)
+        (keyword
+          (special_literal_value))
         (block
           (statement
             (chuck_operation
@@ -151,7 +156,8 @@ fun void shred2() {
                   (int))
                 (duration_identifier))
               (chuck_operator)
-              (keyword)))
+              (keyword
+                (special_literal_value))))
           (statement
             (function_call
               (member_identifier
@@ -220,7 +226,8 @@ Windowing.hamming(512) => fft.window;
         (int)
         (duration_identifier))
       (chuck_operator)
-      (keyword)))
+      (keyword
+        (special_literal_value))))
   (statement
     (function_call
       (member_identifier
@@ -362,7 +369,8 @@ fft.upchuck(); // proceeds normally on a full buffer
         (int)
         (duration_identifier))
       (chuck_operator)
-      (keyword)))
+      (keyword
+        (special_literal_value))))
   (comment)
   (comment)
   (statement
@@ -376,7 +384,8 @@ fft.upchuck(); // proceeds normally on a full buffer
         (int)
         (duration_identifier))
       (chuck_operator)
-      (keyword)))
+      (keyword
+        (special_literal_value))))
   (comment)
   (comment)
   (statement
@@ -393,7 +402,8 @@ fft.upchuck(); // proceeds normally on a full buffer
         (int)
         (duration_identifier))
       (chuck_operator)
-      (keyword)))
+      (keyword
+        (special_literal_value))))
   (comment)
   (comment)
   (statement
@@ -407,7 +417,8 @@ fft.upchuck(); // proceeds normally on a full buffer
         (int)
         (duration_identifier))
       (chuck_operator)
-      (keyword)))
+      (keyword
+        (special_literal_value))))
   (comment)
   (comment)
   (statement

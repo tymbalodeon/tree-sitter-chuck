@@ -231,11 +231,13 @@ while( true )
         (operator)
         (expression_group
           (binary_expression
-            (keyword)
+            (keyword
+              (special_literal_value))
             (operator)
             (class_identifier))))
       (chuck_operator)
-      (keyword)))
+      (keyword
+        (special_literal_value))))
   (comment)
   (statement
     (chuck_operation
@@ -281,7 +283,8 @@ while( true )
           (variable_identifier)))))
   (comment)
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (comment)
       (statement
@@ -348,11 +351,13 @@ while( true )
               (float)
               (class_identifier))
             (chuck_operator)
-            (keyword)))
+            (keyword
+              (special_literal_value))))
         (statement
           (chuck_operation
             (dur
               (float)
               (class_identifier))
             (chuck_operator)
-            (keyword)))))))
+            (keyword
+              (special_literal_value))))))))

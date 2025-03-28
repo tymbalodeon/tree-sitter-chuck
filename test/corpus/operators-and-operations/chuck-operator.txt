@@ -114,7 +114,8 @@ Assignment
           (int)
           (duration_identifier))
         (operator)
-        (keyword))
+        (keyword
+          (special_literal_value)))
       (chuck_operator)
       (variable_declaration
         (primitive_type)

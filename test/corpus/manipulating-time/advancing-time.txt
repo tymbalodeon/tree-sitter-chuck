@@ -24,7 +24,8 @@ Advancing time by duration
         (int)
         (duration_identifier))
       (chuck_operator)
-      (keyword)))
+      (keyword
+        (special_literal_value))))
   (comment)
   (statement
     (chuck_operation
@@ -32,7 +33,8 @@ Advancing time by duration
         (int)
         (duration_identifier))
       (chuck_operator)
-      (keyword)))
+      (keyword
+        (special_literal_value))))
   (comment)
   (statement
     (chuck_operation
@@ -40,7 +42,8 @@ Advancing time by duration
         (int)
         (duration_identifier))
       (chuck_operator)
-      (keyword)))
+      (keyword
+        (special_literal_value))))
   (comment)
   (statement
     (chuck_operation
@@ -48,7 +51,8 @@ Advancing time by duration
         (float)
         (duration_identifier))
       (chuck_operator)
-      (keyword))))
+      (keyword
+        (special_literal_value)))))
 
 ===============================
 Advancing time by absolute time
@@ -68,7 +72,8 @@ later => now;
     (chuck_operation
       (dur
         (binary_expression
-          (keyword)
+          (keyword
+            (special_literal_value))
           (operator)
           (int))
         (duration_identifier))
@@ -81,7 +86,8 @@ later => now;
     (chuck_operation
       (variable_identifier)
       (chuck_operator)
-      (keyword))))
+      (keyword
+        (special_literal_value)))))
 
 =======================
 Advancing time by event
@@ -98,7 +104,8 @@ e => now;
     (chuck_operation
       (variable_identifier)
       (chuck_operator)
-      (keyword))))
+      (keyword
+        (special_literal_value)))))
 
 =======================================
 Advancing time at any point in the code
@@ -131,7 +138,8 @@ while( true )
         (global_unit_generator))))
   (comment)
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (comment)
       (statement
@@ -153,4 +161,5 @@ while( true )
             (int)
             (duration_identifier))
           (chuck_operator)
-          (keyword))))))
+          (keyword
+            (special_literal_value)))))))

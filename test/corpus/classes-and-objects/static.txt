@@ -186,7 +186,8 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
         (chuck_operation
           (dur
             (binary_expression
-              (keyword)
+              (keyword
+                (special_literal_value))
               (operator)
               (int))
             (duration_identifier))
@@ -261,7 +262,8 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
               (class_identifier)
               (class_identifier))
             (operator)
-            (keyword)))
+            (keyword
+              (special_literal_value))))
         (operator)
         (keyword
           (duration_identifier)))))

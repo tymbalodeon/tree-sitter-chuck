@@ -13,7 +13,8 @@ now + 10::second => time later;
     (chuck_operation
       (dur
         (binary_expression
-          (keyword)
+          (keyword
+            (special_literal_value))
           (operator)
           (int))
         (duration_identifier))
@@ -38,7 +39,8 @@ later - now => dur D;
       (binary_expression
         (variable_identifier)
         (operator)
-        (keyword))
+        (keyword
+          (special_literal_value)))
       (chuck_operator)
       (variable_declaration
         (primitive_type)
@@ -137,7 +139,8 @@ now % 1::second => dur remainder;
     (chuck_operation
       (dur
         (binary_expression
-          (keyword)
+          (keyword
+            (special_literal_value))
           (operator)
           (int))
         (duration_identifier))
@@ -174,11 +177,13 @@ T - (now % T) => now;
         (operator)
         (expression_group
           (binary_expression
-            (keyword)
+            (keyword
+              (special_literal_value))
             (operator)
             (class_identifier))))
       (chuck_operator)
-      (keyword))))
+      (keyword
+        (special_literal_value)))))
 
 ==================
 Comparison on time

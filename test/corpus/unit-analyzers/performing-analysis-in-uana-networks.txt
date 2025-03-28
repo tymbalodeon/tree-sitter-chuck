@@ -61,7 +61,8 @@ while (true) {
       (class_identifier)
       (variable_identifier)))
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (statement
         (chuck_operation
@@ -69,7 +70,8 @@ while (true) {
             (int)
             (duration_identifier))
           (chuck_operator)
-          (keyword)))
+          (keyword
+            (special_literal_value))))
       (statement
         (chuck_operation
           (function_call
@@ -131,7 +133,8 @@ while (true) {
       (variable_identifier))
     (variable_identifier))
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (statement
         (chuck_operation
@@ -139,7 +142,8 @@ while (true) {
             (int)
             (duration_identifier))
           (chuck_operator)
-          (keyword)))
+          (keyword
+            (special_literal_value))))
       (statement
         (chuck_operation
           (function_call
@@ -195,7 +199,8 @@ while (true) {
       (class_identifier)
       (variable_identifier)))
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (statement
         (chuck_operation
@@ -203,7 +208,8 @@ while (true) {
             (int)
             (duration_identifier))
           (chuck_operator)
-          (keyword)))
+          (keyword
+            (special_literal_value))))
       (statement
         (chuck_operation
           (function_call
@@ -302,7 +308,8 @@ fun void do_centroid() {
       (function_call
         (variable_identifier))))
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (comment)
       (statement
@@ -311,13 +318,15 @@ fun void do_centroid() {
             (int)
             (duration_identifier))
           (chuck_operator)
-          (keyword)))))
+          (keyword
+            (special_literal_value))))))
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
       (loop
-        (keyword)
+        (keyword
+          (special_literal_value))
         (block
           (statement
             (chuck_operation
@@ -325,7 +334,8 @@ fun void do_centroid() {
                 (int)
                 (duration_identifier))
               (chuck_operator)
-              (keyword)))
+              (keyword
+                (special_literal_value))))
           (statement
             (chuck_operation
               (function_call
@@ -339,7 +349,8 @@ fun void do_centroid() {
     (variable_identifier)
     (block
       (loop
-        (keyword)
+        (keyword
+          (special_literal_value))
         (block
           (statement
             (chuck_operation
@@ -347,7 +358,8 @@ fun void do_centroid() {
                 (int)
                 (duration_identifier))
               (chuck_operator)
-              (keyword)))
+              (keyword
+                (special_literal_value))))
           (statement
             (chuck_operation
               (function_call
@@ -361,7 +373,8 @@ fun void do_centroid() {
     (variable_identifier)
     (block
       (loop
-        (keyword)
+        (keyword
+          (special_literal_value))
         (block
           (statement
             (chuck_operation
@@ -369,7 +382,8 @@ fun void do_centroid() {
                 (int)
                 (duration_identifier))
               (chuck_operator)
-              (keyword)))
+              (keyword
+                (special_literal_value))))
           (statement
             (chuck_operation
               (function_call
@@ -429,7 +443,8 @@ while (true) {
       (variable_identifier)))
   (comment)
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (statement
         (chuck_operation
@@ -437,7 +452,8 @@ while (true) {
             (int)
             (duration_identifier))
           (chuck_operator)
-          (keyword)))
+          (keyword
+            (special_literal_value))))
       (statement
         (function_call
           (member_identifier
@@ -489,7 +505,8 @@ while (true) {
       (variable_identifier)))
   (comment)
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (statement
         (chuck_operation
@@ -497,7 +514,8 @@ while (true) {
             (int)
             (duration_identifier))
           (chuck_operator)
-          (keyword)))
+          (keyword
+            (special_literal_value))))
       (statement
         (function_call
           (member_identifier
@@ -557,7 +575,8 @@ while (true) {
       (variable_identifier)))
   (comment)
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (statement
         (chuck_operation
@@ -565,7 +584,8 @@ while (true) {
             (int)
             (duration_identifier))
           (chuck_operator)
-          (keyword)))
+          (keyword
+            (special_literal_value))))
       (comment)
       (comment)
       (statement

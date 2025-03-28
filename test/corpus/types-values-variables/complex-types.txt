@@ -114,7 +114,8 @@ Polar
         (binary_expression
           (float)
           (operator)
-          (keyword)))
+          (keyword
+            (special_literal_value))))
       (chuck_operator)
       (variable_declaration
         (primitive_type)
@@ -139,7 +140,8 @@ pol.phase => float p; //p is .5π
         (binary_expression
           (float)
           (operator)
-          (keyword)))
+          (keyword
+            (special_literal_value))))
       (chuck_operator)
       (variable_declaration
         (primitive_type)
@@ -184,7 +186,8 @@ cmp $ polar + %(10, .25*pi) - pol => polar pol2;
         (binary_expression
           (float)
           (operator)
-          (keyword)))
+          (keyword
+            (special_literal_value))))
       (chuck_operator)
       (variable_declaration
         (primitive_type)
@@ -228,7 +231,8 @@ cmp $ polar + %(10, .25*pi) - pol => polar pol2;
             (binary_expression
               (float)
               (operator)
-              (keyword))))
+              (keyword
+                (special_literal_value)))))
         (operator)
         (variable_identifier))
       (chuck_operator)

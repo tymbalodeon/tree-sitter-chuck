@@ -13,7 +13,8 @@ until( false )
 (source_file
   (comment)
   (loop
-    (keyword)
+    (keyword
+      (special_literal_value))
     (block
       (comment))))
 

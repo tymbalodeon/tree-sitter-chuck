@@ -126,21 +126,29 @@ pi;
 
 (source_file
   (statement
-    (keyword))
+    (keyword
+      (special_literal_value)))
   (statement
-    (keyword))
+    (keyword
+      (special_literal_value)))
   (statement
-    (keyword))
+    (keyword
+      (special_literal_value)))
   (statement
-    (keyword))
+    (keyword
+      (special_literal_value)))
   (statement
-    (keyword))
+    (keyword
+      (special_literal_value)))
   (statement
-    (keyword))
+    (keyword
+      (special_literal_value)))
   (statement
-    (keyword))
+    (keyword
+      (special_literal_value)))
   (statement
-    (keyword)))
+    (keyword
+      (special_literal_value))))
 
 ===========================
 Special: Default durations

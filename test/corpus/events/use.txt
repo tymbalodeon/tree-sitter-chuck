@@ -27,7 +27,8 @@ e => now;
     (chuck_operation
       (variable_identifier)
       (chuck_operator)
-      (keyword)))
+      (keyword
+        (special_literal_value))))
   (comment)
   (statement
     (debug_print
