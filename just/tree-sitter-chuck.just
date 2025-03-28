@@ -13,16 +13,10 @@
 
 # Parse file
 [no-cd]
-parse *file:
+parse +file:
     #!/usr/bin/env nu
 
-    let file = if ("{{ file }}" | is-empty) {
-         "examples/example.ck"
-    } else {
-        "{{ file }}"
-    }
-
-    bun run tree-sitter parse --no-ranges $file
+    bun run tree-sitter parse --no-ranges "{{ file }}"
 
 # Test parser
 test *name:
