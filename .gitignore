@@ -7,4 +7,11 @@
 
 # tree-sitter-chuck
 build
+**/*.aiff
+**/*.ino
+**/*.mid
+**/*.txt
+**/*.wav
+**/README
+**/ALSO-SEE
 node_modules
