@@ -4,13 +4,13 @@
     "": {
       "name": "tree-sitter-chuck",
       "dependencies": {
-        "node-addon-api": "^8.3.1",
-        "node-gyp-build": "^4.8.4",
+        "node-addon-api": "latest",
+        "node-gyp-build": "latest",
       },
       "devDependencies": {
-        "prebuildify": "^6.0.1",
-        "prettier": "^3.5.3",
-        "tree-sitter-cli": "^0.24.4",
+        "prebuildify": "latest",
+        "prettier": "latest",
+        "tree-sitter-cli": "latest",
       },
       "peerDependencies": {
         "tree-sitter": "latest",
@@ -71,7 +71,7 @@
 
     "tar-stream": ["tar-stream@2.2.0", "", { "dependencies": { "bl": "^4.0.3", "end-of-stream": "^1.4.1", "fs-constants": "^1.0.0", "inherits": "^2.0.3", "readable-stream": "^3.1.1" } }, "sha512-ujeqbceABgwMZxEJnk2HDY2DlnUZ+9oEcb1KzTVfYHio0UE6dG71n60d8D2I4qNvleWrrXpmjpt7vZeF1LnMZQ=="],
 
-    "tree-sitter-cli": ["tree-sitter-cli@0.24.7", "", { "bin": { "tree-sitter": "cli.js" } }, "sha512-o4gnE82pVmMMhJbWwD6+I9yr4lXii5Ci5qEQ2pFpUbVy1YiD8cizTJaqdcznA0qEbo7l2OneI1GocChPrI4YGQ=="],
+    "tree-sitter-cli": ["tree-sitter-cli@0.25.3", "", { "bin": { "tree-sitter": "cli.js" } }, "sha512-Bk6ZUXG+cKnwZpfR/te4NDrKld90p6350eqWlbLwSpV9/8vmL/x8LCw+3k7quY9oMDaYoMXHMvokXJbkM5A7bA=="],
 
     "util-deprecate": ["util-deprecate@1.0.2", "", {}, "sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw=="],
 
