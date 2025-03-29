@@ -1,0 +1,33 @@
+=======================
+Non-public code ignored
+=======================
+
+// a class definition (public; will be picked by @import)
+public class Bar extends Chugraph
+{
+    // ...
+}
+
+// unit-test or provide example for KS (will be ignored by @import)
+Bar bar => dac;
+// ...
+
+---
+
+(source_file
+  (comment)
+  (class_definition
+    (class_identifier)
+    (class_identifier)
+    (block
+      (comment)))
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment))

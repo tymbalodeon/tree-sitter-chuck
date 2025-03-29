@@ -1,0 +1,149 @@
+=============
+Array dynamic
+=============
+
+// instantiate int array
+float argh[0];
+
+// print out relevant info
+<<< "array size:", argh.size() >>>;
+
+// append items (array should grow dynamically as needed)
+argh << 3.0 << 4 << 5;
+
+// print out relevant info
+<<< "array size:", argh.size() >>>;
+
+// print out elements
+<<< "contents:", argh[0], argh[1], argh[2] >>>;
+
+// pop last element
+argh.popBack();
+
+// print out relevant info
+<<< "array size:", argh.size() >>>;
+
+argh << 6 << 7 << 8;
+
+// pop middle element
+argh.popOut(2);
+
+// print array
+<<< "printing remaining elements of array..." >>>;
+for (0 => int i; i < argh.size(); i++) {
+    <<< "elem", i, "-", argh[i] >>>;
+}
+
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)
+        (int))))
+  (comment)
+  (statement
+    (debug_print
+      (string)
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))))
+  (comment)
+  (statement
+    (binary_expression
+      (binary_expression
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (float))
+        (operator)
+        (int))
+      (operator)
+      (int)))
+  (comment)
+  (statement
+    (debug_print
+      (string)
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))))
+  (comment)
+  (statement
+    (debug_print
+      (string)
+      (array_identifier
+        (variable_identifier)
+        (int))
+      (array_identifier
+        (variable_identifier)
+        (int))
+      (array_identifier
+        (variable_identifier)
+        (int))))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (debug_print
+      (string)
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))))
+  (statement
+    (binary_expression
+      (binary_expression
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (int))
+        (operator)
+        (int))
+      (operator)
+      (int)))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (int)))
+  (comment)
+  (statement
+    (debug_print
+      (string)))
+  (for_loop
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier))))
+    (increment_expression
+      (variable_identifier))
+    (block
+      (statement
+        (debug_print
+          (string)
+          (variable_identifier)
+          (string)
+          (array_identifier
+            (variable_identifier)
+            (variable_identifier)))))))

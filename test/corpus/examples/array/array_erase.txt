@@ -1,0 +1,127 @@
+===========
+Array erase
+===========
+
+// name: array_erase.ck
+// desc: shows array.erase()
+//
+// requires: chuck-1.5.0.8 or higher
+
+// create zero-length array
+int a[0];
+
+// print size
+<<< "size (before append):", a.size() >>>;
+
+// append
+a << 1 << 2 << 3 << 5 << 8;
+
+// print size
+<<< "size (after append):", a.size() >>>;
+
+// erase 5th element
+a.erase( 4 );
+// erase front
+a.popFront();
+
+// print size
+<<< "size (after erase and popFront):", a.size() >>>;
+
+// print contents
+for( int i; i < a.size(); i++ )
+{
+    <<< i, ":", a[i] >>>;
+}
+
+
+---
+
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)
+        (int))))
+  (comment)
+  (statement
+    (debug_print
+      (string)
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))))
+  (comment)
+  (statement
+    (binary_expression
+      (binary_expression
+        (binary_expression
+          (binary_expression
+            (binary_expression
+              (variable_identifier)
+              (operator)
+              (int))
+            (operator)
+            (int))
+          (operator)
+          (int))
+        (operator)
+        (int))
+      (operator)
+      (int)))
+  (comment)
+  (statement
+    (debug_print
+      (string)
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (int)))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (debug_print
+      (string)
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))))
+  (comment)
+  (for_loop
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier))))
+    (increment_expression
+      (variable_identifier))
+    (block
+      (statement
+        (debug_print
+          (variable_identifier)
+          (string)
+          (array_identifier
+            (variable_identifier)
+            (variable_identifier)))))))

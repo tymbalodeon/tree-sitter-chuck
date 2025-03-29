@@ -1,0 +1,144 @@
+=================
+Array associative
+=================
+
+// declare regular array (capacity doesn't matter so much)
+float foo[4];
+
+// use as int-based array
+2.5 => foo[0];
+
+// use as associative array with key "yoyo"
+4.0 => foo["yoyo"];
+
+// access as associative (print)
+<<< foo["yoyo"] >>>;
+
+// access empty element
+<<< foo["gaga"] >>>;  // -> should print 0.0
+
+// add a second associative element
+44.0 => foo["yiyi"];
+
+// get the array keys with all of the keys in the array
+string keys[0];
+foo.getKeys(keys);
+
+// print all keys current in foo
+for( auto key : keys )
+{
+    <<< "key:", key >>>;
+}
+
+// isInMap
+<<< "(isInMap?)",
+    "\nyiyi:", foo.isInMap("yiyi"),
+    "\nyoyo:", foo.isInMap("yoyo"),
+    "\ngaga:", foo.isInMap("gaga"),
+    "\nNONO:", foo.isInMap("NONO") >>>;
+
+// call .help() on an array to get more information about its type, methods, etc.
+// foo.help();
+
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)
+        (int))))
+  (comment)
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (int))))
+  (comment)
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (string))))
+  (comment)
+  (statement
+    (debug_print
+      (array_identifier
+        (variable_identifier)
+        (string))))
+  (comment)
+  (statement
+    (debug_print
+      (array_identifier
+        (variable_identifier)
+        (string))))
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (string))))
+  (comment)
+  (statement
+    (array_declaration
+      (reference_type)
+      (array_identifier
+        (variable_identifier)
+        (int))))
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (variable_identifier)))
+  (comment)
+  (for_each_loop
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (variable_identifier)
+    (block
+      (statement
+        (debug_print
+          (string)
+          (variable_identifier)))))
+  (comment)
+  (statement
+    (debug_print
+      (string)
+      (string)
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier))
+        (string))
+      (string)
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier))
+        (string))
+      (string)
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier))
+        (string))
+      (string)
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier))
+        (string))))
+  (comment)
+  (comment))

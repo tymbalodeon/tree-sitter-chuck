@@ -1,0 +1,120 @@
+=============
+Array reverse
+=============
+
+// example reversing the order of an array
+// version: need chuck-1.5.0.0 or higher
+
+// an array
+[1,2,3,4,5] @=> int a[];
+
+// print array in-order
+print_arr(a);
+
+// reverse
+a.reverse();
+
+// print reversed order
+print_arr(a);
+
+// return to original order
+a.reverse();
+print_arr(a);
+
+
+fun void print_arr(int a[]) {
+    for (0 => int i; i < a.size(); i++) {
+        cherr <= a[i] <= " "; 
+    }
+    cherr <= IO.nl();
+}
+
+
+---
+
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (array
+        (int)
+        (int)
+        (int)
+        (int)
+        (int))
+      (chuck_operator)
+      (array_declaration
+        (primitive_type)
+        (array_identifier
+          (variable_identifier)))))
+  (comment)
+  (statement
+    (function_call
+      (variable_identifier)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (function_call
+      (variable_identifier)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (statement
+    (function_call
+      (variable_identifier)
+      (variable_identifier)))
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)))
+    (block
+      (for_loop
+        (chuck_operation
+          (int)
+          (chuck_operator)
+          (variable_declaration
+            (primitive_type)
+            (variable_identifier)))
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (function_call
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier))))
+        (increment_expression
+          (variable_identifier))
+        (block
+          (statement
+            (binary_expression
+              (binary_expression
+                (variable_identifier)
+                (operator)
+                (array_identifier
+                  (variable_identifier)
+                  (variable_identifier)))
+              (operator)
+              (string)))))
+      (statement
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (function_call
+            (member_identifier
+              (class_identifier)
+              (variable_identifier))))))))

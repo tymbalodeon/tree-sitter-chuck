@@ -1,0 +1,58 @@
+=============
+Array storage
+=============
+
+// multi-dimensional array
+int a[2][2][2];
+// assignment
+4 => a[0][0][1];
+// access
+a[0][0][1] => int b;
+
+// test
+if ( b == 4 ) <<<"success">>>;
+
+
+---
+
+(source_file
+  (comment)
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)
+        (int)
+        (int)
+        (int))))
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (int)
+        (int)
+        (int))))
+  (comment)
+  (statement
+    (chuck_operation
+      (array_identifier
+        (variable_identifier)
+        (int)
+        (int)
+        (int))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (conditional
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (statement
+      (debug_print
+        (string)))))

@@ -1,0 +1,72 @@
+===========
+Overloading
+===========
+
+// funk( int )
+fun int add(int x)
+{
+    return x + x;
+}
+
+// funk( int, int )
+fun int add(int x, int y)
+{
+    return x + y;
+}
+
+// compiler automatically choose the right one to call
+add( 1 ) => int foo;
+add( 1, 2 ) => int bar;
+
+---
+
+(source_file
+  (comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (block
+      (statement
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (variable_identifier)))))
+  (comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (block
+      (statement
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (variable_identifier)))))
+  (comment)
+  (statement
+    (chuck_operation
+      (function_call
+        (variable_identifier)
+        (int))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (statement
+    (chuck_operation
+      (function_call
+        (variable_identifier)
+        (int)
+        (int))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))))

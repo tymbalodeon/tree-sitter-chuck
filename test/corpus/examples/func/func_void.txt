@@ -1,0 +1,18 @@
+=========
+Func void
+=========
+
+// chucking ()
+
+fun void foo() { <<< "hi!" >>>; }
+
+// call foo
+foo();
+
+// call foo
+() => foo;
+
+
+---
+
+(source_file)

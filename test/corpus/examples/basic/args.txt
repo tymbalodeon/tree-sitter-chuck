@@ -1,0 +1,50 @@
+====
+Args
+====
+
+// shows getting command line arguments
+//    (example run: chuck args:1:2:foo)
+
+// print number of args
+<<< "number of arguments:", me.args() >>>;
+
+// print each
+for( int i; i < me.args(); i++ )
+{
+    <<< "   ", me.arg(i) >>>;
+}
+
+
+---
+
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (debug_print
+      (string)
+      (function_call
+        (member_identifier
+          (variable_identifier)))))
+  (comment)
+  (for_loop
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (function_call
+        (member_identifier
+          (variable_identifier))))
+    (increment_expression
+      (variable_identifier))
+    (block
+      (statement
+        (debug_print
+          (string)
+          (function_call
+            (member_identifier
+              (variable_identifier))
+            (variable_identifier)))))))

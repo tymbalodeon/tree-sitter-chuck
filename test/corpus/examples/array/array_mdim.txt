@@ -1,0 +1,107 @@
+==========
+Array mdim
+==========
+
+// multi-dimensional array instantiation (15.ck)
+
+// delcare int array 2x2x2
+int a[2][2][2];
+// delcare float array 2x2x2
+float b[2][2][2];
+// assign
+5 => a[1][1][1] => b[1][1][1];
+
+// multi-dimensional array initialization
+[ [1,2], [3,4] ] @=> int c[][];
+
+// test
+if( a[1][1][1] == 5 && b[1][1][1] == 5.0 && c[0][1] == 2 )
+    <<<"success">>>;
+
+
+---
+
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)
+        (int)
+        (int)
+        (int))))
+  (comment)
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)
+        (int)
+        (int)
+        (int))))
+  (comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (int)
+        (chuck_operator)
+        (array_identifier
+          (variable_identifier)
+          (int)
+          (int)
+          (int)))
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (int)
+        (int)
+        (int))))
+  (comment)
+  (statement
+    (chuck_operation
+      (array
+        (array
+          (int)
+          (int))
+        (array
+          (int)
+          (int)))
+      (chuck_operator)
+      (array_declaration
+        (primitive_type)
+        (array_identifier
+          (variable_identifier)))))
+  (comment)
+  (conditional
+    (binary_expression
+      (binary_expression
+        (binary_expression
+          (binary_expression
+            (binary_expression
+              (array_identifier
+                (variable_identifier)
+                (int)
+                (int)
+                (int))
+              (operator)
+              (int))
+            (operator)
+            (array_identifier
+              (variable_identifier)
+              (int)
+              (int)
+              (int)))
+          (operator)
+          (float))
+        (operator)
+        (array_identifier
+          (variable_identifier)
+          (int)
+          (int)))
+      (operator)
+      (int))
+    (statement
+      (debug_print
+        (string)))))

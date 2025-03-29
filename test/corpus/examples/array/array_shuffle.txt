@@ -1,0 +1,161 @@
+=============
+Array shuffle
+=============
+
+// name: array_shuffle.ck
+// desc: shuffling the contents of an array; useful for tasks like random without replacement
+// author: kunwoo, nshaheed, andrew, ge | 1.5.0.0
+
+// an array
+[1,2,3,4,5] @=> int a[];
+
+// uncomment to print array API
+// a.help();
+// uncomment to explicitly set a random seed
+// Math.srandom(11);
+
+// shuffle a few times
+repeat( 10 )
+{
+    // print
+    for( int i; i < a.size(); i++ )
+    { cherr <= a[i] <= " "; } cherr <= IO.nl();
+    // shuffle!
+    a.shuffle();
+}
+
+// one way to do random without replacement
+repeat( 3 )
+{
+    cherr <= "--- random without replacment --- " <= IO.nl();
+    // shuffle!
+    a.shuffle();
+    // just go through array in order after shuffle
+    for( int i; i < a.size(); i++ )
+    {
+        // print the next "random" value
+        cherr <= "next value: " <= a[i] <= IO.nl();
+    }
+}
+
+
+---
+
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (array
+        (int)
+        (int)
+        (int)
+        (int)
+        (int))
+      (chuck_operator)
+      (array_declaration
+        (primitive_type)
+        (array_identifier
+          (variable_identifier)))))
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (loop
+    (int)
+    (block
+      (comment)
+      (for_loop
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier))
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (function_call
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier))))
+        (increment_expression
+          (variable_identifier))
+        (block
+          (statement
+            (binary_expression
+              (binary_expression
+                (variable_identifier)
+                (operator)
+                (array_identifier
+                  (variable_identifier)
+                  (variable_identifier)))
+              (operator)
+              (string)))))
+      (statement
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (function_call
+            (member_identifier
+              (class_identifier)
+              (variable_identifier)))))
+      (comment)
+      (statement
+        (function_call
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))))
+  (comment)
+  (loop
+    (int)
+    (block
+      (statement
+        (binary_expression
+          (binary_expression
+            (variable_identifier)
+            (operator)
+            (string))
+          (operator)
+          (function_call
+            (member_identifier
+              (class_identifier)
+              (variable_identifier)))))
+      (comment)
+      (statement
+        (function_call
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (comment)
+      (for_loop
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier))
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (function_call
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier))))
+        (increment_expression
+          (variable_identifier))
+        (block
+          (comment)
+          (statement
+            (binary_expression
+              (binary_expression
+                (binary_expression
+                  (variable_identifier)
+                  (operator)
+                  (string))
+                (operator)
+                (array_identifier
+                  (variable_identifier)
+                  (variable_identifier)))
+              (operator)
+              (function_call
+                (member_identifier
+                  (class_identifier)
+                  (variable_identifier))))))))))

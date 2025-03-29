@@ -1,0 +1,78 @@
+================
+Array sub assign
+================
+
+// multi-dimensional array
+// array to array assignment
+
+int a[2][2][2];
+int b[2][2];
+// assignment
+1 => b[0][1];
+2 => b[0][0];
+
+// assign b to 0th element of a
+b @=> a[0];
+
+// verify
+if ( a[0][0][1] == 1 ) <<<"success">>>;
+
+
+---
+
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)
+        (int)
+        (int)
+        (int))))
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)
+        (int)
+        (int))))
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (int)
+        (int))))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (int)
+        (int))))
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_identifier)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (int))))
+  (comment)
+  (conditional
+    (binary_expression
+      (array_identifier
+        (variable_identifier)
+        (int)
+        (int)
+        (int))
+      (operator)
+      (int))
+    (statement
+      (debug_print
+        (string)))))
