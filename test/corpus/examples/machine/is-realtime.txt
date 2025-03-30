@@ -12,4 +12,24 @@ Is realtime
 
 ---
 
-(source_file)
+(source_file
+  (statement
+    (debug_print
+      (string)
+      (ternary_expression
+        (function_call
+          (member_identifier
+            (class_identifier)
+            (variable_identifier)))
+        (string)
+        (string))))
+  (statement
+    (debug_print
+      (string)
+      (ternary_expression
+        (function_call
+          (member_identifier
+            (class_identifier)
+            (variable_identifier)))
+        (string)
+        (string)))))

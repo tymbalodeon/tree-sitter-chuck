@@ -29,4 +29,57 @@ for( int x[] : array )
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (reference_type)
+        (int)
+        (int))))
+  (comment)
+  (statement
+    (binary_expression
+      (binary_expression
+        (array_identifier
+          (reference_type)
+          (int))
+        (operator)
+        (int))
+      (operator)
+      (int)))
+  (statement
+    (binary_expression
+      (binary_expression
+        (array_identifier
+          (reference_type)
+          (int))
+        (operator)
+        (int))
+      (operator)
+      (int)))
+  (comment)
+  (for_each_loop
+    (array_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier)))
+    (reference_type)
+    (block
+      (comment)
+      (for_each_loop
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier))
+        (variable_identifier)
+        (block
+          (statement
+            (debug_print
+              (variable_identifier))))))))

@@ -962,6 +962,10 @@
         {
           "type": "SYMBOL",
           "name": "string"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "ternary_expression"
         }
       ]
     },
@@ -1124,8 +1128,17 @@
             "type": "SEQ",
             "members": [
               {
-                "type": "SYMBOL",
-                "name": "variable_declaration"
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "array_declaration"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "variable_declaration"
+                  }
+                ]
               },
               {
                 "type": "STRING",
@@ -1140,19 +1153,11 @@
                   },
                   {
                     "type": "SYMBOL",
-                    "name": "array_identifier"
+                    "name": "_identifier"
                   },
                   {
                     "type": "SYMBOL",
                     "name": "member_identifier"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "reference_type"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "variable_identifier"
                   }
                 ]
               }
@@ -1910,6 +1915,10 @@
         },
         {
           "type": "STRING",
+          "value": "vec2"
+        },
+        {
+          "type": "STRING",
           "value": "vec3"
         },
         {
@@ -2129,6 +2138,35 @@
           "value": "\""
         }
       ]
+    },
+    "ternary_expression": {
+      "type": "PREC_LEFT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_expression"
+          },
+          {
+            "type": "STRING",
+            "value": "?"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_expression"
+          },
+          {
+            "type": "STRING",
+            "value": ":"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_expression"
+          }
+        ]
+      }
     },
     "_type": {
       "type": "SEQ",

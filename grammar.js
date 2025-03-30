@@ -210,6 +210,7 @@ module.exports = grammar({
         $.reference_values,
         $.spork_expression,
         $.string,
+        $.ternary_expression,
       ),
 
     expression_group: ($) =>
@@ -243,15 +244,9 @@ module.exports = grammar({
           "for",
           "(",
           seq(
-            $.variable_declaration,
+            choice($.array_declaration, $.variable_declaration),
             ":",
-            choice(
-              $.array,
-              $.array_identifier,
-              $.member_identifier,
-              $.reference_type,
-              $.variable_identifier,
-            ),
+            choice($.array, $._identifier, $.member_identifier),
           ),
           ")",
           $._control_structure_body,
@@ -392,6 +387,7 @@ module.exports = grammar({
         "polar",
         "same",
         "time",
+        "vec2",
         "vec3",
         "vec4",
         "void",
@@ -431,6 +427,9 @@ module.exports = grammar({
       const delimeter = '"';
       return seq(delimeter, optional(/[^"]*/), delimeter);
     },
+
+    ternary_expression: ($) =>
+      prec.left(seq($._expression, "?", $._expression, ":", $._expression)),
 
     _type: ($) =>
       seq(

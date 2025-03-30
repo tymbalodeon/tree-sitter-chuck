@@ -23,7 +23,9 @@ parse +file:
         | get name
     )
 
-    let file = if ("{{ file }}" | is-not-empty) {
+    let file = if ("{{ file }}" | path exists) {
+        "{{ file }}"
+    } else if ("{{ file }}" | is-not-empty) {
         try {
             let files = (
                 $files
