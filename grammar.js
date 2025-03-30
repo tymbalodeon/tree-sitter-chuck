@@ -148,13 +148,18 @@ module.exports = grammar({
     complex: ($) => seq("#(", $._expression, ",", $._expression, ")"),
 
     conditional: ($) =>
-      seq(
-        "if",
-        "(",
-        $._expression,
-        ")",
-        $._control_structure_body,
-        optional(seq("else", $._control_structure_body)),
+      prec(
+        1,
+        seq(
+          "if",
+          "(",
+          $._expression,
+          ")",
+          $._control_structure_body,
+          optional(
+            seq("else", choice($.conditional, $._control_structure_body)),
+          ),
+        ),
       ),
 
     _control_structure: ($) =>
@@ -228,7 +233,9 @@ module.exports = grammar({
       seq(
         "for",
         "(",
-        choice($.chuck_operation, $.variable_declaration),
+        optional(
+          choice($.chuck_operation, $._identifier, $.variable_declaration),
+        ),
         ";",
         $.binary_expression,
         ";",
