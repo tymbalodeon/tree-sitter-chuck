@@ -539,6 +539,10 @@
           "members": [
             {
               "type": "SYMBOL",
+              "name": "array_identifier"
+            },
+            {
+              "type": "SYMBOL",
               "name": "class_identifier"
             },
             {

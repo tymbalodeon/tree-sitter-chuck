@@ -942,6 +942,10 @@
       "required": true,
       "types": [
         {
+          "type": "array_identifier",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },

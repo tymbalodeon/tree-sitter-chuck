@@ -114,6 +114,7 @@ module.exports = grammar({
       seq(
         "new",
         choice(
+          $.array_identifier,
           $.class_identifier,
           $.function_call,
           $._function_call_chain,
