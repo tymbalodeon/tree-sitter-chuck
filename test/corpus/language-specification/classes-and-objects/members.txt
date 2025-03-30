@@ -180,7 +180,8 @@ string arr( "foo" )[10];
   (statement
     (array_declaration
       (reference_type)
-      (function_call
-        (variable_identifier)
-        (string))
-      (int))))
+      (array_identifier
+        (function_call
+          (variable_identifier)
+          (string))
+        (int)))))

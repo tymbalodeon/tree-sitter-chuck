@@ -28,26 +28,27 @@ module.exports = grammar({
 
     array: ($) => seq("[", $._expression_list, "]"),
 
-    array_declaration: ($) => {
-      const identifier = choice(
-        $.array_identifier,
+    array_declaration: ($) =>
+      prec.left(
         seq(
-          choice($.function_call, $._function_call_chain),
-          "[",
-          optional($._expression),
-          "]",
+          $._type,
+          seq($.array_identifier, repeat(seq(",", $.array_identifier))),
         ),
-      );
-
-      return prec.left(
-        seq($._type, seq(identifier, repeat(seq(",", identifier)))),
-      );
-    },
+      ),
 
     array_identifier: ($) =>
-      seq(
-        choice($.class_identifier, $.reference_type, $.variable_identifier),
-        repeat1(seq("[", optional($._expression), "]")),
+      prec(
+        1,
+        seq(
+          choice(
+            $.class_identifier,
+            $.function_call,
+            $._function_call_chain,
+            $.reference_type,
+            $.variable_identifier,
+          ),
+          repeat1(seq("[", optional($._expression), "]")),
+        ),
       ),
 
     binary_expression: ($) =>
@@ -267,7 +268,7 @@ module.exports = grammar({
       ),
 
     _function_call_chain: ($) =>
-      seq($.function_call, repeat1(seq(".", $.function_call))),
+      seq($.function_call, repeat1(prec.left(seq(".", $.function_call)))),
 
     function_definition: ($) =>
       seq(
