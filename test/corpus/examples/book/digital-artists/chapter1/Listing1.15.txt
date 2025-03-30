@@ -22,4 +22,54 @@ if ( (chance < 2) && (chance2 >= 6))  // If chance is less than 2, and
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (conditional
+    (binary_expression
+      (expression_group
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (int)))
+      (operator)
+      (expression_group
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (int))))
+    (comment)
+    (block
+      (comment)
+      (comment)))
+  (conditional
+    (binary_expression
+      (expression_group
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (int)))
+      (operator)
+      (expression_group
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (int))))
+    (comment)
+    (block
+      (comment)
+      (comment))))

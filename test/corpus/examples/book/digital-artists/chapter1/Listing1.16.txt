@@ -23,4 +23,42 @@ for (0 => int i; i < 4; i++)        // Begin for structure
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (for_loop
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (increment_expression
+      (variable_identifier))
+    (comment)
+    (block
+      (comment)
+      (comment)
+      (statement
+        (debug_print
+          (variable_identifier)))
+      (comment)
+      (statement
+        (chuck_operation
+          (keyword
+            (duration_identifier))
+          (chuck_operator)
+          (keyword
+            (special_literal_value))))
+      (comment)))
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment))

@@ -7,5 +7,5 @@ Filename resolution
 ---
 
 (source_file
- (import_expression
-  (string)))
+  (import_expression
+    (string)))

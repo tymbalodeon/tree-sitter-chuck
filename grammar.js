@@ -8,6 +8,7 @@
 // @ts-check
 
 module.exports = grammar({
+  extras: ($) => [/\s/, $.comment],
   name: "chuck",
 
   rules: {

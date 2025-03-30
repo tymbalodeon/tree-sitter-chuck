@@ -19,4 +19,52 @@ for (20 => int i; i < 400; i++) // (1) For loop from 20 to 399
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (comment)
+  (for_loop
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (increment_expression
+      (variable_identifier))
+    (comment)
+    (block
+      (statement
+        (debug_print
+          (variable_identifier)))
+      (comment)
+      (statement
+        (chuck_operation
+          (variable_identifier)
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (comment)
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword
+            (special_literal_value))))
+      (comment))))

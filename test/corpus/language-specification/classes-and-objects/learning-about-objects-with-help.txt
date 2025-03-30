@@ -9,8 +9,8 @@ SinOsc.help();
 ---
 
 (source_file
- (comment)
- (comment)
+  (comment)
+  (comment)
   (statement
     (function_call
       (member_identifier

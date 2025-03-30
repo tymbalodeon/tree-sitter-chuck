@@ -14,4 +14,31 @@ Listing3.7
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (array
+        (string)
+        (string)
+        (string)
+        (string)
+        (string)
+        (string)
+        (string)
+        (comment)
+        (string)
+        (string)
+        (string)
+        (string)
+        (string)
+        (string)
+        (string))
+      (chuck_operator)
+      (array_declaration
+        (reference_type)
+        (array_identifier
+          (variable_identifier)))))
+  (comment))
