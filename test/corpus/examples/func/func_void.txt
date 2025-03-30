@@ -15,4 +15,22 @@ foo();
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (block
+      (statement
+        (debug_print
+          (string)))))
+  (comment)
+  (statement
+    (function_call
+      (variable_identifier)))
+  (comment)
+  (statement
+    (chuck_operation
+      (expression_group)
+      (chuck_operator)
+      (variable_identifier))))

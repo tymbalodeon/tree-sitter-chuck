@@ -29,4 +29,40 @@ if( x == 8 ) <<< "success" >>>;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (loop
+    (int)
+    (block
+      (statement
+        (increment_expression
+          (variable_identifier)))))
+  (comment)
+  (comment)
+  (loop
+    (variable_identifier)
+    (block
+      (comment)
+      (comment)
+      (comment)
+      (statement
+        (increment_expression
+          (variable_identifier)))))
+  (comment)
+  (conditional
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (statement
+      (debug_print
+        (string)))))

@@ -18,4 +18,42 @@ while( now < later )
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (binary_expression
+        (dur
+          (int)
+          (duration_identifier))
+        (operator)
+        (keyword
+          (special_literal_value)))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (loop
+    (binary_expression
+      (keyword
+        (special_literal_value))
+      (operator)
+      (variable_identifier))
+    (block
+      (statement
+        (debug_print
+          (keyword
+            (special_literal_value))))
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword
+            (special_literal_value))))))
+  (statement
+    (debug_print
+      (keyword
+        (special_literal_value)))))

@@ -23,4 +23,57 @@ while( true )
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (string)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (loop
+    (keyword
+      (boolean_literal_value))
+    (block
+      (comment)
+      (statement
+        (chuck_operation
+          (int)
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (comment)
+      (statement
+        (chuck_operation
+          (function_call
+            (member_identifier
+              (class_identifier)
+              (variable_identifier))
+            (float)
+            (float))
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (comment)
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword
+            (special_literal_value)))))))

@@ -17,4 +17,35 @@ foo( 2 );
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (block
+      (statement
+        (debug_print
+          (string)))))
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (block
+      (statement
+        (function_call
+          (variable_identifier)
+          (variable_identifier)
+          (variable_identifier)))))
+  (comment)
+  (statement
+    (function_call
+      (variable_identifier)
+      (int))))

@@ -16,4 +16,22 @@ if( maybe ) <<< "get Chinese!", "" >>>;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (conditional
+    (keyword
+      (special_literal_value))
+    (statement
+      (debug_print
+        (string)
+        (string)))
+    (statement
+      (debug_print
+        (string)
+        (string)))))

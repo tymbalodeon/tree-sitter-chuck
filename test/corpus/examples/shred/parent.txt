@@ -25,4 +25,48 @@ me.yield();
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (debug_print
+      (string)
+      (function_call
+        (member_identifier
+          (variable_identifier)))))
+  (statement
+    (debug_print
+      (string)
+      (function_call
+        (member_identifier
+          (variable_identifier)))))
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (block
+      (comment)
+      (statement
+        (debug_print
+          (string)
+          (function_call
+            (member_identifier
+              (variable_identifier)))))
+      (statement
+        (debug_print
+          (string)
+          (function_call
+            (member_identifier
+              (variable_identifier)))
+          (function_call
+            (variable_identifier))))))
+  (comment)
+  (statement
+    (spork_expression
+      (function_call
+        (variable_identifier))))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)))))

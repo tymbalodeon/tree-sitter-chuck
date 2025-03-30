@@ -17,4 +17,51 @@ for (0 => int i; i < 23; i++) {
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (for_loop
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (increment_expression
+      (variable_identifier))
+    (block
+      (statement
+        (chuck_operation
+          (variable_identifier)
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (statement
+        (chuck_operation
+          (int)
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (statement
+        (chuck_operation
+          (dur
+            (float)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword
+            (special_literal_value)))))))

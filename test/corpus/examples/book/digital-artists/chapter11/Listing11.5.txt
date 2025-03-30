@@ -19,4 +19,57 @@ while(true)
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (int)
+      (member_identifier
+        (class_identifier)
+        (class_identifier))
+      (member_identifier
+        (class_identifier)
+        (class_identifier))))
+  (comment)
+  (loop
+    (keyword
+      (boolean_literal_value))
+    (block
+      (statement
+        (chuck_operation
+          (function_call
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier)))
+          (chuck_operator)
+          (keyword
+            (special_literal_value))))
+      (comment)
+      (statement
+        (chuck_operation
+          (function_call
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier)))
+          (chuck_operator)
+          (variable_declaration
+            (reference_type)
+            (variable_identifier))))
+      (comment)
+      (statement
+        (binary_expression
+          (binary_expression
+            (variable_identifier)
+            (operator)
+            (string))
+          (operator)
+          (variable_identifier)))
+      (comment))))

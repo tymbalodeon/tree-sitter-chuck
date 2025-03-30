@@ -16,4 +16,29 @@ i++ => int j;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (increment_expression
+        (variable_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (debug_print
+      (variable_identifier)))
+  (statement
+    (debug_print
+      (variable_identifier))))

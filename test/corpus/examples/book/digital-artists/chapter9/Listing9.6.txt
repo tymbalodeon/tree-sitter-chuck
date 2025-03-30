@@ -21,4 +21,66 @@ while (freq < 800)
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (int)))
+  (comment)
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (loop
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (block
+      (statement
+        (chuck_operation
+          (variable_identifier)
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (statement
+        (chuck_operation
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))
+          (chuck_operator)
+          (keyword
+            (special_literal_value))))
+      (statement
+        (chuck_operation
+          (int)
+          (chuck_operator)
+          (variable_identifier))))))

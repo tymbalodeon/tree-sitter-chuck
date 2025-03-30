@@ -23,4 +23,56 @@ myPitch / 2 => int lowerPitch;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (binary_expression
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (variable_identifier))
+        (operator)
+        (int))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (binary_expression
+        (int)
+        (operator)
+        (variable_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (binary_expression
+        (variable_identifier)
+        (operator)
+        (int))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (debug_print
+      (variable_identifier)
+      (variable_identifier)
+      (variable_identifier)
+      (variable_identifier))))

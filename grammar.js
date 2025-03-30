@@ -410,13 +410,18 @@ module.exports = grammar({
 
     statement: ($) =>
       seq(
-        optional("return"),
         choice(
-          $.chuck_operation,
-          $._expression,
-          $._expression_list,
-          $.function_definition,
-          $.overload_definition,
+          "return",
+          seq(
+            optional("return"),
+            choice(
+              $.chuck_operation,
+              $._expression,
+              $._expression_list,
+              $.function_definition,
+              $.overload_definition,
+            ),
+          ),
         ),
         ";",
       ),

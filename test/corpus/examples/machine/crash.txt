@@ -10,4 +10,11 @@ Machine.crash();
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (class_identifier)
+        (variable_identifier))))
+  (comment))

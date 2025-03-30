@@ -17,4 +17,35 @@ myPitch - 110 => myPitch;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (statement
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (chuck_operation
+      (binary_expression
+        (int)
+        (operator)
+        (variable_identifier))
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (chuck_operation
+      (binary_expression
+        (variable_identifier)
+        (operator)
+        (int))
+      (chuck_operator)
+      (variable_identifier)))
+  (statement
+    (debug_print
+      (variable_identifier))))

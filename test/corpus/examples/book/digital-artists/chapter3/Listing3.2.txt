@@ -12,4 +12,43 @@ Listing3.2
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (array
+        (int)
+        (int)
+        (int)
+        (int)
+        (int)
+        (int)
+        (int))
+      (chuck_operator)
+      (array_declaration
+        (primitive_type)
+        (array_identifier
+          (variable_identifier)))))
+  (statement
+    (debug_print
+      (array_identifier
+        (variable_identifier)
+        (int))
+      (array_identifier
+        (variable_identifier)
+        (int))
+      (array_identifier
+        (variable_identifier)
+        (int))
+      (array_identifier
+        (variable_identifier)
+        (int))
+      (array_identifier
+        (variable_identifier)
+        (int))
+      (array_identifier
+        (variable_identifier)
+        (int))
+      (array_identifier
+        (variable_identifier)
+        (int)))))

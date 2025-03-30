@@ -20,4 +20,53 @@ interval(67,60) => int int2;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (block
+      (statement
+        (chuck_operation
+          (binary_expression
+            (variable_identifier)
+            (operator)
+            (variable_identifier))
+          (chuck_operator)
+          (variable_declaration
+            (primitive_type)
+            (variable_identifier))))
+      (statement
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (function_call
+        (variable_identifier)
+        (int)
+        (int))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (statement
+    (chuck_operation
+      (function_call
+        (variable_identifier)
+        (int)
+        (int))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (statement
+    (debug_print
+      (variable_identifier)
+      (variable_identifier))))

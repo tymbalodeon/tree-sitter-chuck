@@ -18,4 +18,45 @@ if( j == 5 ) <<<"success">>>;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (statement
+    (do_loop
+      (block
+        (statement
+          (chuck_operation
+            (int)
+            (chuck_operator)
+            (variable_identifier)))
+        (statement
+          (chuck_operation
+            (int)
+            (chuck_operator)
+            (variable_identifier))))
+      (binary_expression
+        (variable_identifier)
+        (operator)
+        (int))))
+  (comment)
+  (conditional
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (statement
+      (debug_print
+        (string)))))

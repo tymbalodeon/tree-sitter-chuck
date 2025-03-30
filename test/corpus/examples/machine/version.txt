@@ -8,4 +8,22 @@ cherr <= "chuck version: " <= Machine.version() <= IO.nl();
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (statement
+    (binary_expression
+      (binary_expression
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (string))
+        (operator)
+        (function_call
+          (member_identifier
+            (class_identifier)
+            (variable_identifier))))
+      (operator)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))))))

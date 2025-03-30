@@ -18,4 +18,51 @@ second => now;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (member_identifier
+        (global_unit_generator)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (member_identifier
+        (global_unit_generator)
+        (variable_identifier))))
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (keyword
+        (duration_identifier))
+      (chuck_operator)
+      (keyword
+        (special_literal_value)))))

@@ -16,4 +16,29 @@ Listing1.7Shorthand
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (debug_print
+      (variable_identifier))))

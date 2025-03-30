@@ -15,4 +15,44 @@ while( true ) 1::second => now;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (keyword
+          (global_unit_generator))
+        (chuck_operator)
+        (variable_declaration
+          (class_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (dur
+          (float)
+          (duration_identifier))
+        (chuck_operator)
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (comment)
+  (loop
+    (keyword
+      (boolean_literal_value))
+    (statement
+      (chuck_operation
+        (dur
+          (int)
+          (duration_identifier))
+        (chuck_operator)
+        (keyword
+          (special_literal_value))))))

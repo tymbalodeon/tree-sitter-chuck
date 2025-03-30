@@ -19,4 +19,24 @@ for( int x : [ 1, 2, 3 ] )
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (for_each_loop
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (array
+      (int)
+      (int)
+      (int))
+    (block
+      (comment)
+      (statement
+        (debug_print
+          (variable_identifier))))))

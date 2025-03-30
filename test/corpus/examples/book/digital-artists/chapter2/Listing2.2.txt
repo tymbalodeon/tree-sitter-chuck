@@ -17,4 +17,30 @@ while (true)
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (loop
+    (keyword
+      (boolean_literal_value))
+    (block
+      (statement
+        (debug_print
+          (string)
+          (function_call
+            (member_identifier
+              (class_identifier)
+              (variable_identifier))
+            (int)
+            (int))))
+      (statement
+        (chuck_operation
+          (binary_expression
+            (keyword
+              (duration_identifier))
+            (operator)
+            (int))
+          (chuck_operator)
+          (keyword
+            (special_literal_value)))))))

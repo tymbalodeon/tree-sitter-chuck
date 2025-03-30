@@ -20,4 +20,48 @@ if ( answer == 120 ) <<<"success">>>;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (block
+      (conditional
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (int))
+        (statement
+          (int))
+        (statement
+          (binary_expression
+            (variable_identifier)
+            (operator)
+            (function_call
+              (variable_identifier)
+              (binary_expression
+                (variable_identifier)
+                (operator)
+                (int))))))))
+  (comment)
+  (statement
+    (chuck_operation
+      (function_call
+        (variable_identifier)
+        (int))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (conditional
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (statement
+      (debug_print
+        (string)))))

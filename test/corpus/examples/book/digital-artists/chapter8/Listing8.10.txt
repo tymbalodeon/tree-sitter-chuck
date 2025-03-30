@@ -15,4 +15,28 @@ Machine.add(scorePath);  // (1) Adds score file for jazz band
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (binary_expression
+        (function_call
+          (member_identifier
+            (variable_identifier)))
+        (operator)
+        (string))
+      (chuck_operator)
+      (variable_declaration
+        (reference_type)
+        (variable_identifier))))
+  (statement
+    (function_call
+      (member_identifier
+        (class_identifier)
+        (variable_identifier))
+      (variable_identifier)))
+  (comment))

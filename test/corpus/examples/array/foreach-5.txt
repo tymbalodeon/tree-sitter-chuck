@@ -36,4 +36,61 @@ for( Osc x : array )
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (array_declaration
+      (class_identifier)
+      (array_identifier
+        (reference_type)
+        (int))))
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (for_each_loop
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier))
+    (reference_type)
+    (block
+      (comment)
+      (statement
+        (chuck_operation
+          (variable_identifier)
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (comment)
+      (statement
+        (chuck_operation
+          (int)
+          (chuck_operator)
+          (variable_identifier)))))
+  (comment)
+  (comment)
+  (for_each_loop
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier))
+    (reference_type)
+    (block
+      (comment)
+      (statement
+        (debug_print
+          (function_call
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier))))))))

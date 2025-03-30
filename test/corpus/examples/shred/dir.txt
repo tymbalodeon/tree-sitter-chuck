@@ -16,4 +16,38 @@ Dir
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (statement
+    (debug_print
+      (function_call
+        (member_identifier
+          (variable_identifier)))))
+  (comment)
+  (statement
+    (debug_print
+      (function_call
+        (member_identifier
+          (variable_identifier))
+        (int))))
+  (comment)
+  (statement
+    (debug_print
+      (function_call
+        (member_identifier
+          (variable_identifier))
+        (int))))
+  (comment)
+  (statement
+    (debug_print
+      (function_call
+        (member_identifier
+          (variable_identifier))
+        (int))))
+  (comment)
+  (statement
+    (debug_print
+      (function_call
+        (member_identifier
+          (variable_identifier))
+        (int)))))

@@ -12,4 +12,30 @@ Machine.add(me.dir()+"/MandoScore.ck");   // (2) ...then adds score, which does 
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (class_identifier)
+        (variable_identifier))
+      (binary_expression
+        (function_call
+          (member_identifier
+            (variable_identifier)))
+        (operator)
+        (string))))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (class_identifier)
+        (variable_identifier))
+      (binary_expression
+        (function_call
+          (member_identifier
+            (variable_identifier)))
+        (operator)
+        (string))))
+  (comment))

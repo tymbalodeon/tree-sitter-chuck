@@ -27,4 +27,54 @@ for( int f : foo )
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (array
+        (int)
+        (int)
+        (int))
+      (chuck_operator)
+      (array_declaration
+        (primitive_type)
+        (array_identifier
+          (variable_identifier)))))
+  (statement
+    (chuck_operation
+      (array
+        (int)
+        (int)
+        (int))
+      (chuck_operator)
+      (array_declaration
+        (primitive_type)
+        (array_identifier
+          (variable_identifier)))))
+  (comment)
+  (for_each_loop
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (variable_identifier)
+    (block
+      (comment)
+      (for_each_loop
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier))
+        (variable_identifier)
+        (block
+          (comment)
+          (statement
+            (debug_print
+              (binary_expression
+                (variable_identifier)
+                (operator)
+                (variable_identifier)))))))))

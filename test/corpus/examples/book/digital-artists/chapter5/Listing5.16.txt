@@ -25,4 +25,40 @@ fun int factorial( int x)
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (block
+      (conditional
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (int))
+        (block
+          (comment)
+          (statement
+            (int)))
+        (block
+          (comment)
+          (statement
+            (expression_group
+              (binary_expression
+                (variable_identifier)
+                (operator)
+                (function_call
+                  (variable_identifier)
+                  (binary_expression
+                    (variable_identifier)
+                    (operator)
+                    (int))))))))))
+  (comment)
+  (statement
+    (debug_print
+      (function_call
+        (variable_identifier)
+        (int)))))

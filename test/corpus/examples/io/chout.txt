@@ -17,4 +17,44 @@ cherr <= 1 <= " bar " <= 5.5 <= IO.newline();
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (binary_expression
+      (binary_expression
+        (binary_expression
+          (binary_expression
+            (variable_identifier)
+            (operator)
+            (int))
+          (operator)
+          (string))
+        (operator)
+        (float))
+      (operator)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier)))))
+  (comment)
+  (statement
+    (binary_expression
+      (binary_expression
+        (binary_expression
+          (binary_expression
+            (variable_identifier)
+            (operator)
+            (int))
+          (operator)
+          (string))
+        (operator)
+        (float))
+      (operator)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier)))))
+  (comment)
+  (comment))

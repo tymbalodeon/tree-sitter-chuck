@@ -13,4 +13,15 @@ Object obj;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (variable_declaration
+      (reference_type)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (debug_print
+      (variable_identifier))))

@@ -16,4 +16,20 @@ int myPitch;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (debug_print
+      (variable_identifier))))

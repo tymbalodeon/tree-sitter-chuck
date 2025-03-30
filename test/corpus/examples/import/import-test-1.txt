@@ -13,4 +13,27 @@ Foo a(1), b(2);
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (import_expression
+    (string))
+  (comment)
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (function_call
+        (variable_identifier)
+        (int)))
+    (function_call
+      (variable_identifier)
+      (int)))
+  (comment)
+  (statement
+    (debug_print
+      (member_identifier
+        (expression_group
+          (binary_expression
+            (variable_identifier)
+            (operator)
+            (variable_identifier)))
+        (variable_identifier)))))
