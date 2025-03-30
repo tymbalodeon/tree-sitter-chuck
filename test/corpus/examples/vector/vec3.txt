@@ -159,7 +159,8 @@ v.normalize();
         (variable_identifier)
         (variable_identifier)
         (reference_values
-          (int)
+          (negative_expression
+            (int))
           (int)
           (int)))
       (chuck_operator)

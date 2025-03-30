@@ -91,7 +91,8 @@ numSamples :: samp => now;  // Play for whole duration, but backward.
   (comment)
   (statement
     (chuck_operation
-      (float)
+      (negative_expression
+        (float))
       (chuck_operator)
       (member_identifier
         (variable_identifier)

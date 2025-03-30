@@ -110,7 +110,8 @@ repeat (10) {
               (member_identifier
                 (variable_identifier)
                 (variable_identifier)))
-            (float)
+            (negative_expression
+              (float))
             (float)
             (float)
             (float))

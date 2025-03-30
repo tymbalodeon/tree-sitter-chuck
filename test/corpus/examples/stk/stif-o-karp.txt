@@ -617,7 +617,8 @@ while( true )
                         (binary_expression
                           (variable_identifier)
                           (operator)
-                          (float))
+                          (negative_expression
+                            (float)))
                         (operator)
                         (variable_identifier))
                       (chuck_operator)

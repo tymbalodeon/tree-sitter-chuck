@@ -233,7 +233,8 @@ fun void bassLine( int note1, int note2, int thisManyTimes )
         (chuck_operation
           (binary_expression
             (binary_expression
-              (float)
+              (negative_expression
+                (float))
               (operator)
               (float))
             (operator)
@@ -466,7 +467,8 @@ fun void bassLine( int note1, int note2, int thisManyTimes )
               (variable_identifier)))
           (statement
             (chuck_operation
-              (int)
+              (negative_expression
+                (int))
               (chuck_operator)
               (variable_identifier)))))))
   (function_definition

@@ -175,7 +175,8 @@ fun void playPattern(int pat[])  {
         (chuck_operation
           (binary_expression
             (binary_expression
-              (float)
+              (negative_expression
+                (float))
               (operator)
               (float))
             (operator)

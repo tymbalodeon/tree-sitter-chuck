@@ -43,7 +43,8 @@ Dir
       (function_call
         (member_identifier
           (variable_identifier))
-        (int))))
+        (negative_expression
+          (int)))))
   (comment)
   (statement
     (debug_print

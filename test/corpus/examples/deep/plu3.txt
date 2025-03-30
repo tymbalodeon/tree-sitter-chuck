@@ -144,7 +144,8 @@ fun float polePos( float D, float omega )
   (comment)
   (statement
     (chuck_operation
-      (int)
+      (negative_expression
+        (int))
       (chuck_operator)
       (member_identifier
         (variable_identifier)

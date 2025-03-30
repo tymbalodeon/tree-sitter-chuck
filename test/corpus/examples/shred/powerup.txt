@@ -186,7 +186,8 @@ while( true )
                   (operator)
                   (variable_identifier))
                 (operator)
-                (float))
+                (negative_expression
+                  (float)))
               (chuck_operator)
               (member_identifier
                 (variable_identifier)

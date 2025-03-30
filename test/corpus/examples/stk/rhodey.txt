@@ -569,7 +569,8 @@ while( true )
                         (binary_expression
                           (variable_identifier)
                           (operator)
-                          (float))
+                          (negative_expression
+                            (float)))
                         (operator)
                         (expression_group
                           (binary_expression

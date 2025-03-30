@@ -684,7 +684,8 @@ fun LiSa load( string filename )
         (binary_expression
           (variable_identifier)
           (operator)
-          (int))
+          (negative_expression
+            (int)))
         (block
           (comment)
           (statement

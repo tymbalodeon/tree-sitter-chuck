@@ -985,7 +985,7 @@
     },
     "float": {
       "type": "PATTERN",
-      "value": "(\\d+)?\\.\\d+"
+      "value": "((\\d+)?\\.\\d+|\\d+\\.(\\d_)?)"
     },
     "for_loop": {
       "type": "SEQ",

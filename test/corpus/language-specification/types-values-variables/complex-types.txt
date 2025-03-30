@@ -32,7 +32,8 @@ Complex operation
     (chuck_operation
       (complex
         (int)
-        (float))
+        (negative_expression
+          (float)))
       (chuck_operator)
       (variable_declaration
         (primitive_type)

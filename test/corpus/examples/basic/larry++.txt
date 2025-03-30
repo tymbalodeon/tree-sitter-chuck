@@ -313,7 +313,8 @@ while( true )
                   (member_identifier
                     (class_identifier)
                     (variable_identifier))
-                  (float)
+                  (negative_expression
+                    (float))
                   (float))))
             (duration_identifier))
           (chuck_operator)

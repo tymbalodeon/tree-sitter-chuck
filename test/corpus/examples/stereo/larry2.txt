@@ -105,7 +105,8 @@ while( true )
             (member_identifier
               (class_identifier)
               (variable_identifier))
-            (int)
+            (negative_expression
+              (int))
             (int))
           (chuck_operator)
           (member_identifier

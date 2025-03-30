@@ -119,7 +119,8 @@ fun void chirp( float src, float target, dur duration, dur tinc )
   (comment)
   (statement
     (chuck_operation
-      (int)
+      (negative_expression
+        (int))
       (chuck_operator)
       (member_identifier
         (variable_identifier)
@@ -178,7 +179,8 @@ fun void chirp( float src, float target, dur duration, dur tinc )
         (member_identifier
           (class_identifier)
           (variable_identifier))
-        (int)
+        (negative_expression
+          (int))
         (int))
       (chuck_operator)
       (member_identifier
@@ -209,7 +211,8 @@ fun void chirp( float src, float target, dur duration, dur tinc )
         (member_identifier
           (class_identifier)
           (variable_identifier))
-        (int)
+        (negative_expression
+          (int))
         (int))
       (chuck_operator)
       (member_identifier

@@ -172,7 +172,8 @@ while( true ) {
             (member_identifier
               (class_identifier)
               (variable_identifier))
-            (int)
+            (negative_expression
+              (int))
             (int))
           (chuck_operator)
           (variable_declaration
@@ -184,7 +185,8 @@ while( true ) {
             (member_identifier
               (class_identifier)
               (variable_identifier))
-            (int)
+            (negative_expression
+              (int))
             (int))
           (chuck_operator)
           (variable_declaration
@@ -266,7 +268,8 @@ while( true ) {
                   (operator)
                   (variable_identifier))
                 (operator)
-                (float))
+                (negative_expression
+                  (float)))
               (chuck_operator)
               (variable_identifier)))
           (statement

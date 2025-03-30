@@ -344,7 +344,8 @@ while( true )
               (class_identifier)
               (variable_identifier)))
           (operator)
-          (float))
+          (negative_expression
+            (float)))
         (statement
           (chuck_operation
             (dur

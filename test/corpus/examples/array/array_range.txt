@@ -76,7 +76,8 @@ fun void print( int array[] )
         (member_identifier
           (class_identifier)
           (variable_identifier))
-        (int))))
+        (negative_expression
+          (int)))))
   (comment)
   (comment)
   (statement
@@ -97,6 +98,74 @@ fun void print( int array[] )
           (class_identifier)
           (variable_identifier))
         (int)
+        (negative_expression
+          (int)))))
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (function_call
+      (variable_identifier)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (negative_expression
+          (int))
+        (int)
+        (int))))
+  (comment)
+  (statement
+    (function_call
+      (variable_identifier)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (negative_expression
+          (int))
+        (negative_expression
+          (int))
+        (negative_expression
+          (int)))))
+  (comment)
+  (comment)
+  (statement
+    (function_call
+      (variable_identifier)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (int)
+        (int)
+        (int))))
+  (comment)
+  (comment)
+  (statement
+    (function_call
+      (variable_identifier)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (int)
+        (negative_expression
+          (int))
+        (negative_expression
+          (int)))))
+  (comment)
+  (comment)
+  (statement
+    (function_call
+      (variable_identifier)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (int)
+        (negative_expression
+          (int))
         (int))))
   (comment)
   (comment)
@@ -121,20 +190,8 @@ fun void print( int array[] )
           (variable_identifier))
         (int)
         (int)
-        (int))))
-  (comment)
-  (comment)
-  (statement
-    (function_call
-      (variable_identifier)
-      (function_call
-        (member_identifier
-          (class_identifier)
-          (variable_identifier))
-        (int)
-        (int)
-        (int))))
-  (comment)
+        (negative_expression
+          (int)))))
   (comment)
   (statement
     (function_call
@@ -143,56 +200,12 @@ fun void print( int array[] )
         (member_identifier
           (class_identifier)
           (variable_identifier))
-        (int)
-        (int)
-        (int))))
-  (comment)
-  (comment)
-  (statement
-    (function_call
-      (variable_identifier)
-      (function_call
-        (member_identifier
-          (class_identifier)
-          (variable_identifier))
-        (int)
-        (int)
-        (int))))
-  (comment)
-  (comment)
-  (comment)
-  (statement
-    (function_call
-      (variable_identifier)
-      (function_call
-        (member_identifier
-          (class_identifier)
-          (variable_identifier))
-        (int)
-        (int)
-        (int))))
-  (comment)
-  (statement
-    (function_call
-      (variable_identifier)
-      (function_call
-        (member_identifier
-          (class_identifier)
-          (variable_identifier))
-        (int)
-        (int)
-        (int))))
-  (comment)
-  (statement
-    (function_call
-      (variable_identifier)
-      (function_call
-        (member_identifier
-          (class_identifier)
-          (variable_identifier))
-        (int)
-        (int)
-        (int))))
+        (negative_expression
+          (int))
+        (negative_expression
+          (int))
+        (negative_expression
+          (int)))))
   (comment)
   (statement
     (function_call

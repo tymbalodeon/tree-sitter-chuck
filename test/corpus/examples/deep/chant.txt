@@ -371,7 +371,8 @@ fun void doInterpolation( dur T )
         (variable_identifier))))
   (statement
     (chuck_operation
-      (float)
+      (negative_expression
+        (float))
       (chuck_operator)
       (member_identifier
         (variable_identifier)
@@ -770,7 +771,8 @@ fun void doInterpolation( dur T )
               (member_identifier
                 (class_identifier)
                 (variable_identifier))
-              (int)
+              (negative_expression
+                (int))
               (int))
             (operator)
             (variable_identifier))

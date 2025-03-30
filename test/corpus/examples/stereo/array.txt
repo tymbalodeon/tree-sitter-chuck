@@ -154,7 +154,8 @@ while(true)
             (member_identifier
               (class_identifier)
               (variable_identifier))
-            (float)
+            (negative_expression
+              (float))
             (float))
           (chuck_operator)
           (member_identifier

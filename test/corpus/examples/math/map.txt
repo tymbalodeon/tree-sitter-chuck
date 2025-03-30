@@ -73,7 +73,8 @@ Map
         (int)
         (int)
         (int)
-        (int)
+        (negative_expression
+          (int))
         (int))
       (string)))
   (comment)
@@ -86,7 +87,8 @@ Map
         (int)
         (int)
         (int)
-        (int)
+        (negative_expression
+          (int))
         (int))
       (string)))
   (comment)

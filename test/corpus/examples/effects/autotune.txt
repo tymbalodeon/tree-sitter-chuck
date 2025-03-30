@@ -799,7 +799,8 @@ fun float closest( float testval, int list[] )
             (special_literal_value))))
       (statement
         (chuck_operation
-          (int)
+          (negative_expression
+            (int))
           (chuck_operator)
           (variable_identifier)))))
   (comment)
@@ -886,7 +887,8 @@ fun float closest( float testval, int list[] )
                     (variable_identifier)
                     (variable_identifier))
                   (operator)
-                  (int))
+                  (negative_expression
+                    (int)))
                 (statement
                   (chuck_operation
                     (int)

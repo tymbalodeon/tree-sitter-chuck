@@ -226,7 +226,8 @@ fun void smoothtune( dur smoothtime )
         (int)
         (int)
         (int)
-        (int)
+        (negative_expression
+          (int))
         (int)
         (int))
       (chuck_operator)
@@ -571,7 +572,8 @@ fun void smoothtune( dur smoothtime )
         (binary_expression
           (variable_identifier)
           (operator)
-          (int))
+          (negative_expression
+            (int)))
         (block
           (comment)
           (statement

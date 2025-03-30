@@ -42,7 +42,8 @@ while (panPosition < 1.0) {  // (3) ...until panPosition hits hard right.
   (comment)
   (statement
     (chuck_operation
-      (float)
+      (negative_expression
+        (float))
       (chuck_operator)
       (variable_declaration
         (primitive_type)

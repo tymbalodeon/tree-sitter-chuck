@@ -195,7 +195,8 @@ fun void doimpulse()  {
         (variable_identifier))))
   (statement
     (chuck_operation
-      (float)
+      (negative_expression
+        (float))
       (chuck_operator)
       (member_identifier
         (variable_identifier)

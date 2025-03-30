@@ -180,7 +180,8 @@ while(true)
         (block
           (for_loop
             (chuck_operation
-              (int)
+              (negative_expression
+                (int))
               (chuck_operator)
               (variable_declaration
                 (primitive_type)
@@ -260,7 +261,8 @@ while(true)
                 (member_identifier
                   (class_identifier)
                   (variable_identifier))
-                (float)
+                (negative_expression
+                  (float))
                 (float))))
           (statement
             (binary_expression

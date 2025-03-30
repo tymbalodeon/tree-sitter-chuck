@@ -115,7 +115,8 @@ Math.pow( R, L ) => delay.gain;
   (comment)
   (statement
     (chuck_operation
-      (int)
+      (negative_expression
+        (int))
       (chuck_operator)
       (member_identifier
         (variable_identifier)

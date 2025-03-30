@@ -38,12 +38,14 @@ Array negative
     (debug_print
       (array_identifier
         (variable_identifier)
-        (int))))
+        (negative_expression
+          (int)))))
   (comment)
   (comment)
   (statement
     (debug_print
       (array_identifier
         (variable_identifier)
-        (int))))
+        (negative_expression
+          (int)))))
   (comment))

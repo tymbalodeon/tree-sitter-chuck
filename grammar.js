@@ -232,7 +232,7 @@ module.exports = grammar({
     _expression_list: ($) =>
       prec.left(seq($._expression, repeat(seq(",", $._expression)))),
 
-    float: () => /(\d+)?\.\d+/,
+    float: () => /((\d+)?\.\d+|\d+\.(\d_)?)/,
 
     for_loop: ($) =>
       seq(

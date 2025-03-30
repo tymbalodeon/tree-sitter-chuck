@@ -35,7 +35,8 @@ Negative
   (comment)
   (statement
     (chuck_operation
-      (int)
+      (negative_expression
+        (int))
       (chuck_operator)
       (variable_declaration
         (primitive_type)
