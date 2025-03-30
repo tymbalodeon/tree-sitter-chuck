@@ -195,28 +195,32 @@ module.exports = grammar({
       ),
 
     _expression: ($) =>
-      choice(
-        $.array,
-        $.binary_expression,
-        $.cast,
-        $.class_instantiation,
-        $.conditional,
-        $._control_structure,
-        $.debug_print,
-        $._declaration,
-        $.expression_group,
-        $.function_call,
-        $._function_call_chain,
-        $._identifier,
-        $.increment_expression,
-        $.keyword,
-        $.member_identifier,
-        $.negation_expression,
-        $._number,
-        $.reference_values,
-        $.spork_expression,
-        $.string,
-        $.ternary_expression,
+      prec(
+        2,
+        choice(
+          $.array,
+          $.binary_expression,
+          $.cast,
+          $.class_instantiation,
+          $.conditional,
+          $._control_structure,
+          $.debug_print,
+          $._declaration,
+          $.expression_group,
+          $.function_call,
+          $._function_call_chain,
+          $._identifier,
+          $.increment_expression,
+          $.keyword,
+          $.member_identifier,
+          $.negation_expression,
+          $.negative_expression,
+          $._number,
+          $.reference_values,
+          $.spork_expression,
+          $.string,
+          $.ternary_expression,
+        ),
       ),
 
     expression_group: ($) =>
@@ -228,7 +232,7 @@ module.exports = grammar({
     _expression_list: ($) =>
       prec.left(seq($._expression, repeat(seq(",", $._expression)))),
 
-    float: () => token(seq(optional("-"), /(\d+)?\.\d+/)),
+    float: () => /(\d+)?\.\d+/,
 
     for_loop: ($) =>
       seq(
@@ -305,7 +309,7 @@ module.exports = grammar({
         choice($.string, seq("{", $.string, repeat(seq(",", $.string)), "}")),
       ),
 
-    int: () => token(seq(optional("-"), /\d+/)),
+    int: () => /\d+/,
 
     keyword: ($) =>
       choice(
@@ -342,6 +346,7 @@ module.exports = grammar({
       ),
 
     negation_expression: ($) => prec.left(seq("!", $._expression)),
+    negative_expression: ($) => prec.left(seq("-", $._expression)),
 
     _number: ($) =>
       choice($.complex, $.dur, $.float, $.hexidecimal, $.int, $.polar),

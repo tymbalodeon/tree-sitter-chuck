@@ -820,93 +820,101 @@
       ]
     },
     "_expression": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "array"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "binary_expression"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "cast"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "class_instantiation"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "conditional"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_control_structure"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "debug_print"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_declaration"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "expression_group"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "function_call"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_function_call_chain"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_identifier"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "increment_expression"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "keyword"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "member_identifier"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "negation_expression"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_number"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "reference_values"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "spork_expression"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "string"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "ternary_expression"
-        }
-      ]
+      "type": "PREC",
+      "value": 2,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "array"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "binary_expression"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "cast"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "class_instantiation"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "conditional"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_control_structure"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "debug_print"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_declaration"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "expression_group"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "function_call"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_function_call_chain"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_identifier"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "increment_expression"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "keyword"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "member_identifier"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "negation_expression"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "negative_expression"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_number"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "reference_values"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "spork_expression"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "string"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "ternary_expression"
+          }
+        ]
+      }
     },
     "expression_group": {
       "type": "PREC",
@@ -976,28 +984,8 @@
       }
     },
     "float": {
-      "type": "TOKEN",
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "-"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "PATTERN",
-            "value": "(\\d+)?\\.\\d+"
-          }
-        ]
-      }
+      "type": "PATTERN",
+      "value": "(\\d+)?\\.\\d+"
     },
     "for_loop": {
       "type": "SEQ",
@@ -1430,28 +1418,8 @@
       ]
     },
     "int": {
-      "type": "TOKEN",
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "-"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "PATTERN",
-            "value": "\\d+"
-          }
-        ]
-      }
+      "type": "PATTERN",
+      "value": "\\d+"
     },
     "keyword": {
       "type": "CHOICE",
@@ -1598,6 +1566,23 @@
           {
             "type": "STRING",
             "value": "!"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_expression"
+          }
+        ]
+      }
+    },
+    "negative_expression": {
+      "type": "PREC_LEFT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "-"
           },
           {
             "type": "SYMBOL",
