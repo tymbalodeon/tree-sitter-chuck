@@ -188,6 +188,7 @@ install-queries:
     mkdir $chuck_query_directory
     cp queries/highlights.scm $chuck_query_directory
 
+# Add the grammar to helix
 @install-grammar: && install-queries
     hx --grammar fetch
     hx --grammar build
