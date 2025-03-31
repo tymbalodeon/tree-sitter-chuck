@@ -2066,7 +2066,7 @@
     "type": "function_call",
     "named": true,
     "fields": {
-      "arguments": {
+      "argument": {
         "multiple": true,
         "required": false,
         "types": [
@@ -2252,7 +2252,7 @@
     "type": "function_definition",
     "named": true,
     "fields": {
-      "parameters": {
+      "parameter": {
         "multiple": true,
         "required": false,
         "types": [
@@ -2559,7 +2559,7 @@
     "type": "method_definition",
     "named": true,
     "fields": {
-      "parameters": {
+      "parameter": {
         "multiple": true,
         "required": false,
         "types": [
@@ -2920,7 +2920,7 @@
     "type": "overload_definition",
     "named": true,
     "fields": {
-      "parameters": {
+      "parameter": {
         "multiple": true,
         "required": false,
         "types": [

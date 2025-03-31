@@ -268,7 +268,7 @@ module.exports = grammar({
     function_call: ($) =>
       seq(
         choice($._identifier, $.member_identifier),
-        seq("(", field("arguments", optional($._expression_list)), ")"),
+        seq("(", field("argument", optional($._expression_list)), ")"),
       ),
 
     _function_call_chain: ($) =>
@@ -283,7 +283,7 @@ module.exports = grammar({
         choice($.class_identifier, $.variable_identifier),
         "(",
         field(
-          "parameters",
+          "parameter",
           optional(seq($._declaration, repeat(seq(",", $._declaration)))),
         ),
         ")",
@@ -384,20 +384,26 @@ module.exports = grammar({
         "||",
       ),
 
-    overload_definition: ($) =>
-      seq(
-        choice("fun", "function", "private", "public"),
-        $._type,
-        "@operator",
-        choice($.chuck_operator, $.operator),
+    overload_definition: ($) => {
+      const operator = choice("!", "++", "--", $.chuck_operator, $.operator);
+
+      const parameters = seq(
         "(",
         field(
-          "parameters",
+          "parameter",
           optional(seq($._declaration, repeat(seq(",", $._declaration)))),
         ),
         ")",
+      );
+
+      return seq(
+        choice("fun", "function", "private", "public"),
+        $._type,
+        "@operator",
+        choice(seq(operator, parameters), seq(parameters, operator)),
         $.block,
-      ),
+      );
+    },
 
     polar: ($) => seq("%(", $._expression, ",", $._expression, ")"),
 
