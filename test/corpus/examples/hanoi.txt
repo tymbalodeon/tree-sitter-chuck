@@ -91,7 +91,7 @@ hanoi( disks, 1, 3, 2 );
         (statement))
       (comment)
       (statement
-        (increment_expression
+        (post_increment_expression
           (class_identifier)))
       (comment)
       (statement

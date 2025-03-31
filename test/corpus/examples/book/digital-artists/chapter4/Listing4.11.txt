@@ -100,7 +100,7 @@ for (0 => int beat; beat < 24; beat++) {  // (3) 24-beat "measure"
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (comment)

@@ -93,7 +93,7 @@ fun void go( MidiIn min, int id )
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (comment)
@@ -137,7 +137,7 @@ fun void go( MidiIn min, int id )
                   (variable_identifier))
                 (variable_identifier))))
           (statement
-            (increment_expression
+            (post_increment_expression
               (variable_identifier))))
         (statement
           (keyword

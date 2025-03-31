@@ -365,7 +365,7 @@ fun void set( int base, float v0, float v1, float v2 )
                     (chuck_operator)
                     (variable_identifier)))
                 (statement
-                  (increment_expression
+                  (post_increment_expression
                     (variable_identifier)))
                 (conditional
                   (binary_expression
@@ -398,7 +398,7 @@ fun void set( int base, float v0, float v1, float v2 )
                       (chuck_operator)
                       (variable_identifier)))
                   (statement
-                    (increment_expression
+                    (post_increment_expression
                       (variable_identifier)))
                   (conditional
                     (negation_expression

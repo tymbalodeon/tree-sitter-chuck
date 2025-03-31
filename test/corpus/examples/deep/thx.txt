@@ -397,7 +397,7 @@ while( now < end )
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (comment)
@@ -558,7 +558,7 @@ while( now < end )
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (comment)
@@ -686,7 +686,7 @@ while( now < end )
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (comment)
@@ -777,7 +777,7 @@ while( now < end )
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (comment)

@@ -190,7 +190,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (comment)

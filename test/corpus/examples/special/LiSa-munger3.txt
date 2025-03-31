@@ -292,7 +292,7 @@ fun void smoothtune( dur smoothtime )
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (comment)
@@ -490,7 +490,7 @@ fun void smoothtune( dur smoothtime )
           (member_identifier
             (array_identifier
               (variable_identifier)
-              (increment_expression
+              (post_increment_expression
                 (variable_identifier)))
             (variable_identifier))
           (keyword
@@ -519,7 +519,7 @@ fun void smoothtune( dur smoothtime )
             (boolean_literal_value))))
       (comment)
       (statement
-        (increment_expression
+        (post_increment_expression
           (variable_identifier)))
       (conditional
         (binary_expression
@@ -720,7 +720,7 @@ fun void smoothtune( dur smoothtime )
                 (binary_expression
                   (array_identifier
                     (variable_identifier)
-                    (increment_expression
+                    (post_increment_expression
                       (variable_identifier)))
                   (operator)
                   (int)))

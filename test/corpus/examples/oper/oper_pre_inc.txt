@@ -1,6 +1,5 @@
 ============
 Oper pre inc
-:skip
 ============
 
 // ++i
@@ -16,4 +15,43 @@ if ( i == 5 && j == 5 ) <<<"success">>>;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (statement
+    (chuck_operation
+      (pre_increment_expression
+        (variable_identifier))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (statement
+    (debug_print
+      (string)))
+  (statement
+    (debug_print
+      (variable_identifier)))
+  (statement
+    (debug_print
+      (variable_identifier)))
+  (conditional
+    (binary_expression
+      (binary_expression
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (int))
+        (operator)
+        (variable_identifier))
+      (operator)
+      (int))
+    (statement
+      (debug_print
+        (string)))))

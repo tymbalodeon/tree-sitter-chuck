@@ -98,7 +98,7 @@ for (0 => int i; i < a.cap(); i++)
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (statement

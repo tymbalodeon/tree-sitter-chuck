@@ -90,7 +90,7 @@ for (0 => int i; i < 4; i++) {
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (statement

@@ -144,7 +144,7 @@ second => now;
           (keyword
             (special_literal_value))))
       (statement
-        (increment_expression
+        (post_increment_expression
           (variable_identifier)))))
   (comment)
   (statement

@@ -211,7 +211,7 @@ fun void ramp_stuff()
               (variable_identifier)))
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (comment)

@@ -116,7 +116,7 @@ playScale(scale);    // (7) When we call playScale again. It's different!
             (member_identifier
               (variable_identifier)
               (variable_identifier))))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement

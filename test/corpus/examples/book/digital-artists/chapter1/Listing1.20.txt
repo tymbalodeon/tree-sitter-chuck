@@ -218,7 +218,7 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (comment)
@@ -284,7 +284,7 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (comment)
@@ -346,7 +346,7 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (comment)
@@ -424,7 +424,7 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (comment)

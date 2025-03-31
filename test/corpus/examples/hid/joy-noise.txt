@@ -504,7 +504,7 @@ fun void set( float value, float factor, float q )
                 (variable_identifier)))
             (block
               (statement
-                (increment_expression
+                (post_increment_expression
                   (variable_identifier)))
               (conditional
                 (variable_identifier)
@@ -537,7 +537,7 @@ fun void set( float value, float factor, float q )
                 (variable_identifier)))
             (block
               (statement
-                (increment_expression
+                (post_increment_expression
                   (variable_identifier)))
               (conditional
                 (negation_expression

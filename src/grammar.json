@@ -871,7 +871,7 @@
           },
           {
             "type": "SYMBOL",
-            "name": "increment_expression"
+            "name": "_increment_expression"
           },
           {
             "type": "SYMBOL",
@@ -1324,7 +1324,7 @@
         ]
       }
     },
-    "increment_expression": {
+    "post_increment_expression": {
       "type": "SEQ",
       "members": [
         {
@@ -1343,6 +1343,45 @@
               "value": "--"
             }
           ]
+        }
+      ]
+    },
+    "pre_increment_expression": {
+      "type": "PREC",
+      "value": 1,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "++"
+              },
+              {
+                "type": "STRING",
+                "value": "--"
+              }
+            ]
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_expression"
+          }
+        ]
+      }
+    },
+    "_increment_expression": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "post_increment_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "pre_increment_expression"
         }
       ]
     },

@@ -111,7 +111,7 @@ fun void allOff()
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (statement
@@ -390,7 +390,7 @@ fun void allOff()
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement
@@ -442,7 +442,7 @@ fun void allOff()
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (statement
           (chuck_operation

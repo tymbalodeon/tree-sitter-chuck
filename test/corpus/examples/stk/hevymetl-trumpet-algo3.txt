@@ -193,7 +193,7 @@ for( 0 => int i; i < notes.cap(); i++ )
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (statement
@@ -333,7 +333,7 @@ for( 0 => int i; i < notes.cap(); i++ )
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (statement

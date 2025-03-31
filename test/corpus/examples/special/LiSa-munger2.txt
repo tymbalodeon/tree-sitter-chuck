@@ -252,7 +252,7 @@ the fly, and the code reflects that, but it does work.
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (statement
@@ -434,7 +434,7 @@ the fly, and the code reflects that, but it does work.
           (member_identifier
             (array_identifier
               (variable_identifier)
-              (increment_expression
+              (post_increment_expression
                 (variable_identifier)))
             (variable_identifier))
           (keyword
@@ -460,7 +460,7 @@ the fly, and the code reflects that, but it does work.
             (boolean_literal_value))))
       (comment)
       (statement
-        (increment_expression
+        (post_increment_expression
           (variable_identifier)))
       (conditional
         (binary_expression

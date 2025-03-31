@@ -150,7 +150,7 @@ argh.clear();
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (statement
       (debug_print

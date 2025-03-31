@@ -47,7 +47,7 @@ for (1 => int i; i <= 5; i++) {
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (for_loop
@@ -61,7 +61,7 @@ for (1 => int i; i <= 5; i++) {
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement

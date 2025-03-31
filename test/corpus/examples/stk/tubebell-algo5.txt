@@ -130,7 +130,7 @@ fun void playPattern(int pat[])  {
       (variable_identifier)
       (operator)
       (variable_identifier))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (statement
@@ -509,7 +509,7 @@ fun void playPattern(int pat[])  {
             (member_identifier
               (variable_identifier)
               (variable_identifier))))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement
@@ -565,7 +565,7 @@ fun void playPattern(int pat[])  {
                   (variable_identifier))
                 (variable_identifier))))
           (statement
-            (increment_expression
+            (post_increment_expression
               (variable_identifier)))
           (conditional
             (binary_expression

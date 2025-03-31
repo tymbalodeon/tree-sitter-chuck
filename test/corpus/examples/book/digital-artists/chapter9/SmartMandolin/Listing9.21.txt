@@ -126,7 +126,7 @@ m.damp(0.01);                // (9) Damps strings at the end
             (duration_identifier))))
       (comment)
       (statement
-        (increment_expression
+        (post_increment_expression
           (variable_identifier)))))
   (comment)
   (statement
@@ -151,7 +151,7 @@ m.damp(0.01);                // (9) Damps strings at the end
             (variable_identifier))
           (array_identifier
             (variable_identifier)
-            (increment_expression
+            (post_increment_expression
               (variable_identifier)))
           (dur
             (float)

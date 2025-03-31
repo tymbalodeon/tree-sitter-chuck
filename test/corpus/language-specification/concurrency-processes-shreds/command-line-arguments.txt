@@ -58,7 +58,7 @@ for( int i; i < me.args(); i++ )
       (function_call
         (member_identifier
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (statement
       (debug_print

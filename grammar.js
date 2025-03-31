@@ -210,7 +210,7 @@ module.exports = grammar({
           $.function_call,
           $._function_call_chain,
           $._identifier,
-          $.increment_expression,
+          $._increment_expression,
           $.keyword,
           $.member_identifier,
           $.negation_expression,
@@ -292,7 +292,13 @@ module.exports = grammar({
 
     global_unit_generator: () => choice("adc", "blackhole", "dac"),
     hexidecimal: () => token(seq("0", /x/i, /[\da-fA-F](_?[\da-fA-F])*/)),
-    increment_expression: ($) => seq($._expression, choice("++", "--")),
+    post_increment_expression: ($) => seq($._expression, choice("++", "--")),
+
+    pre_increment_expression: ($) =>
+      prec(1, seq(choice("++", "--"), $._expression)),
+
+    _increment_expression: ($) =>
+      choice($.post_increment_expression, $.pre_increment_expression),
 
     _identifier: ($) =>
       prec(

@@ -207,7 +207,7 @@ hanoi( disks, 1, 3, 2 );
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (statement
       (chuck_operation
@@ -251,7 +251,7 @@ hanoi( disks, 1, 3, 2 );
             (variable_identifier))))
       (comment)
       (statement
-        (increment_expression
+        (post_increment_expression
           (class_identifier)))
       (comment)
       (statement

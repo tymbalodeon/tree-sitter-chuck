@@ -1,5 +1,5 @@
-public void set( Other a )
-{
-	a.x => x;
-	a.y => y;
-}
+10 => int i;
+<<< ++i >>>;
+<<< i++ >>>;
+// <<< ++i++ >>
+<<< i >>>;

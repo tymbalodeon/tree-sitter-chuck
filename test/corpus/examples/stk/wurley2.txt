@@ -313,9 +313,8 @@ while( true )
               (chuck_operator)
               (variable_identifier)))
           (loop
-            (negative_expression
-              (negative_expression
-                (variable_identifier)))
+            (pre_increment_expression
+              (variable_identifier))
             (block
               (statement
                 (chuck_operation
@@ -545,7 +544,7 @@ while( true )
                   (variable_identifier)
                   (operator)
                   (variable_identifier))
-                (increment_expression
+                (post_increment_expression
                   (variable_identifier))
                 (block
                   (statement

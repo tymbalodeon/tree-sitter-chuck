@@ -119,7 +119,7 @@ while( true )
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (statement
@@ -258,7 +258,7 @@ while( true )
                 (variable_identifier))))
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (statement
           (chuck_operation

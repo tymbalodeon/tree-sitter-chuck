@@ -821,17 +821,17 @@ fun float closest( float testval, int list[] )
               (keyword
                 (special_literal_value))))
           (statement
-            (increment_expression
+            (post_increment_expression
               (array_identifier
                 (variable_identifier)
                 (int))))
           (statement
-            (increment_expression
+            (post_increment_expression
               (array_identifier
                 (variable_identifier)
                 (int))))
           (statement
-            (increment_expression
+            (post_increment_expression
               (array_identifier
                 (variable_identifier)
                 (int))))
@@ -844,7 +844,7 @@ fun float closest( float testval, int list[] )
               (keyword
                 (special_literal_value))))
           (statement
-            (increment_expression
+            (post_increment_expression
               (array_identifier
                 (variable_identifier)
                 (int))))
@@ -856,7 +856,7 @@ fun float closest( float testval, int list[] )
                 (variable_identifier)
                 (int))))
           (statement
-            (increment_expression
+            (post_increment_expression
               (array_identifier
                 (variable_identifier)
                 (int))))
@@ -878,7 +878,7 @@ fun float closest( float testval, int list[] )
                 (member_identifier
                   (variable_identifier)
                   (variable_identifier))))
-            (increment_expression
+            (post_increment_expression
               (variable_identifier))
             (block
               (conditional
@@ -1065,7 +1065,7 @@ fun float closest( float testval, int list[] )
           (variable_identifier)
           (operator)
           (variable_identifier))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement
@@ -1128,7 +1128,7 @@ fun float closest( float testval, int list[] )
           (variable_identifier)
           (operator)
           (variable_identifier))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement

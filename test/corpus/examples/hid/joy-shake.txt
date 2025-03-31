@@ -305,7 +305,7 @@ while( true )
                   (int))
                 (block
                   (statement
-                    (increment_expression
+                    (post_increment_expression
                       (variable_identifier)))
                   (statement
                     (chuck_operation
@@ -327,7 +327,7 @@ while( true )
                   (int))
                 (block
                   (statement
-                    (increment_expression
+                    (post_increment_expression
                       (variable_identifier)))
                   (statement
                     (chuck_operation

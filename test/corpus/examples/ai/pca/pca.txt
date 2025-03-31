@@ -85,7 +85,7 @@ for ( 0 => int i; i < 10; i++ )
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (for_loop
@@ -99,7 +99,7 @@ for ( 0 => int i; i < 10; i++ )
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (comment)
@@ -137,7 +137,7 @@ for ( 0 => int i; i < 10; i++ )
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (for_loop
@@ -151,7 +151,7 @@ for ( 0 => int i; i < 10; i++ )
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (comment)

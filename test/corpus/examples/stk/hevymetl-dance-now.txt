@@ -332,7 +332,7 @@ fun void playChord( int a, int b, int c, float vel, dur D )
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (statement
@@ -390,7 +390,7 @@ fun void playChord( int a, int b, int c, float vel, dur D )
               (variable_identifier)
               (operator)
               (int))
-            (increment_expression
+            (post_increment_expression
               (variable_identifier))
             (block
               (statement
@@ -650,7 +650,7 @@ fun void playChord( int a, int b, int c, float vel, dur D )
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement
@@ -685,7 +685,7 @@ fun void playChord( int a, int b, int c, float vel, dur D )
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement

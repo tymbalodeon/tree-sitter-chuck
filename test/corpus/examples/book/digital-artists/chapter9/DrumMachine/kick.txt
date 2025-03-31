@@ -93,7 +93,7 @@ while (1) {                     // (3) Infinite loop
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (comment)

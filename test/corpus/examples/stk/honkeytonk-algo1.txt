@@ -214,7 +214,7 @@ fun void bassLine( int note1, int note2, int thisManyTimes )
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (statement
@@ -439,7 +439,7 @@ fun void bassLine( int note1, int note2, int thisManyTimes )
               (int)))))
       (comment)
       (statement
-        (increment_expression
+        (post_increment_expression
           (variable_identifier)))
       (comment)
       (statement

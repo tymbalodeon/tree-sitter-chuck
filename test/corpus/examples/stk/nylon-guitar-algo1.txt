@@ -280,7 +280,7 @@ fun void solo()  {
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (statement
@@ -298,7 +298,7 @@ fun void solo()  {
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement
@@ -542,7 +542,7 @@ fun void solo()  {
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (statement
@@ -837,7 +837,7 @@ fun void solo()  {
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (statement
           (chuck_operation
@@ -867,7 +867,7 @@ fun void solo()  {
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement
@@ -926,7 +926,7 @@ fun void solo()  {
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement
@@ -985,7 +985,7 @@ fun void solo()  {
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement

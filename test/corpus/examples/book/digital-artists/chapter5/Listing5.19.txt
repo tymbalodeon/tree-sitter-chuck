@@ -69,7 +69,7 @@ fun void playChord(int root, string quality, dur howLong)
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (comment)

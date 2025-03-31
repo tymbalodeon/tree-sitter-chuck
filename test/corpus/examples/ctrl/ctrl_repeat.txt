@@ -44,7 +44,7 @@ if( x == 8 ) <<< "success" >>>;
     (int)
     (block
       (statement
-        (increment_expression
+        (post_increment_expression
           (variable_identifier)))))
   (comment)
   (comment)
@@ -55,7 +55,7 @@ if( x == 8 ) <<< "success" >>>;
       (comment)
       (comment)
       (statement
-        (increment_expression
+        (post_increment_expression
           (variable_identifier)))))
   (comment)
   (conditional

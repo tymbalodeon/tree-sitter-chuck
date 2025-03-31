@@ -278,7 +278,7 @@ fun void teenTown() {
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (comment)
@@ -610,7 +610,7 @@ fun void teenTown() {
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement
@@ -709,7 +709,7 @@ fun void teenTown() {
               (keyword
                 (special_literal_value))))
           (statement
-            (increment_expression
+            (post_increment_expression
               (variable_identifier)))))))
   (function_definition
     (primitive_type)
@@ -977,7 +977,7 @@ fun void teenTown() {
             (member_identifier
               (variable_identifier)
               (variable_identifier))))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement

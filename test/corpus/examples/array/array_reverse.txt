@@ -97,7 +97,7 @@ fun void print_arr(int a[]) {
             (member_identifier
               (variable_identifier)
               (variable_identifier))))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (statement

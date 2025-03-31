@@ -273,7 +273,7 @@ while( true )
                   (keyword
                     (special_literal_value))))
               (statement
-                (increment_expression
+                (post_increment_expression
                   (variable_identifier)))))
           (loop
             (binary_expression
@@ -311,7 +311,7 @@ while( true )
                   (keyword
                     (special_literal_value))))
               (statement
-                (increment_expression
+                (post_increment_expression
                   (variable_identifier))))))
         (block
           (statement

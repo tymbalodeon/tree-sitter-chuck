@@ -80,10 +80,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -109,6 +105,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -254,10 +258,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -283,6 +283,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -401,10 +409,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -434,6 +438,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -608,10 +620,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -637,6 +645,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -767,10 +783,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -796,6 +808,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -969,10 +989,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -998,6 +1014,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -1120,10 +1144,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -1149,6 +1169,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -1276,10 +1304,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -1305,6 +1329,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -1431,10 +1463,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -1460,6 +1488,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -1586,10 +1622,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -1615,6 +1647,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -1738,10 +1778,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -1767,6 +1803,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -1944,10 +1988,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -1973,6 +2013,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -2103,10 +2151,6 @@
             "named": true
           },
           {
-            "type": "increment_expression",
-            "named": true
-          },
-          {
             "type": "int",
             "named": true
           },
@@ -2132,6 +2176,14 @@
           },
           {
             "type": "polar",
+            "named": true
+          },
+          {
+            "type": "post_increment_expression",
+            "named": true
+          },
+          {
+            "type": "pre_increment_expression",
             "named": true
           },
           {
@@ -2271,153 +2323,6 @@
     }
   },
   {
-    "type": "increment_expression",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "array_declaration",
-          "named": true
-        },
-        {
-          "type": "array_identifier",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "cast",
-          "named": true
-        },
-        {
-          "type": "class_identifier",
-          "named": true
-        },
-        {
-          "type": "class_instantiation",
-          "named": true
-        },
-        {
-          "type": "complex",
-          "named": true
-        },
-        {
-          "type": "conditional",
-          "named": true
-        },
-        {
-          "type": "debug_print",
-          "named": true
-        },
-        {
-          "type": "do_loop",
-          "named": true
-        },
-        {
-          "type": "dur",
-          "named": true
-        },
-        {
-          "type": "expression_group",
-          "named": true
-        },
-        {
-          "type": "float",
-          "named": true
-        },
-        {
-          "type": "for_each_loop",
-          "named": true
-        },
-        {
-          "type": "for_loop",
-          "named": true
-        },
-        {
-          "type": "function_call",
-          "named": true
-        },
-        {
-          "type": "hexidecimal",
-          "named": true
-        },
-        {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
-          "type": "int",
-          "named": true
-        },
-        {
-          "type": "keyword",
-          "named": true
-        },
-        {
-          "type": "loop",
-          "named": true
-        },
-        {
-          "type": "member_identifier",
-          "named": true
-        },
-        {
-          "type": "negation_expression",
-          "named": true
-        },
-        {
-          "type": "negative_expression",
-          "named": true
-        },
-        {
-          "type": "polar",
-          "named": true
-        },
-        {
-          "type": "reference_declaration",
-          "named": true
-        },
-        {
-          "type": "reference_type",
-          "named": true
-        },
-        {
-          "type": "reference_values",
-          "named": true
-        },
-        {
-          "type": "spork_expression",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "ternary_expression",
-          "named": true
-        },
-        {
-          "type": "variable_declaration",
-          "named": true
-        },
-        {
-          "type": "variable_identifier",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "keyword",
     "named": true,
     "fields": {},
@@ -2541,10 +2446,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -2570,6 +2471,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -2781,10 +2690,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -2810,6 +2715,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -2928,10 +2841,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -2957,6 +2866,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -3138,7 +3055,154 @@
           "named": true
         },
         {
-          "type": "increment_expression",
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "loop",
+          "named": true
+        },
+        {
+          "type": "member_identifier",
+          "named": true
+        },
+        {
+          "type": "negation_expression",
+          "named": true
+        },
+        {
+          "type": "negative_expression",
+          "named": true
+        },
+        {
+          "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
+          "named": true
+        },
+        {
+          "type": "reference_declaration",
+          "named": true
+        },
+        {
+          "type": "reference_type",
+          "named": true
+        },
+        {
+          "type": "reference_values",
+          "named": true
+        },
+        {
+          "type": "spork_expression",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "ternary_expression",
+          "named": true
+        },
+        {
+          "type": "variable_declaration",
+          "named": true
+        },
+        {
+          "type": "variable_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "post_increment_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "array_declaration",
+          "named": true
+        },
+        {
+          "type": "array_identifier",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "cast",
+          "named": true
+        },
+        {
+          "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "class_instantiation",
+          "named": true
+        },
+        {
+          "type": "complex",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "debug_print",
+          "named": true
+        },
+        {
+          "type": "do_loop",
+          "named": true
+        },
+        {
+          "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
+          "named": true
+        },
+        {
+          "type": "for_loop",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "hexidecimal",
           "named": true
         },
         {
@@ -3167,6 +3231,165 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
+          "named": true
+        },
+        {
+          "type": "reference_declaration",
+          "named": true
+        },
+        {
+          "type": "reference_type",
+          "named": true
+        },
+        {
+          "type": "reference_values",
+          "named": true
+        },
+        {
+          "type": "spork_expression",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "ternary_expression",
+          "named": true
+        },
+        {
+          "type": "variable_declaration",
+          "named": true
+        },
+        {
+          "type": "variable_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pre_increment_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "array_declaration",
+          "named": true
+        },
+        {
+          "type": "array_identifier",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "cast",
+          "named": true
+        },
+        {
+          "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "class_instantiation",
+          "named": true
+        },
+        {
+          "type": "complex",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "debug_print",
+          "named": true
+        },
+        {
+          "type": "do_loop",
+          "named": true
+        },
+        {
+          "type": "dur",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_each_loop",
+          "named": true
+        },
+        {
+          "type": "for_loop",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "hexidecimal",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "loop",
+          "named": true
+        },
+        {
+          "type": "member_identifier",
+          "named": true
+        },
+        {
+          "type": "negation_expression",
+          "named": true
+        },
+        {
+          "type": "negative_expression",
+          "named": true
+        },
+        {
+          "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -3326,10 +3549,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -3355,6 +3574,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -3557,10 +3784,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -3590,6 +3813,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {
@@ -3713,10 +3944,6 @@
           "named": true
         },
         {
-          "type": "increment_expression",
-          "named": true
-        },
-        {
           "type": "int",
           "named": true
         },
@@ -3742,6 +3969,14 @@
         },
         {
           "type": "polar",
+          "named": true
+        },
+        {
+          "type": "post_increment_expression",
+          "named": true
+        },
+        {
+          "type": "pre_increment_expression",
           "named": true
         },
         {

@@ -24,7 +24,7 @@ for( 0 => int foo; foo < 4 ; foo++ )
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (comment)

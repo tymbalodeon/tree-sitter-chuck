@@ -244,7 +244,7 @@ for (0 => int i; i < size; i++)
       (variable_identifier)
       (operator)
       (variable_identifier))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (comment)

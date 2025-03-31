@@ -29,7 +29,7 @@ i++ => int j;
   (comment)
   (statement
     (chuck_operation
-      (increment_expression
+      (post_increment_expression
         (variable_identifier))
       (chuck_operator)
       (variable_declaration

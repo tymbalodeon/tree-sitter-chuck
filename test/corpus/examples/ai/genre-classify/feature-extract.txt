@@ -592,7 +592,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (comment)
@@ -614,7 +614,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
           (variable_identifier)
           (operator)
           (class_identifier))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (comment)
@@ -703,7 +703,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
     (block
       (comment)
       (statement
-        (increment_expression
+        (post_increment_expression
           (class_identifier)))
       (comment)
       (statement
@@ -769,7 +769,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
           (variable_identifier)
           (operator)
           (variable_identifier))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (comment)
@@ -792,7 +792,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
               (variable_identifier)
               (operator)
               (class_identifier))
-            (increment_expression
+            (post_increment_expression
               (variable_identifier))
             (block
               (comment)
@@ -828,7 +828,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
           (variable_identifier)
           (operator)
           (class_identifier))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (comment)

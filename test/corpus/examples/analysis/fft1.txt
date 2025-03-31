@@ -94,7 +94,7 @@ while( true )
       (comment)
       (statement
         (chuck_operation
-          (increment_expression
+          (post_increment_expression
             (binary_expression
               (binary_expression
                 (variable_identifier)
