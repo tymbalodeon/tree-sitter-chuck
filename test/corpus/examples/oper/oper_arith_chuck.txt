@@ -1,6 +1,5 @@
 ================
 Oper arith chuck
-:skip
 ================
 
 // use a variety of arithmetic chuck operators
@@ -27,4 +26,87 @@ if ( i == 25 ) <<<"success!">>>;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (statement
+    (debug_print
+      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (debug_print
+      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (debug_print
+      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (debug_print
+      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (debug_print
+      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (debug_print
+      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (debug_print
+      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (debug_print
+      (variable_identifier)))
+  (conditional
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (statement
+      (debug_print
+        (string)))))
