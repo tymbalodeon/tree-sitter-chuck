@@ -74,7 +74,7 @@ lisa.record( false );
 s.gain( 0 );
 
 // this arrangment will create some clicks because of discontinuities
-// from the loop recording. to fix, need to make a rotating buffer 
+// from the loop recording. to fix, need to make a rotating buffer
 // approach. see the next two example files...
 while( true )
 {
@@ -95,7 +95,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
     // get an available voice
     lisa.getVoice() => int newvoice;
 
-    // make sure we got a valid voice   
+    // make sure we got a valid voice
     if( newvoice > -1 )
     {
         // set play rate

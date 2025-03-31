@@ -56,7 +56,7 @@ spork ~ vecho_Shred();
 
 // our main loop
 while( true )
-{ 
+{
     // pentatonic
     scale[Math.random2(0,scale.size()-1)] => int freq;
 

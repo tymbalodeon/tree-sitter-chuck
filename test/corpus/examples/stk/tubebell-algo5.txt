@@ -7,7 +7,7 @@ Tubebell algo5
 //  Perry Cook, 2024 (after STK tubebell example)
 Gain mixer[2] => NRev rev[2] => dac; // stereo
 9 => int numBells; // round robin and stereo
-TubeBell bell[numBells]; 
+TubeBell bell[numBells];
 Pan2 pan[numBells];
 for (int i; i < numBells; i++)  {
     bell[i] => pan[i] => mixer;
@@ -18,7 +18,7 @@ for (int i; i < numBells; i++)  {
 TubeBell bassBell => Pan2 bbPan => mixer; // occasional pedal tone
 0.05 => rev[0].mix => rev[1].mix;
 bell => Delay del => Pan2 dpan => rev; // cool echo
-del => del; 
+del => del;
 0.6 => del.gain;
 0.2::second => dur T;
 17*T => del.max => del.delay;
@@ -76,7 +76,7 @@ fun void playPattern(int pat[])  {
         T => now;
     }
 }
-    
+
 
 ---
 

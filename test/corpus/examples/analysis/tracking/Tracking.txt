@@ -38,7 +38,7 @@ while( true )
 {
     // take fft
     fft.upchuck() @=> UAnaBlob blob;
-    
+
     // find peak
     0 => float max; float where;
     for( int i; i < blob.fvals().size()/8; i++ )
@@ -51,7 +51,7 @@ while( true )
             i => where;
         }
     }
-    
+
     // set freq
     (where / fft.size() * (second / samp)) => Tracking.the_freq;
     // set gain

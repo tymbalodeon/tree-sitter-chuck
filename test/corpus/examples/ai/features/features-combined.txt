@@ -57,7 +57,7 @@ while( true )
     { cherr <= combo.fval(i) <= " "; }
     // endline
     cherr <= IO.newline();
- 
+
     // advance time
     HOP => now;
 }

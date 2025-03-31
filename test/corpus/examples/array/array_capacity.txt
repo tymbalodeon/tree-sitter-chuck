@@ -59,7 +59,7 @@ print(7);
 // helper print function
 fun void print( int iteration )
 {
-    <<< iteration, "| array size:", a.size(), 
+    <<< iteration, "| array size:", a.size(),
         "capacity:", a.capacity() >>>;
 }
 

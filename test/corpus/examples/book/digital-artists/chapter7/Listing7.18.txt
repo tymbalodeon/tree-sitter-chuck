@@ -6,7 +6,7 @@ Listing7.18
 // Listing 7.18 Ragajam Indian music in ChucK
 
 Sitar sitar => Gain master => dac;   // (1) Sitar instrument, master mixer Gain
-sitar => Delay delay => Gain sitarFeedback => delay; // (2) Delay line to give Sitar an echo 
+sitar => Delay delay => Gain sitarFeedback => delay; // (2) Delay line to give Sitar an echo
 delay => master;       // (3) Connects delay line to output mixer
 
 // drone "singers" to accompany
@@ -32,7 +32,7 @@ for( 0 => int i; i < singerDrones.cap(); i++)
 Shakers shaker => master; // (12) Shaker percussionist, connects to output mixer
 
 fun void shake()
-{                   // (13) Function to cause the shaker to play a "note" 
+{                   // (13) Function to cause the shaker to play a "note"
     // drum control
     Math.random2(1,2) => shaker.preset;
     Math.random2f(60.0,128.0) => shaker.objects;
@@ -54,10 +54,10 @@ beattime::second => delay.delay;
 // master volume parameter
 .7 => master.gain;
 
-// MAIN PROGRAM, ragajam.ck // warm up with a drone solo 
+// MAIN PROGRAM, ragajam.ck // warm up with a drone solo
 5::second => now; // // (14) Drones begin the piece
 
-// main loop, add Sitar and Shaker 
+// main loop, add Sitar and Shaker
 while (true) {
     Math.random2(1,3) => float factor; // (15) Random timing for each new "measure"
 
@@ -69,7 +69,7 @@ while (true) {
         sitar.noteOn(Math.randomf()); // (16) Sitar player
 
         // play a percussion sound
-        shake();                  // (18) Tells the shaker to play on beat... 
+        shake();                  // (18) Tells the shaker to play on beat...
 
         // advance time by 1/2 our basic beat
         (0.5*beattime)::second*factor => now;

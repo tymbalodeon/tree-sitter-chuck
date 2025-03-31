@@ -12,7 +12,7 @@ SinOsc s => dac;             // The usual sound patch.
 0.6 => s.gain;
 
 // chance logical variable
-1 => int chance;    // (1) Defines an integer named chance to use as a logical 
+1 => int chance;    // (1) Defines an integer named chance to use as a logical
                     //     variable (will have a value of either 1 or 0).
 
 if (chance == 1)    // (2) if statement.

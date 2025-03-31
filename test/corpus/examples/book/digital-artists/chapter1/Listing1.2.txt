@@ -11,7 +11,7 @@ SinOsc s => dac;
 
 // Play one note      // (2) Connects sine oscillator to dac
 220 => s.freq;        // (3) Sets the gain to 1.0 and frequency to 220 Hz.
-1.0 => s.gain;        
+1.0 => s.gain;
 0.3 :: second => now; //     Let this run for 0.3 second by ChucKing it to
                       //     now (advance time).
 

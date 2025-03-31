@@ -7,7 +7,7 @@ Ctrl sequencer
 
 // base Player class
 class Player
-{ 
+{
     UGen @ base;
     fun void connect( UGen target )
     {
@@ -19,22 +19,22 @@ class Player
 }
 
 class Note
-{ 
+{
     float note;
     float vel;
     dur length;
 
     fun void set ( float nt, float vl, dur ln )
-    { 
+    {
         nt => note;
         vl => vel;
         ln => length;
     }
 
     fun void playOn ( Player p)
-    { 
+    {
         if ( note > 0 )
-        { 
+        {
             p.noteOn( note , vel );
         }
     }
@@ -51,17 +51,17 @@ class MandPlayer extends Player
     Mandolin m @=> base;
 
     fun void noteOn ( float note, float vel )
-    { 
+    {
         Std.mtof ( note ) => m.freq;
         vel => m.pluck;
     }
 }
 
 class FlutePlayer extends Player
-{ 
-    PercFlut f @=> base; 
+{
+    PercFlut f @=> base;
     fun void noteOn ( float note, float vel )
-    { 
+    {
         Std.mtof ( note ) => f.freq;
         vel => f.noteOn;
     }
@@ -71,12 +71,12 @@ class ClarPlayer extends Player
 {
     Clarinet c @=> base;
     fun void noteOn ( float note, float vel )
-    { 
+    {
         Std.mtof ( note ) => c.freq;
         vel => c.startBlowing;
     }
     fun void noteOff ( float vel )
-    { 
+    {
         vel => c.stopBlowing;
     }
 }
@@ -94,19 +94,19 @@ int order[seqn];
 
 // new sequence
 fun void newsequence()
-{ 
+{
     for( 0 => int i; i < seqn; i++ )
     {
-        i => order[i];		
+        i => order[i];
         55 + scale[Math.random2(0, scale.size() - 1)] => int note;
         times[Math.random2(0, times.size() - 1)] => dur mydur;
-        Math.random2f( 0.75, 0.9 ) => float vel; 
+        Math.random2f( 0.75, 0.9 ) => float vel;
         sequence[i].set( note, vel, mydur );
     }
 }
 
 fun void swap( )
-{ 
+{
     Math.random2(0,seqn-1) => int a;
     ( a + Math.random2(1,seqn-1) ) % seqn => int b;
     order[a] => int tmp;
@@ -143,7 +143,7 @@ newsequence();
 while( true )
 {
     for( 0 => int j; j < seqn; j++ )
-    { 
+    {
         sequence[order[j]] @=> Note cur;
         cur.playOn ( mand );
         cur.playOnAlt ( clar, 12 , 0.7 );

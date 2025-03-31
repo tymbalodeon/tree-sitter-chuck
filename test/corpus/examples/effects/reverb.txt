@@ -10,18 +10,18 @@ Reverb
 //       up your keyboard input
 //
 // 1: JCRev. John Chowning's reverberator class.
-// 6 comb filters in parallel, followed by 3 allpass filters, a lowpass filter, 
-// and another allpass in series, followed by two allpass filters in parallel 
-// with corresponding right and left outputs. 
-// 
-// 2. NRev. CCRMA's NRev reverberator class. 
-// This class is derived from the CLM NRev function, which is based on the use of 
-// networks of simple allpass and comb delay filters. 
+// 6 comb filters in parallel, followed by 3 allpass filters, a lowpass filter,
+// and another allpass in series, followed by two allpass filters in parallel
+// with corresponding right and left outputs.
 //
-// 3. PRCRev. Perry's simple reverberator class. 
+// 2. NRev. CCRMA's NRev reverberator class.
+// This class is derived from the CLM NRev function, which is based on the use of
+// networks of simple allpass and comb delay filters.
+//
+// 3. PRCRev. Perry's simple reverberator class.
 // The least-expensive reverb, but also maybe the lowest quality...
 //
-// Usage: use the .mix() method to control wet/gain ratio! 
+// Usage: use the .mix() method to control wet/gain ratio!
 // E.g. `.mix(.05)` sets the reverb UGen's output to be 5% wet and 95% dry.
 //
 // Performance: Reverbs tend to be very computationally expensive. Good practice
@@ -36,7 +36,7 @@ Reverb
 // Setup UGen graph
 SndBuf buf => JCRev jcRev => dac;
        buf => NRev nRev => dac;
-       buf => PRCRev prcRev => dac;    
+       buf => PRCRev prcRev => dac;
 
 // set wet/dry ratio
 .5 => float revMix;
@@ -56,7 +56,7 @@ revMix => prcRev.mix;
 fun void looper(SndBuf @ buf) {
     while (true) {
         buf.length() => now;
-        200::ms => now; 
+        200::ms => now;
         0 => buf.pos;
     }
 } spork ~ looper(buf);
@@ -101,7 +101,7 @@ fun void keyboardListener(int device) {
                     0.0 => nRev.gain;
                     1.0 => prcRev.gain;
                 }
-                
+
             }
         }
     }

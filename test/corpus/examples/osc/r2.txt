@@ -28,9 +28,9 @@ while( true )
     // wait for event to arrive
     oin => now;
 
-    // grab the next message from the queue. 
+    // grab the next message from the queue.
     while( oin.recv(msg) )
-    { 
+    {
         // expected datatypes
         // (note: as indicated by "if" in the address string above)
         int i;

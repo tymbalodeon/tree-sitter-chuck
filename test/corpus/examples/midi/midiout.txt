@@ -35,7 +35,7 @@ while( true )
 
     // let time pass
     1::second => now;
-    
+
     // MIDI note off message
     // 0x80 + channel (0 in this case)
     0x80 => msg.data1;

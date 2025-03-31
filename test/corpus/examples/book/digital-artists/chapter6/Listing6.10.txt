@@ -7,7 +7,7 @@ Listing6.10
 // Computer music!! (1) Impulse through resonant filter
 Impulse imp => ResonZ filt => dac;
 
-// Set the Q ((2) Quality, amount of resonance) 
+// Set the Q ((2) Quality, amount of resonance)
 100.0 => filt.Q; // fairly high, to yield a pitch
 
 while (1)

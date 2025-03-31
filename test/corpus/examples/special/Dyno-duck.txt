@@ -4,7 +4,7 @@ Dyno duck
 
 //--------------------------------------|
 // Dyno demo 3: "Ducker? She didn't even throw a punch!"
-// Shows how to make one sound fade out when another comes up. This is 
+// Shows how to make one sound fade out when another comes up. This is
 // probably more often used by radio DJs than electronic musicians, but
 // what the hey.
 //

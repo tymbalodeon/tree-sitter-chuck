@@ -4,8 +4,8 @@ Mode o matic
 
 //---------------|
 // modal demo
-// based off of mand-o-matic ( master plan ) 
-// by : philipd 
+// based off of mand-o-matic ( master plan )
+// by : philipd
 // by: Ge Wang (gewang@cs.princeton.edu)
 //     Perry R. Cook (prc@cs.princeton.edu)
 //------------------|
@@ -28,7 +28,7 @@ ModalBar modey => JCRev r => Echo a => Echo b => Echo c => dac;
 
 // shred to modulate the mix
 fun void echo_Shred( )
-{ 
+{
     0.0 => float decider => float mix => float old => float inc;
 
     // time loop

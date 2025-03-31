@@ -55,7 +55,7 @@ fun int setFreq( float freq )
 fun float polePos( float D, float omega )
 {
     // here it is (a la Jaffe & Smith)
-    return Math.sin( (1-D) * omega / 2 ) / 
+    return Math.sin( (1-D) * omega / 2 ) /
            Math.sin( (1+D) * omega / 2 );
 }
 

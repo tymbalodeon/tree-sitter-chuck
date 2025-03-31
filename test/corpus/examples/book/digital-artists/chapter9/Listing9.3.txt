@@ -75,7 +75,7 @@ public class Simple {
         }
         noteName.charAt(noteName.length()-1) - 48 => int oct;
         if (oct > -1 && oct < 10) {
-            note + 12*oct => note;     // (5) After figuring out note number, 
+            note + 12*oct => note;     // (5) After figuring out note number,
             return this.pitch(note);   //     calls MIDI pitch function.
 
         }

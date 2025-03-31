@@ -223,7 +223,7 @@ fun FileIO loadFile( string filepath )
     // reset
     0 => numPoints;
     0 => numCoeffs;
-    
+
     // load data
     FileIO fio;
     if( !fio.open( filepath, FileIO.READ ) )
@@ -235,7 +235,7 @@ fun FileIO loadFile( string filepath )
         // return
         return fio;
     }
-    
+
     string str;
     string line;
     // read file int array
@@ -250,7 +250,7 @@ fun FileIO loadFile( string filepath )
             str => line;
         }
     }
-    
+
     // a string tokenizer
     StringTokenizer tokenizer;
     // set to last non-empty line
@@ -263,7 +263,7 @@ fun FileIO loadFile( string filepath )
         tokenizer.next();
         numCoeffs++;
     }
-    
+
     // check
     if( numPoints == 0 || numCoeffs <= 0 )
     {
@@ -271,10 +271,10 @@ fun FileIO loadFile( string filepath )
         fio.close();
         return fio;
     }
-    
+
     // print
     <<< "# of data points:", numPoints, "dimensions:", numCoeffs >>>;
-    
+
     // done for now
     return fio;
 }
@@ -287,7 +287,7 @@ fun void readData( FileIO fio )
 {
     // rewind the file reader
     fio.seek( 0 );
-    
+
     // read file int array
     string str;
     int ci, ri;
@@ -313,7 +313,7 @@ fun void readData( FileIO fio )
             ci++;
         }
     }
-    
+
     // get keys from map
     label2int.getKeys( labels );
     // assign index

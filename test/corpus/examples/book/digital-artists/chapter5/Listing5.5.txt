@@ -20,7 +20,7 @@ second => now;
 // call halfGain()
 halfGain(s.gain()) => s.gain;            // (4) Prints new SinOsc gain
 <<< "Gain is now half: ", s.gain() >>>;  //     after cutting it in half
-second => now;                           
+second => now;
 
 
 ---

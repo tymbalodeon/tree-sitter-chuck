@@ -91,7 +91,7 @@ fun int initMIDI( int numDevices )
 {
     // devices to open (try: chuck --probe)
     MidiIn midi[numDevices];
-    
+
     // opens MIDI input devices one by one, starting from 0, until it
     // reaches one it can't open.  then waits for midi events on all open
     // devices and prints out the device, and contents of the MIDI message
@@ -99,7 +99,7 @@ fun int initMIDI( int numDevices )
     {
         // no print err
         midi[i].printerr( 0 );
-        
+
         // open the device
         if( midi[i].open( i ) )
         {
@@ -112,14 +112,14 @@ fun int initMIDI( int numDevices )
             break;
         }
     }
-    
+
     // check
     if( midi.size() == 0 )
     {
         <<< "(midi2osc-s.ck) no MIDI input devices found, exiting...", "" >>>;
         return false;
     }
-    
+
     return true;
 }
 
@@ -133,19 +133,19 @@ fun void midi_go( MidiIn min, int id )
 {
     // the message
     MidiMsg msg;
-    
+
     // infinite event loop
     while( true )
     {
         // wait on event
         min => now;
-        
+
         // print message
         while( min.recv( msg ) )
         {
             // print MIDI message with device id (useful for debugging)
             // <<< "MIDI input on device", id, ":", msg.data1, msg.data2, msg.data3 >>>;
- 
+
             // knobs
             if( msg.data1 == 185 )
             {

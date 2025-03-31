@@ -38,15 +38,15 @@ while( true )
     // take ffts
     X.upchuck();
     Y.upchuck();
-    
+
     // multiply in frequency domain
     for( int i; i < X.size()/2; i++ )
         Math.sqrt((Y.cval(i)$polar).mag) * X.cval(i) => Z[i];
         // 2 * Y.cval(i) * X.cval(i) => Z[i];
-    
+
     // take ifft
     ifft.transform( Z );
-    
+
     // advance time
     HOP_SIZE::samp => now;
 }

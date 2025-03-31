@@ -116,7 +116,7 @@ loopme.getVoice() => int voice2;
 // set play rate to go backwards
 loopme.rate( voice2, -1.0 );
 // set play head at the end
-loopme.playPos( voice2, mylooplen ); 
+loopme.playPos( voice2, mylooplen );
 // set gain
 loopme.voiceGain( voice2, 0.5 );
 // set pan (hard right channel)

@@ -21,11 +21,11 @@ TriOsc t => dac;             // (2) Another oscillator (triangle wave).
 
 // only play t at first, sweeping pitch upward
 onGain => t.gain;            // (6) Turns on triangle oscillator.
-0 => s.gain;                 // (7) Turns off sine osc. 
+0 => s.gain;                 // (7) Turns off sine osc.
 
 while (melody < 220.0) {     // (8) Loops until pitch reaches 220.
     melody => t.freq;
-    1.0 +=> melody;          // (9) Steps up pitch by 1 Hz. 
+    1.0 +=> melody;          // (9) Steps up pitch by 1 Hz.
     0.01 :: second => now;   // (10) Every 1/100 of a second.
 }
 
@@ -81,7 +81,7 @@ second => now;              // (24) ...for a second.
 
 // end by sweeping both oscillators down to zero
 for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330 Hz.
-    i => t.freq;                  
+    i => t.freq;
     i*1.333 => s.freq;
     0.01 :: second => now;  // (25) Uses a for loop to sweep down from 330 Hz.
 }

@@ -12,7 +12,7 @@ Mandolin mand => dac;                    // (1) Mandolin instrument
 fun int recurScale(int note, dur rate) { // (2) recurScale function definition
     Std.mtof(note) => mand.freq;         // (3) Sets frequency of mandolin note
     1 => mand.noteOn;                    // (4) Plays note using noteOn
-    rate => now;                         // (5) Waits for duration rate 
+    rate => now;                         // (5) Waits for duration rate
 
     // only do it until some limit is reached
     if (note > 40)                       // (6) Limit for recursion

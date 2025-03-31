@@ -39,7 +39,7 @@ while (true)
     // On a "dice roll," change harmony note
     if (Math.random2(1,6) == 1)
     {                               // (9) Randomly sticks TriOsc on a pitch
-        Std.mtof(melodyNote-12) => t.freq; 
+        Std.mtof(melodyNote-12) => t.freq;
     }
 
     // Pick one of three random durations

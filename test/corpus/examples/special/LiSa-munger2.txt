@@ -13,12 +13,12 @@ LiSa munger2
 // munger~ from PeRColate. One of the cool things about doing this
 // in ChucK is that there is a lot more ready flexibility in
 // designing grain playback patterns; rolling one's own idiosyncratic
-// munger is a lot easier. 
+// munger is a lot easier.
 //
 // Example 2 (below) demonstrates the rotating buffer approach used
 // in the munger~; see after the code for an explanation of this
 // approach. presumably someone smarter than me will dream up a more
-// elegant technique. 
+// elegant technique.
 //--------------------------------------------------------------------
 
 // oscillator as source
@@ -96,7 +96,7 @@ fun void getgrain( int which, dur grainlen, dur rampup, dur rampdown, float rate
     // get an available voice
     lisa[which].getVoice() => int newvoice;
 
-    // make sure we got a valid voice   
+    // make sure we got a valid voice
     if( newvoice > -1 )
     {
         // set play rate
@@ -115,7 +115,7 @@ fun void getgrain( int which, dur grainlen, dur rampup, dur rampdown, float rate
 }
 
 /*--------------------------------------------------------------------
-Rotating Buffer Explanation (from the munger~ source code) 
+Rotating Buffer Explanation (from the munger~ source code)
 
 the munger~ (and scrubber~) use a rotating three-buffer scheme for
 creating clickless grains.  basically, you don't want to be recording

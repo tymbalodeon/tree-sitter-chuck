@@ -14,16 +14,16 @@ class PluckedString extends Chugraph // Chubgraph
 {
     // karplus + strong plucked string filter
     // Ge Wang (gewang@cs.princeton.edu)
-    
+
     Noise imp => OneZero lowpass => outlet;
     lowpass => DelayA delay => lowpass;
-    
+
     .99999 => float R;
     1/220 => float L;
     -1 => lowpass.zero;
     220 => freq;
     0 => imp.gain;
-    
+
     fun float freq( float f )
     {
         // delay length
@@ -35,7 +35,7 @@ class PluckedString extends Chugraph // Chubgraph
         // return frequency through
         return f;
     }
-    
+
     fun void pluck( dur ringDur )
     {
         // turn on the noise...
@@ -69,7 +69,7 @@ while( true )
         // wait a bit
         0.25::second => now;
     }
-    
+
     // let ring...
     ringDur => now;
 }

@@ -4,7 +4,7 @@ Knn2 classify
 
 //------------------------------------------------------------------------------
 // name: knn2-classify.ck
-// desc: k-nearest-neighbor (k-NN) classification example; it simulates a 
+// desc: k-nearest-neighbor (k-NN) classification example; it simulates a
 //       simplified musical genre classification task where three labeled
 //       categories are given respective locations in a 2D feature space.
 //

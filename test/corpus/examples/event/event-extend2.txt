@@ -5,7 +5,7 @@ Event extend2
 //---------------------------------------------------------------------
 // name: event-extend2.ck
 // desc: working with shreds and custom Event to control audio
-//       the "main" shred sporks four child shreds, each of which 
+//       the "main" shred sporks four child shreds, each of which
 //       sets an concurrent voice (using FrencHrn). the main shred
 //       then signals the child shreds one by one, passing along
 //       pitch and velocity info using the custom event we defined.
@@ -31,19 +31,19 @@ fun void hi( TheEvent e, int id )
 {
     // voice
     FrencHrn f => reverb;
-    
+
     while( true )
     {
         // wait on event
         e => now;
         // print the data contained in the event
         <<< "shred", id, ":", e.pitch, e.velocity >>>;
-        
+
         // set the pitch
         e.pitch => Std.mtof => f.freq;
         // play it
         e.velocity => f.noteOn;
-        
+
         // wait a bit
         150::ms => now;
         // note off

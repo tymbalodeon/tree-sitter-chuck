@@ -4,12 +4,12 @@ Machine shred
 
 // on-the-fly shred management
 
-// this is kind of like using the OTF commands 
+// this is kind of like using the OTF commands
 //     add / remove / replace etc.
 // except this is done from code and also can be timed.
 // (this is also a hack for including other files)
 
-// infinite time loop 
+// infinite time loop
 while( true )
 {
     // the path is relative to where 'chuck' is invoked

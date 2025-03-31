@@ -160,9 +160,9 @@ while( true )
         // the total number of output dimensions is the sum of
         // dimensions of all the connected unit analyzers
         //-------------------------------------------------------------
-        combo.upchuck();  
+        combo.upchuck();
         // get features
-        for( int d; d < NUM_DIMENSIONS; d++) 
+        for( int d; d < NUM_DIMENSIONS; d++)
         {
             // store them in current frame
             combo.fval(d) => features[frame][d];
@@ -170,7 +170,7 @@ while( true )
         // advance time
         HOP => now;
     }
-    
+
     // compute means for each coefficient across frames
     for( int d; d < NUM_DIMENSIONS; d++ )
     {
@@ -185,12 +185,12 @@ while( true )
         // average
         numFrames /=> featureMean[d];
     }
-    
+
     //-------------------------------------------------
     // predict using KNN2; results filled in knnResults
     //-------------------------------------------------
     knn.predict( featureMean, K, knnResult );
-    
+
     // print results
     chout <= "-------------------------------------------------" <= IO.newline();
     // print for each label
@@ -219,7 +219,7 @@ fun FileIO loadFile( string filepath )
     // reset
     0 => numPoints;
     0 => numCoeffs;
-    
+
     // load data
     FileIO fio;
     if( !fio.open( filepath, FileIO.READ ) )
@@ -231,7 +231,7 @@ fun FileIO loadFile( string filepath )
         // return
         return fio;
     }
-    
+
     string str;
     string line;
     // read file int array
@@ -246,7 +246,7 @@ fun FileIO loadFile( string filepath )
             str => line;
         }
     }
-    
+
     // a string tokenizer
     StringTokenizer tokenizer;
     // set to last non-empty line
@@ -259,7 +259,7 @@ fun FileIO loadFile( string filepath )
         tokenizer.next();
         numCoeffs++;
     }
-    
+
     // check
     if( numPoints == 0 || numCoeffs <= 0 )
     {
@@ -267,10 +267,10 @@ fun FileIO loadFile( string filepath )
         fio.close();
         return fio;
     }
-    
+
     // print
     <<< "# of data points:", numPoints, "dimensions:", numCoeffs >>>;
-    
+
     // done for now
     return fio;
 }
@@ -283,7 +283,7 @@ fun void readData( FileIO fio )
 {
     // rewind the file reader
     fio.seek( 0 );
-    
+
     // read file int array
     string str;
     int ci, ri;
@@ -309,7 +309,7 @@ fun void readData( FileIO fio )
             ci++;
         }
     }
-    
+
     // get keys from map
     label2int.getKeys( labels );
     // assign index
@@ -321,7 +321,7 @@ fun void readData( FileIO fio )
         // get index as int
         label2int[inLabels[i]] => inLabelsInt[i];
     }
-    
+
     // max length
     0 => int maxLength;
     // get lengths of label names for printing
@@ -333,7 +333,7 @@ fun void readData( FileIO fio )
         // append to array
         lengths << labels[i].length();
     }
-    
+
     // get lengths of label names for printing
     for( int i; i < lengths.size(); i++ )
     {

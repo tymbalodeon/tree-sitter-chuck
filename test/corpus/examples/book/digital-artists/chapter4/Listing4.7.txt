@@ -9,7 +9,7 @@ Listing4.7
 
 // declare and load up a stereo file
 // Make a stereo SndBuf2 and
-SndBuf2 myStereoSound;  
+SndBuf2 myStereoSound;
 me.dir()+"/audio/stereo_fx_03.wav" => myStereoSound.read; // load a stereo sound file.
 
 // We'll use these for Stereo Panning

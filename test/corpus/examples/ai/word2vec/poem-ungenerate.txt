@@ -104,7 +104,7 @@ string words[K_NEAREST];
 GET_TEXT => int state;
 // prompt
 string prompt;
-// the line 
+// the line
 string theText[0];
 
 // new line
@@ -129,7 +129,7 @@ while( true )
     }
     // prompt
     in.prompt( prompt ) => now;
-    
+
     // read
     while( in.more() )
     {
@@ -150,7 +150,7 @@ while( true )
         // if non-empty
         if( !line.size() )
             continue;
-        
+
         // check state
         if( state == GET_TEXT )
         {
@@ -171,12 +171,12 @@ while( true )
     }
 }
 
-// do something with the text input 
+// do something with the text input
 fun void degenerate( string input[], int iterations )
 {
     // start envelope (bring up audio)
     envelope.keyOn();
-    
+
     // endline
     endl();
 
@@ -188,7 +188,7 @@ fun void degenerate( string input[], int iterations )
             say(input[j]); wait();
         }
         endl();
-        
+
         // random word in the line
         Math.random2(0,input.size()-1) => int which;
         // take that work
@@ -198,7 +198,7 @@ fun void degenerate( string input[], int iterations )
         // randomly take one and replace the word in question
         words[Math.random2(0,words.size()-1)] => input[which];
     }
-    
+
     // close envelope (ramp down audio)
     envelope.keyOff();
 
@@ -229,7 +229,7 @@ fun void wait()
 
 // wait
 fun void wait( dur T )
-{    
+{
     // let time pass, let sound...sound
     T => now;
 }
@@ -254,8 +254,8 @@ fun void shepard()
 {
 //--------------------------------------------------------------------
 // continuous shepard-risset tone generator
-// adapted from https://chuck.stanford.edu/doc/examples/deep/shepard.ck 
-//--------------------------------------------------------------------    
+// adapted from https://chuck.stanford.edu/doc/examples/deep/shepard.ck
+//--------------------------------------------------------------------
 
     // mean for normal intensity curve
     66 => float MU;
@@ -265,7 +265,7 @@ fun void shepard()
     1 / Math.gauss(MU, MU, SIGMA) => float SCALE;
     // unit time (change interval)
     1::ms => dur T;
-    
+
     // infinite time loop
     while( true )
     {
@@ -284,7 +284,7 @@ fun void shepard()
             // wrap (for negative INC)
             else if( pitches[i] < 12 ) 108 +=> pitches[i];
         }
-        
+
         // advance time
         T => now;
     }

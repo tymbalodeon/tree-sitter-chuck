@@ -24,7 +24,7 @@ print_arr(a);
 
 fun void print_arr(int a[]) {
     for (0 => int i; i < a.size(); i++) {
-        cherr <= a[i] <= " "; 
+        cherr <= a[i] <= " ";
     }
     cherr <= IO.nl();
 }

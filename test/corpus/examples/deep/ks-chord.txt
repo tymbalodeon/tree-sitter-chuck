@@ -17,16 +17,16 @@ class KS extends Chugraph
 {
     // sample rate
     second / samp => float SRATE;
-    
+
     // ugens!
     DelayA delay;
     OneZero lowpass;
-    
+
     // noise, only for internal use
     Noise n => delay;
     // silence so it doesn't play
     0 => n.gain;
-    
+
     // the feedback
     inlet => delay => lowpass => delay => outlet;
     // max delay
@@ -49,7 +49,7 @@ class KS extends Chugraph
         // let it play
         T-length::samp => now;
     }
-    
+
     // tune the fundamental resonance
     fun float tune( float pitch )
     {
@@ -64,7 +64,7 @@ class KS extends Chugraph
         //return
         return length;
     }
-    
+
     // set feedback attenuation
     fun float feedback( float att )
     {
@@ -75,12 +75,12 @@ class KS extends Chugraph
             return lowpass.gain();
         }
 
-        // set it        
+        // set it
         att => lowpass.gain;
         // return
         return att;
     }
-    
+
     // compute delay from frequency
     fun float computeDelay( float freq )
     {
@@ -92,15 +92,15 @@ class KS extends Chugraph
 // chord class for KS
 public class KSChord extends Chugraph
 {
-    // array of KS objects    
+    // array of KS objects
     KS chordArray[4];
-    
+
     // connect to inlet and outlet of chubgraph
     for( int i; i < chordArray.size(); i++ ) {
         inlet => chordArray[i] => outlet;
     }
 
-    // set feedback    
+    // set feedback
     fun float feedback( float att )
     {
         // sanith check
@@ -109,7 +109,7 @@ public class KSChord extends Chugraph
             <<< "set feedback value between 0 and 1 (non-inclusive)" >>>;
             return att;
         }
-        
+
         // set feedback on each element
         for( int i; i < chordArray.size(); i++ )
         {
@@ -118,7 +118,7 @@ public class KSChord extends Chugraph
 
         return att;
     }
-    
+
     // tune 4 objects
     fun void tune( float pitch1, float pitch2, float pitch3, float pitch4 )
     {

@@ -21,7 +21,7 @@ if (chance == 1)           // (2) If chance is equal to 1...
     // play first "twinkle" note if chance == 1
     1 :: second => now;    // (3) ...do this block...
 }
-else     // (4) ...otherwise (else), set sine frequency to something 
+else     // (4) ...otherwise (else), set sine frequency to something
 {        //        different and play for a longer time.
     // otherwise, play other, higher twinkle note
     330.0 => s.freq;

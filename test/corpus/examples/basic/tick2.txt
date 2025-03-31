@@ -11,7 +11,7 @@ second - (now % second) => now;
 while( true )
 {
     // print now in seconds
-    <<< "tick:", (now / second) $ int, "seconds" >>>; 
+    <<< "tick:", (now / second) $ int, "seconds" >>>;
     1::second => now;
 }
 

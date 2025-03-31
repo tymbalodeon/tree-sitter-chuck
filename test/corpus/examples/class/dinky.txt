@@ -6,7 +6,7 @@ Dinky
 // this class defines the Dinky instrument
 // the variables defined at class level are member variables
 //
-// to test this: 
+// to test this:
 //    > chuck dinky.ck try.ck
 //
 // NOTE (2003): in a future version of chuck...

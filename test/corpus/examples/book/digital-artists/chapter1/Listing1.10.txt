@@ -17,7 +17,7 @@ SinOsc s => dac;
 0 => int offGain;
 
 // Play one note
-twinkle => s.freq;        // Turns twinkle note on (sets gain using 
+twinkle => s.freq;        // Turns twinkle note on (sets gain using
 onGain => s.gain;         //    onGain variable and advances time).
 0.3 :: second => now;
 

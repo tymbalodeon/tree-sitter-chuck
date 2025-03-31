@@ -31,7 +31,7 @@ while( true )
 {
     // wait for analysis event
     Tracking.the_event => now;
-    
+
     // set freq
     Tracking.the_freq * Math.pow(1.059, the_harm) => target_freq;
     // set gain
@@ -43,7 +43,7 @@ fun void ramp_stuff()
 {
     // mysterious 'slew'
     0.025 => float slew;
-    
+
     // infinite time loop
     while( true )
     {
@@ -61,7 +61,7 @@ fun void smack_handler()
     {
         // wait
         Smacking.the_event => now;
-        
+
         // choose random interval
         harms[Math.random2(0,harms.size()-1)] => the_harm;
         // set freq

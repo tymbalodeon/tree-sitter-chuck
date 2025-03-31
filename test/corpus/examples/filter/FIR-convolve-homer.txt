@@ -6,7 +6,7 @@ FIR convolve homer
 // Use FIR to convolve mic input with "dope!"
 
 adc => Gain g => FIR imp => dac;
-SndBuf s => dac; 
+SndBuf s => dac;
 "special:dope" => s.read;
 
 s.samples() => imp.order;

@@ -9,7 +9,7 @@ Ctrl while
 
 // loop
 while( i < 5 )
-{ 
+{
     1 +=> j;
     1 +=> i;
 }

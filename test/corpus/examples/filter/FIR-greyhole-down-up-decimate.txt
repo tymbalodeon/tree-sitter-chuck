@@ -14,7 +14,7 @@ if (me.args() > 0) Std.atoi(me.arg(0)) => decFactor;
 else 16 => decFactor;  // or it will default to what is here
 
 Gain decimate;  // anything chucked to here will run at lower rate
-adc => FIR lowpass => blackhole;  // initial band limiting if needed  
+adc => FIR lowpass => blackhole;  // initial band limiting if needed
 Step holdout => FIR lp2 => WvOut w => dac; // hold and reconstruct
 "test.wav" => w.wavFilename;
 0.1 => w.fileGain;
@@ -50,7 +50,7 @@ fun void decimateBy(int factor)  {
 	lowpass =< decimate;        // now disconnect everybody
         decimate =< blackhole;     // (probably too enthusiastically)
         (factor - 1) :: samp => now;   // and hang around between
-    }       
+    }
 }
 
 

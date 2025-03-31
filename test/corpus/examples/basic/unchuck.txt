@@ -2,13 +2,13 @@
 Unchuck
 =======
 
-// noise generator, biquad filter, dac (audio output) 
+// noise generator, biquad filter, dac (audio output)
 Noise n => BiQuad f => dac;
 // set biquad pole radius
 .99 => f.prad;
 // set biquad gain
 .025 => f.gain;
-// set equal zeros 
+// set equal zeros
 1 => f.eqzs;
 // our float
 0.0 => float t;
@@ -41,7 +41,7 @@ while( now < later )
     100.0 + Std.fabs(Math.sin(t)) * 1000.0 => f.pfreq;
     t + .05 => t;
     // advance time
-    100::ms => now;    
+    100::ms => now;
 }
 
 

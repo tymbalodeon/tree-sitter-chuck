@@ -46,7 +46,7 @@ while (true)
 {
     playChord(Std.rand2(70,82), "minor", second/2); // (1) Plays a minor chord on a random note
     playChord(60, "minor", second/2);      // (2) Plays a C minor chord
-    playChord(67, "major", second/2);      // (3) Plays a G major chord    
+    playChord(67, "major", second/2);      // (3) Plays a G major chord
 }
 
 

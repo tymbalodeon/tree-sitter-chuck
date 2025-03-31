@@ -13,7 +13,7 @@ SndBuf mySound => Pan2 pan => dac;   // Connects a SndBuf through a
 me.dir()+"/audio/cowbell_01.wav" => mySound.read;
 
 // play our sound over and again in an infinite loop
-while (true) 
+while (true)
 {
     // random gain, rate (pitch), and pan each time
     Math.random2f(0.1,1.0) => mySound.gain; // (1) Random gain for sound file

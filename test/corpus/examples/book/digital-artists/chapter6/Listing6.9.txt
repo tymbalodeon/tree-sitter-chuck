@@ -24,7 +24,7 @@ while (true)
     Math.random2f(110.0, 440.0) :: samp => str.delay;
 
     // turn on note (pluck string) and wait a bit
-    1 => pluck.keyOn;  // Plucks by sending keyOn to float number ADSR, 
+    1 => pluck.keyOn;  // Plucks by sending keyOn to float number ADSR,
                        // gates noise into string
     0.3 :: second => now;
 }

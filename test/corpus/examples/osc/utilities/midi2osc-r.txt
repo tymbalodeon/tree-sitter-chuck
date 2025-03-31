@@ -34,7 +34,7 @@ while( true )
     // wait for event to arrive
     OIN => now;
 
-    // grab the next message from the queue. 
+    // grab the next message from the queue.
     while( OIN.recv(MSG) )
     {
         // print stuff (useful for debugging)
@@ -60,7 +60,7 @@ while( true )
             MSG.getInt(0) => R_INT;
             // fetch the second data element as float
             MSG.getFloat(1) => R_FLOAT1;
-            
+
             // print
             cherr <= "received OSC: " <= R_INT <= " " <= R_FLOAT1 <= IO.newline();
         }

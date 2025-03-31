@@ -55,19 +55,19 @@ while( true )
                 <<< "mouse motion:", msg.deltaY, "on y-axis" >>>;
             }
         }
-        
+
         // mouse button down
         else if( msg.isButtonDown() )
         {
             <<< "mouse button", msg.which, "down" >>>;
         }
-        
+
         // mouse button up
         else if( msg.isButtonUp() )
         {
             <<< "mouse button", msg.which, "up" >>>;
         }
-        
+
         // mouse wheel motion
         else if( msg.isWheelMotion() )
         {
@@ -75,7 +75,7 @@ while( true )
             {
                 <<< "mouse wheel:", msg.deltaX, "on x-axis" >>>;
             }
-            
+
             if( msg.deltaY )
             {
                 <<< "mouse wheel:", msg.deltaY, "on y-axis" >>>;

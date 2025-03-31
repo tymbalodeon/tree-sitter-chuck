@@ -65,10 +65,10 @@ for( int i; i < 3; i++ )
     h[i] => hpf[i] => d;
     // set high pass
     600 => hpf[i].freq;
-    
+
     // LFO depth
     0.0 => h[i].lfoDepth;
-    
+
     if( USE_ENV)
     {
         // ops
@@ -88,7 +88,7 @@ while( true )
 {
     // echo gain
     DO_ECHO * .5 => d.gain;
-    
+
     // do it
     playChord( 46, 53, 46+OFFSET, .8, R );
     2*R => now;
@@ -106,13 +106,13 @@ fun void playChord( int a, int b, int c, float vel, dur D )
     Std.mtof(a+TUNE) => h[0].freq;
     Std.mtof(b+TUNE) => h[1].freq;
     Std.mtof(c+TUNE) => h[2].freq;
-    
+
     // note on
     for( 0 => int i; i < 3; i++ )
     { vel => h[i].noteOn; }
     // sound
     0.85*(D) => now;
-    
+
     // note off
     for( 0 => int i; i < 3; i++ )
     { 1 => h[i].noteOff; }

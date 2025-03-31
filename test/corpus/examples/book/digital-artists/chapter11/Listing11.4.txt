@@ -25,7 +25,7 @@ while (true)                 // (6) Infinite loop
     // when event(s) received, process them
     while (oin.recv(msg) != 0) { // (8) Deals with potentially multiple messages
         // peel off integer, float, string
-        msg.getInt(0) => int note;         // (9) Gets note number 
+        msg.getInt(0) => int note;         // (9) Gets note number
         msg.getFloat(1) => float velocity; // (10) Gets velocity
         msg.getString(2) => string howdy;  // (11) Gets string
 

@@ -40,12 +40,12 @@ while (true)
 {
     // print
     <<< e.value(), c.lookup(e.value()) >>>;
-    
+
     // end
     if(e.value() == 1.) break;
 
     // advance time
-    10::ms => now; 
+    10::ms => now;
 }
 
 

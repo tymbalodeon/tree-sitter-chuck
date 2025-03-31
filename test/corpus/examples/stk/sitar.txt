@@ -20,7 +20,7 @@ while( true )
     // note: Math.randomf() returns value between 0 and 1
     if( Math.randomf() > .5 ) {
         .5::second => now;
-    } else { 
+    } else {
         0.25::second => now;
     }
 }

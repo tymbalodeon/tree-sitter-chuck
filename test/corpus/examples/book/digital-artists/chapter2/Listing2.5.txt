@@ -4,7 +4,7 @@ Listing2.5
 ==========
 
 // Listing 2.5 Using dac.chan() to connect to multiple speakers
-// NOTE:  This will cause an error if you don't have a 
+// NOTE:  This will cause an error if you don't have a
 //        multi-channel sound card, and have it selected
 //        as your audio output device in miniAudicle>Preferences
 

@@ -8,7 +8,7 @@ Scream o matic
 // desc: using multiple LiSas for granular synthesis, to make a
 //       continuous scream generator; based on the patch for
 //       the augmented FlowBee interface (2014):
-//       
+//
 //       "Suck-O-Phonic 6000: Augmented Flowbee Musical Interface"
 //       https://www.youtube.com/watch?v=g3bkaljCVRs
 //
@@ -73,10 +73,10 @@ fun void go( LiSa @ lisa, float avgR, float varR, float avgT, float varT, dur T 
     while( true )
     {
         // fireGrain( LiSa @ lisa, float pos, float rate, dur T, float gain )
-        fireGrain( lisa, 
-            Math.random2f(.1,.9), Math.random2f(avgR-varR/2,avgR+varR/2), 
+        fireGrain( lisa,
+            Math.random2f(.1,.9), Math.random2f(avgR-varR/2,avgR+varR/2),
             Math.random2f(avgT-varT/2, avgT+varT/2)::ms, 1 );
-        T => now;        
+        T => now;
     }
 }
 
@@ -91,13 +91,13 @@ for( int i; i < NUM_LISA; i++ )
 
 // time loop
 while( true )
-{ 
+{
     for( int i; i < NUM_LISA; i++ )
     {
         // one of several place to map input (e.g., from kb/mouse/gametrak)
         .5 => lisa[i].gain;
     }
-    
+
     10::ms => now;
 }
 
@@ -113,7 +113,7 @@ fun void fireGrain( LiSa @ lisa, float pos, float rate, dur T, float gain )
     grainLen * GRAIN_RAMP_FACTOR => dur rampTime;
     // a grain
     if( lisa != null && pos >= 0 )
-        spork ~ grain( lisa, pos * lisa.duration(), grainLen, T/2, T/2, 
+        spork ~ grain( lisa, pos * lisa.duration(), grainLen, T/2, T/2,
         rate * GRAIN_PLAY_RATE, gain );
 }
 
@@ -122,7 +122,7 @@ fun void grain( LiSa @ lisa, dur pos, dur grainLen, dur rampUp, dur rampDown, fl
 {
     // get a voice to use
     lisa.getVoice() => int voice;
-    
+
     // if available
     if( voice > -1 )
     {
@@ -150,25 +150,25 @@ fun LiSa load( string filename )
     SndBuf buffy;
     // load it
     filename => buffy.read;
-    
+
     // new LiSa
     LiSa lisa;
     // set duration
     buffy.samples()::samp => lisa.duration;
-    
+
     // transfer values from SndBuf to LiSa
     for( 0 => int i; i < buffy.samples(); i++ )
     {
         // args are sample value and sample index
         // (dur must be integral in samples)
-        lisa.valueAt( buffy.valueAt(i), i::samp );        
+        lisa.valueAt( buffy.valueAt(i), i::samp );
     }
-    
+
     // set LiSa parameters
     lisa.play( false );
     lisa.loop( false );
     lisa.maxVoices( LISA_MAX_VOICES );
-    
+
     return lisa;
 }
 

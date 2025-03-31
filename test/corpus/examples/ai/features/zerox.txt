@@ -6,11 +6,11 @@ Zerox
 // name: ZeroX (Zero Crossing Detector)
 // desc: Detect the number of zero crosses in a Flip of samples
 //       1. Flip will convert N samples to a UAna Frame
-//       2. ZeroX will then count the number of zero crossings in 
-//       the UAna Frame 
-//       
+//       2. ZeroX will then count the number of zero crossings in
+//       the UAna Frame
+//
 //       Note the ZeroX output in this example is equal to
-//       zeroX = 2*freq / (sample_rate / N) 
+//       zeroX = 2*freq / (sample_rate / N)
 //----------------------------------------------------------------
 
 // analysis patch

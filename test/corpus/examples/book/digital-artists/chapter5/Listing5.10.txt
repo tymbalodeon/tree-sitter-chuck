@@ -7,7 +7,7 @@ Listing5.10
 
 // global variables
 Mandolin mand => dac; // (1) Makes and connects a Mandolin instrument UGen.
-60 => int note;       // (2) Global note variable 
+60 => int note;       // (2) Global note variable
 
 // functions
 fun void noteUp()     // (3) noteUp function definition
@@ -19,7 +19,7 @@ fun void noteUp()     // (3) noteUp function definition
 
 fun void noteDown()               // (7) noteDown function
 {                       // (8) Subtracts 1 from global note variable
-    1 -=> note; // note half-step down 
+    1 -=> note; // note half-step down
     <<< note >>>; // print new note value
     play(); // call play function
 }

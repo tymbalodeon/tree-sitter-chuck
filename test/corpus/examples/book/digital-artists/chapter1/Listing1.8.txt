@@ -30,7 +30,7 @@ myPitch => s.freq;     // (6) Sets frequency and turns on
 onGain => s.gain;      //     oscillator, to start your 2nd note
 0.3 :: second => now;
 
-offGain => s.gain;     // (7) Turns off the sound of your oscillator 
+offGain => s.gain;     // (7) Turns off the sound of your oscillator
 0.3 :: second => now;  //     again to end the 2nd note
 
 

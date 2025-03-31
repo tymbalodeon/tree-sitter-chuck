@@ -2,7 +2,7 @@
 Demo2
 =====
 
-// demo2.ck 
+// demo2.ck
 // really lame!
 
 // set the global gain
@@ -53,7 +53,7 @@ for(0 => int i; i<5; i++) {
 
 	oscarray[i] =< dac;
 	1::second => now;
-	
+
 }
 
 

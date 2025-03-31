@@ -17,12 +17,12 @@ Rhodey r[5];
 NRev rev[2] => dac; 0.05 => rev[0].mix; 0.05 => rev[1].mix;
 Rhodey solo => rev;
 Pan2 p[2]; p[0] => rev[0]; p[1] => rev[1];
-Delay d[2]; rev[0] => d[0] => d[1] => rev[1]; 
+Delay d[2]; rev[0] => d[0] => d[1] => rev[1];
 0.7 => d[0].gain => d[1].gain;
 second => d[0].max => d[0].delay => d[1].max => d[1].delay;
 SinOsc panner => blackhole;
 1 => panner.freq;
-r[0] => p[0]; r[1] => p[0]; 
+r[0] => p[0]; r[1] => p[0];
 r[2] => p[1]; r[3] => p[1]; r[4] => p[0]; r[4] => p[1];
 for (int i; i < r.cap(); i++) {
     1 => r[i].lfoSpeed;
@@ -33,7 +33,7 @@ for (int i; i < r.cap(); i++) {
     r[i].opADSR(2, 0.001, 3.00, 0.0, 0.04);
 }
 
-// spork panner on its own shred   
+// spork panner on its own shred
 spork ~ doPan();
 
 //  Some chords.  We don't use all here
@@ -59,7 +59,7 @@ while( true )
     Std.mtof(65) => solo.freq; 0.6 => solo.noteOn; E => now;
     Std.mtof(68) => solo.freq; 0.9 => solo.noteOn; 1.5*E => now;
     Std.mtof(65) => solo.freq; 0.7 => solo.noteOn; E/2 => now;
-    Std.mtof(70) => solo.freq; 0.9 => solo.noteOn; 
+    Std.mtof(70) => solo.freq; 0.9 => solo.noteOn;
     spork ~ rollChord(BfMajC, 0.9);
     Q+S => now;
     Std.mtof(63) => solo.freq; 0.6 => solo.noteOn; E => now;
@@ -68,29 +68,29 @@ while( true )
     Std.mtof(65) => solo.freq; 0.6 => solo.noteOn; E => now;
     Std.mtof(68) => solo.freq; 0.9 => solo.noteOn; E => now;
     Std.mtof(70) => solo.freq; 0.7 => solo.noteOn; E => now;
-    Std.mtof(72) => solo.freq; 0.9 => solo.noteOn; 
+    Std.mtof(72) => solo.freq; 0.9 => solo.noteOn;
     spork ~ rollChord(Fmi9, 0.9);
     4*second => now;
     Std.mtof(65) => solo.freq; 0.6 => solo.noteOn; E => now;
     Std.mtof(68) => solo.freq; 0.9 => solo.noteOn; E => now;
     Std.mtof(65) => solo.freq; 0.7 => solo.noteOn; E => now;
-    Std.mtof(70) => solo.freq; 0.9 => solo.noteOn; 
+    Std.mtof(70) => solo.freq; 0.9 => solo.noteOn;
     spork ~ rollChord(BfMajC, 0.9); 4*second => now;
 
     Std.mtof(65) => solo.freq; 0.6 => solo.noteOn; E => now;
     Std.mtof(68) => solo.freq; 0.9 => solo.noteOn; E => now;
     Std.mtof(65) => solo.freq; 0.7 => solo.noteOn; E => now;
     Std.mtof(70) => solo.freq; 0.7 => solo.noteOn; E => now;
-    Std.mtof(72) => solo.freq; 0.9 => solo.noteOn; 
+    Std.mtof(72) => solo.freq; 0.9 => solo.noteOn;
     spork ~ rollChord(Fmi9, 0.9); Q => now;
     Std.mtof(75) => solo.freq; 0.9 => solo.noteOn; E/2 => now;
     Std.mtof(77) => solo.freq; 0.9 => solo.noteOn; E/2 => now;
-    Std.mtof(80) => solo.freq; 1.0 => solo.noteOn; 
+    Std.mtof(80) => solo.freq; 1.0 => solo.noteOn;
     4*second => now;
     Std.mtof(65) => solo.freq; 0.6 => solo.noteOn; E => now;
     Std.mtof(68) => solo.freq; 0.9 => solo.noteOn; 1.5*E => now;
     Std.mtof(77) => solo.freq; 0.7 => solo.noteOn; E/2 => now;
-    Std.mtof(82) => solo.freq; 0.9 => solo.noteOn; 
+    Std.mtof(82) => solo.freq; 0.9 => solo.noteOn;
     spork ~ rollChord(BfMajC, 0.9);
     4*second => now;
 
@@ -101,7 +101,7 @@ while( true )
     Std.mtof(72) => solo.freq; 0.8 => solo.noteOn; E => now;
     spork ~ rollChord(AfMaj7Bf, 0.9);
     4*second => now;
-    
+
     Std.mtof(65) => solo.freq; 0.6 => solo.noteOn; E => now;
     Std.mtof(63) => solo.freq; 0.6 => solo.noteOn; E => now;
     Std.mtof(53) => solo.freq; 1.0 => solo.noteOn;

@@ -33,7 +33,7 @@ saveme.record(1);
 // let time pass for 2 seconds
 .5::second => now;
 // stop recording
-saveme.record(0); 
+saveme.record(0);
 
 // disconnect; stop monitoring input
 s =< dac;
@@ -45,7 +45,7 @@ saveme.rate(1.5);
 saveme.pan(0.0);
 // start playing, with a ramp up
 // (use saveme.play(1) to start playing without ramp)
-saveme.rampUp(500::ms); 
+saveme.rampUp(500::ms);
 
 // hang for a bit
 500::ms => now;

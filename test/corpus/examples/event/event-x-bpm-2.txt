@@ -61,7 +61,7 @@ fun void tempoController()
             // print BPM
             <<< "new BPM:", BPM >>>;
         }
-        
+
         // wait on the pulse
         PULSE => now;
     }
@@ -76,10 +76,10 @@ fun void metronome()
         1/BPM * minute => dur BEAT;
         // assume 4/4, compute durationm of a tick
         BEAT*4/ticksPerMeasure => dur TICK;
-        
+
         // broadcast to all shreds waiting on PULSE
         PULSE.broadcast();
-        
+
         // increment tick count
         PULSE.tick++;
         // print
@@ -94,7 +94,7 @@ fun void metronome()
             // next line
             cherr <= IO.newline();
         }
-        
+
         // advance time by a tick duration
         TICK => now;
     }
@@ -106,7 +106,7 @@ fun void one()
     SndBuf buffy => dac;
     "special:dope" => buffy.read;
     0 => buffy.gain;
-    
+
     while( true )
     {
         // wait on the shared event
@@ -130,7 +130,7 @@ fun void two()
     SndBuf buffy => dac;
     "special:dope" => buffy.read;
     0 => buffy.gain;
-    
+
     while( true )
     {
         // wait on the shared event

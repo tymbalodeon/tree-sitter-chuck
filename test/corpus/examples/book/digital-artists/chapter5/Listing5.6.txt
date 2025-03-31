@@ -25,7 +25,7 @@ fun float fifth( float originalFreq )
 }
 
 // Main program
-for (100 => float freq; freq < 500; 0.5 +=> freq )  // (3) Sweeps frequency 
+for (100 => float freq; freq < 500; 0.5 +=> freq )  // (3) Sweeps frequency
 {                                                // from 100 to 500 by 1/2 Hz each step
     freq => s.freq;                // (4) Sets left square wave to freq
     octave(freq) => t.freq;        // (5) Sets center square wave to octave above

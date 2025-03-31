@@ -7,11 +7,11 @@ Ctrl for loop
 
 // function
 fun int factorial ( int arg )
-{ 
+{
     1 => int r;
     arg => int b;
     for ( b ; b > 1 ; 1 -=> b )
-    { 
+    {
         b *=> r;
     }
 

@@ -160,10 +160,10 @@ for( int i; i < labels.cap(); i++)
 // function: extract and print features from a single file
 //---------------------------------------------------------------------
 fun int extractFeatures( string inputFilePath, string label, IO out )
-{    
+{
     // increment
     NUM_FILES++;
-    // log 
+    // log
     cherr <= "[" <= NUM_FILES <= "] extracting features: " <= inputFilePath <= IO.newline();
 
     // load by block to speed up IO
@@ -194,7 +194,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
         // advance time
         HOP => now;
     }
-    
+
     //-------------------------------------------------------------
     // average into a single feature vector per file
     // NOTE: this can be easily modified to N feature vectors
@@ -207,10 +207,10 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
         numFrames /=> featureFrame[d];
         // print the MFCC results
         out <= featureFrame[d] <= " ";
-    }    
+    }
     // print label name and endline
     out <= label <= IO.newline();
-    
+
     // done
     return true;
 }

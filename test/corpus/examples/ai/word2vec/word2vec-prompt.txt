@@ -55,7 +55,7 @@ fun void print( Word2Vec model )
     // print info
     <<< "dictionary size:", model.size() >>>;
     <<< "embedding dimensions:", model.dim() >>>;
-    <<< "using KDTree for search:", model.useKDTree() ? "YES" : "NO" >>>;        
+    <<< "using KDTree for search:", model.useKDTree() ? "YES" : "NO" >>>;
     // get bounds
     float mins[0], maxs[0];
     model.minMax( mins, maxs );
@@ -69,7 +69,7 @@ while( true )
 {
     // prompt
     in.prompt( "word2vec2chuck => " ) => now;
-    
+
     // read
     while( in.more() )
     {
@@ -101,7 +101,7 @@ fun int execute( string line[] )
     line[0] => string command;
     // index
     1 => int index;
-        
+
     // which command
     if( command == "quit" || command == "exit" )
     {
@@ -251,7 +251,7 @@ fun int execute( string line[] )
             float coord1[model.dim()], coord2[model.dim()];
             model.getVector(line[1], coord1);
             model.getVector(line[2], coord2);
-            
+
             // print coordinate 1
             // cherr <= line[1] <= ": ";
             // for( int i; i < coord1.size(); i++ ) { cherr <= coord1[i] <= " "; }
@@ -274,7 +274,7 @@ fun int execute( string line[] )
         {
             <<< "usage: similar [float] [float] ... model dimension", "" >>>;
         }
-        else 
+        else
         {
             string results[10];
             model.getSimilar( [Std.atof(line[1]),Std.atof(line[2])], 10, results );
@@ -286,7 +286,7 @@ fun int execute( string line[] )
         // not found
         <<< "    command not found:", command >>>;
     }
-    
+
     return 0; // 0 is good
 }
 
@@ -298,7 +298,7 @@ fun void sonifyDoh( float params[], float vstart[], float vend[] )
         <<< "not enough params!", "" >>>;
         return;
     }
-    
+
     // use param 1 for volume
     Math.remap(params[0], vstart[0], vend[0], .1, 1 ) => doh.gain;
     // use param 2 for rate
@@ -322,15 +322,15 @@ fun void go( string start, string end, dur T, int steps, int k )
     float mins[0], maxs[0];
     model.minMax( mins, maxs );
 
-    // duplicate    
+    // duplicate
     W2V.dup( vend ) @=> float vdiff[];
     W2V.dup( vstart ) @=> float v[];
-    
+
     for( int i; i < vstart.size(); i++ ) { cherr <= vstart[i] <= " "; } cherr <= IO.newline();
     for( int i; i < vend.size(); i++ ) { cherr <= vend[i] <= " "; } cherr <= IO.newline();
 
     W2V.minus( vdiff, vstart );
-    
+
     // increment
     1.0 / steps => float inc;
     // time step
@@ -356,12 +356,12 @@ fun void go( string start, string end, dur T, int steps, int k )
 
         // print
         <<< i, "->", word >>>;
-        
+
         // sonify
         sonifyDoh( coord, vstart, vend);
         // for( int i; i < v.size(); i++ ) { cherr <= v[i] <= " "; }
         // cherr <= IO.newline();
-        
+
         // advance time
         Tstep => now;
     }
@@ -395,7 +395,7 @@ class W2V
         // add into element
         for( int i; i < size; i++ ) y[i] +=> x[i];
     }
-    
+
     // result stored in x
     fun static void minus( float x[], float y[] )
     {
@@ -404,28 +404,28 @@ class W2V
         // add into element
         for( int i; i < size; i++ ) y[i] -=> x[i];
     }
-    
+
     fun static void scale( float x[], float scalar )
     {
         // scale
         for( int i; i < x.size(); i++ ) scalar *=> x[i];
     }
-    
+
     fun static void scale( float result[], float x[], float scalar )
     {
         // scale
         for( int i; i < x.size(); i++ ) scalar * x[i] => result[i];
     }
-    
+
     fun static string[] eval( Word2Vec @ w, string expr, int k )
     {
-        // init 
+        // init
         int pos;
         1.0 => float multiplier;
         string word;
         float wordVector[w.dim()];
         float exprVector[w.dim()];
-        
+
         // compute
         while( true )
         {
@@ -439,7 +439,7 @@ class W2V
                 }
                 break;
             }
-            else 
+            else
             {
                 expr.substring(0, pos) => word;
                 w.getVector(word, wordVector);
@@ -460,14 +460,14 @@ class W2V
                 }
             }
         }
-        
+
         // return
         string results[k];
         w.getSimilar( exprVector, k, results );
-        
+
         return results;
     }
-    
+
     // logical analogy: A to B is as C is to [what this function returns]
     fun static string[] analogy( Word2Vec @ w, string A, string B, string C, int k )
     {

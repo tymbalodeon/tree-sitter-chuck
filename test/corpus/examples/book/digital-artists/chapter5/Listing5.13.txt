@@ -11,7 +11,7 @@ Mandolin mand => dac;        // (1) Mandolin instrument.
 [60,62,63,65,67,69,70,72] @=> int scale[];
 
 // function to modify an element of an array
-fun void arrayAdder( int temp[], int index)  
+fun void arrayAdder( int temp[], int index)
 {                            // (3) arrayAdder function definition.
     1 +=> temp[index];
 }

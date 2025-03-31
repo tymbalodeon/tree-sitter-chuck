@@ -47,7 +47,7 @@ arpeg();
 // Fractional part is duration
 // If only fractional, then it's a rest duration
 // Negative cause slur or hold (no notOn rearticulation)
-// if MIDI note illegal (>127) then it's vibrato 
+// if MIDI note illegal (>127) then it's vibrato
 [60.2,0.1,65.2,0.05,67.2,0.05,68.7,-69.3,0.1,
  60.2,0.05,65.25,67.25,68.7,-69.3,0.1,
  60.2,65.2,67.2,68.4,69.4,71.25,72.2,74.2,72.2,69.2,67.2,65.3,60.3,57.3,53.4,0.2,48.4,0.4,41.9,600.0,-41.9,1] @=> float notes[];

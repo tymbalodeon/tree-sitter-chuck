@@ -19,7 +19,7 @@ ExpDelay
 // durcurve (float) [0.0001-inf]: set steepness of delay curve
 //       1 = steady
 //       <1 = starts fast and slows down
-//       >1 = starts slow and speeds up 
+//       >1 = starts slow and speeds up
 // ampcurve (float) [0.0001-inf]: set steepness of amplitude decay
 
 ModalBar pop => ExpDelay ed => dac;

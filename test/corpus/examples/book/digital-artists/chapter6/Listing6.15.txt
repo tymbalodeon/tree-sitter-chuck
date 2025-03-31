@@ -26,12 +26,12 @@ input => del[2] => dac.right;
 for (0 => int i; i < 3; i++) {
     del[i] => del[i];
     0.6 => del[i].gain;
-              // (5) Each delay time is different but related. 
+              // (5) Each delay time is different but related.
     (0.8 + i*0.3) :: second => del[i].max => del[i].delay;
 }
 
 // Define note array for our song
-//              (6) Array of notes that you'll draw from. 
+//              (6) Array of notes that you'll draw from.
 [60, 64, 65, 67, 70, 72] @=> int notes[];
 notes.cap() - 1 => int numNotes;
 

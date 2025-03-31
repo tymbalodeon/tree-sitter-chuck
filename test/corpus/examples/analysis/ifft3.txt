@@ -19,7 +19,7 @@ while( true )
     // set freq
     srate / fft.size() * div++ => g.freq;
     fft.size()/2 %=> div;
-    
+
     // pull from ifft
     ifft.upchuck();
 

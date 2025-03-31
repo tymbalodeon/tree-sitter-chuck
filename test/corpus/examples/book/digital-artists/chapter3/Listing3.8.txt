@@ -32,7 +32,7 @@ TriOsc t => dac;                    // (2) TriOsc fixed at center for harmony
 
 // loop over all the arrays
 // (make sure they're the same length!!)
-for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all 
+for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
 {                                         //     notes in array
     // (9) print out index, MIDI notes, and words from arrays
     <<< i, melNotes[i], harmNotes[i], words[i] >>>;

@@ -24,7 +24,7 @@ for (int i; i < 7; i++) {
 }
 
 // turn down the volum... for safety
-0.12 => r[0].gain => r[1].gain; 
+0.12 => r[0].gain => r[1].gain;
 
 [48, 55, 60, 65, 72, 79, 81] @=> int chord1[];
 [46, 56, 63, 67, 70, 82, 89] @=> int chord2[];
@@ -36,7 +36,7 @@ rollChord(chord2); second => now;
 allOff(); second => now;
 Std.mtof(50) => c[3].freq;
 1 => c[3].noteOn; second => now;
-    
+
 <<< "Then loop on random open circle of 4ths notes...", "" >>>;
 while( true )
 {
@@ -45,7 +45,7 @@ while( true )
     Math.random2(0,6) => which;
     Math.random2(0,10)*5 => int space;
     Std.mtof(38+space) => c[which].freq;
-    if (maybe) 
+    if (maybe)
         1 => c[which].noteOff;
     else
         1 => c[which].noteOn;

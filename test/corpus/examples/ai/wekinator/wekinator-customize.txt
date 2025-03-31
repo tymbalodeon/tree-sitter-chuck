@@ -35,7 +35,7 @@ global Wekinator wek;
 <<< "---------------", "" >>>;
 // set number of expect inputs
 // (if different than exisxting, this will clear all current observations)
-wek.inputDims(2); 
+wek.inputDims(2);
 <<< "# input channels:", wek.inputDims() >>>;
 // set number of expect outputs
 // (if different than exisxting, this will clear all current observations)
@@ -220,7 +220,7 @@ wek.clearAllObs(0);
 wek.setAllRecordStatus( false );
 // set whether Wekinator.add() should be associated with a specific output channel
 wek.setOutputRecordStatus( 0, true );
-// print 
+// print
 <<< "record status | output channel 0:", wek.getOutputRecordStatus( 0 ) >>>;
 
 // setting this to false will "mask" out all output channels; will predict 0s

@@ -51,7 +51,7 @@ while( true )
 
     // note: Math.randomf() returns value bewteen 0 and 1
     if( Math.randomf() > 0.2 )
-    { 
+    {
         1::second => now;
         0.001 => band.stopBowing;
         0.5::second *  Math.random2(1,3) => now;
@@ -60,7 +60,7 @@ while( true )
         scale[Math.random2(0, scale.size()-1)] => int freq;
         Std.mtof( 21 + Math.random2(0,5) * 12 + freq ) => band.freq;
         // note: Math.randomf() returns value between 0 and 1
-        if( Math.randomf() > 0.85 ) 
+        if( Math.randomf() > 0.85 )
             Math.random2(0,3) => band.preset;
     }
 }

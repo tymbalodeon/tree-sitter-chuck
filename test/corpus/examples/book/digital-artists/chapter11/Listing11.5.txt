@@ -4,7 +4,7 @@ Listing11.5
 
 // Listing 11.5 Receive lines of strings from an Arduino via a SerialIO object
 
-SerialIO cereal;                      // (1) Declares a Serial Input/Output object 
+SerialIO cereal;                      // (1) Declares a Serial Input/Output object
 cereal.open(0, SerialIO.B9600, SerialIO.ASCII);  // (2) Opens it with specific parameters
 
 while(true)

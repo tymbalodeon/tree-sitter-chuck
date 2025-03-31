@@ -43,7 +43,7 @@ while (true)
 	Math.randomf() => mesh2.ypos;
 	1 => mesh2.noteOn;
 	250::ms => now;
-	
+
 }
 
 ---

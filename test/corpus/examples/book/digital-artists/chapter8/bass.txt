@@ -9,15 +9,15 @@ Bass
 // sound chain (mandolin for bass)
 Mandolin bass => NRev r => dac;     // (1) Mandolin bass player through reverb.
 
-// parameter setup 
-0.1 => r.mix; 
-0.0 => bass.stringDamping; // (2) Makes strings ring a long time. 
+// parameter setup
+0.1 => r.mix;
+0.0 => bass.stringDamping; // (2) Makes strings ring a long time.
 0.02 => bass.stringDetune; // (3) Gives it a really big bass-sized body.
 0.05 => bass.bodySize;
 .5 => bass.gain;
 
 // jazz scale data         // (4) Scale array for walking bass line.
-[41,43,45,48,50,51,53,60,63] @=> int scale[]; 
+[41,43,45,48,50,51,53,60,63] @=> int scale[];
 4 => int walkPos;          // (5) Pointer for position within scale.
 
 // loop

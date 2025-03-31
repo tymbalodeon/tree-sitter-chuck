@@ -9,7 +9,7 @@ Listing6.5
 SinOsc vibrato => SawOsc viol => ADSR env => dac;
 
 // (1) Tells the oscillator to interpret input as frequency modulation
-2 => viol.sync;   
+2 => viol.sync;
 
 6.0 => vibrato.freq;  // (2) set vibrato frequency to 6 Hz
 
@@ -30,7 +30,7 @@ for (0 => int i; i < scale.cap(); i++)  // (5) Plays through whole scale using f
     0.3 :: second => now;
 
     // turn off note and wait a bit
-    1 => env.keyOff; 
+    1 => env.keyOff;
     0.1 :: second => now;
 }
 

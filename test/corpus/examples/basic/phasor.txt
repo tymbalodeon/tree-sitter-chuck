@@ -10,7 +10,7 @@ Phasor
 // programmatically. Note: this is *not* intended to be a sound-generating UGen!
 // It is more commonly used to modulate other signals or do lookups in a wavetable.
 // For example, in this demo, the phasor signal modulates the PulseOsc width.
-// 
+//
 // Although the phasor signal is the shape of a Sawtooth, it performs no anti-aliasing!
 // For a sawtooth shaped signal, use SawOsc instead.
 //

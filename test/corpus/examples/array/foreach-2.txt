@@ -11,9 +11,9 @@ Foreach 2
 
 // iterating over an array literal
 for( int x : [ 1, 2, 3 ] )
-{ 
+{
     // do something with it
-    <<< x >>>; 
+    <<< x >>>;
 }
 
 

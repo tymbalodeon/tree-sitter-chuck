@@ -95,8 +95,8 @@ Math.random2f( 1700.0, 3000.0 ) => f3.freq;
   19, 17, 20, 24 ] @=> int scale[];
 // names (for printing)
 [ "ut0", "ra0", "fa0", "ut0",
-  "ra0", "mi0", "ra1", "ut1", 
-  "mi0", "ut1", "re1", "mi1", 
+  "ra0", "mi0", "ra1", "ut1",
+  "mi0", "ut1", "re1", "mi1",
   "ut1", "fa1", "re1", "ut2" ] @=> string names[];
 // current location in scale
 9 => int scalepoint;

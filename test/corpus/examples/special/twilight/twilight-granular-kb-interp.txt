@@ -117,7 +117,7 @@ fun void fireGrain()
     GRAIN_POSITION + Math.random2f(0,GRAIN_POSITION_RANDOM) => float pos;
     // a grain
     if( lisa != null && pos >= 0 )
-        spork ~ grain( lisa, pos * lisa.duration(), grainLen, rampTime, rampTime, 
+        spork ~ grain( lisa, pos * lisa.duration(), grainLen, rampTime, rampTime,
         GRAIN_PLAY_RATE );
 }
 
@@ -179,7 +179,7 @@ fun void kb()
     {
         // wait on HidIn as event
         hi => now;
-        
+
         // messages received
         while( hi.recv( msg ) )
         {
@@ -238,25 +238,25 @@ fun LiSa load( string filename )
     SndBuf buffy;
     // load it
     filename => buffy.read;
-    
+
     // new LiSa
     LiSa lisa;
     // set duration
     buffy.samples()::samp => lisa.duration;
-    
+
     // transfer values from SndBuf to LiSa
     for( 0 => int i; i < buffy.samples(); i++ )
     {
         // args are sample value and sample index
         // (dur must be integral in samples)
-        lisa.valueAt( buffy.valueAt(i), i::samp );        
+        lisa.valueAt( buffy.valueAt(i), i::samp );
     }
-    
+
     // set LiSa parameters
     lisa.play( false );
     lisa.loop( false );
     lisa.maxVoices( LISA_MAX_VOICES );
-    
+
     return lisa;
 }
 

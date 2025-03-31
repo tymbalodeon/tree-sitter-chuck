@@ -71,7 +71,7 @@ for( int i; i < epochs; i++ )
         mlp.backprop( Y[j], learningRate );
         visGradients();
     }
-    
+
     // print
     chout <= IO.newline();
     chout <= "********************************************" <= IO.newline();
@@ -133,7 +133,7 @@ fun void visWeightsBiases()
             chout <= IO.newline();
         }
     }
-    
+
     chout <= "---" <= IO.newline();
     // chout <= "[biases]" <= IO.newline();
     for ( 0 => int k; k < nodesPerLayer.size() - 1; k++ )

@@ -18,7 +18,7 @@ while (1) {
     // play a measure of eighth notes
     for (0 => int beat; beat < 8; beat++) {
         // play mostly, but leave out last eighth
-        if (beat != 7) {     // (1) Plays all eighths except the last one 
+        if (beat != 7) {     // (1) Plays all eighths except the last one
             0 => hat.pos;    //     (the anti-cowbell)
         }
         eighth => now;

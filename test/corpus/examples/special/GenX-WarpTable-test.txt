@@ -9,7 +9,7 @@ GenX WarpTable test
 //
 // this table is mostly useful for conditioning control signals
 // it is end-constrained in that an input of 0 always yields 0
-// and an output of 1 always yields 1 
+// and an output of 1 always yields 1
 //
 //     WarpTable.value(0) => 0 always
 //     WarpTable.value(1) => 1 always

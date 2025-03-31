@@ -13,10 +13,10 @@ fun void varmod()
 {
     while ( true )
     {
-        0.5 + 0.4 *  Math.sin( t * 0.1 ) => mog.modDepth;	
-        0.5 + 0.4 *  Math.sin( t * 0.2 ) => mog.modSpeed;	
-        0.5 + 0.4 *  Math.sin( t * 0.3 ) => mog.filterQ;	
-        0.5 + 0.4 *  Math.sin( t * 0.4 ) => mog.filterSweepRate;	
+        0.5 + 0.4 *  Math.sin( t * 0.1 ) => mog.modDepth;
+        0.5 + 0.4 *  Math.sin( t * 0.2 ) => mog.modSpeed;
+        0.5 + 0.4 *  Math.sin( t * 0.3 ) => mog.filterQ;
+        0.5 + 0.4 *  Math.sin( t * 0.4 ) => mog.filterSweepRate;
         10::ms => now;
         t + 0.01 => t;
     }

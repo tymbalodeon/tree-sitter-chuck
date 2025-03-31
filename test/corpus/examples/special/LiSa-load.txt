@@ -12,7 +12,7 @@ LiSa load
 //                  and bi-directional loop
 //-----------------------------------------------------------------------------
 // this example shows how to open a soundfile and use it in LiSa. someday LiSa
-// may be able to open soundfiles directly, but don't hold your breath. 
+// may be able to open soundfiles directly, but don't hold your breath.
 //
 // note that unlike SndBuf, LiSa wants a dur (not an int) to specify the index
 // of the sample location
@@ -50,7 +50,7 @@ fun LiSa load( string filename )
     {
         // args are sample value and sample index
         // (dur must be integral in samples)
-        lisa.valueAt( buffy.valueAt(i), i::samp );        
+        lisa.valueAt( buffy.valueAt(i), i::samp );
     }
 
     // set default LiSa parameters; actual usage parameters intended

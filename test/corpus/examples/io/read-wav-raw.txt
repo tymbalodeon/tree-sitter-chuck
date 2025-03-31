@@ -18,7 +18,7 @@ Read wav raw
 // warn people what is about to happen
 <<< "raw mono WAV file reader!!", "" >>>;
 
-// default file 
+// default file
 me.dir() + "saigon44.wav" => string filename;
 // look at command line
 if( me.args() > 0 ) me.arg(0) => filename;
@@ -148,7 +148,7 @@ while( n < numSamples )
     if( n % sRate == 0 ) {
         chout <= "|"; chout.flush();
     }
-    
+
     // advance one sample
     samp => now;
 }

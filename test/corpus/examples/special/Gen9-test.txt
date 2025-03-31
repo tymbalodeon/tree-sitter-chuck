@@ -16,7 +16,7 @@ Phasor drive => Gen9 g9 => dac;
 // load up the coeffs
 // these are in triplets:
 //     harmonic partial ratio, amplitude, phase
-//     see the RTcmix page: 
+//     see the RTcmix page:
 //     http://www.music.columbia.edu/cmc/Rtcmix/docs/scorefile/gen9.html
 //     for nice documentation of this gen
 [1., 1., 0.,   2, 0.5, 90.,   3., 0.2, 180.] => g9.coefs;

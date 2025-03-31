@@ -51,7 +51,7 @@ while( true )
 {
     // monitor where we're playing back from in the buffer
 	<<< ( off.last() + tracker.last() ) / 44100 >>>;
-	50::ms => now; 
+	50::ms => now;
 }
 
 

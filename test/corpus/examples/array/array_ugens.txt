@@ -10,7 +10,7 @@ Array ugens
 Gain A[3] => Gain B;
 for( UGen a : A ) <<< "1) connected:", a.isConnectedTo(B) >>>;
 
-// 2) LHS[X] => RHS[X]: one to one mapping 
+// 2) LHS[X] => RHS[X]: one to one mapping
 Gain C[3] => Gain D[3];
 for( int i; i < C.size(); i++ )
     <<< "2) connected:", C[i].isConnectedTo(D[i]) >>>;

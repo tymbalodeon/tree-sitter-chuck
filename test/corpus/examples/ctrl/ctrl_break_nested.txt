@@ -3,7 +3,7 @@ Ctrl break nested
 =================
 
 // break in nested block
- 
+
 0 => int j;
 0 => int i;
 
@@ -11,11 +11,11 @@ Ctrl break nested
 while ( j < 5 )
 {
     while ( i < 10 )
-    { 
-        1 +=> i;  
+    {
+        1 +=> i;
         // arbitrary break here, shouldn't bust of out the outer loop
-        if ( i > 5 ) break;  
-    }	
+        if ( i > 5 ) break;
+    }
 
     1 +=> j;
 }

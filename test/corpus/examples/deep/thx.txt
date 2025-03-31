@@ -29,8 +29,8 @@ Thx
 // #define LOCLUST 40.0
 // #define HICLUST 350.0
 //
-// I had started with them in a more narrow range, but then 
-// widened it. With the randomness, they never get anywhere 
+// I had started with them in a more narrow range, but then
+// widened it. With the randomness, they never get anywhere
 // near the limits.  And here are the pitches in the final
 // chord for all 30 voices:
 //
@@ -47,26 +47,26 @@ Thx
 //   37.5, 37.5, 37.5,
 // };
 //
-// Note that in the final chord, they are detuned a bit by 
+// Note that in the final chord, they are detuned a bit by
 // injecting a bit of randomness to make sure they don't fuse
-// totally. Several people have commented that the chord 
-// sounds "bigger" than an equivalent orchestra or organ 
+// totally. Several people have commented that the chord
+// sounds "bigger" than an equivalent orchestra or organ
 // chord (like the big chord in the Bm fugue which was my
-// inspiration). I believe this is because of the just 
-// temperament of the chord. Moving the thirds and fifths 
-// to equal temperament just doesn't have the same impact. 
+// inspiration). I believe this is because of the just
+// temperament of the chord. Moving the thirds and fifths
+// to equal temperament just doesn't have the same impact.
 //
-// Let me know if you have any other questions. I am really 
+// Let me know if you have any other questions. I am really
 // excited to see your new book. It looks like great fun!
 // -A
 //--------------------------------------------------------------------
- 
+
 // 30 target frequencies, corresponding to pitches in a big chord:
 // D1,  D2, D3,  D4,  D5,  A5,  D6,   F#6,  A6
 [ 37.5, 75, 150, 300, 600, 900, 1200, 1500, 1800,
   37.5, 75, 150, 300, 600, 900, 1200, 1500, 1800,
   37.5, 75, 150, 300, 600, 900, 1200,       1800,
-            150, 300,      900, 1200  
+            150, 300,      900, 1200
 ] @=> float targets[];
 
 // initial frequencies
@@ -99,7 +99,7 @@ for( 0 => int i; i < 30; i++ )
     // connect sound objects (right channel)
     saw[i] => gainR[i] => reverbR;
     // randomize initial frequencies
-    Math.random2f( 160.0, 360.0 ) => initials[i] 
+    Math.random2f( 160.0, 360.0 ) => initials[i]
                => initialsBase[i] => saw[i].freq;
     // initial gain for each sawtooth generator
     0.1 => saw[i].gain;

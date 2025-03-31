@@ -8,7 +8,7 @@ Listing1.17
 // set up our patch
 SinOsc s => dac;               // Sine wave to dac
 
-// a musical for loop         
+// a musical for loop
 for (20 => int i; i < 400; i++) // (1) For loop from 20 to 399
 {
     <<< i >>>;                  // (2) Prints out current value

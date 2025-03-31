@@ -2,7 +2,7 @@
 Ancestor
 ========
 
-// Shred.ancestor() returns the top-level shred that is directly or 
+// Shred.ancestor() returns the top-level shred that is directly or
 // indirectly a parent shred of the calling shred; useful for getting
 // information relevant to top-level shreds; related: parent.ck
 
@@ -11,7 +11,7 @@ Ancestor
 // my ancestor
 <<< "the top-level shred's ancestor ID is:", me.ancestor().id(), "\n" >>>;
 
-// recursive function to test finding ancestor from different 
+// recursive function to test finding ancestor from different
 // "generations" of shreds
 fun void findTheAncestor( int generation )
 {
@@ -29,7 +29,7 @@ fun void findTheAncestor( int generation )
     1::samp => now;
 }
 
-// recursively spork function this 10 times; me.ancestor() should always 
+// recursively spork function this 10 times; me.ancestor() should always
 // point to the top-level shred
 spork ~ findTheAncestor(10);
 

@@ -36,7 +36,7 @@ repeat( 3 )
     // a single line of code -- Machine.eval() runs the new code
     // immediately (and synchronously) before continuing the
     // current shred (even if it's in the middle of a statement)
-    // as shown below 
+    // as shown below
     cherr <= g_value <= " "
           <= (Machine.eval(code) ? "(eval)" : "(error)") <= " "
           <= g_value <= " "

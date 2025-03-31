@@ -65,13 +65,13 @@ while( true )
     // will automatically call the right play() depending on
     // the underlying type (MoA vs. MoB) as instantiated above
     spork ~ motifs[which].play();
-    
+
     // advance time
     300::ms => now;
 
     // cycle which / print divider every cycel
     which++; if( which >= motifs.size() )
-    { 0 => which; cherr <= "--" <= IO.newline(); }    
+    { 0 => which; cherr <= "--" <= IO.newline(); }
 }
 
 

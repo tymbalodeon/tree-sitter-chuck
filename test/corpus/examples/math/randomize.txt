@@ -47,8 +47,8 @@ while( true )
     generate( HOW_MANY, T, 0 );
 
     // wait a bit
-    5*T => now;    
-    
+    5*T => now;
+
     <<< "********************", "" >>>;
     <<< "SHAKING THINGS UP!!!", "" >>>;
     <<< "********************", "" >>>;
@@ -57,7 +57,7 @@ while( true )
     generate( HOW_MANY, T, 16 );
 
     // wait a bit
-    5*T => now;    
+    5*T => now;
 }
 
 

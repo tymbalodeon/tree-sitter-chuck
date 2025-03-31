@@ -18,7 +18,7 @@ Machine.add(drumsPath ) => int drumsID;
 Machine.add(me.dir() + "/bass.ck") => int bassID;
 4.8::second => now;
 
-// start flute solo    // (4) ...then adds the flute solo. 
+// start flute solo    // (4) ...then adds the flute solo.
 Machine.add(me.dir() + "/flute.ck") => int fluteID;
 4.8::second => now;
 

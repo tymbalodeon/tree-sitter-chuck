@@ -12,13 +12,13 @@ SndBuf mySound => dac;
 me.dir() => string path;    // (1) Gets current working directory.
 
 // sound file we want to play
-"/audio/snare_01.wav" => string filename; 
+"/audio/snare_01.wav" => string filename;
 
 // + sign connects strings together!
 path+filename => filename;  // (2) builds a full path/name to a sound file.
 
 // tell SndBuf to read this file
-filename => mySound.read;   // (3) ChucKing a string to the .read member of 
+filename => mySound.read;   // (3) ChucKing a string to the .read member of
                             //     SndBuf causes it to load that file
 
 // set gain

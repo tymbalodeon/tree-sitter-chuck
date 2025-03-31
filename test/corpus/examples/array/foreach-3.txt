@@ -14,7 +14,7 @@ Foreach 3
 [1, 2, 3] @=> int bar[];
 
 // for each element in foo
-for( int f : foo ) 
+for( int f : foo )
 {
     // for each element in bar
     for( int b : bar )

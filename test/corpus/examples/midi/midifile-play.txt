@@ -26,7 +26,7 @@ else me.arg(0) => filename;
 // open the file; exit on error
 if( !min.open(filename) ) me.exit();
 
-// print out 
+// print out
 cherr <= "----------" <= IO.newline();
 cherr <= "MIDI file: " <= IO.newline()
       <= " |- " <= filename <= IO.newline()
@@ -70,14 +70,14 @@ fun void doTrack( int track, float speed )
     }
     // voice number for quick polyphony
     int v;
-    
+
     // read through all MIDI messages on track
     while( min.read( msg, track ) )
     {
         // this means no more MIDI events at current time; advance time
         if( msg.when > 0::second )
             msg.when * speed => now; // speed of 1 is nominal
-        
+
         // catch NOTEON messages (lower nibble == 0x90)
         if( (msg.data1 & 0xF0) == 0x90 && msg.data2 > 0 && msg.data3 > 0 )
         {
@@ -89,17 +89,17 @@ fun void doTrack( int track, float speed )
             (v+1)%s.size() => v;
 
             // log
-            cherr <= "NOTE ON track:" <= track <= " pitch:" <= msg.data2 <=" velocity:" <= msg.data3 <= " when: " <= msg.when/ms <= IO.newline(); 
+            cherr <= "NOTE ON track:" <= track <= " pitch:" <= msg.data2 <=" velocity:" <= msg.data3 <= " when: " <= msg.when/ms <= IO.newline();
         }
         // other messages
         else
         {
             // log
             // cherr <= "----EVENT (unhandled) track:" <= track <= " type:" <= (msg.data1&0xF0)
-            //      <= " data2:" <= msg.data2 <= " data3:" <= msg.data3 <= IO.newline(); 
+            //      <= " data2:" <= msg.data2 <= " data3:" <= msg.data3 <= IO.newline();
         }
     }
-    
+
     // done with track
     done++;
 }

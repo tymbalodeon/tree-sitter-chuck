@@ -5,14 +5,14 @@ Powerup
 // power up!
 // - philipd
 
-// global noise source 
+// global noise source
 Noise n;
 
 // sweep shred
 fun void sweep( float st, float inc, time end)
 {
     //set up the audio chain
-    n => TwoPole z => dac; 
+    n => TwoPole z => dac;
     1  => z.norm;
     0.1 => z.gain;
     st => z.freq;
@@ -26,8 +26,8 @@ fun void sweep( float st, float inc, time end)
     // keep going until we've passed the end time sent in by the control thread.
     while( now < end )
     {
-        ( now - my_start ) / 1.0::second => my_seconds; 
-        Math.max( my_seconds * 4.0, 1.0 ) * 0.1  => z.gain; 
+        ( now - my_start ) / 1.0::second => my_seconds;
+        Math.max( my_seconds * 4.0, 1.0 ) * 0.1  => z.gain;
         z.freq() + inc * -0.02  => z.freq;
         10::ms => now;
     }
@@ -38,12 +38,12 @@ fun void sweep( float st, float inc, time end)
 
 // time loop
 while( true )
-{ 
+{
     500::ms => dur d;
     if( Math.random2( 0, 10 ) > 3 ) d * 2.0 => d;
     if( Math.random2( 0, 10 ) > 6 ) d * 3.0 => d;
-    spork ~ sweep( 220.0 * Math.random2(1,8), 
-        	       880.0 + Math.random2f(100.0, 880.0), 
+    spork ~ sweep( 220.0 * Math.random2(1,8),
+        	       880.0 + Math.random2f(100.0, 880.0),
 		           now + Math.random2f(1.0, 3.0)::second );
     d => now;
 }

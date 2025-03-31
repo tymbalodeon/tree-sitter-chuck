@@ -25,7 +25,7 @@ for (0 => int beat; beat < 24; beat++) {  // (3) 24-beat "measure"
 
     // but only click this on every "MODth" beat
     if (beat % MOD == 0) {  // (5) Low sound only every MOD beat
-        0 => clicklo.pos;  
+        0 => clicklo.pos;
     }
 
     0.5 :: second => now;

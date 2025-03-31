@@ -3,18 +3,18 @@ Listing8.5
 :skip
 ==========
 
-// Listing 8.5 Jazz band: 
-// save as "piano.ck" 
-// sound chain 
-Rhodey piano[4];             // (1) Four notes' worth of electric piano 
+// Listing 8.5 Jazz band:
+// save as "piano.ck"
+// sound chain
+Rhodey piano[4];             // (1) Four notes' worth of electric piano
 
 piano[0] => dac.left;        // (2) Connects them to left...
-piano[1] => dac;             //     ...and center... 
-piano[2] => dac;             
+piano[1] => dac;             //     ...and center...
+piano[2] => dac;
 piano[3] => dac.right;       // (3) ...and right dac channels.
 
 // chord 2D array            // (4) Array to hold two chords of four notes each.
-[[53,57,60,64],[51,55,60,63]] @=> int chordz[][]; 
+[[53,57,60,64],[51,55,60,63]] @=> int chordz[][];
 
 // loop
 while( true )                  // (5) Infinite loop

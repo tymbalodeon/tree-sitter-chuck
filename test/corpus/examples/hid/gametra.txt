@@ -37,7 +37,7 @@ class GameTrak
     // timestamps
     time lastTime;
     time currTime;
-    
+
     // previous axis data
     float lastAxis[6];
     // current axis data
@@ -71,13 +71,13 @@ fun void gametrak()
     {
         // wait on HidIn as event
         trak => now;
-        
+
         // messages received
         while( trak.recv( msg ) )
         {
             // joystick axis motion
             if( msg.isAxisMotion() )
-            {            
+            {
                 // check which
                 if( msg.which >= 0 && msg.which < 6 )
                 {
@@ -101,13 +101,13 @@ fun void gametrak()
                     }
                 }
             }
-            
+
             // joystick button down
             else if( msg.isButtonDown() )
             {
                 <<< "button", msg.which, "down" >>>;
             }
-            
+
             // joystick button up
             else if( msg.isButtonUp() )
             {

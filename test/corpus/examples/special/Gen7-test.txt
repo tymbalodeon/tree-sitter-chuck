@@ -11,7 +11,7 @@ Gen7 test
 Gen7 g7;
 
 // set up the values [0,1] and distances in the table
-// first arg is initial value 
+// first arg is initial value
 // followed by pairs indicating distance (total distance = 1)
 // and destination value for linear segments
 

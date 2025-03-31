@@ -103,7 +103,7 @@ while( spew < TOTAL_WORDS )
     model.getSimilar( word, words.size(), words );
     // choose one of the farthest one
     words[Math.random2((words.size()-1*.8)$int,words.size()-1)] => word;
-    
+
     // count
     spew++;
     // count line

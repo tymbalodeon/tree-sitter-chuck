@@ -40,15 +40,15 @@ fun void sendNotes()
     {
         // start the message...
         xmit.start( "/foo/notes" );
-        
+
         // add int argument
         Math.random2( 30, 80 ) => xmit.add;
         // add float argument
         Math.random2f( .1, .5 ) => xmit.add;
-        
+
         // send it
         xmit.send();
-        
+
         // advance time
         0.2::second => now;
     }
@@ -61,13 +61,13 @@ fun void sendHarmonics()
     {
         // start the message...
         xmit.start( "/foo/harmonics" );
-        
+
         // add int argument
         Math.random2( 1, 8 ) => xmit.add;
-        
+
         // send it
         xmit.send();
-        
+
         // advance time
         2.4::second => now;
     }

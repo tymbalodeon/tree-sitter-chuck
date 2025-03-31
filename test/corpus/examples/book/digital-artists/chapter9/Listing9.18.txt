@@ -10,9 +10,9 @@ public class MyClarinet extends Clarinet  // (1) Subclass of Clarinet UGen.
     // here we define one new function
     fun float noteOn(int noteNum, float volume) { // (2) New noteOn function with two arguments.
         // we set frequency using MIDI note Number
-        Std.mtof(noteNum) => this.freq;           // (3) Clarinet's built in .freq method... 
+        Std.mtof(noteNum) => this.freq;           // (3) Clarinet's built in .freq method...
         // then call the built-in inherited noteOn
-        volume => this.noteOn;                    // (4) ...and uses Clarinet's noteOn to set volume // 
+        volume => this.noteOn;                    // (4) ...and uses Clarinet's noteOn to set volume //
     }
 }
 

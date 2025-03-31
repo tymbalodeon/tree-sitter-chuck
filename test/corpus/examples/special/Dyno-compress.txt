@@ -4,8 +4,8 @@ Dyno compress
 
 //--------------------------------------|
 // Dyno demo 2: "Compressor? I didn't even touch 'er!"
-// Takes a silly little plucked string demo and runs it through a 
-// compressor to enhance sustain. (Ostensibly.) Note that there 
+// Takes a silly little plucked string demo and runs it through a
+// compressor to enhance sustain. (Ostensibly.) Note that there
 // are many other (better) reasons to use compressors.
 //
 // authors: Matt Hoffman (mdhoffma at cs.princeton.edu)
@@ -48,10 +48,10 @@ while(true)
             <<< "uncompressed" >>>;
         else
             <<< "compressed" >>>;
-        
+
         0.5 => m.pluck;
         2000::ms => now;
-        
+
         // make the next note compressed if this one wasn't, or vice versa
         -d.op() => d.op;
     }

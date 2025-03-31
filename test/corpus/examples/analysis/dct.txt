@@ -21,7 +21,7 @@ while( true )
     // set freq
     srate / dct.size() * div++ => g.freq;
     dct.size()/2 %=> div;
-    
+
     // take dct
     dct.upchuck();
     // examine contents

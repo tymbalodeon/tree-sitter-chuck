@@ -26,7 +26,7 @@ while( true )                          // (4) Infinite loop.
     note => xmit.add;                  // (9) Adds note to output.
     velocity => xmit.add;              // (10) Adds velocity to output.
     message => xmit.add;               // (11) Adds string to output.
-    xmit.send();                       // (12) Send it! 
+    xmit.send();                       // (12) Send it!
 
     // hang a bit, then do it again
     0.2 :: second => now;

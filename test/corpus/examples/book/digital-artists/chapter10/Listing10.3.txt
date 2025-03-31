@@ -17,13 +17,13 @@ fun void foo( Event anEvent)
         // wait
         anEvent => now;      // (5) Wait on event...
 
-        // action            // (6) when event is sent, 
+        // action            // (6) when event is sent,
         <<< "Hey!!!", now / second >>>;  //  print out...
         5 => imp.next;       // (7) and make click.
     }
 }
 
-// spork a foo       
+// spork a foo
 spork ~ foo( evnt );  // (8) To test, spork your event-waiting function.
 
 // then signal the event forever in a loop

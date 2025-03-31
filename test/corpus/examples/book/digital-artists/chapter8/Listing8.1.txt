@@ -44,7 +44,7 @@ spork ~ foo();                    // (9) Starts foo by sporking it.
 spork ~ bar();                    // (10) Starts bar by sporking it.
 
 // infinite time loop to serve as a parent shred
-while( true ) 1::second => now;   // (11) Infinite parent loop, so 
+while( true ) 1::second => now;   // (11) Infinite parent loop, so
                                   //      children foo and bar can run.
 
 

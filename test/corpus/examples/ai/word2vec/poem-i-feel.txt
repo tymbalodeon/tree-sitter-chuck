@@ -88,17 +88,17 @@ for( int s; s < NUM_SECTIONS; s++ )
     positives[Math.random2(0,positives.size()-1)] => feeling;
     // print a stanza
     stanza( feeling, LINES_PER_STANZA, 48, 64 );
-    
+
     // grab a word out of the "bad" bag
     negatives[Math.random2(0,negatives.size()-1)] => feeling;
     // print a stanza
     stanza( feeling, LINES_PER_STANZA, 48, 63 );
-    
+
     // grab a word out of the "other" bag
     others[Math.random2(0,others.size()-1)] => feeling;
     // print a stanza
     stanza( feeling, LINES_PER_STANZA, 36, Math.random2(33,36)*2 );
-    
+
     endStanza();
     chout <= IO.newline() <= IO.newline(); chout.flush();
     // pause at end of line
@@ -121,7 +121,7 @@ fun void stanza( string feeling, int numLines, int pitch1, int pitch2 )
         say("feel"); wait();
         say(feeling); play(pitch2); wait();
         endl(); wait();
-        
+
         // get similar words
         model.getSimilar( feeling, words.size(), words );
         // choose one at random
@@ -181,7 +181,7 @@ fun void wait()
 
 // wait
 fun void wait( dur T )
-{    
+{
     // let time pass, let sound...sound
     T => now;
 }

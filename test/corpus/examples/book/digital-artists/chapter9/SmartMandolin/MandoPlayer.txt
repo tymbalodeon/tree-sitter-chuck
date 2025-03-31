@@ -28,7 +28,7 @@ public class MandoPlayer {     // (1) Public MandoPlayer class definition.
 
     // set all four string notes in one function
     fun void notes(int gNote, int dNote, int aNote, int eNote) {
-        m[0].freq(Std.mtof(gNote));   // (5) Sets all four string note numbers... 
+        m[0].freq(Std.mtof(gNote));   // (5) Sets all four string note numbers...
         m[1].freq(Std.mtof(dNote));   // (6) ...using .mtof.
         m[2].freq(Std.mtof(aNote));
         m[3].freq(Std.mtof(eNote));
@@ -43,7 +43,7 @@ public class MandoPlayer {     // (1) Public MandoPlayer class definition.
     }
 
     // roll a chord from lowest note to highest at rate
-    fun void roll(string chord, dur rate) 
+    fun void roll(string chord, dur rate)
     {                               // (9) Chord roll (arpeggiate) function.
         this.chord(chord);          // (10) Sets chord by string using MandoPlayer .chord function.
         for (0 => int i; i < 4; i++) {
@@ -53,7 +53,7 @@ public class MandoPlayer {     // (1) Public MandoPlayer class definition.
     }
 
     // Archetypical tremolo strumming
-    fun void strum(int note, dur howLong) 
+    fun void strum(int note, dur howLong)
     {                                      // (13) Strumming function (tremolo).
         int whichString;
         if (note < 62) 0 => whichString;      // (14) Figures out which string to strum.

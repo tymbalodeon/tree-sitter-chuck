@@ -52,7 +52,7 @@ while( true )
 {
     // poll the tilt sensor, expect to get back 3 element array of ints
     hi.read( 9, 0, msg );
-    
+
     // compute difference
     (Math.abs(msg.x - last.x) + Math.abs(msg.y - last.y) + Math.abs(msg.z - last.z)) => int diff;
     // check threshold
@@ -65,10 +65,10 @@ while( true )
         recover_time => now;
     } else {
         // uncomment the following to dynamically calibrate the smack sensor
-        // msg.x => last.x;    	    	
+        // msg.x => last.x;
         // msg.y => last.y;
         // msg.z => last.z;
-        
+
         // advance
         poll_rate => now;
     }

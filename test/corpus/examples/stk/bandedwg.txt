@@ -25,7 +25,7 @@ while( true )
 
     // print some parameters
     <<< "---", "" >>>;
-    <<< "preset:", bwg.preset() >>>;    
+    <<< "preset:", bwg.preset() >>>;
     <<< "bow rate:", bwg.bowRate() >>>;
     <<< "bow Pressure:", bwg.bowPressure() >>>;
     <<< "strike position:", bwg.strikePosition() >>>;

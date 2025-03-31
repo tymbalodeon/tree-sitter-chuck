@@ -35,14 +35,14 @@ for( int i; i < 6; i++ )
                             g.getFMTableTime(decays[op]),
                             g.getFMTableSusLevel(sustains[op]),
                             g.getFMTableTime(releases[op]) );
-        guit[i].opRatio( op,ratios[op] );    
+        guit[i].opRatio( op,ratios[op] );
         g.opWave(op,1); // we do this 6 times, but it's easier
         g.opGain( op,g.getFMTableGain(opGains[op]) );
         g.opADSR( op,	g.getFMTableTime(attacks[op]),
                             g.getFMTableTime(decays[op]),
                             g.getFMTableSusLevel(sustains[op]),
                             g.getFMTableTime(releases[op]) );
-        g.opRatio( op,ratios[op] );    
+        g.opRatio( op,ratios[op] );
     }
     guit[i].lfoDepth( 0.0 );
 }
@@ -65,13 +65,13 @@ for( int i; i < 2; i++ )
 {
     <<< now/second >>>;
     spork ~ fastStrum(Emi,1.0); 2*E => now;
-    fastUp(Emi,0.95); E/4 => now; allOff(); 3*E/4 => now; 
+    fastUp(Emi,0.95); E/4 => now; allOff(); 3*E/4 => now;
     spork ~ fastStrum(Emi,0.97); 2*E => now;
-    fastUp(Emi,0.8); E/4 => now; allOff(); 3*E/4 => now; 
+    fastUp(Emi,0.8); E/4 => now; allOff(); 3*E/4 => now;
     spork ~ fastStrum(Emi,0.95); 2*E => now;
-    fastUp(Emi,0.9); E/4 => now; allOff(); 3*E/4 => now; 
+    fastUp(Emi,0.9); E/4 => now; allOff(); 3*E/4 => now;
     spork ~ fastStrum(Emi,0.93); 2*E => now;
-    fastUp(Emi,0.9); E/4 => now; allOff(); 3*E/4 => now; 
+    fastUp(Emi,0.9); E/4 => now; allOff(); 3*E/4 => now;
     spork ~ fastStrum(DMaj,1.0); E => now; allOff(); E => now;
     spork ~ fastStrum(DMaj,0.9); E => now;
     if (maybe) { allOff(); }

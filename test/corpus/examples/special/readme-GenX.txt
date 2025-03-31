@@ -12,12 +12,12 @@ Readme GenX
 // languages to ChucK. They all create an internal lookup table given various
 // parameters set by the user. This table can then be read at the audio rate
 // (with Phasor, for example, or any other source) or simply read with .value()
-// calls. 
+// calls.
 //
-// A simple example for gen10 is included here. gen10 creates a table of 
+// A simple example for gen10 is included here. gen10 creates a table of
 // harmonically related sinusoids; the user sets the relative weights of the
-// harmonics with an array of floats. The phasor UG creates a continuous 
-// lookup value between 0 and 1 (values less than 0 are multiplied by -1, so 
+// harmonics with an array of floats. The phasor UG creates a continuous
+// lookup value between 0 and 1 (values less than 0 are multiplied by -1, so
 // SinOsc and other [-1,1] sources can be used as well).
 //
 // All of these other than WarpTable were ported from RTcmix (thanks rtcmix folks!).

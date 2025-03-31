@@ -9,7 +9,7 @@ Ctrl until
 
 // loop
 until ( i == 5 )
-{ 
+{
     1 +=> j;
     1 +=> i;
 }

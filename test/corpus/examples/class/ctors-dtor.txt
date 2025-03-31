@@ -21,7 +21,7 @@ class Foo
     // yet another constructor
     fun @construct( int x, int y ) { x*y => num; }
 
-    // yet another constructor 
+    // yet another constructor
     fun Foo( int x, int y, int z ) { x*y*z => num; }
 
     // destructor

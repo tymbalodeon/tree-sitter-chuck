@@ -10,7 +10,7 @@ Listing4.12
 
 // Here we'll use Modulo % and random to play drums
 // Define array of master Gains for left, center, right
-Gain master[3];          
+Gain master[3];
 master[0] => dac.left;   // Connects left ([0]) to dac.left.
 master[1] => dac;        // Connects center ([1]) to dac (both
                          //   left and right automatically).
@@ -54,7 +54,7 @@ cowHits.cap() => int MAX_BEAT; // define using all caps, remember?
 0.15 :: second => dur tempo; // you'll use this to advance time each beat.
 
 // counters: beat within measures, and measure
-0 => int beat;    // Two counters, one for beat 
+0 => int beat;    // Two counters, one for beat
 0 => int measure; // and one for measure number.
 
 // Listing 4.12c Main loop to actually play drum patterns
@@ -63,7 +63,7 @@ cowHits.cap() => int MAX_BEAT; // define using all caps, remember?
 while (true)
 {
     // play kick drum on all main beats (0, 4, ...)
-    if (beat % 4 == 0)     // (1) Uses MOD 4 to play 
+    if (beat % 4 == 0)     // (1) Uses MOD 4 to play
     {                      //     kick drum every fourth beat
         0 => kick.pos;
     }
@@ -99,7 +99,7 @@ while (true)
     (beat + 1) % MAX_BEAT => beat; // (10) ...and then updates beat counter (MOD MAX)
     if (beat==0)
     {            // (11) Increments measure counter at each new measure
-        measure++;  
+        measure++;
     }
 }
 

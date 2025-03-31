@@ -16,7 +16,7 @@ HidMsg msg;                 // (2) Makes a Hid message holder.
 // open keyboard; or exit if fail to open
 if( !myHid.openKeyboard( device ) )
 {                           // (4) Error if it can't be opened.
-    <<< "Can't open this device!! ", "Sorry." >>>;  
+    <<< "Can't open this device!! ", "Sorry." >>>;
     me.exit();              // (5) Exit, because nothing more can be done.
 }
 
@@ -29,7 +29,7 @@ if( !myHid.openKeyboard( device ) )
 Impulse imp => dac;         // (7) "Clicker" to hear key strokes.
 
 // infinite event loop
-while( true )               // (8) Infinite loop. 
+while( true )               // (8) Infinite loop.
 {
     // wait for event
     myHid => now;           // (9) Wait here for a Hid event.

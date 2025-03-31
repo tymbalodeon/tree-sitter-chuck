@@ -14,13 +14,13 @@ class Fuzz extends Chugen
     // intensity
     2 => intensity;
 
-    // single-sample tick function (ChuGen specialty)    
+    // single-sample tick function (ChuGen specialty)
     fun float tick( float in )
     {
         Math.sgn(in) => float sgn;
         return Math.pow(Math.fabs(in), p) * sgn;
     }
-    
+
     // set intensity
     fun void intensity( float i )
     {

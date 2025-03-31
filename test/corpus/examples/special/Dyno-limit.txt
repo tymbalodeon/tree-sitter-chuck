@@ -4,8 +4,8 @@ Dyno limit
 
 //--------------------------------------|
 // Dyno demo 1: "Limiter? I hardly know 'er!"
-// Takes otf_07.ck, cranks the gain up obscenely high, then limits 
-// it so it won't clip. 
+// Takes otf_07.ck, cranks the gain up obscenely high, then limits
+// it so it won't clip.
 //
 // authors: Matt Hoffman (mdhoffma at cs.princeton.edu)
 //          Ge Wang (gewang at cs.princeton.edu)
@@ -27,7 +27,7 @@ me.sourceDir() + "/../data/kick.wav" => buf.read;
 dy.limit();
 // compensate for the limiter's gain reduction
 5 => dy.gain;
-// uncomment this to turn off the limiter. note that just because clipping 
+// uncomment this to turn off the limiter. note that just because clipping
 // sounds cool here doesn't mean it will in your patch.
 // -1 => dy.op;
 

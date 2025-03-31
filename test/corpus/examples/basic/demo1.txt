@@ -10,7 +10,7 @@ Demo1
 1 => int b;
 15 => int c;
 
-while( c > 0 ) 
+while( c > 0 )
 {
     a + b => t;
     b => a;

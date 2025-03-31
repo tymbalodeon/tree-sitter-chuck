@@ -34,7 +34,7 @@ while( true )
 {
     // take fft
     fft.upchuck() @=> UAnaBlob blob;
-    
+
     // find peak
     0 => float max; float where;
     for( int i; i < blob.fvals().size()/8; i++ )
@@ -47,12 +47,12 @@ while( true )
             i => where;
         }
     }
-    
+
     // set freq
     (where / fft.size() * (second / samp)) * Math.pow(1.059,7) => target_freq;
     // set gain
     (max / .5) => target_gain;
-    
+
     // hop
     (fft.size()/4)::samp => now;
 }
@@ -63,7 +63,7 @@ fun void ramp_stuff()
 {
     // mysterious 'slew'
     0.025 => float slew;
-    
+
     // infinite time loop
     while( true )
     {

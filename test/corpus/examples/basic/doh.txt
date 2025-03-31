@@ -4,7 +4,7 @@ Doh
 
 // DOH!!!
 
-// the patch 
+// the patch
 SndBuf buf => dac;
 // load the file ("special:" files are built into chuck)
 "special:dope" => buf.read;

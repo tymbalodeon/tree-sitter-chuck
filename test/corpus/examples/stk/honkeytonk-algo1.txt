@@ -96,7 +96,7 @@ fun void bassLine( int note1, int note2, int thisManyTimes )
         .75 => h[3].noteOn;
         .75 => h[4].noteOn;
         second/2 => now;
-        if (maybe*maybe) 
+        if (maybe*maybe)
             Std.mtof(note2) => h[0].freq;
         else
             Std.mtof(note2-12) => h[0].freq;

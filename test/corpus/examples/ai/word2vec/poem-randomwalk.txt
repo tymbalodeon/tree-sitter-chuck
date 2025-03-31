@@ -116,7 +116,7 @@ for( int s; s < NUM_STANZAS; s++ )
         // pause at end of line
         T_LINE_PAUSE => now;
     }
-    
+
     // stanza break!
     chout <= IO.newline(); chout.flush();
     // pause at end of line

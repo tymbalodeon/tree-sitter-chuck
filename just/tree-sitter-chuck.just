@@ -29,14 +29,14 @@ parse +file:
         try {
             let files = (
                 $files
-                | find --no-highlight "{{ file }}" 
+                | find --no-highlight "{{ file }}"
             )
 
             if ($files | length) == 1 {
-                $files 
+                $files
                 | first
             } else {
-                $files                
+                $files
                 | to text
                 | fzf --preview 'open {}'
             }
@@ -91,14 +91,14 @@ highlight *file:
         try {
             let files = (
                 $files
-                | find --no-highlight "{{ file }}" 
+                | find --no-highlight "{{ file }}"
             )
 
             if ($files | length) == 1 {
-                $files 
+                $files
                 | first
             } else {
-                $files                
+                $files
                 | to text
                 | fzf --preview 'open {}'
             }
@@ -145,14 +145,14 @@ open *file:
         try {
             let files = (
                 $files
-                | find --no-highlight "{{ file }}" 
+                | find --no-highlight "{{ file }}"
             )
 
             if ($files | length) == 1 {
-                $files 
+                $files
                 | first
             } else {
-                $files                
+                $files
                 | to text
                 | fzf --preview 'open {}'
             }

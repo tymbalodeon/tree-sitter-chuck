@@ -65,7 +65,7 @@ knn.search( q, 2 , neighbor_labels, neighbor_indices, neighbor_features );
 chout <= "\n" <= "query=(" + q[0] + ", " + q[1] + "); k=2:\n";
 for (int i; i < 2; i++)
 {
-    chout <= labelNames[neighbor_labels[i]] + " [" + neighbor_indices[i] + "]" + 
+    chout <= labelNames[neighbor_labels[i]] + " [" + neighbor_indices[i] + "]" +
              " (" + neighbor_features[i][0] + ", " + neighbor_features[i][1] + ")" <= IO.newline();
 }
 

@@ -25,8 +25,8 @@ i => BiQuad f3 => g;
 "special:glot_pop" => i.read;
 // play
 1.0 => i.rate;
-  
-// infinite time-loop   
+
+// infinite time-loop
 while( true )
 {
     // set the current sample/impulse

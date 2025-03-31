@@ -33,7 +33,7 @@ Word2Vec model;
 // subsequent loads on the same filepath will use cached dictionary, as long as
 // ChucK VM keeps running
 // HINT: while caching should "just work" in miniAudicle, in command-line chuck
-// one could keep one chuck running (using --loop) and chuk code to it from a 
+// one could keep one chuck running (using --loop) and chuk code to it from a
 // second terminal (using chuck + code). for example:
 //------------------------------------------------------------------------------
 //     terminal-1> chuck --loop  *****  terminal-2> chuck + word2vec-basic
@@ -117,7 +117,7 @@ class W2V
         // add into element
         for( int i; i < to.size(); i++ ) from[i] => to[i];
     }
-    
+
     fun static float[] dup( float from[] )
     {
         float to[from.size()];
@@ -126,7 +126,7 @@ class W2V
         // return
         return to;
     }
-    
+
     // result stored in x
     fun static void add( float x[], float y[] )
     {
@@ -135,7 +135,7 @@ class W2V
         // add into element
         for( int i; i < size; i++ ) y[i] +=> x[i];
     }
-    
+
     // result stored in x
     fun static void minus( float x[], float y[] )
     {
@@ -144,28 +144,28 @@ class W2V
         // add into element
         for( int i; i < size; i++ ) y[i] -=> x[i];
     }
-    
+
     fun static void scale( float x[], float scalar )
     {
         // scale
         for( int i; i < x.size(); i++ ) scalar *=> x[i];
     }
-    
+
     fun static void scale( float result[], float x[], float scalar )
     {
         // scale
         for( int i; i < x.size(); i++ ) scalar * x[i] => result[i];
     }
-    
+
     fun static string[] eval( Word2Vec @ w, string expr, int k )
     {
-        // init 
+        // init
         int pos;
         1.0 => float multiplier;
         string word;
         float wordVector[w.dim()];
         float exprVector[w.dim()];
-        
+
         // compute
         while( true )
         {
@@ -179,7 +179,7 @@ class W2V
                 }
                 break;
             }
-            else 
+            else
             {
                 expr.substring(0, pos) => word;
                 w.getVector(word, wordVector);
@@ -200,14 +200,14 @@ class W2V
                 }
             }
         }
-        
+
         // return
         string results[k];
         w.getSimilar( exprVector, k, results );
-        
+
         return results;
     }
-    
+
     // logical analogy: A to B is as C is to [what this function returns]
     fun static string[] analogy( Word2Vec @ w, string A, string B, string C, int k )
     {

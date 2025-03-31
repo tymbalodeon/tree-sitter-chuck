@@ -9,7 +9,7 @@ Listing3.6
 SqrOsc s => dac;           // (1) Square wave oscillator for melody
 
 // gains to separate our notes
-0.7 => float onGain;       // (2) Note on/off gains 
+0.7 => float onGain;       // (2) Note on/off gains
 0.0 => float offGain;
 
 // (3) declare and initialize array of MIDI notes (int) for melody
@@ -22,7 +22,7 @@ SqrOsc s => dac;           // (1) Square wave oscillator for melody
 [q, q, q, q, q, q, h, q, q, q, q, q, q, h] @=> dur myDurs[];
 
 // loop for length of array
-for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates 
+for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates
 {                                         //     over length of note array
     // set frequency and gain to turn on our note
     Std.mtof(myNotes[i]) => s.freq;       // (8) Sets pitch for melody notes

@@ -79,27 +79,27 @@ while( true )
 fun int checkSqrNote( int amount, SqrOsc sqr )
 {
     if( amount == 7 )
-    {   
+    {
         0.5 * gain => sqr.gain;
     }
     else if( amount == 6 )
-    {   
+    {
         0.4375 * gain => sqr.gain;
     }
     else if( amount == 5 )
-    {   
+    {
         0.375 * gain => sqr.gain;
     }
     else if( amount == 4 )
-    {   
+    {
         0.3125 * gain => sqr.gain;
     }
     else if( amount == 2 )
-    {   
+    {
         0.25 * gain => sqr.gain;
     }
     else if( amount != 3 && amount != 1 )
-    {   
+    {
         0.0 => sqr.gain;
     }
     if( amount > 0 )
@@ -112,7 +112,7 @@ fun int checkSqrNote( int amount, SqrOsc sqr )
 fun void checkTriNote()
 {
     if( b == 8 )
-    {   
+    {
         0.0 => bass.phase;
         gain => bassGain.gain;
     }
@@ -129,7 +129,7 @@ fun void checkTriNote()
 fun void checkNoiNote()
 {
     if( d > 0 )
-    {   
+    {
         .75 * gain => drums.gain;
         1 -=> d;
     }

@@ -32,7 +32,7 @@ while( true )
 {
     // wait for OSC input
     oin => now;
-    
+
     // drain the message queue
     while( oin.recv(msg) )
     {

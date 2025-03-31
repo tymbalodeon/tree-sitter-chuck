@@ -28,7 +28,7 @@ Rhodey piano => dac;   // (4) Rhodey piano to play with MIDI controller
 while( true )          // (5) Infinite loop
 {
     min => now;        // (6) Sleeps until a MIDI input message comes
-                       // advance when receive MIDI msg 
+                       // advance when receive MIDI msg
     while( min.recv(msg) )
     {
         <<< msg.data1, msg.data2, msg.data3 >>>;

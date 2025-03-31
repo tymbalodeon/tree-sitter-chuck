@@ -39,7 +39,7 @@ while( true )
 {
     // take fft
     fft.upchuck() @=> blob;
-    
+
     // find peak
     0 => float max; int where;
     for( int i; i < blob.fvals().size(); i++ )
@@ -52,12 +52,12 @@ while( true )
             i => where;
         }
     }
-    
+
     // set freq
     (where $ float) / fft.size() * srate => target_freq;
     // set gain
     (max / .8) => target_gain;
-    
+
     // hop
     (fft.size()/2)::samp => now;
 }
@@ -68,7 +68,7 @@ fun void ramp_stuff()
 {
     // mysterious 'slew'
     0.025 => float slew;
-    
+
     // infinite time loop
     while( true )
     {

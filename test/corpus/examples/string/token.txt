@@ -5,7 +5,7 @@ Token
 //----------------------------------------------------
 // name: StringTokenizer
 // desc: Break a string into tokens using a whitespace delimiter
-//       Iterate through the tokens using next() + more() 
+//       Iterate through the tokens using next() + more()
 //       or get(i) to get the i-th token
 //
 // author: terry feng

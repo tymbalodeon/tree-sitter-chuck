@@ -7,7 +7,7 @@ Ctrl do until
 0 => int j;
 0 => int i;
 
-do { 
+do {
     1 +=> j;
     1 +=> i;
 } until ( i >= 5 );

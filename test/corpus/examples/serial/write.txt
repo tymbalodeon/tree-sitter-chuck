@@ -8,7 +8,7 @@ SerialIO.list() @=> string list[];
 if( list.size() == 0 )
 {
     cherr <= "no serial devices available\n";
-    me.exit(); 
+    me.exit();
 }
 // print list of serial devices
 chout <= "available devices\n";
@@ -24,7 +24,7 @@ if( me.args() ) me.arg(0) => Std.atoi => device;
 if( device >= list.size() )
 {
     cherr <= "serial device #" <= device <= "not available\n";
-    me.exit(); 
+    me.exit();
 }
 
 // open serial device
@@ -44,11 +44,11 @@ while( true )
     // write to serial device
     cereal <= "hi!\n";
     chout <= "<= hi!\n";
-    
+
     // read one line
     cereal.onLine() => now;
     chout <= "=> " <= cereal.getLine() <= IO.nl();
-    
+
     // advance time
     1::second => now;
 }

@@ -5,7 +5,7 @@ Shepard
 
 //--------------------------------------------------------------------
 // name: shepard.ck
-// desc: continuous shepard-risset tone generator; 
+// desc: continuous shepard-risset tone generator;
 //       ascending but can easily made to descend
 //
 // author: Ge Wang (https://ccrma.stanford.edu/~ge/)
@@ -52,7 +52,7 @@ while( true )
         // wrap (for negative INC)
         else if( pitches[i] < 12 ) 108 +=> pitches[i];
     }
-    
+
     // advance time
     T => now;
 }

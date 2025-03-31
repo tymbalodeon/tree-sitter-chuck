@@ -39,7 +39,7 @@ while(true)
     Math.random2f(0.075, 0.125)::second => now;
     //0.5::second => now;
 
-    // increment    
+    // increment
     i++;
 }
 

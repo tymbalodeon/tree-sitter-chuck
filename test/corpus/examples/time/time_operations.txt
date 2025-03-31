@@ -5,19 +5,19 @@ Time operations
 // ...
 
 // store the current time
-now => time t1; 
+now => time t1;
 
 //value to duration
-0.5::second => dur d; 
+0.5::second => dur d;
 <<<"one">>>;
-//now waits for that duration 
+//now waits for that duration
 d => now;
 <<<"two">>>;
 
 //define new duration
-d * 4.0 => dur four_d; 
+d * 4.0 => dur four_d;
 
-//wait again. 
+//wait again.
 four_d => now;
 <<<"three">>>;
 

@@ -33,7 +33,7 @@ while( true )
     bwg.controlChange( 1, gain);
     bwg.controlChange( 128, bowVelocity);
     bwg.controlChange( 64, setStriking);
-	
+
     <<< "---", "" >>>;
     <<< "strike position:", bwg.strikePosition() >>>;
     <<< "bow rate:", bwg.bowRate() >>>;
@@ -59,7 +59,7 @@ while( true )
     <<< "--", "" >>>;
     bwg.controlChange(16, Math.random2(0, 3));
 
-    <<< "preset:", bwg.preset() >>>;    
+    <<< "preset:", bwg.preset() >>>;
     <<< "strike position:", bwg.strikePosition() >>>;
     <<< "bow rate:", bwg.bowRate() >>>;
     <<< "bow Pressure:", bwg.bowPressure() >>>;

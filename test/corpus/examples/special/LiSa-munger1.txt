@@ -14,7 +14,7 @@ LiSa munger1
 // munger~ from PeRColate. One of the cool things about doing this
 // in ChucK is that there is a lot more ready flexibility in
 // designing grain playback patterns; rolling one's own idiosyncratic
-// munger is a lot easier. 
+// munger is a lot easier.
 //
 // Example 1 (below) is simple, but will feature some clicking due
 // to playing back over the record-point discontinuity.
@@ -61,7 +61,7 @@ lisa.record( false );
 s.gain( 0 );
 
 // this arrangment will create some clicks because of discontinuities
-// from the loop recording. to fix, need to make a rotating buffer 
+// from the loop recording. to fix, need to make a rotating buffer
 // approach. see the next two example files...
 while( true )
 {
@@ -82,7 +82,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
     // get an available voice
     lisa.getVoice() => int newvoice;
 
-    // make sure we got a valid voice   
+    // make sure we got a valid voice
     if( newvoice > -1 )
     {
         // set play rate
