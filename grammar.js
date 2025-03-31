@@ -489,7 +489,11 @@ module.exports = grammar({
       );
 
       return prec.left(
-        seq($._type, seq(identifier, repeat(seq(",", identifier)))),
+        seq(
+          optional("global"),
+          $._type,
+          seq(identifier, repeat(seq(",", identifier))),
+        ),
       );
     },
   },
