@@ -260,6 +260,23 @@
         }
       ]
     },
+    "character": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "'"
+        },
+        {
+          "type": "PATTERN",
+          "value": "[^\\s]"
+        },
+        {
+          "type": "STRING",
+          "value": "'"
+        }
+      ]
+    },
     "_chuck_keyword": {
       "type": "CHOICE",
       "members": [
@@ -836,6 +853,10 @@
           {
             "type": "SYMBOL",
             "name": "cast"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "character"
           },
           {
             "type": "SYMBOL",

@@ -1,6 +1,5 @@
 ========
 Chugraph
-:skip
 ========
 
 // name: chugraph.ck
@@ -250,7 +249,7 @@ while( true )
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (statement
       (chuck_operation
@@ -287,7 +286,7 @@ while( true )
             (member_identifier
               (variable_identifier)
               (variable_identifier))))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (comment)

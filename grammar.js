@@ -73,6 +73,7 @@ module.exports = grammar({
 
     boolean_literal_value: () => choice("false", "true"),
     cast: ($) => seq($._expression, "$", $.primitive_type),
+    character: () => seq("'", /[^\s]/, "'"),
     _chuck_keyword: () => choice("const", "function", "global", "spork"),
 
     chuck_operation: ($) =>
@@ -202,6 +203,7 @@ module.exports = grammar({
           $.array,
           $.binary_expression,
           $.cast,
+          $.character,
           $.class_instantiation,
           $.conditional,
           $._control_structure,

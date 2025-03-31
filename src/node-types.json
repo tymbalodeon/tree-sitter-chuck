@@ -28,6 +28,10 @@
           "named": true
         },
         {
+          "type": "character",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -206,6 +210,10 @@
           "named": true
         },
         {
+          "type": "character",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -354,6 +362,10 @@
         },
         {
           "type": "cast",
+          "named": true
+        },
+        {
+          "type": "character",
           "named": true
         },
         {
@@ -568,6 +580,10 @@
           "named": true
         },
         {
+          "type": "character",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -695,6 +711,11 @@
     }
   },
   {
+    "type": "character",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "chuck_operation",
     "named": true,
     "fields": {},
@@ -720,6 +741,10 @@
         },
         {
           "type": "cast",
+          "named": true
+        },
+        {
+          "type": "character",
           "named": true
         },
         {
@@ -937,6 +962,10 @@
           "named": true
         },
         {
+          "type": "character",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -1089,6 +1118,10 @@
         },
         {
           "type": "cast",
+          "named": true
+        },
+        {
+          "type": "character",
           "named": true
         },
         {
@@ -1252,6 +1285,10 @@
           "named": true
         },
         {
+          "type": "character",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -1404,6 +1441,10 @@
         },
         {
           "type": "cast",
+          "named": true
+        },
+        {
+          "type": "character",
           "named": true
         },
         {
@@ -1566,6 +1607,10 @@
           "named": true
         },
         {
+          "type": "character",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -1723,6 +1768,10 @@
         },
         {
           "type": "cast",
+          "named": true
+        },
+        {
+          "type": "character",
           "named": true
         },
         {
@@ -1932,6 +1981,10 @@
           "named": true
         },
         {
+          "type": "character",
+          "named": true
+        },
+        {
           "type": "chuck_operation",
           "named": true
         },
@@ -2096,6 +2149,10 @@
           },
           {
             "type": "cast",
+            "named": true
+          },
+          {
+            "type": "character",
             "named": true
           },
           {
@@ -2390,6 +2447,10 @@
           "named": true
         },
         {
+          "type": "character",
+          "named": true
+        },
+        {
           "type": "chuck_operation",
           "named": true
         },
@@ -2638,6 +2699,10 @@
           "named": true
         },
         {
+          "type": "character",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -2786,6 +2851,10 @@
         },
         {
           "type": "cast",
+          "named": true
+        },
+        {
+          "type": "character",
           "named": true
         },
         {
@@ -3003,6 +3072,10 @@
           "named": true
         },
         {
+          "type": "character",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -3154,6 +3227,10 @@
           "named": true
         },
         {
+          "type": "character",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -3302,6 +3379,10 @@
         },
         {
           "type": "cast",
+          "named": true
+        },
+        {
+          "type": "character",
           "named": true
         },
         {
@@ -3494,6 +3575,10 @@
         },
         {
           "type": "cast",
+          "named": true
+        },
+        {
+          "type": "character",
           "named": true
         },
         {
@@ -3724,6 +3809,10 @@
           "named": true
         },
         {
+          "type": "character",
+          "named": true
+        },
+        {
           "type": "chuck_operation",
           "named": true
         },
@@ -3889,6 +3978,10 @@
         },
         {
           "type": "cast",
+          "named": true
+        },
+        {
+          "type": "character",
           "named": true
         },
         {
@@ -4087,6 +4180,10 @@
   },
   {
     "type": "&=>",
+    "named": false
+  },
+  {
+    "type": "'",
     "named": false
   },
   {
