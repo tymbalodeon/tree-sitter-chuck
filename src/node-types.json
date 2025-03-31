@@ -508,6 +508,10 @@
           "named": true
         },
         {
+          "type": "method_definition",
+          "named": true
+        },
+        {
           "type": "overload_definition",
           "named": true
         },
@@ -2629,6 +2633,60 @@
         },
         {
           "type": "global_unit_generator",
+          "named": true
+        },
+        {
+          "type": "reference_type",
+          "named": true
+        },
+        {
+          "type": "variable_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "method_definition",
+    "named": true,
+    "fields": {
+      "parameters": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "array_declaration",
+            "named": true
+          },
+          {
+            "type": "reference_declaration",
+            "named": true
+          },
+          {
+            "type": "variable_declaration",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "class_identifier",
+          "named": true
+        },
+        {
+          "type": "primitive_type",
           "named": true
         },
         {

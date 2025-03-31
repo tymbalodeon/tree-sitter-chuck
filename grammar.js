@@ -17,7 +17,6 @@ module.exports = grammar({
         choice(
           $.block,
           $.class_definition,
-          // $.comment,
           $.conditional,
           $._control_structure,
           $.function_definition,
@@ -61,10 +60,10 @@ module.exports = grammar({
         repeat(
           choice(
             $.class_definition,
-            // $.comment,
             $.conditional,
             $._control_structure,
             $.function_definition,
+            $.method_definition,
             $.overload_definition,
             $.statement,
           ),
@@ -276,8 +275,10 @@ module.exports = grammar({
       seq($.function_call, repeat1(prec.left(seq(".", $.function_call)))),
 
     function_definition: ($) =>
+      seq(choice("fun", "function"), $._function_name_and_body),
+
+    _function_name_and_body: ($) =>
       seq(
-        choice("fun", "function"),
         optional($._type),
         choice($.class_identifier, $.variable_identifier),
         "(",
@@ -345,6 +346,9 @@ module.exports = grammar({
         ),
         repeat1(seq(".", choice($.class_identifier, $.variable_identifier))),
       ),
+
+    method_definition: ($) =>
+      seq(optional("public"), $._function_name_and_body),
 
     negation_expression: ($) => prec.left(seq("!", $._expression)),
     negative_expression: ($) => prec.left(seq("-", $._expression)),

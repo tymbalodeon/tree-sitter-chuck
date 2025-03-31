@@ -211,6 +211,10 @@
               },
               {
                 "type": "SYMBOL",
+                "name": "method_definition"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "overload_definition"
               },
               {
@@ -1198,6 +1202,15 @@
           ]
         },
         {
+          "type": "SYMBOL",
+          "name": "_function_name_and_body"
+        }
+      ]
+    },
+    "_function_name_and_body": {
+      "type": "SEQ",
+      "members": [
+        {
           "type": "CHOICE",
           "members": [
             {
@@ -1546,6 +1559,27 @@
               }
             ]
           }
+        }
+      ]
+    },
+    "method_definition": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "public"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_name_and_body"
         }
       ]
     },
