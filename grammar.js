@@ -245,7 +245,7 @@ module.exports = grammar({
           choice($.chuck_operation, $._identifier, $.variable_declaration),
         ),
         ";",
-        $.binary_expression,
+        choice($.binary_expression, $.boolean_literal_value),
         ";",
         choice($.chuck_operation, $._expression),
         ")",

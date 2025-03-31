@@ -1049,8 +1049,17 @@
           "value": ";"
         },
         {
-          "type": "SYMBOL",
-          "name": "binary_expression"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "binary_expression"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "boolean_literal_value"
+            }
+          ]
         },
         {
           "type": "STRING",

@@ -1977,6 +1977,10 @@
           "named": true
         },
         {
+          "type": "boolean_literal_value",
+          "named": true
+        },
+        {
           "type": "cast",
           "named": true
         },
