@@ -484,10 +484,6 @@
           "named": true
         },
         {
-          "type": "comment",
-          "named": true
-        },
-        {
           "type": "conditional",
           "named": true
         },
@@ -3356,10 +3352,6 @@
           "named": true
         },
         {
-          "type": "comment",
-          "named": true
-        },
-        {
           "type": "conditional",
           "named": true
         },
@@ -4002,7 +3994,8 @@
   },
   {
     "type": "comment",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "complex",

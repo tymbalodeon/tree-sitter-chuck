@@ -8,6 +8,7 @@
 // @ts-check
 
 module.exports = grammar({
+  extras: ($) => [/\s/, $.comment],
   name: "chuck",
 
   rules: {
@@ -16,7 +17,7 @@ module.exports = grammar({
         choice(
           $.block,
           $.class_definition,
-          $.comment,
+          // $.comment,
           $.conditional,
           $._control_structure,
           $.function_definition,
@@ -60,7 +61,7 @@ module.exports = grammar({
         repeat(
           choice(
             $.class_definition,
-            $.comment,
+            // $.comment,
             $.conditional,
             $._control_structure,
             $.function_definition,
