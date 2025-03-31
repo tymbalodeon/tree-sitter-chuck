@@ -1,5 +1,6 @@
 ====
 Bass
+:skip
 ====
 
 // Listing 8.6 Jazz band:

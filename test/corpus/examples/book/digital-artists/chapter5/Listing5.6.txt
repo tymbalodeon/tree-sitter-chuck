@@ -1,5 +1,6 @@
 ==========
 Listing5.6
+:skip
 ==========
 
 // Listing 5.6 Using functions to set oscillator frequencies

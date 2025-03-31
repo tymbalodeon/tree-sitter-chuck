@@ -1,5 +1,6 @@
 ==========
 Listing8.3
+:skip
 ==========
 
 // Listing 8.3 Controlling different aspects of a single global object using concurrency

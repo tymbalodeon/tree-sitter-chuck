@@ -1375,6 +1375,10 @@
           "named": true
         },
         {
+          "type": "chuck_operation",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -2478,6 +2482,10 @@
         },
         {
           "type": "cast",
+          "named": true
+        },
+        {
+          "type": "chuck_operation",
           "named": true
         },
         {
@@ -3994,8 +4002,7 @@
   },
   {
     "type": "comment",
-    "named": true,
-    "extra": true
+    "named": true
   },
   {
     "type": "complex",

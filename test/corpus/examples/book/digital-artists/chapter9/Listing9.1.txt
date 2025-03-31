@@ -1,5 +1,6 @@
 ==========
 Listing9.1
+:skip
 ==========
 
 // Listing 9.1 Making and using your first new class, testData

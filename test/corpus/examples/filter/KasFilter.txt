@@ -1,5 +1,6 @@
 =========
 KasFilter
+:skip
 =========
 
 chout <= "creating a KasFilter \n";

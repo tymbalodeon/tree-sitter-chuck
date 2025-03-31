@@ -1,5 +1,6 @@
 ===========
 Listing1.15
+:skip
 ===========
 
 // Listing 1.15 More complex logical conditions

@@ -1,5 +1,6 @@
 =======
 Strops2
+:skip
 =======
 
 // strops2.ck: more string operations

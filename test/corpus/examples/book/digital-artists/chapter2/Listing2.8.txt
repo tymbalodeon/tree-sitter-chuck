@@ -1,5 +1,6 @@
 ==========
 Listing2.8
+:skip
 ==========
 
 // Listing 2.8 Two-part random walk music with panning

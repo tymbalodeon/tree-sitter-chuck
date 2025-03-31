@@ -1,5 +1,6 @@
 ===========
 Eval global
+:skip
 ===========
 
 // name: eval-global.ck

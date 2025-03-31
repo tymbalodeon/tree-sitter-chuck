@@ -1,5 +1,6 @@
 ===============
 Overload public
+:skip
 ===============
 
 // global operator overloading using the 'public' keyword

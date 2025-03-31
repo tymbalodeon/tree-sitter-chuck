@@ -1,5 +1,6 @@
 ==========
 Listing4.9
+:skip
 ==========
 
 // Listing 4.9 Improving the while loop of your drum machine

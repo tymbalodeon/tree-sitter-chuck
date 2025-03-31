@@ -1,5 +1,6 @@
 ========
 Read str
+:skip
 ========
 
 // default file

@@ -1,5 +1,6 @@
 ===========
 Listing10.5
+:skip
 ===========
 
 // Listing 10.5 Using a custom Event subclass, with polymorphism

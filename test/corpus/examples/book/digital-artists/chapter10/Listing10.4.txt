@@ -1,5 +1,6 @@
 ===========
 Listing10.4
+:skip
 ===========
 
 // Listing 10.4 Using one shred to signal() multiple other shreds

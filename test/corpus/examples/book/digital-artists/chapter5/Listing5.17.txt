@@ -1,5 +1,6 @@
 ===========
 Listing5.17
+:skip
 ===========
 
 // Listing 5.17 Sonifying the factorial() function

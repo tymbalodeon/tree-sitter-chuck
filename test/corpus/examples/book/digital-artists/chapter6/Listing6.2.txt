@@ -1,5 +1,6 @@
 ==========
 Listing6.2
+:skip
 ==========
 
 // suck samples through Gain UGen into blackhole

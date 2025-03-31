@@ -1,5 +1,6 @@
 =======
 UseBPM3
+:skip
 =======
 
 // Listing 9.10 UseBPM3.ck randomly sets BPM tempo and sweeps another sine

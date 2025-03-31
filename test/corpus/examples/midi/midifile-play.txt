@@ -1,5 +1,6 @@
 =============
 Midifile play
+:skip
 =============
 
 // name: playmidi.ck

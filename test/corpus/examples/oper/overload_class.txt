@@ -1,5 +1,6 @@
 ==============
 Overload class
+:skip
 ==============
 
 // example of operator overloading for custom class

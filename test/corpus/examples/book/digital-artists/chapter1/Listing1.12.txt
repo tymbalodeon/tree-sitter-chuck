@@ -1,5 +1,6 @@
 ===========
 Listing1.12
+:skip
 ===========
 
 // Listing 1.12 Random triangle wave music

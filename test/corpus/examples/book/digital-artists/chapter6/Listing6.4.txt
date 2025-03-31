@@ -1,5 +1,6 @@
 ==========
 Listing6.4
+:skip
 ==========
 
 // Listing 6.4 Simple clarinet synthesis with Envelope applied to SqrOsc

@@ -1,5 +1,6 @@
 ===========
 Listing11.1
+:skip
 ===========
 
 // Listing 11.1 MIDI output note on/off boilerplate

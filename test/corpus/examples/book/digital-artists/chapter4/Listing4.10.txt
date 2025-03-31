@@ -1,5 +1,6 @@
 ===========
 Listing4.10
+:skip
 ===========
 
 // Listing 4.10 Using arrays to further improve your drum machine

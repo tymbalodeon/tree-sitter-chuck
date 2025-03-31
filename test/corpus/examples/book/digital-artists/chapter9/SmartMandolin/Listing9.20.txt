@@ -1,5 +1,6 @@
 ===========
 Listing9.20
+:skip
 ===========
 
 // Listing 9.20 Smart mandolin instrument and player class

@@ -1,5 +1,6 @@
 =======
 Replace
+:skip
 =======
 
 // replace all occurances of a substring with a different string

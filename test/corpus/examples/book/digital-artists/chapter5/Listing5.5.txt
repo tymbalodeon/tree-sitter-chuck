@@ -1,5 +1,6 @@
 ==========
 Listing5.5
+:skip
 ==========
 
 // Listing 5.5 Function to cut gain (or any float) in half

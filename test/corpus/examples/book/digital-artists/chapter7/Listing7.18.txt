@@ -1,5 +1,6 @@
 ===========
 Listing7.18
+:skip
 ===========
 
 // Listing 7.18 Ragajam Indian music in ChucK

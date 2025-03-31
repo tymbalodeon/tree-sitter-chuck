@@ -1,5 +1,6 @@
 ==========
 Listing9.2
+:skip
 ==========
 
 // Listing 9.2 Simple resonant pop class wraps UGens and functions for accessing them

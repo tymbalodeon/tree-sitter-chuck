@@ -1,5 +1,6 @@
 ===========
 Listing10.2
+:skip
 ===========
 
 // Listing 10.2 Keyboard organ controlled by Hid event

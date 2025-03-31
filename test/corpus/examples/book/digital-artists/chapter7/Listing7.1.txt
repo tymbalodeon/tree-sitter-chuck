@@ -1,5 +1,6 @@
 ==========
 Listing7.1
+:skip
 ==========
 
 // Listing 7.1 Playing the ChucK STK Clarinet physical model unit generator

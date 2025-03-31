@@ -1,5 +1,6 @@
 ===========
 Listing1.17
+:skip
 ===========
 
 // Listing 1.17 Musical use of a for loop

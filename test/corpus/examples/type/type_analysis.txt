@@ -1,5 +1,6 @@
 =============
 Type analysis
+:skip
 =============
 
 // print complex

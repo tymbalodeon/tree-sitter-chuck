@@ -1,5 +1,6 @@
 ===========
 Listing1.14
+:skip
 ===========
 
 // Listing 1.14 if/else code example

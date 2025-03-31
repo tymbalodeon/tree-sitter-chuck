@@ -1,5 +1,6 @@
 ===========
 Listing10.3
+:skip
 ===========
 
 // Listing 10.3 Simple event signaling

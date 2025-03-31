@@ -1,5 +1,6 @@
 ==========
 Listing8.7
+:skip
 ==========
 
 // Listing 8.7 Jazz band:

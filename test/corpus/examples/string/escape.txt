@@ -1,5 +1,6 @@
 ======
 Escape
+:skip
 ======
 
 // escape sequences

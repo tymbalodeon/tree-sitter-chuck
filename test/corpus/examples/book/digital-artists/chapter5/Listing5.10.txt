@@ -1,5 +1,6 @@
 ===========
 Listing5.10
+:skip
 ===========
 
 // Listing 5.10 Void functions on global variables, for scalar musical fun

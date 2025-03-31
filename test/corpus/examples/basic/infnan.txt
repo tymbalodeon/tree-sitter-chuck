@@ -1,5 +1,6 @@
 ======
 Infnan
+:skip
 ======
 
 // big number

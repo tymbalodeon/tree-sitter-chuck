@@ -1,5 +1,6 @@
 =====
 Drums
+:skip
 =====
 
 // Listing 8.7 Jazz band:

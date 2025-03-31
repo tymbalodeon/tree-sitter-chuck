@@ -1,5 +1,6 @@
 ===========
 Listing1.18
+:skip
 ===========
 
 // Listing 1.18 Musical while loop

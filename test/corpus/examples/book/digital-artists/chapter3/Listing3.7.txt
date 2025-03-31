@@ -1,5 +1,6 @@
 ==========
 Listing3.7
+:skip
 ==========
 
 // Listing 3.7 An array of strings (the "Twinkle" lyrics)

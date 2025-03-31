@@ -8,7 +8,6 @@
 // @ts-check
 
 module.exports = grammar({
-  extras: ($) => [/\s/, $.comment],
   name: "chuck",
 
   rules: {
@@ -452,7 +451,12 @@ module.exports = grammar({
       ),
 
     _until_while_expression: ($) =>
-      seq(choice("until", "while"), "(", $._expression, ")"),
+      seq(
+        choice("until", "while"),
+        "(",
+        choice($.chuck_operation, $._expression),
+        ")",
+      ),
 
     variable_identifier: () => /_?[a-z][a-zA-Z0-9_]*/,
 

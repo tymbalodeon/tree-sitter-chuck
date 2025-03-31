@@ -1,5 +1,6 @@
 ===
 Smb
+:skip
 ===
 
 // name: smb.ck

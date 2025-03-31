@@ -1,5 +1,6 @@
 ===========
 Listing11.2
+:skip
 ===========
 
 // Listing 11.2 Simple piano synthesizer controlled by MIDI input

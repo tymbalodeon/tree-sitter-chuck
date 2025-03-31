@@ -1,5 +1,6 @@
 ==========
 Listing6.3
+:skip
 ==========
 
 // Listing 6.3 Sci-fi techno dance bass line using the PulseOsc UGen

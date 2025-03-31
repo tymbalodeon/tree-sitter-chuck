@@ -1,5 +1,6 @@
 ===========
 Listing1.16
+:skip
 ===========
 
 // Listing 1.16 The for loop

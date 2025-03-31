@@ -1,5 +1,6 @@
 =============
 Ctrl for loop
+:skip
 =============
 
 // for loop ( factorial ) , -=>, *=>

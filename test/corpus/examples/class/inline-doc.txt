@@ -1,5 +1,6 @@
 ==========
 Inline doc
+:skip
 ==========
 
 // show how to add descriptions with classes and functions

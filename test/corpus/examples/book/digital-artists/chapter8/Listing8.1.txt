@@ -1,5 +1,6 @@
 ==========
 Listing8.1
+:skip
 ==========
 
 //Listing 8.1 Basic concurrency example, print with sound

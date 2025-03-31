@@ -1,5 +1,6 @@
 ===========
 Listing5.15
+:skip
 ===========
 
 // Listing 5.15 Recursive (function that calls itself) scale-playing function

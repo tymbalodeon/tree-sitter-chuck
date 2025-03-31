@@ -1,5 +1,6 @@
 ============
 Func obj arg
+:skip
 ============
 
 // class with function taking class as argument

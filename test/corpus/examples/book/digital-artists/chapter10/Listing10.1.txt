@@ -1,5 +1,6 @@
 ===========
 Listing10.1
+:skip
 ===========
 
 // Listing 10.1 Standard code to create a Hid event

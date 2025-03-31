@@ -1,5 +1,6 @@
 ==========
 Listing9.3
+:skip
 ==========
 
 // Listing 9.3 Add these overloaded pitch() functions to Simple

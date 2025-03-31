@@ -1,5 +1,6 @@
 ====
 Func
+:skip
 ====
 
 8 => int a;

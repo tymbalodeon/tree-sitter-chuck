@@ -1,5 +1,6 @@
 ===========
 Listing5.14
+:skip
 ===========
 
 // Listing 5.14 Drum machine using patterns stored in arrays

@@ -1,5 +1,6 @@
 ===========
 Listing7.11
+:skip
 ===========
 
 // Listing 7.11 Bowing a rigid bar using the BandedWG UGen

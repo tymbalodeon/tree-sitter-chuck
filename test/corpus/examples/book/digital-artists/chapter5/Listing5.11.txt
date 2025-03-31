@@ -1,5 +1,6 @@
 ===========
 Listing5.11
+:skip
 ===========
 
 // Listing 5.11 Using the noteUp and noteDown functions in a main loop

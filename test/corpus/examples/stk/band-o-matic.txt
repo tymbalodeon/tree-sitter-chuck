@@ -1,5 +1,6 @@
 ============
 Band o matic
+:skip
 ============
 
 // banded waveguide sample

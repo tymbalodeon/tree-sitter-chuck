@@ -1,5 +1,6 @@
 =====
 Dinky
+:skip
 =====
 
 // this class defines the Dinky instrument

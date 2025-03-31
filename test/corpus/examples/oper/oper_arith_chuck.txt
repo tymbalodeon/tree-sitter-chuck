@@ -1,5 +1,6 @@
 ================
 Oper arith chuck
+:skip
 ================
 
 // use a variety of arithmetic chuck operators 

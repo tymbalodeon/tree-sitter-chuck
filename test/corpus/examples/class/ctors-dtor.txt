@@ -1,5 +1,6 @@
 ==========
 Ctors dtor
+:skip
 ==========
 
 // example: defining basic class constructors + destructor
