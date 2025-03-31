@@ -17,27 +17,27 @@ Dir
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call
         (member_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call
         (member_identifier
           (variable_identifier))
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call
         (member_identifier
           (variable_identifier))
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call
@@ -45,7 +45,7 @@ Dir
           (variable_identifier))
         (negative_expression
           (int)))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call

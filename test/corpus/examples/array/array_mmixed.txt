@@ -24,7 +24,7 @@ if( a["foo"][0] == 23 && a["bar"][1] == 42 )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -32,7 +32,7 @@ if( a["foo"][0] == 23 && a["bar"][1] == 42 )
         (variable_identifier)
         (int)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (class_instantiation
@@ -53,7 +53,7 @@ if( a["foo"][0] == 23 && a["bar"][1] == 42 )
       (array_identifier
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -86,7 +86,7 @@ if( a["foo"][0] == 23 && a["bar"][1] == 42 )
         (variable_identifier)
         (string)
         (int))))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (binary_expression

@@ -63,20 +63,20 @@ saveme.rampDown( 500::ms );
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -90,14 +90,14 @@ saveme.rampDown( 500::ms );
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -107,7 +107,7 @@ saveme.rampDown( 500::ms );
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -115,7 +115,7 @@ saveme.rampDown( 500::ms );
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -123,14 +123,14 @@ saveme.rampDown( 500::ms );
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -139,37 +139,37 @@ saveme.rampDown( 500::ms );
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (float)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (float)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -178,7 +178,7 @@ saveme.rampDown( 500::ms );
       (dur
         (int)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -187,8 +187,8 @@ saveme.rampDown( 500::ms );
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -197,7 +197,7 @@ saveme.rampDown( 500::ms );
       (dur
         (int)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -206,4 +206,4 @@ saveme.rampDown( 500::ms );
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment))
+  (line_comment))

@@ -110,20 +110,20 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -141,14 +141,14 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (keyword
         (global_unit_generator))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -156,9 +156,9 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -166,7 +166,7 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -181,7 +181,7 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -191,7 +191,7 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -220,14 +220,14 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
       (dur
         (int)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (negative_expression
@@ -236,13 +236,13 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -269,7 +269,7 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
     (debug_print
       (string)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (reference_type)
@@ -285,12 +285,12 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (function_call
@@ -300,12 +300,12 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
           (operator)
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (debug_print
               (string)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (variable_identifier)
@@ -333,7 +333,7 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
                 (special_literal_value))
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (loop
             (binary_expression
               (function_call
@@ -352,7 +352,7 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
           (statement
             (debug_print
               (string)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -387,14 +387,14 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
                   (variable_identifier)
                   (variable_identifier)
                   (variable_identifier)))))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -455,7 +455,7 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
                 (operator)
                 (int))
               (duration_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -523,4 +523,4 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment))))
+      (line_comment))))

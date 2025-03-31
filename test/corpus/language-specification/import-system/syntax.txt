@@ -25,25 +25,25 @@ Import syntax
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (import_expression
     (string))
-  (comment)
+  (line_comment)
   (import_expression
     (string))
-  (comment)
+  (line_comment)
   (import_expression
     (string)
     (string)
     (string))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (import_expression
     (string))
-  (comment)
+  (line_comment)
   (import_expression
     (string))
-  (comment)
+  (line_comment)
   (import_expression
     (string)))

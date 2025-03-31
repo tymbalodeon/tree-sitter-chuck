@@ -46,8 +46,8 @@ fun void play( float note, float velocity )
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -75,7 +75,7 @@ fun void play( float note, float velocity )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -92,7 +92,7 @@ fun void play( float note, float velocity )
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
@@ -158,7 +158,7 @@ fun void play( float note, float velocity )
             (member_identifier
               (variable_identifier)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -219,7 +219,7 @@ fun void play( float note, float velocity )
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -230,7 +230,7 @@ fun void play( float note, float velocity )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call

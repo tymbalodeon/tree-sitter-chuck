@@ -37,9 +37,9 @@ second => now;
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -48,7 +48,7 @@ second => now;
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -58,8 +58,8 @@ second => now;
       (variable_declaration
         (reference_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -67,7 +67,7 @@ second => now;
       (variable_declaration
         (reference_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -76,8 +76,8 @@ second => now;
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -85,9 +85,9 @@ second => now;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -95,7 +95,7 @@ second => now;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -103,11 +103,11 @@ second => now;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (keyword

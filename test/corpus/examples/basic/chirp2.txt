@@ -88,8 +88,8 @@ fun void chirp( float src, float target, dur duration, dur tinc )
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -108,7 +108,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -116,7 +116,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (negative_expression
@@ -125,7 +125,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -134,7 +134,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (dur
         (int)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -143,7 +143,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -151,7 +151,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -163,7 +163,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (dur
         (int)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -172,7 +172,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -186,7 +186,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -195,7 +195,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (dur
         (float)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -204,7 +204,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -218,7 +218,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -230,7 +230,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (dur
         (int)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -239,7 +239,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -253,7 +253,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (variable_identifier)
@@ -263,7 +263,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
           (dur
             (int)
             (duration_identifier))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -280,7 +280,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -288,7 +288,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -299,7 +299,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -314,12 +314,12 @@ fun void chirp( float src, float target, dur duration, dur tinc )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (primitive_type)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -334,7 +334,7 @@ fun void chirp( float src, float target, dur duration, dur tinc )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -342,14 +342,14 @@ fun void chirp( float src, float target, dur duration, dur tinc )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (loop
         (binary_expression
           (variable_identifier)
           (operator)
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -358,13 +358,13 @@ fun void chirp( float src, float target, dur duration, dur tinc )
                 (variable_identifier))
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (int)
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -376,14 +376,14 @@ fun void chirp( float src, float target, dur duration, dur tinc )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)

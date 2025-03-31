@@ -110,40 +110,40 @@ loop(win2, 73::ms);
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -204,7 +204,7 @@ loop(win2, 73::ms);
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -224,7 +224,7 @@ loop(win2, 73::ms);
       (dur
         (float)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -278,7 +278,7 @@ loop(win2, 73::ms);
       (dur
         (int)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -298,7 +298,7 @@ loop(win2, 73::ms);
       (dur
         (float)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -311,7 +311,7 @@ loop(win2, 73::ms);
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -342,7 +342,7 @@ loop(win2, 73::ms);
           (dur
             (float)
             (duration_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -373,7 +373,7 @@ loop(win2, 73::ms);
           (dur
             (float)
             (duration_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)

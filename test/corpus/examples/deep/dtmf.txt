@@ -55,10 +55,10 @@ while (i < 7) {
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -75,7 +75,7 @@ while (i < 7) {
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -99,7 +99,7 @@ while (i < 7) {
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -155,7 +155,7 @@ while (i < 7) {
       (variable_identifier))
     (variable_identifier)
     (variable_identifier))
-  (comment)
+  (line_comment)
   (loop
     (binary_expression
       (variable_identifier)

@@ -39,24 +39,24 @@ X x2;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (primitive_type)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
         (block
-          (comment)
+          (line_comment)
           (statement
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -64,20 +64,20 @@ X x2;
       (member_identifier
         (class_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (member_identifier
         (class_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call
         (member_identifier
           (class_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
@@ -86,7 +86,7 @@ X x2;
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (member_identifier
@@ -95,7 +95,7 @@ X x2;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -103,7 +103,7 @@ X x2;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (member_identifier
@@ -151,11 +151,11 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -163,7 +163,7 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
           (variable_declaration
             (primitive_type)
             (class_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -171,7 +171,7 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
           (variable_declaration
             (primitive_type)
             (class_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -181,7 +181,7 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
           (variable_declaration
             (primitive_type)
             (class_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -195,7 +195,7 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
           (variable_declaration
             (primitive_type)
             (class_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (reference_values
@@ -206,7 +206,7 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
           (variable_declaration
             (primitive_type)
             (class_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (array
@@ -219,21 +219,21 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
             (primitive_type)
             (array_identifier
               (class_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (reference_type)
           (function_call
             (class_identifier)
             (string))))
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (class_identifier)
           (function_call
             (class_identifier)
             (int))))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (member_identifier

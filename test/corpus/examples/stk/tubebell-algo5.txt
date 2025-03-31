@@ -81,9 +81,9 @@ fun void playPattern(int pat[])  {
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -101,7 +101,7 @@ fun void playPattern(int pat[])  {
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -109,7 +109,7 @@ fun void playPattern(int pat[])  {
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (class_identifier)
@@ -157,7 +157,7 @@ fun void playPattern(int pat[])  {
           (float)
           (float)
           (float)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
@@ -170,7 +170,7 @@ fun void playPattern(int pat[])  {
           (float)
           (float)
           (float)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -187,7 +187,7 @@ fun void playPattern(int pat[])  {
               (variable_identifier)
               (variable_identifier))
             (variable_identifier))))
-      (comment)))
+      (line_comment)))
   (statement
     (chuck_operation
       (chuck_operation
@@ -200,7 +200,7 @@ fun void playPattern(int pat[])  {
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -232,7 +232,7 @@ fun void playPattern(int pat[])  {
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -269,7 +269,7 @@ fun void playPattern(int pat[])  {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -338,7 +338,7 @@ fun void playPattern(int pat[])  {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -367,7 +367,7 @@ fun void playPattern(int pat[])  {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -396,7 +396,7 @@ fun void playPattern(int pat[])  {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -421,7 +421,7 @@ fun void playPattern(int pat[])  {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -490,7 +490,7 @@ fun void playPattern(int pat[])  {
               (int)
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (debug_print
               (string)

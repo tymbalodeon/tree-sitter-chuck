@@ -35,11 +35,11 @@ for( auto x : arr )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -51,7 +51,7 @@ for( auto x : arr )
     (debug_print
       (variable_identifier)
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -69,7 +69,7 @@ for( auto x : arr )
         (variable_identifier)
         (int))
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -93,7 +93,7 @@ for( auto x : arr )
         (int)
         (int))
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (class_instantiation
@@ -118,14 +118,14 @@ for( auto x : arr )
             (variable_identifier)))
         (primitive_type))
       (string)))
-  (comment)
+  (line_comment)
   (for_each_loop
     (variable_declaration
       (primitive_type)
       (variable_identifier))
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier)

@@ -28,13 +28,13 @@ for( int f : foo )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -57,21 +57,21 @@ for( int f : foo )
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (for_each_loop
     (variable_declaration
       (primitive_type)
       (variable_identifier))
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (for_each_loop
         (variable_declaration
           (primitive_type)
           (variable_identifier))
         (variable_identifier)
         (block
-          (comment)
+          (line_comment)
           (statement
             (debug_print
               (binary_expression

@@ -21,16 +21,16 @@ public class Bar
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (primitive_type)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (function_definition
         (class_identifier)
         (variable_declaration
@@ -42,11 +42,11 @@ public class Bar
               (variable_identifier)
               (chuck_operator)
               (variable_identifier)))))))
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (class_identifier)
@@ -79,17 +79,17 @@ public class Bar
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -100,11 +100,11 @@ public class Bar
           (variable_declaration
             (primitive_type)
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (class_identifier)

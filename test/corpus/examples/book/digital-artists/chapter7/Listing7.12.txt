@@ -18,8 +18,8 @@ for (0 => int i; i < 23; i++) {
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -28,7 +28,7 @@ for (0 => int i; i < 23; i++) {
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)

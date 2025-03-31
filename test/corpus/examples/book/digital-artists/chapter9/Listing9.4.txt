@@ -35,11 +35,11 @@ while (freq < 800)
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (primitive_type)
@@ -54,9 +54,9 @@ while (freq < 800)
           (primitive_type)
           (variable_identifier))
         (block
-          (comment)
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -68,7 +68,7 @@ while (freq < 800)
               (variable_declaration
                 (primitive_type)
                 (class_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -76,7 +76,7 @@ while (freq < 800)
                 (duration_identifier))
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -113,14 +113,14 @@ while (freq < 800)
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -149,7 +149,7 @@ while (freq < 800)
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)

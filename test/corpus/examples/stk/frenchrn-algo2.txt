@@ -95,13 +95,13 @@ fun void arpeg() {
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -115,7 +115,7 @@ fun void arpeg() {
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -123,7 +123,7 @@ fun void arpeg() {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -131,8 +131,8 @@ fun void arpeg() {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -145,7 +145,7 @@ fun void arpeg() {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -174,7 +174,7 @@ fun void arpeg() {
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call
@@ -262,7 +262,7 @@ fun void arpeg() {
   (statement
     (function_call
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -277,12 +277,12 @@ fun void arpeg() {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -407,7 +407,7 @@ fun void arpeg() {
             (operator)
             (float))
           (block
-            (comment)
+            (line_comment)
             (statement
               (chuck_operation
                 (binary_expression
@@ -533,7 +533,7 @@ fun void arpeg() {
                 (chuck_operator)
                 (keyword
                   (special_literal_value)))))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression

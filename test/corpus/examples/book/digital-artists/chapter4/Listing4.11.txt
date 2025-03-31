@@ -35,10 +35,10 @@ for (0 => int beat; beat < 24; beat++) {  // (3) 24-beat "measure"
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -47,7 +47,7 @@ for (0 => int beat; beat < 24; beat++) {  // (3) 24-beat "measure"
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -80,7 +80,7 @@ for (0 => int beat; beat < 24; beat++) {  // (3) 24-beat "measure"
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -88,7 +88,7 @@ for (0 => int beat; beat < 24; beat++) {  // (3) 24-beat "measure"
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -103,8 +103,8 @@ for (0 => int beat; beat < 24; beat++) {  // (3) 24-beat "measure"
     (post_increment_expression
       (variable_identifier))
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier)
@@ -115,7 +115,7 @@ for (0 => int beat; beat < 24; beat++) {  // (3) 24-beat "measure"
             (variable_identifier)
             (operator)
             (class_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -123,8 +123,8 @@ for (0 => int beat; beat < 24; beat++) {  // (3) 24-beat "measure"
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (conditional
         (binary_expression
           (binary_expression
@@ -134,7 +134,7 @@ for (0 => int beat; beat < 24; beat++) {  // (3) 24-beat "measure"
           (operator)
           (int))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (int)

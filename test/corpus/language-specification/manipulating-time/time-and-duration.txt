@@ -11,7 +11,7 @@ now + foo => time later;
 ----
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -21,7 +21,7 @@ now + foo => time later;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -47,7 +47,7 @@ Durations from durations
 ----
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -57,7 +57,7 @@ Durations from durations
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -87,7 +87,7 @@ Default duration values
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -97,7 +97,7 @@ Default duration values
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -107,7 +107,7 @@ Default duration values
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -122,7 +122,7 @@ Default duration values
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur

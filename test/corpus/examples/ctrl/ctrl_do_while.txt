@@ -19,7 +19,7 @@ if( j == 5 ) <<<"success">>>;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -51,7 +51,7 @@ if( j == 5 ) <<<"success">>>;
         (variable_identifier)
         (operator)
         (int))))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (variable_identifier)

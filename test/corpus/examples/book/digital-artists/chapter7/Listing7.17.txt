@@ -41,8 +41,8 @@ fun void dipth(string phon0, string phon1, int note) {
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -74,7 +74,7 @@ fun void dipth(string phon0, string phon1, int note) {
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -95,7 +95,7 @@ fun void dipth(string phon0, string phon1, int note) {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -103,7 +103,7 @@ fun void dipth(string phon0, string phon1, int note) {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -128,13 +128,13 @@ fun void dipth(string phon0, string phon1, int note) {
           (array_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
           (chuck_operator)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)

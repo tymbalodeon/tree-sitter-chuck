@@ -46,12 +46,12 @@ fun void interpolate( dur delta )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -60,12 +60,12 @@ fun void interpolate( dur delta )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -75,7 +75,7 @@ fun void interpolate( dur delta )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -92,18 +92,18 @@ fun void interpolate( dur delta )
               (duration_identifier))
             (operator)
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
@@ -115,7 +115,7 @@ fun void interpolate( dur delta )
               (variable_identifier))
             (int)
             (int))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -124,7 +124,7 @@ fun void interpolate( dur delta )
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -136,7 +136,7 @@ fun void interpolate( dur delta )
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -148,7 +148,7 @@ fun void interpolate( dur delta )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)

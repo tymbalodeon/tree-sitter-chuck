@@ -18,9 +18,9 @@ Array negative
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -33,19 +33,19 @@ Array negative
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (array_identifier
         (variable_identifier)
         (negative_expression
           (int)))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (debug_print
       (array_identifier
         (variable_identifier)
         (negative_expression
           (int)))))
-  (comment))
+  (line_comment))

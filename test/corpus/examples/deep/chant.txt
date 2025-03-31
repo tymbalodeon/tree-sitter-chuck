@@ -171,31 +171,31 @@ fun void doInterpolation( dur T )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -215,7 +215,7 @@ fun void doInterpolation( dur T )
       (variable_declaration
         (class_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -248,7 +248,7 @@ fun void doInterpolation( dur T )
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -284,7 +284,7 @@ fun void doInterpolation( dur T )
       (member_identifier
         (global_unit_generator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -330,7 +330,7 @@ fun void doInterpolation( dur T )
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -346,7 +346,7 @@ fun void doInterpolation( dur T )
       (variable_identifier)
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -354,7 +354,7 @@ fun void doInterpolation( dur T )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -398,7 +398,7 @@ fun void doInterpolation( dur T )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -420,7 +420,7 @@ fun void doInterpolation( dur T )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -428,7 +428,7 @@ fun void doInterpolation( dur T )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -483,7 +483,7 @@ fun void doInterpolation( dur T )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -526,7 +526,7 @@ fun void doInterpolation( dur T )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -563,7 +563,7 @@ fun void doInterpolation( dur T )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -606,7 +606,7 @@ fun void doInterpolation( dur T )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -621,7 +621,7 @@ fun void doInterpolation( dur T )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -650,7 +650,7 @@ fun void doInterpolation( dur T )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -675,7 +675,7 @@ fun void doInterpolation( dur T )
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -700,7 +700,7 @@ fun void doInterpolation( dur T )
         (reference_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -708,17 +708,17 @@ fun void doInterpolation( dur T )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
@@ -726,13 +726,13 @@ fun void doInterpolation( dur T )
         (dur
           (int)
           (duration_identifier)))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -763,7 +763,7 @@ fun void doInterpolation( dur T )
             (float))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -798,7 +798,7 @@ fun void doInterpolation( dur T )
             (int)
             (chuck_operator)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (chuck_operation
@@ -814,14 +814,14 @@ fun void doInterpolation( dur T )
               (variable_identifier)))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (array_identifier
             (variable_identifier)
             (variable_identifier))
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -830,7 +830,7 @@ fun void doInterpolation( dur T )
             (variable_identifier))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -844,17 +844,17 @@ fun void doInterpolation( dur T )
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
@@ -862,7 +862,7 @@ fun void doInterpolation( dur T )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -871,13 +871,13 @@ fun void doInterpolation( dur T )
                 (variable_identifier))
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (float)
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -907,7 +907,7 @@ fun void doInterpolation( dur T )
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -915,7 +915,7 @@ fun void doInterpolation( dur T )
       (primitive_type)
       (class_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (float)
@@ -923,12 +923,12 @@ fun void doInterpolation( dur T )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -944,7 +944,7 @@ fun void doInterpolation( dur T )
                 (variable_identifier))
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (chuck_operation
@@ -1005,7 +1005,7 @@ fun void doInterpolation( dur T )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (class_identifier)

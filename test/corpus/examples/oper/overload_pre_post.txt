@@ -1,6 +1,5 @@
 =================
 Overload pre post
-:skip
 =================
 
 // 1) example of overloading on objects that return primitives
@@ -36,4 +35,75 @@ Foo a;
 
 ---
 
-(source_file)
+(source_file
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (class_definition
+    (class_identifier)
+    (block
+      (statement
+        (chuck_operation
+          (int)
+          (chuck_operator)
+          (variable_declaration
+            (primitive_type)
+            (variable_identifier))))))
+  (line_comment)
+  (overload_definition
+    (primitive_type)
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier))
+    (block
+      (statement
+        (negation_expression
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))))
+  (line_comment)
+  (overload_definition
+    (primitive_type)
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier))
+    (block
+      (statement
+        (pre_increment_expression
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))))
+  (line_comment)
+  (overload_definition
+    (primitive_type)
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier))
+    (block
+      (statement
+        (post_increment_expression
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))))
+  (line_comment)
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier)))
+  (line_comment)
+  (statement
+    (debug_print
+      (negation_expression
+        (variable_identifier))
+      (pre_increment_expression
+        (variable_identifier))
+      (pre_increment_expression
+        (variable_identifier))
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (post_increment_expression
+        (variable_identifier))
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier)))))

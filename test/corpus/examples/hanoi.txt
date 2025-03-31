@@ -39,9 +39,9 @@ hanoi( disks, 1, 3, 2 );
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -49,7 +49,7 @@ hanoi( disks, 1, 3, 2 );
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -57,7 +57,7 @@ hanoi( disks, 1, 3, 2 );
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -65,7 +65,7 @@ hanoi( disks, 1, 3, 2 );
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -82,18 +82,18 @@ hanoi( disks, 1, 3, 2 );
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
           (operator)
           (int))
         (statement))
-      (comment)
+      (line_comment)
       (statement
         (post_increment_expression
           (class_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (variable_identifier)
@@ -104,7 +104,7 @@ hanoi( disks, 1, 3, 2 );
           (variable_identifier)
           (variable_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (string)
@@ -114,7 +114,7 @@ hanoi( disks, 1, 3, 2 );
           (string)
           (string)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (variable_identifier)
@@ -125,7 +125,7 @@ hanoi( disks, 1, 3, 2 );
           (variable_identifier)
           (variable_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)

@@ -44,16 +44,16 @@ Foo a(1), b(2);
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (primitive_type)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (function_definition
         (class_identifier)
         (variable_declaration
@@ -65,12 +65,12 @@ Foo a(1), b(2);
               (variable_identifier)
               (chuck_operator)
               (variable_identifier)))))))
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment)))
-  (comment)
+      (line_comment)))
+  (line_comment)
   (overload_definition
     (class_identifier)
     (operator)
@@ -81,7 +81,7 @@ Foo a(1), b(2);
       (class_identifier)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (class_instantiation
           (function_call
@@ -94,7 +94,7 @@ Foo a(1), b(2);
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))))))
-  (comment)
+  (line_comment)
   (overload_definition
     (primitive_type)
     (chuck_operator)
@@ -105,7 +105,7 @@ Foo a(1), b(2);
       (class_identifier)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (member_identifier
@@ -115,10 +115,10 @@ Foo a(1), b(2);
           (member_identifier
             (variable_identifier)
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (import_expression
     (string))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
@@ -128,7 +128,7 @@ Foo a(1), b(2);
     (function_call
       (variable_identifier)
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (member_identifier

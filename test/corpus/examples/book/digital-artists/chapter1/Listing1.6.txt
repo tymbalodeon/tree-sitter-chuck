@@ -24,8 +24,8 @@ myPitch / 2 => int lowerPitch;
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -33,7 +33,7 @@ myPitch / 2 => int lowerPitch;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -47,7 +47,7 @@ myPitch / 2 => int lowerPitch;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -58,7 +58,7 @@ myPitch / 2 => int lowerPitch;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -69,7 +69,7 @@ myPitch / 2 => int lowerPitch;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (variable_identifier)

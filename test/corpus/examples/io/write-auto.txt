@@ -35,14 +35,14 @@ fout.close();
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -50,7 +50,7 @@ fout.close();
         (variable_identifier))
       (string)
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -60,7 +60,7 @@ fout.close();
       (member_identifier
         (class_identifier)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -83,7 +83,7 @@ fout.close();
         (function_call
           (member_identifier
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (binary_expression
       (binary_expression
@@ -107,8 +107,8 @@ fout.close();
         (member_identifier
           (class_identifier)
           (variable_identifier)))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
@@ -116,7 +116,7 @@ fout.close();
         (member_identifier
           (variable_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier

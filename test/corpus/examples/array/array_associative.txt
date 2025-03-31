@@ -44,14 +44,14 @@ for( auto key : keys )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -59,7 +59,7 @@ for( auto key : keys )
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -67,20 +67,20 @@ for( auto key : keys )
       (array_identifier
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (array_identifier
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (array_identifier
         (variable_identifier)
         (string))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -88,7 +88,7 @@ for( auto key : keys )
       (array_identifier
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (reference_type)
@@ -101,7 +101,7 @@ for( auto key : keys )
         (variable_identifier)
         (variable_identifier))
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (for_each_loop
     (variable_declaration
       (primitive_type)
@@ -112,7 +112,7 @@ for( auto key : keys )
         (debug_print
           (string)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
@@ -140,5 +140,5 @@ for( auto key : keys )
           (variable_identifier)
           (variable_identifier))
         (string))))
-  (comment)
-  (comment))
+  (line_comment)
+  (line_comment))

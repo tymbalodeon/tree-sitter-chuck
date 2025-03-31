@@ -27,8 +27,8 @@ while (1) {                     // (3) Infinite loop
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -58,19 +58,19 @@ while (1) {                     // (3) Infinite loop
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (loop
     (int)
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (member_identifier
@@ -80,8 +80,8 @@ while (1) {                     // (3) Infinite loop
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (int)
@@ -96,7 +96,7 @@ while (1) {                     // (3) Infinite loop
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (int)
@@ -104,7 +104,7 @@ while (1) {                     // (3) Infinite loop
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)

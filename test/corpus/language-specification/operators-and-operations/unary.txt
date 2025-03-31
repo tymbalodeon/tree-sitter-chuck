@@ -9,7 +9,7 @@ if( !true == false )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (negation_expression
@@ -32,7 +32,7 @@ Negative
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (negative_expression
@@ -52,7 +52,7 @@ new object @=> object @ bar;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (class_instantiation

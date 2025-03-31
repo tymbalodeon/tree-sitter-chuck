@@ -35,9 +35,9 @@ L::samp => now;
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -51,7 +51,7 @@ L::samp => now;
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -62,7 +62,7 @@ L::samp => now;
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -70,7 +70,7 @@ L::samp => now;
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -78,7 +78,7 @@ L::samp => now;
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -88,7 +88,7 @@ L::samp => now;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -101,7 +101,7 @@ L::samp => now;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (negative_expression
@@ -110,7 +110,7 @@ L::samp => now;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -118,7 +118,7 @@ L::samp => now;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -127,7 +127,7 @@ L::samp => now;
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -135,7 +135,7 @@ L::samp => now;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur

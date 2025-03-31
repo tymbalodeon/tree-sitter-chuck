@@ -77,14 +77,14 @@ fun void ramp_stuff()
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -102,7 +102,7 @@ fun void ramp_stuff()
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -116,7 +116,7 @@ fun void ramp_stuff()
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -124,7 +124,7 @@ fun void ramp_stuff()
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -132,7 +132,7 @@ fun void ramp_stuff()
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -140,7 +140,7 @@ fun void ramp_stuff()
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -155,7 +155,7 @@ fun void ramp_stuff()
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
@@ -167,12 +167,12 @@ fun void ramp_stuff()
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -183,7 +183,7 @@ fun void ramp_stuff()
           (variable_declaration
             (class_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -211,7 +211,7 @@ fun void ramp_stuff()
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (array_identifier
@@ -223,7 +223,7 @@ fun void ramp_stuff()
               (operator)
               (variable_identifier))
             (block
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (array_identifier
@@ -239,7 +239,7 @@ fun void ramp_stuff()
                   (variable_identifier)
                   (chuck_operator)
                   (variable_identifier)))))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -269,7 +269,7 @@ fun void ramp_stuff()
               (int)))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (expression_group
@@ -279,7 +279,7 @@ fun void ramp_stuff()
               (float)))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -295,12 +295,12 @@ fun void ramp_stuff()
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (float)
@@ -308,7 +308,7 @@ fun void ramp_stuff()
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))

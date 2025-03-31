@@ -37,25 +37,25 @@ chout <= IO.newline();
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -84,7 +84,7 @@ chout <= IO.newline();
       (int)
       (int)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -98,7 +98,7 @@ chout <= IO.newline();
         (variable_identifier))
       (int)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)

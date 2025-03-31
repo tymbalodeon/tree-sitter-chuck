@@ -17,7 +17,7 @@ Advancing time by duration
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -26,7 +26,7 @@ Advancing time by duration
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -35,7 +35,7 @@ Advancing time by duration
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -44,7 +44,7 @@ Advancing time by duration
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -67,7 +67,7 @@ later => now;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -81,7 +81,7 @@ later => now;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -99,7 +99,7 @@ e => now;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -127,7 +127,7 @@ while( true )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -136,12 +136,12 @@ while( true )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -154,7 +154,7 @@ while( true )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur

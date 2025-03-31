@@ -15,7 +15,7 @@ hey( 1, 2 ) => int result;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -26,13 +26,13 @@ hey( 1, 2 ) => int result;
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (variable_identifier)
           (operator)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -63,7 +63,7 @@ Std.mtof( Std.rand2( 10, 100 ) ) => float foo;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -76,7 +76,7 @@ Std.mtof( Std.rand2( 10, 100 ) ) => float foo;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -87,7 +87,7 @@ Std.mtof( Std.rand2( 10, 100 ) ) => float foo;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -107,7 +107,7 @@ Std.mtof( Std.rand2( 10, 100 ) ) => float foo;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call

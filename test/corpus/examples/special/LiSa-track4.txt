@@ -49,14 +49,14 @@ while ( true ) { 1::second => now; }
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -65,12 +65,12 @@ while ( true ) { 1::second => now; }
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -83,7 +83,7 @@ while ( true ) { 1::second => now; }
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -96,7 +96,7 @@ while ( true ) { 1::second => now; }
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -127,7 +127,7 @@ while ( true ) { 1::second => now; }
           (dur
             (variable_identifier)
             (duration_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -135,7 +135,7 @@ while ( true ) { 1::second => now; }
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -143,7 +143,7 @@ while ( true ) { 1::second => now; }
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -151,8 +151,8 @@ while ( true ) { 1::second => now; }
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -174,7 +174,7 @@ while ( true ) { 1::second => now; }
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -182,7 +182,7 @@ while ( true ) { 1::second => now; }
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -190,7 +190,7 @@ while ( true ) { 1::second => now; }
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))

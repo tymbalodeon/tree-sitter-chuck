@@ -24,14 +24,14 @@ for( int i; i < a.size(); i++ )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
@@ -39,7 +39,7 @@ for( int i; i < a.size(); i++ )
         (member_identifier
           (variable_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (binary_expression
       (binary_expression
@@ -57,7 +57,7 @@ for( int i; i < a.size(); i++ )
         (int))
       (operator)
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
@@ -65,7 +65,7 @@ for( int i; i < a.size(); i++ )
         (member_identifier
           (variable_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)

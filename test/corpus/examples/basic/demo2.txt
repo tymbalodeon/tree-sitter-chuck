@@ -72,9 +72,9 @@ for(0 => int i; i<5; i++) {
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -82,7 +82,7 @@ for(0 => int i; i<5; i++) {
       (member_identifier
         (global_unit_generator)
         (variable_identifier))))
-  (comment)
+  (block_comment)
   (statement
     (array_declaration
       (class_identifier)
@@ -128,7 +128,7 @@ for(0 => int i; i<5; i++) {
               (variable_identifier)
               (variable_identifier))
             (variable_identifier))))))
-  (comment)
+  (block_comment)
   (for_loop
     (chuck_operation
       (int)

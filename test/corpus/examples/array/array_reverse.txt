@@ -33,9 +33,9 @@ fun void print_arr(int a[]) {
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -49,23 +49,23 @@ fun void print_arr(int a[]) {
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier

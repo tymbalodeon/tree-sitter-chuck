@@ -18,7 +18,7 @@ foo( 2 );
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -44,7 +44,7 @@ foo( 2 );
           (variable_identifier)
           (variable_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)

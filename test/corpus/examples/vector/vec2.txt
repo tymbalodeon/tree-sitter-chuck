@@ -86,21 +86,21 @@ cherr <= "cherr: " <= a <= " " <= b <= IO.nl();
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (reference_values
         (int)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (reference_values
@@ -108,7 +108,7 @@ cherr <= "cherr: " <= a <= " " <= b <= IO.nl();
         (int))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (reference_values
@@ -118,7 +118,7 @@ cherr <= "cherr: " <= a <= " " <= b <= IO.nl();
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
@@ -151,7 +151,7 @@ cherr <= "cherr: " <= a <= " " <= b <= IO.nl();
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
@@ -185,7 +185,7 @@ cherr <= "cherr: " <= a <= " " <= b <= IO.nl();
           (variable_identifier))
         (string)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (cast
@@ -228,7 +228,7 @@ cherr <= "cherr: " <= a <= " " <= b <= IO.nl();
           (int)
           (int))
         (primitive_type))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -326,30 +326,13 @@ cherr <= "cherr: " <= a <= " " <= b <= IO.nl();
         (reference_values
           (int)
           (int)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
       (chuck_operator)
       (variable_identifier)))
-  (comment)
-  (statement
-    (chuck_operation
-      (int)
-      (chuck_operator)
-      (variable_identifier)))
-  (statement
-    (debug_print
-      (string)
-      (variable_identifier)
-      (variable_identifier)))
-  (comment)
-  (statement
-    (chuck_operation
-      (variable_identifier)
-      (chuck_operator)
-      (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -360,14 +343,31 @@ cherr <= "cherr: " <= a <= " " <= b <= IO.nl();
       (string)
       (variable_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
+  (statement
+    (chuck_operation
+      (variable_identifier)
+      (chuck_operator)
+      (variable_identifier)))
+  (line_comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (statement
+    (debug_print
+      (string)
+      (variable_identifier)
+      (variable_identifier)))
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (binary_expression
       (binary_expression
@@ -389,7 +389,7 @@ cherr <= "cherr: " <= a <= " " <= b <= IO.nl();
           (int)))
       (operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (for_each_loop
     (variable_declaration
       (primitive_type)
@@ -399,7 +399,7 @@ cherr <= "cherr: " <= a <= " " <= b <= IO.nl();
       (debug_print
         (string)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -413,7 +413,7 @@ cherr <= "cherr: " <= a <= " " <= b <= IO.nl();
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (for_each_loop
     (variable_declaration
       (primitive_type)
@@ -423,7 +423,7 @@ cherr <= "cherr: " <= a <= " " <= b <= IO.nl();
       (debug_print
         (string)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -473,14 +473,14 @@ cherr <= "cherr: " <= a <= " " <= b <= IO.nl();
           (debug_print
             (string)
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
       (reference_values
         (int)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -491,7 +491,7 @@ cherr <= "cherr: " <= a <= " " <= b <= IO.nl();
         (reference_values
           (int)
           (int)))))
-  (comment)
+  (line_comment)
   (statement
     (binary_expression
       (binary_expression

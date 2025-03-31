@@ -42,9 +42,9 @@ for (0 => int i; i < a.cap(); i++)
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -53,8 +53,8 @@ for (0 => int i; i < a.cap(); i++)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -62,7 +62,7 @@ for (0 => int i; i < a.cap(); i++)
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -70,7 +70,7 @@ for (0 => int i; i < a.cap(); i++)
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -93,7 +93,7 @@ for (0 => int i; i < a.cap(); i++)
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -117,8 +117,8 @@ for (0 => int i; i < a.cap(); i++)
           (array_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -132,7 +132,7 @@ for (0 => int i; i < a.cap(); i++)
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -140,7 +140,7 @@ for (0 => int i; i < a.cap(); i++)
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (binary_expression
@@ -161,7 +161,7 @@ for (0 => int i; i < a.cap(); i++)
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment))
+          (line_comment))
         (block
           (statement
             (chuck_operation
@@ -171,8 +171,8 @@ for (0 => int i; i < a.cap(); i++)
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)))
-      (comment)
+          (line_comment)))
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -180,7 +180,7 @@ for (0 => int i; i < a.cap(); i++)
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur

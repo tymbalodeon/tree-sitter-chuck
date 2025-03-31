@@ -264,34 +264,34 @@ fun LiSa load( string filename )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -299,7 +299,7 @@ fun LiSa load( string filename )
       (variable_declaration
         (reference_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (function_call
@@ -315,7 +315,7 @@ fun LiSa load( string filename )
           (int))
         (chuck_operator)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -323,7 +323,7 @@ fun LiSa load( string filename )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -333,7 +333,7 @@ fun LiSa load( string filename )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -341,7 +341,7 @@ fun LiSa load( string filename )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -349,7 +349,7 @@ fun LiSa load( string filename )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -357,7 +357,7 @@ fun LiSa load( string filename )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -365,7 +365,7 @@ fun LiSa load( string filename )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -373,7 +373,7 @@ fun LiSa load( string filename )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -381,7 +381,7 @@ fun LiSa load( string filename )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -389,7 +389,7 @@ fun LiSa load( string filename )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -399,7 +399,7 @@ fun LiSa load( string filename )
       (reference_declaration
         (class_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -413,7 +413,7 @@ fun LiSa load( string filename )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -423,7 +423,7 @@ fun LiSa load( string filename )
         (int))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -431,7 +431,7 @@ fun LiSa load( string filename )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -439,7 +439,7 @@ fun LiSa load( string filename )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
@@ -448,7 +448,7 @@ fun LiSa load( string filename )
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -456,7 +456,7 @@ fun LiSa load( string filename )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (function_call
       (member_identifier
@@ -474,7 +474,7 @@ fun LiSa load( string filename )
             (variable_identifier)))
         (chuck_operator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -486,7 +486,7 @@ fun LiSa load( string filename )
       (function_call
         (member_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (binary_expression
@@ -500,7 +500,7 @@ fun LiSa load( string filename )
         (operator)
         (string))
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -557,7 +557,7 @@ fun LiSa load( string filename )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
@@ -574,16 +574,16 @@ fun LiSa load( string filename )
         (dur
           (int)
           (duration_identifier)))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -603,12 +603,12 @@ fun LiSa load( string filename )
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (class_identifier)
@@ -616,7 +616,7 @@ fun LiSa load( string filename )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -627,7 +627,7 @@ fun LiSa load( string filename )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -643,7 +643,7 @@ fun LiSa load( string filename )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (binary_expression
@@ -672,7 +672,7 @@ fun LiSa load( string filename )
               (variable_identifier)
               (variable_identifier)
               (class_identifier)))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -687,7 +687,7 @@ fun LiSa load( string filename )
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -703,14 +703,14 @@ fun LiSa load( string filename )
                 (class_identifier))
               (chuck_operator)
               (class_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (class_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -733,7 +733,7 @@ fun LiSa load( string filename )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -744,7 +744,7 @@ fun LiSa load( string filename )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
@@ -752,7 +752,7 @@ fun LiSa load( string filename )
           (negative_expression
             (int)))
         (block
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -760,7 +760,7 @@ fun LiSa load( string filename )
                 (variable_identifier))
               (variable_identifier)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -768,7 +768,7 @@ fun LiSa load( string filename )
                 (variable_identifier))
               (variable_identifier)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -776,7 +776,7 @@ fun LiSa load( string filename )
                 (variable_identifier))
               (variable_identifier)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (expression_group
@@ -787,7 +787,7 @@ fun LiSa load( string filename )
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -795,24 +795,24 @@ fun LiSa load( string filename )
                 (variable_identifier))
               (variable_identifier)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (debug_print
               (string)
@@ -827,7 +827,7 @@ fun LiSa load( string filename )
                 (operator)
                 (keyword
                   (duration_identifier)))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -836,24 +836,24 @@ fun LiSa load( string filename )
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (loop
             (function_call
               (member_identifier
@@ -861,7 +861,7 @@ fun LiSa load( string filename )
                 (variable_identifier))
               (variable_identifier))
             (block
-              (comment)
+              (line_comment)
               (conditional
                 (function_call
                   (member_identifier
@@ -1060,7 +1060,7 @@ fun LiSa load( string filename )
                                           (int)
                                           (chuck_operator)
                                           (class_identifier)))))))))))))))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (class_identifier)
     (variable_identifier)
@@ -1068,12 +1068,12 @@ fun LiSa load( string filename )
       (reference_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -1081,12 +1081,12 @@ fun LiSa load( string filename )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -1099,7 +1099,7 @@ fun LiSa load( string filename )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (int)
@@ -1117,8 +1117,8 @@ fun LiSa load( string filename )
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -1132,7 +1132,7 @@ fun LiSa load( string filename )
               (dur
                 (variable_identifier)
                 (duration_identifier))))))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier

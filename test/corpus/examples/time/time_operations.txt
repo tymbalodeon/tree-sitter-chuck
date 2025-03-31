@@ -34,8 +34,8 @@ t2 - t1 => dur span;
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (keyword
@@ -44,7 +44,7 @@ t2 - t1 => dur span;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -57,7 +57,7 @@ t2 - t1 => dur span;
   (statement
     (debug_print
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -67,7 +67,7 @@ t2 - t1 => dur span;
   (statement
     (debug_print
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -78,7 +78,7 @@ t2 - t1 => dur span;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)

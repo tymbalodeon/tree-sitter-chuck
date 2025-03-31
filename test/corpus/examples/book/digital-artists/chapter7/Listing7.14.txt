@@ -39,8 +39,8 @@ fun void play(int note, float howLong)
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -49,7 +49,7 @@ fun void play(int note, float howLong)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -68,7 +68,7 @@ fun void play(int note, float howLong)
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -76,7 +76,7 @@ fun void play(int note, float howLong)
         (variable_identifier)
         (int))
       (float)))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -119,7 +119,7 @@ fun void play(int note, float howLong)
               (variable_identifier)
               (variable_identifier))
             (float))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -140,7 +140,7 @@ fun void play(int note, float howLong)
           (operator)
           (int)))
       (float)))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)

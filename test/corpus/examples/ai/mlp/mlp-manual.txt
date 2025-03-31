@@ -171,23 +171,23 @@ fun void visGradients()
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -197,7 +197,7 @@ fun void visGradients()
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -205,7 +205,7 @@ fun void visGradients()
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -213,12 +213,12 @@ fun void visGradients()
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -231,14 +231,14 @@ fun void visGradients()
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -255,7 +255,7 @@ fun void visGradients()
         (primitive_type)
         (array_identifier
           (class_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -270,7 +270,7 @@ fun void visGradients()
         (primitive_type)
         (array_identifier
           (class_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -278,11 +278,11 @@ fun void visGradients()
         (variable_identifier)))
     (array_identifier
       (variable_identifier)))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)
@@ -294,7 +294,7 @@ fun void visGradients()
     (post_increment_expression
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
@@ -302,7 +302,7 @@ fun void visGradients()
             (variable_identifier))
           (class_identifier)
           (class_identifier)))
-      (comment)
+      (line_comment)
       (for_loop
         (variable_declaration
           (primitive_type)
@@ -317,7 +317,7 @@ fun void visGradients()
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (binary_expression
               (binary_expression
@@ -359,7 +359,7 @@ fun void visGradients()
           (statement
             (function_call
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (binary_expression
               (binary_expression
@@ -409,7 +409,7 @@ fun void visGradients()
           (statement
             (function_call
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (binary_expression
               (binary_expression
@@ -460,7 +460,7 @@ fun void visGradients()
           (statement
             (function_call
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (variable_identifier)
@@ -517,14 +517,14 @@ fun void visGradients()
             (member_identifier
               (class_identifier)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (class_identifier)
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (statement
     (binary_expression
       (binary_expression
@@ -562,7 +562,7 @@ fun void visGradients()
         (member_identifier
           (class_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (binary_expression
       (binary_expression
@@ -604,14 +604,14 @@ fun void visGradients()
         (member_identifier
           (class_identifier)
           (variable_identifier)))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (int)
@@ -629,7 +629,7 @@ fun void visGradients()
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (binary_expression
               (binary_expression
@@ -695,14 +695,14 @@ fun void visGradients()
                 (member_identifier
                   (class_identifier)
                   (variable_identifier)))))))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (int)
@@ -723,7 +723,7 @@ fun void visGradients()
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (binary_expression
               (binary_expression
@@ -826,7 +826,7 @@ fun void visGradients()
             (member_identifier
               (class_identifier)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (int)
@@ -847,7 +847,7 @@ fun void visGradients()
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (binary_expression
               (binary_expression
@@ -919,14 +919,14 @@ fun void visGradients()
                 (member_identifier
                   (class_identifier)
                   (variable_identifier)))))))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (int)
@@ -944,7 +944,7 @@ fun void visGradients()
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (binary_expression
               (binary_expression

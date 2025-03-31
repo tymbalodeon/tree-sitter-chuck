@@ -96,37 +96,37 @@ env.keyOff();
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
@@ -135,7 +135,7 @@ env.keyOff();
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -145,7 +145,7 @@ env.keyOff();
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -162,16 +162,16 @@ env.keyOff();
       (dur
         (int)
         (duration_identifier))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (float)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -204,7 +204,7 @@ env.keyOff();
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -220,7 +220,7 @@ env.keyOff();
       (dur
         (float)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -270,7 +270,7 @@ env.keyOff();
       (dur
         (int)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)

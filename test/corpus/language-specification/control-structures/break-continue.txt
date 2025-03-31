@@ -12,7 +12,7 @@ while( 1 )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (loop
     (int)
     (block
@@ -39,14 +39,14 @@ while( 1 )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (loop
     (int)
     (block
-      (comment)
+      (line_comment)
       (conditional
         (variable_identifier)
         (statement
           (keyword
             (control_structure_keyword))))
-      (comment))))
+      (line_comment))))

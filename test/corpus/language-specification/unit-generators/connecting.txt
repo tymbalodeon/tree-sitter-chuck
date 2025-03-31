@@ -8,7 +8,7 @@ SinOsc s => dac;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -28,7 +28,7 @@ SinOsc s => Gain g => JCRev r => dac;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -64,7 +64,7 @@ d => Gain g3 => d;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -82,7 +82,7 @@ d => Gain g3 => d;
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -95,7 +95,7 @@ d => Gain g3 => d;
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -122,7 +122,7 @@ SinOsc s => dac;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -131,7 +131,7 @@ SinOsc s => dac;
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -139,7 +139,7 @@ SinOsc s => dac;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -174,7 +174,7 @@ s => dac;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -183,7 +183,7 @@ s => dac;
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -192,14 +192,14 @@ s => dac;
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -208,14 +208,14 @@ s => dac;
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur

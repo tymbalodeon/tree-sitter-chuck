@@ -22,8 +22,8 @@ while( now < later )
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -37,7 +37,7 @@ while( now < later )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (binary_expression
       (keyword
@@ -45,12 +45,12 @@ while( now < later )
       (operator)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur

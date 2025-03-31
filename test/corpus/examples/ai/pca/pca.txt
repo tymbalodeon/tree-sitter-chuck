@@ -48,21 +48,21 @@ for ( 0 => int i; i < 10; i++ )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -102,7 +102,7 @@ for ( 0 => int i; i < 10; i++ )
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -114,9 +114,9 @@ for ( 0 => int i; i < 10; i++ )
                 (variable_identifier)
                 (variable_identifier)
                 (variable_identifier))))))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -125,7 +125,7 @@ for ( 0 => int i; i < 10; i++ )
       (variable_identifier)
       (int)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -154,7 +154,7 @@ for ( 0 => int i; i < 10; i++ )
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (binary_expression
               (binary_expression

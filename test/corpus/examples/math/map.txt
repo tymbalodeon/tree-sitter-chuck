@@ -35,22 +35,22 @@ Map
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call
@@ -63,7 +63,7 @@ Map
         (int)
         (int))
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call
@@ -77,7 +77,7 @@ Map
           (int))
         (int))
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call
@@ -91,7 +91,7 @@ Map
           (int))
         (int))
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call
@@ -104,7 +104,7 @@ Map
         (int)
         (int))
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call
@@ -123,7 +123,7 @@ Map
         (int)
         (int))
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call

@@ -33,12 +33,12 @@ function void rate_control_shred()
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -46,7 +46,7 @@ function void rate_control_shred()
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -56,8 +56,8 @@ function void rate_control_shred()
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -79,8 +79,8 @@ function void rate_control_shred()
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
           (loop
             (binary_expression
               (function_call
@@ -90,8 +90,8 @@ function void rate_control_shred()
               (operator)
               (int))
             (block
-              (comment)
-              (comment)
+              (line_comment)
+              (line_comment)
               (statement
                 (function_call
                   (member_identifier

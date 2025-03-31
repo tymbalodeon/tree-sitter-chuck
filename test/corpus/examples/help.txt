@@ -44,37 +44,37 @@ Foo.help();
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (class_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -82,13 +82,13 @@ Foo.help();
         (variable_identifier)
         (int)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -96,7 +96,7 @@ Foo.help();
           (variable_identifier)
           (int))
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
@@ -107,7 +107,7 @@ Foo.help();
           (statement
             (debug_print
               (string)))))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier

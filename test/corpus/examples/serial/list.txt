@@ -14,7 +14,7 @@ for( int i; i < list.size(); i++ )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -26,7 +26,7 @@ for( int i; i < list.size(); i++ )
         (reference_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)

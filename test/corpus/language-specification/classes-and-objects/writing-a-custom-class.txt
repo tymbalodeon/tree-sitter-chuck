@@ -11,11 +11,11 @@ class X
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment))))
+      (line_comment))))
 
 ============
 Public class
@@ -39,15 +39,15 @@ class Flarg
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment)))
-  (comment)
+      (line_comment)))
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment)))
-  (comment)
-  (comment))
+      (line_comment)))
+  (line_comment)
+  (line_comment))

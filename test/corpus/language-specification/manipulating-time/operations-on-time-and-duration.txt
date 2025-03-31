@@ -8,7 +8,7 @@ now + 10::second => time later;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -33,7 +33,7 @@ later - now => dur D;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -56,7 +56,7 @@ Addition
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -82,7 +82,7 @@ Subtraction
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -108,7 +108,7 @@ Division
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -134,7 +134,7 @@ now % 1::second => dur remainder;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -160,7 +160,7 @@ T - (now % T) => now;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -198,14 +198,14 @@ if( t1 < t2 )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (variable_identifier)
       (operator)
       (variable_identifier))
     (block
-      (comment))))
+      (line_comment))))
 
 ======================
 Comparison on duration
@@ -218,7 +218,7 @@ if( 900::ms < 1::second )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (conditional
     (dur
       (binary_expression

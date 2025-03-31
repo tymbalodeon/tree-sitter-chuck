@@ -61,28 +61,28 @@ mlp.save( me.dir() + filename );
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -94,22 +94,22 @@ mlp.save( me.dir() + filename );
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (variable_identifier)))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -126,7 +126,7 @@ mlp.save( me.dir() + filename );
         (primitive_type)
         (array_identifier
           (class_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -141,7 +141,7 @@ mlp.save( me.dir() + filename );
         (primitive_type)
         (array_identifier
           (class_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -149,7 +149,7 @@ mlp.save( me.dir() + filename );
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -157,7 +157,7 @@ mlp.save( me.dir() + filename );
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -167,9 +167,9 @@ mlp.save( me.dir() + filename );
       (class_identifier)
       (variable_identifier)
       (variable_identifier)))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -177,7 +177,7 @@ mlp.save( me.dir() + filename );
       (variable_declaration
         (reference_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -189,7 +189,7 @@ mlp.save( me.dir() + filename );
             (variable_identifier)))
         (operator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)

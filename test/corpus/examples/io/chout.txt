@@ -18,9 +18,9 @@ cherr <= 1 <= " bar " <= 5.5 <= IO.newline();
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (binary_expression
       (binary_expression
@@ -38,7 +38,7 @@ cherr <= 1 <= " bar " <= 5.5 <= IO.newline();
         (member_identifier
           (class_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (binary_expression
       (binary_expression
@@ -56,5 +56,5 @@ cherr <= 1 <= " bar " <= 5.5 <= IO.newline();
         (member_identifier
           (class_identifier)
           (variable_identifier)))))
-  (comment)
-  (comment))
+  (line_comment)
+  (line_comment))

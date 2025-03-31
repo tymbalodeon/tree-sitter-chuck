@@ -52,14 +52,14 @@ while( true )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -73,7 +73,7 @@ while( true )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (chuck_operation
@@ -106,7 +106,7 @@ while( true )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (keyword
@@ -134,7 +134,7 @@ while( true )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (loop
         (binary_expression
           (keyword
@@ -211,7 +211,7 @@ while( true )
           (chuck_operator)
           (keyword
             (global_unit_generator))))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))

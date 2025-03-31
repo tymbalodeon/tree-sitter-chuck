@@ -16,7 +16,7 @@ SinOsc s => dac;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -25,7 +25,7 @@ SinOsc s => dac;
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -33,7 +33,7 @@ SinOsc s => dac;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -42,7 +42,7 @@ SinOsc s => dac;
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -67,7 +67,7 @@ s.freq( 440 );
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -76,14 +76,14 @@ s.freq( 440 );
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -106,7 +106,7 @@ s.freq() => float the_freq;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -115,7 +115,7 @@ s.freq() => float the_freq;
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -148,7 +148,7 @@ bar.freq( foo.freq() );
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -157,7 +157,7 @@ bar.freq( foo.freq() );
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -166,7 +166,7 @@ bar.freq( foo.freq() );
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -179,7 +179,7 @@ bar.freq( foo.freq() );
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -190,7 +190,7 @@ bar.freq( foo.freq() );
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -221,7 +221,7 @@ while( true )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -230,12 +230,12 @@ while( true )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -253,7 +253,7 @@ while( true )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur

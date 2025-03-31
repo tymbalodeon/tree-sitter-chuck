@@ -26,20 +26,20 @@ for( float x : array )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (reference_type)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (binary_expression
       (binary_expression
@@ -51,14 +51,14 @@ for( float x : array )
         (float))
       (operator)
       (int)))
-  (comment)
+  (line_comment)
   (for_each_loop
     (variable_declaration
       (primitive_type)
       (variable_identifier))
     (reference_type)
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier))))))

@@ -30,25 +30,25 @@ while( true )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
-      (comment)
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
+      (line_comment)
+      (line_comment)
       (statement
         (debug_print
           (function_call
@@ -59,7 +59,7 @@ while( true )
             (member_identifier
               (class_identifier)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur

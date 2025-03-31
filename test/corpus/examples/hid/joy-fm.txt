@@ -105,21 +105,21 @@ fun void set( int base, float v0, float v1, float v2 )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -127,7 +127,7 @@ fun void set( int base, float v0, float v1, float v2 )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (function_call
       (member_identifier
@@ -145,7 +145,7 @@ fun void set( int base, float v0, float v1, float v2 )
             (variable_identifier)))
         (chuck_operator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -164,7 +164,7 @@ fun void set( int base, float v0, float v1, float v2 )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -172,7 +172,7 @@ fun void set( int base, float v0, float v1, float v2 )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -180,7 +180,7 @@ fun void set( int base, float v0, float v1, float v2 )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -188,7 +188,7 @@ fun void set( int base, float v0, float v1, float v2 )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -196,7 +196,7 @@ fun void set( int base, float v0, float v1, float v2 )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -213,7 +213,7 @@ fun void set( int base, float v0, float v1, float v2 )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
@@ -234,7 +234,7 @@ fun void set( int base, float v0, float v1, float v2 )
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -242,7 +242,7 @@ fun void set( int base, float v0, float v1, float v2 )
       (variable_identifier)
       (variable_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
@@ -251,7 +251,7 @@ fun void set( int base, float v0, float v1, float v2 )
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -276,19 +276,19 @@ fun void set( int base, float v0, float v1, float v2 )
         (operator)
         (string))
       (string)))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (loop
         (function_call
           (member_identifier
@@ -408,7 +408,7 @@ fun void set( int base, float v0, float v1, float v2 )
                         (member_identifier
                           (variable_identifier)
                           (variable_identifier)))))))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -425,7 +425,7 @@ fun void set( int base, float v0, float v1, float v2 )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (expression_group
@@ -447,7 +447,7 @@ fun void set( int base, float v0, float v1, float v2 )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (expression_group
@@ -463,7 +463,7 @@ fun void set( int base, float v0, float v1, float v2 )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (expression_group

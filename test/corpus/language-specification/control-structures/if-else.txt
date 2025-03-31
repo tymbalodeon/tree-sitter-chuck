@@ -13,7 +13,7 @@ if( condition )
   (conditional
     (variable_identifier)
     (block
-      (comment))))
+      (line_comment))))
 
 =======
 If/else
@@ -34,6 +34,6 @@ else
   (conditional
     (variable_identifier)
     (block
-      (comment))
+      (line_comment))
     (block
-      (comment))))
+      (line_comment))))

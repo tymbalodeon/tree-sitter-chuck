@@ -66,12 +66,12 @@ while( true ) 1::day => now;
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -90,7 +90,7 @@ while( true ) 1::day => now;
       (member_identifier
         (global_unit_generator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -119,7 +119,7 @@ while( true ) 1::day => now;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -136,7 +136,7 @@ while( true ) 1::day => now;
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -146,7 +146,7 @@ while( true ) 1::day => now;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -154,7 +154,7 @@ while( true ) 1::day => now;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -162,7 +162,7 @@ while( true ) 1::day => now;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -183,13 +183,13 @@ while( true ) 1::day => now;
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (for_loop
         (boolean_literal_value)
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (for_loop
             (chuck_operation
               (int)
@@ -207,7 +207,7 @@ while( true ) 1::day => now;
             (post_increment_expression
               (variable_identifier))
             (block
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (binary_expression
@@ -220,7 +220,7 @@ while( true ) 1::day => now;
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (int)
@@ -228,7 +228,7 @@ while( true ) 1::day => now;
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (conditional
                 (binary_expression
                   (binary_expression
@@ -285,7 +285,7 @@ while( true ) 1::day => now;
                       (int)
                       (chuck_operator)
                       (variable_identifier)))))))))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
@@ -293,7 +293,7 @@ while( true ) 1::day => now;
         (variable_identifier)
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
@@ -301,7 +301,7 @@ while( true ) 1::day => now;
         (variable_identifier)
         (int)
         (int))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))

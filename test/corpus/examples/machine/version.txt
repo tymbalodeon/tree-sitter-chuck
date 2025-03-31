@@ -9,7 +9,7 @@ cherr <= "chuck version: " <= Machine.version() <= IO.nl();
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (binary_expression
       (binary_expression

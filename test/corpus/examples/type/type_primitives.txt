@@ -41,9 +41,9 @@ now => time t;
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -54,7 +54,7 @@ now => time t;
   (statement
     (debug_print
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -63,7 +63,7 @@ now => time t;
   (statement
     (debug_print
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (hexidecimal)
@@ -72,7 +72,7 @@ now => time t;
   (statement
     (debug_print
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -83,8 +83,8 @@ now => time t;
   (statement
     (debug_print
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -108,7 +108,7 @@ now => time t;
   (statement
     (debug_print
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)))
@@ -124,5 +124,5 @@ now => time t;
     (debug_print
       (keyword
         (special_literal_value))))
-  (comment)
-  (comment))
+  (line_comment)
+  (line_comment))

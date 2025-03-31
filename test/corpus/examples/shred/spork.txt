@@ -26,7 +26,7 @@ while( true )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -67,7 +67,7 @@ while( true )
       (function_call
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))

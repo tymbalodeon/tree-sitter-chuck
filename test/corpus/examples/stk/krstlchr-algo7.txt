@@ -71,21 +71,21 @@ fun void allOff()
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (array_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (array_declaration
       (class_identifier)
@@ -102,7 +102,7 @@ fun void allOff()
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)
@@ -156,8 +156,8 @@ fun void allOff()
               (variable_identifier)
               (variable_identifier))
             (variable_identifier))))
-      (comment)))
-  (comment)
+      (line_comment)))
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation

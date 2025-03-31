@@ -86,15 +86,15 @@ while( true )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -104,7 +104,7 @@ while( true )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -124,7 +124,7 @@ while( true )
       (variable_declaration
         (class_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -132,7 +132,7 @@ while( true )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -140,7 +140,7 @@ while( true )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -150,7 +150,7 @@ while( true )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -158,7 +158,7 @@ while( true )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -199,7 +199,7 @@ while( true )
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -210,7 +210,7 @@ while( true )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -221,12 +221,12 @@ while( true )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (reference_declaration
       (reference_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -237,24 +237,24 @@ while( true )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -269,14 +269,14 @@ while( true )
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (loop
         (function_call
           (member_identifier
             (variable_identifier)
             (variable_identifier)))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (cast
@@ -297,7 +297,7 @@ while( true )
               (variable_declaration
                 (primitive_type)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (array_identifier
@@ -307,7 +307,7 @@ while( true )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (chuck_operation
@@ -328,7 +328,7 @@ while( true )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (debug_print
               (string)
@@ -339,7 +339,7 @@ while( true )
                 (variable_identifier))
               (string)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (variable_identifier)
@@ -351,7 +351,7 @@ while( true )
                 (variable_identifier)
                 (chuck_operator)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -361,7 +361,7 @@ while( true )
                 (variable_identifier))
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -374,19 +374,19 @@ while( true )
                 (class_identifier))
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -398,7 +398,7 @@ while( true )
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier

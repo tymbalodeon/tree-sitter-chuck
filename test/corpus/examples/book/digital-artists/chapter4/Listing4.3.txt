@@ -28,9 +28,9 @@ numSamples :: samp => now;  // Play for whole duration, but backward.
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -39,7 +39,7 @@ numSamples :: samp => now;  // Play for whole duration, but backward.
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -52,7 +52,7 @@ numSamples :: samp => now;  // Play for whole duration, but backward.
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -63,7 +63,7 @@ numSamples :: samp => now;  // Play for whole duration, but backward.
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -79,8 +79,8 @@ numSamples :: samp => now;  // Play for whole duration, but backward.
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -88,7 +88,7 @@ numSamples :: samp => now;  // Play for whole duration, but backward.
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (negative_expression
@@ -97,7 +97,7 @@ numSamples :: samp => now;  // Play for whole duration, but backward.
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -106,4 +106,4 @@ numSamples :: samp => now;  // Play for whole duration, but backward.
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment))
+  (line_comment))

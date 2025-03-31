@@ -36,7 +36,7 @@ while (true) {
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
@@ -53,7 +53,7 @@ while (true) {
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -62,7 +62,7 @@ while (true) {
               (variable_identifier)))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -74,7 +74,7 @@ while (true) {
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -86,7 +86,7 @@ while (true) {
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (array_identifier
@@ -96,7 +96,7 @@ while (true) {
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -108,7 +108,7 @@ while (true) {
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -122,7 +122,7 @@ while (true) {
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -136,7 +136,7 @@ while (true) {
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -147,7 +147,7 @@ while (true) {
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment))))
+      (line_comment))))
 
 ===========
 Overwriting
@@ -189,7 +189,7 @@ fft.upchuck() @=> blob2; // now both blob1 and blob2 refer to the same object: t
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -198,7 +198,7 @@ fft.upchuck() @=> blob2; // now both blob1 and blob2 refer to the same object: t
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -207,7 +207,7 @@ fft.upchuck() @=> blob2; // now both blob1 and blob2 refer to the same object: t
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -216,7 +216,7 @@ fft.upchuck() @=> blob2; // now both blob1 and blob2 refer to the same object: t
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment))
+  (line_comment))
 
 ==============
 Advancing time
@@ -266,7 +266,7 @@ fft.upchuck() @=> blob; // time hasn't advanced since the last computation, so n
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -275,7 +275,7 @@ fft.upchuck() @=> blob; // time hasn't advanced since the last computation, so n
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -291,4 +291,4 @@ fft.upchuck() @=> blob; // time hasn't advanced since the last computation, so n
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment))
+  (line_comment))

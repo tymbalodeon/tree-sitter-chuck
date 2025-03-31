@@ -15,15 +15,15 @@ while( true )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
-      (comment)
-      (comment)
-      (comment))))
+      (line_comment)
+      (line_comment)
+      (line_comment)
+      (line_comment))))
 
 ========
 Do/while
@@ -39,5 +39,5 @@ do {
   (statement
     (do_loop
       (block
-        (comment))
+        (line_comment))
       (variable_identifier))))

@@ -64,9 +64,9 @@ spork ~ snare();        // (7) Sporks snare starting on off beat
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -76,7 +76,7 @@ spork ~ snare();        // (7) Sporks snare starting on off beat
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -97,12 +97,12 @@ spork ~ snare();        // (7) Sporks snare starting on off beat
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_declaration
@@ -123,7 +123,7 @@ spork ~ snare();        // (7) Sporks snare starting on off beat
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
@@ -141,12 +141,12 @@ spork ~ snare();        // (7) Sporks snare starting on off beat
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_declaration
@@ -167,7 +167,7 @@ spork ~ snare();        // (7) Sporks snare starting on off beat
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
@@ -185,12 +185,12 @@ spork ~ snare();        // (7) Sporks snare starting on off beat
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_declaration
@@ -218,7 +218,7 @@ spork ~ snare();        // (7) Sporks snare starting on off beat
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
@@ -236,13 +236,13 @@ spork ~ snare();        // (7) Sporks snare starting on off beat
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -252,12 +252,12 @@ spork ~ snare();        // (7) Sporks snare starting on off beat
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -267,7 +267,7 @@ spork ~ snare();        // (7) Sporks snare starting on off beat
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -278,8 +278,8 @@ spork ~ snare();        // (7) Sporks snare starting on off beat
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -289,4 +289,4 @@ spork ~ snare();        // (7) Sporks snare starting on off beat
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment))
+  (line_comment))

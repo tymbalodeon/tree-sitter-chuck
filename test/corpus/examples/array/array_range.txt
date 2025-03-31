@@ -56,10 +56,10 @@ fun void print( int array[] )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -68,7 +68,7 @@ fun void print( int array[] )
           (class_identifier)
           (variable_identifier))
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -78,8 +78,8 @@ fun void print( int array[] )
           (variable_identifier))
         (negative_expression
           (int)))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -89,7 +89,7 @@ fun void print( int array[] )
           (variable_identifier))
         (int)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -100,9 +100,9 @@ fun void print( int array[] )
         (int)
         (negative_expression
           (int)))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -114,85 +114,7 @@ fun void print( int array[] )
           (int))
         (int)
         (int))))
-  (comment)
-  (statement
-    (function_call
-      (variable_identifier)
-      (function_call
-        (member_identifier
-          (class_identifier)
-          (variable_identifier))
-        (negative_expression
-          (int))
-        (negative_expression
-          (int))
-        (negative_expression
-          (int)))))
-  (comment)
-  (comment)
-  (statement
-    (function_call
-      (variable_identifier)
-      (function_call
-        (member_identifier
-          (class_identifier)
-          (variable_identifier))
-        (int)
-        (int)
-        (int))))
-  (comment)
-  (comment)
-  (statement
-    (function_call
-      (variable_identifier)
-      (function_call
-        (member_identifier
-          (class_identifier)
-          (variable_identifier))
-        (int)
-        (negative_expression
-          (int))
-        (negative_expression
-          (int)))))
-  (comment)
-  (comment)
-  (statement
-    (function_call
-      (variable_identifier)
-      (function_call
-        (member_identifier
-          (class_identifier)
-          (variable_identifier))
-        (int)
-        (negative_expression
-          (int))
-        (int))))
-  (comment)
-  (comment)
-  (comment)
-  (statement
-    (function_call
-      (variable_identifier)
-      (function_call
-        (member_identifier
-          (class_identifier)
-          (variable_identifier))
-        (int)
-        (int)
-        (int))))
-  (comment)
-  (statement
-    (function_call
-      (variable_identifier)
-      (function_call
-        (member_identifier
-          (class_identifier)
-          (variable_identifier))
-        (int)
-        (int)
-        (negative_expression
-          (int)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -206,7 +128,8 @@ fun void print( int array[] )
           (int))
         (negative_expression
           (int)))))
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -217,7 +140,84 @@ fun void print( int array[] )
         (int)
         (int)
         (int))))
-  (comment)
+  (line_comment)
+  (line_comment)
+  (statement
+    (function_call
+      (variable_identifier)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (int)
+        (negative_expression
+          (int))
+        (negative_expression
+          (int)))))
+  (line_comment)
+  (line_comment)
+  (statement
+    (function_call
+      (variable_identifier)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (int)
+        (negative_expression
+          (int))
+        (int))))
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (statement
+    (function_call
+      (variable_identifier)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (int)
+        (int)
+        (int))))
+  (line_comment)
+  (statement
+    (function_call
+      (variable_identifier)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (int)
+        (int)
+        (negative_expression
+          (int)))))
+  (line_comment)
+  (statement
+    (function_call
+      (variable_identifier)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (negative_expression
+          (int))
+        (negative_expression
+          (int))
+        (negative_expression
+          (int)))))
+  (line_comment)
+  (statement
+    (function_call
+      (variable_identifier)
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (int)
+        (int)
+        (int))))
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -226,13 +226,13 @@ fun void print( int array[] )
       (array_identifier
         (reference_type)))
     (block
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (variable_identifier)
           (operator)
           (string)))
-      (comment)
+      (line_comment)
       (for_each_loop
         (variable_declaration
           (primitive_type)
@@ -246,13 +246,13 @@ fun void print( int array[] )
               (variable_identifier))
             (operator)
             (string))))
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (variable_identifier)
           (operator)
           (string)))
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (variable_identifier)

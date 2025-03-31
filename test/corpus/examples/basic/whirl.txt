@@ -23,7 +23,7 @@ while( true )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -32,7 +32,7 @@ while( true )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -40,7 +40,7 @@ while( true )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -52,7 +52,7 @@ while( true )
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -82,7 +82,7 @@ while( true )
             (float))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur

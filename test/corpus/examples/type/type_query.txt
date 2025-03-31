@@ -58,17 +58,17 @@ for( int i; i < types.size(); i++ )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -86,7 +86,7 @@ for( int i; i < types.size(); i++ )
         (class_identifier)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)
@@ -134,7 +134,7 @@ for( int i; i < types.size(); i++ )
             (member_identifier
               (class_identifier)
               (variable_identifier)))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -149,7 +149,7 @@ for( int i; i < types.size(); i++ )
           (class_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)
@@ -197,7 +197,7 @@ for( int i; i < types.size(); i++ )
             (member_identifier
               (class_identifier)
               (variable_identifier)))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -212,7 +212,7 @@ for( int i; i < types.size(); i++ )
           (class_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)
@@ -260,7 +260,7 @@ for( int i; i < types.size(); i++ )
             (member_identifier
               (class_identifier)
               (variable_identifier)))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -271,7 +271,7 @@ for( int i; i < types.size(); i++ )
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)

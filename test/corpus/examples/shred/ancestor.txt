@@ -40,17 +40,17 @@ spork ~ findTheAncestor(10);
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (function_call
         (member_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
@@ -60,8 +60,8 @@ spork ~ findTheAncestor(10);
       (function_call
         (variable_identifier))
       (string)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -69,21 +69,21 @@ spork ~ findTheAncestor(10);
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
           (operator)
           (int))
         (statement))
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (string)
           (function_call
             (member_identifier
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (string)
@@ -93,7 +93,7 @@ spork ~ findTheAncestor(10);
           (function_call
             (variable_identifier))
           (string)))
-      (comment)
+      (line_comment)
       (statement
         (spork_expression
           (function_call
@@ -102,7 +102,7 @@ spork ~ findTheAncestor(10);
               (variable_identifier)
               (operator)
               (int)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -111,14 +111,14 @@ spork ~ findTheAncestor(10);
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur

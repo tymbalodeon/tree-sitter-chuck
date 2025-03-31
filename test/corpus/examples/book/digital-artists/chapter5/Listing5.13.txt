@@ -44,8 +44,8 @@ playScale(scale);    // (7) When we call playScale again. It's different!
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -54,8 +54,8 @@ playScale(scale);    // (7) When we call playScale again. It's different!
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -72,7 +72,7 @@ playScale(scale);    // (7) When we call playScale again. It's different!
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -84,7 +84,7 @@ playScale(scale);    // (7) When we call playScale again. It's different!
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -92,7 +92,7 @@ playScale(scale);    // (7) When we call playScale again. It's different!
           (array_identifier
             (variable_identifier)
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -101,7 +101,7 @@ playScale(scale);    // (7) When we call playScale again. It's different!
       (array_identifier
         (variable_identifier)))
     (block
-      (comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (int)
@@ -160,7 +160,7 @@ playScale(scale);    // (7) When we call playScale again. It's different!
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)))
@@ -168,20 +168,20 @@ playScale(scale);    // (7) When we call playScale again. It's different!
     (function_call
       (variable_identifier)
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
       (variable_identifier)
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
       (variable_identifier)
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)))
@@ -189,4 +189,4 @@ playScale(scale);    // (7) When we call playScale again. It's different!
     (function_call
       (variable_identifier)
       (variable_identifier)))
-  (comment))
+  (line_comment))

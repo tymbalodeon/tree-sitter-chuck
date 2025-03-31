@@ -73,17 +73,17 @@ while( fio.more() )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -96,7 +96,7 @@ while( fio.more() )
       (variable_declaration
         (reference_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (function_call
@@ -112,7 +112,7 @@ while( fio.more() )
           (int))
         (chuck_operator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -122,7 +122,7 @@ while( fio.more() )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -132,27 +132,27 @@ while( fio.more() )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (reference_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (reference_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -162,7 +162,7 @@ while( fio.more() )
       (member_identifier
         (class_identifier)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -191,7 +191,7 @@ while( fio.more() )
         (function_call
           (member_identifier
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (binary_expression
       (variable_identifier)
@@ -200,14 +200,14 @@ while( fio.more() )
         (member_identifier
           (class_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (loop
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier)))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -216,21 +216,21 @@ while( fio.more() )
               (variable_identifier)))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
             (variable_identifier)
             (variable_identifier))
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (loop
         (function_call
           (member_identifier
             (variable_identifier)
             (variable_identifier)))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -239,7 +239,7 @@ while( fio.more() )
                   (variable_identifier)))
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (binary_expression
               (binary_expression
@@ -248,14 +248,14 @@ while( fio.more() )
                 (variable_identifier))
               (operator)
               (string)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (class_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))))
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (variable_identifier)
@@ -264,7 +264,7 @@ while( fio.more() )
             (member_identifier
               (class_identifier)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (class_identifier)

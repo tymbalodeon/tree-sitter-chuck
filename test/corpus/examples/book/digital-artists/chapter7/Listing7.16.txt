@@ -36,9 +36,9 @@ while (1) {                      // (6) Sings a random "song" forever
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -52,7 +52,7 @@ while (1) {                      // (6) Sings a random "song" forever
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -64,7 +64,7 @@ while (1) {                      // (6) Sings a random "song" forever
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -76,8 +76,8 @@ while (1) {                      // (6) Sings a random "song" forever
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -85,7 +85,7 @@ while (1) {                      // (6) Sings a random "song" forever
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -107,7 +107,7 @@ while (1) {                      // (6) Sings a random "song" forever
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -125,13 +125,13 @@ while (1) {                      // (6) Sings a random "song" forever
       (member_identifier
         (variable_identifier)
         (class_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (int)
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -179,7 +179,7 @@ while (1) {                      // (6) Sings a random "song" forever
           (operator)
           (int))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call

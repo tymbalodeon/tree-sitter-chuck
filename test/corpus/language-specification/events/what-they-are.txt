@@ -46,12 +46,12 @@ while ( true )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (reference_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -62,23 +62,23 @@ while ( true )
       (reference_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (statement
             (debug_print
               (variable_identifier)))))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
@@ -103,12 +103,12 @@ while ( true )
         (variable_identifier)
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (conditional
         (keyword
           (special_literal_value))
@@ -130,7 +130,7 @@ while ( true )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur

@@ -28,7 +28,7 @@ for( auto a : array )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -40,18 +40,18 @@ for( auto a : array )
         (primitive_type)
         (array_identifier
           (reference_type)))))
-  (comment)
+  (line_comment)
   (for_each_loop
     (variable_declaration
       (primitive_type)
       (variable_identifier))
     (reference_type)
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (for_each_loop
     (variable_declaration
       (primitive_type)
@@ -61,18 +61,18 @@ for( auto a : array )
       (int)
       (int))
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (for_each_loop
     (variable_declaration
       (primitive_type)
       (variable_identifier))
     (reference_type)
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier))))))

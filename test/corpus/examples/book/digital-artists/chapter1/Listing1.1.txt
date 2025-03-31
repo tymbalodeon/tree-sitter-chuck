@@ -13,7 +13,7 @@ second => now;   // (4) Lets it play for one second
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -22,7 +22,7 @@ second => now;   // (4) Lets it play for one second
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -30,7 +30,7 @@ second => now;   // (4) Lets it play for one second
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -38,7 +38,7 @@ second => now;   // (4) Lets it play for one second
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (keyword
@@ -46,4 +46,4 @@ second => now;   // (4) Lets it play for one second
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment))
+  (line_comment))

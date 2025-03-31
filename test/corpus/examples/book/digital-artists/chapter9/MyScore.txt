@@ -17,8 +17,8 @@ while (true) {
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
@@ -53,7 +53,7 @@ while (true) {
                 (variable_identifier)))
             (operator)
             (string))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur

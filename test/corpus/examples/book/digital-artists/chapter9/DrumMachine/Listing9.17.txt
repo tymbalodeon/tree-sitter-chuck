@@ -18,9 +18,9 @@ Machine.add(me.dir()+"/score.ck"); // (2) ...then adds the score, which does the
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -32,8 +32,8 @@ Machine.add(me.dir()+"/score.ck"); // (2) ...then adds the score, which does the
             (variable_identifier)))
         (operator)
         (string))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -45,4 +45,4 @@ Machine.add(me.dir()+"/score.ck"); // (2) ...then adds the score, which does the
             (variable_identifier)))
         (operator)
         (string))))
-  (comment))
+  (line_comment))

@@ -9,8 +9,8 @@ adc => FFT fft =^ Flux flux => blackhole;
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -40,8 +40,8 @@ adc => FFT f =^ Flux flux =^ FluxCapacitor flux_capacitor => blackhole;
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -79,7 +79,7 @@ SinOsc s3 => g;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -108,7 +108,7 @@ SinOsc s3 => g;
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -116,7 +116,7 @@ SinOsc s3 => g;
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration

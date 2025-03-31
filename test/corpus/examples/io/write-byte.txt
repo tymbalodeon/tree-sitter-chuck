@@ -42,11 +42,11 @@ fout.close();
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -54,12 +54,12 @@ fout.close();
       (variable_declaration
         (reference_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -74,7 +74,7 @@ fout.close();
         (member_identifier
           (class_identifier)
           (class_identifier)))))
-  (comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -97,8 +97,8 @@ fout.close();
         (function_call
           (member_identifier
             (variable_identifier))))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -115,7 +115,7 @@ fout.close();
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)
@@ -130,8 +130,8 @@ fout.close();
     (post_increment_expression
       (variable_identifier))
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
@@ -143,13 +143,13 @@ fout.close();
           (member_identifier
             (class_identifier)
             (class_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)

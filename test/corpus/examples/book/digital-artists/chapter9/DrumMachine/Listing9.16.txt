@@ -67,21 +67,21 @@ Machine.remove(clapID);
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (float)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -98,7 +98,7 @@ Machine.remove(clapID);
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -207,7 +207,7 @@ Machine.remove(clapID);
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)))
@@ -218,7 +218,7 @@ Machine.remove(clapID);
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -244,7 +244,7 @@ Machine.remove(clapID);
       (float)
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -262,7 +262,7 @@ Machine.remove(clapID);
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (block_comment)
   (statement
     (debug_print
       (string)))
@@ -272,7 +272,7 @@ Machine.remove(clapID);
       (operator)
       (float))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -302,14 +302,14 @@ Machine.remove(clapID);
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (class_identifier)
         (variable_identifier))
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression

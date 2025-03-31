@@ -16,7 +16,7 @@ if ( i == 5 && j == 5 ) <<<"success">>>;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)

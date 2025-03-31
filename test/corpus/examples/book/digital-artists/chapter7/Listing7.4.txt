@@ -17,7 +17,7 @@ while (1)
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -26,11 +26,11 @@ while (1)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (loop
     (int)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call

@@ -57,17 +57,17 @@ fun void decimateBy(int factor)  {
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (function_call
@@ -92,12 +92,12 @@ fun void decimateBy(int factor)  {
         (int)
         (chuck_operator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -110,7 +110,7 @@ fun void decimateBy(int factor)  {
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -129,7 +129,7 @@ fun void decimateBy(int factor)  {
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -144,7 +144,7 @@ fun void decimateBy(int factor)  {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -166,8 +166,8 @@ fun void decimateBy(int factor)  {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -208,7 +208,7 @@ fun void decimateBy(int factor)  {
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -216,7 +216,7 @@ fun void decimateBy(int factor)  {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -224,8 +224,8 @@ fun void decimateBy(int factor)  {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -233,7 +233,7 @@ fun void decimateBy(int factor)  {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (variable_identifier)
     (block
@@ -245,7 +245,7 @@ fun void decimateBy(int factor)  {
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)))
+      (line_comment)))
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -256,20 +256,20 @@ fun void decimateBy(int factor)  {
       (loop
         (variable_identifier)
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (keyword
                 (global_unit_generator))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -278,7 +278,7 @@ fun void decimateBy(int factor)  {
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -289,20 +289,20 @@ fun void decimateBy(int factor)  {
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (keyword
                 (global_unit_generator))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -315,4 +315,4 @@ fun void decimateBy(int factor)  {
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment))))))
+          (line_comment))))))

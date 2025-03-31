@@ -28,10 +28,10 @@ Machine.remove(modalbend); // (6) ...then remove it.
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -56,7 +56,7 @@ Machine.remove(modalbend); // (6) ...then remove it.
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -81,7 +81,7 @@ Machine.remove(modalbend); // (6) ...then remove it.
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -106,7 +106,7 @@ Machine.remove(modalbend); // (6) ...then remove it.
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -121,7 +121,7 @@ Machine.remove(modalbend); // (6) ...then remove it.
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -151,4 +151,4 @@ Machine.remove(modalbend); // (6) ...then remove it.
         (class_identifier)
         (variable_identifier))
       (variable_identifier)))
-  (comment))
+  (line_comment))

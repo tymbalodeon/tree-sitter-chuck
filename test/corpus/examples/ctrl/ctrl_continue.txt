@@ -34,7 +34,7 @@ if ( check == 10 ) <<<"success">>>;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -56,7 +56,7 @@ if ( check == 10 ) <<<"success">>>;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (binary_expression
       (variable_identifier)
@@ -87,19 +87,19 @@ if ( check == 10 ) <<<"success">>>;
             (statement
               (keyword
                 (control_structure_keyword))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (int)
               (chuck_operator)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
           (chuck_operator)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (variable_identifier)

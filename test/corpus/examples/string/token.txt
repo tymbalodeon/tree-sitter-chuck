@@ -46,26 +46,26 @@ strtok.get( strtok.size() - 1, foo );
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
@@ -73,14 +73,14 @@ strtok.get( strtok.size() - 1, foo );
         (member_identifier
           (variable_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (loop
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier)))
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (function_call
@@ -88,7 +88,7 @@ strtok.get( strtok.size() - 1, foo );
               (variable_identifier)
               (variable_identifier)))
           (string)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -98,7 +98,7 @@ strtok.get( strtok.size() - 1, foo );
     (variable_declaration
       (reference_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -109,7 +109,7 @@ strtok.get( strtok.size() - 1, foo );
     (debug_print
       (string)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
@@ -118,7 +118,7 @@ strtok.get( strtok.size() - 1, foo );
           (variable_identifier)
           (variable_identifier))
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier

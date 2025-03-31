@@ -45,33 +45,33 @@ x.print();
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (primitive_type)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (primitive_type)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (reference_type)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
         (block
           (statement
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
@@ -84,7 +84,7 @@ x.print();
               (variable_identifier)
               (chuck_operator)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
@@ -95,8 +95,8 @@ x.print();
           (primitive_type)
           (variable_identifier))
         (block
-          (comment)))
-      (comment)
+          (line_comment)))
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
@@ -106,26 +106,26 @@ x.print();
               (variable_identifier)
               (variable_identifier)
               (variable_identifier)))))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call
         (member_identifier
           (variable_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -146,7 +146,7 @@ string arr( "foo" )[10];
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -164,7 +164,7 @@ string arr( "foo" )[10];
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (class_instantiation
@@ -176,7 +176,7 @@ string arr( "foo" )[10];
       (reference_declaration
         (class_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (reference_type)

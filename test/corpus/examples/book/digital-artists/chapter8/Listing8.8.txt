@@ -32,9 +32,9 @@ while (1) {           // (5) Infinite loop.
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -48,7 +48,7 @@ while (1) {           // (5) Infinite loop.
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -69,7 +69,7 @@ while (1) {           // (5) Infinite loop.
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -84,7 +84,7 @@ while (1) {           // (5) Infinite loop.
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -99,7 +99,7 @@ while (1) {           // (5) Infinite loop.
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -117,13 +117,13 @@ while (1) {           // (5) Infinite loop.
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (int)
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -152,7 +152,7 @@ while (1) {           // (5) Infinite loop.
           (operator)
           (int))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -171,7 +171,7 @@ while (1) {           // (5) Infinite loop.
               (variable_declaration
                 (primitive_type)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -207,4 +207,4 @@ while (1) {           // (5) Infinite loop.
             (member_identifier
               (variable_identifier)
               (variable_identifier)))))
-      (comment))))
+      (line_comment))))

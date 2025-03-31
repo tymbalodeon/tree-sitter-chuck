@@ -24,7 +24,7 @@ Oper logic
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)))

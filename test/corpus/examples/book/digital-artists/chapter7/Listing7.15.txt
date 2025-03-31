@@ -55,8 +55,8 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -70,7 +70,7 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -84,7 +84,7 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -106,7 +106,7 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -114,7 +114,7 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -167,7 +167,7 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -184,7 +184,7 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
           (variable_identifier)
           (variable_identifier))))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (array_identifier
@@ -211,7 +211,7 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
           (int)
           (chuck_operator)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -238,7 +238,7 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (loop
     (binary_expression
       (function_call
@@ -248,7 +248,7 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
       (operator)
       (float))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -293,7 +293,7 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -304,7 +304,7 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call

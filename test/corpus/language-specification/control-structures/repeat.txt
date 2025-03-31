@@ -14,11 +14,11 @@ repeat( 4 )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (loop
     (int)
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (binary_expression
@@ -27,7 +27,7 @@ repeat( 4 )
             (operator)
             (keyword
               (duration_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -58,7 +58,7 @@ repeat( x )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -66,13 +66,13 @@ repeat( x )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (loop
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (binary_expression
@@ -81,7 +81,7 @@ repeat( x )
             (operator)
             (keyword
               (duration_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur

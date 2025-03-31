@@ -138,22 +138,22 @@ fun void teenTown() {
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (chuck_operation
@@ -195,7 +195,7 @@ fun void teenTown() {
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (array
@@ -220,7 +220,7 @@ fun void teenTown() {
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (array
@@ -233,7 +233,7 @@ fun void teenTown() {
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (array
@@ -281,7 +281,7 @@ fun void teenTown() {
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -399,7 +399,7 @@ fun void teenTown() {
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -429,7 +429,7 @@ fun void teenTown() {
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -449,7 +449,7 @@ fun void teenTown() {
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -471,7 +471,7 @@ fun void teenTown() {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -486,7 +486,7 @@ fun void teenTown() {
       (member_identifier
         (variable_identifier)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -494,7 +494,7 @@ fun void teenTown() {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -518,7 +518,7 @@ fun void teenTown() {
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -537,7 +537,7 @@ fun void teenTown() {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -566,8 +566,8 @@ fun void teenTown() {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -589,12 +589,12 @@ fun void teenTown() {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (spork_expression
           (function_call
@@ -620,7 +620,7 @@ fun void teenTown() {
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (expression_group
@@ -632,7 +632,7 @@ fun void teenTown() {
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (int)
@@ -673,7 +673,7 @@ fun void teenTown() {
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (int)
@@ -715,7 +715,7 @@ fun void teenTown() {
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (array
@@ -957,7 +957,7 @@ fun void teenTown() {
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (keyword

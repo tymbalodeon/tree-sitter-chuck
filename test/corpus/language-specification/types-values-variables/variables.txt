@@ -8,7 +8,7 @@ int foo;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
@@ -24,7 +24,7 @@ Assignment
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -41,7 +41,7 @@ Initialization
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -60,7 +60,7 @@ Debug print
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (variable_identifier))))
@@ -75,7 +75,7 @@ foo * 10 => foo;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -95,7 +95,7 @@ Mult-chuck
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -115,7 +115,7 @@ Operation
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -125,7 +125,7 @@ Operation
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur

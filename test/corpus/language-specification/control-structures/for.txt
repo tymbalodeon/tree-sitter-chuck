@@ -12,7 +12,7 @@ for( 0 => int foo; foo < 4 ; foo++ )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -27,7 +27,7 @@ for( 0 => int foo; foo < 4 ; foo++ )
     (post_increment_expression
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier))))))

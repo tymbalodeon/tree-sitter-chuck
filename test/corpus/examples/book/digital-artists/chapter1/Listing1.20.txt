@@ -92,8 +92,8 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -102,7 +102,7 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -111,8 +111,8 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -120,8 +120,8 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -129,8 +129,8 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -140,9 +140,9 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -150,7 +150,7 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -158,14 +158,14 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (binary_expression
       (variable_identifier)
       (operator)
       (float))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -178,7 +178,7 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
           (float)
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -187,9 +187,9 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)))
-  (comment)
-  (comment)
+      (line_comment)))
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -197,7 +197,7 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -205,8 +205,8 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -221,7 +221,7 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
     (post_increment_expression
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -229,14 +229,14 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -244,16 +244,16 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)))
-  (comment)
-  (comment)
+      (line_comment)))
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -261,7 +261,7 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -272,7 +272,7 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -287,69 +287,7 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
     (post_increment_expression
       (variable_identifier))
     (block
-      (comment)
-      (statement
-        (chuck_operation
-          (variable_identifier)
-          (chuck_operator)
-          (member_identifier
-            (variable_identifier)
-            (variable_identifier))))
-      (statement
-        (chuck_operation
-          (variable_identifier)
-          (chuck_operator)
-          (keyword
-            (special_literal_value))))
-      (statement
-        (chuck_operation
-          (int)
-          (chuck_operator)
-          (member_identifier
-            (variable_identifier)
-            (variable_identifier))))
-      (statement
-        (chuck_operation
-          (variable_identifier)
-          (chuck_operator)
-          (keyword
-            (special_literal_value))))))
-  (comment)
-  (comment)
-  (statement
-    (chuck_operation
-      (float)
-      (chuck_operator)
-      (member_identifier
-        (variable_identifier)
-        (variable_identifier))))
-  (comment)
-  (statement
-    (chuck_operation
-      (binary_expression
-        (float)
-        (operator)
-        (variable_identifier))
-      (chuck_operator)
-      (member_identifier
-        (variable_identifier)
-        (variable_identifier))))
-  (comment)
-  (for_loop
-    (chuck_operation
-      (int)
-      (chuck_operator)
-      (variable_declaration
-        (primitive_type)
-        (variable_identifier)))
-    (binary_expression
-      (variable_identifier)
-      (operator)
-      (int))
-    (post_increment_expression
-      (variable_identifier))
-    (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -376,7 +314,8 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -384,7 +323,68 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
+  (statement
+    (chuck_operation
+      (binary_expression
+        (float)
+        (operator)
+        (variable_identifier))
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (line_comment)
+  (for_loop
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (post_increment_expression
+      (variable_identifier))
+    (block
+      (line_comment)
+      (statement
+        (chuck_operation
+          (variable_identifier)
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (statement
+        (chuck_operation
+          (variable_identifier)
+          (chuck_operator)
+          (keyword
+            (special_literal_value))))
+      (statement
+        (chuck_operation
+          (int)
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (statement
+        (chuck_operation
+          (variable_identifier)
+          (chuck_operator)
+          (keyword
+            (special_literal_value))))))
+  (line_comment)
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -402,7 +402,7 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (keyword
@@ -410,9 +410,9 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -427,7 +427,7 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
     (post_increment_expression
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -453,4 +453,4 @@ for (330 => int i; i > 0; i--) {  // (25) Uses a for loop to sweep down from 330
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment))))
+      (line_comment))))

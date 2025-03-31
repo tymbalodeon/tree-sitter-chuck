@@ -56,7 +56,7 @@ bar("a");
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)

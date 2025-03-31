@@ -25,9 +25,9 @@ while( 1 )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -43,7 +43,7 @@ while( 1 )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -54,7 +54,7 @@ while( 1 )
   (loop
     (int)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (float)
@@ -62,7 +62,7 @@ while( 1 )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur

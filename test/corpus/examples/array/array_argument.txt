@@ -26,8 +26,8 @@ if ( foo[0] == foo[1] ) <<<"success">>>;
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -36,7 +36,7 @@ if ( foo[0] == foo[1] ) <<<"success">>>;
       (array_identifier
         (variable_identifier)))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (array_identifier
@@ -46,7 +46,7 @@ if ( foo[0] == foo[1] ) <<<"success">>>;
           (array_identifier
             (variable_identifier)
             (int))))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -67,12 +67,12 @@ if ( foo[0] == foo[1] ) <<<"success">>>;
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (array_identifier

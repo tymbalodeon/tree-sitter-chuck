@@ -17,13 +17,13 @@ if( maybe ) <<< "get Chinese!", "" >>>;
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (conditional
     (keyword
       (special_literal_value))

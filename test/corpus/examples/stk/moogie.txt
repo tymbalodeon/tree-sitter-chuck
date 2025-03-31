@@ -53,8 +53,8 @@ while ( true )
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -224,7 +224,7 @@ while ( true )
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
@@ -240,7 +240,7 @@ while ( true )
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (float)
@@ -270,7 +270,7 @@ while ( true )
           (function_call
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (function_call

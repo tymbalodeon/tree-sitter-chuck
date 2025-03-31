@@ -41,26 +41,26 @@ mlp.predict(x, y);
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -68,12 +68,12 @@ mlp.predict(x, y);
       (variable_declaration
         (reference_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -90,7 +90,7 @@ mlp.predict(x, y);
       (function_call
         (member_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -102,14 +102,14 @@ mlp.predict(x, y);
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -117,7 +117,7 @@ mlp.predict(x, y);
         (variable_identifier))
       (variable_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (array_identifier

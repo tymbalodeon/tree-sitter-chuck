@@ -21,8 +21,8 @@ a[2] => int myNote;   // (1) Looks up note in array by integer index
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -38,7 +38,7 @@ a[2] => int myNote;   // (1) Looks up note in array by integer index
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array_identifier
@@ -48,13 +48,13 @@ a[2] => int myNote;   // (1) Looks up note in array by integer index
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (debug_print
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -62,7 +62,7 @@ a[2] => int myNote;   // (1) Looks up note in array by integer index
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (variable_identifier)

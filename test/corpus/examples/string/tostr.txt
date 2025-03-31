@@ -13,7 +13,7 @@ Object o;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (reference_type)
@@ -22,7 +22,7 @@ Object o;
     (variable_declaration
       (reference_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (binary_expression

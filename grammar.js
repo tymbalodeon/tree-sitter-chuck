@@ -8,7 +8,7 @@
 // @ts-check
 
 module.exports = grammar({
-  extras: ($) => [/\s/, $.comment],
+  extras: ($) => [/\s/, $.block_comment, $.line_comment],
   name: "chuck",
 
   rules: {
@@ -71,6 +71,7 @@ module.exports = grammar({
         "}",
       ),
 
+    block_comment: () => token(seq("/*", /[^*]*\*+([^/*][^*]*\*+)*/, "/")),
     boolean_literal_value: () => choice("false", "true"),
     cast: ($) => seq($._expression, "$", $.primitive_type),
     character: () => seq("'", /[^\s]/, "'"),
@@ -137,15 +138,6 @@ module.exports = grammar({
         "static",
         "super",
         "this",
-      ),
-
-    // http://stackoverflow.com/questions/13014947/regex-to-match-a-c-style-multiline-comment/36328890#36328890
-    comment: () =>
-      token(
-        choice(
-          seq("//", /[^\r\n\u2028\u2029]*/),
-          seq("/*", /[^*]*\*+([^/*][^*]*\*+)*/, "/"),
-        ),
       ),
 
     complex: ($) => seq("#(", $._expression, ",", $._expression, ")"),
@@ -332,6 +324,8 @@ module.exports = grammar({
         $.primitive_type,
         $._literal_value,
       ),
+
+    line_comment: () => token(seq("//", /[^\r\n\u2028\u2029]*/)),
 
     _literal_value: ($) =>
       choice($.boolean_literal_value, $.special_literal_value),

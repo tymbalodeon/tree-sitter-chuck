@@ -9,7 +9,7 @@ if( 1 <= 4 && true )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (binary_expression

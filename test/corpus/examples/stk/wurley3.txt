@@ -47,22 +47,22 @@ fun void play( float note, float velocity )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (array_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -78,7 +78,7 @@ fun void play( float note, float velocity )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)
@@ -99,7 +99,7 @@ fun void play( float note, float velocity )
           (variable_identifier))
         (chuck_operator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -113,7 +113,7 @@ fun void play( float note, float velocity )
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
@@ -152,7 +152,7 @@ fun void play( float note, float velocity )
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -163,8 +163,8 @@ fun void play( float note, float velocity )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -180,7 +180,7 @@ fun void play( float note, float velocity )
                 (variable_identifier))))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call

@@ -33,9 +33,9 @@ Math.pow( R, L ) => delay.gain;
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -54,7 +54,7 @@ Math.pow( R, L ) => delay.gain;
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -65,7 +65,7 @@ Math.pow( R, L ) => delay.gain;
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -73,7 +73,7 @@ Math.pow( R, L ) => delay.gain;
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -81,7 +81,7 @@ Math.pow( R, L ) => delay.gain;
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -91,7 +91,7 @@ Math.pow( R, L ) => delay.gain;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -104,7 +104,7 @@ Math.pow( R, L ) => delay.gain;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -112,7 +112,7 @@ Math.pow( R, L ) => delay.gain;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (negative_expression
@@ -121,7 +121,7 @@ Math.pow( R, L ) => delay.gain;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -129,7 +129,7 @@ Math.pow( R, L ) => delay.gain;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur

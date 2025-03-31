@@ -13,7 +13,7 @@ Listing3.2
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array

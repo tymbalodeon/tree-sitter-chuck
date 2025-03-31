@@ -75,14 +75,14 @@ fun void smack_handler()
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -103,7 +103,7 @@ fun void smack_handler()
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -111,7 +111,7 @@ fun void smack_handler()
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -137,7 +137,7 @@ fun void smack_handler()
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
@@ -153,12 +153,12 @@ fun void smack_handler()
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (member_identifier
@@ -167,7 +167,7 @@ fun void smack_handler()
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -183,7 +183,7 @@ fun void smack_handler()
               (variable_identifier)))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (member_identifier
@@ -191,12 +191,12 @@ fun void smack_handler()
             (variable_identifier))
           (chuck_operator)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (float)
@@ -204,7 +204,7 @@ fun void smack_handler()
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
@@ -263,17 +263,17 @@ fun void smack_handler()
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (member_identifier
@@ -282,7 +282,7 @@ fun void smack_handler()
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (array_identifier
@@ -301,7 +301,7 @@ fun void smack_handler()
                     (int))))
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -317,7 +317,7 @@ fun void smack_handler()
                   (variable_identifier)))
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (debug_print
               (string)

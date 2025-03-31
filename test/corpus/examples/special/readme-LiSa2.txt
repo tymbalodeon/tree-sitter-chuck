@@ -200,31 +200,31 @@ loopme.play( voice1, 0 );
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -243,7 +243,7 @@ loopme.play( voice1, 0 );
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -253,7 +253,7 @@ loopme.play( voice1, 0 );
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -261,7 +261,7 @@ loopme.play( voice1, 0 );
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -269,7 +269,7 @@ loopme.play( voice1, 0 );
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
@@ -277,7 +277,7 @@ loopme.play( voice1, 0 );
         (member_identifier
           (variable_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -287,7 +287,7 @@ loopme.play( voice1, 0 );
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -296,7 +296,7 @@ loopme.play( voice1, 0 );
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -328,7 +328,7 @@ loopme.play( voice1, 0 );
         (variable_identifier)
         (variable_identifier))
       (float)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
@@ -340,7 +340,7 @@ loopme.play( voice1, 0 );
         (operator)
         (keyword
           (duration_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -359,33 +359,33 @@ loopme.play( voice1, 0 );
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (int)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -401,7 +401,7 @@ loopme.play( voice1, 0 );
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (binary_expression
       (keyword
@@ -409,7 +409,7 @@ loopme.play( voice1, 0 );
       (operator)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -420,7 +420,7 @@ loopme.play( voice1, 0 );
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -429,44 +429,44 @@ loopme.play( voice1, 0 );
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -475,9 +475,9 @@ loopme.play( voice1, 0 );
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -488,8 +488,8 @@ loopme.play( voice1, 0 );
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -497,7 +497,7 @@ loopme.play( voice1, 0 );
         (variable_identifier))
       (variable_identifier)
       (float)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -505,7 +505,7 @@ loopme.play( voice1, 0 );
         (variable_identifier))
       (variable_identifier)
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -513,13 +513,13 @@ loopme.play( voice1, 0 );
         (variable_identifier))
       (variable_identifier)
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (variable_identifier)
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (expression_group
@@ -530,7 +530,7 @@ loopme.play( voice1, 0 );
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -541,7 +541,7 @@ loopme.play( voice1, 0 );
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -550,7 +550,7 @@ loopme.play( voice1, 0 );
       (variable_identifier)
       (negative_expression
         (float))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -558,7 +558,7 @@ loopme.play( voice1, 0 );
         (variable_identifier))
       (variable_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -566,7 +566,7 @@ loopme.play( voice1, 0 );
         (variable_identifier))
       (variable_identifier)
       (float)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -574,7 +574,7 @@ loopme.play( voice1, 0 );
         (variable_identifier))
       (variable_identifier)
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -582,20 +582,20 @@ loopme.play( voice1, 0 );
         (variable_identifier))
       (variable_identifier)
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (variable_identifier)
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -603,12 +603,12 @@ loopme.play( voice1, 0 );
         (variable_identifier))
       (variable_identifier)
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -617,64 +617,64 @@ loopme.play( voice1, 0 );
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (string)))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment))
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment))

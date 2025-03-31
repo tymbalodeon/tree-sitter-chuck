@@ -46,15 +46,15 @@ fun void playChord(int root, string quality, dur howLong)
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (array_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -72,7 +72,7 @@ fun void playChord(int root, string quality, dur howLong)
     (post_increment_expression
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (array_identifier
@@ -81,8 +81,8 @@ fun void playChord(int root, string quality, dur howLong)
           (chuck_operator)
           (keyword
             (global_unit_generator))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -98,7 +98,7 @@ fun void playChord(int root, string quality, dur howLong)
               (variable_identifier)
               (variable_identifier))
             (variable_identifier))))
-      (comment)))
+      (line_comment)))
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -112,7 +112,7 @@ fun void playChord(int root, string quality, dur howLong)
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -126,8 +126,8 @@ fun void playChord(int root, string quality, dur howLong)
               (variable_identifier)
               (int))
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -144,8 +144,8 @@ fun void playChord(int root, string quality, dur howLong)
               (variable_identifier)
               (int))
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
@@ -168,7 +168,7 @@ fun void playChord(int root, string quality, dur howLong)
                   (variable_identifier)
                   (int))
                 (variable_identifier))))
-          (comment))
+          (line_comment))
         (conditional
           (binary_expression
             (variable_identifier)
@@ -191,7 +191,7 @@ fun void playChord(int root, string quality, dur howLong)
                     (variable_identifier)
                     (int))
                   (variable_identifier))))
-            (comment))
+            (line_comment))
           (block
             (statement
               (debug_print

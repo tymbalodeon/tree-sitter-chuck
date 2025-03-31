@@ -21,7 +21,7 @@ add( 1, 2 ) => int bar;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -34,7 +34,7 @@ add( 1, 2 ) => int bar;
           (variable_identifier)
           (operator)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -50,7 +50,7 @@ add( 1, 2 ) => int bar;
           (variable_identifier)
           (operator)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call

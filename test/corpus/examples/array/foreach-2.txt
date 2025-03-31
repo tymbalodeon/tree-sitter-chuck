@@ -20,13 +20,13 @@ for( int x : [ 1, 2, 3 ] )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (for_each_loop
     (variable_declaration
       (primitive_type)
@@ -36,7 +36,7 @@ for( int x : [ 1, 2, 3 ] )
       (int)
       (int))
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier))))))

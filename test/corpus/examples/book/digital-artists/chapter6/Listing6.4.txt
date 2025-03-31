@@ -35,9 +35,9 @@ while (clar.freq() < 441.0)         // (3) Loops over three octaves of pitches.
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -51,8 +51,8 @@ while (clar.freq() < 441.0)         // (3) Loops over three octaves of pitches.
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -60,8 +60,8 @@ while (clar.freq() < 441.0)         // (3) Loops over three octaves of pitches.
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (binary_expression
       (function_call
@@ -70,9 +70,9 @@ while (clar.freq() < 441.0)         // (3) Loops over three octaves of pitches.
           (variable_identifier)))
       (operator)
       (float))
-    (comment)
+    (line_comment)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -80,8 +80,8 @@ while (clar.freq() < 441.0)         // (3) Loops over three octaves of pitches.
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -90,7 +90,7 @@ while (clar.freq() < 441.0)         // (3) Loops over three octaves of pitches.
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -98,8 +98,8 @@ while (clar.freq() < 441.0)         // (3) Loops over three octaves of pitches.
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -108,7 +108,7 @@ while (clar.freq() < 441.0)         // (3) Loops over three octaves of pitches.
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -122,4 +122,4 @@ while (clar.freq() < 441.0)         // (3) Loops over three octaves of pitches.
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment))))
+      (line_comment))))

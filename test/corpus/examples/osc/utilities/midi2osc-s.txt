@@ -162,17 +162,17 @@ fun void midi_go( MidiIn min, int id )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -180,7 +180,7 @@ fun void midi_go( MidiIn min, int id )
       (variable_declaration
         (reference_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -188,7 +188,7 @@ fun void midi_go( MidiIn min, int id )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -196,15 +196,15 @@ fun void midi_go( MidiIn min, int id )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (class_identifier)))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -214,17 +214,17 @@ fun void midi_go( MidiIn min, int id )
       (function_call
         (member_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
       (class_identifier)
       (class_identifier)
       (class_identifier)))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
@@ -236,9 +236,9 @@ fun void midi_go( MidiIn min, int id )
         (chuck_operator)
         (keyword
           (special_literal_value)))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -252,7 +252,7 @@ fun void midi_go( MidiIn min, int id )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
@@ -260,10 +260,10 @@ fun void midi_go( MidiIn min, int id )
             (variable_identifier))
           (variable_identifier)
           (variable_identifier)))))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -275,14 +275,14 @@ fun void midi_go( MidiIn min, int id )
       (array_identifier
         (variable_identifier)))
     (block
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
             (class_identifier)
             (variable_identifier))
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (for_each_loop
         (variable_declaration
           (primitive_type)
@@ -296,13 +296,13 @@ fun void midi_go( MidiIn min, int id )
               (member_identifier
                 (class_identifier)
                 (variable_identifier))))))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
             (class_identifier)
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -317,14 +317,14 @@ fun void midi_go( MidiIn min, int id )
       (array_identifier
         (variable_identifier)))
     (block
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
             (class_identifier)
             (variable_identifier))
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -332,7 +332,7 @@ fun void midi_go( MidiIn min, int id )
           (member_identifier
             (class_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (for_each_loop
         (variable_declaration
           (primitive_type)
@@ -346,15 +346,15 @@ fun void midi_go( MidiIn min, int id )
               (member_identifier
                 (class_identifier)
                 (variable_identifier))))))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
             (class_identifier)
             (variable_identifier))))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -362,16 +362,16 @@ fun void midi_go( MidiIn min, int id )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (array_declaration
           (class_identifier)
           (array_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
+      (line_comment)
       (for_loop
         (variable_declaration
           (primitive_type)
@@ -386,7 +386,7 @@ fun void midi_go( MidiIn min, int id )
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -395,7 +395,7 @@ fun void midi_go( MidiIn min, int id )
                   (variable_identifier))
                 (variable_identifier))
               (int)))
-          (comment)
+          (line_comment)
           (conditional
             (function_call
               (member_identifier
@@ -436,7 +436,7 @@ fun void midi_go( MidiIn min, int id )
               (statement
                 (keyword
                   (control_structure_keyword)))))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (function_call
@@ -456,9 +456,9 @@ fun void midi_go( MidiIn min, int id )
       (statement
         (keyword
           (boolean_literal_value)))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -469,24 +469,24 @@ fun void midi_go( MidiIn min, int id )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (loop
             (function_call
               (member_identifier
@@ -494,9 +494,9 @@ fun void midi_go( MidiIn min, int id )
                 (variable_identifier))
               (variable_identifier))
             (block
-              (comment)
-              (comment)
-              (comment)
+              (line_comment)
+              (line_comment)
+              (line_comment)
               (conditional
                 (binary_expression
                   (member_identifier

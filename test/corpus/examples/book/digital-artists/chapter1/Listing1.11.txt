@@ -38,8 +38,8 @@ offDur => now;
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (block_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -64,7 +64,7 @@ offDur => now;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -88,7 +88,7 @@ offDur => now;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -109,7 +109,7 @@ offDur => now;
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -123,14 +123,14 @@ offDur => now;
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
       (chuck_operator)
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -138,7 +138,7 @@ offDur => now;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)

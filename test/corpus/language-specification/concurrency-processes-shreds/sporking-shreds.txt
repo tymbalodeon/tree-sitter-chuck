@@ -17,18 +17,18 @@ spork ~ go() => Shred @ offspring;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)))
-  (comment)
+      (line_comment)))
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (spork_expression
@@ -70,7 +70,7 @@ while( true )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -78,16 +78,16 @@ while( true )
       (reference_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (debug_print
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -96,13 +96,13 @@ while( true )
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -111,13 +111,13 @@ while( true )
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))

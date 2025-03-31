@@ -158,24 +158,24 @@ fun void smoothtune( dur smoothtime )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -196,7 +196,7 @@ fun void smoothtune( dur smoothtime )
         (variable_identifier)
         (variable_identifier))
       (float)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -219,7 +219,7 @@ fun void smoothtune( dur smoothtime )
         (dur
           (int)
           (duration_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -235,14 +235,14 @@ fun void smoothtune( dur smoothtime )
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -252,7 +252,7 @@ fun void smoothtune( dur smoothtime )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -262,7 +262,7 @@ fun void smoothtune( dur smoothtime )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -277,7 +277,7 @@ fun void smoothtune( dur smoothtime )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -295,7 +295,7 @@ fun void smoothtune( dur smoothtime )
     (post_increment_expression
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
@@ -335,9 +335,9 @@ fun void smoothtune( dur smoothtime )
               (variable_identifier))
             (variable_identifier))
           (float)))
-      (comment)
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
@@ -357,7 +357,7 @@ fun void smoothtune( dur smoothtime )
             (variable_identifier))
           (keyword
             (boolean_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (chuck_operation
@@ -369,7 +369,7 @@ fun void smoothtune( dur smoothtime )
           (chuck_operator)
           (keyword
             (global_unit_generator))))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -379,13 +379,13 @@ fun void smoothtune( dur smoothtime )
         (variable_identifier))
       (keyword
         (boolean_literal_value))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -397,7 +397,7 @@ fun void smoothtune( dur smoothtime )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (loop
         (binary_expression
           (keyword
@@ -419,7 +419,7 @@ fun void smoothtune( dur smoothtime )
               (variable_declaration
                 (primitive_type)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -460,8 +460,8 @@ fun void smoothtune( dur smoothtime )
               (variable_declaration
                 (primitive_type)
                 (variable_identifier))))
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
           (statement
             (spork_expression
               (function_call
@@ -475,7 +475,7 @@ fun void smoothtune( dur smoothtime )
                   (int)
                   (duration_identifier))
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -484,7 +484,7 @@ fun void smoothtune( dur smoothtime )
               (chuck_operator)
               (keyword
                 (special_literal_value))))))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
@@ -517,7 +517,7 @@ fun void smoothtune( dur smoothtime )
             (variable_identifier))
           (keyword
             (boolean_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (post_increment_expression
           (variable_identifier)))
@@ -534,7 +534,7 @@ fun void smoothtune( dur smoothtime )
             (int)
             (chuck_operator)
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -554,7 +554,7 @@ fun void smoothtune( dur smoothtime )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -567,7 +567,7 @@ fun void smoothtune( dur smoothtime )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
@@ -575,7 +575,7 @@ fun void smoothtune( dur smoothtime )
           (negative_expression
             (int)))
         (block
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -585,7 +585,7 @@ fun void smoothtune( dur smoothtime )
                 (variable_identifier))
               (variable_identifier)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -603,7 +603,7 @@ fun void smoothtune( dur smoothtime )
                   (int))
                 (operator)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -613,7 +613,7 @@ fun void smoothtune( dur smoothtime )
                 (variable_identifier))
               (variable_identifier)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (expression_group
@@ -628,7 +628,7 @@ fun void smoothtune( dur smoothtime )
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -638,14 +638,14 @@ fun void smoothtune( dur smoothtime )
                 (variable_identifier))
               (variable_identifier)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -653,7 +653,7 @@ fun void smoothtune( dur smoothtime )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (array
@@ -678,7 +678,7 @@ fun void smoothtune( dur smoothtime )
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -686,7 +686,7 @@ fun void smoothtune( dur smoothtime )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (chuck_operation
@@ -705,12 +705,12 @@ fun void smoothtune( dur smoothtime )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -728,7 +728,7 @@ fun void smoothtune( dur smoothtime )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (variable_identifier)
@@ -742,14 +742,14 @@ fun void smoothtune( dur smoothtime )
                 (int)
                 (chuck_operator)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -757,7 +757,7 @@ fun void smoothtune( dur smoothtime )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier

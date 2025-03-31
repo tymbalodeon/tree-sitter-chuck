@@ -136,18 +136,18 @@ SinOsc theChild @=> UGen @ theParent;
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -155,7 +155,7 @@ SinOsc theChild @=> UGen @ theParent;
       (class_identifier)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (binary_expression
@@ -167,7 +167,7 @@ SinOsc theChild @=> UGen @ theParent;
             (member_identifier
               (class_identifier)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
@@ -187,9 +187,9 @@ SinOsc theChild @=> UGen @ theParent;
                   (class_identifier)
                   (variable_identifier)))))
           (statement)))
-      (comment)
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
+      (line_comment)
       (statement
         (binary_expression
           (binary_expression
@@ -207,9 +207,9 @@ SinOsc theChild @=> UGen @ theParent;
             (member_identifier
               (class_identifier)
               (variable_identifier)))))
-      (comment)
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
+      (line_comment)
       (statement
         (binary_expression
           (binary_expression
@@ -239,15 +239,15 @@ SinOsc theChild @=> UGen @ theParent;
             (member_identifier
               (class_identifier)
               (variable_identifier)))))
-      (comment)
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
+      (line_comment)
       (statement
         (binary_expression
           (variable_identifier)
           (operator)
           (string)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -258,7 +258,7 @@ SinOsc theChild @=> UGen @ theParent;
           (reference_declaration
             (class_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
@@ -284,7 +284,7 @@ SinOsc theChild @=> UGen @ theParent;
               (keyword
                 (special_literal_value)))
             (block
-              (comment)
+              (line_comment)
               (statement
                 (binary_expression
                   (variable_identifier)
@@ -293,7 +293,7 @@ SinOsc theChild @=> UGen @ theParent;
                     (member_identifier
                       (variable_identifier)
                       (variable_identifier)))))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (function_call
@@ -302,7 +302,7 @@ SinOsc theChild @=> UGen @ theParent;
                       (variable_identifier)))
                   (chuck_operator)
                   (variable_identifier)))
-              (comment)
+              (line_comment)
               (statement
                 (binary_expression
                   (variable_identifier)
@@ -320,9 +320,9 @@ SinOsc theChild @=> UGen @ theParent;
                         (member_identifier
                           (class_identifier)
                           (variable_identifier)))))))))))
-      (comment)
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
+      (line_comment)
       (statement
         (binary_expression
           (binary_expression
@@ -367,9 +367,9 @@ SinOsc theChild @=> UGen @ theParent;
             (member_identifier
               (class_identifier)
               (variable_identifier)))))
-      (comment)
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
+      (line_comment)
       (statement
         (binary_expression
           (binary_expression
@@ -421,7 +421,7 @@ SinOsc theChild @=> UGen @ theParent;
             (member_identifier
               (class_identifier)
               (variable_identifier)))))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -444,12 +444,12 @@ SinOsc theChild @=> UGen @ theParent;
           (class_identifier)
           (variable_identifier))
         (reference_type))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -460,12 +460,12 @@ SinOsc theChild @=> UGen @ theParent;
       (reference_declaration
         (class_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -476,12 +476,12 @@ SinOsc theChild @=> UGen @ theParent;
       (reference_declaration
         (class_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -573,7 +573,7 @@ SinOsc theChild @=> UGen @ theParent;
           (variable_identifier))
         (keyword
           (global_unit_generator)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -582,7 +582,7 @@ SinOsc theChild @=> UGen @ theParent;
           (class_identifier)
           (variable_identifier))
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -593,7 +593,7 @@ SinOsc theChild @=> UGen @ theParent;
       (reference_declaration
         (class_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -607,7 +607,7 @@ SinOsc theChild @=> UGen @ theParent;
         (class_identifier)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)
@@ -641,7 +641,7 @@ SinOsc theChild @=> UGen @ theParent;
             (member_identifier
               (class_identifier)
               (variable_identifier)))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -652,7 +652,7 @@ SinOsc theChild @=> UGen @ theParent;
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)
@@ -686,7 +686,7 @@ SinOsc theChild @=> UGen @ theParent;
             (member_identifier
               (class_identifier)
               (variable_identifier)))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -696,7 +696,7 @@ SinOsc theChild @=> UGen @ theParent;
       (reference_declaration
         (reference_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call
@@ -711,7 +711,7 @@ SinOsc theChild @=> UGen @ theParent;
           (variable_identifier)))
       (function_call
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call

@@ -23,8 +23,8 @@ for (0 => int i; i < imp.order(); i++) {
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation

@@ -8,7 +8,7 @@ Division
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -30,7 +30,7 @@ Multiplication
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -50,7 +50,7 @@ Addition
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -70,7 +70,7 @@ Subtraction
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -99,7 +99,7 @@ Math.rand2f( 30, 1000 );
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -110,7 +110,7 @@ Math.rand2f( 30, 1000 );
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (cast
@@ -120,8 +120,8 @@ Math.rand2f( 30, 1000 );
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -129,7 +129,7 @@ Math.rand2f( 30, 1000 );
         (variable_identifier))
       (float)
       (float)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier

@@ -16,7 +16,7 @@ Complex
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment))
+  (line_comment))
 
 =========
 Complex operation
@@ -38,7 +38,7 @@ Complex operation
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -56,7 +56,7 @@ Complex operation
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment))
+  (line_comment))
 
 =====
 Complex parts
@@ -87,7 +87,7 @@ cmp.im => float y; //y is 3.5
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (member_identifier
@@ -97,7 +97,7 @@ cmp.im => float y; //y is 3.5
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment))
+  (line_comment))
 
 =====
 Polar
@@ -121,7 +121,7 @@ Polar
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment))
+  (line_comment))
 
 ===========
 Polar parts
@@ -156,7 +156,7 @@ pol.phase => float p; //p is .5π
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (member_identifier
@@ -166,7 +166,7 @@ pol.phase => float p; //p is .5π
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment))
+  (line_comment))
 
 ====
 Cast

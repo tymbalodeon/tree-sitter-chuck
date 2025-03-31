@@ -14,10 +14,10 @@ Foo a(1), b(2);
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (import_expression
     (string))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
@@ -27,7 +27,7 @@ Foo a(1), b(2);
     (function_call
       (variable_identifier)
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (member_identifier

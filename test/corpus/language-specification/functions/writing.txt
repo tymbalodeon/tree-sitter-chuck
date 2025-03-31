@@ -11,7 +11,7 @@ fun void funk( int arg )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -19,7 +19,7 @@ fun void funk( int arg )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment))))
+      (line_comment))))
 
 ===========
 Return type
@@ -35,7 +35,7 @@ fun int addOne(int x)
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -43,7 +43,7 @@ fun int addOne(int x)
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (variable_identifier)

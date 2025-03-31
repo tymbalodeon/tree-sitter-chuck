@@ -26,9 +26,9 @@ adc => Gain g => dac;
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -41,7 +41,7 @@ adc => Gain g => dac;
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -50,6 +50,6 @@ adc => Gain g => dac;
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
-  (comment)
-  (comment))
+  (line_comment)
+  (block_comment)
+  (line_comment))

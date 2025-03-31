@@ -11,12 +11,12 @@ until( false )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment))))
+      (line_comment))))
 
 =====
 Do/until
@@ -32,5 +32,5 @@ do {
   (statement
     (do_loop
       (block
-        (comment))
+        (line_comment))
       (variable_identifier))))

@@ -96,15 +96,15 @@ fun void onHarmonics()
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -132,7 +132,7 @@ fun void onHarmonics()
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
@@ -141,7 +141,7 @@ fun void onHarmonics()
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
@@ -153,22 +153,22 @@ fun void onHarmonics()
         (chuck_operator)
         (keyword
           (special_literal_value)))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -176,26 +176,26 @@ fun void onHarmonics()
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
             (variable_identifier)
             (variable_identifier))
           (string)))
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (loop
             (function_call
               (member_identifier
@@ -203,7 +203,7 @@ fun void onHarmonics()
                 (variable_identifier))
               (variable_identifier))
             (block
-              (comment)
+              (line_comment)
               (statement
                 (variable_declaration
                   (primitive_type)
@@ -212,7 +212,7 @@ fun void onHarmonics()
                 (variable_declaration
                   (primitive_type)
                   (variable_identifier)))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (chuck_operation
@@ -232,7 +232,7 @@ fun void onHarmonics()
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (chuck_operation
@@ -247,28 +247,28 @@ fun void onHarmonics()
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (debug_print
                   (string)
                   (variable_identifier)
                   (variable_identifier)))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -276,26 +276,26 @@ fun void onHarmonics()
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
             (variable_identifier)
             (variable_identifier))
           (string)))
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (loop
             (function_call
               (member_identifier
@@ -303,12 +303,12 @@ fun void onHarmonics()
                 (variable_identifier))
               (variable_identifier))
             (block
-              (comment)
+              (line_comment)
               (statement
                 (variable_declaration
                   (primitive_type)
                   (variable_identifier)))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (chuck_operation
@@ -323,7 +323,7 @@ fun void onHarmonics()
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (debug_print
                   (string)

@@ -12,13 +12,13 @@ me.yield();
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -43,12 +43,12 @@ if( !min.open( 0 ) )
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -57,11 +57,11 @@ if( !min.open( 0 ) )
           (variable_identifier))
         (int)))
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (string)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
@@ -77,7 +77,7 @@ Shred ID
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call

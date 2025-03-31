@@ -218,33 +218,33 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -252,7 +252,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (variable_declaration
         (reference_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (function_call
@@ -268,7 +268,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
           (int))
         (chuck_operator)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (function_call
@@ -279,7 +279,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (keyword
         (boolean_literal_value)))
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (string)
@@ -300,10 +300,10 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
         (debug_print
           (string)
           (string)))))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -313,7 +313,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (variable_declaration
         (class_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -322,7 +322,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -333,7 +333,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -344,7 +344,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -355,7 +355,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -366,11 +366,11 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -378,7 +378,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -386,13 +386,13 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -405,7 +405,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -413,7 +413,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -428,7 +428,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -438,10 +438,10 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -460,7 +460,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
         (reference_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -468,7 +468,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -478,7 +478,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (cast
@@ -492,7 +492,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -500,14 +500,14 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (variable_declaration
         (reference_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -515,7 +515,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -523,24 +523,24 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (reference_declaration
         (class_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (class_identifier)
       (operator)
       (string))
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (string)
           (class_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
@@ -550,7 +550,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
           (member_identifier
             (class_identifier)
             (class_identifier))))
-      (comment)
+      (line_comment)
       (conditional
         (negation_expression
           (function_call
@@ -566,21 +566,21 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
             (function_call
               (member_identifier
                 (variable_identifier))))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
           (chuck_operator)
           (variable_identifier)))))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (reference_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)
@@ -595,7 +595,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
     (post_increment_expression
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (array_identifier
@@ -605,7 +605,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
           (variable_declaration
             (reference_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (for_loop
         (variable_declaration
           (primitive_type)
@@ -617,7 +617,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -656,7 +656,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
                 (string))
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (conditional
             (negation_expression
               (function_call
@@ -665,7 +665,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
                 (variable_identifier)
                 (variable_identifier)))
             (block
-              (comment)
+              (line_comment)
               (statement
                 (binary_expression
                   (binary_expression
@@ -680,14 +680,14 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
                     (member_identifier
                       (class_identifier)
                       (variable_identifier)))))
-              (comment)
+              (line_comment)
               (statement
                 (function_call
                   (member_identifier
                     (variable_identifier))))))))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -701,11 +701,11 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
       (class_identifier)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (post_increment_expression
           (class_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (binary_expression
@@ -726,7 +726,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
             (member_identifier
               (class_identifier)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -734,7 +734,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -742,13 +742,13 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -760,7 +760,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (for_loop
         (variable_declaration
           (primitive_type)
@@ -772,18 +772,18 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
-          (comment)
-          (comment)
-          (comment)
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
+          (line_comment)
+          (line_comment)
+          (line_comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (for_loop
             (variable_declaration
               (primitive_type)
@@ -795,7 +795,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
             (post_increment_expression
               (variable_identifier))
             (block
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (function_call
@@ -807,19 +807,19 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
                   (array_identifier
                     (variable_identifier)
                     (variable_identifier))))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (class_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))))
-      (comment)
-      (comment)
-      (comment)
-      (comment)
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
+      (line_comment)
+      (line_comment)
+      (line_comment)
+      (line_comment)
       (for_loop
         (variable_declaration
           (primitive_type)
@@ -831,7 +831,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
@@ -839,7 +839,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
               (array_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (binary_expression
               (binary_expression
@@ -850,7 +850,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
                   (variable_identifier)))
               (operator)
               (string)))))
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (binary_expression
@@ -862,7 +862,7 @@ fun int extractFeatures( string inputFilePath, string label, IO out )
             (member_identifier
               (class_identifier)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (keyword
           (boolean_literal_value))))))

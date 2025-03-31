@@ -112,9 +112,9 @@ signal [dot] automatique [at] gmail [another dot] com
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (binary_expression
       (variable_identifier)
@@ -153,7 +153,7 @@ signal [dot] automatique [at] gmail [another dot] com
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -169,7 +169,7 @@ signal [dot] automatique [at] gmail [another dot] com
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -536,4 +536,4 @@ signal [dot] automatique [at] gmail [another dot] com
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment))
+  (block_comment))

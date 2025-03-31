@@ -37,11 +37,11 @@ while( fio.more() )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -54,7 +54,7 @@ while( fio.more() )
       (variable_declaration
         (reference_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (function_call
@@ -70,12 +70,12 @@ while( fio.more() )
           (int))
         (chuck_operator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -85,7 +85,7 @@ while( fio.more() )
       (member_identifier
         (class_identifier)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -114,7 +114,7 @@ while( fio.more() )
         (function_call
           (member_identifier
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (loop
     (function_call
       (member_identifier

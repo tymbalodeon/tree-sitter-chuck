@@ -76,15 +76,15 @@ fun void sendHarmonics()
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -92,7 +92,7 @@ fun void sendHarmonics()
       (variable_declaration
         (reference_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -100,7 +100,7 @@ fun void sendHarmonics()
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (function_call
       (member_identifier
@@ -133,12 +133,12 @@ fun void sendHarmonics()
             (variable_identifier)))
         (chuck_operator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -146,7 +146,7 @@ fun void sendHarmonics()
         (variable_identifier))
       (variable_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
@@ -155,7 +155,7 @@ fun void sendHarmonics()
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
@@ -171,19 +171,19 @@ fun void sendHarmonics()
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))
               (string)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -196,7 +196,7 @@ fun void sendHarmonics()
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -209,13 +209,13 @@ fun void sendHarmonics()
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -228,19 +228,19 @@ fun void sendHarmonics()
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))
               (string)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -253,13 +253,13 @@ fun void sendHarmonics()
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur

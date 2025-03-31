@@ -21,8 +21,8 @@ if ( a[0][0][1] == 1 ) <<<"success">>>;
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -38,7 +38,7 @@ if ( a[0][0][1] == 1 ) <<<"success">>>;
         (variable_identifier)
         (int)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -55,7 +55,7 @@ if ( a[0][0][1] == 1 ) <<<"success">>>;
         (variable_identifier)
         (int)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -63,7 +63,7 @@ if ( a[0][0][1] == 1 ) <<<"success">>>;
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (array_identifier

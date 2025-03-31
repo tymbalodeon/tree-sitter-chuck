@@ -8,7 +8,7 @@ Machine.add( "foo.ck" );
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -35,7 +35,7 @@ Machine.replace( id, "bar.ck" );
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -47,14 +47,14 @@ Machine.replace( id, "bar.ck" );
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (class_identifier)
         (variable_identifier))
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -64,7 +64,7 @@ Machine.replace( id, "bar.ck" );
         (string))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier

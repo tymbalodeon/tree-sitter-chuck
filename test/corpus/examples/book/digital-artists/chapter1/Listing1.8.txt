@@ -39,8 +39,8 @@ offGain => s.gain;     // (7) Turns off the sound of your oscillator
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (block_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -56,7 +56,7 @@ offGain => s.gain;     // (7) Turns off the sound of your oscillator
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -64,7 +64,7 @@ offGain => s.gain;     // (7) Turns off the sound of your oscillator
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -72,8 +72,8 @@ offGain => s.gain;     // (7) Turns off the sound of your oscillator
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -103,7 +103,7 @@ offGain => s.gain;     // (7) Turns off the sound of your oscillator
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -112,14 +112,14 @@ offGain => s.gain;     // (7) Turns off the sound of your oscillator
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
       (chuck_operator)
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -127,7 +127,7 @@ offGain => s.gain;     // (7) Turns off the sound of your oscillator
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -135,7 +135,7 @@ offGain => s.gain;     // (7) Turns off the sound of your oscillator
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -151,7 +151,7 @@ offGain => s.gain;     // (7) Turns off the sound of your oscillator
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -160,4 +160,4 @@ offGain => s.gain;     // (7) Turns off the sound of your oscillator
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment))
+  (line_comment))

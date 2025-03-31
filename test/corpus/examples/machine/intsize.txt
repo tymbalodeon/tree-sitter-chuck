@@ -9,7 +9,7 @@ cherr <= "size of chuck int: " <= Machine.intsize() <= "-bit" <= IO.newline();
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (binary_expression
       (binary_expression

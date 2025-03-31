@@ -151,26 +151,26 @@ the fly, and the code reflects that, but it does work.
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -179,21 +179,21 @@ the fly, and the code reflects that, but it does work.
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (float)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -202,21 +202,21 @@ the fly, and the code reflects that, but it does work.
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (float)))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -240,7 +240,7 @@ the fly, and the code reflects that, but it does work.
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -313,7 +313,7 @@ the fly, and the code reflects that, but it does work.
             (variable_identifier))
           (keyword
             (boolean_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (chuck_operation
@@ -325,7 +325,7 @@ the fly, and the code reflects that, but it does work.
           (chuck_operator)
           (keyword
             (global_unit_generator))))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -335,13 +335,13 @@ the fly, and the code reflects that, but it does work.
         (variable_identifier))
       (keyword
         (boolean_literal_value))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -353,7 +353,7 @@ the fly, and the code reflects that, but it does work.
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (loop
         (binary_expression
           (keyword
@@ -361,7 +361,7 @@ the fly, and the code reflects that, but it does work.
           (operator)
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -388,7 +388,7 @@ the fly, and the code reflects that, but it does work.
               (variable_declaration
                 (primitive_type)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (spork_expression
               (function_call
@@ -402,7 +402,7 @@ the fly, and the code reflects that, but it does work.
                   (int)
                   (duration_identifier))
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -419,7 +419,7 @@ the fly, and the code reflects that, but it does work.
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -428,7 +428,7 @@ the fly, and the code reflects that, but it does work.
               (chuck_operator)
               (keyword
                 (special_literal_value))))))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
@@ -458,7 +458,7 @@ the fly, and the code reflects that, but it does work.
             (variable_identifier))
           (keyword
             (boolean_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (post_increment_expression
           (variable_identifier)))
@@ -472,7 +472,7 @@ the fly, and the code reflects that, but it does work.
             (int)
             (chuck_operator)
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -492,7 +492,7 @@ the fly, and the code reflects that, but it does work.
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -505,7 +505,7 @@ the fly, and the code reflects that, but it does work.
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
@@ -513,7 +513,7 @@ the fly, and the code reflects that, but it does work.
           (negative_expression
             (int)))
         (block
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -523,7 +523,7 @@ the fly, and the code reflects that, but it does work.
                 (variable_identifier))
               (variable_identifier)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -541,7 +541,7 @@ the fly, and the code reflects that, but it does work.
                   (int))
                 (operator)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -551,7 +551,7 @@ the fly, and the code reflects that, but it does work.
                 (variable_identifier))
               (variable_identifier)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (expression_group
@@ -566,7 +566,7 @@ the fly, and the code reflects that, but it does work.
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -576,11 +576,11 @@ the fly, and the code reflects that, but it does work.
                 (variable_identifier))
               (variable_identifier)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment))
+  (block_comment))

@@ -56,27 +56,27 @@ WarpTable: end-constrained mapping table, useful for control signal conditioning
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -90,10 +90,10 @@ WarpTable: end-constrained mapping table, useful for control signal conditioning
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -104,14 +104,14 @@ WarpTable: end-constrained mapping table, useful for control signal conditioning
         (float)
         (float)
         (float))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (float)))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
@@ -124,5 +124,5 @@ WarpTable: end-constrained mapping table, useful for control signal conditioning
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
-  (comment))
+  (line_comment)
+  (block_comment))

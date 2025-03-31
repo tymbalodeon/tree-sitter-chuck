@@ -20,14 +20,14 @@ float foo[4];
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -35,7 +35,7 @@ float foo[4];
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -43,19 +43,19 @@ float foo[4];
       (array_identifier
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (array_identifier
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (array_identifier
         (variable_identifier)
         (string))))
-  (comment))
+  (line_comment))
 
 =============
 Index vs. key
@@ -76,14 +76,14 @@ int foo[2];
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -91,7 +91,7 @@ int foo[2];
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -99,7 +99,7 @@ int foo[2];
       (array_identifier
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (array_identifier
@@ -128,14 +128,14 @@ int foo[0];
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -143,13 +143,13 @@ int foo[0];
       (array_identifier
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (array_identifier
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (array_identifier
@@ -194,7 +194,7 @@ new Item @=> box["lamp"];
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -204,7 +204,7 @@ new Item @=> box["lamp"];
           (variable_identifier)
           (int))
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (class_instantiation
@@ -213,7 +213,7 @@ new Item @=> box["lamp"];
       (array_identifier
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -223,7 +223,7 @@ new Item @=> box["lamp"];
           (variable_identifier)
           (string))
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)

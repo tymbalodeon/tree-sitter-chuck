@@ -21,8 +21,8 @@ interval(67,60) => int int2;
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -45,7 +45,7 @@ interval(67,60) => int int2;
             (variable_identifier))))
       (statement
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call

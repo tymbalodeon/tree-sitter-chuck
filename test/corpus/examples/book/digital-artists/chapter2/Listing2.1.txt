@@ -22,8 +22,8 @@ for (0 => int i; i < 127; i++)
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -39,7 +39,7 @@ for (0 => int i; i < 127; i++)
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -54,7 +54,7 @@ for (0 => int i; i < 127; i++)
     (post_increment_expression
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -66,12 +66,12 @@ for (0 => int i; i < 127; i++)
           (variable_declaration
             (primitive_type)
             (class_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier)
           (class_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (class_identifier)
@@ -79,7 +79,7 @@ for (0 => int i; i < 127; i++)
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -88,4 +88,4 @@ for (0 => int i; i < 127; i++)
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment))))
+      (line_comment))))

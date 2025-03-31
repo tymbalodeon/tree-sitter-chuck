@@ -21,7 +21,7 @@ if ( answer == 120 ) <<<"success">>>;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -46,7 +46,7 @@ if ( answer == 120 ) <<<"success">>>;
                 (variable_identifier)
                 (operator)
                 (int))))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -56,7 +56,7 @@ if ( answer == 120 ) <<<"success">>>;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (variable_identifier)

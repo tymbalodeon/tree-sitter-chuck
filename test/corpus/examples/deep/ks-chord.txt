@@ -156,21 +156,21 @@ while( true )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -183,7 +183,7 @@ while( true )
           (variable_declaration
             (primitive_type)
             (class_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (class_identifier)
@@ -192,7 +192,7 @@ while( true )
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_declaration
@@ -200,7 +200,7 @@ while( true )
             (variable_identifier))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -208,7 +208,7 @@ while( true )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (chuck_operation
@@ -223,7 +223,7 @@ while( true )
             (variable_identifier))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -233,7 +233,7 @@ while( true )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (negative_expression
@@ -242,7 +242,7 @@ while( true )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (float)
@@ -250,7 +250,7 @@ while( true )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
@@ -270,7 +270,7 @@ while( true )
               (variable_declaration
                 (primitive_type)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (int)
@@ -278,7 +278,7 @@ while( true )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -287,7 +287,7 @@ while( true )
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (int)
@@ -295,7 +295,7 @@ while( true )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -307,7 +307,7 @@ while( true )
               (chuck_operator)
               (keyword
                 (special_literal_value))))))
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
@@ -315,7 +315,7 @@ while( true )
           (primitive_type)
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -346,7 +346,7 @@ while( true )
                   (float))
                 (chuck_operator)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -363,7 +363,7 @@ while( true )
               (variable_declaration
                 (primitive_type)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -373,10 +373,10 @@ while( true )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
@@ -384,7 +384,7 @@ while( true )
           (primitive_type)
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (binary_expression
@@ -405,7 +405,7 @@ while( true )
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
@@ -413,10 +413,10 @@ while( true )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
@@ -424,25 +424,25 @@ while( true )
           (primitive_type)
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (binary_expression
               (class_identifier)
               (operator)
               (variable_identifier)))))))
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (array_declaration
           (class_identifier)
           (array_identifier
             (variable_identifier)
             (int))))
-      (comment)
+      (line_comment)
       (for_loop
         (variable_declaration
           (primitive_type)
@@ -467,7 +467,7 @@ while( true )
                   (variable_identifier)))
               (chuck_operator)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
@@ -475,7 +475,7 @@ while( true )
           (primitive_type)
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (binary_expression
@@ -493,7 +493,7 @@ while( true )
                   (string)))
               (statement
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (for_loop
             (variable_declaration
               (primitive_type)
@@ -519,7 +519,7 @@ while( true )
                     (variable_identifier))))))
           (statement
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
@@ -572,7 +572,7 @@ while( true )
                   (variable_identifier)
                   (int))
                 (variable_identifier))))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -586,7 +586,7 @@ while( true )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -594,14 +594,14 @@ while( true )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (float)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (negative_expression
@@ -610,7 +610,7 @@ while( true )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -632,12 +632,12 @@ while( true )
         (int)
         (operator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -645,7 +645,7 @@ while( true )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -653,7 +653,7 @@ while( true )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression

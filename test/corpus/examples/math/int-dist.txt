@@ -28,9 +28,9 @@ for( int i; i < N; i++ )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -38,18 +38,18 @@ for( int i; i < N; i++ )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (int)
     (block
-      (comment)
+      (line_comment)
       (statement
         (post_increment_expression
           (array_identifier
@@ -63,7 +63,7 @@ for( int i; i < N; i++ )
                 (class_identifier)
                 (operator)
                 (int))))))))
-  (comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)
@@ -75,7 +75,7 @@ for( int i; i < N; i++ )
     (post_increment_expression
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (binary_expression

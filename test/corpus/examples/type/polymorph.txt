@@ -78,29 +78,29 @@ while( true )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
@@ -109,13 +109,13 @@ while( true )
             (debug_print
               (string)
               (string)))))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
@@ -124,13 +124,13 @@ while( true )
             (debug_print
               (string)
               (string)))))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
@@ -139,8 +139,8 @@ while( true )
             (debug_print
               (string)
               (string)))))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -157,7 +157,7 @@ while( true )
         (class_identifier)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -165,13 +165,13 @@ while( true )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (spork_expression
           (function_call
@@ -180,7 +180,7 @@ while( true )
                 (variable_identifier)
                 (variable_identifier))
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -189,7 +189,7 @@ while( true )
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (post_increment_expression
           (variable_identifier)))

@@ -30,13 +30,13 @@ for( int x[] : array )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -44,7 +44,7 @@ for( int x[] : array )
         (reference_type)
         (int)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (binary_expression
       (binary_expression
@@ -65,7 +65,7 @@ for( int x[] : array )
         (int))
       (operator)
       (int)))
-  (comment)
+  (line_comment)
   (for_each_loop
     (array_declaration
       (primitive_type)
@@ -73,7 +73,7 @@ for( int x[] : array )
         (variable_identifier)))
     (reference_type)
     (block
-      (comment)
+      (line_comment)
       (for_each_loop
         (variable_declaration
           (primitive_type)

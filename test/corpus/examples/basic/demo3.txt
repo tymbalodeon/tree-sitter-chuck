@@ -34,9 +34,9 @@ while( x > 0 )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -45,7 +45,7 @@ while( x > 0 )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -67,14 +67,14 @@ while( x > 0 )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (binary_expression
       (variable_identifier)
       (operator)
       (int))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_declaration
@@ -82,7 +82,7 @@ while( x > 0 )
             (variable_identifier))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -98,13 +98,13 @@ while( x > 0 )
             (float))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -113,7 +113,7 @@ while( x > 0 )
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)

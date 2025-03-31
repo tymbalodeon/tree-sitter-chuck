@@ -23,13 +23,13 @@ for( auto x : array )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -41,14 +41,14 @@ for( auto x : array )
         (primitive_type)
         (array_identifier
           (reference_type)))))
-  (comment)
+  (line_comment)
   (for_each_loop
     (variable_declaration
       (primitive_type)
       (variable_identifier))
     (reference_type)
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier))))))

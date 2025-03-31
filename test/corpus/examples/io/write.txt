@@ -29,7 +29,7 @@ fout.close();
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -37,12 +37,12 @@ fout.close();
       (variable_declaration
         (reference_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -52,7 +52,7 @@ fout.close();
       (member_identifier
         (class_identifier)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -75,7 +75,7 @@ fout.close();
         (function_call
           (member_identifier
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (binary_expression
       (binary_expression
@@ -99,13 +99,13 @@ fout.close();
         (member_identifier
           (class_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)

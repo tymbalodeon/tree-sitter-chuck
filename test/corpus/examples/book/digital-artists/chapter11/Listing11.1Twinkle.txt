@@ -51,13 +51,13 @@ for (0 => int i; i < myNotes.cap(); i++)
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -65,7 +65,7 @@ for (0 => int i; i < myNotes.cap(); i++)
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -82,12 +82,12 @@ for (0 => int i; i < myNotes.cap(); i++)
         (function_call
           (member_identifier
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (class_identifier)
@@ -140,7 +140,7 @@ for (0 => int i; i < myNotes.cap(); i++)
             (variable_identifier)
             (variable_identifier))
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -163,7 +163,7 @@ for (0 => int i; i < myNotes.cap(); i++)
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -204,7 +204,7 @@ for (0 => int i; i < myNotes.cap(); i++)
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)

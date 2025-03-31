@@ -76,9 +76,9 @@ while( true )
             (class_identifier))
           (int)
           (variable_identifier)))
-      (comment)
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
+      (line_comment)
       (statement
         (debug_print
           (string)
@@ -93,8 +93,8 @@ while( true )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (debug_print
           (string)

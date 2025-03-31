@@ -55,7 +55,7 @@ e2.f( myArray );       // in E2.f - correct
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
@@ -161,14 +161,14 @@ e2.f( myArray );       // in E2.f - correct
         (variable_identifier)
         (variable_identifier))
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -177,7 +177,7 @@ e2.f( myArray );       // in E2.f - correct
       (float)
       (float)
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -186,7 +186,7 @@ e2.f( myArray );       // in E2.f - correct
       (float)
       (float)
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -195,11 +195,11 @@ e2.f( myArray );       // in E2.f - correct
       (float)
       (float)
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (variable_identifier)))
-  (comment))
+  (line_comment))

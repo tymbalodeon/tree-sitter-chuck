@@ -8,7 +8,7 @@ Foo bar;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
@@ -24,7 +24,7 @@ Foo @ bar;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (reference_declaration
       (class_identifier)
@@ -42,7 +42,7 @@ new Foo @=> Foo @ bar;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (class_instantiation
@@ -51,7 +51,7 @@ new Foo @=> Foo @ bar;
       (reference_declaration
         (class_identifier)
         (variable_identifier))))
-  (comment))
+  (line_comment))
 
 ===================
 Multiple references
@@ -68,12 +68,12 @@ bar @=> Foo @ duh;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
@@ -81,7 +81,7 @@ bar @=> Foo @ duh;
       (reference_declaration
         (class_identifier)
         (variable_identifier))))
-  (comment))
+  (line_comment))
 
 ====================
 Member function call
@@ -96,12 +96,12 @@ bar.compute( 1, 2 ) => int boo;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call

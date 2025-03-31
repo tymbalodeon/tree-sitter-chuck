@@ -63,9 +63,9 @@ hanoi( disks, 1, 3, 2 );
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -73,7 +73,7 @@ hanoi( disks, 1, 3, 2 );
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -83,7 +83,7 @@ hanoi( disks, 1, 3, 2 );
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -91,7 +91,7 @@ hanoi( disks, 1, 3, 2 );
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -110,7 +110,7 @@ hanoi( disks, 1, 3, 2 );
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -118,7 +118,7 @@ hanoi( disks, 1, 3, 2 );
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -126,14 +126,14 @@ hanoi( disks, 1, 3, 2 );
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -161,7 +161,7 @@ hanoi( disks, 1, 3, 2 );
           (variable_identifier)
           (int))
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -185,7 +185,7 @@ hanoi( disks, 1, 3, 2 );
           (variable_identifier))
         (chuck_operator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -202,7 +202,7 @@ hanoi( disks, 1, 3, 2 );
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
@@ -218,11 +218,11 @@ hanoi( disks, 1, 3, 2 );
             (variable_identifier)
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (post_increment_expression
           (class_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (string)
@@ -232,7 +232,7 @@ hanoi( disks, 1, 3, 2 );
           (string)
           (string)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -242,7 +242,7 @@ hanoi( disks, 1, 3, 2 );
               (variable_identifier)
               (variable_identifier))
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -253,14 +253,14 @@ hanoi( disks, 1, 3, 2 );
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
@@ -287,7 +287,7 @@ hanoi( disks, 1, 3, 2 );
     (debug_print
       (string)
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur

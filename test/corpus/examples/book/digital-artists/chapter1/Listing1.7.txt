@@ -18,7 +18,7 @@ myPitch - 110 => myPitch;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
@@ -28,7 +28,7 @@ myPitch - 110 => myPitch;
       (int)
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -37,7 +37,7 @@ myPitch - 110 => myPitch;
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression

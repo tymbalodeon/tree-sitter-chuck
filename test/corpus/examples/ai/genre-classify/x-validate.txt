@@ -330,25 +330,25 @@ fun void readData( FileIO fio )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -356,7 +356,7 @@ fun void readData( FileIO fio )
       (variable_declaration
         (reference_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (function_call
@@ -381,18 +381,18 @@ fun void readData( FileIO fio )
         (function_call
           (member_identifier
             (variable_identifier))))))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -400,7 +400,7 @@ fun void readData( FileIO fio )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -408,8 +408,8 @@ fun void readData( FileIO fio )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -419,7 +419,7 @@ fun void readData( FileIO fio )
       (reference_declaration
         (class_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -430,14 +430,14 @@ fun void readData( FileIO fio )
       (function_call
         (member_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (reference_type)
       (array_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -447,7 +447,7 @@ fun void readData( FileIO fio )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -455,37 +455,37 @@ fun void readData( FileIO fio )
         (variable_identifier)
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (reference_type)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
       (variable_identifier)))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -493,7 +493,7 @@ fun void readData( FileIO fio )
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -503,10 +503,10 @@ fun void readData( FileIO fio )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -514,7 +514,7 @@ fun void readData( FileIO fio )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -522,7 +522,7 @@ fun void readData( FileIO fio )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -533,7 +533,7 @@ fun void readData( FileIO fio )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (cast
@@ -547,7 +547,7 @@ fun void readData( FileIO fio )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -558,7 +558,7 @@ fun void readData( FileIO fio )
           (operator)
           (variable_identifier))
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -568,7 +568,7 @@ fun void readData( FileIO fio )
           (variable_identifier)
           (operator)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -579,7 +579,7 @@ fun void readData( FileIO fio )
           (operator)
           (variable_identifier))
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -589,15 +589,15 @@ fun void readData( FileIO fio )
           (variable_identifier)
           (operator)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -615,12 +615,12 @@ fun void readData( FileIO fio )
     (post_increment_expression
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (variable_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
@@ -628,7 +628,7 @@ fun void readData( FileIO fio )
             (variable_identifier))
           (variable_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (float)
@@ -653,7 +653,7 @@ fun void readData( FileIO fio )
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -664,7 +664,7 @@ fun void readData( FileIO fio )
                 (variable_identifier))
               (class_identifier)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (array_identifier
@@ -674,7 +674,7 @@ fun void readData( FileIO fio )
                   (variable_identifier)))
               (chuck_operator)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (binary_expression
@@ -702,14 +702,14 @@ fun void readData( FileIO fio )
             (member_identifier
               (class_identifier)
               (variable_identifier)))))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (int)
@@ -724,7 +724,7 @@ fun void readData( FileIO fio )
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (array_identifier
@@ -801,7 +801,7 @@ fun void readData( FileIO fio )
               (variable_declaration
                 (primitive_type)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (for_loop
             (chuck_operation
               (int)
@@ -833,14 +833,14 @@ fun void readData( FileIO fio )
                   (variable_identifier)
                   (variable_identifier)
                   (variable_identifier)))))))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (array_declaration
           (primitive_type)
@@ -851,7 +851,7 @@ fun void readData( FileIO fio )
         (variable_declaration
           (primitive_type)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (binary_expression
@@ -869,7 +869,7 @@ fun void readData( FileIO fio )
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -882,7 +882,7 @@ fun void readData( FileIO fio )
               (variable_declaration
                 (primitive_type)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (for_loop
             (chuck_operation
               (int)
@@ -928,7 +928,7 @@ fun void readData( FileIO fio )
                     (variable_identifier)
                     (variable_identifier)
                     (variable_identifier))))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (array_identifier
@@ -952,9 +952,9 @@ fun void readData( FileIO fio )
               (array_identifier
                 (variable_identifier)
                 (variable_identifier))))))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -962,7 +962,7 @@ fun void readData( FileIO fio )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -989,7 +989,7 @@ fun void readData( FileIO fio )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -1004,7 +1004,7 @@ fun void readData( FileIO fio )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (int)
@@ -1019,7 +1019,7 @@ fun void readData( FileIO fio )
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (binary_expression
@@ -1032,7 +1032,7 @@ fun void readData( FileIO fio )
               (operator)
               (variable_identifier))
             (block
-              (comment)
+              (line_comment)
               (for_loop
                 (chuck_operation
                   (int)
@@ -1057,7 +1057,7 @@ fun void readData( FileIO fio )
                       (variable_identifier)
                       (variable_identifier)
                       (variable_identifier)))))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (array_identifier
@@ -1067,13 +1067,13 @@ fun void readData( FileIO fio )
                   (array_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (post_increment_expression
                   (variable_identifier))))
-            (comment)
+            (line_comment)
             (block
-              (comment)
+              (line_comment)
               (for_loop
                 (chuck_operation
                   (int)
@@ -1098,7 +1098,7 @@ fun void readData( FileIO fio )
                       (variable_identifier)
                       (variable_identifier)
                       (variable_identifier)))))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (array_identifier
@@ -1108,13 +1108,13 @@ fun void readData( FileIO fio )
                   (array_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (post_increment_expression
                   (variable_identifier)))))))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (class_identifier)
     (variable_identifier)
@@ -1122,7 +1122,7 @@ fun void readData( FileIO fio )
       (reference_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -1133,7 +1133,7 @@ fun void readData( FileIO fio )
           (int)
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (class_identifier)
@@ -1149,18 +1149,18 @@ fun void readData( FileIO fio )
               (class_identifier)
               (class_identifier))))
         (block
-          (comment)
+          (line_comment)
           (statement
             (debug_print
               (string)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (variable_identifier))))
       (statement
@@ -1171,14 +1171,14 @@ fun void readData( FileIO fio )
         (variable_declaration
           (reference_type)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (loop
         (function_call
           (member_identifier
             (variable_identifier)
             (variable_identifier)))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -1189,7 +1189,7 @@ fun void readData( FileIO fio )
                 (variable_identifier))
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (variable_identifier)
@@ -1204,26 +1204,26 @@ fun void readData( FileIO fio )
                   (variable_identifier)
                   (chuck_operator)
                   (variable_identifier)))))))
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
             (variable_identifier)
             (variable_identifier))
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (negative_expression
             (int))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (loop
         (function_call
           (member_identifier
@@ -1238,7 +1238,7 @@ fun void readData( FileIO fio )
           (statement
             (post_increment_expression
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (binary_expression
@@ -1262,19 +1262,19 @@ fun void readData( FileIO fio )
                 (variable_identifier))))
           (statement
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (string)
           (variable_identifier)
           (string)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (variable_identifier))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -1282,14 +1282,14 @@ fun void readData( FileIO fio )
       (class_identifier)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
             (variable_identifier)
             (variable_identifier))
           (int)))
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (reference_type)
@@ -1305,7 +1305,7 @@ fun void readData( FileIO fio )
           (chuck_operator)
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (expression_group
@@ -1324,7 +1324,7 @@ fun void readData( FileIO fio )
                   (operator)
                   (int))))
             (block
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (variable_identifier)
@@ -1332,7 +1332,7 @@ fun void readData( FileIO fio )
                   (array_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (int)
@@ -1340,18 +1340,18 @@ fun void readData( FileIO fio )
                   (array_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (post_increment_expression
                   (variable_identifier)))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (int)
                   (chuck_operator)
                   (variable_identifier))))
             (block
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (function_call
@@ -1364,18 +1364,18 @@ fun void readData( FileIO fio )
                     (variable_identifier)
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (post_increment_expression
                   (variable_identifier)))))))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
             (variable_identifier)
             (variable_identifier))
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (for_loop
         (variable_declaration
           (primitive_type)
@@ -1399,7 +1399,7 @@ fun void readData( FileIO fio )
                 (array_identifier
                   (variable_identifier)
                   (variable_identifier)))))))
-      (comment)
+      (line_comment)
       (for_loop
         (variable_declaration
           (primitive_type)
@@ -1414,7 +1414,7 @@ fun void readData( FileIO fio )
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (array_identifier

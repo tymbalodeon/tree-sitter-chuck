@@ -43,8 +43,8 @@ SinOsc s => dac;
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (block_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -53,7 +53,7 @@ SinOsc s => dac;
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -61,7 +61,7 @@ SinOsc s => dac;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -77,8 +77,8 @@ SinOsc s => dac;
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -86,8 +86,8 @@ SinOsc s => dac;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -96,8 +96,8 @@ SinOsc s => dac;
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -105,7 +105,7 @@ SinOsc s => dac;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -114,7 +114,7 @@ SinOsc s => dac;
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -130,7 +130,7 @@ SinOsc s => dac;
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -138,7 +138,7 @@ SinOsc s => dac;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -146,7 +146,7 @@ SinOsc s => dac;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -155,8 +155,8 @@ SinOsc s => dac;
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)

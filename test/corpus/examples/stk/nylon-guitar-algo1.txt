@@ -143,13 +143,13 @@ fun void solo()  {
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -158,7 +158,7 @@ fun void solo()  {
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -166,7 +166,7 @@ fun void solo()  {
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (class_identifier)
@@ -259,7 +259,7 @@ fun void solo()  {
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -310,7 +310,7 @@ fun void solo()  {
                 (variable_identifier))
               (variable_identifier)
               (int)))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -380,7 +380,7 @@ fun void solo()  {
                 (variable_identifier))
               (variable_identifier)
               (int)))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier

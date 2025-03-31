@@ -11,15 +11,15 @@ int foo[10];
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
-  (comment))
+  (line_comment)
+  (line_comment))
 
 =================
 Object references
@@ -34,14 +34,14 @@ Object @ group[10];
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (reference_type)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (reference_declaration
       (reference_type)

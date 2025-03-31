@@ -14,13 +14,13 @@ int foo[];
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -29,7 +29,7 @@ int foo[];
         (int))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (array_identifier
@@ -58,7 +58,7 @@ print( foo );
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -67,7 +67,7 @@ print( foo );
       (array_identifier
         (variable_identifier)))
     (block
-      (comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (int)
@@ -89,7 +89,7 @@ print( foo );
             (array_identifier
               (variable_identifier)
               (int)))))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -99,7 +99,7 @@ print( foo );
         (int)
         (int)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -131,14 +131,14 @@ the_array => int foo[] => int bar[];
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -153,9 +153,9 @@ the_array => int foo[] => int bar[];
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -168,7 +168,7 @@ the_array => int foo[] => int bar[];
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment))
+  (line_comment))
 
 ============
 Sub-sections
@@ -185,7 +185,7 @@ foo3D[2] => int bar[][];
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
@@ -194,7 +194,7 @@ foo3D[2] => int bar[][];
         (int)
         (int)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array_identifier
@@ -205,4 +205,4 @@ foo3D[2] => int bar[][];
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment))
+  (line_comment))

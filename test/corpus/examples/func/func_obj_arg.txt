@@ -36,7 +36,7 @@ if( a.x == 10 ) <<<"success">>>;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
@@ -83,7 +83,7 @@ if( a.x == 10 ) <<<"success">>>;
                 (variable_identifier))
               (chuck_operator)
               (variable_identifier)))))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
@@ -92,14 +92,14 @@ if( a.x == 10 ) <<<"success">>>;
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (member_identifier

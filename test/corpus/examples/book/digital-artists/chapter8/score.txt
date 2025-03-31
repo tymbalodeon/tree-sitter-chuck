@@ -33,9 +33,9 @@ Machine.add(drumsPath) => drumsID;   // (6) ...then adds it back in
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -60,7 +60,7 @@ Machine.add(drumsPath) => drumsID;   // (6) ...then adds it back in
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -92,7 +92,7 @@ Machine.add(drumsPath) => drumsID;   // (6) ...then adds it back in
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -117,7 +117,7 @@ Machine.add(drumsPath) => drumsID;   // (6) ...then adds it back in
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -142,14 +142,14 @@ Machine.add(drumsPath) => drumsID;   // (6) ...then adds it back in
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (class_identifier)
         (variable_identifier))
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -158,7 +158,7 @@ Machine.add(drumsPath) => drumsID;   // (6) ...then adds it back in
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -168,4 +168,4 @@ Machine.add(drumsPath) => drumsID;   // (6) ...then adds it back in
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment))
+  (line_comment))

@@ -17,7 +17,7 @@ now % 5::second => dur bar;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -28,7 +28,7 @@ now % 5::second => dur bar;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -39,7 +39,7 @@ now % 5::second => dur bar;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -54,7 +54,7 @@ now % 5::second => dur bar;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -88,7 +88,7 @@ T - (now % T) => now;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -98,8 +98,8 @@ T - (now % T) => now;
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -114,6 +114,6 @@ T - (now % T) => now;
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
-  (comment)
-  (comment))
+  (line_comment)
+  (line_comment)
+  (line_comment))

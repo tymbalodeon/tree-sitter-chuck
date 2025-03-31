@@ -105,24 +105,24 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -136,14 +136,14 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -152,14 +152,14 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
       (dur
         (int)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -168,21 +168,21 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
       (dur
         (int)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (int)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (float)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -191,14 +191,14 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (float)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -206,14 +206,14 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
         (variable_identifier))
       (keyword
         (boolean_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (float)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -234,7 +234,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
       (operator)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -259,7 +259,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -267,21 +267,21 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
         (variable_identifier))
       (keyword
         (boolean_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (int)))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -308,7 +308,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (spork_expression
           (function_call
@@ -321,7 +321,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
               (int)
               (duration_identifier))
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -330,7 +330,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -347,7 +347,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -358,7 +358,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
@@ -366,7 +366,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
           (negative_expression
             (int)))
         (block
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -374,7 +374,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
                 (variable_identifier))
               (variable_identifier)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -384,8 +384,8 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
               (dur
                 (int)
                 (duration_identifier))))
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -393,7 +393,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
                 (variable_identifier))
               (variable_identifier)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (expression_group
@@ -408,7 +408,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
@@ -416,7 +416,7 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
                 (variable_identifier))
               (variable_identifier)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)

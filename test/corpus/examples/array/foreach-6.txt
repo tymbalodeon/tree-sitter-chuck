@@ -30,34 +30,34 @@ for( Osc x : array )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (array_declaration
       (class_identifier)
       (array_identifier
         (reference_type)
         (int))))
-  (comment)
+  (line_comment)
   (for_each_loop
     (variable_declaration
       (class_identifier)
       (variable_identifier))
     (reference_type)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
           (chuck_operator)
           (keyword
             (global_unit_generator))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (float)
@@ -65,7 +65,7 @@ for( Osc x : array )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -78,7 +78,7 @@ for( Osc x : array )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur

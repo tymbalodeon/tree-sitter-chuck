@@ -50,10 +50,10 @@ for (int i; i < 10; i++)
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -72,7 +72,7 @@ for (int i; i < 10; i++)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -80,7 +80,7 @@ for (int i; i < 10; i++)
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (keyword
@@ -89,7 +89,7 @@ for (int i; i < 10; i++)
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -102,19 +102,19 @@ for (int i; i < 10; i++)
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (cast
@@ -132,7 +132,7 @@ for (int i; i < 10; i++)
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (variable_identifier)
@@ -155,7 +155,7 @@ for (int i; i < 10; i++)
         (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (function_call
@@ -175,13 +175,13 @@ for (int i; i < 10; i++)
                   (variable_identifier)
                   (chuck_operator)
                   (variable_identifier)))))))
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (variable_identifier)
           (operator)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (for_loop
     (variable_declaration
       (primitive_type)
@@ -193,7 +193,7 @@ for (int i; i < 10; i++)
     (post_increment_expression
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -214,7 +214,7 @@ for (int i; i < 10; i++)
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -226,7 +226,7 @@ for (int i; i < 10; i++)
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (string)

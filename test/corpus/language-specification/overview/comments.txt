@@ -8,12 +8,12 @@ int foo; // another comment
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment))
+  (line_comment))
 
 ==============
 Block comments
@@ -27,4 +27,4 @@ Block comments
 ---
 
 (source_file
-  (comment))
+  (block_comment))

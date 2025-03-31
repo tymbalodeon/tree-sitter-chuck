@@ -56,11 +56,11 @@ fun void sendloop( string oscAddress )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -68,7 +68,7 @@ fun void sendloop( string oscAddress )
       (variable_declaration
         (reference_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -76,7 +76,7 @@ fun void sendloop( string oscAddress )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (function_call
       (member_identifier
@@ -109,13 +109,13 @@ fun void sendloop( string oscAddress )
             (variable_identifier)))
         (chuck_operator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -124,13 +124,13 @@ fun void sendloop( string oscAddress )
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
@@ -142,7 +142,7 @@ fun void sendloop( string oscAddress )
         (chuck_operator)
         (keyword
           (special_literal_value)))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -150,12 +150,12 @@ fun void sendloop( string oscAddress )
       (reference_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (class_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
@@ -163,19 +163,19 @@ fun void sendloop( string oscAddress )
             (variable_identifier))
           (variable_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -188,7 +188,7 @@ fun void sendloop( string oscAddress )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -201,13 +201,13 @@ fun void sendloop( string oscAddress )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur

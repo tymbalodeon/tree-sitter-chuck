@@ -8,7 +8,7 @@ Declaration
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)

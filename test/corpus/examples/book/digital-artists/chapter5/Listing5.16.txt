@@ -26,7 +26,7 @@ fun int factorial( int x)
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -40,11 +40,11 @@ fun int factorial( int x)
           (operator)
           (int))
         (block
-          (comment)
+          (line_comment)
           (statement
             (int)))
         (block
-          (comment)
+          (line_comment)
           (statement
             (expression_group
               (binary_expression
@@ -56,7 +56,7 @@ fun int factorial( int x)
                     (variable_identifier)
                     (operator)
                     (int))))))))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (function_call

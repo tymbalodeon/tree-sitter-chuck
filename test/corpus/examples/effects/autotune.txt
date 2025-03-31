@@ -248,24 +248,24 @@ fun float closest( float testval, int list[] )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -279,7 +279,7 @@ fun float closest( float testval, int list[] )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -287,7 +287,7 @@ fun float closest( float testval, int list[] )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -295,7 +295,7 @@ fun float closest( float testval, int list[] )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -322,7 +322,7 @@ fun float closest( float testval, int list[] )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -330,7 +330,7 @@ fun float closest( float testval, int list[] )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -340,7 +340,7 @@ fun float closest( float testval, int list[] )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -355,7 +355,7 @@ fun float closest( float testval, int list[] )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -363,7 +363,7 @@ fun float closest( float testval, int list[] )
       (variable_declaration
         (reference_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (binary_expression
       (binary_expression
@@ -381,7 +381,7 @@ fun float closest( float testval, int list[] )
         (member_identifier
           (class_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -394,10 +394,10 @@ fun float closest( float testval, int list[] )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (conditional
     (binary_expression
       (int)
@@ -420,7 +420,7 @@ fun float closest( float testval, int list[] )
           (chuck_operator)
           (keyword
             (global_unit_generator))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (string)
@@ -428,7 +428,7 @@ fun float closest( float testval, int list[] )
           (variable_declaration
             (reference_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (binary_expression
@@ -446,7 +446,7 @@ fun float closest( float testval, int list[] )
             (member_identifier
               (class_identifier)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -460,7 +460,7 @@ fun float closest( float testval, int list[] )
             (variable_identifier)
             (variable_identifier)))))
     (block
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (binary_expression
@@ -472,7 +472,7 @@ fun float closest( float testval, int list[] )
             (member_identifier
               (class_identifier)
               (variable_identifier)))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -485,7 +485,7 @@ fun float closest( float testval, int list[] )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -493,7 +493,7 @@ fun float closest( float testval, int list[] )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -504,7 +504,7 @@ fun float closest( float testval, int list[] )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -512,7 +512,7 @@ fun float closest( float testval, int list[] )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -520,7 +520,7 @@ fun float closest( float testval, int list[] )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -539,13 +539,13 @@ fun float closest( float testval, int list[] )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -553,7 +553,7 @@ fun float closest( float testval, int list[] )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -569,7 +569,7 @@ fun float closest( float testval, int list[] )
       (dur
         (int)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -584,7 +584,7 @@ fun float closest( float testval, int list[] )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -592,7 +592,7 @@ fun float closest( float testval, int list[] )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -600,7 +600,7 @@ fun float closest( float testval, int list[] )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -613,12 +613,12 @@ fun float closest( float testval, int list[] )
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -630,7 +630,7 @@ fun float closest( float testval, int list[] )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -649,18 +649,18 @@ fun float closest( float testval, int list[] )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (binary_expression
       (keyword
@@ -668,7 +668,7 @@ fun float closest( float testval, int list[] )
       (operator)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (keyword
@@ -676,7 +676,7 @@ fun float closest( float testval, int list[] )
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -687,7 +687,7 @@ fun float closest( float testval, int list[] )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -698,7 +698,7 @@ fun float closest( float testval, int list[] )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (binary_expression
@@ -737,7 +737,7 @@ fun float closest( float testval, int list[] )
               (variable_identifier)
               (chuck_operator)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
@@ -753,7 +753,7 @@ fun float closest( float testval, int list[] )
             (member_identifier
               (variable_identifier)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (keyword
@@ -767,7 +767,7 @@ fun float closest( float testval, int list[] )
             (member_identifier
               (variable_identifier)
               (variable_identifier)))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -776,7 +776,7 @@ fun float closest( float testval, int list[] )
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -803,7 +803,7 @@ fun float closest( float testval, int list[] )
             (int))
           (chuck_operator)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -896,12 +896,12 @@ fun float closest( float testval, int list[] )
                     (array_identifier
                       (variable_identifier)
                       (variable_identifier)))))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (chuck_operation
@@ -914,7 +914,7 @@ fun float closest( float testval, int list[] )
               (variable_identifier)))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (float)
@@ -922,7 +922,7 @@ fun float closest( float testval, int list[] )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -930,20 +930,20 @@ fun float closest( float testval, int list[] )
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (for_each_loop
             (variable_declaration
               (primitive_type)
               (variable_identifier))
             (variable_identifier)
             (block
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (chuck_operation
@@ -960,7 +960,7 @@ fun float closest( float testval, int list[] )
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (int)
@@ -968,7 +968,7 @@ fun float closest( float testval, int list[] )
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (dur
@@ -977,8 +977,8 @@ fun float closest( float testval, int list[] )
                   (chuck_operator)
                   (keyword
                     (special_literal_value))))))))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -990,7 +990,7 @@ fun float closest( float testval, int list[] )
       (array_identifier
         (variable_identifier)))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -1005,7 +1005,7 @@ fun float closest( float testval, int list[] )
         (variable_declaration
           (primitive_type)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -1017,7 +1017,7 @@ fun float closest( float testval, int list[] )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (loop
         (binary_expression
           (binary_expression
@@ -1056,7 +1056,7 @@ fun float closest( float testval, int list[] )
         (variable_declaration
           (primitive_type)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (for_loop
         (variable_declaration
           (primitive_type)
@@ -1119,7 +1119,7 @@ fun float closest( float testval, int list[] )
                   (variable_identifier)
                   (chuck_operator)
                   (variable_identifier)))))))
-      (comment)
+      (line_comment)
       (for_loop
         (variable_declaration
           (primitive_type)
@@ -1188,7 +1188,7 @@ fun float closest( float testval, int list[] )
                     (int))
                   (chuck_operator)
                   (variable_identifier)))))))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier

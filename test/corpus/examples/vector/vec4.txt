@@ -37,7 +37,7 @@ a.dot(b) => float dot;
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (reference_values
@@ -49,7 +49,7 @@ a.dot(b) => float dot;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (reference_values
@@ -61,7 +61,7 @@ a.dot(b) => float dot;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -72,7 +72,7 @@ a.dot(b) => float dot;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -83,7 +83,7 @@ a.dot(b) => float dot;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -94,7 +94,7 @@ a.dot(b) => float dot;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -106,7 +106,7 @@ a.dot(b) => float dot;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -118,27 +118,27 @@ a.dot(b) => float dot;
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -150,7 +150,7 @@ a.dot(b) => float dot;
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (array_identifier

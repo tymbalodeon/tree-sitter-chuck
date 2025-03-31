@@ -21,15 +21,15 @@ int a[7];    // (1) Declares an array of specific length (7)
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -37,38 +37,7 @@ int a[7];    // (1) Declares an array of specific length (7)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
-  (statement
-    (chuck_operation
-      (int)
-      (chuck_operator)
-      (array_identifier
-        (variable_identifier)
-        (int))))
-  (statement
-    (chuck_operation
-      (int)
-      (chuck_operator)
-      (array_identifier
-        (variable_identifier)
-        (int))))
-  (comment)
-  (statement
-    (chuck_operation
-      (int)
-      (chuck_operator)
-      (array_identifier
-        (variable_identifier)
-        (int))))
-  (comment)
-  (statement
-    (chuck_operation
-      (int)
-      (chuck_operator)
-      (array_identifier
-        (variable_identifier)
-        (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -83,7 +52,38 @@ int a[7];    // (1) Declares an array of specific length (7)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (int))))
+  (line_comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (int))))
+  (line_comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (int))))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (array_identifier
+        (variable_identifier)
+        (int))))
+  (line_comment)
   (statement
     (debug_print
       (array_identifier
