@@ -1,6 +1,5 @@
 ========
 Read int
-:skip
 ========
 
 //---------------------------------------------------------------------
@@ -40,4 +39,104 @@ while( fio => val )
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (statement
+    (chuck_operation
+      (binary_expression
+        (function_call
+          (member_identifier
+            (variable_identifier)))
+        (operator)
+        (string))
+      (chuck_operator)
+      (variable_declaration
+        (reference_type)
+        (variable_identifier))))
+  (comment)
+  (conditional
+    (binary_expression
+      (function_call
+        (member_identifier
+          (variable_identifier)))
+      (operator)
+      (int))
+    (statement
+      (chuck_operation
+        (function_call
+          (member_identifier
+            (variable_identifier))
+          (int))
+        (chuck_operator)
+        (variable_identifier))))
+  (comment)
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier)))
+  (comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (variable_identifier)
+      (member_identifier
+        (class_identifier)
+        (class_identifier))))
+  (comment)
+  (conditional
+    (negation_expression
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier))))
+    (block
+      (statement
+        (binary_expression
+          (binary_expression
+            (binary_expression
+              (binary_expression
+                (variable_identifier)
+                (operator)
+                (string))
+              (operator)
+              (variable_identifier))
+            (operator)
+            (string))
+          (operator)
+          (function_call
+            (member_identifier
+              (class_identifier)
+              (variable_identifier)))))
+      (statement
+        (function_call
+          (member_identifier
+            (variable_identifier))))))
+  (comment)
+  (statement
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier)))
+  (comment)
+  (loop
+    (chuck_operation
+      (variable_identifier)
+      (chuck_operator)
+      (variable_identifier))
+    (block
+      (statement
+        (binary_expression
+          (binary_expression
+            (variable_identifier)
+            (operator)
+            (variable_identifier))
+          (operator)
+          (function_call
+            (member_identifier
+              (class_identifier)
+              (variable_identifier))))))))

@@ -1,6 +1,5 @@
 =============
 Ctrl for loop
-:skip
 =============
 
 // for loop ( factorial ) , -=>, *=>
@@ -27,4 +26,64 @@ if ( x == 24 ) <<<"success">>>;
 
 ---
 
-(source_file)
+(source_file
+  (comment)
+  (comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (block
+      (statement
+        (chuck_operation
+          (int)
+          (chuck_operator)
+          (variable_declaration
+            (primitive_type)
+            (variable_identifier))))
+      (statement
+        (chuck_operation
+          (variable_identifier)
+          (chuck_operator)
+          (variable_declaration
+            (primitive_type)
+            (variable_identifier))))
+      (for_loop
+        (variable_identifier)
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (int))
+        (chuck_operation
+          (int)
+          (chuck_operator)
+          (variable_identifier))
+        (block
+          (statement
+            (chuck_operation
+              (variable_identifier)
+              (chuck_operator)
+              (variable_identifier)))))
+      (statement
+        (variable_identifier))))
+  (comment)
+  (statement
+    (chuck_operation
+      (function_call
+        (variable_identifier)
+        (int))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (comment)
+  (conditional
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (statement
+      (debug_print
+        (string)))))

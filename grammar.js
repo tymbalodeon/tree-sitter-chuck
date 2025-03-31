@@ -247,7 +247,7 @@ module.exports = grammar({
         ";",
         $.binary_expression,
         ";",
-        $._expression,
+        choice($.chuck_operation, $._expression),
         ")",
         $._control_structure_body,
       ),
