@@ -82,7 +82,13 @@ module.exports = grammar({
         seq(
           choice($.chuck_operation, $._expression),
           $.chuck_operator,
-          choice($._declaration, $._identifier, $.keyword, $.member_identifier),
+          choice(
+            $._declaration,
+            $.function_call,
+            $._identifier,
+            $.keyword,
+            $.member_identifier,
+          ),
         ),
         seq("(", $.chuck_operation, ")"),
       ),
