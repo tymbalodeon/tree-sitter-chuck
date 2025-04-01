@@ -74,7 +74,7 @@ module.exports = grammar({
     block_comment: () => token(seq("/*", /[^*]*\*+([^/*][^*]*\*+)*/, "/")),
     boolean_literal_value: () => choice("false", "true"),
     cast: ($) => seq($._expression, "$", $.primitive_type),
-    character: () => seq("'", /[^\s]/, "'"),
+    character: ($) => seq("'", choice(/[^\s]/, $.escape_character), "'"),
     _chuck_keyword: () => choice("const", "function", "global", "spork"),
 
     chuck_operation: ($) =>
@@ -194,6 +194,9 @@ module.exports = grammar({
           $.variable_identifier,
         ),
       ),
+
+    escape_character: () =>
+      token(seq("\\", choice(/[0-1][0-7][0-7]/, "0", "a", "n", "t", '"'))),
 
     _expression: ($) =>
       prec(

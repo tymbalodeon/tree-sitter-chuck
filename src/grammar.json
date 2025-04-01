@@ -288,8 +288,17 @@
           "value": "'"
         },
         {
-          "type": "PATTERN",
-          "value": "[^\\s]"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "PATTERN",
+              "value": "[^\\s]"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "escape_character"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -825,6 +834,47 @@
           ]
         }
       ]
+    },
+    "escape_character": {
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "\\"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "[0-1][0-7][0-7]"
+              },
+              {
+                "type": "STRING",
+                "value": "0"
+              },
+              {
+                "type": "STRING",
+                "value": "a"
+              },
+              {
+                "type": "STRING",
+                "value": "n"
+              },
+              {
+                "type": "STRING",
+                "value": "t"
+              },
+              {
+                "type": "STRING",
+                "value": "\""
+              }
+            ]
+          }
+        ]
+      }
     },
     "_expression": {
       "type": "PREC",
