@@ -32,7 +32,9 @@ parse +file:
                 | find --no-highlight "{{ file }}"
             )
 
-            if ($files | length) == 1 {
+            if ($files | length) == 0 {
+                return
+            } else if ($files | length) == 1 {
                 $files
                 | first
             } else {
@@ -94,7 +96,9 @@ highlight *file:
                 | find --no-highlight "{{ file }}"
             )
 
-            if ($files | length) == 1 {
+            if ($files | length) == 0 {
+                return
+            } else if ($files | length) == 1 {
                 $files
                 | first
             } else {
@@ -148,7 +152,9 @@ open *file:
                 | find --no-highlight "{{ file }}"
             )
 
-            if ($files | length) == 1 {
+            if ($files | length) == 0 {
+                return
+            } else if ($files | length) == 1 {
                 $files
                 | first
             } else {

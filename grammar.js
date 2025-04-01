@@ -512,6 +512,7 @@ module.exports = grammar({
       seq(
         optional("static"),
         choice($.class_identifier, $.primitive_type, $.reference_type),
+        optional("[]"),
       ),
 
     _until_while_expression: ($) =>
