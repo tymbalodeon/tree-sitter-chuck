@@ -93,6 +93,7 @@ module.exports = grammar({
         "&=>",
         "*=>",
         "+=>",
+        "-->",
         "-=>",
         "/=>",
         "=<",
@@ -452,7 +453,7 @@ module.exports = grammar({
 
     string: () => {
       const delimeter = '"';
-      return seq(delimeter, optional(/[^"]*/), delimeter);
+      return seq(delimeter, /[^"]*/, delimeter);
     },
 
     ternary_expression: ($) =>

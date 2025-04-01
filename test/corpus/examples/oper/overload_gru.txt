@@ -1,6 +1,5 @@
 ============
 Overload gru
-:skip
 ============
 
 // example overloading the new gruck (graphical chuck) operator,
@@ -32,4 +31,85 @@ foo --> bar --> zaz;
 
 ---
 
-(source_file)
+(source_file
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (class_definition
+    (class_identifier)
+    (block
+      (statement
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier)))))
+  (line_comment)
+  (overload_definition
+    (class_identifier)
+    (chuck_operator)
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier))
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier))
+    (block
+      (statement
+        (debug_print
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (statement
+        (variable_identifier))))
+  (line_comment)
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (statement
+    (variable_declaration
+      (class_identifier)
+      (variable_identifier)))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (line_comment)
+  (statement
+    (chuck_operation
+      (variable_identifier)
+      (chuck_operator)
+      (variable_identifier)))
+  (line_comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (variable_identifier)
+        (chuck_operator)
+        (variable_identifier))
+      (chuck_operator)
+      (variable_identifier)))
+  (line_comment))

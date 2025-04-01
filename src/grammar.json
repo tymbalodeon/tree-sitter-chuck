@@ -404,6 +404,10 @@
         },
         {
           "type": "STRING",
+          "value": "-->"
+        },
+        {
+          "type": "STRING",
           "value": "-=>"
         },
         {
@@ -2275,16 +2279,8 @@
           "value": "\""
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "PATTERN",
-              "value": "[^\"]*"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
+          "type": "PATTERN",
+          "value": "[^\"]*"
         },
         {
           "type": "STRING",
