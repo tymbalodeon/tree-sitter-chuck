@@ -1,6 +1,5 @@
 ======
 Dither
-:skip
 ======
 
 // dither.ck
@@ -72,15 +71,15 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -89,7 +88,7 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -105,7 +104,7 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)
@@ -190,7 +189,7 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -207,7 +206,7 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (binary_expression
@@ -225,7 +224,7 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
               (string)
               (string)))
           (statement)))
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (primitive_type)
@@ -253,7 +252,7 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
             (int))
           (duration_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -262,10 +261,10 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
                   (variable_identifier)))
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (conditional
             (variable_identifier)
-            (comment)
+            (line_comment)
             (statement
               (chuck_operation
                 (cast
@@ -292,7 +291,7 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
                   (primitive_type))
                 (chuck_operator)
                 (variable_identifier)))
-            (comment)
+            (line_comment)
             (statement
               (chuck_operation
                 (cast
@@ -304,7 +303,7 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
                   (primitive_type))
                 (chuck_operator)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -324,7 +323,7 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
                     (variable_identifier))))
               (chuck_operator)
               (variable_identifier)))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -338,7 +337,7 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -347,7 +346,7 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur

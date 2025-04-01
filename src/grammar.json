@@ -275,8 +275,17 @@
           "value": "$"
         },
         {
-          "type": "SYMBOL",
-          "name": "primitive_type"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "primitive_type"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "reference_type"
+            }
+          ]
         }
       ]
     },

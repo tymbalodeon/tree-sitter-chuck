@@ -73,7 +73,10 @@ module.exports = grammar({
 
     block_comment: () => token(seq("/*", /[^*]*\*+([^/*][^*]*\*+)*/, "/")),
     boolean_literal_value: () => choice("false", "true"),
-    cast: ($) => seq($._expression, "$", $.primitive_type),
+
+    cast: ($) =>
+      seq($._expression, "$", choice($.primitive_type, $.reference_type)),
+
     character: ($) => seq("'", choice(/[^\s]/, $.escape_character), "'"),
     _chuck_keyword: () => choice("const", "function", "global", "spork"),
 
