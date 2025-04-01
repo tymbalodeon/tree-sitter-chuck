@@ -1299,21 +1299,25 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "fun"
-            },
-            {
-              "type": "STRING",
-              "value": "function"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "_function_keyword"
         },
         {
           "type": "SYMBOL",
           "name": "_function_name_and_body"
+        }
+      ]
+    },
+    "_function_keyword": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "fun"
+        },
+        {
+          "type": "STRING",
+          "value": "function"
         }
       ]
     },
@@ -1345,6 +1349,19 @@
             }
           ]
         },
+        {
+          "type": "SYMBOL",
+          "name": "_function_parameters"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "block"
+        }
+      ]
+    },
+    "_function_parameters": {
+      "type": "SEQ",
+      "members": [
         {
           "type": "STRING",
           "value": "("
@@ -1389,10 +1406,6 @@
         {
           "type": "STRING",
           "value": ")"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "block"
         }
       ]
     },
@@ -1743,8 +1756,34 @@
           ]
         },
         {
-          "type": "SYMBOL",
-          "name": "_function_name_and_body"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "_function_keyword"
+                },
+                {
+                  "type": "STRING",
+                  "value": "@construct"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_function_parameters"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "block"
+                }
+              ]
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_function_name_and_body"
+            }
+          ]
         }
       ]
     },
@@ -1896,19 +1935,15 @@
           "members": [
             {
               "type": "STRING",
-              "value": "fun"
-            },
-            {
-              "type": "STRING",
-              "value": "function"
-            },
-            {
-              "type": "STRING",
               "value": "private"
             },
             {
               "type": "STRING",
               "value": "public"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_function_keyword"
             }
           ]
         },

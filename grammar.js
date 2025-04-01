@@ -285,19 +285,26 @@ module.exports = grammar({
       seq($.function_call, repeat1(prec.left(seq(".", $.function_call)))),
 
     function_definition: ($) =>
-      seq(choice("fun", "function"), $._function_name_and_body),
+      seq($._function_keyword, $._function_name_and_body),
+
+    _function_keyword: () => choice("fun", "function"),
 
     _function_name_and_body: ($) =>
       seq(
         optional($._type),
         choice($.class_identifier, $.variable_identifier),
+        $._function_parameters,
+        $.block,
+      ),
+
+    _function_parameters: ($) =>
+      seq(
         "(",
         field(
           "parameter",
           optional(seq($._declaration, repeat(seq(",", $._declaration)))),
         ),
         ")",
-        $.block,
       ),
 
     global_unit_generator: () => choice("adc", "blackhole", "dac"),
@@ -366,7 +373,18 @@ module.exports = grammar({
       ),
 
     method_definition: ($) =>
-      seq(optional("public"), $._function_name_and_body),
+      seq(
+        optional("public"),
+        choice(
+          seq(
+            $._function_keyword,
+            "@construct",
+            $._function_parameters,
+            $.block,
+          ),
+          $._function_name_and_body,
+        ),
+      ),
 
     negation_expression: ($) => prec.left(seq("!", $._expression)),
     negative_expression: ($) => prec.left(seq("-", $._expression)),
@@ -409,7 +427,7 @@ module.exports = grammar({
       );
 
       return seq(
-        choice("fun", "function", "private", "public"),
+        choice("private", "public", $._function_keyword),
         $._type,
         "@operator",
         choice(seq(operator, parameters), seq(parameters, operator)),

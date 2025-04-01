@@ -171,6 +171,8 @@ open *file:
     | split row "=\n"
     | last
     | str trim
+    | prepend $"// ($temporary_file)\n\n"
+    | to text
     | save --force $temporary_file
 
     hx $temporary_file

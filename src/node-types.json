@@ -4357,6 +4357,10 @@
     "named": false
   },
   {
+    "type": "@construct",
+    "named": false
+  },
+  {
     "type": "@import",
     "named": false
   },
