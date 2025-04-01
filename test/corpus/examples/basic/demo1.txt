@@ -1,6 +1,5 @@
 =====
 Demo1
-:skip
 =====
 
 // demo1.ck
@@ -18,7 +17,67 @@ while( c > 0 )
     c - 1 => c;
 }
 
-
 ---
 
-(source_file)
+(source_file
+  (line_comment)
+  (line_comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (int)
+        (chuck_operator)
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier)))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (loop
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (block
+      (statement
+        (chuck_operation
+          (binary_expression
+            (variable_identifier)
+            (operator)
+            (variable_identifier))
+          (chuck_operator)
+          (variable_identifier)))
+      (statement
+        (chuck_operation
+          (variable_identifier)
+          (chuck_operator)
+          (variable_identifier)))
+      (statement
+        (debug_print
+          (chuck_operation
+            (variable_identifier)
+            (chuck_operator)
+            (variable_identifier))))
+      (statement
+        (chuck_operation
+          (binary_expression
+            (variable_identifier)
+            (operator)
+            (int))
+          (chuck_operator)
+          (variable_identifier))))))

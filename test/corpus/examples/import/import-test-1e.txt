@@ -1,6 +1,5 @@
 ==============
 Import test 1e
-:skip
 ==============
 
 // import statements in code evaluated by Machine.eval inherits
@@ -15,4 +14,13 @@ Machine.eval("
 
 ---
 
-(source_file)
+(source_file
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (statement
+    (function_call
+      (member_identifier
+        (class_identifier)
+        (variable_identifier))
+      (string))))

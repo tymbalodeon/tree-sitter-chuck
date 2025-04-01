@@ -1,6 +1,5 @@
 ======
 Escape
-:skip
 ======
 
 // escape sequences
@@ -29,4 +28,44 @@ Escape
 
 ---
 
-(source_file)
+(source_file
+  (line_comment)
+  (line_comment)
+  (statement
+    (debug_print
+      (string)
+      (string)))
+  (line_comment)
+  (statement
+    (debug_print
+      (string)
+      (string)))
+  (line_comment)
+  (statement
+    (debug_print
+      (string)
+      (string)))
+  (line_comment)
+  (statement
+    (debug_print
+      (string)
+      (string)))
+  (line_comment)
+  (statement
+    (debug_print
+      (string)
+      (string)))
+  (line_comment)
+  (statement
+    (chuck_operation
+      (dur
+        (int)
+        (duration_identifier))
+      (chuck_operator)
+      (keyword
+        (special_literal_value))))
+  (line_comment)
+  (statement
+    (debug_print
+      (string)
+      (string))))

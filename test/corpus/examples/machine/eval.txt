@@ -1,6 +1,5 @@
 ====
 Eval
-:skip
 ====
 
 // name: eval.ck
@@ -40,4 +39,71 @@ Machine.eval( "<<< 3 >>>;" );
 
 ---
 
-(source_file)
+(source_file
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (statement
+    (chuck_operation
+      (string)
+      (chuck_operator)
+      (variable_declaration
+        (reference_type)
+        (variable_identifier))))
+  (line_comment)
+  (conditional
+    (negation_expression
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (variable_identifier)))
+    (statement
+      (debug_print
+        (string)
+        (string))))
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (statement
+    (function_call
+      (member_identifier
+        (class_identifier)
+        (variable_identifier))
+      (string)))
+  (statement
+    (debug_print
+      (string)))
+  (statement
+    (function_call
+      (member_identifier
+        (class_identifier)
+        (variable_identifier))
+      (string)))
+  (statement
+    (debug_print
+      (string)))
+  (statement
+    (function_call
+      (member_identifier
+        (class_identifier)
+        (variable_identifier))
+      (string)))
+  (statement
+    (debug_print
+      (string))))

@@ -44,6 +44,7 @@ module.exports = grammar({
             $.class_identifier,
             $.function_call,
             $._function_call_chain,
+            $.member_identifier,
             $.reference_type,
             $.variable_identifier,
           ),
@@ -115,6 +116,7 @@ module.exports = grammar({
 
     class_definition: ($) =>
       seq(
+        optional($.doc_comment),
         optional("public"),
         "class",
         $.class_identifier,
@@ -180,6 +182,11 @@ module.exports = grammar({
         $.reference_declaration,
         $.variable_declaration,
       ),
+
+    doc_comment: ($) => seq("@doc", $.string),
+
+    documented_expression: ($) =>
+      seq($.doc_comment, choice($.chuck_operation, $._expression)),
 
     do_loop: ($) =>
       seq("do", $._control_structure_body, $._until_while_expression),
@@ -268,7 +275,7 @@ module.exports = grammar({
           seq(
             choice($.array_declaration, $.variable_declaration),
             ":",
-            choice($.array, $._identifier, $.member_identifier),
+            $._expression,
           ),
           ")",
           $._control_structure_body,
@@ -285,7 +292,11 @@ module.exports = grammar({
       seq($.function_call, repeat1(prec.left(seq(".", $.function_call)))),
 
     function_definition: ($) =>
-      seq($._function_keyword, $._function_name_and_body),
+      seq(
+        optional($.doc_comment),
+        $._function_keyword,
+        $._function_name_and_body,
+      ),
 
     _function_keyword: () => choice("fun", "function"),
 
@@ -365,20 +376,25 @@ module.exports = grammar({
       seq(
         choice(
           "me",
+          "this",
+          $.complex,
           $.expression_group,
           $.global_unit_generator,
           $._identifier,
+          $.polar,
+          $.string,
         ),
         repeat1(seq(".", choice($.class_identifier, $.variable_identifier))),
       ),
 
     method_definition: ($) =>
       seq(
+        optional($.doc_comment),
         optional("public"),
         choice(
           seq(
             $._function_keyword,
-            "@construct",
+            choice("@construct", "@destruct"),
             $._function_parameters,
             $.block,
           ),
@@ -473,6 +489,7 @@ module.exports = grammar({
             optional("return"),
             choice(
               $.chuck_operation,
+              $.documented_expression,
               $._expression,
               $._expression_list,
               $.function_definition,

@@ -1,6 +1,5 @@
 =======
 Replace
-:skip
 =======
 
 // replace all occurances of a substring with a different string
@@ -42,4 +41,95 @@ for( int x : Std.range(0,10) )
 
 ---
 
-(source_file)
+(source_file
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (statement
+    (chuck_operation
+      (string)
+      (chuck_operator)
+      (variable_declaration
+        (reference_type)
+        (variable_identifier))))
+  (line_comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (string)
+      (string)))
+  (line_comment)
+  (statement
+    (debug_print
+      (variable_identifier)))
+  (line_comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (string)
+      (string)))
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (string)
+      (string)))
+  (line_comment)
+  (statement
+    (debug_print
+      (variable_identifier)))
+  (line_comment)
+  (statement
+    (function_call
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (int)
+      (string)))
+  (line_comment)
+  (statement
+    (debug_print
+      (variable_identifier)))
+  (line_comment)
+  (for_each_loop
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (function_call
+      (member_identifier
+        (class_identifier)
+        (variable_identifier))
+      (int)
+      (int))
+    (block
+      (line_comment)
+      (statement
+        (chuck_operation
+          (variable_identifier)
+          (chuck_operator)
+          (variable_declaration
+            (reference_type)
+            (variable_identifier))))
+      (line_comment)
+      (statement
+        (function_call
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))
+          (int)
+          (variable_identifier)
+          (string)))
+      (line_comment)
+      (statement
+        (debug_print
+          (string)
+          (variable_identifier)
+          (string)
+          (variable_identifier)))))
+  (line_comment)
+  (line_comment))

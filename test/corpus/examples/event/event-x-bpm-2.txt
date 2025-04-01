@@ -1,6 +1,5 @@
 =============
 Event x bpm 2
-:skip
 =============
 
 //---------------------------------------------------------------------
@@ -147,34 +146,34 @@ fun void two()
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (class_identifier)
     (block
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (primitive_type)
           (variable_identifier)))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (variable_declaration
           (primitive_type)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (class_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -182,7 +181,7 @@ fun void two()
       (variable_declaration
         (primitive_type)
         (class_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -190,7 +189,7 @@ fun void two()
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -215,7 +214,7 @@ fun void two()
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -240,13 +239,13 @@ fun void two()
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (spork_expression
@@ -265,12 +264,12 @@ fun void two()
       (reference_declaration
         (class_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
@@ -283,17 +282,17 @@ fun void two()
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (binary_expression
@@ -314,7 +313,7 @@ fun void two()
                   (operator)
                   (int))))
             (block
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (function_call
@@ -325,19 +324,19 @@ fun void two()
                     (int))
                   (chuck_operator)
                   (class_identifier)))
-              (comment)
+              (line_comment)
               (statement
                 (debug_print
                   (string)
                   (class_identifier)))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (class_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -346,7 +345,7 @@ fun void two()
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -361,7 +360,7 @@ fun void two()
               (variable_declaration
                 (primitive_type)
                 (class_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -375,19 +374,19 @@ fun void two()
               (variable_declaration
                 (primitive_type)
                 (class_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
                 (class_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
-            (increment_expression
+            (post_increment_expression
               (member_identifier
                 (class_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (binary_expression
               (variable_identifier)
@@ -398,7 +397,7 @@ fun void two()
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (member_identifier
@@ -407,13 +406,13 @@ fun void two()
               (operator)
               (variable_identifier))
             (block
-              (comment)
+              (line_comment)
               (statement
-                (increment_expression
+                (post_increment_expression
                   (member_identifier
                     (class_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (int)
@@ -421,7 +420,7 @@ fun void two()
                   (member_identifier
                     (class_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (binary_expression
                   (variable_identifier)
@@ -430,14 +429,14 @@ fun void two()
                     (member_identifier
                       (class_identifier)
                       (variable_identifier)))))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (class_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -468,14 +467,14 @@ fun void two()
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (class_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (array_identifier
@@ -485,9 +484,9 @@ fun void two()
                   (variable_identifier)))
               (operator)
               (int))
-            (comment)
+            (line_comment)
             (block
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (int)
@@ -495,7 +494,7 @@ fun void two()
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (array_identifier
@@ -507,7 +506,7 @@ fun void two()
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (array_identifier
@@ -519,7 +518,7 @@ fun void two()
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -550,14 +549,14 @@ fun void two()
         (keyword
           (boolean_literal_value))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (class_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (int)
@@ -565,7 +564,7 @@ fun void two()
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (int)

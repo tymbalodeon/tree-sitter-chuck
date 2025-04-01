@@ -121,6 +121,10 @@
               },
               {
                 "type": "SYMBOL",
+                "name": "member_identifier"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "reference_type"
               },
               {
@@ -469,6 +473,18 @@
           "type": "CHOICE",
           "members": [
             {
+              "type": "SYMBOL",
+              "name": "doc_comment"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
               "type": "STRING",
               "value": "public"
             },
@@ -761,6 +777,41 @@
         {
           "type": "SYMBOL",
           "name": "variable_declaration"
+        }
+      ]
+    },
+    "doc_comment": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "@doc"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "documented_expression": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "doc_comment"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "chuck_operation"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_expression"
+            }
+          ]
         }
       ]
     },
@@ -1190,21 +1241,8 @@
                 "value": ":"
               },
               {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "array"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "_identifier"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "member_identifier"
-                  }
-                ]
+                "type": "SYMBOL",
+                "name": "_expression"
               }
             ]
           },
@@ -1298,6 +1336,18 @@
     "function_definition": {
       "type": "SEQ",
       "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "doc_comment"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
         {
           "type": "SYMBOL",
           "name": "_function_keyword"
@@ -1700,6 +1750,14 @@
               "value": "me"
             },
             {
+              "type": "STRING",
+              "value": "this"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "complex"
+            },
+            {
               "type": "SYMBOL",
               "name": "expression_group"
             },
@@ -1710,6 +1768,14 @@
             {
               "type": "SYMBOL",
               "name": "_identifier"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "polar"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "string"
             }
           ]
         },
@@ -1747,6 +1813,18 @@
           "type": "CHOICE",
           "members": [
             {
+              "type": "SYMBOL",
+              "name": "doc_comment"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
               "type": "STRING",
               "value": "public"
             },
@@ -1766,8 +1844,17 @@
                   "name": "_function_keyword"
                 },
                 {
-                  "type": "STRING",
-                  "value": "@construct"
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": "@construct"
+                    },
+                    {
+                      "type": "STRING",
+                      "value": "@destruct"
+                    }
+                  ]
                 },
                 {
                   "type": "SYMBOL",
@@ -2358,6 +2445,10 @@
                     {
                       "type": "SYMBOL",
                       "name": "chuck_operation"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "documented_expression"
                     },
                     {
                       "type": "SYMBOL",
