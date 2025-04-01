@@ -1,6 +1,5 @@
 ==========
 Listing4.9
-:skip
 ==========
 
 // Listing 4.9 Improving the while loop of your drum machine
@@ -42,10 +41,10 @@ while (true)
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -59,7 +58,7 @@ while (true)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -67,8 +66,8 @@ while (true)
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -93,7 +92,7 @@ while (true)
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -103,7 +102,7 @@ while (true)
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
@@ -119,11 +118,11 @@ while (true)
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
-        (comment)
+        (line_comment)
         (block
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (binary_expression
@@ -147,7 +146,7 @@ while (true)
                 (variable_identifier))
               (operator)
               (int))
-            (comment)
+            (line_comment)
             (block
               (statement
                 (chuck_operation
@@ -156,7 +155,7 @@ while (true)
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))))
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (binary_expression
@@ -180,7 +179,7 @@ while (true)
                 (variable_identifier))
               (operator)
               (int))
-            (comment)
+            (line_comment)
             (block
               (statement
                 (chuck_operation
