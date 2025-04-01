@@ -1,6 +1,5 @@
 ============
 Read wav raw
-:skip
 ============
 
 //---------------------------------------------------------------------
@@ -157,23 +156,23 @@ while( n < numSamples )
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -186,7 +185,7 @@ while( n < numSamples )
       (variable_declaration
         (reference_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (function_call
@@ -202,12 +201,12 @@ while( n < numSamples )
           (int))
         (chuck_operator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -222,7 +221,7 @@ while( n < numSamples )
         (member_identifier
           (class_identifier)
           (class_identifier)))))
-  (comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -230,7 +229,7 @@ while( n < numSamples )
           (variable_identifier)
           (variable_identifier))))
     (block
-      (comment)
+      (line_comment)
       (statement
         (binary_expression
           (binary_expression
@@ -248,17 +247,17 @@ while( n < numSamples )
             (member_identifier
               (class_identifier)
               (variable_identifier)))))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (string)
@@ -266,28 +265,28 @@ while( n < numSamples )
       (variable_declaration
         (reference_type)
         (variable_identifier))))
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -360,7 +359,7 @@ while( n < numSamples )
         (variable_identifier))
       (int)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -374,7 +373,7 @@ while( n < numSamples )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -447,7 +446,7 @@ while( n < numSamples )
         (variable_identifier))
       (int)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -520,20 +519,7 @@ while( n < numSamples )
         (variable_identifier))
       (int)
       (variable_identifier)))
-  (comment)
-  (statement
-    (chuck_operation
-      (function_call
-        (member_identifier
-          (variable_identifier)
-          (variable_identifier))
-        (member_identifier
-          (class_identifier)
-          (class_identifier)))
-      (chuck_operator)
-      (variable_declaration
-        (primitive_type)
-        (variable_identifier))))
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -612,7 +598,20 @@ while( n < numSamples )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (statement
+    (chuck_operation
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier))
+        (member_identifier
+          (class_identifier)
+          (class_identifier)))
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -685,7 +684,7 @@ while( n < numSamples )
         (variable_identifier))
       (int)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -748,14 +747,14 @@ while( n < numSamples )
     (debug_print
       (string)
       (string)))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (variable_identifier)
       (operator)
       (int))
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (string)
@@ -765,12 +764,12 @@ while( n < numSamples )
         (debug_print
           (string)
           (string)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (member_identifier
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -779,7 +778,7 @@ while( n < numSamples )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -790,14 +789,14 @@ while( n < numSamples )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (array_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -805,16 +804,16 @@ while( n < numSamples )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (binary_expression
       (variable_identifier)
       (operator)
       (variable_identifier))
-    (comment)
-    (comment)
+    (line_comment)
+    (line_comment)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -828,7 +827,7 @@ while( n < numSamples )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (chuck_operation
@@ -846,13 +845,13 @@ while( n < numSamples )
             (chuck_operator)
             (array_identifier
               (variable_identifier)
-              (increment_expression
+              (post_increment_expression
                 (variable_identifier))))
           (chuck_operator)
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (binary_expression
@@ -872,7 +871,7 @@ while( n < numSamples )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (binary_expression
@@ -892,7 +891,7 @@ while( n < numSamples )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (keyword

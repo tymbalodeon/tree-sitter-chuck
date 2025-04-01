@@ -32,6 +32,10 @@
           "named": true
         },
         {
+          "type": "chuck_operation",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -1289,6 +1293,10 @@
           "named": true
         },
         {
+          "type": "chuck_operation",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -1775,6 +1783,10 @@
           "named": true
         },
         {
+          "type": "chuck_operation",
+          "named": true
+        },
+        {
           "type": "class_identifier",
           "named": true
         },
@@ -2157,6 +2169,10 @@
           },
           {
             "type": "character",
+            "named": true
+          },
+          {
+            "type": "chuck_operation",
             "named": true
           },
           {
@@ -3583,6 +3599,10 @@
         },
         {
           "type": "character",
+          "named": true
+        },
+        {
+          "type": "chuck_operation",
           "named": true
         },
         {

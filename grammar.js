@@ -231,8 +231,10 @@ module.exports = grammar({
         seq("(", optional(choice($._expression, $._expression_list)), ")"),
       ),
 
-    _expression_list: ($) =>
-      prec.left(seq($._expression, repeat(seq(",", $._expression)))),
+    _expression_list: ($) => {
+      const expression = choice($.chuck_operation, $._expression);
+      return prec.left(seq(expression, repeat(seq(",", expression))));
+    },
 
     float: () => /((\d+)?\.\d+|\d+\.(\d_)?)/,
 

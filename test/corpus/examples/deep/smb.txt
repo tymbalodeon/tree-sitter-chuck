@@ -1,6 +1,5 @@
 ===
 Smb
-:skip
 ===
 
 // name: smb.ck
@@ -723,13 +722,13 @@ fun void druNote( int t, int val)
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -738,7 +737,7 @@ fun void druNote( int t, int val)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -747,7 +746,7 @@ fun void druNote( int t, int val)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -766,7 +765,7 @@ fun void druNote( int t, int val)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -785,7 +784,7 @@ fun void druNote( int t, int val)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -793,7 +792,7 @@ fun void druNote( int t, int val)
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (class_identifier)
@@ -817,7 +816,7 @@ fun void druNote( int t, int val)
                   (primitive_type)))
               (operator)
               (float)))))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (primitive_type)
@@ -825,7 +824,7 @@ fun void druNote( int t, int val)
     (variable_identifier)
     (variable_identifier)
     (variable_identifier))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -871,7 +870,7 @@ fun void druNote( int t, int val)
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -986,7 +985,7 @@ fun void druNote( int t, int val)
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
@@ -1019,7 +1018,7 @@ fun void druNote( int t, int val)
           (array_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -1029,7 +1028,7 @@ fun void druNote( int t, int val)
           (keyword
             (special_literal_value))))
       (statement
-        (increment_expression
+        (post_increment_expression
           (variable_identifier)))
       (conditional
         (binary_expression
@@ -1046,7 +1045,7 @@ fun void druNote( int t, int val)
               (chuck_operator)
               (variable_identifier)))
           (statement
-            (increment_expression
+            (post_increment_expression
               (variable_identifier)))))
       (conditional
         (binary_expression
@@ -1056,15 +1055,15 @@ fun void druNote( int t, int val)
             (member_identifier
               (variable_identifier)
               (variable_identifier))))
-        (comment)
+        (line_comment)
         (block
           (statement
             (chuck_operation
               (int)
               (chuck_operator)
               (variable_identifier)))
-          (comment)))))
-  (comment)
+          (line_comment)))))
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -1274,14 +1273,14 @@ fun void druNote( int t, int val)
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (variable_declaration
       (primitive_type)
       (variable_identifier))
-    (comment)
+    (line_comment)
     (block
       (conditional
         (binary_expression
@@ -1481,7 +1480,7 @@ fun void druNote( int t, int val)
                               (statement
                                 (function_call
                                   (variable_identifier)))))))))))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -1951,8 +1950,8 @@ fun void druNote( int t, int val)
           (variable_identifier)
           (int)
           (int)))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -2442,8 +2441,8 @@ fun void druNote( int t, int val)
           (variable_identifier)
           (int)
           (int)))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -2874,8 +2873,8 @@ fun void druNote( int t, int val)
           (variable_identifier)
           (int)
           (int)))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -3038,9 +3037,9 @@ fun void druNote( int t, int val)
           (variable_identifier)
           (int)
           (int)))))
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -3182,8 +3181,8 @@ fun void druNote( int t, int val)
                   (int)
                   (chuck_operator)
                   (variable_identifier)))))))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -3278,4 +3277,4 @@ fun void druNote( int t, int val)
                       (member_identifier
                         (variable_identifier)
                         (class_identifier))))))))))))
-  (comment))
+  (line_comment))

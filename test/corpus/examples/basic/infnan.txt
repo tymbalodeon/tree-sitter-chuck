@@ -1,6 +1,5 @@
 ======
 Infnan
-:skip
 ======
 
 // big number
@@ -23,4 +22,84 @@ repeat( 20 ) n *=> n;
 
 ---
 
-(source_file)
+(source_file
+  (line_comment)
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (line_comment)
+  (loop
+    (int)
+    (statement
+      (chuck_operation
+        (variable_identifier)
+        (chuck_operator)
+        (variable_identifier))))
+  (line_comment)
+  (statement
+    (debug_print
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (variable_identifier))))
+  (line_comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_identifier)))
+  (line_comment)
+  (statement
+    (debug_print
+      (function_call
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))
+        (variable_identifier))))
+  (line_comment)
+  (statement
+    (debug_print
+      (chuck_operation
+        (binary_expression
+          (float)
+          (operator)
+          (float))
+        (chuck_operator)
+        (member_identifier
+          (class_identifier)
+          (variable_identifier)))))
+  (statement
+    (debug_print
+      (chuck_operation
+        (binary_expression
+          (float)
+          (operator)
+          (float))
+        (chuck_operator)
+        (member_identifier
+          (class_identifier)
+          (variable_identifier)))))
+  (statement
+    (debug_print
+      (member_identifier
+        (class_identifier)
+        (class_identifier))
+      (negative_expression
+        (member_identifier
+          (class_identifier)
+          (class_identifier)))))
+  (statement
+    (debug_print
+      (chuck_operation
+        (member_identifier
+          (class_identifier)
+          (class_identifier))
+        (chuck_operator)
+        (member_identifier
+          (class_identifier)
+          (variable_identifier))))))
