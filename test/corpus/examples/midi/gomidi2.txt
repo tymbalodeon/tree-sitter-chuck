@@ -61,7 +61,6 @@ fun void go( MidiIn min, int id )
     }
 }
 
-
 ---
 
 (source_file
@@ -71,7 +70,7 @@ fun void go( MidiIn min, int id )
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
@@ -174,8 +173,7 @@ fun void go( MidiIn min, int id )
     (variable_identifier)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

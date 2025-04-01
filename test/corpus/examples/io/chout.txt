@@ -14,7 +14,6 @@ cherr <= 1 <= " bar " <= 5.5 <= IO.newline();
 // 'chout' is buffered; use chout.flush() to output immediately
 // 'cherr' prints immediately, flush() or no flush()
 
-
 ---
 
 (source_file

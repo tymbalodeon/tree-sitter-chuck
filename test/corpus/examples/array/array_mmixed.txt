@@ -20,13 +20,12 @@ if( a["foo"][0] == 23 && a["bar"][1] == 42 )
     <<< "success" >>>;
 
 
-
 ---
 
 (source_file
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

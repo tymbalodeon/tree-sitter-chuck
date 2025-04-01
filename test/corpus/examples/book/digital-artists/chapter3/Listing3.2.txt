@@ -9,7 +9,6 @@ Listing3.2
 <<< a[0], a[1], a[2], a[3], a[4], a[5], a[6] >>>;
 
 
-
 ---
 
 (source_file
@@ -25,7 +24,7 @@ Listing3.2
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

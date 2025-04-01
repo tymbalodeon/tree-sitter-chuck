@@ -23,7 +23,6 @@ factorial ( 4 ) => int x;
 // test
 if ( x == 24 ) <<<"success">>>;
 
-
 ---
 
 (source_file

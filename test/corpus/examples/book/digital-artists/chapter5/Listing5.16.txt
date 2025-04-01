@@ -22,7 +22,6 @@ fun int factorial( int x)
 <<< factorial(4) >>>;
 
 
-
 ---
 
 (source_file

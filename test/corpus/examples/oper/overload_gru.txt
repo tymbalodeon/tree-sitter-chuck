@@ -28,7 +28,6 @@ foo --> bar --> zaz;
 
 // (should have printed some stuff)
 
-
 ---
 
 (source_file
@@ -48,8 +47,7 @@ foo --> bar --> zaz;
     (chuck_operator)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (class_identifier)
       (variable_identifier))
     (block

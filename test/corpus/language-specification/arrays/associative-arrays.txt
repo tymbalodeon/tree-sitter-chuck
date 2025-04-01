@@ -22,7 +22,7 @@ float foo[4];
 (source_file
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -78,7 +78,7 @@ int foo[2];
 (source_file
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -130,7 +130,7 @@ int foo[0];
 (source_file
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -189,7 +189,7 @@ new Item @=> box["lamp"];
           (primitive_type)
           (variable_identifier)))))
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)

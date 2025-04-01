@@ -1,6 +1,5 @@
 ===========
 Listing1.17
-:skip
 ===========
 
 // Listing 1.17 Musical use of a for loop
@@ -17,12 +16,11 @@ for (20 => int i; i < 400; i++) // (1) For loop from 20 to 399
 }
 
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -31,8 +29,8 @@ for (20 => int i; i < 400; i++) // (1) For loop from 20 to 399
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -44,14 +42,14 @@ for (20 => int i; i < 400; i++) // (1) For loop from 20 to 399
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
-    (comment)
+    (line_comment)
     (block
       (statement
         (debug_print
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -59,7 +57,7 @@ for (20 => int i; i < 400; i++) // (1) For loop from 20 to 399
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -68,4 +66,4 @@ for (20 => int i; i < 400; i++) // (1) For loop from 20 to 399
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment))))
+      (line_comment))))

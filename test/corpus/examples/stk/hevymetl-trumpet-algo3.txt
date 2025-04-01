@@ -59,7 +59,6 @@ for( 0 => int i; i < notes.cap(); i++ )
     (0.1 * durs[i]) :: second => now;
 }
 
-
 ---
 
 (source_file
@@ -103,7 +102,7 @@ for( 0 => int i; i < notes.cap(); i++ )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -115,7 +114,7 @@ for( 0 => int i; i < notes.cap(); i++ )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -128,7 +127,7 @@ for( 0 => int i; i < notes.cap(); i++ )
         (float)
         (float))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -140,20 +139,7 @@ for( 0 => int i; i < notes.cap(); i++ )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
-        (primitive_type)
-        (array_identifier
-          (variable_identifier)))))
-  (line_comment)
-  (statement
-    (chuck_operation
-      (array
-        (int)
-        (int)
-        (int)
-        (int))
-      (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -166,7 +152,7 @@ for( 0 => int i; i < notes.cap(); i++ )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -179,7 +165,20 @@ for( 0 => int i; i < notes.cap(); i++ )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
+        (primitive_type)
+        (array_identifier
+          (variable_identifier)))))
+  (line_comment)
+  (statement
+    (chuck_operation
+      (array
+        (int)
+        (int)
+        (int)
+        (int))
+      (chuck_operator)
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -287,7 +286,7 @@ for( 0 => int i; i < notes.cap(); i++ )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -308,7 +307,7 @@ for( 0 => int i; i < notes.cap(); i++ )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

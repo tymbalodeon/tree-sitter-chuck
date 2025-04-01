@@ -54,7 +54,6 @@ C++;
 // print
 <<< D.num >>>;
 
-
 ---
 
 (source_file
@@ -73,8 +72,7 @@ C++;
     (operator)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (class_identifier)
       (variable_identifier))
     (block
@@ -108,8 +106,7 @@ C++;
     (operator)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (class_identifier)
       (variable_identifier))
     (block

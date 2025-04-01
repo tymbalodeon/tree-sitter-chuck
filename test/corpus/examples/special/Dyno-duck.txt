@@ -54,7 +54,6 @@ fun void playKick()
 	}
 }
 
-
 ---
 
 (source_file

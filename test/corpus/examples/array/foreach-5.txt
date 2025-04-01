@@ -33,7 +33,6 @@ for( Osc x : array )
     <<< x.freq() >>>;
 }
 
-
 ---
 
 (source_file
@@ -45,7 +44,7 @@ for( Osc x : array )
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (reference_type)

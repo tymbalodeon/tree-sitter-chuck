@@ -49,7 +49,6 @@ while( true )
     flip.size()::samp => now;
 }
 
-
 ---
 
 (source_file

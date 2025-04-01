@@ -61,7 +61,6 @@ Foo f;
 // print the ckdoc for Foo
 Foo.help();
 
-
 ---
 
 (source_file

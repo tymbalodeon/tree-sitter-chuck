@@ -50,7 +50,6 @@ for (0 => int i; i < size; i++)
 // wait
 1::second => now;
 
-
 ---
 
 (source_file

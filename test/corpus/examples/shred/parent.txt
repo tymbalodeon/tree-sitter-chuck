@@ -22,7 +22,6 @@ spork ~ findTheParent();
 // yield to let validateParent(...) run
 me.yield();
 
-
 ---
 
 (source_file

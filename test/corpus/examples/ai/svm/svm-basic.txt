@@ -72,7 +72,7 @@ svm.predict([1.5, 1.5], res);
           (float)
           (float)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -86,7 +86,7 @@ svm.predict([1.5, 1.5], res);
         (array
           (float)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -101,7 +101,7 @@ svm.predict([1.5, 1.5], res);
       (variable_identifier)))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

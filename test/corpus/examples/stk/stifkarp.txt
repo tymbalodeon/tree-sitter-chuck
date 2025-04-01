@@ -42,7 +42,6 @@ fun void play( float note, float velocity )
     velocity => m.pluck;
 }
 
-
 ---
 
 (source_file
@@ -88,7 +87,7 @@ fun void play( float note, float velocity )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -225,8 +224,7 @@ fun void play( float note, float velocity )
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

@@ -38,7 +38,6 @@ for (0 => int i; i < a.cap(); i++)
     0.2::second => now;
 }
 
-
 ---
 
 (source_file
@@ -89,7 +88,7 @@ for (0 => int i; i < a.cap(); i++)
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

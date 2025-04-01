@@ -16,7 +16,6 @@ Vecs cast
 // vec4 to vec2
 @(1,2,3,4) $ vec2 => vec2 v2; <<< v2 >>>;
 
-
 ---
 
 (source_file

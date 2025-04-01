@@ -37,7 +37,6 @@ fun void dipth(string phon0, string phon1, int note) {
     0.4 :: second => now;
 }
 
-
 ---
 
 (source_file
@@ -70,7 +69,7 @@ fun void dipth(string phon0, string phon1, int note) {
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -178,11 +177,9 @@ fun void dipth(string phon0, string phon1, int note) {
     (variable_identifier)
     (variable_declaration
       (reference_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (reference_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

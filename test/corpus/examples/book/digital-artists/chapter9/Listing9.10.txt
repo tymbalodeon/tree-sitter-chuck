@@ -1,6 +1,5 @@
 ===========
 Listing9.10
-:skip
 ===========
 
 // Listing 9.10 UseBPM3.ck randomly sets BPM tempo and sweeps another sine
@@ -22,12 +21,11 @@ while (freq > 400)           // (2) Sweeps sine frequency downward
     50 -=> freq;
 }
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -40,7 +38,7 @@ while (freq > 400)           // (2) Sweeps sine frequency downward
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -48,7 +46,7 @@ while (freq > 400)           // (2) Sweeps sine frequency downward
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -61,7 +59,7 @@ while (freq > 400)           // (2) Sweeps sine frequency downward
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -74,7 +72,7 @@ while (freq > 400)           // (2) Sweeps sine frequency downward
       (variable_identifier)
       (operator)
       (int))
-    (comment)
+    (line_comment)
     (block
       (statement
         (chuck_operation

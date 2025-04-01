@@ -1,6 +1,5 @@
 ==========
 Listing5.6
-:skip
 ==========
 
 // Listing 5.6 Using functions to set oscillator frequencies
@@ -34,7 +33,150 @@ for (100 => float freq; freq < 500; 0.5 +=> freq )  // (3) Sweeps frequency
     10::ms => now;
 }
 
-
 ---
 
-(source_file)
+(source_file
+  (line_comment)
+  (line_comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (member_identifier
+        (global_unit_generator)
+        (variable_identifier))))
+  (line_comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (line_comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (member_identifier
+        (global_unit_generator)
+        (variable_identifier))))
+  (line_comment)
+  (line_comment)
+  (statement
+    (chuck_operation
+      (chuck_operation
+        (chuck_operation
+          (float)
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier)))
+        (chuck_operator)
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (line_comment)
+  (line_comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (block
+      (statement
+        (binary_expression
+          (float)
+          (operator)
+          (variable_identifier)))))
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (variable_declaration
+      (primitive_type)
+      (variable_identifier))
+    (block
+      (statement
+        (binary_expression
+          (float)
+          (operator)
+          (variable_identifier)))))
+  (line_comment)
+  (for_loop
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (variable_identifier))
+    (line_comment)
+    (block
+      (line_comment)
+      (statement
+        (chuck_operation
+          (variable_identifier)
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (line_comment)
+      (statement
+        (chuck_operation
+          (function_call
+            (variable_identifier)
+            (variable_identifier))
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (line_comment)
+      (statement
+        (chuck_operation
+          (function_call
+            (variable_identifier)
+            (variable_identifier))
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (line_comment)
+      (statement
+        (debug_print
+          (function_call
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier)))
+          (function_call
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier)))
+          (function_call
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier)))))
+      (statement
+        (chuck_operation
+          (dur
+            (int)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword
+            (special_literal_value)))))))

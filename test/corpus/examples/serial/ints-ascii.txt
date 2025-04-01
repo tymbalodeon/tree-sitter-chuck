@@ -34,7 +34,6 @@ while( true )
     chout <= IO.newline();
 }
 
-
 ---
 
 (source_file
@@ -46,7 +45,7 @@ while( true )
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (reference_type)
         (array_identifier
           (variable_identifier)))))
@@ -151,7 +150,7 @@ while( true )
               (variable_identifier)
               (variable_identifier)))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))

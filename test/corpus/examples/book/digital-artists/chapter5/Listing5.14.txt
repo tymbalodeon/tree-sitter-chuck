@@ -1,6 +1,5 @@
 ===========
 Listing5.14
-:skip
 ===========
 
 // Listing 5.14 Drum machine using patterns stored in arrays
@@ -48,12 +47,11 @@ while (true)    // (6) Infinite test loop
     playSection(kickPattern2,snarePattern1,0.2);
 }
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -62,7 +60,7 @@ while (true)    // (6) Infinite test loop
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -71,7 +69,7 @@ while (true)    // (6) Infinite test loop
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -96,7 +94,7 @@ while (true)    // (6) Infinite test loop
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -117,7 +115,7 @@ while (true)    // (6) Infinite test loop
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -130,7 +128,7 @@ while (true)    // (6) Infinite test loop
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -146,7 +144,7 @@ while (true)    // (6) Infinite test loop
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -162,7 +160,7 @@ while (true)    // (6) Infinite test loop
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -178,27 +176,25 @@ while (true)    // (6) Infinite test loop
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (array_declaration
-      (primitive_type)
-      (array_identifier
-        (variable_identifier)))
-    (array_declaration
-      (primitive_type)
-      (array_identifier
-        (variable_identifier)))
     (variable_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier))
+      (primitive_type)
+      (array_identifier
+        (variable_identifier))
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (int)
@@ -213,7 +209,7 @@ while (true)    // (6) Infinite test loop
             (member_identifier
               (variable_identifier)
               (variable_identifier))))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
           (conditional
@@ -248,13 +244,13 @@ while (true)    // (6) Infinite test loop
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
-    (comment)
+    (line_comment)
     (block
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (variable_identifier)

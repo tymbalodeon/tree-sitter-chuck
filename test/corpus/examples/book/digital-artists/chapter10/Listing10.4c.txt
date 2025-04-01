@@ -37,7 +37,6 @@ while( true )
     1::second => now;
 }
 
-
 ---
 
 (source_file
@@ -53,11 +52,9 @@ while( true )
     (variable_identifier)
     (variable_declaration
       (reference_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (reference_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

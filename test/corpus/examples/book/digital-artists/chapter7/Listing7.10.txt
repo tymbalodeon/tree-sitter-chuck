@@ -29,7 +29,6 @@ for (0 => int i; i < 4; i++) {
 1 => glass.noteOn;
 3.0 :: second => now;
 
-
 ---
 
 (source_file
@@ -51,7 +50,7 @@ for (0 => int i; i < 4; i++) {
         (float)
         (float))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -63,7 +62,7 @@ for (0 => int i; i < 4; i++) {
         (float)
         (float))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -75,7 +74,7 @@ for (0 => int i; i < 4; i++) {
         (float)
         (float))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

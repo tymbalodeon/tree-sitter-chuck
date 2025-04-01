@@ -59,7 +59,6 @@ Machine.removeAllShreds();
 // unreachable code
 <<< "shouldn't get here" >>>;
 
-
 ---
 
 (source_file

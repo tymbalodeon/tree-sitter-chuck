@@ -30,7 +30,6 @@ repeat (10) {
     period => now;
 }
 
-
 ---
 
 (source_file

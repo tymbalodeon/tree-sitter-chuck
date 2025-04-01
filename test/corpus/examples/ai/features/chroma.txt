@@ -65,7 +65,6 @@ for( 0 => int i; i < freqs.size(); i++ )
     HOP => now;
 }
 
-
 ---
 
 (source_file
@@ -153,7 +152,7 @@ for( 0 => int i; i < freqs.size(); i++ )
         (string)
         (string))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (reference_type)
         (array_identifier
           (variable_identifier)))))
@@ -174,7 +173,7 @@ for( 0 => int i; i < freqs.size(); i++ )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

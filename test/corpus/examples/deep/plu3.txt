@@ -59,7 +59,6 @@ fun float polePos( float D, float omega )
            Math.sin( (1+D) * omega / 2 );
 }
 
-
 ---
 
 (source_file
@@ -290,8 +289,7 @@ fun float polePos( float D, float omega )
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (class_identifier))
-    (variable_declaration
+      (class_identifier)
       (primitive_type)
       (variable_identifier))
     (block

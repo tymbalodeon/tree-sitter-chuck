@@ -116,7 +116,6 @@ fun void gametrak()
     }
 }
 
-
 ---
 
 (source_file
@@ -213,14 +212,14 @@ fun void gametrak()
           (variable_identifier)))
       (line_comment)
       (statement
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
             (variable_identifier)
             (int))))
       (line_comment)
       (statement
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
             (variable_identifier)

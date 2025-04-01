@@ -1,6 +1,5 @@
 ====
 Bass
-:skip
 ====
 
 // Listing 8.6 Jazz band:
@@ -34,13 +33,12 @@ while( true )              // (6) Walks forever.
     0.05 :: second => now;
 }
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -54,8 +52,8 @@ while( true )              // (6) Walks forever.
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -70,7 +68,7 @@ while( true )              // (6) Walks forever.
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -78,7 +76,7 @@ while( true )              // (6) Walks forever.
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -93,7 +91,7 @@ while( true )              // (6) Walks forever.
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -107,7 +105,7 @@ while( true )              // (6) Walks forever.
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -118,12 +116,12 @@ while( true )              // (6) Walks forever.
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
-    (comment)
+    (line_comment)
     (block
       (statement
         (chuck_operation
@@ -136,7 +134,7 @@ while( true )              // (6) Walks forever.
             (int))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
@@ -147,7 +145,7 @@ while( true )              // (6) Walks forever.
             (int)
             (chuck_operator)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
@@ -167,7 +165,7 @@ while( true )              // (6) Walks forever.
               (int))
             (chuck_operator)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -184,7 +182,7 @@ while( true )              // (6) Walks forever.
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -197,7 +195,7 @@ while( true )              // (6) Walks forever.
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)

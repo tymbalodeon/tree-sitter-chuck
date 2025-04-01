@@ -32,7 +32,6 @@ public int @operator (Foo foo) ++
 // (could be another file; here we use Machine.eval())
 Machine.eval( "Foo a, b; <<<a++, !b, a+b>>>;" );
 
-
 ---
 
 (source_file
@@ -56,8 +55,7 @@ Machine.eval( "Foo a, b; <<<a++, !b, a+b>>>;" );
     (operator)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (class_identifier)
       (variable_identifier))
     (block

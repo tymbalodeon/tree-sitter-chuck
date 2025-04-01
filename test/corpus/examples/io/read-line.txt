@@ -33,7 +33,6 @@ while( fio.more() )
     chout <= fio.readLine() <= IO.newline();
 }
 
-
 ---
 
 (source_file

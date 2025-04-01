@@ -36,7 +36,7 @@ for( auto a : array )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (reference_type)))))

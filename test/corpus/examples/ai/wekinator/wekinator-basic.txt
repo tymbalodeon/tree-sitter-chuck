@@ -124,7 +124,6 @@ fun void predict( float inputs[], float outputs[] )
           <= outputs[0] <= ", " <= outputs[1] <= ")" <= IO.newline();
 }
 
-
 ---
 
 (source_file
@@ -344,13 +343,13 @@ fun void predict( float inputs[], float outputs[] )
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -438,15 +437,13 @@ fun void predict( float inputs[], float outputs[] )
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (array_declaration
-      (primitive_type)
-      (array_identifier
-        (variable_identifier)))
-    (array_declaration
-      (primitive_type)
-      (array_identifier
-        (variable_identifier)))
     (variable_declaration
+      (primitive_type)
+      (array_identifier
+        (variable_identifier))
+      (primitive_type)
+      (array_identifier
+        (variable_identifier))
       (primitive_type)
       (class_identifier))
     (block
@@ -515,11 +512,10 @@ fun void predict( float inputs[], float outputs[] )
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
-        (variable_identifier)))
-    (array_declaration
+        (variable_identifier))
       (primitive_type)
       (array_identifier
         (variable_identifier)))

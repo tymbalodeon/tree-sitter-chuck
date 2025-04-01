@@ -42,7 +42,6 @@ fun void interpolate( dur delta )
     }
 }
 
-
 ---
 
 (source_file

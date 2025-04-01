@@ -14,9 +14,6 @@ while(true)
     chout <= "line: " <= line;        // (5) Prints that out
 }
 
-
-
-
 ---
 
 (source_file

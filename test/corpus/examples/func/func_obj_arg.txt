@@ -32,7 +32,6 @@ x.set(a);
 // test
 if( a.x == 10 ) <<<"success">>>;
 
-
 ---
 
 (source_file

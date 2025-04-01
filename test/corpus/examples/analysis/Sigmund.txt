@@ -69,7 +69,6 @@ while (true)
 	<<< "Real frequency:",foo.freq(),"real gain:",foo.gain(),"Sigmund found this:",siggy.freq(), "power:", siggy.env() >>>;
 }
 
-
 ---
 
 (source_file

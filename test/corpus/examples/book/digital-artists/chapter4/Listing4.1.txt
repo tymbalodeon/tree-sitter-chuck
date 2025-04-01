@@ -33,7 +33,6 @@ filename => mySound.read;   // (3) ChucKing a string to the .read member of
 // advance time so we can hear it
 second => now;
 
-
 ---
 
 (source_file

@@ -40,7 +40,6 @@ new Foo(10,11,12) @=> Foo @ f4;
 // print
 <<< f0.num, f1.num, f2.num, f3.num, f4.num >>>;
 
-
 ---
 
 (source_file
@@ -82,8 +81,7 @@ new Foo(10,11,12) @=> Foo @ f4;
       (method_definition
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block
@@ -100,11 +98,9 @@ new Foo(10,11,12) @=> Foo @ f4;
         (class_identifier)
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block

@@ -1,5 +1,6 @@
 ==========
 Mlp manual
+:skip
 ==========
 
 //---------------------------------------------------------------------
@@ -167,7 +168,6 @@ fun void visGradients()
     }
 }
 
-
 ---
 
 (source_file
@@ -227,7 +227,7 @@ fun void visGradients()
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -251,7 +251,7 @@ fun void visGradients()
           (float)
           (float)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (class_identifier)))))
@@ -266,18 +266,18 @@ fun void visGradients()
           (float)
           (float)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (class_identifier)))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
-        (variable_identifier)))
-    (array_identifier
-      (variable_identifier)))
+        (variable_identifier))
+      (array_identifier
+        (variable_identifier))))
   (line_comment)
   (line_comment)
   (line_comment)
@@ -648,7 +648,7 @@ fun void visGradients()
                   (class_identifier)
                   (variable_identifier)))))
           (statement
-            (array_declaration
+            (variable_declaration
               (primitive_type)
               (array_identifier
                 (variable_identifier)
@@ -742,7 +742,7 @@ fun void visGradients()
                   (class_identifier)
                   (variable_identifier)))))
           (statement
-            (array_declaration
+            (variable_declaration
               (primitive_type)
               (array_identifier
                 (variable_identifier)
@@ -866,7 +866,7 @@ fun void visGradients()
                   (class_identifier)
                   (variable_identifier)))))
           (statement
-            (array_declaration
+            (variable_declaration
               (primitive_type)
               (array_identifier
                 (variable_identifier)
@@ -963,7 +963,7 @@ fun void visGradients()
                   (class_identifier)
                   (variable_identifier)))))
           (statement
-            (array_declaration
+            (variable_declaration
               (primitive_type)
               (array_identifier
                 (variable_identifier)

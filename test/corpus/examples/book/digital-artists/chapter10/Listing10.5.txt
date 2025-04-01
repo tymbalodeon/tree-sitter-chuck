@@ -1,6 +1,5 @@
 ===========
 Listing10.5
-:skip
 ===========
 
 // Listing 10.5 Using a custom Event subclass, with polymorphism
@@ -77,33 +76,32 @@ while( true )
 }
 
 
-
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (class_identifier)
-    (comment)
+    (line_comment)
     (block
       (statement
         (variable_declaration
           (primitive_type)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (variable_declaration
           (primitive_type)
           (variable_identifier)))
-      (comment)))
+      (line_comment)))
   (statement
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_identifier))
-  (comment)
-  (comment)
+      (variable_identifier)
+      (variable_identifier)))
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -112,7 +110,7 @@ while( true )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -120,43 +118,41 @@ while( true )
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (reference_type)
       (variable_identifier))
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
           (chuck_operator)
           (variable_identifier)))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (loop
         (keyword
           (boolean_literal_value))
-        (comment)
+        (line_comment)
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
           (statement
             (chuck_operation
               (chuck_operation
@@ -171,7 +167,7 @@ while( true )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (member_identifier
@@ -181,8 +177,8 @@ while( true )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)))))
-  (comment)
+          (line_comment)))))
+  (line_comment)
   (statement
     (spork_expression
       (function_call
@@ -191,7 +187,7 @@ while( true )
           (class_identifier))
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
@@ -200,7 +196,7 @@ while( true )
           (class_identifier))
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
@@ -209,8 +205,8 @@ while( true )
           (class_identifier))
         (variable_identifier)
         (string))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
@@ -219,7 +215,7 @@ while( true )
           (class_identifier))
         (variable_identifier)
         (string))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -233,18 +229,18 @@ while( true )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -257,15 +253,15 @@ while( true )
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
           (operator)
           (int))
         (block
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
           (statement
             (chuck_operation
               (array_identifier
@@ -298,15 +294,15 @@ while( true )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur
@@ -316,8 +312,8 @@ while( true )
               (keyword
                 (special_literal_value)))))
         (block
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -360,19 +356,19 @@ while( true )
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (keyword

@@ -18,7 +18,6 @@ while( now < later )
 
 <<<"success">>>;
 
-
 ---
 
 (source_file

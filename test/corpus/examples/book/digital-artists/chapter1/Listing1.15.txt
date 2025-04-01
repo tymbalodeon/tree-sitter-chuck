@@ -1,6 +1,5 @@
 ===========
 Listing1.15
-:skip
 ===========
 
 // Listing 1.15 More complex logical conditions
@@ -20,12 +19,11 @@ if ( (chance < 2) && (chance2 >= 6))  // If chance is less than 2, and
     //code goes here                  // to 6, then the condition is true.
 }
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -53,10 +51,10 @@ if ( (chance < 2) && (chance2 >= 6))  // If chance is less than 2, and
           (variable_identifier)
           (operator)
           (int))))
-    (comment)
+    (line_comment)
     (block
-      (comment)
-      (comment)))
+      (line_comment)
+      (line_comment)))
   (conditional
     (binary_expression
       (expression_group
@@ -70,7 +68,7 @@ if ( (chance < 2) && (chance2 >= 6))  // If chance is less than 2, and
           (variable_identifier)
           (operator)
           (int))))
-    (comment)
+    (line_comment)
     (block
-      (comment)
-      (comment))))
+      (line_comment)
+      (line_comment))))

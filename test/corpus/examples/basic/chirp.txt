@@ -50,7 +50,6 @@ fun void chirp( float src, float target, dur duration, dur tinc )
 }
 
 
-
 ---
 
 (source_file
@@ -99,11 +98,9 @@ fun void chirp( float src, float target, dur duration, dur tinc )
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block
@@ -122,14 +119,11 @@ fun void chirp( float src, float target, dur duration, dur tinc )
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

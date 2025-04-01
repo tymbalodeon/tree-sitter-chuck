@@ -21,7 +21,6 @@ while( 1 )
     a - 8 => a; if( a <= 0 ) 2000 => a;
 }
 
-
 ---
 
 (source_file

@@ -159,7 +159,6 @@ while( true )
         newsequence();
 }
 
-
 ---
 
 (source_file
@@ -190,8 +189,7 @@ while( true )
         (variable_identifier)
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block))
@@ -222,11 +220,9 @@ while( true )
         (variable_identifier)
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block
@@ -270,11 +266,9 @@ while( true )
         (variable_identifier)
         (variable_declaration
           (class_identifier)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block
@@ -307,8 +301,7 @@ while( true )
         (variable_identifier)
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block
@@ -346,8 +339,7 @@ while( true )
         (variable_identifier)
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block
@@ -385,8 +377,7 @@ while( true )
         (variable_identifier)
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block
@@ -432,14 +423,14 @@ while( true )
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -459,7 +450,7 @@ while( true )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -480,7 +471,7 @@ while( true )
           (float)
           (duration_identifier)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

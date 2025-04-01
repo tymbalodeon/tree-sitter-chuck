@@ -31,7 +31,6 @@ Map
 // same as Math.map2()
 <<< Math.map2( 1, 2, 3, 0, 100 ), "(clamped using Math.map2())" >>>;
 
-
 ---
 
 (source_file

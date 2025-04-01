@@ -60,7 +60,6 @@ spork ~ snare();        // (7) Sporks snare starting on off beat
 // let it run for four more measures
 4*whole => now;         // (8) Lets it all run for four more measures
 
-
 ---
 
 (source_file

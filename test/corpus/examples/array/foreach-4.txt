@@ -26,7 +26,6 @@ for( int x[] : array )
     }
 }
 
-
 ---
 
 (source_file
@@ -38,7 +37,7 @@ for( int x[] : array )
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (reference_type)
@@ -67,7 +66,7 @@ for( int x[] : array )
       (int)))
   (line_comment)
   (for_each_loop
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)))

@@ -104,7 +104,6 @@ fun void set( int base, float v0, float v1, float v2 )
     <<< "carrier:", c.freq(), "modulator:", m.freq(), "index:", m.gain() >>>;
 }
 
-
 ---
 
 (source_file
@@ -405,14 +404,11 @@ fun void set( int base, float v0, float v1, float v2 )
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

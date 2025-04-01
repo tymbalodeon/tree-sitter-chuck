@@ -1,6 +1,5 @@
 ===========
 Listing1.18
-:skip
 ===========
 
 // Listing 1.18 Musical while loop
@@ -19,11 +18,10 @@ while ( i < 400)        // (2) A while loop only has a conditional test
     i++;                // (4) ...increment counter (very important!!)
 }
 
-
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -32,7 +30,7 @@ while ( i < 400)        // (2) A while loop only has a conditional test
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -40,16 +38,16 @@ while ( i < 400)        // (2) A while loop only has a conditional test
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (binary_expression
       (variable_identifier)
       (operator)
       (int))
-    (comment)
+    (line_comment)
     (block
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier)))
@@ -69,6 +67,6 @@ while ( i < 400)        // (2) A while loop only has a conditional test
           (keyword
             (special_literal_value))))
       (statement
-        (increment_expression
+        (post_increment_expression
           (variable_identifier)))
-      (comment))))
+      (line_comment))))

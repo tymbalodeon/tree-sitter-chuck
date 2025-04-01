@@ -25,7 +25,6 @@ while( true )
     10::second => now;
 }
 
-
 ---
 
 (source_file

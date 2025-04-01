@@ -20,7 +20,6 @@ while( true )
     0.35::second => now;
 }
 
-
 ---
 
 (source_file
@@ -38,13 +37,13 @@ while( true )
               (class_identifier)
               (variable_identifier)))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (class_identifier)
             (array_identifier
               (variable_identifier)
               (int))))
         (chuck_operator)
-        (array_declaration
+        (variable_declaration
           (class_identifier)
           (array_identifier
             (variable_identifier)

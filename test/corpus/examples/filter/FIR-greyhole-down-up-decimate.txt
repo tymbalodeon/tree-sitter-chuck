@@ -53,7 +53,6 @@ fun void decimateBy(int factor)  {
     }
 }
 
-
 ---
 
 (source_file

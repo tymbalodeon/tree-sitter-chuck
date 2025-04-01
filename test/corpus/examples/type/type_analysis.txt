@@ -96,7 +96,6 @@ Math.rtop( cs, ps );
 Math.ptor( ps, cs );
 <<< cs[0], cs[1], cs[2] >>>;
 
-
 ---
 
 (source_file
@@ -457,7 +456,7 @@ Math.ptor( ps, cs );
             (special_literal_value))))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -488,7 +487,7 @@ Math.ptor( ps, cs );
         (variable_identifier)
         (int))))
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -598,12 +597,12 @@ Math.ptor( ps, cs );
           (int)
           (int)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

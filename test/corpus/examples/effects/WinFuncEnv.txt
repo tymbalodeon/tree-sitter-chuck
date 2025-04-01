@@ -106,7 +106,6 @@ fun void loop(WinFuncEnv @ win, dur envTime) {
 spork ~ loop(win1, 70::ms);
 loop(win2, 73::ms);
 
-
 ---
 
 (source_file
@@ -165,8 +164,7 @@ loop(win2, 73::ms);
       (variable_identifier))
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

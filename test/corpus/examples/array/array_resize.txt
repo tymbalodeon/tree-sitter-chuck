@@ -49,7 +49,6 @@ argh.clear();
 // print
 <<< "array size:", argh.size(), "capacity:", argh.capacity() >>>;
 
-
 ---
 
 (source_file
@@ -66,7 +65,7 @@ argh.clear();
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

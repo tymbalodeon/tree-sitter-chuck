@@ -16,7 +16,6 @@ while( 1 )
     -v => v;
 }
 
-
 ---
 
 (source_file

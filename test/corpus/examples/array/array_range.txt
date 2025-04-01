@@ -52,7 +52,6 @@ fun void print( int array[] )
     cherr <= IO.nl();
 }
 
-
 ---
 
 (source_file
@@ -221,7 +220,7 @@ fun void print( int array[] )
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (reference_type)))

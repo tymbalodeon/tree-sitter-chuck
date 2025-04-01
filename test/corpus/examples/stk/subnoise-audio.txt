@@ -25,7 +25,6 @@ repeat (12) {
     1::second => now;
 }
 
-
 ---
 
 (source_file

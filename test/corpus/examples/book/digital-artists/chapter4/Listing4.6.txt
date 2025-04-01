@@ -18,9 +18,6 @@ myStereoSound.length() => now;  // (1) New function/method!
                                 //    .length returns the exact
                                 //     duration of the sound file.
 
-
-
-
 ---
 
 (source_file

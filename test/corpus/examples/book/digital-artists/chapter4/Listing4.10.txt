@@ -1,6 +1,5 @@
 ===========
 Listing4.10
-:skip
 ===========
 
 // Listing 4.10 Using arrays to further improve your drum machine
@@ -48,14 +47,13 @@ while (true)
     }                        // and does the inner while loop again.
 }
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -69,7 +67,7 @@ while (true)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -77,7 +75,7 @@ while (true)
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -85,7 +83,7 @@ while (true)
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (binary_expression
@@ -138,7 +136,7 @@ while (true)
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -159,11 +157,11 @@ while (true)
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -184,11 +182,11 @@ while (true)
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
@@ -209,14 +207,14 @@ while (true)
               (variable_identifier)
               (variable_identifier))))
         (block
-          (comment)
+          (line_comment)
           (conditional
             (array_identifier
               (variable_identifier)
               (variable_identifier))
-            (comment)
+            (line_comment)
             (block
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (int)
@@ -224,14 +222,14 @@ while (true)
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)))
+              (line_comment)))
           (conditional
             (array_identifier
               (variable_identifier)
               (variable_identifier))
-            (comment)
+            (line_comment)
             (block
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (int)
@@ -239,8 +237,8 @@ while (true)
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)))
-          (comment)
+              (line_comment)))
+          (line_comment)
           (statement
             (chuck_operation
               (int)
@@ -248,16 +246,16 @@ while (true)
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (statement
-            (increment_expression
+            (post_increment_expression
               (variable_identifier)))
-          (comment)))
-      (comment))))
+          (line_comment)))
+      (line_comment))))

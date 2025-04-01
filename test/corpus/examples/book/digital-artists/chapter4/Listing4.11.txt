@@ -31,7 +31,6 @@ for (0 => int beat; beat < 24; beat++) {  // (3) 24-beat "measure"
     0.5 :: second => now;
 }
 
-
 ---
 
 (source_file

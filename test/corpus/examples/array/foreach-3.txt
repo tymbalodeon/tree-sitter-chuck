@@ -24,7 +24,6 @@ for( int f : foo )
     }
 }
 
-
 ---
 
 (source_file
@@ -42,7 +41,7 @@ for( int f : foo )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -53,7 +52,7 @@ for( int f : foo )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

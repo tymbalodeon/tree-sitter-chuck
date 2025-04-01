@@ -120,7 +120,6 @@ fun void playChord( int a, int b, int c, float vel, dur D )
     0.15*(D) => now;
 }
 
-
 ---
 
 (source_file
@@ -187,14 +186,14 @@ fun void playChord( int a, int b, int c, float vel, dur D )
         (class_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
         (int))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
@@ -279,7 +278,7 @@ fun void playChord( int a, int b, int c, float vel, dur D )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -292,7 +291,7 @@ fun void playChord( int a, int b, int c, float vel, dur D )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -305,7 +304,7 @@ fun void playChord( int a, int b, int c, float vel, dur D )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -318,7 +317,7 @@ fun void playChord( int a, int b, int c, float vel, dur D )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -575,17 +574,13 @@ fun void playChord( int a, int b, int c, float vel, dur D )
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (class_identifier))
     (block

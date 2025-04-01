@@ -17,14 +17,13 @@ b @=> a[0];
 // verify
 if ( a[0][0][1] == 1 ) <<<"success">>>;
 
-
 ---
 
 (source_file
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -32,7 +31,7 @@ if ( a[0][0][1] == 1 ) <<<"success">>>;
         (int)
         (int))))
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

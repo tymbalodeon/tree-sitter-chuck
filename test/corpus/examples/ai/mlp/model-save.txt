@@ -57,7 +57,6 @@ mlp.save( me.dir() + filename );
 // print
 <<< "saved model to file:", filename >>>;
 
-
 ---
 
 (source_file
@@ -90,7 +89,7 @@ mlp.save( me.dir() + filename );
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -122,7 +121,7 @@ mlp.save( me.dir() + filename );
           (float)
           (float)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (class_identifier)))))
@@ -137,7 +136,7 @@ mlp.save( me.dir() + filename );
           (float)
           (float)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (class_identifier)))))

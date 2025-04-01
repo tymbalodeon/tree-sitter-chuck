@@ -109,7 +109,6 @@ fun void set( float value, float factor, float q )
         <<< "pan:", p.pan(), "resonance:", f.pfreq(), "radius:", f.prad() >>>;
 }
 
-
 ---
 
 (source_file
@@ -553,11 +552,9 @@ fun void set( float value, float factor, float q )
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

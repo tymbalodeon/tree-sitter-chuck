@@ -9,7 +9,6 @@ SinOsc s => dac; // (1) Connects (ChucKs) a sine wav oscillator to the dac (soun
 220 => s.freq;   // (3) Sets oscillator frequency to 220
 second => now;   // (4) Lets it play for one second
 
-
 ---
 
 (source_file

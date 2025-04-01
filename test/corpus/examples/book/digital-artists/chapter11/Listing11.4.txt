@@ -1,6 +1,5 @@
 ===========
 Listing11.4
-:skip
 ===========
 
 // Listing 11.4 Simple OSC receiver
@@ -40,17 +39,16 @@ while (true)                 // (6) Infinite loop
 }
 
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -58,21 +56,21 @@ while (true)                 // (6) Infinite loop
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
         (variable_identifier)
         (variable_identifier))
       (string)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -81,22 +79,22 @@ while (true)                 // (6) Infinite loop
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
-    (comment)
+    (line_comment)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (loop
         (binary_expression
           (function_call
@@ -107,8 +105,8 @@ while (true)                 // (6) Infinite loop
           (operator)
           (int))
         (block
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -120,7 +118,7 @@ while (true)                 // (6) Infinite loop
               (variable_declaration
                 (primitive_type)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -132,7 +130,7 @@ while (true)                 // (6) Infinite loop
               (variable_declaration
                 (primitive_type)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -144,8 +142,8 @@ while (true)                 // (6) Infinite loop
               (variable_declaration
                 (reference_type)
                 (variable_identifier))))
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -157,7 +155,7 @@ while (true)                 // (6) Infinite loop
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
@@ -165,7 +163,7 @@ while (true)                 // (6) Infinite loop
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (variable_identifier)
@@ -173,8 +171,8 @@ while (true)                 // (6) Infinite loop
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
           (statement
             (debug_print
               (variable_identifier)

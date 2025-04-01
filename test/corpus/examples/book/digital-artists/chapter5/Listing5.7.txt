@@ -1,6 +1,5 @@
 ==========
 Listing5.7
-:skip
 ==========
 
 // Listing 5.7 Using a swell function to ramp oscillator volume up and down
@@ -29,7 +28,89 @@ fun void swell(UGen osc, float begin, float end, float step)
 <<< "This code does nothing by itself.", "Run Listing5.8.ck" >>>;
 
 
-
 ---
 
-(source_file)
+(source_file
+  (line_comment)
+  (line_comment)
+  (function_definition
+    (primitive_type)
+    (variable_identifier)
+    (variable_declaration
+      (reference_type)
+      (variable_identifier)
+      (primitive_type)
+      (variable_identifier)
+      (primitive_type)
+      (variable_identifier)
+      (primitive_type)
+      (variable_identifier))
+    (block
+      (line_comment)
+      (statement
+        (variable_declaration
+          (primitive_type)
+          (variable_identifier)))
+      (line_comment)
+      (for_loop
+        (chuck_operation
+          (variable_identifier)
+          (chuck_operator)
+          (variable_identifier))
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (variable_identifier))
+        (chuck_operation
+          (variable_identifier)
+          (chuck_operator)
+          (variable_identifier))
+        (line_comment)
+        (block
+          (statement
+            (chuck_operation
+              (variable_identifier)
+              (chuck_operator)
+              (member_identifier
+                (variable_identifier)
+                (variable_identifier))))
+          (statement
+            (chuck_operation
+              (dur
+                (float)
+                (duration_identifier))
+              (chuck_operator)
+              (keyword
+                (special_literal_value))))))
+      (line_comment)
+      (loop
+        (binary_expression
+          (variable_identifier)
+          (operator)
+          (variable_identifier))
+        (line_comment)
+        (block
+          (statement
+            (chuck_operation
+              (variable_identifier)
+              (chuck_operator)
+              (member_identifier
+                (variable_identifier)
+                (variable_identifier))))
+          (statement
+            (chuck_operation
+              (variable_identifier)
+              (chuck_operator)
+              (variable_identifier)))
+          (statement
+            (chuck_operation
+              (dur
+                (float)
+                (duration_identifier))
+              (chuck_operator)
+              (keyword
+                (special_literal_value))))))))
+  (statement
+    (debug_print
+      (string)
+      (string))))

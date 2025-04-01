@@ -22,7 +22,6 @@ for (1 => int i; i <= 5; i++) {
     }
 }
 
-
 ---
 
 (source_file

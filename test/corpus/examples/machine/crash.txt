@@ -7,7 +7,6 @@ Machine.crash();
 
 // if ChucK didn't crash, then something is *really* wrong
 
-
 ---
 
 (source_file

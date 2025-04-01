@@ -63,7 +63,6 @@ Machine.remove(cowID);
 8.0 * tempo.quarterNote => now;
 Machine.remove(clapID);
 
-
 ---
 
 (source_file

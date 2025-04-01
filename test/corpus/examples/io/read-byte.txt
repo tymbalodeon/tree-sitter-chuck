@@ -42,7 +42,6 @@ while( fio.more() )
     cherr <= val <= IO.newline();
 }
 
-
 ---
 
 (source_file

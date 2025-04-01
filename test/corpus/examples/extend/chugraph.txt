@@ -73,7 +73,6 @@ while( true )
     ringDur => now;
 }
 
-
 ---
 
 (source_file
@@ -232,7 +231,7 @@ while( true )
                 (special_literal_value))))))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)

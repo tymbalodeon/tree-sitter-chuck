@@ -62,7 +62,6 @@ assert( " foo ".rtrim() == " foo", "27" );
 
 <<< "success" >>>;
 
-
 ---
 
 (source_file
@@ -98,8 +97,7 @@ assert( " foo ".rtrim() == " foo", "27" );
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (reference_type)
       (variable_identifier))
     (block

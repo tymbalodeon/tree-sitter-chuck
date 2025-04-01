@@ -103,7 +103,6 @@ fun void doTrack( int track, float speed )
     done++;
 }
 
-
 ---
 
 (source_file
@@ -363,14 +362,13 @@ fun void doTrack( int track, float speed )
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block
       (line_comment)
       (statement
-        (array_declaration
+        (variable_declaration
           (class_identifier)
           (array_identifier
             (variable_identifier)

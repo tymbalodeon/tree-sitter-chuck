@@ -17,14 +17,13 @@ int a[7];    // (1) Declares an array of specific length (7)
 
 <<< a[0], a[1], a[2], a[3], a[4], a[5], a[6] >>>;
 
-
 ---
 
 (source_file
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

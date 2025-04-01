@@ -1,6 +1,5 @@
 ===========
 Listing11.2
-:skip
 ===========
 
 // Listing 11.2 Simple piano synthesizer controlled by MIDI input
@@ -43,18 +42,17 @@ while( true )          // (5) Infinite loop
     }
 }
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -62,7 +60,7 @@ while( true )          // (5) Infinite loop
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -70,7 +68,7 @@ while( true )          // (5) Infinite loop
           (variable_identifier)
           (variable_identifier))
         (variable_identifier)))
-    (comment)
+    (line_comment)
     (block
       (statement
         (debug_print
@@ -80,13 +78,13 @@ while( true )          // (5) Infinite loop
         (function_call
           (member_identifier
             (variable_identifier))))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -95,12 +93,12 @@ while( true )          // (5) Infinite loop
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
-    (comment)
+    (line_comment)
     (block
       (statement
         (chuck_operation
@@ -108,8 +106,8 @@ while( true )          // (5) Infinite loop
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (loop
         (function_call
           (member_identifier

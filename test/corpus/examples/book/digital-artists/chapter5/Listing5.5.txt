@@ -1,6 +1,5 @@
 ==========
 Listing5.5
-:skip
 ==========
 
 // Listing 5.5 Function to cut gain (or any float) in half
@@ -22,11 +21,10 @@ halfGain(s.gain()) => s.gain;            // (4) Prints new SinOsc gain
 <<< "Gain is now half: ", s.gain() >>>;  //     after cutting it in half
 second => now;
 
-
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -35,15 +33,15 @@ second => now;
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (variable_declaration
       (primitive_type)
       (variable_identifier))
-    (comment)
+    (line_comment)
     (block
       (statement
         (expression_group
@@ -51,7 +49,7 @@ second => now;
             (variable_identifier)
             (operator)
             (float))))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
@@ -59,7 +57,7 @@ second => now;
         (member_identifier
           (variable_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (keyword
@@ -67,7 +65,7 @@ second => now;
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -80,7 +78,7 @@ second => now;
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (string)
@@ -88,7 +86,7 @@ second => now;
         (member_identifier
           (variable_identifier)
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (keyword

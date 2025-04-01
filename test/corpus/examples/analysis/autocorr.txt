@@ -46,7 +46,6 @@ for (int i; i < 10; i++)
     <<< "pitch", s.freq(), "estimated to be", estimatePitch(), "hz" >>>;
 }
 
-
 ---
 
 (source_file

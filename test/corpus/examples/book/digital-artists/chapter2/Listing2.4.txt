@@ -15,7 +15,6 @@ SinOsc t => dac.right; // (2) ...and another to the right channel.
 // advance time
 second => now;
 
-
 ---
 
 (source_file

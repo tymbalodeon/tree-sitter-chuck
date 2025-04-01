@@ -31,7 +31,6 @@ for( auto x : arr )
     <<< x, "" >>>;
 }
 
-
 ---
 
 (source_file
@@ -59,7 +58,7 @@ for( auto x : arr )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -82,7 +81,7 @@ for( auto x : arr )
           (int)
           (int)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

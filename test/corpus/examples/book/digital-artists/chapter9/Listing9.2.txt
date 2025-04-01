@@ -1,6 +1,5 @@
 ==========
 Listing9.2
-:skip
 ==========
 
 // Listing 9.2 Simple resonant pop class wraps UGens and functions for accessing them
@@ -50,17 +49,16 @@ while (1) {                            // (8) Infinite loop
 }
 
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (class_definition
     (class_identifier)
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (chuck_operation
@@ -74,8 +72,8 @@ while (1) {                            // (8) Infinite loop
           (chuck_operator)
           (keyword
             (global_unit_generator))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (chuck_operation
@@ -95,14 +93,14 @@ while (1) {                            // (8) Infinite loop
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
         (variable_declaration
           (primitive_type)
           (variable_identifier))
-        (comment)
+        (line_comment)
         (block
           (statement
             (chuck_operation
@@ -111,14 +109,14 @@ while (1) {                            // (8) Infinite loop
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))))
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
         (variable_declaration
           (primitive_type)
           (class_identifier))
-        (comment)
+        (line_comment)
         (block
           (statement
             (chuck_operation
@@ -127,14 +125,14 @@ while (1) {                            // (8) Infinite loop
               (member_identifier
                 (variable_identifier)
                 (class_identifier))))))
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
         (variable_declaration
           (primitive_type)
           (variable_identifier))
-        (comment)
+        (line_comment)
         (block
           (statement
             (chuck_operation
@@ -149,14 +147,14 @@ while (1) {                            // (8) Infinite loop
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))))
-      (comment)
+      (line_comment)
       (function_definition
         (primitive_type)
         (variable_identifier)
         (variable_declaration
           (primitive_type)
           (variable_identifier))
-        (comment)
+        (line_comment)
         (block
           (statement
             (chuck_operation
@@ -165,17 +163,17 @@ while (1) {                            // (8) Infinite loop
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))))))
-  (comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (loop
     (int)
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -188,8 +186,8 @@ while (1) {                            // (8) Infinite loop
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -197,7 +195,7 @@ while (1) {                            // (8) Infinite loop
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur

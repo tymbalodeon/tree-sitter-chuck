@@ -41,7 +41,6 @@ int neighbor_indices[0];
 knn.search( q, 2 , neighbor_indices );
 chout <= "query = ("+ q[0]+","+q[1]+"); k=2: ["+ neighbor_indices[0]+","+neighbor_indices[1]+"]" <= IO.newline();
 
-
 ---
 
 (source_file
@@ -78,7 +77,7 @@ chout <= "query = ("+ q[0]+","+q[1]+"); k=2: ["+ neighbor_indices[0]+","+neighbo
           (float)
           (float)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -96,7 +95,7 @@ chout <= "query = ("+ q[0]+","+q[1]+"); k=2: ["+ neighbor_indices[0]+","+neighbo
         (float)
         (float))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -114,13 +113,13 @@ chout <= "query = ("+ q[0]+","+q[1]+"); k=2: ["+ neighbor_indices[0]+","+neighbo
         (float)
         (float))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

@@ -60,44 +60,6 @@
         }
       ]
     },
-    "array_declaration": {
-      "type": "PREC_LEFT",
-      "value": 0,
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "_type"
-          },
-          {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "array_identifier"
-              },
-              {
-                "type": "REPEAT",
-                "content": {
-                  "type": "SEQ",
-                  "members": [
-                    {
-                      "type": "STRING",
-                      "value": ","
-                    },
-                    {
-                      "type": "SYMBOL",
-                      "name": "array_identifier"
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        ]
-      }
-    },
     "array_identifier": {
       "type": "PREC",
       "value": 1,
@@ -498,8 +460,17 @@
           "value": "class"
         },
         {
-          "type": "SYMBOL",
-          "name": "class_identifier"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "class_identifier"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "variable_identifier"
+            }
+          ]
         },
         {
           "type": "CHOICE",
@@ -766,10 +737,6 @@
     "_declaration": {
       "type": "CHOICE",
       "members": [
-        {
-          "type": "SYMBOL",
-          "name": "array_declaration"
-        },
         {
           "type": "SYMBOL",
           "name": "reference_declaration"
@@ -1226,10 +1193,6 @@
               {
                 "type": "CHOICE",
                 "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "array_declaration"
-                  },
                   {
                     "type": "SYMBOL",
                     "name": "variable_declaration"
@@ -2295,17 +2258,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_type"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "variable_identifier"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "_type"
         },
         {
           "type": "STRING",
@@ -2553,6 +2507,10 @@
             {
               "type": "SYMBOL",
               "name": "reference_type"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "variable_identifier"
             }
           ]
         },
@@ -2614,7 +2572,7 @@
       "value": "_?[a-z][a-zA-Z0-9_]*"
     },
     "variable_declaration": {
-      "type": "PREC_LEFT",
+      "type": "PREC_RIGHT",
       "value": 0,
       "content": {
         "type": "SEQ",
@@ -2641,6 +2599,10 @@
               {
                 "type": "CHOICE",
                 "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "array_identifier"
+                  },
                   {
                     "type": "SYMBOL",
                     "name": "class_identifier"
@@ -2671,6 +2633,22 @@
                     {
                       "type": "CHOICE",
                       "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "_type"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "array_identifier"
+                        },
                         {
                           "type": "SYMBOL",
                           "name": "class_identifier"

@@ -38,7 +38,6 @@ for( int x : Std.range(0,10) )
 // for string API documentation, see:
 // https://chuck.stanford.edu/doc/reference/base.html#string
 
-
 ---
 
 (source_file

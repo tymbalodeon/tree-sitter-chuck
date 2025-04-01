@@ -106,7 +106,6 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
     // bye bye shred....
 }
 
-
 ---
 
 (source_file
@@ -271,7 +270,7 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
       (variable_identifier)))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (reference_type)
       (array_identifier
         (variable_identifier)
@@ -279,8 +278,8 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
   (statement
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_identifier))
+      (variable_identifier)
+      (variable_identifier)))
   (statement
     (variable_declaration
       (primitive_type)
@@ -400,17 +399,13 @@ fun void playlast( Event on, dur starttime, dur len, float newrate, int myvoice 
     (variable_identifier)
     (variable_declaration
       (reference_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

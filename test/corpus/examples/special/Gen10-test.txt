@@ -28,7 +28,6 @@ while (true)
     <<< g10.lookup( Math.random2f(0,1) ) >>>;
 }
 
-
 ---
 
 (source_file

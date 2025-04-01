@@ -23,7 +23,6 @@ str => str;
 // let the string "ring" a bit
 5.0 :: second => now;
 
-
 ---
 
 (source_file

@@ -1,6 +1,5 @@
 ==========
 Listing2.3
-:skip
 ==========
 
 //  Listing 2.3 Random music using the Math Library
@@ -18,12 +17,11 @@ for (0 => int i; i < 16; i++)          // (1) for loop plays 16 notes.
 }
 
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -32,7 +30,7 @@ for (0 => int i; i < 16; i++)          // (1) for loop plays 16 notes.
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -44,9 +42,9 @@ for (0 => int i; i < 16; i++)          // (1) for loop plays 16 notes.
       (variable_identifier)
       (operator)
       (int))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
-    (comment)
+    (line_comment)
     (block
       (statement
         (chuck_operation
@@ -60,7 +58,7 @@ for (0 => int i; i < 16; i++)          // (1) for loop plays 16 notes.
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -73,12 +71,12 @@ for (0 => int i; i < 16; i++)          // (1) for loop plays 16 notes.
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -90,7 +88,7 @@ for (0 => int i; i < 16; i++)          // (1) for loop plays 16 notes.
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -106,4 +104,4 @@ for (0 => int i; i < 16; i++)          // (1) for loop plays 16 notes.
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment))))
+      (line_comment))))

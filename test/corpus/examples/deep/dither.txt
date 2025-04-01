@@ -67,7 +67,6 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
 }
 
 
-
 ---
 
 (source_file
@@ -195,14 +194,11 @@ fun void play_with_dither( UGen src, dur T, int qbits, int do_dither )
     (variable_identifier)
     (variable_declaration
       (reference_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (class_identifier))
-    (variable_declaration
+      (class_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

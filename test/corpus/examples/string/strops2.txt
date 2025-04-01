@@ -63,7 +63,6 @@ str.replace( 4, 5, "slow" );
 // test rfind
 <<< "str.rfind(\"fox\", 20):", str.rfind("fox", 20) >>>;
 
-
 ---
 
 (source_file

@@ -13,7 +13,7 @@ int foo[10];
 (source_file
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -36,7 +36,7 @@ Object @ group[10];
 (source_file
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (reference_type)
       (array_identifier
         (variable_identifier)

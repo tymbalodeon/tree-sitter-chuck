@@ -18,14 +18,13 @@ float b[2][2][2];
 if( a[1][1][1] == 5 && b[1][1][1] == 5.0 && c[0][1] == 2 )
     <<<"success">>>;
 
-
 ---
 
 (source_file
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -34,7 +33,7 @@ if( a[1][1][1] == 5 && b[1][1][1] == 5.0 && c[0][1] == 2 )
         (int))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -69,7 +68,7 @@ if( a[1][1][1] == 5 && b[1][1][1] == 5.0 && c[0][1] == 2 )
           (int)
           (int)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

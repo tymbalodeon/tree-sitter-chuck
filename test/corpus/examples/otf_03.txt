@@ -45,7 +45,6 @@ while( true )
     1::T => now;
 }
 
-
 ---
 
 (source_file

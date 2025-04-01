@@ -23,10 +23,10 @@ Foo a(1), b(2);
       (class_identifier)
       (function_call
         (variable_identifier)
-        (int)))
-    (function_call
-      (variable_identifier)
-      (int)))
+        (int))
+      (function_call
+        (variable_identifier)
+        (int))))
   (line_comment)
   (statement
     (debug_print

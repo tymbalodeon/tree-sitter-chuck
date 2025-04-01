@@ -102,7 +102,6 @@ while (true)
     }
 }
 
-
 ---
 
 (source_file
@@ -112,7 +111,7 @@ while (true)
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
@@ -308,7 +307,7 @@ while (true)
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

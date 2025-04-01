@@ -93,7 +93,6 @@ while( true )
     Std.mtof( ( 45 + Math.random2(0,2) * 12 + freq ) ) => voc.freq;
 }
 
-
 ---
 
 (source_file
@@ -413,7 +412,7 @@ while( true )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

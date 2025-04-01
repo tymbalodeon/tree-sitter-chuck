@@ -83,7 +83,6 @@ foos.sort();
 // print
 for( auto x : foos ) { <<< x >>>; }
 
-
 ---
 
 (source_file
@@ -108,7 +107,7 @@ for( auto x : foos ) { <<< x >>>; }
         (negative_expression
           (int)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -184,7 +183,7 @@ for( auto x : foos ) { <<< x >>>; }
         (keyword
           (special_literal_value)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -238,7 +237,7 @@ for( auto x : foos ) { <<< x >>>; }
           (int)
           (int)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -293,7 +292,7 @@ for( auto x : foos ) { <<< x >>>; }
           (keyword
             (special_literal_value))))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -348,7 +347,7 @@ for( auto x : foos ) { <<< x >>>; }
           (int)
           (int)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -408,7 +407,7 @@ for( auto x : foos ) { <<< x >>>; }
           (int)
           (int)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -445,7 +444,7 @@ for( auto x : foos ) { <<< x >>>; }
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)

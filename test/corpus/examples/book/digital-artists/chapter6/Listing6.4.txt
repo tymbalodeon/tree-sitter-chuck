@@ -31,7 +31,6 @@ while (clar.freq() < 441.0)         // (3) Loops over three octaves of pitches.
     clar.freq() + 55.0 => clar.freq; // (6) Increases pitch, climbing up harmonic series.
 }
 
-
 ---
 
 (source_file

@@ -17,7 +17,6 @@ while(1::ms => now)
     foldy.index(foldy.index() - delta);
 }
 
-
 ---
 
 (source_file

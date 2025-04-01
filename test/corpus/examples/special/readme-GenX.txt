@@ -52,7 +52,6 @@ CurveTable: flexible Curve/Line segment table generator
 WarpTable: end-constrained mapping table, useful for control signal conditioning
 */
 
-
 ---
 
 (source_file

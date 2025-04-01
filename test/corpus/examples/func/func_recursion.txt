@@ -17,7 +17,6 @@ factorial ( 5 ) => int answer;
 if ( answer == 120 ) <<<"success">>>;
 
 
-
 ---
 
 (source_file

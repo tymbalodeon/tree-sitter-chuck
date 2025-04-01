@@ -23,7 +23,6 @@ for (0 => int i; i < 4; i++) {
 }
 
 
-
 ---
 
 (source_file
@@ -31,7 +30,7 @@ for (0 => int i; i < 4; i++) {
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)

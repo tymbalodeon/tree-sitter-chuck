@@ -1,6 +1,5 @@
 ==========
 Listing8.3
-:skip
 ==========
 
 // Listing 8.3 Controlling different aspects of a single global object using concurrency
@@ -49,12 +48,11 @@ fun void detune()                 // (4) detune function definition.
     }
 }
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -68,8 +66,8 @@ fun void detune()                 // (4) detune function definition.
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -77,7 +75,7 @@ fun void detune()                 // (4) detune function definition.
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -92,19 +90,19 @@ fun void detune()                 // (4) detune function definition.
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (spork_expression
       (function_call
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -112,7 +110,7 @@ fun void detune()                 // (4) detune function definition.
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -128,7 +126,7 @@ fun void detune()                 // (4) detune function definition.
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -144,7 +142,7 @@ fun void detune()                 // (4) detune function definition.
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -155,9 +153,9 @@ fun void detune()                 // (4) detune function definition.
             (special_literal_value))))
       (loop
         (int)
-        (comment)
+        (line_comment)
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (float)
@@ -173,18 +171,18 @@ fun void detune()                 // (4) detune function definition.
               (chuck_operator)
               (keyword
                 (special_literal_value))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (comment)
+    (line_comment)
     (block
       (loop
         (keyword
           (boolean_literal_value))
-        (comment)
+        (line_comment)
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (chuck_operation
@@ -220,7 +218,7 @@ fun void detune()                 // (4) detune function definition.
               (member_identifier
                 (variable_identifier)
                 (variable_identifier))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (dur

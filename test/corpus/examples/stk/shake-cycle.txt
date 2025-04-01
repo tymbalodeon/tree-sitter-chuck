@@ -25,7 +25,6 @@ while( true )
     Math.random2f( 20, 140 ) => theTime;
 }
 
-
 ---
 
 (source_file

@@ -38,7 +38,6 @@ fout.close();
 // print
 <<< "file written:", filename >>>;
 
-
 ---
 
 (source_file
@@ -111,7 +110,7 @@ fout.close();
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

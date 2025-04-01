@@ -19,7 +19,6 @@ for( auto x : array )
     <<< x >>>;
 }
 
-
 ---
 
 (source_file
@@ -37,7 +36,7 @@ for( auto x : array )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (reference_type)))))

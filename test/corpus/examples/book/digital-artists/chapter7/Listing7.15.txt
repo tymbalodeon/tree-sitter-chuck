@@ -51,7 +51,6 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
     0.1 :: second => now;
 }
 
-
 ---
 
 (source_file
@@ -163,7 +162,7 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
           (float)
           (float)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -299,8 +298,7 @@ fun void pick(float note,float howLong) { // (6) Function to pick each note
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

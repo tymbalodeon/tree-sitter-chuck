@@ -45,7 +45,6 @@ while( true )
     HOP => now;
 }
 
-
 ---
 
 (source_file

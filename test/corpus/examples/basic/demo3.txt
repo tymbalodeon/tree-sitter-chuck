@@ -30,7 +30,6 @@ while( x > 0 )
     s =< g;
 }
 
-
 ---
 
 (source_file

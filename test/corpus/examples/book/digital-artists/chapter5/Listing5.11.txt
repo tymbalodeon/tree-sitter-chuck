@@ -1,6 +1,5 @@
 ===========
 Listing5.11
-:skip
 ===========
 
 // Listing 5.11 Using the noteUp and noteDown functions in a main loop
@@ -43,12 +42,11 @@ while (true) {   // (1) Main program to test noteUp and noteDown functions.
 }
 
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -57,7 +55,7 @@ while (true) {   // (1) Main program to test noteUp and noteDown functions.
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -65,52 +63,52 @@ while (true) {   // (1) Main program to test noteUp and noteDown functions.
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (comment)
+    (line_comment)
     (block
       (statement
         (chuck_operation
           (int)
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (variable_identifier)))
-      (comment)))
+      (line_comment)))
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (comment)
+    (line_comment)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (variable_identifier)))
-      (comment)))
-  (comment)
+      (line_comment)))
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (comment)
+    (line_comment)
     (block
       (statement
         (chuck_operation
@@ -123,7 +121,7 @@ while (true) {   // (1) Main program to test noteUp and noteDown functions.
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -131,7 +129,7 @@ while (true) {   // (1) Main program to test noteUp and noteDown functions.
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (keyword
@@ -139,29 +137,29 @@ while (true) {   // (1) Main program to test noteUp and noteDown functions.
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)))
-  (comment)
+      (line_comment)))
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (function_call
           (variable_identifier)))
       (statement
         (function_call
           (variable_identifier)))
-      (comment))))
+      (line_comment))))

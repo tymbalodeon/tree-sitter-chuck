@@ -1,6 +1,5 @@
 ==========
 Listing6.5
-:skip
 ==========
 
 // Listing 6.5 Simple violin using SawOsc, Envelope, and SinOsc for vibrato
@@ -42,12 +41,11 @@ for (0 => int i; i < scale.cap(); i++)  // (5) Plays through whole scale using f
 0 => env.keyOff;
 0.2 :: second => now;
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -66,7 +64,7 @@ for (0 => int i; i < scale.cap(); i++)  // (5) Plays through whole scale using f
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -81,8 +79,8 @@ for (0 => int i; i < scale.cap(); i++)  // (5) Plays through whole scale using f
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (function_call
       (member_identifier
@@ -98,7 +96,7 @@ for (0 => int i; i < scale.cap(); i++)  // (5) Plays through whole scale using f
       (dur
         (float)
         (duration_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -111,12 +109,12 @@ for (0 => int i; i < scale.cap(); i++)  // (5) Plays through whole scale using f
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -131,11 +129,11 @@ for (0 => int i; i < scale.cap(); i++)  // (5) Plays through whole scale using f
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
-    (comment)
+    (line_comment)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -149,8 +147,8 @@ for (0 => int i; i < scale.cap(); i++)  // (5) Plays through whole scale using f
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -166,7 +164,7 @@ for (0 => int i; i < scale.cap(); i++)  // (5) Plays through whole scale using f
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -182,7 +180,7 @@ for (0 => int i; i < scale.cap(); i++)  // (5) Plays through whole scale using f
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)

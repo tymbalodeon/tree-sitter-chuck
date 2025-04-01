@@ -7,9 +7,6 @@ Initialize
 Machine.add(me.dir()+"/MandoPlayer.ck");  // (1) Adds MandoPlayer class definition...
 Machine.add(me.dir()+"/MandoScore.ck");   // (2) ...then adds score, which does the rest.
 
-
-
-
 ---
 
 (source_file

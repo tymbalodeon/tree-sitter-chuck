@@ -27,7 +27,6 @@ while( true )
     550::ms / buffy.rate() => now;
 }
 
-
 ---
 
 (source_file

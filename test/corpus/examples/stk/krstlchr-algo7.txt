@@ -67,7 +67,6 @@ fun void allOff()
     for (int i; i < 7; i++) 1 => c[i].noteOff;
 }
 
-
 ---
 
 (source_file
@@ -79,7 +78,7 @@ fun void allOff()
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
@@ -87,14 +86,14 @@ fun void allOff()
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
         (int))))
   (statement
     (chuck_operation
-      (array_declaration
+      (variable_declaration
         (class_identifier)
         (array_identifier
           (variable_identifier)
@@ -185,7 +184,7 @@ fun void allOff()
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -200,7 +199,7 @@ fun void allOff()
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -377,7 +376,7 @@ fun void allOff()
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)))

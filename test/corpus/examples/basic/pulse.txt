@@ -54,7 +54,6 @@ while( true )
 // 1) smoothly vary the pulse width (using a small time scale)
 // 2) filter the sound (e.g., with LPF)
 
-
 ---
 
 (source_file

@@ -1,6 +1,5 @@
 ===========
 Listing1.13
-:skip
 ===========
 
 // sound chain
@@ -25,11 +24,10 @@ if (chance == 1)    // (2) if statement.
 330.0 => s.freq;        // Sets new frequency for a different note...
 1 :: second => now;     // (4) ...then plays this new note.
 
-
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -38,8 +36,8 @@ if (chance == 1)    // (2) if statement.
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -47,7 +45,7 @@ if (chance == 1)    // (2) if statement.
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -55,7 +53,7 @@ if (chance == 1)    // (2) if statement.
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -63,16 +61,16 @@ if (chance == 1)    // (2) if statement.
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (conditional
     (binary_expression
       (variable_identifier)
       (operator)
       (int))
-    (comment)
+    (line_comment)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -81,8 +79,8 @@ if (chance == 1)    // (2) if statement.
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)))
-  (comment)
+      (line_comment)))
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -90,7 +88,7 @@ if (chance == 1)    // (2) if statement.
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -99,4 +97,4 @@ if (chance == 1)    // (2) if statement.
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment))
+  (line_comment))

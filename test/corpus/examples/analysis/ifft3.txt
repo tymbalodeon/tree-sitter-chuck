@@ -27,7 +27,6 @@ while( true )
     fft.size()::samp => now;
 }
 
-
 ---
 
 (source_file

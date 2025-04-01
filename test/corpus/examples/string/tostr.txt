@@ -9,7 +9,6 @@ Object o;
 // call
 <<< e.toString() + " --- " + o.toString() >>>;
 
-
 ---
 
 (source_file

@@ -10,7 +10,6 @@ for( int i; i < list.size(); i++ )
     chout <= i <= ": " <= list[i] <= IO.newline();
 }
 
-
 ---
 
 (source_file
@@ -22,7 +21,7 @@ for( int i; i < list.size(); i++ )
           (class_identifier)
           (variable_identifier)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (reference_type)
         (array_identifier
           (variable_identifier)))))

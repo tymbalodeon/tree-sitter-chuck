@@ -22,7 +22,6 @@ spork ~ foo( 2 );
 while( true )
     1::second => now;
 
-
 ---
 
 (source_file

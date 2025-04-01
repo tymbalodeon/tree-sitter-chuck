@@ -33,7 +33,6 @@ while( true )
     (i+1)%N => i;
 }
 
-
 ---
 
 (source_file)

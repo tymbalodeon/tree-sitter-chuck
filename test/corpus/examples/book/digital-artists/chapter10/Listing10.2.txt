@@ -1,6 +1,5 @@
 ===========
 Listing10.2
-:skip
 ===========
 
 // Listing 10.2 Keyboard organ controlled by Hid event
@@ -46,24 +45,23 @@ while( true )
     }
 }
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (variable_declaration
       (class_identifier)
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -71,8 +69,8 @@ while( true )
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (conditional
     (negation_expression
       (function_call
@@ -84,8 +82,8 @@ while( true )
       (function_call
         (member_identifier
           (variable_identifier)))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (debug_print
       (binary_expression
@@ -99,7 +97,7 @@ while( true )
         (operator)
         (string))
       (string)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -113,38 +111,38 @@ while( true )
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (loop
         (function_call
           (member_identifier
             (variable_identifier)
             (variable_identifier))
           (variable_identifier))
-        (comment)
+        (line_comment)
         (block
-          (comment)
+          (line_comment)
           (conditional
             (function_call
               (member_identifier
                 (variable_identifier)
                 (variable_identifier)))
             (block
-              (comment)
-              (comment)
+              (line_comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (function_call
@@ -158,7 +156,7 @@ while( true )
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (int)
@@ -166,10 +164,10 @@ while( true )
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment))
-            (comment)
+              (line_comment))
+            (line_comment)
             (block
-              (comment)
+              (line_comment)
               (statement
                 (chuck_operation
                   (int)
@@ -177,4 +175,4 @@ while( true )
                   (member_identifier
                     (variable_identifier)
                     (variable_identifier))))
-              (comment))))))))
+              (line_comment))))))))

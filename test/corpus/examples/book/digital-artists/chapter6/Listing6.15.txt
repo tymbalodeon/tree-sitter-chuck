@@ -43,7 +43,6 @@ while (1) {
     0.4 :: second => now;
 }
 
-
 ---
 
 (source_file
@@ -93,7 +92,7 @@ while (1) {
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
@@ -206,7 +205,7 @@ while (1) {
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

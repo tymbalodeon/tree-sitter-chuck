@@ -1,6 +1,5 @@
 ==========
 Listing6.2
-:skip
 ==========
 
 // suck samples through Gain UGen into blackhole
@@ -15,11 +14,10 @@ while (true)
     samp => now; // do this for every sample
 }
 
-
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -32,7 +30,7 @@ while (true)
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
@@ -45,9 +43,9 @@ while (true)
               (variable_identifier)))
           (operator)
           (float))
-        (comment)
+        (line_comment)
         (block
-          (comment)
+          (line_comment)
           (statement
             (debug_print
               (string)
@@ -55,7 +53,7 @@ while (true)
                 (member_identifier
                   (variable_identifier)
                   (variable_identifier)))))
-          (comment)))
+          (line_comment)))
       (statement
         (chuck_operation
           (keyword
@@ -63,4 +61,4 @@ while (true)
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment))))
+      (line_comment))))

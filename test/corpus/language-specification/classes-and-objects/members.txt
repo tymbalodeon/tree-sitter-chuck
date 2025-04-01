@@ -90,8 +90,7 @@ x.print();
         (variable_identifier)
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block
@@ -178,7 +177,7 @@ string arr( "foo" )[10];
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (reference_type)
       (array_identifier
         (function_call

@@ -26,9 +26,6 @@ mod.keyOn();
 mod.keyOn();
 3*second => now;
 
-
-
-
 ---
 
 (source_file

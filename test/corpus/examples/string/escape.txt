@@ -25,7 +25,6 @@ Escape
 // octal (man ascii)
 <<< "bell!\007\060---\061\012", "" >>>;
 
-
 ---
 
 (source_file

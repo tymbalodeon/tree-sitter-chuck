@@ -40,7 +40,6 @@ for( int inner[] : array2 )
 // print newline
 cherr <= IO.nl();
 
-
 ---
 
 (source_file
@@ -57,7 +56,7 @@ cherr <= IO.nl();
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (reference_type)))))
@@ -98,7 +97,7 @@ cherr <= IO.nl();
           (int)
           (int)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -111,7 +110,7 @@ cherr <= IO.nl();
         (variable_identifier))))
   (line_comment)
   (for_each_loop
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)))

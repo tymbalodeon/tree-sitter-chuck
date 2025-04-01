@@ -47,7 +47,6 @@ for (0 => int i; i < myNotes.cap(); i++)
     0.2 :: second => now;
 }
 
-
 ---
 
 (source_file
@@ -93,11 +92,9 @@ for (0 => int i; i < myNotes.cap(); i++)
     (class_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block
@@ -159,7 +156,7 @@ for (0 => int i; i < myNotes.cap(); i++)
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -200,7 +197,7 @@ for (0 => int i; i < myNotes.cap(); i++)
         (variable_identifier)
         (variable_identifier))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

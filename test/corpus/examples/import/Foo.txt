@@ -32,7 +32,6 @@ fun void @operator =^( Foo lhs, Foo rhs )
     <<< lhs.num, "=^", rhs.num >>>;
 }
 
-
 ---
 
 (source_file
@@ -68,8 +67,7 @@ fun void @operator =^( Foo lhs, Foo rhs )
     (operator)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (class_identifier)
       (variable_identifier))
     (block
@@ -92,8 +90,7 @@ fun void @operator =^( Foo lhs, Foo rhs )
     (chuck_operator)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (class_identifier)
       (variable_identifier))
     (block

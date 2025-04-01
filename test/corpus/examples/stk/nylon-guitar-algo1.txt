@@ -139,7 +139,6 @@ fun void solo()  {
     1 => g.noteOff;
 }
 
-
 ---
 
 (source_file
@@ -168,7 +167,7 @@ fun void solo()  {
       (variable_identifier)))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
@@ -195,7 +194,7 @@ fun void solo()  {
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -207,7 +206,7 @@ fun void solo()  {
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -219,7 +218,7 @@ fun void solo()  {
         (float)
         (float))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -231,7 +230,7 @@ fun void solo()  {
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -243,7 +242,7 @@ fun void solo()  {
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -255,7 +254,7 @@ fun void solo()  {
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -268,7 +267,7 @@ fun void solo()  {
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -461,7 +460,7 @@ fun void solo()  {
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (class_identifier)))))
@@ -475,7 +474,7 @@ fun void solo()  {
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (class_identifier)))))
@@ -489,7 +488,7 @@ fun void solo()  {
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (class_identifier)))))
@@ -851,11 +850,10 @@ fun void solo()  {
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
-        (variable_identifier)))
-    (variable_declaration
+        (variable_identifier))
       (primitive_type)
       (variable_identifier))
     (block
@@ -910,11 +908,10 @@ fun void solo()  {
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
-        (variable_identifier)))
-    (variable_declaration
+        (variable_identifier))
       (primitive_type)
       (variable_identifier))
     (block
@@ -969,11 +966,10 @@ fun void solo()  {
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
-        (variable_identifier)))
-    (variable_declaration
+        (variable_identifier))
       (primitive_type)
       (variable_identifier))
     (block
@@ -1045,7 +1041,7 @@ fun void solo()  {
             (int)
             (int))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -1058,7 +1054,7 @@ fun void solo()  {
             (int)
             (int))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))

@@ -27,7 +27,6 @@ while( true )
     Machine.remove( wind );
 }
 
-
 ---
 
 (source_file

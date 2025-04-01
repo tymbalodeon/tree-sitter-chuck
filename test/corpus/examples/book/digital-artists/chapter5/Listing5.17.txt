@@ -1,6 +1,5 @@
 ===========
 Listing5.17
-:skip
 ===========
 
 // Listing 5.17 Sonifying the factorial() function
@@ -38,11 +37,10 @@ sonify(factorial(5));
 second => now;
 
 
-
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -51,21 +49,21 @@ second => now;
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (variable_declaration
       (primitive_type)
       (variable_identifier))
-    (comment)
+    (line_comment)
     (block
       (statement
         (function_call
           (variable_identifier)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
@@ -84,7 +82,7 @@ second => now;
                   (variable_identifier)
                   (operator)
                   (int)))))))))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
@@ -92,8 +90,8 @@ second => now;
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -112,7 +110,7 @@ second => now;
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (float)
@@ -120,7 +118,7 @@ second => now;
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -144,7 +142,7 @@ second => now;
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)

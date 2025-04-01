@@ -34,13 +34,12 @@ for (0 => int i; i < argh.size(); i++) {
     <<< "elem", i, "-", argh[i] >>>;
 }
 
-
 ---
 
 (source_file
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

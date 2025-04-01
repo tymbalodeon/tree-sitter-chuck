@@ -718,7 +718,6 @@ fun void druNote( int t, int val)
 }
 //}
 
-
 ---
 
 (source_file
@@ -820,10 +819,10 @@ fun void druNote( int t, int val)
   (statement
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_identifier)
-    (variable_identifier)
-    (variable_identifier))
+      (variable_identifier)
+      (variable_identifier)
+      (variable_identifier)
+      (variable_identifier)))
   (line_comment)
   (statement
     (chuck_operation
@@ -866,7 +865,7 @@ fun void druNote( int t, int val)
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -1069,8 +1068,7 @@ fun void druNote( int t, int val)
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (class_identifier)
       (variable_identifier))
     (block
@@ -3045,8 +3043,7 @@ fun void druNote( int t, int val)
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block
@@ -3092,8 +3089,7 @@ fun void druNote( int t, int val)
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block
@@ -3139,8 +3135,7 @@ fun void druNote( int t, int val)
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block
@@ -3188,8 +3183,7 @@ fun void druNote( int t, int val)
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

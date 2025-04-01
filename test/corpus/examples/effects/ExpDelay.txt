@@ -37,7 +37,6 @@ while (true)
   4::second => now;
 }
 
-
 ---
 
 (source_file

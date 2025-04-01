@@ -1,6 +1,5 @@
 ==========
 Listing3.7
-:skip
 ==========
 
 // Listing 3.7 An array of strings (the "Twinkle" lyrics)
@@ -12,13 +11,12 @@ Listing3.7
                      // (3) ChucK figures out how big to create words[] array.
 
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -29,7 +27,7 @@ Listing3.7
         (string)
         (string)
         (string)
-        (comment)
+        (line_comment)
         (string)
         (string)
         (string)
@@ -38,8 +36,8 @@ Listing3.7
         (string)
         (string))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (reference_type)
         (array_identifier
           (variable_identifier)))))
-  (comment))
+  (line_comment))

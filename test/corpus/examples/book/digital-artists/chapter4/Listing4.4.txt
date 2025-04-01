@@ -27,7 +27,6 @@ while (true)
     0.5 :: second => now;
 }
 
-
 ---
 
 (source_file
@@ -44,7 +43,7 @@ while (true)
         (global_unit_generator))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (reference_type)
       (array_identifier
         (variable_identifier)

@@ -1,6 +1,5 @@
 ==========
 Listing5.1
-:skip
 ==========
 
 // Listing 5.1 Defining and testing a function that adds an octave to any MIDI note number
@@ -21,26 +20,25 @@ addOctave(60) => int answer;     // (5) Uses the function
 
 <<< answer >>>;                  // (6) Checks the result
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (variable_declaration
       (primitive_type)
       (variable_identifier))
-    (comment)
+    (line_comment)
     (block
       (statement
         (variable_declaration
           (primitive_type)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -49,11 +47,11 @@ addOctave(60) => int answer;     // (5) Uses the function
             (int))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (variable_identifier))
-      (comment)))
-  (comment)
+      (line_comment)))
+  (line_comment)
   (statement
     (chuck_operation
       (function_call
@@ -63,8 +61,8 @@ addOctave(60) => int answer;     // (5) Uses the function
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (debug_print
       (variable_identifier)))
-  (comment))
+  (line_comment))

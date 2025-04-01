@@ -109,7 +109,6 @@ fun void bassLine( int note1, int note2, int thisManyTimes )
     }
 }
 
-
 ---
 
 (source_file
@@ -125,13 +124,13 @@ fun void bassLine( int note1, int note2, int thisManyTimes )
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
         (int))))
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
@@ -139,13 +138,13 @@ fun void bassLine( int note1, int note2, int thisManyTimes )
   (statement
     (chuck_operation
       (chuck_operation
-        (array_declaration
+        (variable_declaration
           (class_identifier)
           (array_identifier
             (variable_identifier)
             (int)))
         (chuck_operator)
-        (array_declaration
+        (variable_declaration
           (class_identifier)
           (array_identifier
             (variable_identifier)
@@ -343,7 +342,7 @@ fun void bassLine( int note1, int note2, int thisManyTimes )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -365,7 +364,7 @@ fun void bassLine( int note1, int note2, int thisManyTimes )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -578,11 +577,9 @@ fun void bassLine( int note1, int note2, int thisManyTimes )
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

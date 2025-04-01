@@ -61,7 +61,6 @@ while( true )
     250::ms => now;
 }
 
-
 ---
 
 (source_file
@@ -83,7 +82,7 @@ while( true )
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (reference_type)
       (array_identifier
         (variable_identifier)
@@ -104,7 +103,7 @@ while( true )
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)

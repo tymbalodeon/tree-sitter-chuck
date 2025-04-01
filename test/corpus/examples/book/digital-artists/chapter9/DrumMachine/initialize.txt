@@ -12,9 +12,6 @@ Machine.add(me.dir()+"/BPM.ck");  // (1) Adds the BPM class definition...
 Machine.add(me.dir()+"/score.ck"); // (2) ...then adds the score, which does the rest.
 
 
-
-
-
 ---
 
 (source_file

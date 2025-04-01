@@ -57,7 +57,6 @@ new Foo(6,5)[4] @=> Foo array2[];
 // print each element's num
 for( auto f : array2 ) <<< f.num, "" >>>;
 
-
 ---
 
 (source_file
@@ -110,8 +109,7 @@ for( auto f : array2 ) <<< f.num, "" >>>;
         (class_identifier)
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block
@@ -175,7 +173,7 @@ for( auto f : array2 ) <<< f.num, "" >>>;
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (function_call
@@ -205,7 +203,7 @@ for( auto f : array2 ) <<< f.num, "" >>>;
             (int))
           (int)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (class_identifier)
         (array_identifier
           (variable_identifier)))))

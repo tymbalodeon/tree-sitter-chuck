@@ -1,6 +1,5 @@
 ==========
 Listing9.1
-:skip
 ==========
 
 // Listing 9.1 Making and using your first new class, testData
@@ -27,7 +26,86 @@ testData d;                          // (5) Tests it all by making a testData
 // check to show that everything changed
 <<< d.myInt, d.myFrac, d.sum() >>>;
 
-
 ---
 
-(source_file)
+(source_file
+  (line_comment)
+  (line_comment)
+  (class_definition
+    (variable_identifier)
+    (block
+      (line_comment)
+      (statement
+        (chuck_operation
+          (int)
+          (chuck_operator)
+          (variable_declaration
+            (primitive_type)
+            (variable_identifier))))
+      (line_comment)
+      (statement
+        (chuck_operation
+          (float)
+          (chuck_operator)
+          (variable_declaration
+            (primitive_type)
+            (variable_identifier))))
+      (line_comment)
+      (line_comment)
+      (function_definition
+        (primitive_type)
+        (variable_identifier)
+        (block
+          (line_comment)
+          (statement
+            (binary_expression
+              (variable_identifier)
+              (operator)
+              (variable_identifier)))))))
+  (line_comment)
+  (statement
+    (variable_declaration
+      (variable_identifier)
+      (variable_identifier)))
+  (line_comment)
+  (statement
+    (debug_print
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier)))))
+  (line_comment)
+  (line_comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (line_comment)
+  (statement
+    (debug_print
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))
+      (function_call
+        (member_identifier
+          (variable_identifier)
+          (variable_identifier))))))

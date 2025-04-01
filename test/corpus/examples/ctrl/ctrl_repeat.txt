@@ -26,7 +26,6 @@ repeat( x )
 // verify where the counter ended up
 if( x == 8 ) <<< "success" >>>;
 
-
 ---
 
 (source_file

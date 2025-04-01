@@ -76,8 +76,7 @@ Foo a(1), b(2);
     (operator)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (class_identifier)
       (variable_identifier))
     (block
@@ -100,8 +99,7 @@ Foo a(1), b(2);
     (chuck_operator)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (class_identifier)
       (variable_identifier))
     (block
@@ -124,10 +122,10 @@ Foo a(1), b(2);
       (class_identifier)
       (function_call
         (variable_identifier)
-        (int)))
-    (function_call
-      (variable_identifier)
-      (int)))
+        (int))
+      (function_call
+        (variable_identifier)
+        (int))))
   (line_comment)
   (statement
     (debug_print

@@ -130,8 +130,8 @@ while (true) {
   (statement
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_identifier))
+      (variable_identifier)
+      (variable_identifier)))
   (loop
     (keyword
       (boolean_literal_value))
@@ -292,9 +292,9 @@ fun void do_centroid() {
   (statement
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_identifier)
-    (variable_identifier))
+      (variable_identifier)
+      (variable_identifier)
+      (variable_identifier)))
   (statement
     (spork_expression
       (function_call

@@ -29,7 +29,6 @@ fun void print_arr(int a[]) {
     cherr <= IO.nl();
 }
 
-
 ---
 
 (source_file
@@ -45,7 +44,7 @@ fun void print_arr(int a[]) {
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -78,7 +77,7 @@ fun void print_arr(int a[]) {
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)))

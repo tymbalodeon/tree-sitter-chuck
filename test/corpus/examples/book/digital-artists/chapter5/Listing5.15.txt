@@ -1,6 +1,5 @@
 ===========
 Listing5.15
-:skip
 ===========
 
 // Listing 5.15 Recursive (function that calls itself) scale-playing function
@@ -26,12 +25,11 @@ fun int recurScale(int note, dur rate) { // (2) recurScale function definition
 recurScale(60, 0.5 :: second);
 recurScale(67, 1.0 :: second);
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -40,19 +38,18 @@ recurScale(67, 1.0 :: second);
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -64,7 +61,7 @@ recurScale(67, 1.0 :: second);
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (int)
@@ -72,23 +69,23 @@ recurScale(67, 1.0 :: second);
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (conditional
         (binary_expression
           (variable_identifier)
           (operator)
           (int))
-        (comment)
+        (line_comment)
         (block
-          (comment)
+          (line_comment)
           (statement
             (function_call
               (variable_identifier)
@@ -100,8 +97,8 @@ recurScale(67, 1.0 :: second);
                 (float)
                 (operator)
                 (variable_identifier))))
-          (comment)))))
-  (comment)
+          (line_comment)))))
+  (line_comment)
   (statement
     (function_call
       (variable_identifier)

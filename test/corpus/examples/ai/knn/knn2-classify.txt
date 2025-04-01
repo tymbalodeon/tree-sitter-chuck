@@ -67,7 +67,6 @@ fun void predict( float query[], int k )
     chout <= IO.newline();
 }
 
-
 ---
 
 (source_file
@@ -99,7 +98,7 @@ fun void predict( float query[], int k )
         (string)
         (string))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (reference_type)
         (array_identifier
           (variable_identifier)))))
@@ -118,7 +117,7 @@ fun void predict( float query[], int k )
           (float)
           (float)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -130,7 +129,7 @@ fun void predict( float query[], int k )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -160,7 +159,7 @@ fun void predict( float query[], int k )
         (float)
         (float))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -178,7 +177,7 @@ fun void predict( float query[], int k )
         (float)
         (float))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -201,17 +200,16 @@ fun void predict( float query[], int k )
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
-        (variable_identifier)))
-    (variable_declaration
+        (variable_identifier))
       (primitive_type)
       (variable_identifier))
     (block
       (line_comment)
       (statement
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
             (variable_identifier)

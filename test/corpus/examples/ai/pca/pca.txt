@@ -44,7 +44,6 @@ for ( 0 => int i; i < 10; i++ )
     chout <= IO.newline();
 }
 
-
 ---
 
 (source_file
@@ -64,16 +63,16 @@ for ( 0 => int i; i < 10; i++ )
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (int)
-        (int)))
-    (array_identifier
-      (variable_identifier)
-      (int)
-      (int)))
+        (int))
+      (array_identifier
+        (variable_identifier)
+        (int)
+        (int))))
   (for_loop
     (chuck_operation
       (int)

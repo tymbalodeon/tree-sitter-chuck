@@ -34,7 +34,6 @@ while (true)
   second => now;
 }
 
-
 ---
 
 (source_file

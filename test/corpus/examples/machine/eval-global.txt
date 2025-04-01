@@ -43,7 +43,6 @@ repeat( 3 )
           <= IO.nl();
 }
 
-
 ---
 
 (source_file

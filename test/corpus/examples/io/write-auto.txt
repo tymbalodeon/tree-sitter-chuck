@@ -31,7 +31,6 @@ fout <= 1 <= " " <= 2 <= " " <= "foo" <= IO.newline();
 // close the thing
 fout.close();
 
-
 ---
 
 (source_file

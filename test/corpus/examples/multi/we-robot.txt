@@ -44,7 +44,6 @@ for( int i; i < N; i++ )
 // time loop
 while( true ) 100::ms => now;
 
-
 ---
 
 (source_file
@@ -75,14 +74,14 @@ while( true ) 100::ms => now;
       (string)))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
         (class_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)

@@ -29,7 +29,6 @@ Machine.remove(drumsID); // (5) Cuts the percussion for a bit...
 // add drums back in
 Machine.add(drumsPath) => drumsID;   // (6) ...then adds it back in
 
-
 ---
 
 (source_file

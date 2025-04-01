@@ -52,7 +52,6 @@ bar();
 bar(1);
 bar("a");
 
-
 ---
 
 (source_file
@@ -109,8 +108,7 @@ bar("a");
         (variable_identifier)
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block
@@ -133,8 +131,7 @@ bar("a");
         (variable_identifier)
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block

@@ -9,7 +9,6 @@ Is realtime
     Machine.silent() ? "YES" : "NO " >>>;
 
 
-
 ---
 
 (source_file

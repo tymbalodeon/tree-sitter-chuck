@@ -35,7 +35,6 @@ adc => Fuzz f => dac;
 // advance time
 while(true) 1::second => now;
 
-
 ---
 
 (source_file

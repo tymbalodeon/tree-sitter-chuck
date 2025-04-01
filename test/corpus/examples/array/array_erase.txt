@@ -33,7 +33,6 @@ for( int i; i < a.size(); i++ )
     <<< i, ":", a[i] >>>;
 }
 
-
 ---
 
 (source_file
@@ -43,7 +42,7 @@ for( int i; i < a.size(); i++ )
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

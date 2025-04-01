@@ -1,6 +1,5 @@
 ===========
 Listing1.14
-:skip
 ===========
 
 // Listing 1.14 if/else code example
@@ -33,12 +32,11 @@ else     // (4) ...otherwise (else), set sine frequency to something
 440.0 => s.freq;        // After the if/else, play another, much higher note
 1 :: second => now;
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -47,8 +45,8 @@ else     // (4) ...otherwise (else), set sine frequency to something
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -56,7 +54,7 @@ else     // (4) ...otherwise (else), set sine frequency to something
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -64,7 +62,7 @@ else     // (4) ...otherwise (else), set sine frequency to something
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (int)
@@ -72,15 +70,15 @@ else     // (4) ...otherwise (else), set sine frequency to something
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (conditional
     (binary_expression
       (variable_identifier)
       (operator)
       (int))
-    (comment)
+    (line_comment)
     (block
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -89,11 +87,11 @@ else     // (4) ...otherwise (else), set sine frequency to something
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment))
-    (comment)
+      (line_comment))
+    (line_comment)
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (float)
@@ -101,7 +99,7 @@ else     // (4) ...otherwise (else), set sine frequency to something
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur
@@ -110,7 +108,7 @@ else     // (4) ...otherwise (else), set sine frequency to something
           (chuck_operator)
           (keyword
             (special_literal_value))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -118,7 +116,7 @@ else     // (4) ...otherwise (else), set sine frequency to something
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur

@@ -43,7 +43,6 @@ while( true )
     (1000.0 + Math.random2f(-100.0, 100.0))::ms => now;
 }
 
-
 ---
 
 (source_file

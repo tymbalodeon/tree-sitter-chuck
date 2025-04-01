@@ -22,7 +22,6 @@ for( float x : array )
     <<< x >>>;
 }
 
-
 ---
 
 (source_file
@@ -34,7 +33,7 @@ for( float x : array )
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (reference_type)

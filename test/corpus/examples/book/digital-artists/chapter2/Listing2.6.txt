@@ -19,7 +19,6 @@ while (panPosition < 1.0) {  // (3) ...until panPosition hits hard right.
 }
 
 
-
 ---
 
 (source_file

@@ -51,7 +51,6 @@ e2.f( 0.7, .553, 77 ); // in B2.f - correct
 e2.f( myArray );       // in E2.f - correct
 
 
-
 ---
 
 (source_file
@@ -62,7 +61,7 @@ e2.f( myArray );       // in E2.f - correct
       (function_definition
         (primitive_type)
         (variable_identifier)
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
             (variable_identifier)))
@@ -80,11 +79,9 @@ e2.f( myArray );       // in E2.f - correct
         (variable_identifier)
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block
@@ -100,11 +97,9 @@ e2.f( myArray );       // in E2.f - correct
         (variable_identifier)
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block
@@ -119,7 +114,7 @@ e2.f( myArray );       // in E2.f - correct
       (function_definition
         (primitive_type)
         (variable_identifier)
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
             (variable_identifier)))
@@ -151,7 +146,7 @@ e2.f( myArray );       // in E2.f - correct
         (float)
         (float))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

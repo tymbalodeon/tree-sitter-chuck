@@ -14,7 +14,6 @@ Array negative
 // same as a(s.size(()-3)
 <<< a[-3] >>>; // 2
 
-
 ---
 
 (source_file
@@ -29,7 +28,7 @@ Array negative
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

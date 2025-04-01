@@ -51,7 +51,6 @@ wek.predict( x, y );
 for( int i; i < y.size(); i++ ) { cherr <= y[i] <= " "; }
 cherr <= IO.newline();
 
-
 ---
 
 (source_file
@@ -161,13 +160,13 @@ cherr <= IO.newline();
         (float)
         (float))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

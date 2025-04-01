@@ -244,7 +244,6 @@ fun float closest( float testval, int list[] )
     return Std.mtof( closest_octave + list[closest_index] );
 }
 
-
 ---
 
 (source_file
@@ -609,7 +608,7 @@ fun float closest( float testval, int list[] )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -984,8 +983,7 @@ fun float closest( float testval, int list[] )
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (array_declaration
+      (variable_identifier)
       (primitive_type)
       (array_identifier
         (variable_identifier)))

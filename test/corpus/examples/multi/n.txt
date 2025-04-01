@@ -28,7 +28,6 @@ for( int i; i < N; i++ )
 // go
 while( true ) 1::second => now;
 
-
 ---
 
 (source_file)

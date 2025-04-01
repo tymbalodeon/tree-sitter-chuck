@@ -108,7 +108,6 @@ If that fails or you need me for some other reason try;
 signal [dot] automatique [at] gmail [another dot] com
 */
 
-
 ---
 
 (source_file

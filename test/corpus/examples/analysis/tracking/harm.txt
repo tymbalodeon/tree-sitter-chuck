@@ -71,7 +71,6 @@ fun void smack_handler()
     }
 }
 
-
 ---
 
 (source_file
@@ -129,7 +128,7 @@ fun void smack_handler()
           (operator)
           (int)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -141,10 +140,10 @@ fun void smack_handler()
   (statement
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_identifier)
-    (variable_identifier)
-    (variable_identifier))
+      (variable_identifier)
+      (variable_identifier)
+      (variable_identifier)
+      (variable_identifier)))
   (statement
     (spork_expression
       (function_call

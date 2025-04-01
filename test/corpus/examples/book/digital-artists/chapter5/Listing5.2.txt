@@ -22,7 +22,6 @@ second => now;
 myNote => addOctave => Std.mtof => s.freq;  // (4) Plays one octave up
 second => now;
 
-
 ---
 
 (source_file

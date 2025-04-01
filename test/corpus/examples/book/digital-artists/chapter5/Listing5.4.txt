@@ -28,7 +28,6 @@ interval(67,60) => int2;
    // comment it out to run program up to this point
 
 
-
 ---
 
 (source_file
@@ -51,16 +50,15 @@ interval(67,60) => int2;
   (statement
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_identifier))
+      (variable_identifier)
+      (variable_identifier)))
   (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

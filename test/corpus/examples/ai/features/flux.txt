@@ -22,7 +22,6 @@ while( true )
     512::samp => now;
 }
 
-
 ---
 
 (source_file

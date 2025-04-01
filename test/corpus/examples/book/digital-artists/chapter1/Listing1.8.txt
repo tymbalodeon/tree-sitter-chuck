@@ -33,9 +33,6 @@ onGain => s.gain;      //     oscillator, to start your 2nd note
 offGain => s.gain;     // (7) Turns off the sound of your oscillator
 0.3 :: second => now;  //     again to end the 2nd note
 
-
-
-
 ---
 
 (source_file

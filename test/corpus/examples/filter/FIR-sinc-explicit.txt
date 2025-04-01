@@ -23,7 +23,6 @@ for (1 => int i; i < 63; i++)  {
 
 w.closeFile();
 
-
 ---
 
 (source_file

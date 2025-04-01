@@ -148,7 +148,6 @@ while( true )
 // It is just a stream of bytes, all with their high bits set to 0, bracketed by a pair of system exclusive start and end messages (F0 and F7).
 //-----------------------------------------------------------------------------
 
-
 ---
 
 (source_file

@@ -57,8 +57,7 @@ while ( true )
     (variable_identifier)
     (variable_declaration
       (reference_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (reference_type)
       (variable_identifier))
     (block

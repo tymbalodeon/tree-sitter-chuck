@@ -16,9 +16,6 @@ SinOsc s2 => dac;           // (1) Another sine wave oscillator
 
 second => now;              // (5) Lets time pass so you can hear the sound.
 
-
-
-
 ---
 
 (source_file

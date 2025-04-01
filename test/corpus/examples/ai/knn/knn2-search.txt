@@ -69,9 +69,6 @@ for (int i; i < 2; i++)
              " (" + neighbor_features[i][0] + ", " + neighbor_features[i][1] + ")" <= IO.newline();
 }
 
-
-
-
 ---
 
 (source_file
@@ -103,7 +100,7 @@ for (int i; i < 2; i++)
         (string)
         (string))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (reference_type)
         (array_identifier
           (variable_identifier)))))
@@ -122,7 +119,7 @@ for (int i; i < 2; i++)
           (float)
           (float)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -134,7 +131,7 @@ for (int i; i < 2; i++)
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -164,7 +161,7 @@ for (int i; i < 2; i++)
         (float)
         (float))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -182,20 +179,20 @@ for (int i; i < 2; i++)
         (float)
         (float))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
         (int))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -316,7 +313,7 @@ for (int i; i < 2; i++)
               (variable_identifier)))))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

@@ -45,7 +45,6 @@ while( true )
     (80.0 + Math.sin(v*2.0)*10.0)::ms => now;
 }
 
-
 ---
 
 (source_file

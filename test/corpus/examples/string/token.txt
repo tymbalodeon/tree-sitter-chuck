@@ -42,7 +42,6 @@ strtok.next( foo );
 strtok.get( strtok.size() - 1, foo );
 <<< "last token:", foo >>>;
 
-
 ---
 
 (source_file

@@ -142,7 +142,6 @@ fun void two()
     }
 }
 
-
 ---
 
 (source_file
@@ -210,7 +209,7 @@ fun void two()
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -235,7 +234,7 @@ fun void two()
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

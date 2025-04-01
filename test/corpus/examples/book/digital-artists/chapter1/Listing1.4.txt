@@ -13,7 +13,6 @@ int myPitch;
 // print it out
 <<< myPitch >>>;
 
-
 ---
 
 (source_file

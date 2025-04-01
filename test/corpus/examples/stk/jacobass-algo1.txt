@@ -134,7 +134,6 @@ fun void teenTown() {
     }
 }
 
-
 ---
 
 (source_file
@@ -191,7 +190,7 @@ fun void teenTown() {
             (int)
             (int))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -204,7 +203,7 @@ fun void teenTown() {
             (int)
             (int))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -216,7 +215,7 @@ fun void teenTown() {
             (float)
             (float))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -229,7 +228,7 @@ fun void teenTown() {
             (int)
             (int))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -242,7 +241,7 @@ fun void teenTown() {
             (int)
             (int))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -254,7 +253,7 @@ fun void teenTown() {
             (int)
             (int))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -266,7 +265,7 @@ fun void teenTown() {
             (int)
             (int))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -788,7 +787,7 @@ fun void teenTown() {
             (int)
             (int))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -864,7 +863,7 @@ fun void teenTown() {
             (float)
             (float))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -944,7 +943,7 @@ fun void teenTown() {
             (class_identifier)
             (class_identifier))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))

@@ -22,7 +22,6 @@ mirror( foo );
 // test
 if ( foo[0] == foo[1] ) <<<"success">>>;
 
-
 ---
 
 (source_file
@@ -31,7 +30,7 @@ if ( foo[0] == foo[1] ) <<<"success">>>;
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)))
@@ -48,7 +47,7 @@ if ( foo[0] == foo[1] ) <<<"success">>>;
             (int))))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

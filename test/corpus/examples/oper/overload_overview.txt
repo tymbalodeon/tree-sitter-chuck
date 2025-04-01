@@ -45,7 +45,6 @@ c++;
 // should print 7
 <<< c.num >>>;
 
-
 ---
 
 (source_file
@@ -67,8 +66,7 @@ c++;
     (chuck_operator)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (class_identifier)
       (variable_identifier))
     (block
@@ -81,8 +79,7 @@ c++;
     (chuck_operator)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (class_identifier)
       (variable_identifier))
     (block
@@ -95,8 +92,7 @@ c++;
     (operator)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (class_identifier)
       (variable_identifier))
     (block
@@ -126,8 +122,7 @@ c++;
     (operator)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (class_identifier)
       (variable_identifier))
     (block
@@ -184,8 +179,8 @@ c++;
   (statement
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_identifier))
+      (variable_identifier)
+      (variable_identifier)))
   (statement
     (chuck_operation
       (int)

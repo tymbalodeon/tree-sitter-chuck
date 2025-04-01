@@ -33,7 +33,6 @@ while( true )
     5::ms => now;
 }
 
-
 ---
 
 (source_file
@@ -97,7 +96,7 @@ while( true )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

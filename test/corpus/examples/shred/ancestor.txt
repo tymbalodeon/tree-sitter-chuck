@@ -36,7 +36,6 @@ spork ~ findTheAncestor(10);
 // wait to give children shreds a chance to run
 1::samp => now;
 
-
 ---
 
 (source_file

@@ -55,7 +55,6 @@ while (true) {
     1::second => now;
 }
 
-
 ---
 
 (source_file
@@ -71,13 +70,13 @@ while (true) {
         (primitive_type)
         (variable_identifier))))
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
         (variable_identifier))))
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)

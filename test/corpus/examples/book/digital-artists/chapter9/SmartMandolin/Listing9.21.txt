@@ -35,7 +35,6 @@ m.roll("G", 0.02 :: second); // (8) Rolls a chord
 m.damp(0.01);                // (9) Damps strings at the end
 1.0 :: second => now;
 
-
 ---
 
 (source_file
@@ -59,7 +58,7 @@ m.damp(0.01);                // (9) Damps strings at the end
         (string)
         (string))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (reference_type)
         (array_identifier
           (variable_identifier)))))
@@ -76,7 +75,7 @@ m.damp(0.01);                // (9) Damps strings at the end
         (float)
         (float))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -87,7 +86,7 @@ m.damp(0.01);                // (9) Damps strings at the end
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

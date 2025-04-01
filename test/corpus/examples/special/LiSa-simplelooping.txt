@@ -47,7 +47,6 @@ while( true )
 
 // bye bye
 
-
 ---
 
 (source_file

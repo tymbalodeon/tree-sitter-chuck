@@ -39,7 +39,6 @@ Pan2 K => Gain L[2];
 <<< "6) connected:", K.left.isConnectedTo(L[0]), K.right.isConnectedTo(L[0]),
     K.left.isConnectedTo(L[1]), K.right.isConnectedTo(L[1]) >>>;
 
-
 ---
 
 (source_file
@@ -49,7 +48,7 @@ Pan2 K => Gain L[2];
   (line_comment)
   (statement
     (chuck_operation
-      (array_declaration
+      (variable_declaration
         (class_identifier)
         (array_identifier
           (class_identifier)
@@ -74,13 +73,13 @@ Pan2 K => Gain L[2];
   (line_comment)
   (statement
     (chuck_operation
-      (array_declaration
+      (variable_declaration
         (class_identifier)
         (array_identifier
           (class_identifier)
           (int)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (class_identifier)
         (array_identifier
           (class_identifier)
@@ -115,13 +114,13 @@ Pan2 K => Gain L[2];
   (line_comment)
   (statement
     (chuck_operation
-      (array_declaration
+      (variable_declaration
         (class_identifier)
         (array_identifier
           (class_identifier)
           (int)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (class_identifier)
         (array_identifier
           (class_identifier)
@@ -185,7 +184,7 @@ Pan2 K => Gain L[2];
         (class_identifier)
         (class_identifier))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (class_identifier)
         (array_identifier
           (class_identifier)
@@ -206,7 +205,7 @@ Pan2 K => Gain L[2];
   (line_comment)
   (statement
     (chuck_operation
-      (array_declaration
+      (variable_declaration
         (class_identifier)
         (array_identifier
           (class_identifier)
@@ -262,7 +261,7 @@ Pan2 K => Gain L[2];
         (class_identifier)
         (class_identifier))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (class_identifier)
         (array_identifier
           (class_identifier)

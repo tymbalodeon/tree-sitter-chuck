@@ -43,7 +43,6 @@ while(true)
     i++;
 }
 
-
 ---
 
 (source_file
@@ -56,19 +55,19 @@ while(true)
     (chuck_operation
       (chuck_operation
         (chuck_operation
-          (array_declaration
+          (variable_declaration
             (class_identifier)
             (array_identifier
               (variable_identifier)
               (int)))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (class_identifier)
             (array_identifier
               (variable_identifier)
               (int))))
         (chuck_operator)
-        (array_declaration
+        (variable_declaration
           (class_identifier)
           (array_identifier
             (variable_identifier)

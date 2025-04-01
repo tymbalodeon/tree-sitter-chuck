@@ -13,7 +13,6 @@ Noise nz => LPF lp => dac;
 0.2 => lp.gain;
 second => now;
 
-
 ---
 
 (source_file

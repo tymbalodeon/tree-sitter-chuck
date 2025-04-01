@@ -1,6 +1,5 @@
 =====
 Piano
-:skip
 =====
 
 // Listing 8.5 Jazz band:
@@ -35,20 +34,19 @@ while( true )                  // (5) Infinite loop
     1.4 :: second => now;
 }
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array_identifier
@@ -58,7 +56,7 @@ while( true )                  // (5) Infinite loop
       (member_identifier
         (global_unit_generator)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array_identifier
@@ -67,7 +65,7 @@ while( true )                  // (5) Infinite loop
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array_identifier
@@ -85,8 +83,8 @@ while( true )                  // (5) Infinite loop
       (member_identifier
         (global_unit_generator)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -101,17 +99,17 @@ while( true )                  // (5) Infinite loop
           (int)
           (int)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
-    (comment)
+    (line_comment)
     (block
-      (comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (int)
@@ -123,10 +121,10 @@ while( true )                  // (5) Infinite loop
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -165,7 +163,7 @@ while( true )                  // (5) Infinite loop
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (int)
@@ -177,10 +175,10 @@ while( true )                  // (5) Infinite loop
           (variable_identifier)
           (operator)
           (int))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call

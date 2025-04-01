@@ -17,7 +17,6 @@ class Foo
 Foo foo;
 // when `foo` goes out of scope, the destructor should be called...
 
-
 ---
 
 (source_file

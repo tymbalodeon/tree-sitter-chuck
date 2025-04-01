@@ -29,7 +29,6 @@ Y y;
 // call the right one, hopefully
 y.foo( 3, 5 );
 
-
 ---
 
 (source_file
@@ -55,8 +54,7 @@ y.foo( 3, 5 );
         (variable_identifier)
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block

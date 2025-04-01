@@ -1,6 +1,5 @@
 ==========
 Listing3.6
-:skip
 ==========
 
 // Listing 3.6 Storing durations in an array
@@ -34,12 +33,11 @@ for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates
     0.2::second => now;
 }
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -48,8 +46,8 @@ for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -57,7 +55,7 @@ for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -65,7 +63,7 @@ for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -84,11 +82,11 @@ for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -98,7 +96,7 @@ for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -108,8 +106,8 @@ for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -128,11 +126,11 @@ for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates
         (variable_identifier)
         (variable_identifier))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -147,12 +145,12 @@ for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
-    (comment)
+    (line_comment)
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -166,7 +164,7 @@ for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -174,7 +172,7 @@ for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (array_identifier
@@ -183,8 +181,8 @@ for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (variable_identifier)
@@ -192,7 +190,7 @@ for (0 => int i; i < myNotes.cap(); i++)  // (7) For loop iterates
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (dur

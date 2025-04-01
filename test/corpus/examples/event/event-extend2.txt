@@ -73,7 +73,6 @@ while( true )
     600::ms => now;
 }
 
-
 ---
 
 (source_file
@@ -126,8 +125,7 @@ while( true )
     (variable_identifier)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

@@ -49,7 +49,6 @@ while ( true )
     else { 0.5::second => now; }
 }
 
-
 ---
 
 (source_file

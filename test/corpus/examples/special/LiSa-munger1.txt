@@ -101,7 +101,6 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
     }
 }
 
-
 ---
 
 (source_file
@@ -336,14 +335,11 @@ fun void getgrain( dur grainlen, dur rampup, dur rampdown, float rate )
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

@@ -67,7 +67,6 @@ fun void riff()
     1 => h.noteOff;
 }
 
-
 ---
 
 (source_file
@@ -247,8 +246,7 @@ fun void riff()
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block
@@ -315,7 +313,7 @@ fun void riff()
             (int)
             (int))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -333,7 +331,7 @@ fun void riff()
             (int)
             (int))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))

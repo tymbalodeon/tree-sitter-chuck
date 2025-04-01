@@ -49,14 +49,13 @@ while (true)
     playChord(67, "major", second/2);      // (3) Plays a G major chord
 }
 
-
 ---
 
 (source_file
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
@@ -111,11 +110,9 @@ while (true)
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (reference_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

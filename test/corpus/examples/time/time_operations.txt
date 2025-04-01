@@ -30,7 +30,6 @@ t2 - t1 => dur span;
 <<<span / d>>>;
 
 
-
 ---
 
 (source_file

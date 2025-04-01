@@ -22,7 +22,6 @@ while( true )
     unflip.size()::samp => now;
 }
 
-
 ---
 
 (source_file

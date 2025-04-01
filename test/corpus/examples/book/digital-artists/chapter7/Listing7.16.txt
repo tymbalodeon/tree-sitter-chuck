@@ -32,7 +32,6 @@ while (1) {                      // (6) Sings a random "song" forever
     Math.random2f(0.2,0.5) :: second => now;
 }
 
-
 ---
 
 (source_file

@@ -1,6 +1,5 @@
 ==========
 Listing3.8
-:skip
 ==========
 
 // Listing 3.8 "Twinkle" with melody, harmony, and lyrics!
@@ -53,13 +52,12 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
     0.3*myDurs[i] => now;                // (14) 30% of array duration is off time
 }
 
-
 ---
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -73,7 +71,7 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -82,8 +80,8 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -91,7 +89,7 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -99,7 +97,7 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -110,7 +108,7 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
         (int)
         (int)
         (int)
-        (comment)
+        (line_comment)
         (int)
         (int)
         (int)
@@ -119,7 +117,7 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -133,7 +131,7 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
         (int)
         (int)
         (int)
-        (comment)
+        (line_comment)
         (int)
         (int)
         (int)
@@ -142,11 +140,11 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -183,11 +181,11 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
         (variable_identifier)
         (variable_identifier))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -198,7 +196,7 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
         (string)
         (string)
         (string)
-        (comment)
+        (line_comment)
         (string)
         (string)
         (string)
@@ -207,12 +205,12 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
         (string)
         (string))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (reference_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -227,12 +225,12 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
-    (comment)
+    (line_comment)
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (debug_print
           (variable_identifier)
@@ -245,7 +243,7 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
           (array_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -259,7 +257,7 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -273,8 +271,8 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -288,8 +286,8 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (chuck_operation
@@ -302,7 +300,7 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
           (member_identifier
             (variable_identifier)
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (binary_expression
@@ -314,8 +312,8 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (chuck_operation
@@ -339,4 +337,4 @@ for (0 => int i; i < melNotes.cap(); i++) // (8) Plays through all
           (chuck_operator)
           (keyword
             (special_literal_value))))
-      (comment))))
+      (line_comment))))

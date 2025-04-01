@@ -20,7 +20,6 @@ public class BPM
     }
 }
 
-
 ---
 
 (source_file
@@ -33,10 +32,10 @@ public class BPM
       (statement
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_identifier)
-        (variable_identifier)
-        (variable_identifier))
+          (variable_identifier)
+          (variable_identifier)
+          (variable_identifier)
+          (variable_identifier)))
       (function_definition
         (primitive_type)
         (variable_identifier)

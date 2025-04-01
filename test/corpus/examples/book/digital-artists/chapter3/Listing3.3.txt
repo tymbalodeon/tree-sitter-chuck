@@ -17,7 +17,6 @@ a[2] => int myNote;   // (1) Looks up note in array by integer index
 61 => a[2];           // (3) Changes array element value at index
 <<< myNote, a[2] >>>;
 
-
 ---
 
 (source_file
@@ -34,7 +33,7 @@ a[2] => int myNote;   // (1) Looks up note in array by integer index
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

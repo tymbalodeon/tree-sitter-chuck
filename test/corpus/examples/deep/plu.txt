@@ -31,7 +31,6 @@ L::samp => now;
 // advance time
 (Math.log(.0001) / Math.log(R))::samp => now;
 
-
 ---
 
 (source_file

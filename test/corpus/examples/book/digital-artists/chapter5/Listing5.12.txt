@@ -22,7 +22,6 @@ arrayAdder(scale, 2);
 arrayAdder(scale, 6);
 <<< "scale[6] = ", scale[6] >>>;
 
-
 ---
 
 (source_file
@@ -40,7 +39,7 @@ arrayAdder(scale, 6);
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -48,11 +47,10 @@ arrayAdder(scale, 6);
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
-        (variable_identifier)))
-    (variable_declaration
+        (variable_identifier))
       (primitive_type)
       (variable_identifier))
     (block

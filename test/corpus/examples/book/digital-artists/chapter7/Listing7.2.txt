@@ -32,7 +32,6 @@ second => now;
 1 => trump.stopBlowing;
 second => now;
 
-
 ---
 
 (source_file
@@ -76,7 +75,7 @@ second => now;
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

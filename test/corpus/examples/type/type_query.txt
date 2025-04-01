@@ -54,7 +54,6 @@ for( int i; i < types.size(); i++ )
     cherr <= "(UGens): " <= types[i].name() <= " (" <= types[i].origin() <= ")" <= IO.newline();
 }
 
-
 ---
 
 (source_file
@@ -82,7 +81,7 @@ for( int i; i < types.size(); i++ )
           (class_identifier)
           (class_identifier)))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (class_identifier)
         (array_identifier
           (variable_identifier)))))

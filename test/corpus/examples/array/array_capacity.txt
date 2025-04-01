@@ -63,7 +63,6 @@ fun void print( int iteration )
         "capacity:", a.capacity() >>>;
 }
 
-
 ---
 
 (source_file
@@ -80,7 +79,7 @@ fun void print( int iteration )
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

@@ -31,7 +31,6 @@ for( int x : [ 1, 2, 3 ] )
     <<< x >>>;
 }
 
-
 ---
 
 (source_file
@@ -45,7 +44,7 @@ for( int x : [ 1, 2, 3 ] )
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (reference_type)

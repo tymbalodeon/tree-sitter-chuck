@@ -31,7 +31,6 @@ e.signal();
 // (alternative: me.yield())
 1::samp => now;
 
-
 ---
 
 (source_file

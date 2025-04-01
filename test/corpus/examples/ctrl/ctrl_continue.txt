@@ -28,9 +28,6 @@ while ( j < 5 )
 // make sure that continue does the right thing in the inner loop?
 if ( check == 10 ) <<<"success">>>;
 
-
-
-
 ---
 
 (source_file

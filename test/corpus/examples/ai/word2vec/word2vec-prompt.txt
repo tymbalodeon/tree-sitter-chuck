@@ -476,7 +476,6 @@ class W2V
     }
 }
 
-
 ---
 
 (source_file
@@ -510,7 +509,7 @@ class W2V
       (variable_identifier)))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (reference_type)
       (array_identifier
         (variable_identifier)
@@ -633,14 +632,14 @@ class W2V
             (string))))
       (line_comment)
       (statement
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
             (variable_identifier)
-            (int)))
-        (array_identifier
-          (variable_identifier)
-          (int)))
+            (int))
+          (array_identifier
+            (variable_identifier)
+            (int))))
       (statement
         (function_call
           (member_identifier
@@ -774,7 +773,7 @@ class W2V
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (array_declaration
+    (variable_declaration
       (reference_type)
       (array_identifier
         (variable_identifier)))
@@ -1143,7 +1142,7 @@ class W2V
                               (variable_identifier)
                               (int))
                             (chuck_operator)
-                            (array_declaration
+                            (variable_declaration
                               (reference_type)
                               (array_identifier
                                 (variable_identifier)))))
@@ -1243,7 +1242,7 @@ class W2V
                                 (variable_identifier)
                                 (int))
                               (chuck_operator)
-                              (array_declaration
+                              (variable_declaration
                                 (reference_type)
                                 (array_identifier
                                   (variable_identifier)))))
@@ -1334,7 +1333,7 @@ class W2V
                                 (string))))
                           (block
                             (statement
-                              (array_declaration
+                              (variable_declaration
                                 (primitive_type)
                                 (array_identifier
                                   (variable_identifier)
@@ -1440,20 +1439,20 @@ class W2V
                                     (int))
                                   (string)))
                               (statement
-                                (array_declaration
+                                (variable_declaration
                                   (primitive_type)
                                   (array_identifier
                                     (variable_identifier)
                                     (function_call
                                       (member_identifier
                                         (variable_identifier)
-                                        (variable_identifier)))))
-                                (array_identifier
-                                  (variable_identifier)
-                                  (function_call
-                                    (member_identifier
-                                      (variable_identifier)
-                                      (variable_identifier)))))
+                                        (variable_identifier))))
+                                  (array_identifier
+                                    (variable_identifier)
+                                    (function_call
+                                      (member_identifier
+                                        (variable_identifier)
+                                        (variable_identifier))))))
                               (statement
                                 (function_call
                                   (member_identifier
@@ -1566,7 +1565,7 @@ class W2V
                                     (string))))
                               (block
                                 (statement
-                                  (array_declaration
+                                  (variable_declaration
                                     (reference_type)
                                     (array_identifier
                                       (variable_identifier)
@@ -1623,15 +1622,13 @@ class W2V
   (function_definition
     (primitive_type)
     (variable_identifier)
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
-        (variable_identifier)))
-    (array_declaration
+        (variable_identifier))
       (primitive_type)
       (array_identifier
-        (variable_identifier)))
-    (array_declaration
+        (variable_identifier))
       (primitive_type)
       (array_identifier
         (variable_identifier)))
@@ -1710,35 +1707,31 @@ class W2V
     (variable_identifier)
     (variable_declaration
       (reference_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (reference_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (class_identifier))
-    (variable_declaration
+      (class_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block
       (statement
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
             (variable_identifier)
             (function_call
               (member_identifier
                 (variable_identifier)
-                (variable_identifier)))))
-        (array_identifier
-          (variable_identifier)
-          (function_call
-            (member_identifier
-              (variable_identifier)
-              (variable_identifier)))))
+                (variable_identifier))))
+          (array_identifier
+            (variable_identifier)
+            (function_call
+              (member_identifier
+                (variable_identifier)
+                (variable_identifier))))))
       (statement
         (function_call
           (member_identifier
@@ -1755,14 +1748,14 @@ class W2V
           (variable_identifier)))
       (line_comment)
       (statement
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
             (variable_identifier)
-            (int)))
-        (array_identifier
-          (variable_identifier)
-          (int)))
+            (int))
+          (array_identifier
+            (variable_identifier)
+            (int))))
       (statement
         (function_call
           (member_identifier
@@ -1779,7 +1772,7 @@ class W2V
               (variable_identifier))
             (variable_identifier))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -1791,7 +1784,7 @@ class W2V
               (variable_identifier))
             (variable_identifier))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -1897,13 +1890,13 @@ class W2V
             (primitive_type)
             (variable_identifier))))
       (statement
-        (array_declaration
+        (variable_declaration
           (reference_type)
           (array_identifier
             (variable_identifier)
             (variable_identifier))))
       (statement
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
             (variable_identifier)
@@ -2010,11 +2003,10 @@ class W2V
       (function_definition
         (primitive_type)
         (variable_identifier)
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
-            (variable_identifier)))
-        (array_declaration
+            (variable_identifier))
           (primitive_type)
           (array_identifier
             (variable_identifier)))
@@ -2054,13 +2046,13 @@ class W2V
       (function_definition
         (primitive_type)
         (variable_identifier)
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
             (variable_identifier)))
         (block
           (statement
-            (array_declaration
+            (variable_declaration
               (primitive_type)
               (array_identifier
                 (variable_identifier)
@@ -2098,11 +2090,10 @@ class W2V
       (function_definition
         (primitive_type)
         (variable_identifier)
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
-            (variable_identifier)))
-        (array_declaration
+            (variable_identifier))
           (primitive_type)
           (array_identifier
             (variable_identifier)))
@@ -2157,11 +2148,10 @@ class W2V
       (function_definition
         (primitive_type)
         (variable_identifier)
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
-            (variable_identifier)))
-        (array_declaration
+            (variable_identifier))
           (primitive_type)
           (array_identifier
             (variable_identifier)))
@@ -2215,11 +2205,10 @@ class W2V
       (function_definition
         (primitive_type)
         (variable_identifier)
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
-            (variable_identifier)))
-        (variable_declaration
+            (variable_identifier))
           (primitive_type)
           (variable_identifier))
         (block
@@ -2247,15 +2236,13 @@ class W2V
       (function_definition
         (primitive_type)
         (variable_identifier)
-        (array_declaration
-          (primitive_type)
-          (array_identifier
-            (variable_identifier)))
-        (array_declaration
-          (primitive_type)
-          (array_identifier
-            (variable_identifier)))
         (variable_declaration
+          (primitive_type)
+          (array_identifier
+            (variable_identifier))
+          (primitive_type)
+          (array_identifier
+            (variable_identifier))
           (primitive_type)
           (variable_identifier))
         (block
@@ -2293,8 +2280,7 @@ class W2V
           (variable_identifier))
         (variable_declaration
           (reference_type)
-          (variable_identifier))
-        (variable_declaration
+          (variable_identifier)
           (primitive_type)
           (variable_identifier))
         (block
@@ -2315,7 +2301,7 @@ class W2V
               (reference_type)
               (variable_identifier)))
           (statement
-            (array_declaration
+            (variable_declaration
               (primitive_type)
               (array_identifier
                 (variable_identifier)
@@ -2324,7 +2310,7 @@ class W2V
                     (variable_identifier)
                     (variable_identifier))))))
           (statement
-            (array_declaration
+            (variable_declaration
               (primitive_type)
               (array_identifier
                 (variable_identifier)
@@ -2493,7 +2479,7 @@ class W2V
                           (variable_identifier)))))))))
           (line_comment)
           (statement
-            (array_declaration
+            (variable_declaration
               (reference_type)
               (array_identifier
                 (variable_identifier)
@@ -2517,14 +2503,11 @@ class W2V
           (variable_identifier))
         (variable_declaration
           (reference_type)
-          (class_identifier))
-        (variable_declaration
+          (class_identifier)
           (reference_type)
-          (class_identifier))
-        (variable_declaration
+          (class_identifier)
           (reference_type)
-          (class_identifier))
-        (variable_declaration
+          (class_identifier)
           (primitive_type)
           (variable_identifier))
         (block

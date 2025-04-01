@@ -30,7 +30,6 @@ while( fio => str )
     chout <= str <= IO.newline();
 }
 
-
 ---
 
 (source_file

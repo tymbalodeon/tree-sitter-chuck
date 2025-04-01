@@ -31,7 +31,6 @@ while (freq < 800)
     50 +=> freq;
 }
 
-
 ---
 
 (source_file
@@ -43,10 +42,10 @@ while (freq < 800)
       (statement
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_identifier)
-        (variable_identifier)
-        (variable_identifier))
+          (variable_identifier)
+          (variable_identifier)
+          (variable_identifier)
+          (variable_identifier)))
       (function_definition
         (primitive_type)
         (variable_identifier)

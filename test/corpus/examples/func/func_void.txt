@@ -12,7 +12,6 @@ foo();
 // call foo
 () => foo;
 
-
 ---
 
 (source_file

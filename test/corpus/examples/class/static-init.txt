@@ -59,7 +59,6 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
 <<< Foo.S_STRING >>>;
 <<< Foo.S_SINOSC.freq() >>>;
 
-
 ---
 
 (source_file
@@ -152,7 +151,7 @@ for( auto i : Foo.S_INT_ARRAY ) <<< i >>>;
             (int)
             (int))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (class_identifier)))))

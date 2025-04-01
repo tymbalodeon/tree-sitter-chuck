@@ -24,7 +24,6 @@ Machine.remove( s.id() );
 // wait a little more
 2::second => now;
 
-
 ---
 
 (source_file

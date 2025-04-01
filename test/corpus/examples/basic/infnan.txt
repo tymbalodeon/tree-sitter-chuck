@@ -19,7 +19,6 @@ repeat( 20 ) n *=> n;
 <<< Math.INFINITY, -Math.INFINITY >>>;
 <<< Math.INFINITY => Math.isinf >>>;
 
-
 ---
 
 (source_file

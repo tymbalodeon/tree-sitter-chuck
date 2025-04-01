@@ -22,7 +22,6 @@ while (true) {
     Math.random2f(0.05,0.1) :: second => now;
 }
 
-
 ---
 
 (source_file

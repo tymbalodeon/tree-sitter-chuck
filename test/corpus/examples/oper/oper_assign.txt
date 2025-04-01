@@ -27,7 +27,6 @@ x[1] @=> int y[];
 // test
 if( y[1] == 2 ) <<<"success">>>;
 
-
 ---
 
 (source_file
@@ -59,7 +58,7 @@ if( y[1] == 2 ) <<<"success">>>;
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -81,7 +80,7 @@ if( y[1] == 2 ) <<<"success">>>;
         (variable_identifier)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

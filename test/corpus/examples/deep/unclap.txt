@@ -62,7 +62,6 @@ spork ~ clap( clapper2, 0, 0 );
 // infinite time loop
 while( true ) 1::day => now;
 
-
 ---
 
 (source_file
@@ -132,7 +131,7 @@ while( true ) 1::day => now;
         (float)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -168,11 +167,9 @@ while( true ) 1::day => now;
     (variable_identifier)
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

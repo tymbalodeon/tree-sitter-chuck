@@ -70,7 +70,7 @@ while (true) {
               (variable_identifier)
               (variable_identifier)))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -82,7 +82,7 @@ while (true) {
               (variable_identifier)
               (variable_identifier)))
           (chuck_operator)
-          (array_declaration
+          (variable_declaration
             (primitive_type)
             (array_identifier
               (variable_identifier)))))
@@ -179,8 +179,8 @@ fft.upchuck() @=> blob2; // now both blob1 and blob2 refer to the same object: t
   (statement
     (variable_declaration
       (class_identifier)
-      (variable_identifier))
-    (variable_identifier))
+      (variable_identifier)
+      (variable_identifier)))
   (statement
     (chuck_operation
       (dur

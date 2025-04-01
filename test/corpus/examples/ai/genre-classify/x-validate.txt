@@ -326,7 +326,6 @@ fun void readData( FileIO fio )
     }
 }
 
-
 ---
 
 (source_file
@@ -432,14 +431,14 @@ fun void readData( FileIO fio )
           (variable_identifier)))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (reference_type)
       (array_identifier
         (variable_identifier)
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -449,7 +448,7 @@ fun void readData( FileIO fio )
             (variable_identifier))))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -457,14 +456,14 @@ fun void readData( FileIO fio )
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (reference_type)
       (array_identifier
         (variable_identifier)
         (int))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -495,7 +494,7 @@ fun void readData( FileIO fio )
         (class_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -549,7 +548,7 @@ fun void readData( FileIO fio )
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -560,7 +559,7 @@ fun void readData( FileIO fio )
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -570,7 +569,7 @@ fun void readData( FileIO fio )
           (variable_identifier)))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -581,7 +580,7 @@ fun void readData( FileIO fio )
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -842,7 +841,7 @@ fun void readData( FileIO fio )
     (block
       (line_comment)
       (statement
-        (array_declaration
+        (variable_declaration
           (primitive_type)
           (array_identifier
             (variable_identifier)
@@ -1297,8 +1296,8 @@ fun void readData( FileIO fio )
       (statement
         (variable_declaration
           (primitive_type)
-          (variable_identifier))
-        (variable_identifier))
+          (variable_identifier)
+          (variable_identifier)))
       (loop
         (chuck_operation
           (variable_identifier)

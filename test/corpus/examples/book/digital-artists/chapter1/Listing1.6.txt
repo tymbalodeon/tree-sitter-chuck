@@ -20,7 +20,6 @@ myPitch / 2 => int lowerPitch;
 <<< myPitch, anotherPitch, higherPitch, lowerPitch >>>;
 
 
-
 ---
 
 (source_file

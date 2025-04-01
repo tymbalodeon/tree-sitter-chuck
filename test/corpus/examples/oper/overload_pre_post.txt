@@ -32,7 +32,6 @@ Foo a;
 // should print: 1 1 2 2 2 3
 <<< !a, ++a, ++a, a.n, a++, a.n >>>;
 
-
 ---
 
 (source_file

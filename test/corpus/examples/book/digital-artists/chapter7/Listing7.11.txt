@@ -1,6 +1,5 @@
 ===========
 Listing7.11
-:skip
 ===========
 
 // Listing 7.11 Bowing a rigid bar using the BandedWG UGen
@@ -31,7 +30,108 @@ for (6 => int i; i > 0; i--)
     second => now;
 }
 
-
 ---
 
-(source_file)
+(source_file
+  (line_comment)
+  (line_comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (line_comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (line_comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (line_comment)
+  (statement
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (member_identifier
+        (variable_identifier)
+        (variable_identifier))))
+  (line_comment)
+  (for_loop
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (post_increment_expression
+      (variable_identifier))
+    (block
+      (statement
+        (debug_print
+          (string)
+          (chuck_operation
+            (binary_expression
+              (variable_identifier)
+              (operator)
+              (float))
+            (chuck_operator)
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier)))))
+      (statement
+        (chuck_operation
+          (keyword
+            (duration_identifier))
+          (chuck_operator)
+          (keyword
+            (special_literal_value))))))
+  (line_comment)
+  (for_loop
+    (chuck_operation
+      (int)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier)))
+    (binary_expression
+      (variable_identifier)
+      (operator)
+      (int))
+    (post_increment_expression
+      (variable_identifier))
+    (block
+      (statement
+        (debug_print
+          (string)
+          (chuck_operation
+            (binary_expression
+              (variable_identifier)
+              (operator)
+              (float))
+            (chuck_operator)
+            (member_identifier
+              (variable_identifier)
+              (variable_identifier)))))
+      (statement
+        (chuck_operation
+          (keyword
+            (duration_identifier))
+          (chuck_operator)
+          (keyword
+            (special_literal_value)))))))

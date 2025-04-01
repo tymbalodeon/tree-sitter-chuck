@@ -50,7 +50,6 @@ while( true )
     Math.random2f(20, 1000) => s.freq;
 }
 
-
 ---
 
 (source_file

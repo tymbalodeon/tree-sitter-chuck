@@ -40,7 +40,7 @@ for( int i; i < N; i++ )
         (class_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

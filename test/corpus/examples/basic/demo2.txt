@@ -66,9 +66,6 @@ for(0 => int i; i<5; i++) {
 
 
 
-
-
-
 ---
 
 (source_file
@@ -84,7 +81,7 @@ for(0 => int i; i<5; i++) {
         (variable_identifier))))
   (block_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)

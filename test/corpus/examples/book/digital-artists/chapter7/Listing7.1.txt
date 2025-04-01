@@ -1,6 +1,5 @@
 ==========
 Listing7.1
-:skip
 ==========
 
 // Listing 7.1 Playing the ChucK STK Clarinet physical model unit generator
@@ -20,7 +19,67 @@ while ((0.05 +=> blow) < 1.0)  // gradually increases from there
 }
 
 
-
 ---
 
-(source_file)
+(source_file
+  (line_comment)
+  (line_comment)
+  (statement
+    (chuck_operation
+      (variable_declaration
+        (class_identifier)
+        (variable_identifier))
+      (chuck_operator)
+      (keyword
+        (global_unit_generator))))
+  (statement
+    (chuck_operation
+      (float)
+      (chuck_operator)
+      (variable_declaration
+        (primitive_type)
+        (variable_identifier))))
+  (line_comment)
+  (loop
+    (binary_expression
+      (expression_group
+        (chuck_operation
+          (float)
+          (chuck_operator)
+          (variable_identifier)))
+      (operator)
+      (float))
+    (line_comment)
+    (block
+      (statement
+        (chuck_operation
+          (variable_identifier)
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (line_comment)
+      (statement
+        (chuck_operation
+          (dur
+            (float)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword
+            (special_literal_value))))
+      (statement
+        (chuck_operation
+          (int)
+          (chuck_operator)
+          (member_identifier
+            (variable_identifier)
+            (variable_identifier))))
+      (line_comment)
+      (statement
+        (chuck_operation
+          (dur
+            (float)
+            (duration_identifier))
+          (chuck_operator)
+          (keyword
+            (special_literal_value)))))))

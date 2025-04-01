@@ -51,7 +51,6 @@ while( true )
     HOP_SIZE::samp => now;
 }
 
-
 ---
 
 (source_file
@@ -89,7 +88,7 @@ while( true )
         (global_unit_generator))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
@@ -104,7 +103,7 @@ while( true )
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
@@ -219,7 +218,7 @@ while( true )
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (class_identifier)

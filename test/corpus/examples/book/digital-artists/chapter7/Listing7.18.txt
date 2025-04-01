@@ -1,6 +1,5 @@
 ===========
 Listing7.18
-:skip
 ===========
 
 // Listing 7.18 Ragajam Indian music in ChucK
@@ -85,11 +84,10 @@ while (true) {
     }
 }
 
-
 ---
 
 (source_file
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -103,7 +101,7 @@ while (true) {
       (chuck_operator)
       (keyword
         (global_unit_generator))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (chuck_operation
@@ -119,21 +117,21 @@ while (true) {
           (variable_identifier)))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_identifier)
       (chuck_operator)
       (variable_identifier)))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (class_identifier)
       (array_identifier
         (variable_identifier)
         (int))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -141,7 +139,7 @@ while (true) {
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (for_loop
     (chuck_operation
       (int)
@@ -156,7 +154,7 @@ while (true) {
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (statement
@@ -166,7 +164,7 @@ while (true) {
             (variable_identifier))
           (chuck_operator)
           (variable_identifier)))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (expression_group
@@ -183,8 +181,8 @@ while (true) {
               (variable_identifier)
               (variable_identifier))
             (variable_identifier))))
-      (comment)))
-  (comment)
+      (line_comment)))
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -193,11 +191,11 @@ while (true) {
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -219,7 +217,7 @@ while (true) {
         (member_identifier
           (variable_identifier)
           (variable_identifier))))
-    (increment_expression
+    (post_increment_expression
       (variable_identifier))
     (block
       (statement
@@ -231,7 +229,7 @@ while (true) {
               (variable_identifier)
               (variable_identifier))
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (string)
@@ -241,7 +239,7 @@ while (true) {
               (variable_identifier)
               (variable_identifier))
             (variable_identifier))))
-      (comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -257,8 +255,8 @@ while (true) {
               (variable_identifier)
               (variable_identifier))
             (variable_identifier))))
-      (comment)))
-  (comment)
+      (line_comment)))
+  (line_comment)
   (statement
     (chuck_operation
       (variable_declaration
@@ -266,13 +264,13 @@ while (true) {
         (variable_identifier))
       (chuck_operator)
       (variable_identifier)))
-  (comment)
+  (line_comment)
   (function_definition
     (primitive_type)
     (variable_identifier)
     (block
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (statement
         (chuck_operation
           (function_call
@@ -320,7 +318,7 @@ while (true) {
               (variable_identifier))
             (float)
             (float))))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (array
@@ -333,11 +331,11 @@ while (true) {
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -345,7 +343,7 @@ while (true) {
       (variable_declaration
         (primitive_type)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -371,7 +369,7 @@ while (true) {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (float)
@@ -379,7 +377,7 @@ while (true) {
       (member_identifier
         (variable_identifier)
         (variable_identifier))))
-  (comment)
+  (line_comment)
   (statement
     (chuck_operation
       (dur
@@ -388,8 +386,8 @@ while (true) {
       (chuck_operator)
       (keyword
         (special_literal_value))))
-  (comment)
-  (comment)
+  (line_comment)
+  (line_comment)
   (loop
     (keyword
       (boolean_literal_value))
@@ -406,8 +404,8 @@ while (true) {
           (variable_declaration
             (primitive_type)
             (variable_identifier))))
-      (comment)
-      (comment)
+      (line_comment)
+      (line_comment)
       (for_loop
         (chuck_operation
           (int)
@@ -422,10 +420,10 @@ while (true) {
             (member_identifier
               (variable_identifier)
               (variable_identifier))))
-        (increment_expression
+        (post_increment_expression
           (variable_identifier))
         (block
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (function_call
@@ -459,13 +457,13 @@ while (true) {
                 (member_identifier
                   (class_identifier)
                   (variable_identifier)))))
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
           (statement
             (function_call
               (variable_identifier)))
-          (comment)
-          (comment)
+          (line_comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression
@@ -481,7 +479,7 @@ while (true) {
               (chuck_operator)
               (keyword
                 (special_literal_value))))
-          (comment)
+          (line_comment)
           (conditional
             (binary_expression
               (function_call
@@ -492,12 +490,12 @@ while (true) {
                 (int))
               (operator)
               (int))
-            (comment)
+            (line_comment)
             (block
               (statement
                 (function_call
                   (variable_identifier)))))
-          (comment)
+          (line_comment)
           (statement
             (chuck_operation
               (binary_expression

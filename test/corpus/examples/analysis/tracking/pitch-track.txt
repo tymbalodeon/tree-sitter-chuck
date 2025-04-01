@@ -78,7 +78,6 @@ fun void ramp_stuff()
     }
 }
 
-
 ---
 
 (source_file
@@ -182,10 +181,10 @@ fun void ramp_stuff()
   (statement
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_identifier)
-    (variable_identifier)
-    (variable_identifier))
+      (variable_identifier)
+      (variable_identifier)
+      (variable_identifier)
+      (variable_identifier)))
   (statement
     (spork_expression
       (function_call

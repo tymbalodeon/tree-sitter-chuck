@@ -260,7 +260,6 @@ fun LiSa load( string filename )
     return lisa;
 }
 
-
 ---
 
 (source_file
@@ -678,8 +677,7 @@ fun LiSa load( string filename )
     (variable_identifier)
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (class_identifier))
     (block
@@ -719,17 +717,13 @@ fun LiSa load( string filename )
       (variable_identifier))
     (variable_declaration
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
-      (variable_identifier))
-    (variable_declaration
+      (variable_identifier)
       (primitive_type)
       (variable_identifier))
     (block

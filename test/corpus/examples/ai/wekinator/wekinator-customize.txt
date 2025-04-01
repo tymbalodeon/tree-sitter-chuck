@@ -235,7 +235,6 @@ wek.setOutputRunStatus(0, true);
 wek.clear();
 <<< "---------------", "" >>>;
 
-
 ---
 
 (source_file
@@ -830,7 +829,7 @@ wek.clear();
       (string)
       (string)))
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -954,7 +953,7 @@ wek.clear();
         (variable_identifier))))
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -1030,7 +1029,7 @@ wek.clear();
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)
@@ -1109,7 +1108,7 @@ wek.clear();
   (line_comment)
   (line_comment)
   (statement
-    (array_declaration
+    (variable_declaration
       (primitive_type)
       (array_identifier
         (variable_identifier)

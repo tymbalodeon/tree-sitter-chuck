@@ -28,7 +28,6 @@ while (1) {           // (5) Infinite loop.
     else 1 => solo.noteOff;      // (8) ...otherwise turns note off.
 }
 
-
 ---
 
 (source_file
@@ -113,7 +112,7 @@ while (1) {           // (5) Infinite loop.
         (int)
         (int))
       (chuck_operator)
-      (array_declaration
+      (variable_declaration
         (primitive_type)
         (array_identifier
           (variable_identifier)))))

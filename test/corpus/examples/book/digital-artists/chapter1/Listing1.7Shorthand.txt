@@ -13,7 +13,6 @@ Listing1.7Shorthand
 
 <<< myPitch >>>;
 
-
 ---
 
 (source_file
