@@ -200,3 +200,15 @@ install-queries:
 @install-grammar: && install-queries
     hx --grammar fetch
     hx --grammar build
+
+[no-cd]
+report-states *rule:
+    #!/usr/bin/env nu
+    
+    let rule = if ("{{ rule }}" | is-empty) {
+        "-"
+    } else {
+        "{{ rule }}"
+    }
+
+    bun run tree-sitter generate --js-runtime bun --report-states-for-rule $rule

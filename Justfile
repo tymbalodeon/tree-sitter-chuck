@@ -67,4 +67,5 @@ alias install-grammar := tree-sitter-chuck::install-grammar
 alias install-queries := tree-sitter-chuck::install-queries
 alias open := tree-sitter-chuck::open
 alias parse := tree-sitter-chuck::parse
+alias report-states := tree-sitter-chuck::report-states
 alias test := tree-sitter-chuck::test
