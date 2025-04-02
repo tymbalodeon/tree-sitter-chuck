@@ -201,6 +201,7 @@ install-queries:
     hx --grammar fetch
     hx --grammar build
 
+# Report states
 [no-cd]
 report-states *rule:
     #!/usr/bin/env nu
