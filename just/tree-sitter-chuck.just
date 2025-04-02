@@ -204,7 +204,7 @@ install-queries:
 [no-cd]
 report-states *rule:
     #!/usr/bin/env nu
-    
+
     let rule = if ("{{ rule }}" | is-empty) {
         "-"
     } else {
