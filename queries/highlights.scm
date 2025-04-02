@@ -5,6 +5,7 @@
 "if" @keyword.control.conditionl
 "repeat" @keyword.control.repeat
 "return" @keyword.control.return
+"spork" @function.builtin
 "until" @keyword.control.repeat
 "while" @keyword.control.repeat
 
@@ -14,7 +15,12 @@
 (class_identifier) @type
 (duration_identifier) @type
 (float) @constant.numeric.float
-(function_definition name: (variable_identifier)) @function
+
+(function_definition name: [
+  (class_identifier)
+  (variable_identifier)
+] @function)
+
 (global_unit_generator) @variable.builtin
 (hexidecimal) @constant.numeric
 (int) @constant.numeric.integer
