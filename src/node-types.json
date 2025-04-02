@@ -2550,6 +2550,20 @@
     "type": "function_definition",
     "named": true,
     "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "class_identifier",
+            "named": true
+          },
+          {
+            "type": "variable_identifier",
+            "named": true
+          }
+        ]
+      },
       "parameter": {
         "multiple": true,
         "required": false,
@@ -2869,6 +2883,20 @@
     "type": "method_definition",
     "named": true,
     "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "class_identifier",
+            "named": true
+          },
+          {
+            "type": "variable_identifier",
+            "named": true
+          }
+        ]
+      },
       "parameter": {
         "multiple": true,
         "required": false,

@@ -1333,17 +1333,21 @@
           ]
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "class_identifier"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "variable_identifier"
-            }
-          ]
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "class_identifier"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "variable_identifier"
+              }
+            ]
+          }
         },
         {
           "type": "SYMBOL",

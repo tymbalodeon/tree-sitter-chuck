@@ -280,7 +280,7 @@ module.exports = grammar({
     _function_name_and_body: ($) =>
       seq(
         optional($._type),
-        choice($.class_identifier, $.variable_identifier),
+        field("name", choice($.class_identifier, $.variable_identifier)),
         $._function_parameters,
         $.block,
       ),

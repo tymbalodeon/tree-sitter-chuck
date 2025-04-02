@@ -1,3 +1,4 @@
+"@doc" @special
 "do" @keyword.control.repeat
 "fun" @keyword.function
 "function" @keyword.function
@@ -13,6 +14,7 @@
 (class_identifier) @type
 (duration_identifier) @type
 (float) @constant.numeric.float
+(function_definition name: (variable_identifier)) @function
 (global_unit_generator) @variable.builtin
 (hexidecimal) @constant.numeric
 (int) @constant.numeric.integer
