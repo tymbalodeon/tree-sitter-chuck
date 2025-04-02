@@ -515,14 +515,6 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "array_identifier"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "class_identifier"
-            },
-            {
-              "type": "SYMBOL",
               "name": "function_call"
             },
             {
@@ -531,11 +523,7 @@
             },
             {
               "type": "SYMBOL",
-              "name": "reference_type"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "variable_identifier"
+              "name": "_identifier"
             }
           ]
         }
@@ -1191,13 +1179,8 @@
             "type": "SEQ",
             "members": [
               {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "variable_declaration"
-                  }
-                ]
+                "type": "SYMBOL",
+                "name": "variable_declaration"
               },
               {
                 "type": "STRING",
@@ -2498,31 +2481,41 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "class_identifier"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "primitive_type"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "reference_type"
-            },
-            {
-              "type": "SYMBOL",
               "name": "variable_identifier"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "[]"
             },
             {
-              "type": "BLANK"
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "class_identifier"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "primitive_type"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "reference_type"
+                    }
+                  ]
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": "[]"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -2601,14 +2594,6 @@
                 "members": [
                   {
                     "type": "SYMBOL",
-                    "name": "array_identifier"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "class_identifier"
-                  },
-                  {
-                    "type": "SYMBOL",
                     "name": "function_call"
                   },
                   {
@@ -2617,7 +2602,7 @@
                   },
                   {
                     "type": "SYMBOL",
-                    "name": "variable_identifier"
+                    "name": "_identifier"
                   }
                 ]
               },
@@ -2647,14 +2632,6 @@
                       "members": [
                         {
                           "type": "SYMBOL",
-                          "name": "array_identifier"
-                        },
-                        {
-                          "type": "SYMBOL",
-                          "name": "class_identifier"
-                        },
-                        {
-                          "type": "SYMBOL",
                           "name": "function_call"
                         },
                         {
@@ -2663,7 +2640,7 @@
                         },
                         {
                           "type": "SYMBOL",
-                          "name": "variable_identifier"
+                          "name": "_identifier"
                         }
                       ]
                     }

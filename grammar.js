@@ -28,14 +28,6 @@ module.exports = grammar({
 
     array: ($) => seq("[", $._expression_list, "]"),
 
-    // array_declaration: ($) =>
-    //   prec.left(
-    //     seq(
-    //       $._type,
-    //       seq($.array_identifier, repeat(seq(",", $.array_identifier))),
-    //     ),
-    //   ),
-
     array_identifier: ($) =>
       prec(
         1,
@@ -129,14 +121,7 @@ module.exports = grammar({
     class_instantiation: ($) =>
       seq(
         "new",
-        choice(
-          $.array_identifier,
-          $.class_identifier,
-          $.function_call,
-          $._function_call_chain,
-          $.reference_type,
-          $.variable_identifier,
-        ),
+        choice($.function_call, $._function_call_chain, $._identifier),
       ),
 
     _class_keyword: () =>
@@ -177,11 +162,7 @@ module.exports = grammar({
     debug_print: ($) => seq("<<<", $._expression_list, ">>>"),
 
     _declaration: ($) =>
-      choice(
-        // $.array_declaration,
-        $.reference_declaration,
-        $.variable_declaration,
-      ),
+      choice($.reference_declaration, $.variable_declaration),
 
     doc_comment: ($) => seq("@doc", $.string),
 
@@ -272,14 +253,7 @@ module.exports = grammar({
         seq(
           "for",
           "(",
-          seq(
-            choice(
-              // $.array_declaration,
-              $.variable_declaration,
-            ),
-            ":",
-            $._expression,
-          ),
+          seq($.variable_declaration, ":", $._expression),
           ")",
           $._control_structure_body,
         ),
@@ -513,12 +487,12 @@ module.exports = grammar({
       seq(
         optional("static"),
         choice(
-          $.class_identifier,
-          $.primitive_type,
-          $.reference_type,
           $.variable_identifier,
+          seq(
+            choice($.class_identifier, $.primitive_type, $.reference_type),
+            optional("[]"),
+          ),
         ),
-        optional("[]"),
       ),
 
     _until_while_expression: ($) =>
@@ -533,11 +507,9 @@ module.exports = grammar({
 
     variable_declaration: ($) => {
       const identifier = choice(
-        $.array_identifier,
-        $.class_identifier,
         $.function_call,
         $._function_call_chain,
-        $.variable_identifier,
+        $._identifier,
       );
 
       return prec.right(
