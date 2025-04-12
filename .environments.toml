@@ -1,0 +1,7 @@
+environments = [
+    "generic",
+    "git",
+    "nix",
+    "toml",
+    "yaml",
+]

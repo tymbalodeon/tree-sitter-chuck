@@ -10,12 +10,6 @@
 @check *args:
     ./scripts/check.nu {{ args }}
 
-# List dependencies
-@dependencies *args:
-    ./scripts/dependencies.nu {{ args }}
-
-alias deps := dependencies
-
 # Manage environments
 @environment *args:
     ./scripts/environment.nu {{ args }}
@@ -62,7 +56,6 @@ mod tree-sitter-chuck "just/tree-sitter-chuck.just"
 
 alias generate := tree-sitter-chuck::generate
 alias highlight := tree-sitter-chuck::highlight
-alias install := tree-sitter-chuck::install
 alias install-grammar := tree-sitter-chuck::install-grammar
 alias install-queries := tree-sitter-chuck::install-queries
 alias open := tree-sitter-chuck::open

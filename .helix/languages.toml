@@ -1,22 +1,16 @@
-use-grammars = { only = ["chuck"] }
-
 [[language]]
-name = "chuck"
-comment-tokens = "//"
-file-types = ["ck"]
-scope = "source.chuck"
-
-[[grammar]]
-name = "chuck"
-source = { git = "https://github.com/tymbalodeon/tree-sitter-chuck.git", rev = "7fc2ca7592da6562d5928a56af910b0964ac3fa1" }
-
-[[language]]
-name = "javascript"
+name = "just"
 auto-format = true
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
+formatter = { command = "just", args = ["--justfile", "/dev/stdin", "--dump"] }
+
 
 [[language]]
-name = "txt"
-file-types = ["txt"]
-indent = { tab-width = 2, unit = " " }
-scope = "text.txt"
+name = "nix"
+auto-format = true
+formatter = { command = "alejandra" }
+
+
+[[language]]
+name = "toml"
+auto-format = true
+formatter = { command = "taplo", args = ["format", "-"] }
