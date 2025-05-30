@@ -17,7 +17,6 @@
 alias env := environment
 
 # Search available `just` recipes
-[no-cd]
 [no-exit-message]
 @find-recipe *search_term:
     ./scripts/find-recipe.nu {{ search_term }}
@@ -25,7 +24,6 @@ alias env := environment
 alias find := find-recipe
 
 # View project history
-[no-cd]
 @history *args:
     ./scripts/history.nu {{ args }}
 
@@ -41,12 +39,21 @@ alias find := find-recipe
 @remote *web:
     ./scripts/remote.nu  {{ web }}
 
+# Find/replace
+@replace *help:
+    ./scripts/replace.nu  {{ help }}
+
 # View repository analytics
 @stats *help:
     ./scripts/stats.nu {{ help }}
 
+# List TODO-style comments
+@todo *args:
+    ./scripts/todo.nu {{ args }}
+
+alias todos := todo
+
 # View the source code for a recipe
-[no-cd]
 @view-source *recipe:
     ./scripts/view-source.nu {{ recipe }}
 

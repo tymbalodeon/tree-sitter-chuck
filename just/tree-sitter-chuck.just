@@ -126,8 +126,8 @@ highlight *file:
     bun run tree-sitter highlight $temporary_file --config-path config.json
     rm $temporary_file
 
-
 # TODO DRY me up
+
 # Open file
 open *file:
     #!/usr/bin/env nu
