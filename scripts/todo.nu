@@ -4,12 +4,29 @@ use color.nu use-colors
 
 # Open comment at $index in $EDITOR
 def "main open" [
-  index: int
-  path?: string
-  --sort-by-tag
+  index?: int # Open todo at $index as it appears in `todo` with the same options
+  path?: string # A path to search for keywords
+  --keyword: string # Filter to the specified keyword
+  --sort-by-keyword # Sort by todo keyword
 ] {
+  let index = if ($index | is-empty) {
+    let todos = if $sort_by_keyword {
+      main --color never --sort-by-keyword $path
+    } else {
+      main --color never $path
+    }
+
+    $todos
+    | fzf --tac
+    | split row " "
+    | first
+    | into int
+  } else {
+    $index
+  }
+
   ^$env.EDITOR (
-    get-todos never $sort_by_tag $path
+    get-todos $sort_by_keyword never $path --keyword $keyword
     | get $index
     | get file
   )
@@ -21,11 +38,12 @@ def color [target: string color: string]: string -> string {
 }
 
 def get-todos [
+  sort_by_keyword: bool
   color: string
-  sort_by_tag: bool
   path?: string
+  --keyword: string
 ] {
-  let pattern = "# (FIXME|NOTE|TODO)"
+  let pattern = "(#|%|--|//) (FIXME|NOTE|TODO)"
 
   let matches = if ($path | is-empty) {
     rg $pattern --json
@@ -33,10 +51,16 @@ def get-todos [
     rg $pattern --json $path
   }
 
+  let justfiles = (
+    ls --short-names just
+    | get name
+    | where {($in | path parse | get stem) not-in (just env list)}
+  )
+
   let todos = (
     $matches
     | lines
-    | each {|line| $line | from json}
+    | each {from json}
     | flatten
     | transpose
     | transpose --header-row
@@ -44,8 +68,14 @@ def get-todos [
     | str trim
     | select line_number path.text lines.text
     | rename line_number file comment
-    | where {not ($in.file | str starts-with scripts)}
-    | sort-by {$in | get (if $sort_by_tag { "comment" } else { "file" })}
+    | where {
+        not ($in.file | str starts-with scripts) and (
+          not (
+            $in.file | str starts-with just
+          ) or ($in.file in $justfiles)
+        ) and (($keyword | is-empty) or ($keyword in $in.comment))
+      }
+    | sort-by {$in | get (if $sort_by_keyword { "comment" } else { "file" })}
   )
 
   let use_colors = (use-colors $color)
@@ -90,9 +120,10 @@ def get-todos [
 def main [
   path?: string # A path to search for keywords
   --color = "auto" # When to use colored output
-  --sort-by-tag # Sort by todo tag
+  --keyword: string # Filter to the specified keyword
+  --sort-by-keyword # Sort by todo keyword
 ] {
-  let todos = (get-todos $color $sort_by_tag $path)
+  let todos = (get-todos $sort_by_keyword $color $path --keyword $keyword)
 
   let width = (
     (

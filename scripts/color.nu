@@ -5,4 +5,3 @@ export def use-colors [color: string] {
     is-terminal --stdout
   )
 }
-

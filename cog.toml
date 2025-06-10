@@ -10,13 +10,17 @@ pre_bump_hooks = []
 post_bump_hooks = []
 pre_package_bump_hooks = []
 post_package_bump_hooks = []
-tag_prefix = "v"
+tag_prefix = ""
 
 [bump_profiles]
 
 [changelog]
 path = "CHANGELOG.md"
 authors = []
+owner = ""
+remote = ""
+repository = ""
+template = "remote"
 
 [commit_types]
 
