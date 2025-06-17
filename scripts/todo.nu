@@ -37,18 +37,26 @@ def color [target: string color: string]: string -> string {
   | str replace $target $"(ansi $color)($target)(ansi reset)"
 }
 
+def get-comment-token-pattern [] {
+  "(#|%|--|//)"
+}
+
 def get-todos [
   sort_by_keyword: bool
   color: string
   path?: string
   --keyword: string
 ] {
-  let pattern = "(#|%|--|//) (FIXME|NOTE|TODO)"
+  let pattern = $"(get-comment-token-pattern ) \(FIXME|NOTE|TODO\)"
 
-  let matches = if ($path | is-empty) {
-    rg $pattern --json
-  } else {
-    rg $pattern --json $path
+  let matches = try {
+    if ($path | is-empty) {
+      rg $pattern --json
+    } else {
+      rg $pattern --json $path
+    }
+  } catch {
+    return []
   }
 
   let justfiles = (
@@ -149,7 +157,12 @@ def main [
         $item.index
       }
 
-      $"($index) • ($item.item.file) • ($item.item.comment)"
+      let comment = (
+        $item.item.comment
+        | str replace --regex (get-comment-token-pattern) ""
+      )
+
+      $"($index) • ($item.item.file) • ($comment)"
     }
   | to text
   | column -s • -t
