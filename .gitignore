@@ -1,7 +1,5 @@
 .direnv
 .env
 .envrc
-
-# tree-sitter-chuck
 build
 node_modules
