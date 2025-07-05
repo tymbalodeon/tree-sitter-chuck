@@ -1,6 +1,6 @@
 [private]
 @default:
-    just help --default
+    just help
 
 # View full help text, or for a specific recipe
 @help *args:
@@ -48,6 +48,10 @@ alias find := find-recipe
     ./scripts/todo.nu {{ args }}
 
 alias todos := todo
+
+# Set helix theme
+@theme *args:
+    ./scripts/theme.nu {{ args }}
 
 # View the source code for a recipe
 @view-source *args:
