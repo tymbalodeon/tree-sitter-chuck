@@ -7,5 +7,9 @@ def main [rule: string] {
     $rule
   }
 
-  bun run tree-sitter generate --js-runtime bun --report-states-for-rule $rule
+  (
+    bun run tree-sitter generate
+      --js-runtime bun
+      --report-states-for-rule $rule
+  )
 }
