@@ -22,11 +22,6 @@
   }: {
     devShells = nixpkgs.lib.genAttrs (import systems) (
       system: let
-        getFilenames = dir:
-          if builtins.pathExists dir
-          then builtins.attrNames (builtins.readDir dir)
-          else [];
-
         mergeModuleAttrs = {
           attr,
           nullValue,
@@ -36,8 +31,20 @@
 
         modules =
           map
-          (module: (import ./nix/${module} {inherit pkgs;}))
-          (getFilenames ./nix);
+          (module: (import module {inherit pkgs;}))
+          (builtins.filter
+            (path: builtins.pathExists path)
+            (map
+              (item: ./.environments/${item.name}/shell.nix)
+              (builtins.filter
+                (item: item.value == "directory")
+                (
+                  if (builtins.pathExists ./.environments)
+                  then
+                    nixpkgs.lib.attrsets.attrsToList
+                    (builtins.readDir ./.environments)
+                  else []
+                ))));
 
         pkgs = import nixpkgs {
           inherit system;
@@ -49,9 +56,11 @@
               builtins.map
               (environment: environments.devShells.${system}.${environment})
               ((
-                  if builtins.pathExists ./.environments.toml
+                  if builtins.pathExists ./.environments/environments.toml
                   then let
-                    environments = builtins.fromTOML (builtins.readFile ./.environments.toml);
+                    environments =
+                      builtins.fromTOML
+                      (builtins.readFile ./.environments/environments.toml);
                   in
                     if builtins.hasAttr "environments" environments
                     then
@@ -61,7 +70,7 @@
                   else []
                 )
                 ++ [
-                  "generic"
+                  "default"
                   "git"
                   "markdown"
                   "nix"
