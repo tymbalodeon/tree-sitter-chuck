@@ -21,7 +21,9 @@ def append-main-aliases [
 
   for alias in $aliases {
     for line in $help_text {
-      if ($line.item | str trim | str starts-with $alias.alias) {
+      let words = ($line.item | split words)
+
+      if ($words | is-not-empty) and ($words | first) == $alias.alias {
         $help_text = (
           $help_text
           | update $line.index {
