@@ -13,23 +13,23 @@ set working-directory := "../.."
     .environments/tree-sitter/scripts/install.nu
 
 # Parse file
-parse *args:
+@parse *args:
     .environments/tree-sitter/scripts/parse.nu {{ args }}
 
 # Test parser
-test *args:
+@test *args:
     .environments/tree-sitter/scripts/test.nu {{ args }}
 
 # Highlight file
-highlight *args:
+@highlight *args:
     .environments/tree-sitter/scripts/highlight.nu {{ args }}
 
 # Open file
-open *args:
+@open *args:
     .environments/tree-sitter/scripts/open.nu {{ args }}
 
 # Copy queries to helix directory
-install-queries:
+@install-queries:
     .environments/tree-sitter/scripts/install-queries.nu
 
 # Add the grammar to helix
@@ -37,5 +37,5 @@ install-queries:
     .environments/tree-sitter/scripts/install-grammar.nu
 
 # Report states
-report-states *args:
+@report-states *args:
     .environments/tree-sitter/scripts/report-states.nu {{ args }}

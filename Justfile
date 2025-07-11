@@ -59,6 +59,10 @@ alias todos := todo
 
 alias src := view-source
 
+[private]
+@tree *args:
+    just tree-sitter {{ args }}
+
 mod nix ".environments/nix/Justfile"
 mod tree-sitter ".environments/tree-sitter/Justfile"
 
