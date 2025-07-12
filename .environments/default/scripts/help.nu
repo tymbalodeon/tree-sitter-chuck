@@ -377,7 +377,7 @@ export def display-aliases [
 # View module aliases
 def "main aliases" [
   environment?: string # View aliases for $environment only
-  --color = "auto" # When to use colored output
+  --color = "auto" # When to use colored output {always|auto|never}
   --justfile: string # Which Justfile to use
   --sort-by-environment # Sort aliases by environment name
   --sort-by-recipe # Sort recipe by original recipe name
@@ -396,7 +396,7 @@ def "main aliases" [
 
 # View default recipe aliases
 def "main aliases default" [
-  --color = "auto" # When to use colored output
+  --color = "auto" # When to use colored output {always|auto|never}
   --justfile: string # Which Justfile to use
   --sort-by-environment # Sort aliases by environment name
   --sort-by-recipe # Sort recipe by original recipe name
@@ -418,7 +418,7 @@ def "main aliases default" [
 def main [
   recipe?: string # View help text for recipe
   ...subcommands: string  # View help for a recipe subcommand
-  --color = "always" # When to use colored output
+  --color = "always" # When to use colored output {always|auto|never}
 ] {
   display-just-help $recipe $subcommands --color $color
 }
