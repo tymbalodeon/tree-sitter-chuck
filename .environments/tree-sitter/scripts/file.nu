@@ -1,3 +1,5 @@
+use ../../default/scripts/environment.nu print-warning
+
 def get-random-file [files: list<string>] {
   let max_index = (($files | length) - 1)
 
@@ -38,7 +40,17 @@ export def open-temporary-file [file?: string] {
     }
   }
 
-  let temporary_file = (mktemp --tmpdir XXX.ck)
+  let extension = try {
+    open tree-sitter.json
+    | get grammars
+    | get file-types
+    | flatten
+    |first
+  } catch {
+    print-warning "failed to determine language file extension"
+  }
+
+  let temporary_file = (mktemp --tmpdir $"XXX.($extension)")
 
   open $file
   | split row "\n---\n"

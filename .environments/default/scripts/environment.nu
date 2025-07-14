@@ -1,6 +1,12 @@
 #!/usr/bin/env nu
 
-use color.nu use-colors
+export def use-colors [color: string] {
+  $color == "always" or (
+    $color != "never"
+  ) and (
+    is-terminal --stdout
+  )
+}
 
 # Activate installed environments
 def "main activate" [] {
@@ -141,7 +147,7 @@ def validate-environments [
     }
 }
 
-def parse-environments [environments: list<string>] {
+export def parse-environments [environments: list<string>] {
   let environments = (
     $environments
     | str downcase
@@ -276,24 +282,43 @@ def "main inputs" [] {
   | to text --no-newline
 }
 
-def get-available-environments [] {
-  ls --short-names (get-environment-path)
-  | where type == dir
-  | get name
+export def get-aliases-files [environment: string] {
+  let aliases_file = $"($environment)/aliases"
+
+  [
+    (get-environment-path $aliases_file)
+    $".environments/($aliases_file)"
+  ]
   | each {
-      |environment|
+      |file|
 
-      let alias_file = (get-environment-path $"($environment)/aliases")
-
-      let aliases = if ($alias_file | path exists) {
-        open $alias_file
+      if ($file | path exists) {
+        open $file
         | lines
       } else {
         []
       }
+    }
+  | flatten
+  | uniq
+  | sort
+}
+
+def get-available-environments [] {
+  ls --short-names (get-environment-path)
+  | where type == dir
+  | get name
+  | append (
+      ls --short-names .environments
+      | where type == dir
+      | get name
+    )
+  | uniq
+  | each {
+      |environment|
 
       {
-        aliases: $aliases
+        aliases: (get-aliases-files $environment)
         name: $environment
       }
   }
@@ -1003,7 +1028,7 @@ def "main test" [
 }
 
 # Update environment dependencies
-def "main update" [
+export def "main update" [
   ...inputs: string # The name of the input(s) to update (leave blank to update all)
 ] {
   let update_environments = [environments env] | any {$in in $inputs}

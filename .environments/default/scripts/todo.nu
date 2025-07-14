@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-use color.nu use-colors
+use environment.nu use-colors
 
 # Open comment at $index in $EDITOR
 def "main open" [
