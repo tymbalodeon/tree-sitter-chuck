@@ -24,11 +24,11 @@ def "main activate" [] {
 }
 
 export def print-error [message: string] {
-  print $"(ansi red_bold)error(ansi reset): ($message)"
+  print --stderr $"(ansi red_bold)error(ansi reset): ($message)"
 }
 
 export def print-warning [message: string] {
-  print $"(ansi yellow_bold)warning(ansi reset): ($message)"
+  print --stderr $"(ansi yellow_bold)warning(ansi reset): ($message)"
 }
 
 def get-features [
@@ -57,6 +57,7 @@ export def get-environment-path [path?: string] {
 
 def validate-environments [
   environments: list<record<name: string, features: list<string>>>
+  quiet: bool
 ] {
   let valid_environments = (get-available-environments)
   mut invalid_environments = []
@@ -73,7 +74,9 @@ def validate-environments [
         | update valid-name false
       )
 
-      print-warning $"unrecognized environment: ($environment.name)"
+      if not $quiet {
+        print-warning $"unrecognized environment: ($environment.name)"
+      }
     }
 
     mut invalid_features = []
@@ -147,7 +150,7 @@ def validate-environments [
     }
 }
 
-export def parse-environments [environments: list<string>] {
+export def parse-environments [environments: list<string> quiet = false] {
   let environments = (
     $environments
     | str downcase
@@ -188,7 +191,7 @@ export def parse-environments [environments: list<string>] {
     }
   }
 
-  validate-environments $unique_environments
+  validate-environments $unique_environments $quiet
 }
 
 def convert-to-toml [environments: list<record>] {
@@ -262,6 +265,8 @@ export def "main add" [
     }
   }
 
+  mkdir .environments
+
   convert-to-toml $environments
   | save --force .environments/environments.toml
 
@@ -309,9 +314,13 @@ def get-available-environments [] {
   | where type == dir
   | get name
   | append (
-      ls --short-names .environments
-      | where type == dir
-      | get name
+      if (".environments" | path exists) {
+        ls --short-names .environments
+        | where type == dir
+        | get name
+      } else {
+        []
+      }
     )
   | uniq
   | each {

@@ -2,6 +2,8 @@
 
 use environment.nu get-aliases-files
 use environment.nu get-environment-path
+use environment.nu parse-environments
+use environment.nu print-warning
 use environment.nu use-colors
 use find-script.nu
 
@@ -69,6 +71,30 @@ def append-main-aliases [
     | flatten
   )
 
+  let aliases = (
+    $aliases
+    | append $environment_aliases
+  )
+
+  let duplicates = (
+    $aliases
+    | where {
+        |alias|
+
+        (
+          $aliases.alias
+          | where {$in == $alias.alias}
+          | length
+        ) > 1
+      }
+    | get alias
+    | uniq
+  )
+
+  for duplicate in $duplicates {
+    print-warning $"duplicate alias \"($duplicate)\""
+  }
+
   let lines = (
     $help_text.item
     | each {
@@ -106,69 +132,98 @@ def append-main-aliases [
   | to text --no-newline
 }
 
+def main-help [environment?: string --color: string] {
+  let args = (
+    [
+      --color $color
+      --list
+    ]
+    | append (
+        if ($environment | is-not-empty) {
+          [--justfile $".environments/($environment)/Justfile"]
+        } else {
+          [--list-submodules]
+        }
+      )
+  )
+
+  return (append-main-aliases (just ...$args) --color $color)
+}
+
 export def display-just-help [
-  recipe?: string
+  environment_or_recipe?: string
+  recipe_or_subcommand?: string
   subcommands?: list<string>
   --color: string
-  --environment: string
-  --justfile: string
 ] {
-  let args = [
-    --color $color
-    --list
-  ]
+  # TODO: allow recipe aliases
+  
+  let summary = (just --summary | split row " ")
 
-  if ($recipe | is-empty) {
-    let args = (
-      $args
-      | append (
-          match $justfile {
-            null => [--list-submodules]
-            _ => [--justfile $justfile]
-          }
-        )
+  let environments = (
+    $summary
+    | where {"::" in $in}
+    | each {split row :: | first}
+    | uniq
+  )
+
+  let default_recipes = (
+    $summary
+    | where {"::" not-in $in}
+  )
+
+  let parsed_environments = if ($environment_or_recipe | is-not-empty) {
+    parse-environments [$environment_or_recipe] true
+  } else {
+    []
+  }
+
+  let environment_or_recipe = if ($parsed_environments | is-not-empty) {
+    $parsed_environments
+    | first
+    | get name
+  } else {
+    $environment_or_recipe
+  }
+
+  let environment = if ($environment_or_recipe in $environments) {
+    $environment_or_recipe
+  } else if ($environment_or_recipe | is-empty) {
+    return (main-help --color $color)
+  }
+
+  let recipe = if ($recipe_or_subcommand | is-not-empty) and (
+    $environment 
+    | is-not-empty
+  ) {
+    let environment_recipes = (
+      $summary
+      | where {str starts-with $environment}
+      | each {split row :: | last}
     )
 
-    return (append-main-aliases (just ...$args) --color $color)
-  }
-
-  let recipe = match $environment {
-    null => $recipe
-    _ => $"($environment)/($recipe)"
-  }
-
-  let script = (find-script $recipe)
-  mut recipe_is_module = false
-
-  let script = if ($script | is-empty) {
-    let args = ([$recipe] ++ $subcommands)
-
-    if ($args | length) > 1 {
-      $recipe_is_module = true
-
-      find-script (
-        $args
-        | window 2
-        | first
-        | str join "/"
-      )
+    if ($recipe_or_subcommand in $environment_recipes) {
+      $recipe_or_subcommand
     } else {
-      try {
-        return (just ...$args $recipe --quiet err> /dev/null)
-      } catch {
-        return
-      }
+      return
     }
+  } else if ($recipe_or_subcommand | is-empty) and (
+    $environment_or_recipe in $default_recipes
+  ) {
+    $environment_or_recipe
+  } else if ($environment_or_recipe | is-not-empty) and (
+    $environment_or_recipe != $environment
+  ) {
+      return
   } else {
-    $script
+    if ($environments | is-not-empty) {
+      print (main-help $environment --color $color)
+    }
+
+    return
   }
 
-  let subcommands = if $recipe_is_module {
-    $subcommands
-    | drop nth 0
-  } else {
-    $subcommands
-  }
+  let script = (find-script $environment $recipe)
 
   if (rg "^def main --wrapped" $script | is-not-empty) {
     if ($subcommands | is-empty) {
@@ -284,7 +339,6 @@ export def display-aliases [
     | each {
         |alias|
 
-
         $alias
         | update environment (
             if ($alias.environment | is-empty) {
@@ -389,9 +443,16 @@ def "main aliases default" [
 
 # View help text
 def main [
-  recipe?: string # View help text for recipe
+  environment_or_recipe?: string # View help text for recipe
+  recipe_or_subcommand?: string # View help text for recipe
   ...subcommands: string  # View help for a recipe subcommand
   --color = "always" # When to use colored output {always|auto|never}
 ] {
-  display-just-help $recipe $subcommands --color $color
+  (
+    display-just-help
+      $environment_or_recipe
+      $recipe_or_subcommand
+      $subcommands
+      --color $color
+  )
 }

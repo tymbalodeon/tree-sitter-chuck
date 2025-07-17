@@ -1,30 +1,80 @@
 #!/usr/bin/env nu
 
 use environment.nu parse-environments
-use find-recipe.nu choose-recipe
+
+export def choose-recipe [environment?: string] {
+  let recipes = (just --summary | split row " ")
+
+  let recipes = if ($environment | is-not-empty) {
+    $recipes
+    | where {$"($environment)::" in $in}
+  } else {
+    $recipes
+  }
+
+  $recipes
+  | each {
+      |recipe|
+
+      if :: in $recipe {
+        let parts = ($recipe | split row ::)
+
+       $".environments/($parts | first)/scripts/($parts | last).nu"
+      } else {
+        $".environments/default/scripts/($recipe).nu"
+      }
+  }
+  | to text
+  | (
+      fzf
+        --preview
+        "bat --force-colorization {}"
+    )
+  | str trim
+  | split row " "
+  | first
+}
 
 export def get-script [
-  recipe: string
   scripts: list<string>
+  path_or_environment_or_recipe?: string
+  recipe?: string
+  quiet = true
 ] {
-  if ($recipe | path exists) {
-    return $recipe
+  if ($path_or_environment_or_recipe | is-not-empty) and (
+    $path_or_environment_or_recipe | path exists
+  ) {
+    return $path_or_environment_or_recipe
   }
 
-  let parts = (
-    $recipe
+  let parts = if ($recipe | is-empty) and (
+    $path_or_environment_or_recipe
+    | is-not-empty
+  ) {
+    $path_or_environment_or_recipe
     | split row "::"
     | split row "/"
-  )
-
-  let environment = if ($parts | length) == 1 {
-    ""
-  } else {
-    $parts
-    | first
   }
 
-  let $recipe = ($parts | last)
+  let recipe = if ($recipe | is-not-empty) {
+    $recipe
+  } else if ($path_or_environment_or_recipe | is-not-empty) {
+    $parts
+    | last
+  } else {
+    return (choose-recipe)
+  }
+
+  let environment = if ($recipe | is-not-empty) {
+    $path_or_environment_or_recipe
+  } else if ($path_or_environment_or_recipe | is-not-empty) {
+    if ($parts | length) == 1 {
+      ""
+    } else {
+      $parts
+      | first
+    }
+  } 
 
   let matching_scripts = (
     $scripts
@@ -63,7 +113,7 @@ export def get-script [
       $matching_scripts
     }
   } else if ($recipe | is-not-empty) and ($matching_scripts | is-empty) {
-    let environment = (parse-environments [$recipe])
+    let environment = (parse-environments [$recipe] $quiet)
 
     if ($environment | is-not-empty) {
       return (choose-recipe ($environment | first | get name))
@@ -83,16 +133,22 @@ export def get-script [
           "bat --force-colorization {}"
       )
   } else {
-    $matching_scripts
-    | first
+    if ($matching_scripts | is-not-empty) {
+      $matching_scripts
+      | first
+    }
   }
 }
 
-export def main [recipe: string] {
+export def main [
+  environment_or_recipe?: string
+  recipe?: string
+  quiet = false
+] {
   let scripts = (
     fd --exclude tests --extension nu "" .environments
     | lines
   )
 
-  get-script $recipe $scripts
+  get-script $scripts $environment_or_recipe $recipe $quiet
 }
