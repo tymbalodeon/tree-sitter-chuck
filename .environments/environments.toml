@@ -1,2 +1,6 @@
 [[environments]]
+name = "default"
+todo.exclude_paths = ["bindings", "test"]
+
+[[environments]]
 name = "tree-sitter"

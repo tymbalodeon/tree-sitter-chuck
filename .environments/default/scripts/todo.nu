@@ -70,7 +70,10 @@ def get-todos [
     return []
   }
 
-  let available_environments = (get-available-environments)
+  let available_environments = (
+    get-available-environments --exclude-local
+    | get name
+  )
 
   # TODO: allow globs
   let excluded_paths = if (".environments/environments.toml" | path exists) {
@@ -101,7 +104,7 @@ def get-todos [
 
         let path = $match.path.text
 
-        if ($path in $excluded_paths) {
+        if ($path | str starts-with .git) or ($path in $excluded_paths) {
           return false
         }
 
@@ -112,7 +115,7 @@ def get-todos [
         }
 
         if not ($path | str starts-with .environments) {
-          $path
+          true
         } else if (
           $path
           | path split

@@ -326,19 +326,29 @@ export def get-aliases-files [environment: string] {
   | sort
 }
 
-export def get-available-environments [] {
-  ls --short-names (get-environment-path)
-  | where type == dir
-  | get name
-  | append (
-      if (".environments" | path exists) {
-        ls --short-names .environments
-        | where type == dir
-        | get name
-      } else {
-        []
-      }
-    )
+export def get-available-environments [--exclude-local] {
+  let environments = (
+    ls --short-names (get-environment-path)
+    | where type == dir
+    | get name
+  )
+
+  let environments = if $exclude_local {
+    $environments
+  } else {
+    $environments
+    | append (
+        if (".environments" | path exists) {
+          ls --short-names .environments
+          | where type == dir
+          | get name
+        } else {
+          []
+        }
+      )
+  }
+
+  $environments
   | uniq
   | each {
       |environment|
