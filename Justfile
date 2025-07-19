@@ -24,6 +24,10 @@ alias env := environment
 @issue *args:
     .environments/default/scripts/issue.nu {{ args }}
 
+# View README file
+@readme *args:
+    .environments/default/scripts/readme.nu  {{ args }}
+
 # View or open recipes
 @recipe *args:
     .environments/default/scripts/recipe.nu  {{ args }}

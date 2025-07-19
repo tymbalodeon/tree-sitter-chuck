@@ -61,6 +61,7 @@ def main [theme?: string] {
 
   let theme = if ($theme | is-empty) {
     $themes
+    | to text
     | fzf
   } else {
     $theme

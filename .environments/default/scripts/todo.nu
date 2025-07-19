@@ -1,5 +1,6 @@
 #!/usr/bin/env nu
 
+use environment.nu get-available-environments
 use environment.nu use-colors
 
 # Open comment at $index in $EDITOR
@@ -57,17 +58,79 @@ def get-todos [
   path?: string
   --keyword: string
 ] {
-  let pattern = $"(get-comment-token-pattern ) \(FIXME|NOTE|TODO\)"
+  let pattern = $"(get-comment-token-pattern) \(FIXME|NOTE|TODO\)"
 
   let matches = try {
     if ($path | is-empty) {
-      rg $pattern --json
+      rg --hidden $pattern --json
     } else {
-      rg $pattern --json $path
+      rg --hidden $pattern --json $path
     }
   } catch {
     return []
   }
+
+  let available_environments = (get-available-environments)
+
+  # TODO: allow globs
+  let excluded_paths = if (".environments/environments.toml" | path exists) {
+    try {
+      open .environments/environments.toml
+      | get environments
+      | where name == default
+      | first
+      | get todo.exclude_paths
+    } catch {
+      []
+    }
+  } else {
+    []
+  }
+
+  let matches = (
+    $matches
+    | lines
+    | each {from json}
+    | flatten
+    | where {
+        |match|
+
+        if "path" not-in ($match | columns) {
+          return false
+        }
+
+        let path = $match.path.text
+
+        if ($path in $excluded_paths) {
+          return false
+        }
+
+        for excluded_path in $excluded_paths {
+          if ($path | str starts-with $excluded_path) {
+            return false
+          }
+        }
+
+        if not ($path | str starts-with .environments) {
+          $path
+        } else if (
+          $path
+          | path split
+          | drop nth 0
+          | first
+        ) in $available_environments {
+          false
+        } else {
+          true
+        }
+      }
+    | transpose
+    | transpose --header-row
+    | where {$in.lines | is-not-empty}
+    | str trim
+    | select line_number path.text lines.text
+    | rename line_number file comment
+  )
 
   let justfiles = (
     fd Justfile .environments
@@ -77,15 +140,6 @@ def get-todos [
 
   let todos = (
     $matches
-    | lines
-    | each {from json}
-    | flatten
-    | transpose
-    | transpose --header-row
-    | where {$in.lines | is-not-empty}
-    | str trim
-    | select line_number path.text lines.text
-    | rename line_number file comment
     | where {
         not ($in.file | str starts-with scripts) and (
           not (

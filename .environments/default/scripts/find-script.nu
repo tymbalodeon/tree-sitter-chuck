@@ -56,7 +56,7 @@ export def get-script [
     | split row "/"
   }
 
-  let recipe = if ($recipe | is-not-empty) {
+  let recipe_name = if ($recipe | is-not-empty) {
     $recipe
   } else if ($path_or_environment_or_recipe | is-not-empty) {
     $parts
@@ -75,6 +75,8 @@ export def get-script [
       | first
     }
   } 
+
+  let recipe = $recipe_name
 
   let matching_scripts = (
     $scripts

@@ -156,8 +156,6 @@ export def display-just-help [
   subcommands?: list<string>
   --color: string
 ] {
-  # TODO: allow recipe aliases
-  
   let summary = (just --summary | split row " ")
 
   let environments = (
@@ -192,7 +190,7 @@ export def display-just-help [
     return (main-help --color $color)
   }
 
-  let recipe = if ($recipe_or_subcommand | is-not-empty) and (
+  let recipe_or_script = if ($recipe_or_subcommand | is-not-empty) and (
     $environment 
     | is-not-empty
   ) {
@@ -205,16 +203,65 @@ export def display-just-help [
     if ($recipe_or_subcommand in $environment_recipes) {
       $recipe_or_subcommand
     } else {
-      return
+      let aliases = (get-aliases false false false --environment $environment)
+
+      if ($recipe_or_subcommand in $aliases.alias) {
+        $aliases
+        | where alias == $recipe_or_subcommand
+        | first
+        | get recipe
+      } else {
+        return
+      }
     }
   } else if ($recipe_or_subcommand | is-empty) and (
     $environment_or_recipe in $default_recipes
   ) {
     $environment_or_recipe
-  } else if ($environment_or_recipe | is-not-empty) and (
-    $environment_or_recipe != $environment
-  ) {
-      return
+  } else if ($environment_or_recipe | is-not-empty) {
+    if ($environment_or_recipe != $environment) {
+      let aliases = (get-aliases true false false --environment default)
+
+      if ($environment_or_recipe in $aliases.alias) {
+        $aliases
+        | where alias == $environment_or_recipe
+        | first
+        | get recipe
+      } else {
+        let matching_scripts = (
+          $summary
+          | where {$environment_or_recipe in $in}
+        )
+
+        if ($matching_scripts | is-not-empty) {
+          let matching_scripts = (
+            $matching_scripts
+            | each {
+                |recipe|
+
+
+                let parts = (
+                  $recipe
+                  | split row ::
+                )
+
+                find-script ($parts | first) ($parts | last)
+              }
+          )
+
+          if ($matching_scripts | length) > 1 {
+            $matching_scripts
+            | to text
+            | fzf --preview "bat --force-colorization {}"
+          } else {
+            $matching_scripts
+            | first
+          }
+        } else {
+          return
+        }
+      }
+    }
   } else {
     if ($environments | is-not-empty) {
       print (main-help $environment --color $color)
@@ -223,7 +270,17 @@ export def display-just-help [
     return
   }
 
-  let script = (find-script $environment $recipe)
+  let script = if ($recipe_or_script | path exists) {
+    $recipe_or_script
+  } else {
+    let environment = if ($environment | is-empty) {
+      "default"
+    } else {
+      $environment
+    }
+
+    find-script $environment $recipe_or_script
+  }
 
   if (rg "^def main --wrapped" $script | is-not-empty) {
     if ($subcommands | is-empty) {
