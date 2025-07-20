@@ -1,7 +1,6 @@
 #!/usr/bin/env nu
 
 use environment.nu get-aliases-files
-use environment.nu get-environment-path
 use environment.nu parse-environments
 use environment.nu print-warning
 use environment.nu use-colors
@@ -60,15 +59,27 @@ def append-main-aliases [
           | path basename
         )
 
-        get-aliases-files $environment
-        | each {
+        try {
+          get-aliases-files $environment
+          | each {
+              {
+                alias: $in
+                environment: $environment
+              }
+            }
+        } catch {
             {
-              alias: $in
+              alias: null
               environment: $environment
             }
-          }
+        }
       }
     | flatten
+  )
+
+  let environment_aliases = (
+    $environment_aliases
+    | where {$in.alias | is-not-empty}
   )
 
   let aliases = (
@@ -270,7 +281,22 @@ export def display-just-help [
     return
   }
 
-  let script = if ($recipe_or_script | path exists) {
+  if ($environment | is-not-empty) and (
+    $recipe_or_script
+    | is-empty
+  ) {
+    return (
+      just
+        --color always
+        --justfile $".environments/($environment)/Justfile"
+        --list
+    )
+  }
+
+  let script = if ($recipe_or_script | is-not-empty) and (
+    $recipe_or_script
+    | path exists
+  ) {
     $recipe_or_script
   } else {
     let environment = if ($environment | is-empty) {
