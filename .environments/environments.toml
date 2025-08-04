@@ -1,8 +1,9 @@
 hide_help = true
+hide_default = true
 
 [[environments]]
 name = "default"
-hide = false
+hide = true
 
 [environments.todo]
 exclude_paths = [

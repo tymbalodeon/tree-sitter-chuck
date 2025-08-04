@@ -203,7 +203,7 @@ def main-help [all: bool environment?: string --color: string] {
     for line in $text {
       if ($line.item | str starts-with "    ") and (
         $line.item
-        | find --regex "    [a-z]+:"
+        | find --regex "    [a-z-]+:"
         | is-not-empty
       ) {
         if (
