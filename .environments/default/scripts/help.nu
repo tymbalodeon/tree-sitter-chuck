@@ -24,7 +24,12 @@ def append-main-aliases [
 
   for alias in $aliases {
     for line in $help_text {
-      let words = ($line.item | split words)
+      let words = (
+        $line.item
+        | ansi strip
+        | split row " "
+        | where {is-not-empty}
+      )
 
       if ($words | is-not-empty) and ($words | first) == $alias.alias {
         $help_text = (
@@ -151,11 +156,39 @@ def append-main-aliases [
 }
 
 def main-help [all: bool environment?: string --color: string] {
-  let args = (
-    [
+  let environments = if not $all and (
+    ".environments/environments.toml"
+    | path exists
+  ) {
+    open .environments/environments.toml
+  }
+
+  let hide_help = ($environments | is-not-empty) and (
+    "hide_help" in ($environments | columns)
+  ) and (
+    $environments.hide_help
+  )
+
+  let args = [
       --color $color
       --list
     ]
+
+  let args = if not $hide_help {
+    $args
+    | append [
+      --list-heading $"(
+        ansi default_bold
+      )use `just help` for more options \(see `just help --help`\)(
+        ansi reset
+      )\n\nAvailable recipes:\n"
+    ]
+  } else {
+    $args
+  }
+
+  let args = (
+    $args
     | append (
         if ($environment | is-not-empty) {
           [--justfile $".environments/($environment)/Justfile"]
@@ -165,14 +198,9 @@ def main-help [all: bool environment?: string --color: string] {
       )
   )
 
-  let environments = if not $all and (
-    ".environments/environments.toml"
-    | path exists
+  let hidden_submodules = if ($environments | is-not-empty) and (
+    "environemnts" in ($environments | columns)
   ) {
-    open .environments/environments.toml
-  }
-
-  let hidden_submodules = if ($environments | is-not-empty) {
     $environments
     | get environments
     | where {"hide" in ($in | columns) and $in.hide}
@@ -228,11 +256,7 @@ def main-help [all: bool environment?: string --color: string] {
     | to text --no-newline
   }
 
-  let text = if ($environments | is-not-empty) and (
-    "hide_help" in ($environments | columns)
-  ) and (
-    $environments.hide_help
-  ) {
+  let text = if $hide_help {
     $text
     | lines
     | where {$in | ansi strip | find --regex ' +help \*args' | is-empty}
@@ -426,10 +450,10 @@ def get-help-text [
 }
 
 export def display-just-help [
-  all: bool
   environment_or_recipe?: string
   recipe_or_subcommand?: string
   subcommands?: list<string>
+  all = true
   --color: string
   --paging = "auto"
 ] {
@@ -657,10 +681,10 @@ def "main default" [
 ] {
   (
     display-just-help
-      $all
       default
       $recipe_or_subcommand
       $subcommands
+      $all
       --color $color
   )
 }
@@ -676,10 +700,10 @@ def main [
 ] {
   (
     display-just-help
-      $all
       $environment_or_recipe
       $recipe_or_subcommand
       $subcommands
+      $all
       --color $color
       --paging $paging
   )
