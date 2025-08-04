@@ -74,7 +74,7 @@ export def get-script [
       $parts
       | first
     }
-  } 
+  }
 
   let recipe = $recipe_name
 

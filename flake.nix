@@ -72,6 +72,7 @@
                 ++ [
                   "default"
                   "git"
+                  "just"
                   "markdown"
                   "nix"
                   "toml"
@@ -90,11 +91,6 @@
                     export NUTEST=${nutest}
                     export ENVIRONMENTS=${environments}
                     ${nushell}/bin/nu ${environments}/shell-hook.nu
-
-                    ${pre-commit}/bin/pre-commit install \
-                      --hook-type commit-msg \
-                      --overwrite \
-                      >/dev/null
                   ''
                 ]
                 ++ mergeModuleAttrs {

@@ -1,6 +1,7 @@
 #!/usr/bin/env nu
 
 use environment.nu get-aliases-files
+use environment.nu get-default-environments
 use environment.nu parse-environments
 use environment.nu print-warning
 use environment.nu use-colors
@@ -132,18 +133,24 @@ def append-main-aliases [
             | str join ", "
           )
 
-          $"($line) (ansi magenta)[alias: ($aliases)](ansi reset)"
+          let alias = $"[alias: ($aliases)]"
+
+          let alias = if (use-colors $color) {
+            $"(ansi magenta)($alias)(ansi reset)"
+          }
+
+          $"($line) ($alias)"
         } else {
           $line
         }
-    }
+      }
   )
 
   $lines
   | to text --no-newline
 }
 
-def main-help [environment?: string --color: string] {
+def main-help [all: bool environment?: string --color: string] {
   let args = (
     [
       --color $color
@@ -158,10 +165,87 @@ def main-help [environment?: string --color: string] {
       )
   )
 
-  return (append-main-aliases (just ...$args) --color $color)
+  let environments = if not $all and (
+    ".environments/environments.toml"
+    | path exists
+  ) {
+    open .environments/environments.toml
+  }
+
+  let hidden_submodules = if ($environments | is-not-empty) {
+    $environments
+    | get environments
+    | where {"hide" in ($in | columns) and $in.hide}
+    | get name
+  }
+
+  let hidden_submodules = if (
+    $environments
+    | is-not-empty
+  ) and hide_default in ($environments | columns) and (
+    $environments.hide_default
+  ) {
+    $hidden_submodules
+    | append (get-default-environments).name
+  } else {
+    $hidden_submodules
+  }
+
+  let text = (just ...$args | lines | enumerate)
+
+  let text = if ($hidden_submodules | is-empty) {
+    $text.item
+    | to text
+  } else {
+    mut lines_to_remove = []
+    mut remove_line = false
+
+    for line in $text {
+      if ($line.item | str starts-with "    ") and (
+        $line.item
+        | find --regex "    [a-z]+:"
+        | is-not-empty
+      ) {
+        if (
+          $line.item
+          | find --regex $"\(($hidden_submodules | str join '|')\):"
+          | is-not-empty
+        ) {
+          $remove_line = true
+        } else {
+          $remove_line = false
+        }
+      }
+
+      if $remove_line {
+        $lines_to_remove = ($lines_to_remove | append $line.index)
+      }
+    }
+
+    $text
+    | where {$in.index not-in $lines_to_remove}
+    | get item
+    | to text --no-newline
+  }
+
+  let text = if ($environments | is-not-empty) and (
+    "hide_help" in ($environments | columns)
+  ) and (
+    $environments.hide_help
+  ) {
+    $text
+    | lines
+    | where {$in | ansi strip | find --regex ' +help \*args' | is-empty}
+    | str join "\n"
+  } else {
+    $text
+  }
+
+  append-main-aliases $text --color $color
 }
 
-export def display-just-help [
+def get-help-text [
+  all: bool
   environment_or_recipe?: string
   recipe_or_subcommand?: string
   subcommands?: list<string>
@@ -181,9 +265,13 @@ export def display-just-help [
     | where {"::" not-in $in}
   )
 
-  let parsed_environments = if ($environment_or_recipe | is-not-empty) {
-    parse-environments [$environment_or_recipe] true
-  } else {
+  let parsed_environments = try {
+    if ($environment_or_recipe | is-not-empty) {
+      parse-environments [$environment_or_recipe] true
+    } else {
+      []
+    }
+  } catch {
     []
   }
 
@@ -198,11 +286,29 @@ export def display-just-help [
   let environment = if ($environment_or_recipe in $environments) {
     $environment_or_recipe
   } else if ($environment_or_recipe | is-empty) {
-    return (main-help --color $color)
+    return (main-help $all --color $color)
+  } else {
+    if $environment_or_recipe == default and (
+      $recipe_or_subcommand
+      | is-empty
+    ) {
+      return (
+        just --list --color $color
+        | lines
+        | where {not ($in | str ends-with ...)}
+        | to text --no-newline
+      )
+    }
+  }
+
+  let environment_or_recipe = if $environment_or_recipe == default {
+    $recipe_or_subcommand
+  } else {
+    $environment_or_recipe
   }
 
   let recipe_or_script = if ($recipe_or_subcommand | is-not-empty) and (
-    $environment 
+    $environment
     | is-not-empty
   ) {
     let environment_recipes = (
@@ -273,12 +379,8 @@ export def display-just-help [
         }
       }
     }
-  } else {
-    if ($environments | is-not-empty) {
-      print (main-help $environment --color $color)
-    }
-
-    return
+  } else if ($environments | is-not-empty) {
+    return (main-help $all $environment --color $color)
   }
 
   if ($environment | is-not-empty) and (
@@ -320,6 +422,29 @@ export def display-just-help [
     } else {
       nu $script ...$subcommands --help
     }
+  }
+}
+
+export def display-just-help [
+  all: bool
+  environment_or_recipe?: string
+  recipe_or_subcommand?: string
+  subcommands?: list<string>
+  --color: string
+  --paging = "auto"
+] {
+  let help_text = (
+    get-help-text
+      $all
+      $environment_or_recipe
+      $recipe_or_subcommand
+      $subcommands
+      --color $color
+  )
+
+  match $paging {
+    "never" => $help_text,
+    _ => ($help_text | bat)
   }
 }
 
@@ -523,19 +648,39 @@ def "main aliases default" [
   )
 }
 
+# View help text
+def "main default" [
+  recipe_or_subcommand?: string # View help text for recipe
+  ...subcommands: string  # View help for a recipe subcommand
+  --all # Display all help text, including hidden environments and recipes
+  --color = "always" # When to use colored output {always|auto|never}
+] {
+  (
+    display-just-help
+      $all
+      default
+      $recipe_or_subcommand
+      $subcommands
+      --color $color
+  )
+}
 
 # View help text
 def main [
   environment_or_recipe?: string # View help text for recipe
   recipe_or_subcommand?: string # View help text for recipe
   ...subcommands: string  # View help for a recipe subcommand
+  --all # Display all help text, including hidden environments and recipes
   --color = "always" # When to use colored output {always|auto|never}
+  --paging = "auto" # When to use pager {always|auto|never}
 ] {
   (
     display-just-help
+      $all
       $environment_or_recipe
       $recipe_or_subcommand
       $subcommands
       --color $color
+      --paging $paging
   )
 }

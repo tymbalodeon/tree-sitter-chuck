@@ -11,16 +11,13 @@ export def use-colors [color: string] {
 # Activate installed environments
 def "main activate" [] {
   if (which direnv | is-empty) {
-    print "Direnv (https://direnv.net/) is not installed."
-    print "Please install and try again."
+    nix develop
+  } else {
+    "use flake"
+    | save --force .envrc
 
-    exit 1
+    direnv allow
   }
-
-  "use flake"
-  | save --force .envrc
-
-  direnv allow
 }
 
 export def print-error [message: string] {
@@ -273,11 +270,82 @@ export def "main add" [
   main activate
 }
 
+# Open local helix configuration in $EDITOR [alias: `edit languages`]
+def "main edit helix languages" [] {
+  ^$env.EDITOR .helix/languages.toml
+}
+
+export alias "main edit languages" = main edit helix languages
+
+# Open local helix configuration in $EDITOR
+def "main edit helix" [] {
+  ^$env.EDITOR .helix
+}
+
+# Open a local recipe in $EDITOR
+def "main edit recipe" [recipe?: string] {
+  let default_environments = (
+    get-available-environments --exclude-local
+    | get name
+  )
+
+  let recipes = (
+    fd --extension nu "" .environments
+    | lines
+    | where {
+        (
+          $in
+          | path split
+          | get 1
+        ) not-in $default_environments
+      }
+  )
+
+  let recipe = if ($recipe | is-empty) {
+    $recipes
+    | to text
+    | fzf
+  } else {
+    let recipe = (
+      $recipes
+      | find --no-highlight $recipe
+    )
+
+    if ($recipe | is-empty) {
+      return
+    }
+
+    if ($recipe | length) > 1 {
+      $recipe
+      | to text
+      | fzf
+    } else {
+      $recipe
+      | first
+    }
+  }
+
+  ^$env.EDITOR $recipe
+}
+
 # Open local shell(s) in $EDITOR
 def "main edit shell" [] {
   let shells = (fd --extension nix shell .environments | lines)
 
-  let shell = if ($shells | length) > 1 {
+  let shell = if ($shells | is-empty) {
+    let local_environment = $".environments/(pwd | path split | last)"
+    mkdir $local_environment
+    let shell = $"($local_environment)/shell.nix"
+
+    "{pkgs,...}: {
+  packages = with pkgs; [
+    
+  ];
+}"
+    | save $shell
+
+    $shell
+  } else if ($shells | length) > 1 {
     $shells
     | to text
     | fzf
@@ -286,13 +354,104 @@ def "main edit shell" [] {
     | first
   }
 
-  
   ^$env.EDITOR $shell
+}
+
+def get-environments-file-with-features [] {
+  open .environments/environments.toml
+  | get environments
+  | each {
+    if features in ($in | columns) {
+      $in
+    } else {
+      $in
+      | insert features null
+    }
+  }
 }
 
 # Open .environments/environments.toml file
 def "main edit" [] {
+  let existing_file = (get-environments-file-with-features)
   ^$env.EDITOR .environments/environments.toml
+  let new_file = (get-environments-file-with-features)
+
+  if $new_file.name != $existing_file.name or (
+    $new_file.features != $existing_file.features
+  ) {
+    main activate
+  }
+}
+
+def update-hide [environments: list<string> value: bool] {
+  let environments = (parse-environments $environments).name
+  let configuration = (open .environments/environments.toml)
+
+  let configuration = (
+    $configuration
+    | update environments (
+        $configuration.environments
+        | each {
+            |environment|
+
+            if $environment.name in $environments {
+              $environment
+              | upsert hide $value
+            } else {
+              $environment
+            }
+          }
+      )
+  )
+
+  let configuration = if default in $environments {
+    if $value {
+      $configuration
+      | upsert hide_default true
+    } else {
+      $configuration
+      | reject hide_default
+    }
+  } else {
+    $configuration
+  }
+
+  $configuration
+  | save --force .environments/environments.toml
+}
+
+# Hide environments in help text
+def "main hide" [...environments: string] {
+  update-hide $environments true
+}
+
+# Show environments in help text
+def "main show" [...environments: string] {
+  update-hide $environments false
+}
+
+# Hide default environments in help text
+def "main hide default" [] {
+  update-hide [default] true
+}
+
+# Show default environments in help text
+def "main show default" [] {
+  update-hide [default] false
+}
+
+# Hide help recipes help text
+def "main hide help" [] {
+  open .environments/environments.toml
+  | upsert hide_help true
+  | save --force .environments/environments.toml
+}
+
+# Show help recipes in help text
+def "main show help" [] {
+  open .environments/environments.toml
+  | reject hide_help
+  | save --force .environments/environments.toml
 }
 
 # List flake inputs
@@ -525,7 +684,7 @@ export def "main list" [
   | str join "\n"
 }
 
-def get-default-environments [] {
+export def get-default-environments [] {
   [
     default
     git
@@ -771,7 +930,10 @@ def "main remove" [
     return
   }
 
-  let existing_environments = (open .environments/environments.toml).environments
+  let existing_environments = (
+    open .environments/environments.toml
+    | get environments
+  )
 
   let environments_to_remove = (
     $existing_environments
@@ -822,30 +984,66 @@ def "main remove" [
     }
 
     if (".helix/languages.toml" | path exists) {
-      let languages = (open .helix/languages.toml)
+      let local_languages = (open .helix/languages.toml)
+
+      let environment_languages = (
+        get-environment-files $environment languages.toml
+      )
+
+      let language = if language in ($local_languages | columns) {
+        $local_languages.language
+        | where name not-in (
+            $environment_languages.language
+            | first
+            | get name
+          )
+      }
+
+      let language_server = if language-server in (
+        $local_languages
+        | columns
+      ) {
+        if language-server not-in ($environment_languages | columns) {
+          $local_languages.language-server
+        } else {
+            mut language_servers = {}
+
+            let columns = (
+              $local_languages.language-server
+              | columns
+              | where {
+                  $in not-in ($environment_languages.language-server | columns)
+                }
+            )
+
+            for column in $columns {
+              $language_servers = (
+                $language_servers
+                | insert $column (
+                    $local_languages.language-server
+                    | get $column
+                  )
+              )
+            }
+
+            $language_servers
+        }
+      }
+
+      mut languages = {}
+
+      if ($language | is-not-empty) {
+        $languages = ($languages | insert language $language)
+      }
+
+      if ($language_server | is-not-empty) {
+        $languages = (
+          $languages
+          | insert language-server $language_server
+        )
+      }
 
       $languages
-      | columns
-      | each {
-          |column|
-
-          {
-            $column: (
-              $languages
-            | get $column
-            | where {
-                let environment_languages = (
-                  get-environment-files $environment languages.toml
-                )
-
-                $column not-in ($environment_languages | columns) or (
-                  $in not-in ($environment_languages | get $column)
-                )
-              }
-            )
-          }
-        }
-      | into record
       | save --force .helix/languages.toml
 
       taplo format .helix/languages.toml out+err> /dev/null
@@ -870,23 +1068,6 @@ def "main remove" [
       | where {path exists}
     ) {
       nu $hook_file remove
-    }
-
-    if (".pre-commit-config.yaml" | path exists) {
-      {
-        repos: (
-          open .pre-commit-config.yaml
-          | get repos
-          | where {
-              $in not-in (
-                get-environment-files $environment .pre-commit-config.yaml
-              )
-            }
-        )
-      }
-      | save --force .pre-commit-config.yaml
-
-      yamlfmt .pre-commit-config.yaml
     }
   }
 
@@ -936,6 +1117,8 @@ def "main remove" [
     main activate
   }
 }
+
+alias "main rm" = main remove
 
 def list-short-names [directory: string file?: string] {
   let search = if ($file | is-not-empty) {
@@ -1071,7 +1254,7 @@ def "main test" [
   nu --commands $command --include-path $env.NUTEST
 }
 
-# Update environment dependencies
+# Update environment inputs (see `environment inputs`)
 export def "main update" [
   ...inputs: string # The name of the input(s) to update (leave blank to update all)
 ] {

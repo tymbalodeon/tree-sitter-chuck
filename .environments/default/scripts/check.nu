@@ -1,98 +1,65 @@
 #!/usr/bin/env nu
 
-# Clean pre-commit cache
-def "main clean" [] {
-  pre-commit clean
-}
+use ../../git/scripts/leaks.nu
 
-# Run `nix flake check`
-def "main flake" [] {
-  nix flake check
-}
+export def run-check [name: string paths: list<string>] {
+  let justfiles = (
+    open Justfile
+    | lines
+    | where {str starts-with mod}
+    | each {
+        let environment = (
+          split row "mod "
+          | last
+          | split row " "
+          | first
+        )
 
-export def get-pre-commit-hook-names [config: record<repos: list<any>>] {
-  let hooks = (
-    $config
-    | get repos.hooks
-    | flatten
+        $".environments/($environment)/Justfile"
+      }
+    | where {path exists}
+    | each {
+        |environment|
+
+        let recipes = (
+          just --summary --justfile $environment
+          | split row " "
+        )
+
+        if $name in $recipes {
+          $environment
+        }
+      }
+    | where {is-not-empty}
   )
 
-  mut names = {}
-
-  for hook in $hooks {
-    let name = (
-      if types in ($hook | columns) {
-        $hook.types
-      } 
-    )
-
-    if ($name | is-not-empty) {
-      $names = (
-        $names
-        | upsert $hook.id (
-            if $hook.id in ($names | columns) {
-              $names
-              | get $hook.id
-              | append $name
-            } else {
-              $name
-            }
-          )
-      )
-    } else {
-      $names = ($names | upsert $hook.id $hook.id)
-    }
+  for justfile in $justfiles {
+    let environment = ($justfile | path split | get 1)
+    print $"($name | str capitalize)ing ($environment) files..."
+    just --justfile $justfile $name ...$paths
   }
+}
 
-  $names
-  | transpose id types
-  | sort-by id
-  | each {
-      |hook|
+# Run checks
+export def main [] {
+  leaks
+  nix flake check
 
-      if $hook.id == $hook.types {
-        $hook.id
-      } else {
-        $"($hook.id) [($hook.types | str join ', ')]"
+  let checks = (
+    just --summary
+    | split row " "
+    | where {
+        ($in | str ends-with :check) or (
+          $in
+          | str starts-with format
+        ) or (
+          $in
+          | str starts-with lint
+        )
       }
-    }
-  | to text
-}
+  )
 
-# List hook ids
-def "main list" [] {
-  get-pre-commit-hook-names (open .pre-commit-config.yaml)
-}
-
-# Run pre-commit hooks
-def "main pre-commit" [hooks?: list<string>] {
-  if ($hooks | is-empty) {
-    pre-commit run --all-files
-  } else {
-    for hook in $hooks {
-      pre-commit run $hook --all-files
-    }
+  for check in $checks {
+    just $check
   }
-}
-
-# Update all pre-commit hooks
-def "main update" [] {
-  pre-commit run pre-commit-update --all-files
-  yamlfmt .pre-commit-config.yaml
-}
-
-# Check flake and run pre-commit hooks
-export def main [
-  ...hooks: string # The hooks to run
-  --update # Update all pre-commit hooks
-] {
-  if $update {
-    main update
-  }
-
-  if ($hooks | is-empty) {
-    main flake
-  }
-
-  main pre-commit $hooks
 }

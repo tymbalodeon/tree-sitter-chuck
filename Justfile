@@ -1,12 +1,11 @@
 [private]
-@default:
-    just help
+@_: help
 
 # View full help text, or for a specific recipe
 @help *args:
     .environments/default/scripts/help.nu {{ args }}
 
-# Check flake and run pre-commit hooks
+# Check flake
 @check *args:
     .environments/default/scripts/check.nu {{ args }}
 
@@ -16,6 +15,12 @@
 
 alias env := environment
 
+# Format files
+@format *args:
+    .environments/default/scripts/format.nu {{ args }}
+
+alias fmt := format
+
 # View project history
 @history *args:
     .environments/default/scripts/history.nu {{ args }}
@@ -23,6 +28,10 @@ alias env := environment
 # View issues
 @issue *args:
     .environments/default/scripts/issue.nu {{ args }}
+
+# Lint files
+@lint *args:
+    .environments/default/scripts/lint.nu {{ args }}
 
 # View README file
 @readme *args:
@@ -55,19 +64,33 @@ alias todos := todo
     .environments/default/scripts/theme.nu {{ args }}
 
 [private]
+@md *args:
+    just markdown {{ args }}
+
+[private]
 @tree *args:
     just tree-sitter {{ args }}
 
+[private]
+@yml *args:
+    just yaml {{ args }}
+
+mod git ".environments/git/Justfile"
+mod just ".environments/just/Justfile"
+mod markdown ".environments/markdown/Justfile"
 mod nix ".environments/nix/Justfile"
 mod tree-sitter ".environments/tree-sitter/Justfile"
+mod yaml ".environments/yaml/Justfile"
 
 alias generate := tree-sitter::generate
 alias highlight := tree-sitter::highlight
 alias install := tree-sitter::install
 alias install-grammar := tree-sitter::install-grammar
 alias install-queries := tree-sitter::install-queries
+alias leaks := git::leaks
 alias open := tree-sitter::open
 alias parse := tree-sitter::parse
 alias report-states := tree-sitter::report-states
+alias sh := nix::shell
 alias shell := nix::shell
 alias test := tree-sitter::test
