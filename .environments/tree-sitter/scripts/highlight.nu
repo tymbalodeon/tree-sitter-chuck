@@ -1,7 +1,7 @@
 #!/usr/bin/env nu
 
+use ../../default/scripts/print.nu print-error
 use file.nu open-temporary-file
-use ../../default/scripts/environment.nu print-error
 
 def main [file?: string] {
   let local_config_file = (fd config --extension json | lines)

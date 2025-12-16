@@ -9,6 +9,12 @@
 @check *args:
     .environments/default/scripts/check.nu {{ args }}
 
+# Create and switch to bookmarks/branches
+@develop *args:
+    .environments/default/scripts/develop.nu {{ args }}
+
+alias dev := develop
+
 # Manage environments
 @environment *args:
     .environments/default/scripts/environment.nu {{ args }}
@@ -82,6 +88,7 @@ mod nix ".environments/nix/Justfile"
 mod tree-sitter ".environments/tree-sitter/Justfile"
 mod yaml ".environments/yaml/Justfile"
 
+alias clean := nix::clean
 alias generate := tree-sitter::generate
 alias highlight := tree-sitter::highlight
 alias install := tree-sitter::install

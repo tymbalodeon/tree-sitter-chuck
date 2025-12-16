@@ -4,3 +4,4 @@
 .helix/config.toml
 build
 node_modules
+result

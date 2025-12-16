@@ -1,4 +1,4 @@
-use ../../default/scripts/environment.nu print-warning
+use ../../default/scripts/print.nu print-warning
 
 def get-random-file [files: list<string>] {
   let max_index = (($files | length) - 1)

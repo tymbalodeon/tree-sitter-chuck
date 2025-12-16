@@ -28,10 +28,9 @@ def main [
 ] {
   (
     display-just-help
+      tree-sitter
       $recipe
       $subcommands
       --color $color
-      --environment tree-sitter
-      --justfile .environments/tree-sitter/Justfile
   )
 }
