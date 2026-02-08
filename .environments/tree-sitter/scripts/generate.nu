@@ -3,9 +3,7 @@
 use get-grammar-files.nu
 
 def main [grammar_path?: string] {
-  let files = (get-grammar-files $grammar_path)
-
-  for file in $files {
+  for file in (get-grammar-files $grammar_path) {
     bun run tree-sitter generate --js-runtime bun $file
   }
 }
